@@ -3,8 +3,9 @@ const isMobile = () => {
     let ua = navigator.userAgent;
     let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
 
-    if ($(window).width() <= 768) {
-        return isMobile;
+    if (isMobile === true || $(window).width() <= 768) {
+        console.log("YYYYYYYY");
+        return true;
     }
 }
 
