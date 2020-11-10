@@ -1,0 +1,869 @@
+@charset "utf-8";
+*{margin: 0;padding: 0}
+*:focus { outline: none; }/*黃框消除*/
+*{-webkit-text-size-adjust:none;}/*字體尺寸限制解除*/
+a{text-decoration:none;cursor: pointer}
+img {border:0px; } /*圖片超連結邊框消除*/
+i{font-style: normal;}
+em{font-style: normal;}
+li{ list-style:none;}
+html { margin: 0; padding: 0; height: 100%; }
+.boxfly{position: absolute; left:-9999em; top:-9999em;}
+.fred{color:#F00; font-weight:bold;}
+.fgold{color:#fea100; font-weight:bold;}
+.fgray{color: #666;}
+.fpur{ color:#8232a4;}
+.pc_version_non{ display:none;}	
+.bg01{ background:#333;}
+
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+body {margin: 0px;padding: 0;width: 100%;height: 100%;font-family: Century Gothic,"微軟正黑體";background-color: #000;}
+.copyR{color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;background-color: #000;margin-top: 2%;}
+
+/**/
+.wrapper{display:block;width: 100%;margin:0 auto;max-width: 1144px;}
+#gotop {display: none;    position: fixed;    padding: 10px 15px;cursor: pointer;margin: 50px 0px 0px 580px;left: 50%;z-index: 9;   bottom: 0px;}
+
+/*主視覺((純視覺))*/
+.title01{ height: 410px; position: relative; margin: 0px auto; background:url(../images/title01.png) no-repeat ;}
+.title01 > img{ display: none;}
+
+/*主視覺((大凸品))*/
+.title02{	height: 440px; margin: 0px auto; position:relative; overflow:hidden;}
+
+/*主視覺((影片版))*/
+.title03 { display: block; width: 1144px; height: 350px; position: relative; margin: 0 auto;}
+.title03 .title_detail { display: block; background: url(../images/title03.png) 0 0 no-repeat; width: 1144px; height: 350px;    float: left;}
+.title03 .title_detail > img { display: none;}
+.title03 .video { width: 470px; height: 290px; z-index: 5;}
+.title03 .videotop { margin: 0 auto; width: 450px; height: 270px; position: absolute; top: 12px; left:650px; padding: 1.5%;	border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px;	border: #000 solid;	background:url(../images/videobg.png) #000 center -8px no-repeat;	background-size: 100%;}
+
+/*主視覺((自訂版))*/
+.title04{ width:100%; height: 330px; margin:0px auto 2.5% auto; position:relative; }
+.title04 .titlebox{ width:674px; height:390px; float:left;background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/title.png) center top no-repeat; position: relative;}
+.title04 .titlebox > img{display:none;}
+.title04 .beef_m{display:none;}
+.title04 .titlebox .addlink{top:40px;right:45px;width:200px;height:120px; position: absolute;}
+
+/*主視覺((自訂版))-影片*/
+.title04 .video {width: 470px;height: 290px;float: right; z-index: 5;}
+.title04 .videobt {  width: 470px; height: 100px; position: absolute; top: 300px;left:650px;	float:left;  z-index: 6;}
+.title04 .videobt img{ display:block;}
+.title04 .videotop {margin: 0 auto;width: 450px;height: 270px;position: absolute;top: 12px;left:650px;padding: 1.5%;	border-radius: 20px; webkit-border-radius: 20px; -moz-border-radius: 20px;	border: #000 solid;	background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/videobg.png) #000 center -8px no-repeat;background-size: 100%;}
+
+/*主視覺((自訂版))-牛肉*/
+.title04 .titleBoxEP{ width:1144px; height:82px; position: relative; z-index: 10; float: left; margin: 2% auto 0 auto; background: #333;}
+.title04 .titleBoxEP a.eventbox{position: absolute;height: 82px;  z-index: 50;
+transition: all 0.3s;-webkit-transition: all 0.3s;-ms-transition: all 0.3s;-moz-transition: all 0.3s; }
+.title04 .titleBoxEP a.eventbox img{width:100%; height:90px;}
+.title04 .titleBoxEP a.eventbox:hover{animation-name: rubberBand;animation-duration: 1.2s;-webkit-animation-duration: 1.5s;
+animation-iteration-count: infinite;-webkit-animation-iteration-count: infinite;} 
+.title04 .titleBoxEP a.event01{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_01.png) no-repeat 0px 0px;left: 0px;width: 225px;}
+.title04 .titleBoxEP a.event01:hover{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_02.png) no-repeat 0px 0px;}
+.title04 .titleBoxEP a.event01-1{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_03.png) no-repeat 0px 0px;left: 0px;width: 225px;}
+.title04 .titleBoxEP a.event01-1:hover{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_04.png) no-repeat 0px 0px;}
+.title04 .titleBoxEP a.event02{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_01.png) no-repeat -225px 0px;left: 225px;width: 225px;}
+.title04 .titleBoxEP a.event02:hover{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_02.png) no-repeat -225px 0px;}
+.title04 .titleBoxEP a.event03{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_01.png) no-repeat -455px 0px;left: 455px;width: 225px;}
+.title04 .titleBoxEP a.event03:hover{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_02.png) no-repeat -455px 0px;}
+.title04 .titleBoxEP a.event04{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_01.png) no-repeat -683px 0px;left: 683px;width: 225px;}
+.title04 .titleBoxEP a.event04:hover{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_02.png) no-repeat -683px 0px;}
+.title04 .titleBoxEP a.event05{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_01.png) no-repeat -912px 0px;left: 912px;width: 225px;}
+.title04 .titleBoxEP a.event05:hover{background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/beef_02.png) no-repeat -912px 0px;}
+
+
+
+/*電腦版本((上方))按鈕-*/
+.itemBox{height:auto;position:relative; z-index:99; width:100%; margin-bottom:0; margin-top:0; float:left; }
+.itemBox #btnBox03{position:relative;  z-index:100; text-align:center; width:100%;  padding: 1% 0;}
+.itemBox #btnBox03 a{ display:inline-block;}
+.itemBox #btnBox03 a:hover{ opacity:1; transition: all 0.5s;  -webkit-transition: all 0.5s;  -ms-transition: all 0.5s; -moz-transition: all 0.5s;}
+
+/*電腦版本((上方))按鈕-pin住後更換底圖的效果*/
+.fixing  #btnBox03 .upbox {position:fixed; z-index:9998 !important; width:100%;  height: 35px; background:#FEF20B 0 0 repeat-x; top:0; left:0;  box-shadow: 0 1px 10px 0px; padding-top:15px; border-bottom:5px solid #b9ae4f; }
+.fixing  #btnBox03{background:none;display:none;}
+.upbox a.btn_01{ display:block; width:180px; height:55px; color: #fff; border:2px solid #555; font-size: 160%; line-height: 55px; color: #fff;background: #7d7e7d; /* Old browsers */
+background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -webkit-linear-gradient(top, #7d7e7d 0%,#0e0e0e 100%); background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%); }
+.upbox a.btn_01:hover{ color: #000;background: #f6f8f9;background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%); background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); }
+
+/*電腦版本((右方))按鈕*/
+.rightbtn { position: fixed;  width: 100%; height: auto;  margin: 368px 0px 0px 565px;  left: 50%;  z-index: 100;   bottom: 135px; text-align: center;   }
+.rightbtn .actbtn { width: 134px;  height: auto; display: block; position: relative; background:#fdf0c3; border-radius: 0 0 10px 10px; border-top:3px solid #af793e;    padding-bottom: 10px;}
+.rightbtn .actbtn a.btn_01 {  width: 100%;  height: 38px; margin: 0 auto; line-height: 36px; color: #816511; text-decoration: none;  border-bottom: 1px dotted #bea96b; box-sizing: border-box;  padding: 3px 0; display: block;}
+.rightbtn .actbtn a.btn_01:hover { opacity:0.8; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;transform: translateY(0.2em); background:#cebb83;}
+
+/*M版本((下方))按鈕*/
+.fix_btn{ display:none;}
+
+
+/*分類標題*/
+.protitle {position: relative;width: 100%;text-align: center;height: 58px;display:block;overflow:hidden;float:left;background: url(https://events.tk3c.com/events_net/events_net/image/protitle_01.png);color:#fff;font-size:42px;padding-top:24px;padding-bottom: 6px;letter-spacing: 1px;background-repeat: no-repeat;background-size: cover;}
+.protitle .more{ position:absolute; right:10px; bottom:10px; width:48px; height:48px;background:url(../images/more.png);}
+
+/*說明區*/
+a.ad01{ background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/bigsale.png) 0 0 no-repeat;width: 1144px; height: 429px;display: block;float: left; margin-top: 2%;}
+a.ad01 img{display:none;}
+
+
+@media screen and (min-width:751px) {
+	
+/*主視覺((大凸))*/
+.title02 .title_word{ display: block; background: url(../images/title02.png) 0 0 no-repeat;  width: 770px;   height: 440px;  z-index: 10; }
+.title02 .title_word img{ display: none;}
+
+.title02 .box_pc{ display: block; background: #fff; width: 374px; height: 418px; z-index: 10;  position: absolute; top: 0px;  right: 0px; overflow: hidden;box-sizing: border-box; padding: 10px 0px 0px 0; text-align:center; border: 6px solid #ff0;box-shadow: 0 7px 7px #a9a9a9; border-radius: 0 0 20% 20%;}
+.title02 .box_pc:before{ content: ""; display: block; border-top: 6px solid #ff0000; margin-top: -10px; margin-bottom: 10px;}
+.title02 .box_pc2{ background-image: url(../images/box_pc-2.png) !important;}
+.title02 .box_pc span.font01{content:"整點秒殺";color:#fff; width: 120px; height: 35px; background-color: #ff0000;  line-height: 35px;display:block; position: absolute; top: 0; right: 0; font-size: 130%; font-weight: bold;}	
+.title02 .box_pc img{ width:220px; height:220px; margin:1.5% auto; text-align:center;}
+.title02 .box_pc storg{  display: block; font-size: 14px;  color: #d71616;  margin-top: 8px; margin-bottom: 5px; height: 16px;  width: 85%; text-align: center; margin: 5px auto; overflow: hidden;}
+.title02 .box_pc h4{  display: block;  background: #ffed8a; width: 85%; height: 50px;  margin: 0 auto 10px auto;  box-sizing: border-box; font-size: 17px; color:#000;  padding: 5px; overflow: hidden; line-height: 22px;}
+.title02 .box_pc .icon_dis_s{ display:block; border-radius:50%; background:#ff2503; color:#FFF; width:60px; height:60px; position:absolute; z-index:5;line-height: 22px; top: 44%; right: 6%;font-size:100%;}
+.title02 .box_pc .icon_dis_s span{ display:block; font-weight: bold; font-size:200%; margin-top: 20%;}
+.title .box_pc .box_price { margin-top: 5%; }
+.title02 .box_pc .box_price em{ color:#999; font-weight:normal; font-size:13px; position:absolute;left: 36px;top: 80%; font-style:normal;}
+.title02 .box_pc .box_price strong{ font-size:42px;}
+.title02 .box_pc .box_price strong i{ font-size:24px; font-style:normal;}
+.title02 .box_pc .box_price strong i:after{ content: "$";}
+.title02 .box_pc:hover{ opacity:0.9; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;transform: translateY(0.5em);}
+.title02 .box_pc .box_price strong .price_pur{ font-size:42px; display:block; }
+
+.acbankbox {width:100% !important}
+.acbankbox .list2 ul{display:flex;justify-content:space-between;flex-wrap:wrap}
+.acbankbox .list2 ul li{width: 19% !important;padding: 0;margin: 0 !important;}
+.acbankbox .list2 .item_text05 em{font-size: 3.5vmin !important;}
+}
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+@media screen and (min-width: 320px) and (max-width: 750px){
+#kuai3header{ width:100% !important; margin: 0px auto; z-index:9999; position:fixed;}
+#kuai3header .words{ width:100% !important;}
+#kuai3header .words .font{ display:none !important;}
+.m_version_non{ display:none;}
+.pc_version_non{ display:block;}	
+body {	margin: 0px; padding: 0; width: 100%; height: 100%;}
+.copyR{ margin-bottom: 50px; background: #c5c5c5; color: #000; font-size: 80%;}
+
+.wrapper{ display:block; width:100%; margin:0 auto;}
+#gotop {display: none;  position: fixed;padding: 0;cursor: pointer;z-index: 999999; bottom: 45px; margin:0; left:85%;}
+#gotop img{ width:100%;}
+
+/*主視覺((純視覺))*/
+.title01{ width:100%;	height: auto;	position: relative;	margin: 0px auto;background:none ;float: left; }
+.title01 img{ display: block; width:100%;}
+
+/*主視覺((大凸))*/
+.title02{ width:100%; height: auto; position: relative;	margin: 0px auto; text-align:center; background:none;float: left;}
+.title02 .title_word img{width:100%; display:block;z-index: 0; position: static;}
+.title02 .box_pc{ display: block; background: #fff; border:10px solid #feebeb;  width: 100%;  height: auto;  z-index: 10; position: relative; overflow: hidden; box-sizing: border-box;  padding: 1%;  text-align: center;}
+/*主標品*/
+.title02 .box_pc span.font01{content:"整點秒殺";color:#fff; width: 80px; height: 25px; background-color: #ff0000;  line-height: 30px;display:block; position: absolute; top: -1%; right: -1%; line-height: 25px; font-size: 90%; font-weight: bold;}	
+.title02 .box_pc img{ width:130px; height:130px; margin:6% auto 0 auto; text-align:center ; float:left;}
+.title02 .box_pc .box_word{ display:inline-block; width:52%; text-align:left; margin-top: 6%; float:right;}
+.title02 .box_pc storg{  display: block; font-size: 14px;  color: #d71616;  height: 16px;  width:100%; margin: 5px auto; overflow: hidden;}
+.title02 .box_pc h4{ font-weight: bold; display: block;   width: 100%; height: 45px;  margin: 0 auto 2% auto;  box-sizing: border-box; font-size: 1.1em;  padding:0 0 5px 0; overflow: hidden; line-height: 23px; color: #000;}
+.title02 .box_pc .icon_dis_s{ display:block; border-radius:50%; background:#ff2503; color:#FFF; width:50px; height:50px; position:absolute; z-index:5;line-height: 20px; top: 6%; left: 3%; font-size: 80%;}
+.title02 .box_pc .icon_dis_s span{ display:block; font-weight: bold; font-size:200%; margin-top: 17%;}
+.title02 .box_pc .box_price em{display:block; color:#999; font-weight:normal; font-size:13px; font-style: normal;}
+.title02 .box_pc .box_price strong{ font-size:200%;}
+.title02 .box_pc .box_price strong i{ font-size:40%; font-style: normal;}
+.title02 .box_pc .box_price strong i:after{ content: "$";}
+.title02 .box_pc:hover{ opacity:1; transition:none; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;transform:none;}
+
+/*主視覺((影片版))*/
+.title03 {display: block; width: 100%; height: 500px; position: relative; margin-bottom: 5%;float: left;}
+.title03 .title_detail { display: block; background: none; width: 100%; margin: 0 auto; height: auto;}
+.title03 .title_detail > img { display: block; width: 100%;}
+.title03 .video { width: 100%; height: 270px; z-index: 20; margin: 0 auto 5% auto;}
+.title03 .videotop { margin: 0 auto; width: 98%; height: 220px; position: absolute; padding: 0; top: 290px; left: 0;    background: url(../images/videobg.png) #000 center -8px no-repeat; background-size: 100%;}
+
+/*主視覺((自定版))*/
+.title04{ width:100%; height:auto; margin: 0 auto 5% auto; position:relative; float: left;}
+.title04 .titlebox { width:100%; height:auto; margin:0 auto; background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/title_m.png) center top no-repeat; background-size:100%;}
+.title04 .titlebox img{ display:block; width: 100%;}
+
+.title04 .beef_m{width:100%; display:block;}
+.title04 .beef_m a{ width:50%; float:left;cusor:pointer;}
+.title04 .titlebox .addlink{top:1%;right:0;width:34%;height:15%; position: absolute;}
+.title04 .beef_m .upbtn01{}
+/*主視覺((自定版))-影片*/
+.title04 .video {width: 100%;height: 210px;z-index: 20;margin: 0 auto; position: relative;}
+.title04 .videotop {margin: 0 auto;width: 97%;height: 220px;position: absolute;top: 0;left: 0;	background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/videobg.png) #000 center -8px no-repeat;background-size: 100%;}
+.title04 .videobt { display:none;}
+.title04 .videobt img{ display:none;}
+.title04 .titleBoxEP{display:none;}
+
+
+/*電腦版本((上方))按鈕*/
+.itemBox{ display: none;}
+	
+/*電腦版本((右方))按鈕*/
+.rightbtn { display:none;}
+	
+/*M版本((下方))按鈕*/
+.fix_btn{ display:block; width:100%; height:50px; position:fixed; bottom:0; z-index:88; clear:both; /*box-shadow:1px 5px 10px 5px #0b3159;*/}
+.fix_btn .btn1{ width: 50%;  height: 45px; float: left; background-color: #000;  text-align: center;  box-sizing: border-box;  font-size: 15px; color: #fff; padding-top: 5px; border-radius: 2px;  margin-right: 1px;  margin-left: 2px; box-shadow: 0px 1px 5px 0px #6c6c6c; line-height: 30px; border:2px solid #ccc;}
+.fix_btn .btn2{ width: 23%; background-color: #E3191C; color: #fff; }
+.fix_btn .btn3{ width: 23%;  background-color: #006abe; color: #fff; }
+.fix_btn .btnbox{ height: 45px; float: left;  text-align: center;  box-sizing: border-box;  font-size: 100%; padding-top: 5px; border-radius: 2px;  margin-right: 1px;  margin-left: 2px; box-shadow: 0px 1px 5px 0px #0b3159; line-height: 35px;}
+
+/*M版本((下方))按鈕====彈跳視窗*/
+.fix_btn > .dropdown-menu {  position: relative;}
+.fix_btn > .dropdown-menu > span {  -webkit-user-select: none;  -moz-user-select: none;  -ms-user-select: none;  user-select: none;}
+.fix_btn > .dropdown-menu > div {  cursor: pointer;  outline: 0;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
+.fix_btn > .dropdown-menu > div {  background-color: rgba(0, 0, 0, 0);  position: absolute;  top: 0;  left: 0;  right: 0;  bottom: 0;  display: none;}
+.fix_btn > .dropdown-menu > span:focus ~ div {  display: block;}
+.fix_btn > .dropdown-menu > ul {  position: absolute;  z-index: -1;  visibility: hidden;  transition: visibility 0.5s;  opacity: 0;  bottom:42px; width:100%; border-bottom:5px solid #F30;}
+.fix_btn > .dropdown-menu > span:focus ~ ul {  visibility: visible;  opacity: 1;}
+.fix_btn > .sample-menu-style li {  border: 1px solid #000;  box-shadow: 2px 2px 5px #666;  padding: 0.2em 0.4em 0;  height: 3em;  background: #fffffb;  white-space: nowrap;  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); line-height:3em; }
+.fix_btn > .sample-menu-style li:not(:first-child) {  border-top: none;}
+.fix_btn > .sample-menu-style li:hover {  background: #f8f8f4;}
+.fix_btn > .sample-menu-style a {  text-decoration: none;  color: #000; }
+
+/*分類標題*/
+.protitle {position: relative;width: 100%;text-align: left;height: auto;display:block;overflow:hidden;float:left;background: url(https://events.tk3c.com/events_net/events_net/image/protitle_01.png);background-size: cover;color:#fff;font-size:185%;margin: 0 auto;padding-top:6%;}
+.protitle .more{ position:absolute; right:2%; bottom:2%; width:45px; height:45px;background:url(../images/more.png); background-size:cover;}
+
+/*說明區*/
+a.ad01{ background: none; width: 100%; height: auto; margin-bottom: 1%;}
+a.ad01 img{ width: 100%; height: auto; display: block;}	
+
+}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區01((2大3小)) 電腦版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+
+.list_H{width:100%;float: left; position:relative; display:block; margin-bottom: 25px; padding-bottom: 3%; }
+.list_H .boxH{ display:inline-block; width:100%;}
+/*上方兩大塊*/
+.list_H ul.boxH_big { display:block; overflow:hidden;padding:1% 0 0 0; position:relative}
+.list_H ul.boxH_big li{ list-style:none;}
+
+/*排品icon標誌*/
+.boxH_big li .iconH_01{ display:block; z-index:10; background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/icon_top01.png) 0 0 no-repeat; width:87px; height:87px; position:absolute; top:-6px; left:14px;}
+.boxH_big li .iconH_02{ display:block; z-index:10; background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/icon_top02.png) 0 0 no-repeat; width:87px; height:87px; position:absolute; top:-6px; left:14px;}
+
+
+/*icon-秒殺品*/
+.list_H ul.boxH_big li a{height: 335px; width:48.5%; float: left;  margin: 6px 6px 20px 6px;background:#FFF; list-style:none;transition: all 0.5s;  -webkit-transition: all 0.5s;  -ms-transition: all 0.5s; -moz-transition: all 0.5s; position:relative;}
+.list_H ul.boxH_big li a:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); background:#FFC; transform: translateY(0.2em);}
+.list_H ul.boxH_big li .itemH_img{width: 45%; float:left; margin: 7px 0 7px 7px;}
+.list_H ul.boxH_big li .itemH_img img{ max-width:100%; height:auto; width:100%;object-fit: cover}
+.list_H ul.boxH_big li .boxH_word{ display: block;  width: 49%;height: 244px; overflow:hidden; float: left; margin-left: 3%; box-sizing:border-box;  padding: 15px 5px 10px 0;    color: gray;}
+.list_H ul.boxH_big li .boxH_word ol{ height: 81px; overflow: hidden; margin-bottom: 10px;} 
+.list_H ul.boxH_big li .boxH_word ol li{ display: block; height: auto; width: 100%; line-height: 20px;  font-size: 15px; letter-spacing: 1px;}
+.list_H ul.boxH_big li .boxH_word ol li:before{ content:"•";} 
+.list_H ul.boxH_big li .boxH_word h4{ display:block; font-size:18px; color:#fe4e00; line-height:19px; height: 38px; overflow:hidden;}
+.list_H ul.boxH_big li .boxH_word storg { display:block; font-size:22px; color:#000; line-height:28px; height:85px; font-weight:bold; overflow:hidden;}
+.list_H ul.boxH_big li .boxH_price{ display:block; clear:both; background:#ffd400; text-align:right; width:100%; height:97px; position:relative;    box-sizing: border-box; padding: 8px 0 0 0;}
+.list_H ul.boxH_big li .boxH_price strong{ float:right; height: 88px; padding-right: 73px;  font-size: 40px; margin-right: 10px; letter-spacing: -2px; }
+.list_H ul.boxH_big li .boxH_price strong:before{content: "搶購";  display: block; width: 55px; height: 68px; background-size: 100%;  float: right; margin-right: 10px;  margin-top: 9px; border-radius: 5px; color: white; font-size: 21px;  text-align: center; line-height: 68px; letter-spacing: 1px; position:absolute; top:0; right:0;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
+.list_H ul.boxH_big li .boxH_price strong i{ font-size:16px; letter-spacing:0; font-style:normal;}
+.list_H ul.boxH_big li .boxH_price strong em{ display:block; font-size:13px;  color:#8d8d8d; font-weight:lighter; text-decoration:line-through; letter-spacing:0; font-style:normal; margin-bottom: 4%;}
+.list_H ul.boxH_big li .boxH_price .iconH_pro{ display:block; background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/icon_pro.png) 0 0 no-repeat; width:202px; height:46px; font-size: 23px; text-align: center;  box-sizing: border-box; color: white;line-height: 45px; float:left; margin-top: 3%; }
+.list_H ul.boxH_big li .boxH_price .iconH_pro span{ font-size:34px;}
+
+/*下方3小塊*/
+.list_H ul.boxH_s li{ list-style:none;}
+.list_H ul.boxH_s li a{height: 249px; width:32%; float: left;  margin: 6px;background:#FFF; list-style:none;transition: all 0.5s;  -webkit-transition: all 0.5s;  -ms-transition: all 0.5s; -moz-transition: all 0.5s; position:relative;}
+.list_H ul.boxH_s li a:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); background:#FFC; transform: translateY(0.2em);}
+.list_H ul.boxH_s li .itemH_img{ width: 40%; float: left; margin: 26px 0 7px 10px;}
+.list_H ul.boxH_s li .itemH_img img{ width: 160px;height: 160px;object-fit: cover; }
+.list_H ul.boxH_s li { max-width:100%; height:auto; width:100%;object-fit: cover}
+.list_H ul.boxH_s li .boxH_word{ display: block; width: 55.5%; float: left; box-sizing: border-box; padding: 8px 0px 5px 13px; height:187px;  overflow: hidden;}
+.list_H ul.boxH_s li .boxH_word ol{ height:82px; overflow: hidden; color: gray;} 
+.list_H ul.boxH_s li .boxH_word ol li{ display: block; height: auto; width: 100%; line-height: 13px;  font-size: 12px; padding-bottom:4px;}
+.list_H ul.boxH_s li .boxH_word ol li:before{ content:"•";} 
+.list_H ul.boxH_s li .boxH_word h4{ display:block; font-size:15px; color:#fe4e00; line-height:15px; height:30px; overflow:hidden;}
+.list_H ul.boxH_s li .boxH_word storg { display:block; font-size:15px; color:#000; line-height:20px; height:56px; font-weight:bold; overflow:hidden; padding-bottom:10px;}
+.list_H ul.boxH_s li .icon_01{ display:block; z-index:10; background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/tag01.png) 0 0 no-repeat; background-size:90%; width:90px; height:91px; position:absolute; top:-6px; left:14px;}
+.list_H ul.boxH_s li .boxH_price{ display:block; clear:both; background:#fef20b; text-align:right; width:100%; height:63px; position:relative;    box-sizing: border-box; padding: 8px 0 0 0;}
+.list_H ul.boxH_s li .boxH_price strong{ float:right; height: 88px; padding-right: 55px;  font-size: 30px; margin-right: 10px; letter-spacing: -2px; }
+.list_H ul.boxH_s li .boxH_price strong:before{ content: "搶購";  display: block;  width: 45px; height: 54px;  float: right; margin-right: 10px;  margin-top: 9px; border-radius: 5px; color: white; font-size: 16px;  text-align: center; line-height: 54px; letter-spacing: 1px; position:absolute;  right: -4px; bottom: 4px;
+background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
+.list_H ul.boxH_s li .boxH_price strong i{ font-size: 13px; letter-spacing:0; font-style:normal;}
+.list_H ul.boxH_s li .boxH_price strong em{ display:block; font-size:13px;  color:#8d8d8d; font-weight:lighter; text-decoration:line-through; letter-spacing:0;}
+.list_H ul.boxH_s li .boxH_price .iconH_pro{ display: block; background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/icon_pro.png) 0 0 no-repeat;  width: 131px;  height: 31px; font-size: 15px;  text-align: center;  box-sizing: border-box; color: white; line-height: 27px; float: left; margin-top: 3%; background-size: 96%;}
+.list_H ul.boxH_s li .boxH_price .iconH_pro span{ font-size:25px;}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區01((2大3小)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+@media screen and (min-width: 320px) and (max-width: 750px){
+.list_H{width:100%; height: auto; float:left; padding:0 0 2% 0; margin-bottom:5%; position:relative; display:block; }
+.list_H .boxH{ display:inline-block; width:100%;}
+.list_H ul.box_big{ display:block; width:96%; overflow:hidden; background:none; padding:1% 0 1% 0; margin:0 auto;}
+.list_H ul.boxH_big li{ list-style:none;}
+/*icon-秒殺品*/
+.icon_01{ display: block; z-index: 10;  background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/tag01.png) 0 0 no-repeat; width: 80px; height: 81px; position: absolute; top: -6px; left: 14px; background-size: 90%;}
+.list_H ul.boxH_big li a{height: 305px; width:100%; float: left; margin: 12px auto; background:#FFF; list-style:none; position:relative; }
+.list_H ul.boxH_big li a:hover{ background:#FFF;box-shadow: 0px 0px 3px 3px rgba(63,58,59,0.2);}
+.list_H ul.boxH_big li .itemH_img{width: 39%; float:left; margin: 57px 0 7px 7px;}
+.list_H ul.boxH_big li { max-width:100%; height:auto;}
+.list_H ul.boxH_big li .boxH_word{ display: block;  width: 52%;height: 208px; overflow:hidden; float: left; margin-left: 3%; box-sizing:border-box;  padding:17px 5px 10px 0;;}
+.list_H ul.boxH_big li .boxH_word ol{ height: 91px; overflow: hidden; margin-bottom: 10px; color:gray;} 
+.list_H ul.boxH_big li .boxH_word ol li{ display: block; height: 18px; width: 100%; line-height: 18px;  font-size: 13px; overflow:hidden; letter-spacing:0;}
+.list_H ul.boxH_big li .boxH_word ol li:before{ content:"•";} 
+.list_H ul.boxH_big li .boxH_word h4{ display:block; font-size:14px; color:#fe4e00; line-height:19px; height: 16px; overflow:hidden;}
+.list_H ul.box_big li .boxH_word storg { display:block; font-size:16px; color:#000; line-height:22px; max-height:90px; font-weight:bold; overflow:hidden;}
+.list_H ul.boxH_big li .icon_01{ display: block; z-index: 10;  background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/tag01.png) 0 0 no-repeat; width: 80px; height: 81px; position: absolute; top: -6px; left: 14px; background-size: 90%;}
+.list_H ul.boxH_big li .icon_02{ display: block; z-index: 10;  background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/tag02.png) 0 0 no-repeat; width: 80px; height: 81px; position: absolute; top: -6px; left: 14px; background-size: 90%;}
+.list_H ul.boxH_big li .boxH_price{ display:block; clear:both; background:#FEF20B; text-align:right; width:100%; height:97px; position:relative; padding:0;}
+.list_H ul.boxH_big li .boxH_price strong{ width: 34%;  background-size: contain;  font-size: 34px;  letter-spacing: -3px; padding-right: 2%; margin: 2% 0.5%; }
+.list_H ul.boxH_big li .boxH_price strong:before{ background:none;}
+.list_H ul.boxH_big li .boxH_price:before{     content: "搶購";  display: block; width: 55px; height: 68px; background-size: 100%;  float: right; margin-right: 10px;  margin-top: 9px; border-radius: 5px; color: white; font-size: 21px;  text-align: center; line-height: 68px; letter-spacing: 1px;
+background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
+background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
+background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
+background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); }
+.list_H ul.boxH_big li .boxH_price strong i{ font-size:15px;letter-spacing: 1px; line-height: 16px; display: block;}
+.list_H ul.box_big li .boxH_price strong em{ display: block; font-size: 13px; position: absolute;  top: 11px; right: 78px; color: #8d8d8d; font-weight: lighter; text-decoration: line-through; letter-spacing: 0;}
+.list_H ul.boxH_big li .boxH_price .icon_pro{ display: block; background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/icon_pro.png) 0 0 no-repeat;  width: 77%;  height: 30px; background-size: 50%;  padding-left: 16px; font-size: 16px; text-align: left; line-height: 27px; margin-top:0;}
+.list_H ul.boxH_big li .boxH_price .icon_pro02{ display: block; background: url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/icon_pro-02.png) 0 0 no-repeat;  width: 77%;  height: 30px; background-size: 50%;  padding-left: 16px; font-size: 16px; text-align: left; line-height: 27px; margin-top:0;}
+.list_H ul.boxH_big li .boxH_price .icon_pro span{ font-size:20px;}
+.list_H ul.boxH_big li .boxH_price .icon_pro02 span{ font-size:20px;}
+.list_H ul.boxH_big li .boxH_price .iconH_pro{ display:block; background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/icon_pro.png) -71px 0 no-repeat; width:41%; height:46px; font-size: 1.2em; text-align: left;  box-sizing: border-box; color: white;line-height: 45px; float:left; margin-top: 3%; padding-left:2%;}
+/*下方3小塊*/
+.list_H ul.boxH_s{ display:block; margin-top:0px;}
+.list_H ul.boxH_s li{ list-style:none; text-align:center; background:#fff;}
+.list_H ul.boxH_s li a{ height: auto; width: 48.7%; float: left;  margin: 5px 2px; box-sizing:border-box;  background: #FFF; list-style: none; position: relative;border: 3px solid #fdf209;border-radius: 5px; padding-bottom: 1%;}
+.list_H ul.boxH_s li a:hover{ background:#FFF; box-shadow: 0px 0px 3px 3px rgba(63,58,59,0.2);}
+.list_H ul.boxH_s li .itemH_img{ width: 120px; height:120px; float: none; margin:0 auto;}
+.list_H ul.boxH_s li .itemH_img img{ max-width:100%; height:auto;}
+.list_H ul.boxH_s li .boxH_word{ display: block; width: 100%; float: none;  box-sizing: border-box; padding:0; height:auto;}
+.list_H ul.boxH_s li .boxH_word ol{ display:none; height:18px; overflow: hidden; margin: 6px 0; color:gray;} 
+.list_H ul.boxH_s li .boxH_word ol li{ display: block; height: auto; width: 99.5%; line-height: 16px; font-size: 12px;  letter-spacing: -1px;}
+.list_H ul.boxH_s li .boxH_word h4{ display:block; font-size:15px; color:#fe4e00; line-height:21px; height:18px; overflow:hidden;}
+.list_H ul.boxH_s li .boxH_word storg { display: block; font-size: 14px; color: #000; line-height: 18px; height: 38px; font-weight: bold;  overflow: hidden;box-sizing: border-box;  padding:2px;}
+.list_H ul.boxH_s li .icon_01{ display:block; z-index:10; background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/tag01.png) 0 0 no-repeat; width:60px; height:61px; position:absolute; top:-6px; left:4px;background-size: 100%;}
+.list_H ul.boxH_s li .icon_02{ display:block; z-index:10; background:url(http://events.tkec.com.tw/events_net/events_net/airconditioning/0410-0430/images/tag02.png) 0 0 no-repeat; width:60px; height:61px; position:absolute; top:-6px; left:4px;background-size: 100%;}
+.list_H ul.boxH_s li .boxH_price{ display:block; clear:both; text-align:right; width:100%; height:110px; position:relative; background:#fff;}
+.list_H ul.boxH_s li .boxH_price strong:before{ display:none;}
+.list_H ul.boxH_s li .boxH_price strong:after{  content: "搶購〉"; color: #911382;  background: #fcf206;  width: 100%; height: 25px;  display: block;  text-align: center; font-size: 0.9em;  letter-spacing: 6px;   line-height: 25px;     box-sizing: border-box;  padding-left: 24px;}
+.list_H ul.boxH_s li .boxH_price strong{ height: 43px;  font-size: 21px;  text-align: center;  width: 100%; display: block; margin-right:0; padding-right:0;}
+.list_H ul .boxH_s li .boxH_price strong i{ font-size:16px;}
+.list_H ul .box_s li .boxH_price strong em{ display: block; font-size: 11px; color: #8d8d8d;  font-weight: lighter; text-decoration: line-through;}
+.list_H ul.boxH_s li .boxH_price .icon_pro{ display: block; width: 96%;  height: 26px; font-size: 15px; text-align: center; box-sizing: border-box; color: white;  line-height: 26px; padding-left: 5px; background: #08b288;  margin: 5px 2%; border-radius: 50px;}
+.list_H ul.boxH_s li .boxH_price .icon_pro02{ display: block; width: 96%;  height: 26px; font-size: 15px; text-align: center; box-sizing: border-box; color: white;  line-height: 26px; padding-left: 5px; background: #1e36de;  margin: 5px 2%; border-radius: 50px;}
+.list_H ul.boxH_s li .boxH_price .icon_pro span{ font-size:24px;}
+.list_H ul.boxH_s li .boxH_price .icon_pro02 span{ font-size:24px;}
+}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區02((2大4小)) 電腦版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+.list_M{width:100%; float: left; padding: 1.45%; margin-bottom: 25px;  position:relative; display:block; box-sizing: border-box;}
+.list_M .box{ display:inline-block; width:100%; padding:10px 5px 5px 5px; }
+
+/*強打2品*/
+.list_M .hotpro_wrapper { width:100%; height:255px; margin:0 auto; display:block; position:relative;overflow:hidden;}
+.list_M .hotproboxL{ width:48%; height:250px; float:left; margin:0 1%; background-color:#fff;border-radius: 39px 5px 5px 5px; -webkit-border-radius: 39px 5px 5px 5px; -moz-border-radius: 39px 5px 5px 5px; position:relative;  }
+.list_M .hotproboxR{ width:49%; height:251px; float:left; margin:0 0.2%; background-color:#fff;border-radius: 5px 39px 5px 5px; -webkit-border-radius: 5px 39px 5px 5px; -moz-border-radius: 5px 39px 5px 5px; position:relative; }
+.list_M .hotpro_pro { width:97%; height:auto; margin:0.8em auto 0 auto; }
+.list_M .hotpro_pic { width: 45%; height: auto;  overflow: hidden; display: block; float: left; margin: 6px 3% 9px 1%; text-align: center;}
+.list_M .hotpro_pic img { max-width:215px; object-fit: contain}
+.list_M .hotproboxL .icon_number{ display:block; background:url(https://events.tk3c.com/events_net/events_net/image/icon_last_num.png) 0 0 no-repeat; width:141px; height:45px; position:absolute;  bottom: 14px; left: 0px; font-size:15px; }
+.list_M .hotproboxR .icon_number{ display:block; background:url(https://events.tk3c.com/events_net/events_net/image/icon_last_num.png) 0 0 no-repeat; width:141px; height:45px; position:absolute;  bottom: 14px; left: 0px; font-size:15px; }
+.list_M .icon_number span{  font-size: 2em; line-height: 45px; font-weight: bolder; padding-left: 7px; padding-right: 7px; color:#b80000;}
+
+
+/*文字區*/
+.list_M .hotpromain { width:50%; height:230px;float:left; overflow:hidden; }
+.list_M .hotpromain .hotpro_sale{ width: 89%; height: 23px; font-size: 16px; color: #F00; line-height: 24px;text-align: left; overflow: hidden; display: block; margin-bottom: 5px;}
+.list_M .hotpromain .hotpro_name{ width: 98%; height: 40px;font-size: 20px;color: #333;line-height: 21px;text-align:left;overflow: hidden;display: block; margin-bottom:5px;}
+.list_M .hotpromain .hotpro_info{width: 98%; height: 70px;font-size: 13px;color: #7e7e7e;line-height: 20px; text-align:left;overflow: hidden;display: block; margin:5px 0 0 0; border-top: 1px dashed #dcdcdc;  border-bottom: 1px dashed #dcdcdc;  box-sizing: border-box; padding: 8px 4px;}
+.list_M .hotpromain .hotpro_info span{ display:block;  display: block; width: 100%; height: 20px; overflow: hidden;text-overflow:ellipsis;white-space:nowrap; }
+.list_M .hotpromain .hotpro_info span:before{ content:"・";}
+.list_M .hotpromain .hotpro_price1{width: 32%; height: 20px;font-size: 14px;color: #999;line-height: 1.1em;text-align:left;overflow: hidden;display: block; float:left; margin-top:20px; text-decoration:line-through;}
+.list_M .hotpromain .hotpro_price2{width: 65%; height: 30px;font-size: 0.8em;color: #e60012;line-height: 1.1em; text-align:right;overflow: hidden;display: block; float:left; margin:4px 0 2px 0;}
+.list_M .hotpromain .hotpro_price2 span{font-size: 250%; line-height: 1.1em; font-weight:bold; margin-left:2px;}
+.list_M .hotpromain .hotpro_price3{width: 65%; height: 30px;font-size: 1.9em;color: #8232a4;line-height: 1.1em; text-align:right;overflow: hidden;display: block; float:left; margin:4px 0 2px 0; font-weight: bold;}
+
+
+/*搶購btn*/
+.list_M .hotpromain .buybtn{ width:98%;height:40px; background:#c60505; box-shadow: 0 4px 0 0 #f05151; color:#fff; text-align:center; line-height:40px; font-size:1.5em; margin:0 auto; float:left;border-radius: 5px;transition: all 0.2s;  -webkit-transition: all 0.2s;  -ms-transition: all 0.2s; -moz-transition: all 0.2s;}
+.list_M .hotpromain .buybtn:hover{ box-shadow:none; background:#cb390c; color:#fff7bd; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;transform: translateY(0.2em);}
+
+
+/*商品區塊*/
+.list_M .list_special{width:100%;float: left;text-align: center; padding:1% 0 1% 1%; display:block; }
+.list_M .list_special ul li{ width: 24%;position:relative; text-align: center; margin:0 8px 8px 0;  background: #FFF; float:left; box-sizing: border-box;-moz-border-radius: 5px; -webkit-border-radius: 5px; list-style: none; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;}
+.list_M .list_special .item_img{width: 98%; margin:1% 1% 10px 1%; background:#fff;}
+.list_M .list_special .item_img img{ width: 210px; height: 210px;  margin: 5px auto; display: block; object-fit: contain}
+.list_M .list_special ul li .icon_02{ display:block; z-index:10; background:url(../images/tag02.png) 0 0 no-repeat; width:61px; height:106px; position:absolute; top: -5px; left: 11px;}
+.list_M .list_special h4 {font-size: 15px; font-weight: bold; color:  #eb6a31; line-height: 25px; overflow: hidden; height: 25px; width: 100%; box-sizing: border-box; display: block; float: left; padding:0 5px;}
+.list_M .list_special storg { font-size: 14px; line-height: 18px; font-weight: bold;  height: 40px; overflow: hidden; width: 100%; color: #000; display: block;box-sizing: border-box; padding: 0 5px;    background:#ffefbd; width: 100%;  margin: 0 auto;}
+.list_M .list_special p{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;}
+.list_M .list_special .item_text05 { line-height:20px;}
+.list_M .list_special .item_text05 span{font-size: 25px;}
+/*熱銷排行榜 價格區塊*/
+.list_M .list_special .box_price{ display:block; text-align:right; width:100%; position:relative;box-sizing: border-box; padding: 0 3px 0 0;}
+.list_M .list_special .box_price strong{  font-size: 28px;  display: block;  height: 60px;  letter-spacing: -2px;  text-align: left;  line-height: 76px;  padding-right: 55px; padding-left: 29%;  overflow: hidden;}
+.list_M .list_special .box_price strong i{ font-size:13px; letter-spacing:0; font-style:normal; }
+.list_M .list_special .box_price strong i:after{ content: "$"; }
+.list_M .list_special .box_price strong:before{content: "搶購"; display: block; width: 47px; height: 43px;  float: right;  border-radius: 5px; color: white; font-size: 0.5em; text-align: center; line-height: 46px; letter-spacing: 1px; position: absolute; bottom: 10px;  right: 5px;  box-shadow: 0 3px 0 0 #ff9381;
+background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
+background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
+background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
+background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
+}
+.list_M .list_special li .box_price strong em{ display: block; font-size: 10px; position: absolute; bottom: 6px; left: 81px; color: #8d8d8d; font-weight: lighter; text-decoration: line-through; letter-spacing: 1px; font-style: normal;}
+.list_M .list_special .box_price .icon_pro{ display: block;  background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px; position: absolute;  z-index: 5; font-size: 16px;  box-sizing: border-box; color: #ff2400; line-height: 26px; bottom: 10px; text-align: left;  padding-left: 4px; background-size: 88%;}
+.list_M .list_special .box_price .icon_pro span{ font-size:28px;}
+
+.list_M .list_special ul li:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); transform: translateY(0.2em);}
+.list_M .list_special ul li:hover .box_price strong:before{box-shadow:none; background:#cb390c; color:#fff7bd; transform: translateY(0.2em);}
+.list_M .list_special ul li:hover storg { background: #154cc9; color:#FFF;}
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區02((2大4小)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+@media screen and (min-width: 320px) and (max-width: 750px){
+/*強打2品*/
+.list_M{width:100%; float: left; padding:0; position:relative; display:block;}
+.list_M .hotpro_wrapper { width:98%; height:440px; display:block; position:relative; overflow:hidden; margin:3% 5px 0 5px;}
+.list_M .hotproboxL{ width:97%; height:215px; float:left; background-color:#fff;border-radius:5px; margin:0 auto 0 1%;}
+.list_M .hotproboxR{ width:97%; height:215px; float:left; background-color:#fff;border-radius:5px; margin:2% 1%;}
+.list_M .hotpro_pro { width:97%; height:210px; margin:1% auto; }
+.list_M .hotpro_pic {width: 50%;height: 200px;overflow: hidden;display: block;float: left; margin: 6px;}
+.list_M .hotpro_pic img {max-width: 100%;}
+/*文字區*/
+.list_M .hotpromain { width:45%; height:200px;float:right; overflow:hidden; }
+.list_M .hotpromain .hotpro_sale{width: 98%; height: 30px;font-size: 0.8em;color: #F00;line-height: 15px; text-align: left;overflow: hidden;display: block; margin:3% 0 0 0;}
+.list_M .hotpromain .hotpro_name{ width: 98%; height: 60px;font-size: 1em;color: #333;line-height: 1.2em; text-align: left;overflow: hidden;display: block; margin:3% 0;}
+.list_M .hotpromain .hotpro_info{width: 98%; height: 45px;font-size: 12px;color: #7e7e7e;line-height: 15px;overflow: hidden;display: none; margin:0;}
+.list_M .hotpromain .hotpro_price1{ display:none;}
+.list_M .hotpromain .hotpro_price2{width: 100%; height: 45px;font-size: 13px;color: #C71F5C;line-height: 1em; overflow: hidden;display: block; float:left; margin-bottom:5px;}
+.list_M .hotpromain .hotpro_price2 span{font-size: 2em;color: #C71F5C;line-height: 30px; font-weight:bold; margin-left:2px; display: block;}
+.list_M .hotpromain .hotpro_price3{ width: 100%;height: 45px; }
+/*搶購btn*/
+.list_M .hotpromain .buybtn{ width:98%;height:40px;background:#c60505; color:#fff; text-align:center; line-height:40px; font-size:1.3em; margin:0 auto; float:left;border-radius: 5px;transition: all 0.2s;  -webkit-transition: all 0.2s;  -ms-transition: all 0.2s; -moz-transition: all 0.2s;}
+.list_M .hotpromain .buybtn:hover{ background:#FF0; color:#000;box-shadow: 3px 3px 2px rgba(20%,20%,40%,0.5);}
+
+/*商品區塊*/
+.list_M .list_special{ margin-bottom: 0; box-sizing: border-box; }
+.list_M .list_special ul li{ width: 48%;  position: relative; text-align: center;  margin: 5px 3px; background: #FFF;  float: left;  box-sizing: border-box; transition: none;}
+.list_M .list_special .item_img{width: 98%; margin:1% 1% 0 1%; background:#fff;}
+.list_M .list_special .item_img img{ width: 120px; height: 120px;  margin: 5px auto; display: block;}
+.list_M .list_special .box_price .icon_pro{ top: -110px;}
+.list_M .list_special .box_price strong:before{display: block;  width: 90%; height: 26px; float: none;  border-radius: 58px; color: white; font-size: 16px; text-align: center; line-height: 28px; letter-spacing: 1px;    bottom: -77px; }
+.list_M .list_special .box_price strong{  position: static;  margin-top: 0;  height: 88px;  padding-right: 0; text-align: center;  float: left; width: 100%;  line-height: 32px;  overflow: visible; padding-left: 0;}
+.list_M .list_special .box_price strong i{ width: 100%; }
+.list_M .list_special li .box_price strong em{ width: 100%; right: 0;  height: 15px; position: static; margin-bottom: 2%; line-height: 20px;}
+.list_M .list_special h4 {font-size: 13px; font-weight: normal; float: none;}
+.list_M .list_special storg {   height: 38px;}
+
+}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區03((2大4小)) 電腦版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+.list_Q {width: 1110px;float: left;padding: 16px;margin-bottom: 25px;position: relative;display: block;}
+.list_Q .box {display: inline-block;	width: 100%;background: #842bad;padding: 5px 5px 13px 5px;}
+/*熱銷排行榜 上方兩大塊*/
+
+.list_Q ul.box_big {display: block;overflow: hidden;	padding: 1% 0 0 1%;}
+.list_Q ul.box_big li {list-style: none;}
+.list_Q ul.box_big li a {height: 337px;width: 48.5%;float: left;	margin: 6px 6px 20px 6px;background: #FFF;list-style: none;	transition: all 0.5s;-webkit-transition: all 0.5s;-ms-transition: all 0.5s;-moz-transition: all 0.5s;position: relative;}
+.list_Q ul.box_big li a:hover {box-shadow: 0px 0px 3px 3px rgba(150, 93, 12, 0.8);background: #FFC;transform: translateY(0.2em);}
+.list_Q ul.box_big li .item_img {width: 45%;	float: left;margin: 7px 0 7px 7px;}
+.list_Q ul.box_big li .item_img img {max-width: 100%;height: auto;}
+.list_Q ul.box_big li .box_word {display: block;width: 49%;height: 244px;overflow: hidden;float: left;margin-left: 3%;box-sizing: border-box;padding: 67px 5px 10px 0;color: gray;}
+.list_Q ul.box_big li .box_word ol {height: 81px;overflow: hidden;margin-bottom: 10px;}
+.list_Q ul.box_big li .box_word ol li {display: block;height: 20px;width: 95%;line-height: 20px;	font-size: 14px;letter-spacing: 1px;	white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.list_Q ul.box_big li .box_word ol li:before {content: "•";}
+.list_Q ul.box_big li .box_word h4 {	display: block;font-size: 15px;color: #fe4e00;line-height: 19px;height: 20px;overflow: hidden;}
+.list_Q ul.box_big li .box_word storg {display: block;font-size: 20px;color: #000;line-height: 25px;	height: 52px;font-weight: bold;	overflow: hidden;margin-bottom: 10px;}
+.list_Q ul.box_big li .icon_01 {display: block;z-index: 10;background: url(../images/icon_crown.png) 0 0 no-repeat;width: 87px;	height: 87px;position: absolute;top: -6px;left: 14px;}
+.list_Q ul.box_big li .icon_sale {display: block;z-index: 10;background: url(../images/icon_pro6.png) 0 0 no-repeat;	width: 193px;	height: 37px;position: absolute;top: 0px;right: 0px;color: #FFF;text-align: center;	font-size: 1.3em;padding-top: 5px;}
+/*熱銷排行榜 下方黃色價格區塊*/
+.list_Q ul.box_big li .box_price {display: block;clear: both;background: #FEF20B;text-align: right;width: 100%;height: 88px;	position: relative;box-sizing: border-box;	padding: 8px 0 0 0;}
+.list_Q ul.box_big li .box_price strong {float: right;height: 88px;padding-top: 6px;	padding-right: 72px;font-size: 56px;margin-right: 10px;	letter-spacing: -2px;}
+.list_Q ul.box_big li .box_price strong:before {	content: "搶購";	display: block;	width: 55px;height: 68px;background-size: 100%;	float: right;margin-right: 10px;margin-top: 9px;border-radius: 5px;color: white;font-size: 21px;text-align: center;	line-height: 68px;	letter-spacing: 1px;position: absolute;	top: 0;	right: 0;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
+.list_Q ul.box_big li .box_price strong i {	font-size: 22px;letter-spacing: 0;font-style: normal;}
+.list_Q ul.box_big li .box_price strong i:after{ content:"$";}
+.list_Q ul.box_big li .box_price strong em {	display: block;	font-size: 14px;color: #8d8d8d;font-weight: lighter;text-decoration: line-through;letter-spacing: 0;text-align: left;position: absolute;top: 5px;}
+.list_Q ul.box_big li .box_price strong span {font-size: 105%;display: block; margin-top: -4%;}
+.list_Q ul.box_big li .box_price .icon_pro {	display: block;	background: url(../images/icon_pro.png) 0 0 no-repeat;	width: 202px;	height: 46px;font-size: 23px;text-align: center;box-sizing: border-box;	color: white;line-height: 45px;	float: left;margin-top: 3%;}
+.list_Q ul.box_big li .box_price .icon_pro span {font-size: 34px;}
+/*熱銷排行榜 商品區塊*/
+.list_Q .list02 {width: 100%;	float: left;text-align: center;	padding: 1% 0 0 1%;	display: block;}
+.list_Q .list02 ul li {	width: 24%;	position: relative;	text-align: center;	margin: 0 8px 8px 0;background: #FFF;float: left;box-sizing: border-box;-moz-border-radius: 5px;-webkit-border-radius: 5px;list-style: none;transition: all 0.5s;-webkit-transition: all 0.5s;-ms-transition: all 0.5s;	-moz-transition: all 0.5s;}
+.list_Q .list02 ul li:hover {box-shadow: 0px 0px 3px 3px rgba(150, 93, 12, 0.8);background: #FEF20B;transform: translateY(0.2em);}
+.list_Q .list02 .item_img {	width: 98%;	margin: 1% 1% 10px 1%;background: #fff;}
+.list_Q .list02 .item_img img {	width: 210px;height: 210px;	margin: 5px auto;display: block;}
+.list_Q .list02 ul li .icon_pro{ display: block; background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px;  position: absolute;  z-index: 5;  font-size: 140%;  box-sizing: border-box;  color: #ff2400;  line-height: 26px;  bottom: 138px;   text-align: left;  padding-left: 4px;  background-size: 88%;}
+.list_Q .list02 ul li .icon_02 {display: block;	z-index: 10;background: url(../images/tag02.png) 0 0 no-repeat;	width: 61px;height: 106px;	position: absolute;	top: -5px;	left: 11px;}
+.list_Q .list02 h4 {font-size: 15px;font-weight: bold;background: #154cc9;color: #FFF;line-height: 25px;overflow: hidden;height: 25px;	width: 100%;	box-sizing: border-box;	display: block;	float: left;	padding: 0 5px;}
+.list_Q .list02 storg {	font-size: 14px;line-height: 18px;font-weight: bold;height: 40px;overflow: hidden;width: 100%;	color: #000;display: block;	box-sizing: border-box;	padding: 0 5px;}
+.list_Q .list02 p {	width: 100%;padding: 3px 0 3px 0;	display: block;	font-size: 13px;padding-top: 5px;float: left;}
+.list_Q .list02 .item_text05 {line-height: 20px;}
+.list_Q .list02 .item_text05 span {	font-size: 25px;}
+/*熱銷排行榜 價格區塊*/
+.list_Q .list02 .box_price {display: block;text-align: right;width: 100%;position: relative;box-sizing: border-box;padding: 0 3px 0 0;}
+.list_Q .list02 .box_price strong {	font-size: 200%;display: block;	height: 60px;letter-spacing: -2px;text-align: left;line-height: 76px;	padding-right: 55px;padding-left: 29%;overflow: hidden;}
+.list_Q .list02 .box_price strong i {font-size: 13px;letter-spacing: 0;	font-style: normal;}
+.list_Q .list02 .box_price strong i:after{ content:"$";}
+.list_Q .list02 .box_price strong:before {content: "搶購";display: block;	width: 47px;height: 40px;float: right;border-radius: 5px;color: white;font-size: 0.5em;text-align: center;	line-height: 40px;letter-spacing: 1px;position: absolute;bottom: 7px;right: 5px;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);	background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
+.list_Q .list02 li .box_price strong em {display: block;font-size: 10px;position: absolute;bottom: 6px;left: 81px;color: #8d8d8d;font-weight: lighter;text-decoration: line-through;letter-spacing: 1px;}
+.list_Q .list02 .box_price .icon_pro {display: block;background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat;width: 80px;height: 43px;position: absolute;z-index: 5;font-size: 16px;box-sizing: border-box;color: #ff2400;line-height: 26px;bottom: 10px;text-align: left;padding-left: 4px;	background-size: 88%;}
+.list_Q .list02 .box_price .icon_pro span {font-size: 28px;}
+.list_Q .list02 ul li .icon_sale {display: block;z-index: 10;width: 77%;height: 22px;color: #FFF;text-align: center;font-size: 1em;	padding-top: 5px;background: #d91780;border-radius: 0 0 10px 10px;margin: 0 auto;}
+/*熱銷排行榜icon*/
+.list_Q .list02 .icon_box {display: block;background-size: 100%;width: 56px;height: 58px;position: absolute;z-index: 5;	box-sizing: border-box;bottom: 0;left: 10px;}
+.list_Q .list02 .icon_ht01 {background: url(../images/ht_01.png) 0 0 no-repeat}
+.list_Q .list02 .icon_ht02 {background: url(../images/ht_02.png) 0 0 no-repeat;}
+.list_Q .list02 .icon_ht03 {background: url(../images/ht_03.png) 0 0 no-repeat;}
+.list_Q .list02 .icon_ht04 {background: url(../images/ht_04.png) 0 0 no-repeat;}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區03((2大4小)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+@media screen and (min-width: 320px) and (max-width: 750px){
+.list_Q {width: 100%;float: none;padding: 0;	margin-bottom: 25px;position: relative;	display: block;	margin: 0 auto 2% auto; float: left;}
+.list_Q .box {display: inline-block;	width: 100%;}
+/*上方兩大塊*/
+.list_Q ul.box_big {	display: block;	width: 96%;	overflow: hidden;background: none;padding: 1% 0 1% 0;margin: 0 auto;}
+.list_Q ul.box_big li {list-style: none;}
+.list_Q ul.box_big li a {height: 305px;width: 100%;float: left;margin: 6px auto;background: #FFF;list-style: none;position: relative;	margin-bottom: 5px;}
+.list_Q ul.box_big li a:hover {background: #FFF;	box-shadow: 0px 0px 3px 3px rgba(63, 58, 59, 0.2);}
+.list_Q ul.box_big li .item_img {width: 120px;height: 120px;	float: left;margin: 57px 0 7px 7px;}
+.list_Q ul.box_big li .item_img img {max-width: 100%;height: auto;}
+.list_Q ul.box_big li .box_word {display: block;	width: 52%;	height: 208px;overflow: hidden;	float: left;margin-left: 4%;box-sizing: border-box;	padding: 51px 5px 10px 0;}
+.list_Q ul.box_big li .box_word ol {	height: 54px;overflow: hidden;margin-bottom: 10px;color: gray;}
+.list_Q ul.box_big li .box_word ol li {display: block;height: 18px;width: 100%;line-height: 18px;font-size: 13px;overflow: hidden;	letter-spacing: 0;}
+.list_Q ul.box_big li .box_word ol li:before {content: "•";}
+.list_Q ul.box_big li .box_word h4 {	display: block;	font-size: 14px;color: #fe4e00;	line-height: 19px;height: 20px;	overflow: hidden;}
+.list_Q ul.box_big li .box_word storg {	display: block;	font-size: 16px;color: #000;line-height: 18px;max-height: 90px;	font-weight: bold;overflow: hidden;}
+.list_Q ul.box_big li .icon_01 {	display: block;	z-index: 10;background: url(../images/tag01.png) 0 0 no-repeat;	width: 80px;height: 81px;position: absolute;top: -6px;left: 14px;background-size: 90%;}
+/*下方黃色價格區塊*/
+.list_Q ul.box_big li .box_price {display: block;clear: both;background: #FEF20B;text-align: right;width: 100%;height: 97px;	position: relative;	padding: 0;}
+.list_Q ul.box_big li .box_price strong {background-size: contain;font-size: 47px;letter-spacing: -3px;	padding-right: 5px;}
+.list_Q ul.box_big li .box_price strong:before {	background: none;}
+.list_Q ul.box_big li .box_price:before {content: "搶購";display: block;width: 55px;height: 68px;background-size: 100%;float: right;	margin-right: 10px;	margin-top: 9px;border-radius: 5px;	color: white;font-size: 21px;text-align: center;line-height: 68px;letter-spacing: 1px;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);	background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);	background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
+.list_Q ul.box_big li .box_price strong i {font-size: 15px;letter-spacing: 1px;}
+.list_Q ul.box_big li .box_price strong em {display: block;font-size: 13px;position: absolute;top: 11px;right: 78px;color: #8d8d8d;font-weight: lighter;	text-decoration: line-through;letter-spacing: 0;}
+.list_Q ul.box_big li .box_price .icon_pro {	display: block;	background: url(../images/icon_pro_s.png) 0 0 no-repeat;width: 78%;	height: 32px;background-size: 71%;padding-left: 16px;font-size: 24px;text-align: left;line-height: 31px;margin-top: 0;}
+.list_Q ul.box_big li .box_price .icon_pro span {font-size: 20px;}
+/*熱銷排行榜 商品區塊*/
+.list_Q .list02 {background: #a41895;padding: 0;}
+.list_Q .list02 ul li {	width: 47.5%;height: auto;margin: 5px 4px;}
+.list_Q .list02 .item_img img {	width: 80%;	height: auto;}
+.list_Q .list02 storg {	line-height: 18px;	height: 38px;}
+.list_Q .list02 li .box_price {}
+.list_Q .list02 li .box_price strong {position:relative;	margin-top: 0;height: 78px;	padding-right: 0;text-align: center;float: left;width: 100%;line-height: 25px;overflow: visible;padding-left: 0;}
+.list_Q .list02 li .box_price strong i {width: 100%;}
+.list_Q .list02 li .box_price strong:before {display: none;}
+.list_Q .list02 li .box_price strong:after {content: "搶購";	display: block;width: 95%;height: 25px;float: right;border-radius: 15px;color: white;font-size: 0.5em;text-align: center;line-height: 24px;letter-spacing: 1px;	background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); position: absolute; left: 3%; bottom:3%;}
+.list_Q .list02 li .box_price strong em {width: 100%;right: 0;height: 15px;position: static;margin-bottom: 2%; line-height: 15px;}
+/*熱銷排行榜icon*/
+.list_Q .list02 .icon_box {width: 46px;height: 46px;	bottom: 39px;left: 71%; background-size: cover;}
+}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區04((1大2小+3小)) 電腦版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+/*上方左大塊*/
+.list_L{ width: 1144px;  position: relative;  display: block;margin-bottom: 25px; float: left;}
+.list_L .box{ display:inline-block; width:100%;  margin-bottom: 2%;}
+.list_L ul.box_big {  display: block; overflow: hidden;   }
+.list_L ul.box_big li{ list-style:none;}
+.list_L ul.box_big li a.big_box{height: 393px; width:552px; float: left;  margin: 6px 6px 20px 6px; box-sizing:border-box; padding: 2%; background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/bg_box_big.jpg) right bottom no-repeat #FFF; list-style:none;transition: all 0.5s;  -webkit-transition: all 0.5s;  -ms-transition: all 0.5s; -moz-transition: all 0.5s; position:relative;  border-bottom: 3px solid #000;}
+.list_L ul.box_big li a.big_box:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); transform: translateY(0.2em);}
+.list_L ul.box_big li a.big_box .img_box{ display:block; float:left;  width:49%;}
+.list_L ul.box_big li a.big_box .item_img{width: 250px; height:250px; margin: 0; box-shadow: -3px 11px 24px #a9a9a9;}
+.list_L ul.box_big li a.big_box .item_img img{ max-width:100%; height:auto;}
+.list_L ul.box_big li a.big_box .icon_pro{ display:block; background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/pic_message_box.jpg) 0 0 no-repeat; width:249px; height:39px; font-size: 18px; text-align: left;  box-sizing: border-box; color: white;line-height: 40px; float:left; margin-top: 13%;    padding-left:10px;}
+.list_L ul.box_big li a.big_box .icon_pro span{ font-size:25px;}
+.list_L ul.box_big li a.big_box .icon_pro em{ display: inline-block;  font-size: 27px; margin-left: 20%;  color: #f7ee13; }
+.list_L ul.box_big li a.big_box .box_word{ display: block;  width: 48%;height: auto; overflow:hidden; float: left; margin-left: 3%; box-sizing:border-box;  padding: 97px 5px 10px 20px;    color: gray;}
+.list_L ul.box_big li a.big_box .box_word h4{ display:block; font-size:15px; color:#ff0000; line-height:22px; height: 21px; font-weight: normal; overflow:hidden;    margin-bottom:29%;}
+.list_L ul.box_big li a.big_box .box_word storg { display:block; font-size:17px; color:#000; line-height: 22px; height: 45px;  overflow:hidden;  margin-bottom: 12px; font-weight: bold;}
+
+/*按鈕-立即搶購*/.list_L ul.box_big li a.big_box .btn_sale_bigbox{ display:block; z-index:10; background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/btn_sale_bigbox.png) 0 0 no-repeat; width:134px; height:28px;  position: absolute;  bottom: -7px; right: 21px;}
+/*icon-秒殺品*/.list_L ul.box_big li a.big_box .icon_top{ display:block; position:absolute; background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/tag01.png) 0 0 no-repeat; width:89px; height:89px; top: -5px; right: 16px; z-index: 10;}
+/*上方左大塊-下方黃色價格區塊*/
+.list_L ul.box_big li a.big_box .box_price{ display:block; clear:both;  width:100%; height:88px; position:relative;    box-sizing: border-box; padding: 0;}
+.list_L ul.box_big li a.big_box .box_price strong{  height: 88px; font-size: 60px; margin-top: 11px; float:right;}
+.list_L ul.box_big li a.big_box .box_price strong span{ font-size:30px;}
+.list_L ul.box_big li a.big_box .box_price strong em{ display:block; font-size:13px;  color:#8d8d8d; font-weight:lighter; letter-spacing:0; text-decoration:line-through;}
+.list_L ul.box_big li a.big_box .box_price strong em i{ font-size: 16px; letter-spacing: 0; position: absolute; color: #d50c5d;    right: 0;}
+
+/*上方右邊兩小塊*/
+.list_L ul.box_big li a.small_box{ height: 189px; width: 560px;  margin: 6px 0px 10px 5px; position: relative; display: block; background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/bg_box_small.jpg) right bottom no-repeat #FFF;    border-bottom: 3px solid #000;transition: all 0.5s;  -webkit-transition: all 0.5s;  -ms-transition: all 0.5s; -moz-transition: all 0.5s; }
+.list_L ul.box_big li a.small_box:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); transform: translateY(0.2em);}
+.list_L ul.box_big li a.small_box .item_img{width:142px; height:142px; float:left; margin: 4%;}
+.list_L ul.box_big li a.small_box .item_img img{ max-width:100%; height:auto;}
+.list_L ul.box_big li a.small_box .box_word{ display: block; width: 66%; height: auto; overflow: hidden; box-sizing: border-box;padding: 2%; color: gray;}
+.list_L ul.box_big li a.small_box .box_word h4{ display:block; width: 71%; font-size:14px; color:#fe4e00; line-height:22px; height: 21px; font-weight:normal; overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+.list_L ul.box_big li a.small_box .box_word p{ display: block;  position: absolute;  right: 0;  background: #d80052; color: #FFF;  border-radius: 10px 0 0 10px; box-sizing: border-box; padding: 4px 4px 4px 9px;  width: 11%; font-size: 18px;}
+.list_L ul.box_big li a.small_box .box_word .icon_samll_box{  display: block; position: absolute; left: 0;  bottom: 0; background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/icon_samll_box.png) 0 0 no-repeat; width:93px; height:39px;}
+.list_L ul.box_big li a.small_box .icon_pro{ display: inline-block; background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/pic_message_box2.jpg) 0 0 no-repeat; width: 111px; height: 30px;  font-size: 16px;  text-align: left;  box-sizing: border-box;  color: white; line-height: 31px;  float: left;  margin-top: 8%;  padding-left: 11px;}
+.list_L ul.box_big li a.small_box .icon_pro span{ font-size:25px;}
+.list_L ul.box_big li a.small_box .box_word storg {  display: block;  font-size: 15px;  color: #000; line-height: 20px;  width: 71%; height: 41px; overflow: hidden;     margin-bottom: 6px; padding-top: 8%; font-weight: bold;}
+
+/*按鈕-立即搶購*/.list_L ul.box_big  li a.small_box .btn_sale_bigbox{ display:block; z-index:10; }
+/*上方右邊兩小塊-下方黃色價格區塊*/
+.list_L ul.box_big li a.small_box .box_price{ display:block; clear:both;  width:100%; height:88px; position:relative;    box-sizing: border-box; padding: 12px 0 0 0;}
+.list_L ul.box_big li a.small_box .box_price strong{ height: auto; font-size: 40px;  margin-top: 6px;  float: right; margin-right: 16%;}
+.list_L ul.box_big li a.small_box .box_price strong span{ font-size:30px;}
+.list_L ul.box_big li a.small_box .box_price strong em{ display:block; font-size:13px;  color:#8d8d8d; font-weight:lighter; letter-spacing:0;  text-decoration:line-through;}
+.list_L ul.box_big li a.small_box .box_price strong em i{ font-size: 16px; letter-spacing: 0; position: absolute; color: #d50c5d; right:0;}
+.list_L ul.box_big li a.small_box .box_price strong  b{ width: 15%; font-size: 15px;  background: #000; box-sizing: border-box;  border-radius: 5px; color:#f7d913;font-weight: normal;padding: 8px; position: absolute; right: 0;  top: 38px;}
+
+
+/*下方6小覷塊*/
+.list_L ul.box_s li{ list-style:none;}
+.list_L ul.box_s li a{ display:block; height: 249px; width:32%; float: left;  margin: 6px;background:#FFF; border-bottom: 3px solid #000;  list-style:none;  position:relative; transition: all 0.5s;  -webkit-transition: all 0.5s;  -ms-transition: all 0.5s; -moz-transition: all 0.5s;}
+.list_L ul.box_s li a:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); background:#FFC; transform: translateY(0.2em);}
+.list_L ul.box_s li .item_img{ width: 40%; float: left; margin: 26px 0 7px 10px;}
+.list_L ul.box_s li .item_img img{ max-width:100%; height:auto;}
+.list_L ul.box_s li .box_word{ display: block; width: 55.5%; float: left; box-sizing: border-box; padding: 53px 0px 5px 13px; height:187px;  overflow: hidden;}
+.list_L ul.box_s li .box_word ol{ height: 49px; overflow: hidden; color: gray;} 
+.list_L ul.box_s li .box_word ol li{ display: block;  width: 100%; line-height: 16px; font-size: 12px;  padding-bottom: 6px; height: 10px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.list_L ul.box_s li .box_word h4{ display:block; font-size:15px; color:#fe4e00; line-height:16px; height:18px; overflow:hidden;    line-height: 22px;}
+.list_L ul.box_s li .box_word storg { display:block; font-size:15px; color:#000; line-height:22px; height:37px; font-weight:bold; overflow:hidden; padding-bottom:10px;}
+/*黃線-標題平衡用.list_L ul.box_s li .box_word storg:before{ content: "";  display: block;  width: 31px;  height: 3px; background: #f7d913; position: absolute;  top: 35px;}*/
+.list_L ul.box_s li .icon_top2{ display:block; z-index:10; width:80px; height:41px; position:absolute; top:0px; right:0;}
+.icon_top03{ background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/icon_top03.png) 0 0 no-repeat;}
+.icon_top04{ background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/icon_top04.png) 0 0 no-repeat;}
+.icon_top05{ background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/icon_top05.png) 0 0 no-repeat;}
+.icon_top06{ background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/icon_top06.png) 0 0 no-repeat;}
+.icon_top07{ background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/icon_top07.png) 0 0 no-repeat;}
+.icon_top08{ background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/icon_top08.png) 0 0 no-repeat;}
+
+
+/*下方黃色價格區塊*/
+.list_L ul.box_s li .box_price{ display:block; clear:both; background:#ffde02; text-align:right; width:100%; height:63px; position:relative;    box-sizing: border-box; padding: 0;}
+.list_L ul.box_s li .box_price strong{ float:right; height: 88px; padding-right: 75px;  font-size: 30px; margin-right: 10px; letter-spacing: -2px;padding-top: 9px; }
+.list_L ul.box_s li .box_price strong:before{  content: "搶購"; display: block; width: 18%; height: 41px;  background-size: 65%;  font-size: 20px; letter-spacing: 3px; font-weight: normal; border-radius: 5px;  color:#f7d913; line-height: 46px; text-align: center; z-index: 5; position: absolute; right: 7px; background: #000000;  box-shadow: 0px 2px 0 0 #6b6b6b;}
+.list_L ul.box_s li a:hover .box_price strong:before{ box-shadow:none; background:#000; color:#6b6b6b; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;transform: translateY(0.2em);}
+.list_L ul.box_s li .box_price strong i{ font-size: 13px; letter-spacing:0;}
+.list_L ul.box_s li .box_price strong em{ display:block; font-size:13px;  color:#8d8d8d; font-weight:lighter; text-decoration:line-through; letter-spacing:0;}
+.list_L ul.box_s li .box_price .icon_pro{ display: block; background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/icon_pro.png) 0 0 no-repeat;  width: 131px;  height: 31px; font-size: 15px;  text-align: left; padding-left:10px;  box-sizing: border-box; color: white; line-height: 27px; float: left;  background-size: 96%;     margin-top: 5%;}
+.list_L ul.box_s li .box_price .icon_pro span{ font-size:25px;}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區04((1大2小+3小)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+@media screen and (min-width: 320px) and (max-width: 750px){
+.list_L{ width: 100%;  position: relative;  display: block;}
+.list_L ul.box_big li a.big_box{height: auto; width:100%; float: left;  margin: 0; box-sizing:border-box; padding:0; background:#FFF; list-style:none; transition:none;  -webkit-transition: none;  -ms-transition: none; -moz-transition: none; position:relative;  border-bottom: 3px solid #000;}
+.list_L ul.box_big li a.big_box:hover{ box-shadow:none; transform:none;}
+.list_L ul.box_big li a.big_box .img_box{ display: block;  float: none; width: 100%;  margin: 0 auto;}
+.list_L ul.box_big li a.big_box .item_img{ width: 151px; height: 151px; margin: 0 auto; display: block; box-shadow: none; overflow: hidden;   padding-top: 10px;}
+.list_L ul.box_big li a.big_box .box_word{ display: block;  width: 100%;height: auto; overflow:hidden; float: none; margin-left: 0; box-sizing:border-box;  padding:0;    color: gray;}
+.list_L ul.box_big li a.big_box .box_word h4{ display: block; font-size: 15px; color: #ff0000; line-height: 22px; height: 21px; font-weight: normal; overflow: hidden; margin-bottom: 0; text-align: center; box-sizing: border-box;  padding: 0 10px;}
+.list_L ul.box_big li a.big_box .box_word storg { display: block;  font-size: 16px; color: #000; line-height: 20px; height: 55px; overflow: hidden; margin-bottom: 0px; box-sizing: border-box;  padding: 13px;  text-align: center;}
+/*黃線-標題平衡用*/.list_L ul.box_big li a.big_box .box_word storg:before{ content:""; display:none; width:56px; height:3px; background:#f7d913;position: absolute;  top: 85px;}
+/*按鈕-立即搶購*/.list_L ul.box_big li a.big_box .btn_sale_bigbox{ display: none; z-index: 10; background: #000; width: 20%; height: 28px; border-radius: 10px; position: absolute; right: 10px; bottom: 11px;}
+/*icon-秒殺品*/.list_L ul.box_big li a.big_box .icon_top{ }
+.list_L ul.box_big li a.big_box .box_price{ display:block; clear:both;  width:100%; height:auto; background:#f7d913; position:relative;    box-sizing: border-box; padding: 0;}
+.list_L ul.box_big li a.big_box .box_price strong{ height: auto; font-size: 33px;  margin-top: 4px; float: none; text-align: center; display: block; box-sizing: border-box; padding: 10px; position:relative;}
+.list_L ul.box_big li a.big_box .box_price strong:after{ content: "搶購"; display: block; color: #f7d913;  background: #000;  border-radius: 20px; font-size: 18px; font-weight:normal; letter-spacing: 8px; width: 80%;  margin: 0 auto;  box-sizing: border-box;  padding: 5px;}
+.list_L ul.box_big li a.big_box .icon_pro{  display: block; background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/pic_message_box.jpg) 0 0 no-repeat;  width: 249px;  height: 31px;  font-size: 16px;  box-sizing: border-box;  color: white; float: none; margin: 10px auto 0px auto;  line-height: 26px;}
+.list_L ul.box_big li a.big_box .box_price strong em{ display: inline-block; font-size: 13px; color: #8d8d8d; font-weight: lighter; letter-spacing: 0; text-decoration: line-through; text-align: left; padding-right: 10px;}
+
+/*上方右邊兩小塊*/
+.list_L ul.box_big li a.small_box{ height: auto;  width: 100%; margin: 0 auto;  position: relative; display: block; background: #FFF; border-bottom: 3px solid #000; float:left; overflow:hidden;}
+.list_L ul.box_big li a.small_box:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); transform:none;}
+.list_L ul.box_big li a.small_box .item_img{ width: 142px; height: 142px; float: none; margin: 10px auto; display: block; overflow: hidden; padding-top: 10px;}
+.list_L ul.box_big li a.small_box .box_word{ display: block; width: 100%; height: auto; overflow: hidden;  box-sizing: border-box; padding: 0; text-align: center;}
+.list_L ul.box_big li a.small_box .box_word p{ display: block; position: absolute; left: 0; top: 20px;  background: #d80052;  color: #FFF; border-radius: 0 10px 10px 0;  box-sizing: border-box; padding: 4px 4px 4px 9px; width: 11%;   font-size: 18px;}
+.list_L ul.box_big li a.small_box .box_word storg {  display: block;  font-size: 15px;  color: #000; line-height: 20px; width: 100%; height: 41px;  overflow: hidden;  margin-bottom: 0;  padding: 0 10px;  box-sizing: border-box;}
+.list_L ul.box_big li a.small_box .box_word h4{ display: block; width: 100%;  font-size: 14px; color: #fe4e00; line-height: 22px; height: 21px; font-weight: normal; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-align: center;}
+.list_L ul.box_big li a.small_box .box_price{  display: block;  clear: both;  width: 100%;  height: auto; position: relative; box-sizing: border-box;  padding: 0; background: #f7d913; overflow: hidden;}
+.list_L ul.box_big li a.small_box .icon_pro{ display: inline-block; background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/pic_message_box2.png) 0 0 no-repeat; width: 111px; height: 30px; font-size: 16px; text-align: left; box-sizing: border-box; color: white; line-height: 31px; float: left; margin-top: 16px; padding-left: 11px;}
+.list_L ul.box_big li a.small_box .box_word .icon_samll_box{ bottom: 138px; left: auto; right:0;width: 20%; line-height: 30px; height: 30px; border-radius: 30px 0 0 30px; display: block; position: absolute;  background: #016ce4;  color: #FFF; text-align: center;}
+.list_L ul.box_big li a.small_box .box_word .icon_samll_box:before{ content:"熱銷王"; }
+.list_L ul.box_big li a.small_box .box_price strong{ height: auto; font-size: 34px; margin-top: 6px;  float: right; margin-right: 20%;}
+.list_L ul.box_big li a.small_box .box_price strong em{ display: block;  font-size: 13px;  color: #8d8d8d; font-weight: lighter;  letter-spacing: 0; text-align: left;  text-decoration: line-through;}
+.list_L ul.box_big li a.small_box .box_price strong  b{   position: absolute;  right: 10px;  top: 18px;}
+
+/*黃線-標題平衡用*/.list_L ul.box_big li a.small_box .box_word storg:before{ display:none; width:51px; height:3px; background:#f7d913;position: absolute;  top:22px;}
+
+/*第一區塊*/
+.list_L{padding:0; margin-bottom:25px; float: left;}
+.list_L .box{ display:inline-block; width:100%;padding: 1%; border: none; float: left; box-sizing: border-box;}
+.list_L ul.box_big li .box_price .icon_pro span{ font-size:20px;}
+/*下方6小覷塊*/
+.list_L ul.box_s{ display:block; margin-top:10px;}
+.list_L ul.box_s li{ list-style:none; text-align:center;}
+.list_L ul.box_s li a{ height: auto; height: auto; width: 46.5%; float: left; margin: 5px;  box-sizing:border-box;  background: #FFF; list-style: none; position: relative;border: 3px solid #d8290c;border-radius: 5px;}
+.list_L ul.box_s li a:hover{ background:#FFF; box-shadow: 0px 0px 3px 3px rgba(63,58,59,0.2);}
+.list_L ul.box_s li .item_img{ width: 120px; height:120px; float: none; margin:9px auto;}
+.list_L ul.box_s li .item_img img{ max-width:100%; height:auto;}
+.list_L ul.box_s li .box_word{ display: block; width: 100%; float: none; box-sizing: border-box; padding: 0; height: auto;}
+.list_L ul.box_s li .box_word ol{ height:18px; overflow: hidden; margin: 6px 0; color:gray;} 
+.list_L ul.box_s li .box_word ol li{ display: block; height: auto; width: 99.5%; line-height: 16px; font-size: 12px;  letter-spacing: -1px;}
+.list_L ul.box_s li .box_word h4{ display:block; font-size:15px; color:#fe4e00; line-height:21px; height:21px; overflow:hidden;}
+.list_L ul.box_s li .box_word storg { display: block; font-size: 14px; color: #000; line-height: 18px; height: 38px; font-weight: bold;  overflow: hidden;box-sizing: border-box;  padding:2px;}
+.list_L ul.box_s li .icon_01{ display:block; z-index:10; background:url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/tag01.png) 0 0 no-repeat; width:60px; height:61px; position:absolute; top:-6px; left:4px;background-size: 100%;}
+/*黃線-標題平衡用*/.list_L ul.box_s li .box_word storg:before{ content: "";  display: none;  width: 31px;  height: 3px; background: #f7d913; position: absolute;  top: 35px;}
+
+/*下方黃色價格區塊*/
+.list_L ul.box_s li .box_price{ display:block; clear:both; text-align:right; width:100%; height:105px; position:relative;}
+.list_L ul.box_s li .box_price:after{  content: "搶購〉"; color: #FFF;  background: #000;  width: 100%; height: 32px;  display: block;  text-align: center; font-size: 1.2em;  letter-spacing: 6px;   line-height: 32px;     box-sizing: border-box;  padding-left: 24px;}
+.list_L ul.box_s li .box_price strong{ height: 43px; font-size: 21px; text-align: center; width: 100%; display: block;  padding: 0;  margin: 0 auto; letter-spacing: 1px; float: none;}
+.list_L ul.box_s li .box_price strong i{ font-size:16px;}
+.list_L ul.box_s li .box_price strong em{ display: block; font-size: 11px; color: #8d8d8d;  font-weight: lighter; text-decoration: line-through;}
+.list_L ul.box_s li .box_price .icon_pro{ display: block; width: 81%;  height: 26px; font-size: 15px; text-align: center; box-sizing: border-box; color: white;  line-height: 26px; padding-left: 5px; background: #911382;  margin: 5px auto; border-radius: 50px; float: none;}
+.list_L ul.box_s li .box_price .icon_pro span{ font-size:24px;}
+.list_L ul.box_s li .box_price strong:before{ content: ""; display: none;  width: 97px; height: 66px; background-size: 51%;  z-index: 5; position:static; right: 0px; bottom: 0px;}
+}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區05((4小)) 電腦版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+.list_F{width:100%;float: left;text-align: center;padding: 0 2% 2% 2%;display:block;box-sizing: border-box;margin-bottom: 25px;}
+.list_F ul li{height: auto;width: 23.9%;position:relative;text-align: center;margin:6px 0.5%;background: #FFF;padding: 10px 0px;float:left;box-sizing: border-box;-moz-border-radius: 5px;-webkit-border-radius: 5px;list-style: none;transition: all 0.5s;-webkit-transition: all 0.5s;-ms-transition: all 0.5s;-moz-transition: all 0.5s;}
+.list_F ul li:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); background:#FFC; transform: translateY(0.2em);}
+.list_F .itemF_img{width: 100%; margin-bottom:10px;}
+.list_F .itemF_img img{width: 100%;height: auto;margin: 0 auto;display: block;}
+.list_F h4 {font-size: 15px; font-weight: bold; background: #0d8f92; color: #FFF; line-height: 25px; overflow: hidden; height: 25px; width: 100%; box-sizing: border-box; display: block; float: left; padding:0 5px;}
+.list_F storg { font-size: 14px; line-height: 18px; font-weight: bold;  height: 40px; overflow: hidden; width: 100%; color: #000; display: block;box-sizing: border-box; padding: 0 5px;}
+.list_F p{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;}
+.list_F .boxF_price{ display:block; text-align:right; width:100%; position:relative;box-sizing: border-box; padding: 0 3px 0 0;}
+.list_F li .boxF_price strong em{ display: block; font-size: 10px; position: absolute; bottom: 6px; right: 25%; color: #8d8d8d; font-weight: lighter; text-decoration: line-through; letter-spacing: 1px;}
+.list_F li .boxF_price strong {	font-size: 160%;display: block;	height: 60px;letter-spacing: -2px;text-align: right;line-height: 76px;	padding-right: 63px;padding-left: 29%;overflow: hidden;}
+.list_F li .boxF_price strong i {font-size: 13px;letter-spacing: 0;	font-style: normal;}
+.list_F li .boxF_price strong:before {content: "搶購";display: block;	width: 47px;height: 40px;float: right;border-radius: 5px;color: white;font-size: 0.7em;text-align: center;	line-height: 40px;letter-spacing: 1px;position: absolute;bottom: 7px;right: 5px;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);	background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
+
+.list_F .boxF_price .iconF_pro{ display: block;  background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px; position: absolute;  z-index: 5; font-size: 16px;  box-sizing: border-box; color: #ff2400; line-height: 26px; bottom: 10px; text-align: left;  padding-left: 4px; background-size: 88%;}
+.list_F .boxF_price .iconF_pro span{ font-size:28px;}
+
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區05((4小)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+@media screen and (min-width: 320px) and (max-width: 750px){
+.list_F{width:100%;float: left;text-align: center;display:block;padding:0;}
+.list_F ul li{  width: 48.3%; height: 290px; position:relative; text-align: center; margin:6px 2px;  background: #FFF;  float:left; box-sizing: border-box;-moz-border-radius: 5px; -webkit-border-radius: 5px; list-style: none; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s; border: 3px solid #4ce2e6; padding: 0;}
+.list_F .itemF_img{width: 100%; margin-bottom:0;}
+.list_F .itemF_img img{ width: 120px;  height: 120px;}
+.list_F h4 {font-size: 15px; font-weight: bold; background: #42b5b8; color: #FFF;  line-height: 25px;  overflow: hidden;  height: 25px;  width: 100%; box-sizing: border-box; display: block;  padding: 0 5px; margin: 0 auto; border-radius: 50px;  letter-spacing: -0.5px;}
+.list_F storg { font-size: 14px; line-height: 17px; font-weight: bold;  height: 35px; overflow: hidden; width: 100%; color: #000; display: block;box-sizing: border-box; padding: 0 5px;}
+.list_F p{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;}
+.list_F .boxF_price{ display:block;     text-align: center; width:100%; position:relative;box-sizing: border-box; padding:5px 0 0 0;}
+.list_F .boxF_price:after{ content: "搶購〉"; color: #0b4f51; background: #4ce2e6;  width: 100%;  height: 34px; display: block; text-align: center; font-size: 1.2em;  letter-spacing: 6px; line-height: 34px;    box-sizing: border-box; padding-left: 24px;}
+.list_F li .boxF_price strong{ font-size: 150%;  display: block; height: 52px;  overflow: hidden; width: 100%;padding: 0 1% 1% 1%; background: none; box-sizing: border-box;  text-align: center;}
+.list_F li .boxF_price strong i{ font-size:13px;}
+.list_F li .boxF_price strong em{ display: block; font-size: 11px;color: #8d8d8d; font-weight: lighter; text-decoration: line-through; letter-spacing: 1px; bottom: 32%; }
+.list_F li .boxF_price strong:before { display: none;}
+.list_F .boxF_price .iconF_pro{ display: block; background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat;  width: 80px; height: 43px; position: absolute;  z-index: 5;  font-size: 16px; box-sizing: border-box; color: #ff2400;  line-height: 25px;text-align: left;  padding-left: 5px; background-size: 78%;top: -102px;}
+.list_F .boxF_price .iconF_pro span{ font-size:20px;}
+
+}
+
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區06((5小)) 電腦版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+.list_D{width:100%; float: left;text-align: center; padding:5px; margin-bottom:25px; position:relative; display:block; box-sizing: border-box; }
+.list_D ul li{width: 18.4%;height: auto;background:#E62A86;border:2px solid #E62A86;text-align: center;float: left;margin:6px 5px 6px 8px;border-radius: 8px;padding-bottom: 0.3%;transition: all 0.5s;-webkit-transition: all 0.5s;-ms-transition: all 0.5s;-moz-transition: all 0.5s;}
+.list_D ul li:hover{ background:#FF0; border:2px solid #FF0;box-shadow: 0px 0px 3px 3px rgba(63,58,59,0.2);}
+.list_D .itemD_img{width: 100%; float:left; background:#fff;}
+.list_D h4 {font-size: 15px;font-weight: bold; color: #FF0; line-height: 24px;overflow: hidden; height: 20px;padding: 5px;width: 95%; display:block; float:left;}
+.list_D storg { width: 98%; font-size: 14px;line-height: 18px;font-weight: bold;height: 37px; margin:0 auto; overflow: hidden; color:#fff; display:block;}
+.list_D ul li:hover storg { color:#000; }
+.list_D ul li:hover h4 { color:#E62A86;}
+.list_D p{width: 100%;padding:2px 0; display:block;font-size: 13px; float:left; background:#fff;}
+.list_D .itemD_text { line-height:20px; height: 20px;}
+.list_D .itemD_text span{font-size: 20px;}
+.list_D .buybtn{ width:97%; height:30px; background-color:#000; color:#fff; padding:5px 5px 5px 10px; margin:0 auto 0 3px; text-align:left; float:left; border-radius: 30px; -webkit-border-radius: 30px; -moz-border-radius: 30px; box-sizing:border-box;}
+.list_D .gobtn{ width:20%; height:15px; background-color:#FF0; color:#000; text-align:center; float:right; border-radius: 20px; -webkit-border-radius: 20px; -moz-border-radius: 20px; padding:3px; line-height:15px; font-size:50%; }
+
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區06((5小)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+@media screen and (min-width: 320px) and (max-width: 750px){
+.list_D{ width:100%;float: left;text-align: center;  padding:2% 0; margin-bottom:10px; position:relative; display:block; }
+.list_D ul{ float:left; text-align:center; padding-left: 0.5%;}
+.list_D ul li{height: auto; width: 46%; margin-left: 0.5%}
+.list_D .itemD_img{ height:auto;}
+
+}
+
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) 電腦版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+@media screen and (min-width:751px) {
+/*限時限量*/
+.limit_wrapper {position: relative;width: 1144px;height: 336px;margin-bottom:25px;transition: all 0.3s;  -webkit-transition: all 0.3s;  -ms-transition: all 0.3s; -moz-transition: all 0.3s; position:relative; float:left;}
+	.limit_wrapper > img{display:none;}
+.limit_wrapper2 {position: relative;width: 1144px;height: 336px;margin:2% 0 1% 0;transition: all 0.3s;  -webkit-transition: all 0.3s;  -ms-transition: all 0.3s; -moz-transition: all 0.3s;	position:relative; }
+
+.limit_bg0413{background: url(../images/limtbg0413.png) no-repeat center;}
+.limit_bg0414{background: url(../images/limtbg0414.png) no-repeat center;}
+.limit_bg0415{background: url(../images/limtbg0415.png) no-repeat center;}
+.limit_bg0416{background: url(../images/limtbg0416.png) no-repeat center;}
+.k3pro_link{ display:block; background:url(../images/k3pro201804_link.png) 0 0 no-repeat; width:443px; height:274px; position:absolute;  top: 34px;  left: 336px;}
+
+.itembox_02{position: relative;}
+.itembox_02 .item01{ position:absolute;width: 360px;height: 300px;top:18px;}
+
+.itembox_02 .item01_left{ left:10px; background:#fff; border:#063359 solid 4px;  transition: all 0.3s;  -webkit-transition: all 0.3s;  -ms-transition: all 0.3s; -moz-transition: all 0.3s;
+border-radius: 0px 0px 0px 60px; 
+-webkit-border-radius: 0px 0px 0px 60px; 
+-moz-border-radius: 0px 0px 0px 60px;   }
+.itembox_02 .item01_right{ right:10px; background:#fff; border:#063359 solid 4px;  transition: all 0.3s;  -webkit-transition: all 0.3s;  -ms-transition: all 0.3s; -moz-transition: all 0.3s;
+border-radius: 0px  0px 60px; 
+-webkit-border-radius: 0px  0px 60px; 
+-moz-border-radius: 0px  0px 60px;   }
+
+.itembox_02 .item01_left:hover{	border:#ff0 solid 5px; box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);  }
+.itembox_02 .item01_right:hover{ border:#ff0 solid 5px; box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);  }
+
+.itembox_02 .pic01{	position: absolute;	left: 25px;top: 95px; z-index:5;}
+.itembox_02 .pic01 img{	width: 160px;height: 160px;}
+.itembox_02 .textbox{position: absolute;width: 130px;display:block; z-index:9; right:15px; top:90px; text-align: left;}
+
+.itembox_02 .text01{ width: 270px; height:50px; position: absolute;  top: 20px; font-weight: bold; font-size: 20px;  line-height: 24px; color: #07355a; text-align: left; overflow: hidden; margin:0px 0 0px 69px;}
+.itembox_02 .text01_l{ left:30px;}
+.itembox_02 .text01_r{ left:30px;}
+
+.itembox_02 .text02{font-size: 15px;color: #f48212;	height: 40px;line-height: 20px; display:block; overflow:hidden;}
+.itembox_02 .text03{font-size:13px; color:#000; line-height:22px; height:22px;}
+.itembox_02 .text04{font-size: 20px; line-height: 22px; margin-top:5%;}
+.itembox_02 .text05{font-size: 34px;font-weight: bold;}
+.itembox_02 .text06{font-size: 34px;font-weight: bold;margin-top: 29px;}
+.itembox_02 .text_price{ display: block; width:85%; background: #F00; color: #FFF; text-align: center; border-radius: 11px; box-sizing: border-box; padding: 8px;}
+
+/*限時限量-icon*/
+.itembox_02 .itembox_icon{ display:block; width:82px; height:75px; background:url(../images/item_icon.png) 0 0 no-repeat; color:#FFF; position:absolute; box-sizing: border-box;  padding-left: 5px; text-align: left;}
+.itembox_02 .itembox_icon span{ font-size:1.8em; font-weight:bolder; }
+
+}
+
+/*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
+@media screen and (min-width: 320px) and (max-width: 750px){
+.limit_wrapper {position: relative;width: 100%;height: auto; padding:1% 0; display:block; margin:0 auto 2% auto; float:left;}
+	.limit_wrapper img{width:100%;}
+.limit_wrapper2 {position: relative;width: 100%;height: 691px; padding-top:122px; display:block; margin:0 auto 5% auto;}
+
+.k3pro_bg{ background: url(../images/k3pro1111_m.png) top center no-repeat #ffcc00; background-size:100%; }
+.k3pro_bg2{background: url(../images/k3pro_m.png) top center no-repeat #ffcc00; background-size:100%;}
+.k3pro1111_link{ display: block;  background: url(../images/k3pro1111_link.png) center 16px no-repeat; width: 100%; height: 274px; position: absolute; top: 0; left: 0; background-size: 53%;}
+
+
+.itembox_02{position: relative;width: 100%;height: auto;margin:1% auto;}
+.itembox_02 .item01{width: 98%;height: 250px; position:relative; margin:0 auto 3% auto;}
+
+.itembox_02 .item01_left{ background:#fff; border:#063359 solid 4px; position:relative;
+border-radius: 0px 0px 20px 20px; 
+-webkit-border-radius: 0px 0px 20px 20px; 
+-moz-border-radius: 0px 0px 20px 20px;  }
+
+.itembox_02 .item01_right{background:#fff; border:#063359 solid 4px; position:relative;
+border-radius: 0px 0px 20px 20px; 
+-webkit-border-radius: 0px 0px 20px 20px; 
+-moz-border-radius: 0px 0px 20px 20px;  }
+
+
+
+.itembox_02 .pic01{ width:40%; height:180px; position: absolute; left: 5%; top: 28%; z-index:5;}
+.itembox_02 .pic01 img{	width: 150px;height: 150px;}
+.itembox_02 .textbox{width: 50%; height:190px;position: absolute;display:block; z-index:9; right:2%; top:25%;overflow: hidden; text-align: center;}
+
+.itembox_02 .text01{ width: 79%;  height: 45px; font-size: 1em;  line-height: 1.4em; color: #266eb9;  font-weight: bold; text-align: right; overflow: hidden; float: right; margin-right: 10px; margin-top: 7px;}
+.itembox_02 .text01_l{ left:7%;}
+.itembox_02 .text01_r{ left:2%;}
+
+.itembox_02 .text02{font-size: 100%; line-height:1.2em;color: #f48212;max-height: 55px; margin-bottom:6%; display:block; overflow:hidden;}
+.itembox_02 .text03{font-size:13px; color:#000; line-height:22px; height:22px;}
+.itembox_02 .text04{font-size: 1.2em; line-height: 1.4em;}
+.itembox_02 .text05{font-size: 34px;font-weight: bold;}
+.itembox_02 .text06{font-size: 34px;font-weight: bold;}
+.itembox_02 .text_price{ display: block; width:100%; background: #F00; color: #FFF; text-align: center; border-radius: 5px; box-sizing: border-box; padding: 2%;font-size:130%; font-weight: bold;}
+/*限時限量-icon*/
+.itembox_02 .itembox_icon{ display:block; width:82px; height:75px; background:url(../images/item_icon.png) 0 0 no-repeat; color:#FFF; position:absolute; box-sizing: border-box;  padding-left: 3px; text-align: left;}
+.itembox_02 .itembox_icon span{ font-size:1.8em; font-weight:bolder; }
+
+.acbankbox .list2 .item_text05 em{font-size: 8vmin !important;}
+
+};}
+
+}}
+
+};}
+
+}
