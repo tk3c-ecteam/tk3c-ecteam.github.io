@@ -8,9 +8,9 @@ $(function(){
     let goTop = $(miContainer).find("#go-Top");
 
     const miTypes = [
-        {"title": "明星主打","image": "20201103_button02"},
-        {"title": "新品登場","image": "20201103_button03"},
-        {"title": "狂歡降價","image": "20201103_button04"},
+        {"id": 0,"title": "明星主打","image": "20201103_button02"},
+        {"id": "pro1629","title": "新品登場","image": "20201103_button03"},
+        {"id": "pro1630", "title": "狂歡降價","image": "20201103_button04"},
         {"title": "智慧家庭","image": "20201106＿new but009"},
         {"title": "智慧生活", "image": "20201106＿new but005_2"},
         {"title": "手機線材", "image": "20201103_button06"},
@@ -79,7 +79,7 @@ $(function(){
     appendItems(miTypes,$(miNav));
     appendItems(miSliderImages,$(sliderContainer),'slider');
     appendItems(miTypes,$('.buttongroup_6'));
-    addProID($(miNav).find('li').children('a').not(':eq(0)'));
+    addProID($(miNav));
     
     if (isMobile() === true) {
         console.log("oooooooooook");

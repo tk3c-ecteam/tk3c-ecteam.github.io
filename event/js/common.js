@@ -3,11 +3,14 @@ const isMobile = () => {
     let ua = navigator.userAgent;
     let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
 
-    if (isMobile === true || $(window).width() <= 768) {
-        console.log("YYYYYYYY");
-        return true;
+    if ($(window).width() > 768) {
+        isMobile = false;
+    } else {
+        isMobile = true;
     }
+    return isMobile;
 }
+
 
 /*
 * 錨點
@@ -70,6 +73,9 @@ const appendItems = (items,element,type = '') => {
 * 使用方法: addProID($(element))
 */
 const addProID = (element) => {
+    let proTitleNum = $('.protitle').find('a').length;
+    let liNum = element.find('li').children('a').length;
+    let liLink = '';
     if ($('.protitle').find('a').length > 0) {
         $.each($('.protitle').find('a'),function(i,v){
             let id = $('.protitle').find('a').attr('id');
