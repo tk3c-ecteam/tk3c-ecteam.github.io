@@ -3,7 +3,7 @@ const isMobile = () => {
     let ua = navigator.userAgent;
     let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
 
-    if (window.innerWidth <= 768) {
+    if ($(window).width() <= 768) {
         return isMobile;
     }
 }
