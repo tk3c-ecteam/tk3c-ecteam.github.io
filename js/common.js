@@ -39,6 +39,7 @@ const appendItems = (items,element,type = '') => {
     let hrefHtml = '';
     let item = '';
     let images = '';
+    let imageUrl = "https://events.tk3c.com/events_net/events_net/misuper/images/";
        
     if (items.length > 0) {
         for (let i = 0; i < items.length; i++) {
