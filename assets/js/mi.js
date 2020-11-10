@@ -79,9 +79,10 @@ $(function(){
     appendItems(miTypes,$(miNav));
     appendItems(miSliderImages,$(sliderContainer),'slider');
     appendItems(miTypes,$('.buttongroup_6'));
-    addProID($(miNav));
+    addProID($(miNav).find('li').children('a').not(':eq(0)'));
     
     if (isMobile() === true) {
+        console.log("oooooooooook");
         $('.buttongroup_6').fadeIn();
         $(miNav).hide();
     }

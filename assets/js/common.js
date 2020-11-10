@@ -2,8 +2,10 @@
 const isMobile = () => {
     let ua = navigator.userAgent;
     let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
-
-    return isMobile;
+console.log(window.innerWidth());
+    if (window.innerWidth() < 1025) {
+        return isMobile;
+    }
 }
 
 /*
