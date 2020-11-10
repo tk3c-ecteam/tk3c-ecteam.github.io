@@ -1,9 +1,9 @@
-﻿//判斷為手機裝置
+﻿//判斷為手機裝置(電腦尺寸在768以下進行手機裝置判斷)
 const isMobile = () => {
     let ua = navigator.userAgent;
     let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
-console.log(window.innerWidth());
-    if (window.innerWidth() < 1025) {
+
+    if (window.innerWidth <= 768) {
         return isMobile;
     }
 }
