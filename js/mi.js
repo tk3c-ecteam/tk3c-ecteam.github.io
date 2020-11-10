@@ -7,23 +7,22 @@ $(function(){
     let miEvent = $(miContent).find('.event');
     let goTop = $(miContainer).find("#go-Top");
 
-    let imageUrl = "https://events.tk3c.com/events_net/events_net/misuper/images/";
     const miTypes = [
-        "明星主打",
-        "新品登場",
-        "狂歡降價",
-        "智慧家庭",
-        "智慧生活",
-        "手機線材",
-        "耳機配件",
-        "生活好物"
+        {"title": "明星主打","image": "20201103_button02"},
+        {"title": "新品登場","image": "20201103_button03"},
+        {"title": "狂歡降價","image": "20201103_button04"},
+        {"title": "智慧家庭","image": "20201106＿new but009"},
+        {"title": "智慧生活", "image": "20201106＿new but005_2"},
+        {"title": "手機線材", "image": "20201103_button06"},
+        {"title": "耳機配件", "image": "20201103_button07"},
+        {"title": "生活好物" ,"image": "20201103_button08"}
     ];
 
     const miSliderImages = [
-        {"title": "米家掃地機器人","url": "https://www.tk3c.com/pt.aspx?pid=207766"},
-        {"title": "米家電動打氣機","url": "https://www.tk3c.com/pt.aspx?pid=202572"},
-        {"title": "米家手持無線吸塵器Lite","url": "https://www.tk3c.com/pt.aspx?pid=205772"},
-        {"title": "小米空氣淨化器3","url": "https://www.tk3c.com/pt.aspx?pid=203789"},
+        {"title": "米家掃地機器人","image": "20201103_main_item_1","url": "https://www.tk3c.com/pt.aspx?pid=207766"},
+        {"title": "米家電動打氣機","image": "20201103_main_item_2","url": "https://www.tk3c.com/pt.aspx?pid=202572"},
+        {"title": "米家手持無線吸塵器Lite","image": "20201103_main_item_3","url": "https://www.tk3c.com/pt.aspx?pid=205772"},
+        {"title": "小米空氣淨化器3","image": "20201103_main_item_4", "url": "https://www.tk3c.com/pt.aspx?pid=203789"},
     ];
 
    /* const appendElement = (items,element,type = '') => {
@@ -80,6 +79,7 @@ $(function(){
     appendItems(miTypes,$(miNav));
     appendItems(miSliderImages,$(sliderContainer),'slider');
     appendItems(miTypes,$('.buttongroup_6'));
+    addProID($(miNav));
     
     if (isMobile() === true) {
         $('.buttongroup_6').fadeIn();
