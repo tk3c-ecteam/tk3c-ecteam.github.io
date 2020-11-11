@@ -1,4 +1,5 @@
-//var location = window.location;
+//活動頁面圖片網址轉換成cdn https://events.cdn-tkec.tw
+
 $(function() {
 var images = document.getElementsByTagName('img');
 var imageUrl = '';
@@ -8,10 +9,11 @@ var imageStr = '/events_net/events_net';
         imageUrl = images[i];
 
         if (imageUrl.src.indexOf(imageStr) != -1) {
-            imageUrl.src = imageUrl.src.replace("/events_net/events_net","");
-            imageUrl.src = imageUrl.src.replace("https://events.tk3c.com","https://events.cdn-tkec.tw/events_net/events_net");
+            imageUrl.src = imageUrl.src.replace(imageStr,"");
+            imageUrl.src = imageUrl.src.replace("https://events.tk3c.com","https://events.cdn-tkec.tw" + imageStr);
         } else {
-            imageUrl.src = imageUrl.src.replace(window.location.origin,"https://events.cdn-tkec.tw/events_net/events_net");
+            let newImagePath = imageUrl.getAttribute('src');
+            imageUrl.src = "https://events.cdn-tkec.tw" + imageStr + "/" + newImagePath;
         }
     }
 });

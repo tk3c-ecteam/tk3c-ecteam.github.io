@@ -45,7 +45,8 @@ const appendItems = (items,element,type = '') => {
     let hrefHtml = '';
     let item = '';
     let images = '';
-    let imageUrl = "https://events.tk3c.com/events_net/events_net/misuper/images/";
+    let typeID = '';
+    let imageUrl = "https://events.cdn-tkec.tw/events_net/events_net/misuper/images/";
        
     if (items.length > 0) {
         for (let i = 0; i < items.length; i++) {
@@ -58,7 +59,8 @@ const appendItems = (items,element,type = '') => {
 
             item = items[i].title;
             images = imageUrl + items[i].image + ".png";
-            typeHtml = "<li><a href='"+ hrefHtml +"' target='_blank'><img src='"+ images +"' alt='"+ item +"'>" +  item + "</a></li>";
+            typeID = items[i].id;
+            typeHtml = "<li><a data-id='" + typeID +"' href='"+ hrefHtml +"' target='_blank'><img src='"+ images +"' alt='"+ item +"'>" +  item + "</a></li>";
             element.find("ul").append(typeHtml);
         }
     } else {
@@ -73,9 +75,6 @@ const appendItems = (items,element,type = '') => {
 * 使用方法: addProID($(element))
 */
 const addProID = (element) => {
-    let proTitleNum = $('.protitle').find('a').length;
-    let liNum = element.find('li').children('a').length;
-    let liLink = '';
     if ($('.protitle').find('a').length > 0) {
         $.each($('.protitle').find('a'),function(i,v){
             let id = $('.protitle').find('a').attr('id');
