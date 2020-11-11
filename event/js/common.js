@@ -84,3 +84,18 @@ const addProID = (element) => {
         console.log("商品標題不存在");
     }
 }
+
+$(document).ready(function() {
+    const rightbtn = $('body').find('.rightbtn');
+
+    $(window).scroll(function(){
+        const scrollTop = $(window).scrollTop();
+
+        if (scrollTop < 300) {
+            $(rightbtn).fadeOut('fast');
+        } else {
+            $(rightbtn).fadeIn('slow');
+        }
+    });
+});
+
