@@ -95,7 +95,7 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 .rightbtn .actbtn a.btn_01:hover { opacity:0.8; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;transform: translateY(0.2em); background:#cebb83;}
 
 /* 加入右側選單收合按鈕 */
-.rightbtn .actbtn .toggle-rightbtn { display:block;position: absolute; width: 3%;height: 25px;line-height: 25px;bottom: -30px;left: 0;background: #374d58;color: #ffffff;z-index: 300; }
+.rightbtn .actbtn .toggle-rightbtn { display:block;position: absolute; width: 3%;height: 25px;line-height: 25px;bottom: -30px;left: 0;background: #374d58;color: #ffffff;z-index: 300; cursor: pointer;}
 .toggleR {transform: translateX(150%);}
 /*M版本((下方))按鈕*/
 .fix_btn{ display:none;}
