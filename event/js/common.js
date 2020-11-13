@@ -102,7 +102,8 @@ $(document).ready(function() {
     });
 
     //調整手機版商品列表錨點位移距離 fix_btn
-    $(fixBtn).find('a').click(function(){
+    $(fixBtn).find('a').click(function(e){
+        e.preventDefault();
         let proId = $(this).attr('href');
         if (proId.length > 0) {
             goAnchor($(proId));
