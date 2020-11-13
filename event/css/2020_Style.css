@@ -89,11 +89,12 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 .upbox a.btn_01:hover{ color: #000;background: #f6f8f9;background: -moz-linear-gradient(top, #f6f8f9 0%, #e5ebee 50%, #d7dee3 51%, #f5f7f9 100%); background: -webkit-linear-gradient(top, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%); }
 
 /*電腦版本((右方))按鈕*/
-.rightbtn { position: fixed;  width: 100%; height: auto;  margin: 368px 0px 0px 565px;  left: 50%;  z-index: 100;   bottom: 135px; text-align: center;   }
+.rightbtn { position: fixed;  width: 100%; height: auto;  margin: 368px 0px 0px 565px;  left: 50%;  z-index: 100;   bottom: 135px; text-align: center; transform: translate(0,0);}
 .rightbtn .actbtn { width: 134px;  height: auto; display: block; position: relative; background:#fdf0c3; border-radius: 0 0 10px 10px; border-top:3px solid #af793e;    padding-bottom: 10px;}
 .rightbtn .actbtn a.btn_01 {  width: 100%;  height: 38px; margin: 0 auto; line-height: 36px; color: #816511; text-decoration: none;  border-bottom: 1px dotted #bea96b; box-sizing: border-box;  padding: 3px 0; display: block;}
 .rightbtn .actbtn a.btn_01:hover { opacity:0.8; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;transform: translateY(0.2em); background:#cebb83;}
-
+.rightbtn .actbtn .toggle-rightbtn { display:block;position: absolute; width: 32%;height: 25px;bottom: -35px;left: 0;background: #3c45299e;color: #ffffff; }
+.toggleR {transform: translateX(150%);}
 /*M版本((下方))按鈕*/
 .fix_btn{ display:none;}
 
