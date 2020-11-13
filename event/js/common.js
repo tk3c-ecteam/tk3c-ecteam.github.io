@@ -88,6 +88,7 @@ const addProID = (element) => {
 $(document).ready(function() {
     const rightbtn = $('body').find('.rightbtn');
 
+    $(rightbtn).hide();
     $(window).scroll(function(){
         const scrollTop = $(window).scrollTop();
 
