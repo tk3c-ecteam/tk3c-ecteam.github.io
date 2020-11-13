@@ -98,7 +98,7 @@ $(document).ready(function() {
         }
     });
 
-    $(rightbtn).find('.actbn').append("<span class='toggle-rightbn'><<</span>");
+    $(rightbtn).find('.actbtn').append("<span class='toggle-rightbn'><<</span>");
     $(rightbtn).find('.toggle-rightbn').click(function(){
         $(rightbtn).toggleClass('toggleR');
     });
