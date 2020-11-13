@@ -105,7 +105,7 @@ $(document).ready(function() {
     $(fixBtn).find('a').click(function(){
         let proId = $(this).attr('href');
         if (proId.length > 0) {
-            $('html,body').animate({'scrollTop': $(proId).offset().top - 100});
+            goAnchor($(proId));
         }
      });
 });
