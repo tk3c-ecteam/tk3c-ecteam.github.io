@@ -87,7 +87,9 @@ const addProID = (element) => {
 
 $(document).ready(function() {
     const rightbtn = $('body').find('.rightbtn');
+    const fixBtn = $('body').find('.fix_btn');
 
+    //右側選單滑鼠滾到後顯示
     $(rightbtn).hide();
     $(window).scroll(function(){
         const scrollTop = $(window).scrollTop();
@@ -98,5 +100,13 @@ $(document).ready(function() {
             $(rightbtn).fadeIn('slow');
         }
     });
+
+    //調整手機版商品列表錨點位移距離 fix_btn
+    $(fixBtn).find('a').click(function(){
+        let proId = $(this).attr('href');
+        if (proId.length > 0) {
+            $('html,body').animate({'scrollTop': $(proId).offset().top - 100});
+        }
+     });
 });
 
