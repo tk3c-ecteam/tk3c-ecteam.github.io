@@ -85,6 +85,33 @@ const addProID = (element) => {
     }
 }
 
+/*
+** 新增左側廣告區域
+* 若需要使用 .leftbtn => display: block
+即可顯示
+*/
+const addLeftAside = () => {
+    let leftbtnHtml = 
+    `<div class="leftbtn">
+        <div class="side-content">
+            <a href="#" target="_blank">銀行優惠</a>
+            <a href="#" target="_blank">搶紅包</a>
+            <a href="#" target="_blank">33333333</a>
+            <a href="#" target="_blank">444444</a>
+        </div>
+        <div class="other-content">
+            <a href="#" target="_blank">會場1</a>
+            <a href="#" target="_blank">會場2</a>
+            <a href="#" target="_blank">會場3</a>
+            <a href="#" target="_blank">會場4</a>
+        </div>
+    </div>`;
+
+    if ($('.rightbtn').length > 0) {
+        $('.rightbtn').after(leftbtnHtml);
+    }
+}
+
 $(document).ready(function() {
     const rightbtn = $('body').find('.rightbtn');
 
@@ -102,5 +129,8 @@ $(document).ready(function() {
     $(rightbtn).find('.toggle-rightbn').click(function(){
         $(rightbtn).toggleClass('toggleR');
     });
+
+    //新增左側廣告欄位
+    addLeftAside();
 });
 
