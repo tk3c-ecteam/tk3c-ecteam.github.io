@@ -35,18 +35,18 @@ const goAnchor = (element = null) => {
 * 使用方法: appendItems(items,element,type);
 items - 共有幾張圖片
 element - 要擴增的區域
+imageUrl - 圖片資料夾連結 如: https://events.cdn-tkec.tw/events_net/events_net/misuper/images/
 type - 如果是輪播要用的 type == 'slider'
 
-appendItems(miTypes,$(miNav)); 生成錨點按鈕
-appendItems(miSliderImages,$(sliderContainer),'slider'); 生成輪播圖片
+appendItems(miTypes,$(miNav)imageUrl); 生成錨點按鈕
+appendItems(miSliderImages,$(sliderContainer),imageUrl,'slider'); 生成輪播圖片
 */
-const appendItems = (items,element,type = '') => {
+const appendItems = (items,element,imageUrl,type = '') => {
     let typeHtml = '';
     let hrefHtml = '';
     let item = '';
     let images = '';
     let typeID = '';
-    let imageUrl = "https://events.cdn-tkec.tw/events_net/events_net/misuper/images/";
        
     if (items.length > 0) {
         for (let i = 0; i < items.length; i++) {
