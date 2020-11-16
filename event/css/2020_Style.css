@@ -97,9 +97,11 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 /* 電腦版本(左方)按鈕 */
 .leftbtn {display:none;left: initial;right: 0;bottom: 46%;}
 .leftbtn .side-content:before, .leftbtn .other-content:before {content: ''; position: absolute;top: -51%;left: 0;width: 100%;height: 80px;background-color: #006abe;}
-.leftbtn .side-content:before {top: -97%;border-top-left-radius: 10px;border-top-right-radius: 10px;}
+.leftbtn .side-content:before {border-top-left-radius: 10px;border-top-right-radius: 10px;}
+.leftbtn .other-content:before {top: -97%;}
 .leftbtn .other-content {top: 74px;}
-.leftbtn .other-content a {width: 50px;height: 38px;display: inline-flex;margin: 0 auto;flex-wrap: wrap;justify-content: center;align-items: center;}
+.leftbtn .other-content a {width: 50px;height: 38px;display: inline-flex;margin: 0 auto;flex-wrap: wrap;justify-content: center;align-items: center;border-bottom: 1px solid;}
+.leftbtn .other-content:nth-child(odd) {border-right: 1px solid;}
 
 /* 加入右側選單收合按鈕 */
 .rightbtn .actbtn .toggle-rightbtn { display:block;position: absolute; width: 3%;height: 25px;line-height: 25px;bottom: -30px;left: 0;background: #374d58;color: #ffffff;z-index: 300; cursor: pointer;}
