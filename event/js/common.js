@@ -109,5 +109,14 @@ $(document).ready(function() {
             goAnchor($(proId));
         }
      });
+
+      //調整右側選單錨點位移距離 rightbtn
+    $(rightbtn).find('.btn_01').click(function(e){
+        e.preventDefault();
+        let proRightId = $(this).attr('href');
+        if (proRightId.length > 0) {
+            goAnchor($(proRightId));
+        }
+     });
 });
 
