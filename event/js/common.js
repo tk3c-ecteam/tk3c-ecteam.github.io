@@ -86,8 +86,10 @@ const addProID = (element) => {
 }
 
 $(document).ready(function() {
-    const rightbtn = $('body').find('.rightbtn');
-    const fixBtn = $('body').find('.fix_btn');
+    let rightbtn = $('body').find('.rightbtn');
+    let fixBtn = $('body').find('.fix_btn');
+    let rightLink = $(rightbtn).find('.btn_01');
+    let fixLink = $(fixBtn).find('ul li a');
 
     //右側選單滑鼠滾到後顯示
     $(rightbtn).hide();
@@ -101,21 +103,12 @@ $(document).ready(function() {
         }
     });
 
-    //調整手機版商品列表錨點位移距離 fix_btn
-    $(fixBtn).find('ul li a').click(function(e){
+    //錨點位移距離 fix_btn rightbtn
+    rightLink.add(fixLink).click(function(e){
         e.preventDefault();
         let proId = $(this).attr('href');
         if (proId.length > 0) {
             goAnchor($(proId));
-        }
-     });
-
-      //調整右側選單錨點位移距離 rightbtn
-    $(rightbtn).find('.btn_01').click(function(e){
-        e.preventDefault();
-        let proRightId = $(this).attr('href');
-        if (proRightId.length > 0) {
-            goAnchor($(proRightId));
         }
      });
 });
