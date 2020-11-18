@@ -85,6 +85,31 @@ const addProID = (element) => {
     }
 }
 
+/*
+* 選單滾動後顯示目前位置功能
+* 使用方法: scrollTab();
+選單tab的class預設為: .tab-container, .-tab-content
+若有不同請加入參數
+如: scrollTab('#tab','.content)
+參數說明: 第一個為tab頁籤(按鈕)區域; 第二個為tab要顯示的內容的那幾個區塊
+*/
+function scrollTab(tabContianer = '.tab-container',tabContent = '.tab-content') {
+    $(tabContianer).find("li").eq(0).addClass('tab-active');
+    $.each($(tabContianer).find("li"),function(i,v){
+      let contentArea = $(tabContianer).find("a").eq(i).attr('href');
+  
+        $(window).scroll(function(){
+            let $this = $(this);
+            let scrollOffset = $this.scrollTop();
+            let contentOffset = $(contentArea).position().top -85;
+            let contentHeight = $(tabContent).height();
+            if (scrollOffset >= contentOffset && scrollOffset < contentOffset + contentHeight) {
+              $(tabContianer).find("li").eq(i).addClass('tab-active').siblings('li').removeClass('tab-active');
+            }
+          });
+      });
+}
+
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
     let fixBtn = $('body').find('.fix_btn');
