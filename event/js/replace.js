@@ -12,7 +12,7 @@ var imageStr = '/events_net/events_net';
             imageUrl.src = imageUrl.src.replace(imageStr,"");
             imageUrl.src = imageUrl.src.replace("https://events.tk3c.com","https://events.cdn-tkec.tw" + imageStr);
         } else {
-            let newImagePath = imageUrl.getAttribute('src');
+            var newImagePath = imageUrl.getAttribute('src');
             if (imageUrl.src.indexOf("https://www.cdn-tkec.tw") == -1) {
                 imageUrl.src = "https://events.cdn-tkec.tw" + imageStr + "/" + newImagePath;
             }
