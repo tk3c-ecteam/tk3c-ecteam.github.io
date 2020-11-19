@@ -16,6 +16,15 @@ html { margin: 0; padding: 0; height: 100%; }
 .pc_version_non{ display:none;}	
 .bg01{ background:#333;}
 
+/* 商品名稱超過3行省略 ... */
+.bg01 storg{
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+	text-indent: -5px;
+}
+
 
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 
