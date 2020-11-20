@@ -110,6 +110,34 @@ function scrollTab(tabContianer = '.tab-container',tabContent = '.tab-content') 
       });
 }
 
+/*
+* 文字多行省略最後面加入 "..."
+用於商品區的商品名稱
+storg 商品標題 - 字多餘 50個
+*/
+
+function productSubstr() {
+    var proText = $('.bg01').find('storg');
+    var proText2 = $('.bg01').find('h4');
+
+    $.each(proText,function(i,v){
+        var text = v.textContent;
+        var text2 = $(proText2).eq(i).text();
+        var textNum = chineseTansform(text);
+        var text2Num = chineseTansform(text2);
+    if (textNum > 50) {
+        $(v).text(text.substr(0,50) + '...');
+    }
+    if (text2Num > 25) {
+        $(proText2).eq(i).text(text2.substr(0,20) + '...');
+    }
+});
+
+//轉換1個中文文字長度為2個英文字(解決字串截取計算錯誤問題)
+function chineseTansform (str) {
+    return str.replace(/[^\x00-\xff]/g,"xx").length;
+}
+
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
     let fixBtn = $('body').find('.fix_btn');
