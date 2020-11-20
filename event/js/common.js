@@ -128,8 +128,8 @@ function productSubstr() {
         if (textNum > 50) {
             $(v).text(text.substr(0,50) + '...');
         }
-        if (text2Num > 25) {
-            $(proText2).eq(i).text(text2.substr(0,25) + '...');
+        if (text2Num > 30) {
+            $(proText2).eq(i).text(text2.substr(0,30) + '...');
         }
     });
 }
