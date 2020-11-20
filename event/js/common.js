@@ -129,7 +129,7 @@ function productSubstr() {
         $(v).text(text.substr(0,50) + '...');
     }
     if (text2Num > 25) {
-        $(proText2).eq(i).text(text2.substr(0,20) + '...');
+        $(proText2).eq(i).text(text2.substr(0,25) + '...');
     }
 });
 
