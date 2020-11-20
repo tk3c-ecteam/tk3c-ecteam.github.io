@@ -125,13 +125,14 @@ function productSubstr() {
         var text2 = $(proText2).eq(i).text();
         var textNum = chineseTansform(text);
         var text2Num = chineseTansform(text2);
-    if (textNum > 50) {
-        $(v).text(text.substr(0,50) + '...');
-    }
-    if (text2Num > 25) {
-        $(proText2).eq(i).text(text2.substr(0,25) + '...');
-    }
-});
+        if (textNum > 50) {
+            $(v).text(text.substr(0,50) + '...');
+        }
+        if (text2Num > 25) {
+            $(proText2).eq(i).text(text2.substr(0,25) + '...');
+        }
+    });
+}
 
 //轉換1個中文文字長度為2個英文字(解決字串截取計算錯誤問題)
 function chineseTansform (str) {
@@ -145,7 +146,6 @@ $(document).ready(function() {
     let fixLink = $(fixBtn).find('ul li a');
 
     //右側選單滑鼠滾到後顯示
-    $(rightbtn).hide();
     $(window).scroll(function(){
         const scrollTop = $(window).scrollTop();
 
@@ -155,6 +155,9 @@ $(document).ready(function() {
             $(rightbtn).fadeIn('slow');
         }
     });
+
+    //商品名稱太長省略文字
+    productSubstr();
 
     //錨點位移距離 fix_btn rightbtn
     rightLink.add(fixLink).click(function(e){
