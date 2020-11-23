@@ -139,11 +139,31 @@ function chineseTansform (str) {
     return str.replace(/[^\x00-\xff]/g,"xx").length;
 }
 
+//新增css嵌入檔案(共用類font icon或特殊字型等等)
+function cssLoader(url) {
+    let head = document.getElementsByTagName('head')[0];
+    let link = document.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = url;
+    head.appendChild(link);
+}
+
+//新增js嵌入檔案
+function jsLoader(url) {
+    let body = document.getElementsByTagName('body')[0];
+    let script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    body.appendChild(script);
+}
+
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
     let fixBtn = $('body').find('.fix_btn');
     let rightLink = $(rightbtn).find('.btn_01');
     let fixLink = $(fixBtn).find('ul li a');
+    let fontIcon = "";
 
     //右側選單滑鼠滾到後顯示
     $(window).scroll(function(){
@@ -155,6 +175,10 @@ $(document).ready(function() {
             $(rightbtn).fadeIn('slow');
         }
     });
+
+    //嵌入 font awesome icon 連結
+    fontIcon = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css";
+    cssLoader(fontIcon);
 
     //商品名稱太長省略文字
     productSubstr();
