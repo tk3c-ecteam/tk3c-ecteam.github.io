@@ -398,8 +398,8 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); }
 .list_M .list_special .box_price{ display:block; text-align:right; width:100%; position:relative;box-sizing: border-box; padding: 0 3px 0 0;}
 .list_M .list_special .box_price strong{  font-size: 28px;  display: block;  height: 60px;  letter-spacing: -2px;  text-align: left;  line-height: 76px;  padding-right: 55px; padding-left: 29%;  overflow: hidden;}
 .list_M .list_special .box_price strong i{ font-size:13px; letter-spacing:0; font-style:normal; }
-.list_M .list_special .box_price strong i:after{ content: "$"; }
-.list_M .list_special .box_price strong:before{content: "搶購"; display: block; width: 47px; height: 43px;  float: right;  border-radius: 5px; color: white; font-size: 0.5em; text-align: center; line-height: 46px; letter-spacing: 1px; position: absolute; bottom: 10px;  right: 5px;  box-shadow: 0 3px 0 0 #ff9381;
+.list_M .list_special .box_price strong i:after{ content: "\0024"; }
+.list_M .list_special .box_price strong:before{content: "\6436\8cfc"; display: block; width: 47px; height: 43px;  float: right;  border-radius: 5px; color: white; font-size: 0.5em; text-align: center; line-height: 46px; letter-spacing: 1px; position: absolute; bottom: 10px;  right: 5px;  box-shadow: 0 3px 0 0 #ff9381;
 background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
 background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
 background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); 
