@@ -14,12 +14,12 @@ var originUrl = 'https://events.tk3c.com';
         //排除含有cdn網址的圖片
         if (imageUrl.src.indexOf(newUrl) < 0) {
             if (imageUrl.src.indexOf(imageStr) > -1) {
-                imageUrl.src = imageUrl.src.replace(originUrl,newUrl + imageStr);
+                imageUrl.src = imageUrl.src.replace(originUrl,newUrl);
                 if (imageUrl.src.indexOf('https://events.tk3c.com.tw') > -1) {
                      imageUrl.src = imageUrl.src.replace('https://events.tk3c.com.tw',newUrl);
                 }
             } else {
-                if (imageUrl.src.indexOf("https://www.cdn-tkec.tw") < 0 && imageUrl.src.indexOf('images') > -1) {
+                if (imageUrl.src.indexOf("https://www.cdn-tkec.tw") < 0 && imageUrl.src.indexOf('/images') > -1) {
                     imageUrl.src = newUrl + imageStr + "/" + newImagePath;
                 }
             }
