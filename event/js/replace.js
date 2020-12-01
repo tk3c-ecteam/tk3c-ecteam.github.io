@@ -20,7 +20,7 @@ var originUrl = 'https://events.tk3c.com';
                 }
             } else {
                 if (imageUrl.src.indexOf("https://www.cdn-tkec.tw") < 0 && imageUrl.src.indexOf('/images') > -1) {
-                    imageUrl.src = newUrl + imageStr + "/" + newImagePath;
+                    imageUrl.src = newUrl + imageStr + newImagePath;
                 }
             }
         }
