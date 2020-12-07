@@ -197,6 +197,7 @@ $(document).ready(function() {
     $(rightbtn).append("<i class='fas fa-angle-double-right toggle-rightbn'></i>");
     $(rightbtn).find('.toggle-rightbn').click(function(){
         $(rightbtn).toggleClass('toggleR');
+        $('div#gotop').toggleClass('toggleR');
         $(rightbtn).find('i').toggleClass('fas fa-angle-double-right fas fa-angle-double-left');
     });
 });
