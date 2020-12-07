@@ -105,7 +105,7 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 
 /* 加入右側選單收合按鈕 */
 .rightbtn .toggle-rightbn { display:block;position: absolute; width: 25px;height: 25px;top: -50%;left: -2%;color: #FFC107;z-index: 300; cursor: pointer;font-size: 25px;}
-.toggleR {transform: translateX(35%);}
+.toggleR {transform: translateX(18%);}
 /*M版本((下方))按鈕*/
 .fix_btn{ display:none;}
 
@@ -118,8 +118,17 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 a.ad01{ background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/bigsale.png) 0 0 no-repeat;width: 1144px; height: 429px;display: block;float: left; margin-top: 2%;}
 a.ad01 img{display:none;}
 
+@media screen and (min-width:2500px) {
+	.toggleR {transform: translateX(26%);}
+}
+@media screen and (min-width:2000px) {
+	.toggleR {transform: translateX(21%);}
+}
 @media screen and (max-width:1600px) {
-	.toggleR {transform: translateX(30%);}
+	.toggleR {transform: translateX(12%);}
+}
+@media screen and (max-width:1280px) {
+	.toggleR {transform: translateX(6%);}
 }
 @media screen and (min-width:751px) {
 	
