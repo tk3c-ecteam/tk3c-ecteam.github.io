@@ -118,11 +118,11 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 a.ad01{ background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/bigsale.png) 0 0 no-repeat;width: 1144px; height: 429px;display: block;float: left; margin-top: 2%;}
 a.ad01 img{display:none;}
 
-@media screen and (min-width:2500px) {
-	.toggleR {transform: translateX(26%);}
-}
 @media screen and (min-width:2000px) {
 	.toggleR {transform: translateX(21%);}
+}
+@media screen and (min-width:2500px) {
+	.toggleR {transform: translateX(26%);}
 }
 @media screen and (max-width:1600px) {
 	.toggleR {transform: translateX(12%);}
