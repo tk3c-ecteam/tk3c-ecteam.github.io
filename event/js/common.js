@@ -129,8 +129,5 @@ $(document).ready(function() {
     $(rightbtn).find('.toggle-rightbn').click(function(){
         $(rightbtn).toggleClass('toggleR');
     });
-
-    //新增左側廣告欄位
-    addLeftAside();
 });
 
