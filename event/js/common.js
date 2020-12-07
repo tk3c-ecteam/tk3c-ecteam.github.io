@@ -86,31 +86,6 @@ const addProID = (element) => {
 }
 
 /*
-* 選單滾動後顯示目前位置功能
-* 使用方法: scrollTab();
-選單tab的class預設為: .tab-container, .-tab-content
-若有不同請加入參數
-如: scrollTab('#tab','.content)
-參數說明: 第一個為tab頁籤(按鈕)區域; 第二個為tab要顯示的內容的那幾個區塊
-*/
-function scrollTab(tabContianer = '.tab-container',tabContent = '.tab-content') {
-    $(tabContianer).find("li").eq(0).addClass('tab-active');
-    $.each($(tabContianer).find("li"),function(i,v){
-      let contentArea = $(tabContianer).find("a").eq(i).attr('href');
-  
-        $(window).scroll(function(){
-            let $this = $(this);
-            let scrollOffset = $this.scrollTop();
-            let contentOffset = $(contentArea).position().top -85;
-            let contentHeight = $(tabContent).height();
-            if (scrollOffset >= contentOffset && scrollOffset < contentOffset + contentHeight) {
-              $(tabContianer).find("li").eq(i).addClass('tab-active').siblings('li').removeClass('tab-active');
-            }
-          });
-      });
-}
-
-/*
 * 文字多行省略最後面加入 "..."
 用於商品區的商品名稱
 storg 商品標題 - 字多餘 50個
@@ -157,6 +132,32 @@ function jsLoader(url) {
     script.src = url;
     body.appendChild(script);
 }
+/*
+** 新增左側廣告區域
+* 若需要使用 .leftbtn => display: block
+即可顯示
+*/
+const addLeftAside = () => {
+    let leftbtnHtml = 
+    `<div class="leftbtn">
+        <div class="side-content">
+            <a href="#" target="_blank">銀行優惠</a>
+            <a href="#" target="_blank">搶紅包</a>
+            <a href="#" target="_blank">33333333</a>
+            <a href="#" target="_blank">444444</a>
+        </div>
+        <div class="other-content">
+            <a href="#" target="_blank">會場1</a>
+            <a href="#" target="_blank">會場2</a>
+            <a href="#" target="_blank">會場3</a>
+            <a href="#" target="_blank">會場4</a>
+        </div>
+    </div>`;
+
+    if ($('.rightbtn').length > 0) {
+        $('.rightbtn').after(leftbtnHtml);
+    }
+}
 
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
@@ -191,5 +192,10 @@ $(document).ready(function() {
             goAnchor($(proId));
         }
      });
+     
+    $(rightbtn).find('.actbtn').append("<span class='toggle-rightbn'><<</span>");
+    $(rightbtn).find('.toggle-rightbn').click(function(){
+        $(rightbtn).toggleClass('toggleR');
+    });
 });
 
