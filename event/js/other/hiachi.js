@@ -1,7 +1,7 @@
 $(function(){
-    var hiachiContainer = $("#hiachi-container");
+    var hitachiContainer = $("#hitachi-container");
 
-    $(hiachiContainer).find('a').click(function(){
+    $(hitachiContainer).find('a').click(function(){
         var id = $(this).data('id');
         goAnchor($('#' + id));
     });
