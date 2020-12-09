@@ -1,8 +1,10 @@
 .upAndDown {
-    -webkit-animation: upAndDown 0.6s infinite;
+    -webkit-animation: upAndDown 0.8s infinite;
     animation: upAndDown 0.6s infinite;
+    animation-duration: 8s;
+    -webkit-animation-direction: 5s;
     -webkit-animation-direction: alternate;
-    animation-direction: alternate
+    animation-direction: alternate;
 }
 
 @-webkit-keyframes upAndDown {
