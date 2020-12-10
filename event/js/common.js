@@ -185,14 +185,13 @@ $(document).ready(function() {
     //商品名稱太長省略文字
     productSubstr();
 
-    //錨點位移距離 fix_btn rightbtn
-    rightLink.add(fixLink).click(function(e){
+    $(document).on('click', 'a[href^="#"]', function (e) {
         e.preventDefault();
-        let proId = $(this).attr('href');
-        if (proId.length > 0) {
-            goAnchor($(proId));
+
+        if ($($.attr(this, 'href')).length > 0) {
+            goAnchor($($.attr(this, 'href')));
         }
-     });
+    });
      
     $(rightbtn).append("<i class='fas fa-angle-double-right toggle-rightbn'></i>");
     $(rightbtn).find('.toggle-rightbn').click(function(){
