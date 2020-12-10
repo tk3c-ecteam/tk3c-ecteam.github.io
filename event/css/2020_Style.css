@@ -113,6 +113,7 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 /*分類標題*/
 .protitle {position: relative;width: 100%;text-align: center;height: 58px;display:block;overflow:hidden;float:left;background: url(https://events.tk3c.com/events_net/events_net/image/protitle_01.png);color:#fff;font-size:42px;padding-top:24px;padding-bottom: 6px;letter-spacing: 1px;background-repeat: no-repeat;background-size: cover;}
 .protitle .more{ position:absolute; right:10px; bottom:10px; width:48px; height:48px;background:url(../images/more.png);}
+.protitle:before {content: '';display: block;height: 150px;margin-top: -150px;visibility: hidden;pointer-events: none;}
 
 /*說明區*/
 a.ad01{ background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/bigsale.png) 0 0 no-repeat;width: 1144px; height: 429px;display: block;float: left; margin-top: 2%;}
