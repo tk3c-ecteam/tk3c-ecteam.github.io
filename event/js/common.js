@@ -25,7 +25,7 @@ const goAnchor = (element = null) => {
     if (element === null) {
         offset = 0;
     } else {
-        offset = $(element).offset().top - 50;
+        offset = $(element).offset().top - 120;
     }
     $('html,body').animate({'scrollTop': offset},'swing');
 }
