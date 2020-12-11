@@ -186,9 +186,8 @@ $(document).ready(function() {
     productSubstr();
 
     $(document).on('click', 'a[href^="#"]', function (e) {
-        e.preventDefault();
-
         if ($($.attr(this, 'href')).length > 0) {
+            e.preventDefault();
             goAnchor($($.attr(this, 'href')));
         }
     });
