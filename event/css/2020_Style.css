@@ -158,6 +158,7 @@ a.ad01 img{display:none;}
 .acbankbox .list2 ul{display:flex;justify-content:space-between;flex-wrap:wrap}
 .acbankbox .list2 ul li{width: 19% !important;padding: 0;margin: 0 !important;}
 .acbankbox .list2 .item_text05 em{font-size: 3.5vmin !important;}
+.acbankbox .list2 .item_img {margin: 10px auto 5px 14px !important;}
 }
 
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
@@ -883,7 +884,7 @@ border-radius: 0px 0px 20px 20px;
 .itembox_02 .itembox_icon span{ font-size:1.8em; font-weight:bolder; }
 
 .acbankbox .list2 .item_text05 em{font-size: 8vmin !important;}
-
+.acbankbox .list2 .item_img {margin: 10px auto 5px 15px;}
 };}
 
 }}
