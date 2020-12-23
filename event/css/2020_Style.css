@@ -884,7 +884,7 @@ border-radius: 0px 0px 20px 20px;
 .itembox_02 .itembox_icon span{ font-size:1.8em; font-weight:bolder; }
 
 .acbankbox .list2 .item_text05 em{font-size: 8vmin !important;}
-.acbankbox .list2 .item_img {margin: 10px auto 5px 15px;}
+.acbankbox .list2 .item_img {margin: 10px auto 5px 15px !important;}
 };}
 
 }}
