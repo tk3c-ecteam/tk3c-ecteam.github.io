@@ -119,6 +119,11 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 a.ad01{ background: url(http://events.tkec.com.tw/events_net/events_net/2018_schoolopen/0319-0331/images/bigsale.png) 0 0 no-repeat;width: 1144px; height: 429px;display: block;float: left; margin-top: 2%;}
 a.ad01 img{display:none;}
 
+/* 大螢幕尺寸銀行區文字大小 */
+@media screen and (min-width: 2500px) {
+	.acbankbox .list2 .item_text05 em {font-size: 2.5vmin !important;}
+}
+
 @media screen and (min-width:2500px) {
 	.toggleR {transform: translateX(26%);}
 }
@@ -887,10 +892,6 @@ border-radius: 0px 0px 20px 20px;
 .acbankbox .list2 .item_img {margin: 10px auto 5px 15px !important;}
 };
 
-/* 大螢幕尺寸銀行區文字大小 */
-@media screen and (min-width: 2500px) {
-	.acbankbox .list2 .item_text05 em {font-size: 2.5vmin !important;}
-}
 
 }}
 
