@@ -885,7 +885,12 @@ border-radius: 0px 0px 20px 20px;
 
 .acbankbox .list2 .item_text05 em{font-size: 8vmin !important;}
 .acbankbox .list2 .item_img {margin: 10px auto 5px 15px !important;}
-};}
+};
+
+/* 大螢幕尺寸銀行區文字大小 */
+@media screen and (min-width: 2500px) {
+	.acbankbox .list2 .item_text05 em {font-size: 2.5vmin !important;}
+}
 
 }}
 

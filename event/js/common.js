@@ -167,7 +167,6 @@ $(document).ready(function() {
     let fontIcon = "";
 
     //右側選單滑鼠滾到後顯示
-    $(rightbtn).hide();
     $(window).scroll(function(){
         const scrollTop = $(window).scrollTop();
 
