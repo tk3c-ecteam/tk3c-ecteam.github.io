@@ -3,7 +3,7 @@
  *  雪花飄落動畫
  * 使用方法: 
  * 在html內加入 <canvas id="particle_canvas"></canvas>
- * 嵌入此js <script src="http://tk3c-ecteam.github.io/animation/snow.js" type="text/javascript"></script>
+ * 嵌入此js <script src="https://tk3c-ecteam.github.io/animation/snow.js" type="text/javascript"></script>
  * 即可使用
  */
 function microtime() {
