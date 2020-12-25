@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap);
-
 html,
 body,
 div,
@@ -934,7 +933,7 @@ body {
 #finnal .footer .soical-share {
     width: 100%;
     height: 100%;
-    margin: -38vmin 11vmin;
+    margin: -45vmin 8vmin;
 }
 
 #finnal .footer .soical-share a {
@@ -942,11 +941,12 @@ body {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    margin: -10px 1px;
+    margin: 0 1px;
+    vertical-align: top;
 }
 
 #finnal .footer .soical-share .logo {
-    width: 76px;
+    width: 85px;
 }
 
 #finnal .footer .soical-share .facebook {
@@ -954,14 +954,11 @@ body {
 }
 
 #finnal .footer .soical-share .line {
-    width: 55px;
+    width: 50px;
 }
 
 #finnal .footer .soical-share .fb-link {
     width: 105px;
-    position: relative;
-    top: -87px;
-    left: -3px;
     font-size: 0;
 }
 
@@ -971,7 +968,6 @@ body {
         -webkit-transform: translateY(500%);
         transform: translateY(500%)
     }
-
     100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
@@ -985,7 +981,6 @@ body {
         -webkit-transform: translateY(500%);
         transform: translateY(500%)
     }
-
     100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
@@ -994,23 +989,19 @@ body {
 }
 
 @-webkit-keyframes zoom-in-out {
-
     0%,
     100% {
         -webkit-transform: scale(1);
         transform: scale(1)
     }
-
     50% {
         -webkit-transform: rotate(1.2);
         transform: rotate(1.2)
     }
-
     60% {
         -webkit-transform: scale(0.75);
         transform: scale(0.75)
     }
-
     90% {
         -webkit-transform: scale(1.2);
         transform: scale(1.2)
@@ -1018,23 +1009,19 @@ body {
 }
 
 @keyframes zoom-in-out {
-
     0%,
     100% {
         -webkit-transform: scale(1);
         transform: scale(1)
     }
-
     50% {
         -webkit-transform: rotate(1.2);
         transform: rotate(1.2)
     }
-
     60% {
         -webkit-transform: scale(0.75);
         transform: scale(0.75)
     }
-
     90% {
         -webkit-transform: scale(1.2);
         transform: scale(1.2)
@@ -1046,12 +1033,10 @@ body {
         -webkit-transform: scale(3);
         transform: scale(3)
     }
-
     80% {
         -webkit-transform: scale(1.5);
         transform: scale(1.5)
     }
-
     100% {
         -webkit-transform: scale(1);
         transform: scale(1)
@@ -1063,12 +1048,10 @@ body {
         -webkit-transform: scale(3);
         transform: scale(3)
     }
-
     80% {
         -webkit-transform: scale(1.5);
         transform: scale(1.5)
     }
-
     100% {
         -webkit-transform: scale(1);
         transform: scale(1)
@@ -1080,7 +1063,6 @@ body {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg)
     }
-
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg)
@@ -1092,7 +1074,6 @@ body {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg)
     }
-
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg)
@@ -1105,7 +1086,6 @@ body {
         -webkit-transform: translateX(-300%);
         transform: translateX(-300%)
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateX(0);
@@ -1119,7 +1099,6 @@ body {
         -webkit-transform: translateX(-300%);
         transform: translateX(-300%)
     }
-
     100% {
         opacity: 1;
         -webkit-transform: translateX(0);
@@ -1133,7 +1112,6 @@ body {
         transform: translateZ(1);
         opacity: 1
     }
-
     100% {
         -webkit-transform: translateZ(400px);
         transform: translateZ(400px);
@@ -1147,7 +1125,6 @@ body {
         transform: translateZ(1);
         opacity: 1
     }
-
     100% {
         -webkit-transform: translateZ(400px);
         transform: translateZ(400px);
@@ -1159,42 +1136,33 @@ body {
     #year-container .start-bg {
         background-position: center -92px
     }
-
     #year-container .start-bg .box .title-text {
         margin: 6% auto
     }
-
     #select-area .flag-box li {
         width: 88%;
         margin: -2% auto 0
     }
-
     #select-area .flag-box li .text {
         font-size: 18px
     }
-
     #select-area .input-text {
         margin: 5% auto 0
     }
-
     #select-area .change-btn {
         margin: 3% auto 0
     }
-
     #create-area .background .create-content .text-box {
         height: 422px;
         min-height: 422px
     }
-
     #create-area .background .count-down h5 {
         top: 44%
     }
-
     #create-area .background .count-down span.time-active {
         -webkit-transform-origin: 50% 60%;
         transform-origin: 50% 60%
     }
-
     #select-flag-box .box-bg ul li {
         font-size: 19px
     }
@@ -1204,29 +1172,23 @@ body {
     #year-container .start-bg {
         background-position: center -125px
     }
-
     #year-container .start-bg .box .title-text {
         margin: 1% auto;
         font-size: 1.5em
     }
-
     #create-area .background .create-content .text-box {
         height: 405px;
         min-height: 405px
     }
-
     #create-area .background .create-content .card-footer {
         margin: 10vmin auto
     }
-
     #create-area .background .create-content .card-footer .sign-top {
         bottom: 11%
     }
-
     #create-area .background .count-down h5 {
         top: 43%
     }
-
     #create-area .background .count-down span.time-active {
         -webkit-transform-origin: 50% 65%;
         transform-origin: 50% 65%
@@ -1237,38 +1199,30 @@ body {
     #year-container .start-bg {
         background-position: center -82px
     }
-
     #year-container .rule ul {
         margin: 20vmin 0 12vmin 0
     }
-
     #year-container .rule ul li {
         width: 75%
     }
-
     #select-area .input-text .sure {
         margin: 0 -2px
     }
-
     #select-area .next {
         bottom: 25%;
         right: 3%
     }
-
     #create-area .background .create-content .text-box {
         height: 375px;
         min-height: 390px
     }
-
     #create-area .background .create-content .text-box .scroll-for-text ul li {
         font-size: 18px
     }
-
     #create-area .background .create-content .count-down span.time-active {
         -webkit-transform-origin: 70% 70%;
         transform-origin: 70% 70%
     }
-
     #finnal .fb-link {
         bottom: 45px
     }
@@ -1278,12 +1232,10 @@ body {
     #create-area .background .create-content .card-footer .sign-top {
         bottom: 22%
     }
-
     #create-area .background .create-content .text-box {
         height: 590px;
         min-height: 590px
     }
-
     #create-area .bottom-create .sign-area #complete {
         bottom: -110%
     }
@@ -1294,22 +1246,17 @@ body {
         width: 25%;
         margin: 0 auto
     }
-
     #create-area .bottom-create .sign-area #complete {
         bottom: -110%
     }
-
     #create-area .bottom-create .sign-area input {
         width: 85%
     }
-
     #create-area .background .create-content .count-down span.time-active {
         -webkit-transform-origin: 50% 50%;
         transform-origin: 50% 50%
     }
-
     #select-area .next {}
-
     #finnal .fb-link {
         bottom: 20px
     }
@@ -1319,24 +1266,19 @@ body {
     #create-area .bottom-create .select-tab .tab {
         width: 28%
     }
-
     #create-area .bottom-create .sign-area #complete {
         bottom: -110%
     }
-
     #create-area .background .create-content .card-footer .sign-top {
         bottom: 20%
     }
-
     #select-area .next {
         bottom: 500px;
         right: 3%
     }
-
     #year-container .start-bg .box .title-text {
         font-size: 1.5em
     }
-
     #finnal .fb-link {
         bottom: 47px
     }
@@ -1346,42 +1288,32 @@ body {
     #year-container .start-bg .box .title-text {
         font-size: 1.5em
     }
-
     #select-area .top-select-flag {
         width: 17%;
         left: 81%
     }
-
     #select-area .top-select-flag .flag-select-number {
         right: -104%
     }
-
     #select-area .next {}
-
     #select-flag-box .box-bg ul li {
         font-size: 20px
     }
-
     #create-area .bottom-create .select-tab .tab {
         width: 31%
     }
-
     #create-area .bottom-create .image-box li {
         width: 6.3%
     }
-
     #create-area .bottom-create .sign-area #complete {
         bottom: -110%
     }
-
     #create-area .bottom-create .gradient .ruler {
         width: 4.3%
     }
-
     #create-area .background .count-down h5 {
         top: 42%
     }
-
     #create-area .background .count-down span.time-active {
         -webkit-transform-origin: 50% 47%;
         transform-origin: 50% 47%
@@ -1392,76 +1324,60 @@ body {
     #year-container .start-bg {
         background-position: 0 -70px
     }
-
     #year-container .start-bg .box .title-text {
         font-size: 1.4em
     }
-
     #select-area .change-btn {
         margin: 2% auto 0
     }
-
     #select-area .top-select-flag .flag-select-number {
         top: -17%;
         right: -110%;
         font-size: 40px
     }
-
     #select-area .next {
         bottom: 7%
     }
-
     #create-area .bottom-create .image-box ul {
         margin: 0 auto 0 -13%
     }
-
     #create-area .bottom-create .image-box ul li {
         width: 5.8%
     }
-
     #create-area .bottom-create .next,
     #create-area .bottom-create .back {
         width: 117px;
         height: 45px
     }
-
     #create-area .bottom-create .gradient {
         width: 89%
     }
-
     #create-area .bottom-create .select-tab .tab.select-image {
         width: 32%
     }
-
     #create-area .bottom-create .sign-area #complete {
         bottom: -110%
     }
-
     #create-area .background .create-content .text-box {
         height: 367px;
         margin: 17% auto 0;
         min-height: 367px
     }
-
     #create-area .background .create-content .card-footer .sign-top {
         bottom: 12%
     }
-
     #create-area .background .count-down h5 {
         top: 43%;
         font-size: 6em
     }
-
     #create-area .background .count-down span.time-active {
         -webkit-transform-origin: 50% 60%;
         transform-origin: 50% 60%
     }
-
     #select-flag-box .box-bg {
         width: 95%;
         left: 2.5%
     }
-
     #select-flag-box .box-bg ul li {
         font-size: 18px
     }
@@ -1471,72 +1387,57 @@ body {
     #year-container .start-bg .box .title-text {
         font-size: 1.2em
     }
-
     #select-area .top-select-flag .flag-select-number {
         right: -130%;
         top: 0;
         font-size: 30px
     }
-
     #select-area .flag-box li {
         width: 65%;
         margin: -5% auto 0
     }
-
     #select-area .flag-box li .text {
         height: 60px;
         font-size: 16px
     }
-
     #select-area .change-btn {
         margin: 2% auto 0;
         height: 60px
     }
-
     #select-area .next {
         width: 117px;
         height: 41px
     }
-
     #create-area .bottom-create .select-tab .tab.select-color {
         width: 31.5%
     }
-
     #create-area .bottom-create .image-box ul {
         margin: 0 auto 0 -25%
     }
-
     #create-area .bottom-create .sign-area #complete {
         bottom: -119%
     }
-
     #create-area .bottom-create .gradient .ruler {
         width: 4.7%
     }
-
     #create-area .bottom-create .next,
     #create-area .bottom-create .back {
         height: 41px
     }
-
     #create-area .background .create-content .text-box {
         height: 314px;
         min-height: 314px
     }
-
     #create-area .background .create-content .text-box .scroll-for-text ul li {
         font-size: 15px;
         margin: 6% 3% 5%
     }
-
     #create-area .background .count-down h5 {
         top: 42%
     }
-
     #select-flag-box .box-bg ul li {
         font-size: 16px
     }
-
     .card-footer {
         margin: 26% auto
     }
@@ -1546,12 +1447,10 @@ body {
     #for-pc {
         margin: 20vmin auto 0
     }
-
     #for-pc p {
         width: 80%;
         margin: 0 auto 5%
     }
-
     #for-pc .description {
         font-size: 36px
     }
@@ -1573,29 +1472,24 @@ body {
     #year-container {
         display: none
     }
-
     #for-pc {
         background-color: #f1f1f1;
         width: 100%;
         height: 100%;
         margin: 6vmax auto 0
     }
-
     #for-pc p {
         width: 30%;
         margin: 0 auto 1%
     }
-
     #for-pc .description {
         font-size: 28px;
         text-align: center
     }
-
     body {
         background-color: #f1f1f1
     }
 }
-
 
 #for-pc .description {
     font-size: 28px;
