@@ -927,13 +927,15 @@ body {
 #finnal .footer {
     width: 100%;
     height: auto;
-    margin: 0 auto;
+    margin: -45vmin auto 0;
 }
 
 #finnal .footer .soical-share {
     width: 100%;
     height: 100%;
-    margin: -45vmin 8vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #finnal .footer .soical-share a {
@@ -954,7 +956,7 @@ body {
 }
 
 #finnal .footer .soical-share .line {
-    width: 50px;
+    width: 58px;
 }
 
 #finnal .footer .soical-share .fb-link {
