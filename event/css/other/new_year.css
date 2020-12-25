@@ -962,6 +962,7 @@ body {
     position: relative;
     top: -87px;
     left: -3px;
+    font-size: 0;
 }
 
 @-webkit-keyframes fadeInUp {
