@@ -575,6 +575,11 @@ body {
     display: block
 }
 
+#create-area .background .create-content .card-footer .qrcord .qr-image {
+    width: 80%;
+    margin: -24vmin auto 0;
+}
+
 #create-area .background .count-down {
     width: 100%;
     height: 100%;
