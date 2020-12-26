@@ -921,18 +921,20 @@ body {
 }
 
 #finnal {
-    position: relative
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
 #finnal .card {
     width: 100%;
-    height: 100%
+    height: 159vmin;
 }
 
 #finnal .footer {
     width: 100%;
     height: auto;
-    margin: -45vmin auto 0;
+    margin: 0 auto 0;
 }
 
 #finnal .footer .soical-share {
