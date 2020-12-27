@@ -1367,7 +1367,8 @@ body {
         width: 32%
     }
     #create-area .bottom-create .sign-area #complete {
-        bottom: -110%
+        bottom: -110%;
+        height: 45px;
     }
     #create-area .background .create-content .text-box {
         height: 367px;
@@ -1426,7 +1427,8 @@ body {
         margin: 0 auto 0 -25%
     }
     #create-area .bottom-create .sign-area #complete {
-        bottom: -119%
+        bottom: -119%;
+        height: 41px;
     }
     #create-area .bottom-create .gradient .ruler {
         width: 4.7%
