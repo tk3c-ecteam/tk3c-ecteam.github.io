@@ -855,6 +855,11 @@ body {
 #create-area .bottom-create #complete {
     margin: 8vmin auto 0;
     position: static;
+    background-color: #726969;
+}
+
+#create-area .bottom-create #complete.active {
+    background-color: #000;
 }
 
 #select-flag-box {
