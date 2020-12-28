@@ -960,7 +960,7 @@ body {
 }
 
 #finnal .footer .soical-share .logo {
-    width: 85px;
+    width: 30%;
 }
 
 #finnal .footer .soical-share .facebook {
@@ -972,7 +972,7 @@ body {
 }
 
 #finnal .footer .soical-share .fb-link {
-    width: 100%;
+    width: 50%;
     font-size: 0;
     text-indent: -9999px;
 }
