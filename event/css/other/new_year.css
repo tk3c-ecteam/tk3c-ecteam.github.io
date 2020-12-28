@@ -1254,6 +1254,9 @@ body {
     #create-area .background .create-content .card-footer .qrcord .qr-image {
         margin: -21vmin auto 0;
     }
+    .share-group {
+        margin: 6vmin auto 0;
+    }
 }
 
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
