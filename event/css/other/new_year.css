@@ -972,6 +972,12 @@ body {
     text-indent: -9999px;
 }
 
+.share-group {
+    display: flex;
+    width: 90%;
+    margin: 8vmin auto 0;
+}
+
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -1509,10 +1515,4 @@ body {
 
 body {
     background-color: #f1f1f1
-}
-
-.share-group {
-    display: flex;
-    width: 90%;
-    margin: 8vmin auto 0;
 }
