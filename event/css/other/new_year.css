@@ -1262,7 +1262,6 @@ body {
 
 @media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
     #create-area .bottom-create .select-tab .tab {
-        width: 25%;
         margin: 0 auto
     }
     #create-area .bottom-create .sign-area #complete {
@@ -1282,9 +1281,6 @@ body {
 }
 
 @media only screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) {
-    #create-area .bottom-create .select-tab .tab {
-        width: 28%
-    }
     #create-area .bottom-create .sign-area #complete {
         bottom: -110%
     }
@@ -1317,9 +1313,6 @@ body {
     #select-area .next {}
     #select-flag-box .box-bg ul li {
         font-size: 20px
-    }
-    #create-area .bottom-create .select-tab .tab {
-        width: 31%
     }
     #create-area .bottom-create .image-box li {
         width: 6.3%
@@ -1370,9 +1363,6 @@ body {
     }
     #create-area .bottom-create .gradient {
         width: 89%
-    }
-    #create-area .bottom-create .select-tab .tab.select-image {
-        width: 32%
     }
     #create-area .bottom-create .sign-area #complete {
         bottom: -110%;
@@ -1427,9 +1417,6 @@ body {
     #select-area .next {
         width: 117px;
         height: 41px
-    }
-    #create-area .bottom-create .select-tab .tab.select-color {
-        width: 31.5%
     }
     #create-area .bottom-create .image-box ul {
         margin: 0 auto 0 -25%
