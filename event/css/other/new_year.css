@@ -1241,6 +1241,12 @@ body {
     #create-area .background .create-content .card-footer {
         margin: 4vmin auto;
     }
+    #create-area .background .create-content .card-footer .qrcord {
+        width: 26%;
+    }
+    #create-area .background .create-content .card-footer .qrcord .qr-image {
+        margin: -21vmin auto 0;
+    }
 }
 
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
