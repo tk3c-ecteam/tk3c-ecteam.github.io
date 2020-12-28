@@ -934,7 +934,8 @@ body {
 #finnal .footer {
     width: 100%;
     height: auto;
-    margin: -38vmin auto 0;
+    position: fixed;
+    bottom: 0;
 }
 
 #finnal .footer .soical-share {
@@ -946,7 +947,7 @@ body {
 }
 
 #finnal .footer .soical-share a {
-    height: 113px;
+    height: 21vh;
     display: inline-flex;
     justify-content: center;
     align-items: center;
