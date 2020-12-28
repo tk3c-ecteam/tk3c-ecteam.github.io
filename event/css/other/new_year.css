@@ -1238,6 +1238,9 @@ body {
     #finnal .fb-link {
         bottom: 45px
     }
+    #create-area .background .create-content .card-footer {
+        margin: 4vmin auto;
+    }
 }
 
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
