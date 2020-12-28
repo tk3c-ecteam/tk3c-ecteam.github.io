@@ -1203,6 +1203,9 @@ body {
         -webkit-transform-origin: 50% 65%;
         transform-origin: 50% 65%
     }
+    .share-group {
+        margin: 6vmin auto 0;
+    }
 }
 
 @media screen and (max-height: 670px) {
