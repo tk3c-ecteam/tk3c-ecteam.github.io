@@ -391,6 +391,10 @@ body {
     text-align: left
 }
 
+#select-area .flag-box li .disabled {
+    color: #a5a5a5;
+}
+
 #select-area .change-btn {
     width: 20%;
     height: 65px;
@@ -657,47 +661,24 @@ body {
     display: inline-flex;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
-    width: 32%;
+    width: 23%;
     height: 55px;
     margin: 0 1px;
-    font-size: 0;
-    text-indent: -9999px;
+    font-size: 1.1em;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    background-color: grey;
 }
 
-#create-area .bottom-create .select-tab .tab.select-color {
-    background: url("https://events.tk3c.com/events_net/events_net/2021hope/dist/images/20201223_bgc_out.jpg") no-repeat;
-    background-size: 100%
-}
-
-#create-area .bottom-create .select-tab .tab.select-color.active {
-    background: url("https://events.tk3c.com/events_net/events_net/2021hope/dist/images/20201223_bgc_in.jpg") no-repeat;
-    background-size: 100%
-}
-
-#create-area .bottom-create .select-tab .tab.select-image {
-    background: url("https://events.tk3c.com/events_net/events_net/2021hope/dist/images/20201223_ill_out.jpg") no-repeat;
-    background-size: 100%
-}
-
-#create-area .bottom-create .select-tab .tab.select-image.active {
-    background: url("https://events.tk3c.com/events_net/events_net/2021hope/dist/images/20201223_ill_in.jpg") no-repeat;
-    background-size: 100%
-}
-
-#create-area .bottom-create .select-tab .tab.sign {
-    background: url("https://events.tk3c.com/events_net/events_net/2021hope/dist/images/20201223_sign_out.jpg") no-repeat;
-    background-size: 100%
-}
-
-#create-area .bottom-create .select-tab .tab.sign.active {
-    background: url("https://events.tk3c.com/events_net/events_net/2021hope/dist/images/20201223_sign_in.jpg") no-repeat;
-    background-size: 100%
+#create-area .bottom-create .select-tab .tab.select-color.active,
+#create-area .bottom-create .select-tab .tab.select-image.active,
+#create-area .bottom-create .select-tab .tab.sign.active,
+#create-area .bottom-create .select-tab .tab.done.active {
+    background-color: #f1f1e9;
 }
 
 #create-area .bottom-create .colors,
@@ -828,6 +809,19 @@ body {
     border-radius: 0px
 }
 
+#create-area .bottom-create .done-area .done {
+    margin: 33vmin 7vmin 0;
+}
+
+#create-area .bottom-create .done-area .done input[type=checkbox] {
+    width: 15%;
+    zoom: 1.5;
+}
+
+#create-area .bottom-create .done-area .done label {
+    font-size: 4.3vmin;
+}
+
 #create-area .bottom-create .back,
 #create-area .bottom-create .next,
 #create-area .bottom-create #complete {
@@ -851,12 +845,16 @@ body {
 }
 
 #create-area .bottom-create .back {
-    left: 0
+    left: 0;
 }
 
-#create-area .bottom-create .next,
+#create-area .bottom-create .next {
+    right: 0;
+}
+
 #create-area .bottom-create #complete {
-    right: 0
+    margin: 8vmin auto 0;
+    position: static;
 }
 
 #select-flag-box {
@@ -887,7 +885,7 @@ body {
 }
 
 #select-flag-box .box-bg ul li {
-    width: 70%;
+    width: 75%;
     height: 100%;
     font-size: 21px;
     margin: 6% 7% 0;
@@ -969,7 +967,7 @@ body {
 }
 
 #finnal .footer .soical-share .fb-link {
-    width: 105px;
+    width: 100%;
     font-size: 0;
     text-indent: -9999px;
 }
@@ -1525,6 +1523,6 @@ body {
 
 .share-group {
     display: flex;
-    width: 70%;
-    margin: 3vmin 0 0 0;
+    width: 90%;
+    margin: 8vmin auto 0;
 }
