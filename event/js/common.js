@@ -162,7 +162,7 @@ const addLeftAside = () => {
 //右側選單滑鼠滾到後顯示
 const scrollToShow = (type = true) =>  {
     let rightbtn = $('body').find('.rightbtn');
-    console.log(type);
+
     if (type === true) {
         $(window).scroll(function(){
             const scrollTop = $(window).scrollTop();
@@ -173,6 +173,8 @@ const scrollToShow = (type = true) =>  {
                 $(rightbtn).fadeIn('slow');
             }
         });
+    } else {
+        return false;
     }
 }
 
