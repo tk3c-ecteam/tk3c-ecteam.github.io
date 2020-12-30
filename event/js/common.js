@@ -163,7 +163,7 @@ const addLeftAside = () => {
 const scrollToShow = (type = true) =>  {
     let rightbtn = $('body').find('.rightbtn');
     console.log(type);
-    if (type !== false) {
+    if (type === true) {
         $(window).scroll(function(){
             const scrollTop = $(window).scrollTop();
     
