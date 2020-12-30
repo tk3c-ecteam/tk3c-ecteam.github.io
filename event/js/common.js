@@ -159,6 +159,21 @@ const addLeftAside = () => {
     }
 }
 
+//右側選單滑鼠滾到後顯示
+const scrollToShow = (type = true) =>  {
+    if (type !== false) {
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop();
+    
+            if (scrollTop < 300) {
+                $(rightbtn).fadeOut('fast');
+            } else {
+                $(rightbtn).fadeIn('slow');
+            }
+        });
+    }
+}
+
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
     let fixBtn = $('body').find('.fix_btn');
@@ -167,15 +182,7 @@ $(document).ready(function() {
     let fontIcon = "";
 
     //右側選單滑鼠滾到後顯示
-    $(window).scroll(function(){
-        const scrollTop = $(window).scrollTop();
-
-        if (scrollTop < 300) {
-            $(rightbtn).fadeOut('fast');
-        } else {
-            $(rightbtn).fadeIn('slow');
-        }
-    });
+    scrollToShow();
 
     //嵌入 font awesome icon 連結
     fontIcon = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css";
