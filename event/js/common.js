@@ -161,6 +161,7 @@ const addLeftAside = () => {
 
 //右側選單滑鼠滾到後顯示
 const scrollToShow = (type = true) =>  {
+    let rightbtn = $('body').find('.rightbtn');
     if (type !== false) {
         $(window).scroll(function(){
             const scrollTop = $(window).scrollTop();
