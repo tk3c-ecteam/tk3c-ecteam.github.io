@@ -163,19 +163,19 @@ const addLeftAside = () => {
 const scrollToShow = (type = true) =>  {
     let rightbtn = $('body').find('.rightbtn');
 
-    if (type === true) {
-        $(window).scroll(function(){
-            const scrollTop = $(window).scrollTop();
-    
+    $(window).scroll(function(){
+        const scrollTop = $(window).scrollTop();
+
+        if (type === true) {
             if (scrollTop < 300) {
                 $(rightbtn).fadeOut('fast');
             } else {
                 $(rightbtn).fadeIn('slow');
             }
-        });
-    } else {
-        return false;
-    }
+        } else if (type === false) {
+            $(rightbtn).show();
+        }
+    });
 }
 
 $(document).ready(function() {
