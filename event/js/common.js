@@ -160,19 +160,27 @@ const addLeftAside = () => {
 }
 
 //右側選單滑鼠滾到後顯示
-const scrollToShow = (type = true) =>  {
+const scrollToShow = () =>  {
     let rightbtn = $('body').find('.rightbtn');
 
     $(window).scroll(function(){
         const scrollTop = $(window).scrollTop();
 
-        if (type === true) {
-            if (scrollTop < 300) {
-                $(rightbtn).fadeOut('fast');
-            } else {
-                $(rightbtn).fadeIn('slow');
-            }
-        } else if (type === false) {
+        if (scrollTop < 300) {
+            $(rightbtn).fadeOut('fast');
+        } else {
+            $(rightbtn).fadeIn('slow');
+        }
+    });
+}
+
+//右側選單永遠顯示
+const rigntbtnShow = () => {
+    let rightbtn = $('body').find('.rightbtn');
+    $(window).scroll(function(){
+        const scrollTop = $(window).scrollTop();
+
+        if (scrollTop < 300) {
             $(rightbtn).show();
         }
     });
