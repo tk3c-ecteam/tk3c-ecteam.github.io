@@ -193,9 +193,6 @@ $(document).ready(function() {
     let fixLink = $(fixBtn).find('ul li a');
     let fontIcon = "";
 
-    //右側選單滑鼠滾到後顯示
-    scrollToShow();
-
     //嵌入 font awesome icon 連結
     fontIcon = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css";
     cssLoader(fontIcon);
