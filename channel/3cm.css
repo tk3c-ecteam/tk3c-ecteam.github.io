@@ -1231,7 +1231,7 @@ li .box_price strong em {
 }
 
 .list02 ul li:hover {
-    box-shadow: 0px 0px 3px 3px #965998;
+    box-shadow: 0px 0px 3px 3px #e748fa;
     background: #Fff;
     transform: translateY(0.2em);
 }
@@ -1382,10 +1382,10 @@ li .box_price strong em {
     position: absolute;
     bottom: 7px;
     right: 5px;
-    background: linear-gradient(90deg, #34134e 35%, #820573 60%);
-    background: -moz-linear-gradient(90deg, #34134e 35%, #820573 60%);
-    background: -webkit-linear-gradient(90deg, #34134e 35%, #820573 60%);
-    background: -o-linear-gradient(90deg, #34134e 35%, #820573 60%);
+    background: linear-gradient(90deg, #99bffd 35%, #0b14ff 60%);
+    background: -moz-linear-gradient(90deg, #99bffd 35%, #0b14ff 60%);
+    background: -webkit-linear-gradient(90deg, #99bffd 35%, #0b14ff 60%);
+    background: -o-linear-gradient(90deg, #99bffd 35%, #0b14ff 60%);
 }
 
 .list02 li .box_price strong em {
@@ -5163,10 +5163,10 @@ strong i:after {
         text-align: center;
         line-height: 24px;
         letter-spacing: 1px;
-        background: linear-gradient(90deg, #34134e 35%, #820573 60%);
-        background: -moz-linear-gradient(90deg, #34134e 35%, #820573 60%);
-        background: -webkit-linear-gradient(90deg, #34134e 35%, #820573 60%);
-        background: -o-linear-gradient(90deg, #34134e 35%, #820573 60%);
+        background: linear-gradient(90deg, #99bffd 35%, #0b14ff 60%);
+        background: -moz-linear-gradient(90deg, #99bffd 35%, #0b14ff 60%);
+        background: -webkit-linear-gradient(90deg, #99bffd 35%, #0b14ff 60%);
+        background: -o-linear-gradient(90deg, #99bffd 35%, #0b14ff 60%);
     }
     .list02 li .box_price strong em {
         width: 100%;
