@@ -573,7 +573,8 @@ form>div:nth-of-type(9) {
     width: 1144px;
     text-align: center;
     height: 217px;
-    display: block;
+    display: flex;
+    justify-content: center;
     overflow: hidden;
     color: #fff;
     font-size: 4em;
@@ -1380,7 +1381,7 @@ li .box_price strong em {
     line-height: 44px;
     letter-spacing: 1px;
     position: absolute;
-    bottom: 7px;  
+    bottom: 7px;
     right: 5px;
     background: linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
     background: -moz-linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
@@ -6175,6 +6176,10 @@ strong i:after {
     }
     .store_img {
         width: 100%;
+    }
+    .fix_btn>.dropdown-menu>span {
+        height: 100%;
+        display: block;
     }
 }
 
