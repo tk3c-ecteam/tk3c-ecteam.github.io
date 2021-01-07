@@ -282,7 +282,7 @@ i {
     width: 200px;
     height: 150px;
     position: absolute;
-    top: -143px;
+    top: -87px;
     left: 7%;
     z-index: 1;
     background-size: 72%;
@@ -325,7 +325,7 @@ i {
     display: block;
     margin-bottom: 2px;
     margin: 3% 0 0 6%;
-    background-color: #efd59e;
+    background-color: #ffbb67;
     font-size: 18px;
 }
 
@@ -339,7 +339,7 @@ i {
     width: 150px;
     margin: 0 0 0 6%;
     transform: translateY(-0.01em);
-    background: #945cbb;
+    background: #eb7f25;
 }
 
 .rightbtn>a.btn02 {
@@ -572,13 +572,13 @@ form>div:nth-of-type(9) {
     position: relative;
     width: 1144px;
     text-align: center;
-    height: 217px;
+    height: 162px;
     display: flex;
     justify-content: center;
     overflow: hidden;
     color: #fff;
     font-size: 4em;
-    line-height: 4.5em;
+    line-height: 2.1em;
     font-weight: bold;
     top: 0px;
     margin-bottom: 3%;
@@ -1171,7 +1171,7 @@ form>div:nth-of-type(9) {
     float: left;
     text-align: center;
     display: block;
-    background-color: #34134e;
+    background-color: #eb7f25;
     border-radius: 10px;
     margin-top: -40px;
 }
@@ -1383,10 +1383,10 @@ li .box_price strong em {
     position: absolute;
     bottom: 7px;
     right: 5px;
-    background: linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
-    background: -moz-linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
-    background: -webkit-linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
-    background: -o-linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
+    background: linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
+    background: -moz-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
+    background: -webkit-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
+    background: -o-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
 }
 
 .list02 li .box_price strong em {
@@ -3886,7 +3886,7 @@ strong i:after {
         margin-top: 9vmax;
     }
     html {
-        background-position: 0 7vmax;
+        background-position: 0 6vmax;
     }
 }
 
@@ -3913,14 +3913,17 @@ strong i:after {
     }
     .protitle {
         width: 100%;
-        line-height: 4em;
-        height: 200px;
+        line-height: 2em;
+        height: 156px;
     }
     .list02 ul li {
         width: 22.9%;
     }
     .list02 .box_price strong {
         margin-right: 27%;
+    }
+    form>div:nth-of-type(9) {
+        margin-top: 4vmin;
     }
 }
 
@@ -3931,7 +3934,7 @@ strong i:after {
         max-width: unset;
     }
     form>div:nth-of-type(9) {
-        margin-top: 0;
+        margin-top: -9vmin;
     }
     html {
         background-position: -6vmax 10vmax;
@@ -3940,7 +3943,7 @@ strong i:after {
         width: 30.3%;
     }
     .protitle {
-        height: 160px;
+        height: 133px;
         font-size: 3em;
     }
 }
@@ -4509,7 +4512,6 @@ strong i:after {
         margin: 5px 0px 10px -62px;
     }
     html {
-        background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20200108_KV_1.png) no-repeat top, url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20200108_bg.jpg) repeat;
         background-size: 170%, 100%;
         background-position: -35vmin 23vmin, top;
     }
@@ -4602,14 +4604,12 @@ strong i:after {
     /*end fb_box*/
     /*商品內容*/
     .protitle {
-        height: 96px;
+        height: 92px;
         font-size: 6vmin;
-        line-height: 25vmin;
+        line-height: 12vmin;
         letter-spacing: 1px;
         width: 100%;
         margin-bottom: 5%;
-        background-size: 100%;
-        background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20200108_bar.png) no-repeat;
     }
     .pa00 {
         background: url(../images/title_1_0A.jpg) 0 0 no-repeat;
@@ -5164,10 +5164,10 @@ strong i:after {
         text-align: center;
         line-height: 24px;
         letter-spacing: 1px;
-        background: linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
-        background: -moz-linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
-        background: -webkit-linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
-        background: -o-linear-gradient(90deg, #0b14ff 35%, #99bffd 60%);
+        background: linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
+        background: -moz-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
+        background: -webkit-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
+        background: -o-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
     }
     .list02 li .box_price strong em {
         width: 100%;
