@@ -459,6 +459,9 @@ div#NewProductAll{margin-top:78%}
         line-height: 8vmax;
         font-size: 4vmax;
     }
+    .rightbtn > .actbtn {
+        margin: 1vmax auto;
+    }
 }
 @media screen and (max-width: 1400px) {
     .protitle01 {
@@ -487,6 +490,12 @@ div#NewProductAll{margin-top:78%}
     .protitle01 {
         line-height: 6vmax;
     }
+    .rightbtn {
+        background-position: -0.6vmax 0;
+    }
+    .rightbtn > .actbtn {
+        margin: 0.6vmax auto;
+    }
 }
 
 @media screen and (min-width: 2500px) {
@@ -497,9 +506,6 @@ div#NewProductAll{margin-top:78%}
     .protitle01 {
         line-height: 5vmax;
         font-size: 3vmax;
-    }
-    .rightbtn > .actbtn {
-        margin: -0.4vmax auto;
     }
 }
 /*Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™ Ã¦â€°â€¹Ã¦Â©Å¸Ã§â€°Ë† Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™Ã¢â€“â€™*/
