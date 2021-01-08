@@ -280,7 +280,7 @@ i {
     content: "";
     display: block;
     width: 200px;
-    height: 150px;
+    height: 95px;
     position: absolute;
     top: -87px;
     left: 7%;
@@ -344,7 +344,7 @@ i {
 
 .rightbtn>a.btn02 {
     width: 180px;
-    height: 52px;
+    height: 80px;
     line-height: 36px;
     display: block;
 }
@@ -1232,7 +1232,7 @@ li .box_price strong em {
 }
 
 .list02 ul li:hover {
-    box-shadow: 0px 0px 3px 3px #e748fa;
+    box-shadow: 0px 0px 3px 3px #e88c3f;
     background: #Fff;
     transform: translateY(0.2em);
 }
@@ -4014,7 +4014,7 @@ strong i:after {
         background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210106_wireless_gototop.png) center top no-repeat;
         margin-top: 8px;
         margin-left: -5px;
-        background-size: 25%;
+        background-size: 40%;
         position: relative;
     }
     /*右側選單-PC-hover*/
