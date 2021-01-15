@@ -6,14 +6,15 @@ $(function(){
     var pickspec = $(airpodsmax).find('.pickspec');
     var autom = '';
 
-    $(picktype).addClass('turn_off');
-    $(pickspec).addClass('turn_off');
+    $(picktype).hide();
+    $(pickspec).hide();
 
     //sticky滾動固定位置
     var sidebar = new StickySidebar('.left_pd', {
-        topSpacing: 20,
+        topSpacing: 5,
         containerSelector: '.pd_preview',
-        innerWrapperSelector: '.left_pd'
+        innerWrapperSelector: '.pd_main',
+        bottomSpacing: 10
     });
 
     changeAirPodColor('dimensioncolorspace_gray');
