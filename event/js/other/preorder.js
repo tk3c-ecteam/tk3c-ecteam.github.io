@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
     var airpodsmax = $('#airpodsmax');
     var picktype = $(airpodsmax).find('.picktype');
     var pickcolor = $(airpodsmax).find('.pickcolor');
@@ -10,35 +10,33 @@ $(function(){
     $(pickspec).hide();
 
     //sticky滾動固定位置
-    var sidebar = new StickySidebar('.left_pd', {
-        topSpacing: 5,
-        containerSelector: '.pd_preview',
-        innerWrapperSelector: '.pd_main',
-        bottomSpacing: 10
-    });
+
+    if (isMobile() === false) {
+        var sidebar = new StickySidebar('.pd_main', {
+            topSpacing: 50,
+            containerSelector: '.pd_preview',
+            innerWrapperSelector: '.pd_main',
+            bottomSpacing: 10
+        });
+    }
 
     changeAirPodColor('dimensioncolorspace_gray');
 
     $(addpurchase).find('li').append("<input name='check[]' class='check' type='checkbox' style='display:none;'>");
 
-    $(pickcolor).find('input').on('click',function(){
+    $(pickcolor).find('input').on('click', function() {
         autom = $(this).data('autom');
         changeAirPodColor(autom);
     });
 
-    $(addpurchase).find('li').click(function(){
+    $(addpurchase).find('li').click(function() {
         $(addpurchase).find('b a').not(this).text('我要加購');
-        $(addpurchase).find('.check').not(this).attr('checked',false);
+        $(addpurchase).find('.check').not(this).attr('checked', false);
 
         // .buy-active點選加購的樣式class
         $(this).addClass('buy-active').siblings().removeClass('buy-active');
         $(this).find('b a').text('已加購');
-        $(this).find('.check').attr('checked','checked');
-
-        //$(addpurchase).find('b').not(this).css({'background':'none','border': '1px solid #4e8ec9'});
-        //$(this).css({'border':'1px solid red'}).siblings().css({'border':'1px solid #b1b1b1'});
-        //$(this).find('b').css({'background':'red','border':'none'});
-        //$(this).find('b a').css('color','#fff').text('已加購');
+        $(this).find('.check').attr('checked', 'checked');
     });
 });
 
@@ -55,13 +53,13 @@ function changeAirPodColor(type) {
         case 'dimensioncolorspace_gray':
             colorImageUrl = url + 'spacegray/airpods-max-select-spacegray-202011.png';
             colorAirPod = url + 'spacegray/airpods-max-spacegray-witb.jpg';
-            colorAirPod2 = url  + 'spacegray/airpods-max-smartcase-spacegray-witb.jpg';
+            colorAirPod2 = url + 'spacegray/airpods-max-smartcase-spacegray-witb.jpg';
             break;
-    
+
         case 'dimensioncolorsilver':
             colorImageUrl = url + 'silver/airpods-max-select-silver-202011.png';
             colorAirPod = url + 'silver/airpods-max-silver-witb.jpg';
-            colorAirPod2 = url  + 'silver/airpods-max-smartcase-silver-witb.jpg';
+            colorAirPod2 = url + 'silver/airpods-max-smartcase-silver-witb.jpg';
             break;
 
         case 'dimensioncolorgreen':
@@ -83,9 +81,14 @@ function changeAirPodColor(type) {
             break;
     }
 
-    $(pdmainImg).attr('src',colorImageUrl);
-    $(airPodImage).attr('src',colorAirPod);
-    $(airPod2Iamge).attr('src',colorAirPod2);
+    $(pdmainImg).attr('src', colorImageUrl);
+    $(airPodImage).attr('src', colorAirPod);
+    $(airPod2Iamge).attr('src', colorAirPod2);
 }
 
-  
+//判斷為手機裝置
+function isMobile() {
+    var ua = navigator.userAgent;
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+    return isMobile;
+}
