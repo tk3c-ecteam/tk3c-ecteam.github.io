@@ -12,9 +12,8 @@ $(function(){
     //sticky滾動固定位置
     var sidebar = new StickySidebar('.left_pd', {
         topSpacing: 20,
-        containerSelector: '#airpodsmax',
-        innerWrapperSelector: '.left_pd li',
-        bottomSpacing: 50
+        containerSelector: '.pd_preview',
+        innerWrapperSelector: '.pd_main','.pd_inside'
     });
 
     changeAirPodColor('dimensioncolorspace_gray');
