@@ -12,10 +12,10 @@ $(function() {
     //sticky滾動固定位置
 
     if (isMobile() === false) {
-        var sidebar = new StickySidebar('.pd_main', {
+        var sidebar = new StickySidebar('.left_pd', {
             topSpacing: 50,
-            containerSelector: '.left_pd',
-            innerWrapperSelector: '.pd_main',
+            containerSelector: '.pd_preview',
+            innerWrapperSelector: '.left_pd',
             bottomSpacing: 10
         });
     }
