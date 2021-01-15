@@ -11,7 +11,10 @@ $(function(){
 
     //sticky滾動固定位置
     var sidebar = new StickySidebar('.left_pd', {
-        topSpacing: 50
+        topSpacing: 20,
+        containerSelector: '#airpodsmax',
+        innerWrapperSelector: '.pd_main',
+        bottomSpacing: 20
     });
 
     changeAirPodColor('dimensioncolorspace_gray');
@@ -31,7 +34,7 @@ $(function(){
         $(this).addClass('buy-active').siblings().removeClass('buy-active');
         $(this).find('b a').text('已加購');
         $(this).find('.check').attr('checked','checked');
-        
+
         //$(addpurchase).find('b').not(this).css({'background':'none','border': '1px solid #4e8ec9'});
         //$(this).css({'border':'1px solid red'}).siblings().css({'border':'1px solid #b1b1b1'});
         //$(this).find('b').css({'background':'red','border':'none'});
