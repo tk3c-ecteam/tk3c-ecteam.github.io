@@ -14,7 +14,7 @@ $(function() {
     if (isMobile() === false) {
         var sidebar = new StickySidebar('.pd_main', {
             topSpacing: 50,
-            containerSelector: '.pd_preview',
+            containerSelector: '.left_pd',
             innerWrapperSelector: '.pd_main',
             bottomSpacing: 10
         });
