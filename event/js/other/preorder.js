@@ -13,7 +13,7 @@ $(function(){
     var sidebar = new StickySidebar('.left_pd', {
         topSpacing: 20,
         containerSelector: '.pd_preview',
-        innerWrapperSelector: '.pd_main','.pd_inside'
+        innerWrapperSelector: '.pd_main,.pd_inside'
     });
 
     changeAirPodColor('dimensioncolorspace_gray');
