@@ -15,8 +15,8 @@ $(function() {
         var sidebar = new StickySidebar('.pd_main', {
             topSpacing: 50,
             containerSelector: '.pd_main',
-            innerWrapperSelector: '.pd_main',
-            bottomSpacing: 10
+            innerWrapperSelector: '.pd_main li',
+            bottomSpacing: 50
         });
     }
 
