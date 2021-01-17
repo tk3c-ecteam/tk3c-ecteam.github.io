@@ -9,11 +9,6 @@ $(function() {
     $(picktype).hide();
     $(pickspec).hide();
 
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://cdn.jsdelivr.net/npm/stickyfilljs@2.1.0/dist/stickyfill.min.js';
-    $('head').append(script);
-
     //sticky滾動固定位置
 
     $('.pd_main').addClass('sticky');
