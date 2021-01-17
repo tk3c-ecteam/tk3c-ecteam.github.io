@@ -11,14 +11,14 @@ $(function() {
 
     //sticky滾動固定位置
 
-    if (isMobile() === false) {
+    /*if (isMobile() === false) {
         var sidebar = new StickySidebar('.pd_main', {
             topSpacing: 50,
             containerSelector: '.pd_main',
             innerWrapperSelector: '.pd_main li',
             bottomSpacing: 50
         });
-    }
+    }*/
 
     changeAirPodColor('dimensioncolorspace_gray');
 
