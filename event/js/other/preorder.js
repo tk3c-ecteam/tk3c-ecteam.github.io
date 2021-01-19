@@ -13,6 +13,7 @@ $(function() {
 
     //每位顧客限購先隱藏
     $(rightpd).find('.wording h5').hide();
+    $(rightpd).find('.wording h3').text('燦坤VIP會員限定');
     //贈品區塊先隱藏
     $(rightpd).find('.pikegift').hide();
     //身分驗證先隱藏
@@ -34,6 +35,7 @@ $(function() {
 
     $(addpurchase).find('li').append("<input name='check[]' class='check' type='checkbox' style='display:none;'>");
 
+    $(pickcolor).find('input[value=space_gray]').attr('checked',true);
     $(pickcolor).find('input').on('click', function() {
         autom = $(this).data('autom');
         changeAirPodColor(autom);
