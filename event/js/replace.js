@@ -14,7 +14,7 @@ var location = window.location.pathname.split('/');
         var newImagePath = imageUrl.getAttribute('src');
 
         //防止不存在圖片在瀏覽器產生錯誤
-        imageUrl.onerror = () => {
+        newImagePath.onerror = () => {
         //排除含有cdn網址的圖片
             if (imageUrl.src.indexOf(newUrl) < 0) {
                 if (imageUrl.src.indexOf(imageStr) > -1) {
