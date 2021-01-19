@@ -32,6 +32,7 @@ var location = window.location.pathname.split('/');
                     }
                 }
             }
+            return true;
         }
     }
 });
