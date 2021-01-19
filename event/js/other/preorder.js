@@ -39,13 +39,6 @@ $(function() {
         changeAirPodColor(autom);
     });
 
-
-    $(actarea).find('.actbtn').attr('href',goToColorPage('dimensioncolorspace_gray'));
-    $(actarea).find('.actbtn').click(function(){
-        autom = $(this).data('autom');
-        $(this).attr('href',goToColorPage(autom));
-    });
-
     $(addpurchase).find('li').click(function() {
         $(addpurchase).find('b a').not(this).text('我要加購');
         $(addpurchase).find('.check').not(this).attr('checked', false);
@@ -65,69 +58,49 @@ function changeAirPodColor(type) {
     var colorImageUrl = '';
     var colorAirPod = '';
     var colorAirPod2 = '';
+    var goProUrl = '';
 
     switch (type) {
         case 'dimensioncolorspace_gray':
             colorImageUrl = url + 'spacegray/airpods-max-select-spacegray-202011.png';
             colorAirPod = url + 'spacegray/airpods-max-spacegray-witb.jpg';
             colorAirPod2 = url + 'spacegray/airpods-max-smartcase-spacegray-witb.jpg';
+            goProUrl = 'http://www.tk3c.com/pt.aspx?pid=213950-vip';
             break;
 
         case 'dimensioncolorsilver':
             colorImageUrl = url + 'silver/airpods-max-select-silver-202011.png';
             colorAirPod = url + 'silver/airpods-max-silver-witb.jpg';
             colorAirPod2 = url + 'silver/airpods-max-smartcase-silver-witb.jpg';
+            goProUrl = 'http://www.tk3c.com/pt.aspx?pid=213951-vip';
             break;
 
         case 'dimensioncolorgreen':
             colorImageUrl = url + 'green/airpods-max-select-green-202011.png';
             colorAirPod = url + 'green/airpods-max-green-witb.jpg';
             colorAirPod2 = url + 'green/airpods-max-smartcase-green-witb.jpg';
+            goProUrl = 'http://www.tk3c.com/pt.aspx?pid=213954-vip';
             break;
 
         case 'dimensioncolorskyblue':
             colorImageUrl = url + 'skyblue/airpods-max-select-skyblue-202011.png';
             colorAirPod = url + 'skyblue/airpods-max-skyblue-witb.jpg';
             colorAirPod2 = url + 'skyblue/airpods-max-smartcase-skyblue-witb.jpg';
+            goProUrl = 'http://www.tk3c.com/pt.aspx?pid=213952-vip';
             break;
 
         case 'dimensioncolorpink':
             colorImageUrl = url + 'pink/airpods-max-select-pink-202011.png';
             colorAirPod = url + 'pink/airpods-max-pink-witb.jpg';
             colorAirPod2 = url + 'pink/airpods-max-smartcase-pink-witb.jpg';
+            goProUrl = 'http://www.tk3c.com/pt.aspx?pid=213953-vip'
             break;
     }
 
     $(pdmainImg).attr('src', colorImageUrl);
     $(airPodImage).attr('src', colorAirPod);
     $(airPod2Iamge).attr('src', colorAirPod2);
-}
-
-function goToColorPage(type) {
-    var url = '';
-    switch (type) {
-        case 'dimensioncolorspace_gray':
-        url = 'http://www.tk3c.com/pt.aspx?pid=213950-vip';
-        break;
-    
-        case 'dimensioncolorsilver':
-        url = 'http://www.tk3c.com/pt.aspx?pid=213951-vip';
-        break;
-
-        case 'dimensioncolorgreen':
-        url = 'http://www.tk3c.com/pt.aspx?pid=213954-vip';
-        break;
-
-        case 'dimensioncolorskyblue':
-        url = 'http://www.tk3c.com/pt.aspx?pid=213952-vip';
-        break;
-
-        case 'dimensioncolorpink':
-        url = 'http://www.tk3c.com/pt.aspx?pid=213953-vip';
-        break;
-    }
-
-    return url;
+    $(actarea).find('.actbtn').attr('href',goProUrl);
 }
 
 //判斷為手機裝置
