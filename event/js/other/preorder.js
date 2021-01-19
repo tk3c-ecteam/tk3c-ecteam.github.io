@@ -4,10 +4,23 @@ $(function() {
     var pickcolor = $(airpodsmax).find('.pickcolor');
     var addpurchase = $(airpodsmax).find('.addpurchase');
     var pickspec = $(airpodsmax).find('.pickspec');
+    var actarea = $(airpodsmax).find('.actarea');
+    var rightpd = $(airpodsmax).find('.right_pd');
     var autom = '';
 
     $(picktype).hide();
     $(pickspec).hide();
+
+    //每位顧客限購先隱藏
+    $(rightpd).find('.wording h5').hide();
+    //贈品區塊先隱藏
+    $(rightpd).find('.pikegift').hide();
+    //身分驗證先隱藏
+    $(actarea).find('.all_register').hide();
+    $(actarea).find('.actbtn').text('商品確認');
+
+    //加購區塊先隱藏
+    $(addpurchase).hide();
 
     //sticky滾動固定位置
 
@@ -24,6 +37,12 @@ $(function() {
     $(pickcolor).find('input').on('click', function() {
         autom = $(this).data('autom');
         changeAirPodColor(autom);
+    });
+
+
+    $(actarea).find('.actbtn').click(function(){
+        autom = $(this).data('autom');
+        window.open(goToColorPage(autom),"_blank");
     });
 
     $(addpurchase).find('li').click(function() {
@@ -81,6 +100,33 @@ function changeAirPodColor(type) {
     $(pdmainImg).attr('src', colorImageUrl);
     $(airPodImage).attr('src', colorAirPod);
     $(airPod2Iamge).attr('src', colorAirPod2);
+}
+
+function goToColorPage(type) {
+    var url = '';
+    switch (type) {
+        case 'dimensioncolorspace_gray':
+        url = 'http://www.tk3c.com/pt.aspx?pid=213950-vip';
+        break;
+    
+        case 'dimensioncolorsilver':
+        url = 'http://www.tk3c.com/pt.aspx?pid=213951-vip';
+        break;
+
+        case 'dimensioncolorgreen':
+        url = 'http://www.tk3c.com/pt.aspx?pid=213954-vip';
+        break;
+
+        case 'dimensioncolorskyblue':
+        url = 'http://www.tk3c.com/pt.aspx?pid=213952-vip';
+        break;
+
+        case 'dimensioncolorpink':
+        url = 'http://www.tk3c.com/pt.aspx?pid=213953-vip';
+        break;
+    }
+
+    return url;
 }
 
 //判斷為手機裝置
