@@ -40,9 +40,10 @@ $(function() {
     });
 
 
+    $(actarea).find('.actbtn').attr('href',goToColorPage('dimensioncolorspace_gray'));
     $(actarea).find('.actbtn').click(function(){
         autom = $(this).data('autom');
-        window.open(goToColorPage(autom),"_blank");
+        $(this).attr('href',goToColorPage(autom));
     });
 
     $(addpurchase).find('li').click(function() {
