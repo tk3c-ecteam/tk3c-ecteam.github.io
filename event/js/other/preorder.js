@@ -54,6 +54,7 @@ function changeAirPodColor(type) {
     var pdmainImg = $(airpodsmax).find('.pd_main li img');
     var airPodImage = $(airpodsmax).find('.pd_inside li').eq(0).find('img');
     var airPod2Iamge = $(airpodsmax).find('.pd_inside li').eq(1).find('img');
+    var actarea = $(airpodsmax).find('.actarea');
     var url = 'https://events.cdn-tkec.tw/events_net/events_net/preorder/images/airpodsmax/product/';
     var colorImageUrl = '';
     var colorAirPod = '';
