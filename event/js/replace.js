@@ -13,6 +13,12 @@ var location = window.location.pathname.split('/');
         imageUrl = images[i];
         var newImagePath = imageUrl.getAttribute('src');
 
+        //若圖片不存在，連結為空
+        imageUrl.onerror = () => {
+            this.src = '';
+            return true;
+        }
+
         //排除含有cdn網址的圖片
             if (imageUrl.src.indexOf(newUrl) < 0) {
                 if (imageUrl.src.indexOf(imageStr) > -1) {
