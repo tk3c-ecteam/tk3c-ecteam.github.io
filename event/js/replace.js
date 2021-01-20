@@ -8,10 +8,15 @@ var newUrl = 'https://events.cdn-tkec.tw';
 var originUrl = 'https://events.tk3c.com';
 var location = window.location.pathname.split('/');
 
-
     for (var i = 0; i < images.length; i++) {
         imageUrl = images[i];
         var newImagePath = imageUrl.getAttribute('src');
+
+        //若圖片不存則連結為空
+        imageUrl.onerror = () => {
+            newImagePath = "";
+            return true;
+        }
 
         //排除含有cdn網址的圖片
             if (imageUrl.src.indexOf(newUrl) < 0) {
