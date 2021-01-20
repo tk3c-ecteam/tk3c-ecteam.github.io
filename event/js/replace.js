@@ -1,6 +1,6 @@
 //活動頁面圖片網址轉換成cdn https://events.cdn-tkec.tw
 
-$(function() {
+$(window).load(() => {
 var images = document.getElementsByTagName('img');
 var imageUrl = '';
 var imageStr = '/events_net/events_net';
@@ -12,12 +12,6 @@ var location = window.location.pathname.split('/');
     for (var i = 0; i < images.length; i++) {
         imageUrl = images[i];
         var newImagePath = imageUrl.getAttribute('src');
-
-        //若圖片不存在，連結為空
-        imageUrl.onerror = () => {
-            this.src = '';
-            return true;
-        }
 
         //排除含有cdn網址的圖片
             if (imageUrl.src.indexOf(newUrl) < 0) {
