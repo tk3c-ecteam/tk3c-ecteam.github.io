@@ -24,7 +24,7 @@ html{margin:0;padding:0;height:100%;}
 body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210114_head.png)center top 45px no-repeat,url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210114_bg.jpg)center top;background-size: 100%;}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:20px}
 .wrapper{display:block;width:1144px;margin:0 auto;margin-top: 7vmax;}
-.wrapper .title {width: 42%;height: 100%;margin: 0 auto;position: relative;top: -90px;animation: rotate-flap 0.7s linear;animation-delay: 1.5s;}
+.wrapper .title {width: 42%;height: 100%;margin: 0 auto;position: relative;top: -90px;animation: rotate-flap 0.8s linear;animation-delay: 1.5s;animation-duration: 3s;}
 form>div:nth-child(6){width:100%}
 #gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:50%;z-index:9;bottom:0;}
 #gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210120_stagetop.png)no-repeat;bottom: -92px;left: 46.5%;background-size: 100%;position: fixed;}
@@ -636,12 +636,12 @@ img.n01.wow {z-index: -1;position: relative;}
     #gotop {left: 47%;}
 }
 @keyframes rotate-flap {
-    0%,100% {
+    0% {
         opacity: 0;
-        transform: rotate(0);
-    }
-    50% {
         transform: rotate3d(0, 1, 0, -180deg);
+    }
+    100% {
+        transform: rotate3d(0, 1, 0, 180deg);
         transform-origin: center;
         opacity: 1;
     }
