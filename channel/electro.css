@@ -277,15 +277,17 @@ i {
 
 .electro-title h2 .light {
     position: absolute;
-    width: 45%;
+    width: 80%;
     height: 30%;
     display: block;
-    top: 0;
-    left: -15%;
-    animation: light-to-right 3s linear;
-    animation-duration: 6s;
+    top: 10%;
+    left: 11%;
     opacity: 0;
     mix-blend-mode: screen;
+    background-color: #d818b3;
+    filter: blur(40px);
+    animation: fade-in-out 0.5s ease-in-out;
+    animation-delay: 1s;
 }
 
 .boxfor3c {
@@ -6338,5 +6340,14 @@ strong i:after {
         transform: translateX(130%);
         filter: brightness(1);
         opacity: 0.3;
+    }
+}
+
+@keyframes fade-in-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }
