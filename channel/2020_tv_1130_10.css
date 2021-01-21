@@ -255,7 +255,7 @@ img.n01.wow {
 .banner-btns ul .ddef{padding:10px 6px;}
 .banner-btns ul .ddef .icon img{width:40px;}
 .banner-btns ul .ddef{align-items:center;justify-content: center;}
-.list_F ul li {height: 400px;}
+.list_F ul li {height: 400px !important;}
 .wrapper .title {width: 28%;}
 }
 @media (min-width: 769px) and (max-width: 1366px){
@@ -268,10 +268,10 @@ img.n01.wow {
 .banner-btns ul .ddef{justify-content: center;display: flex;}
 .protitle{/* background-size:150px; *//* background-position:20px 100%,calc(100% - 20px) 100%; */background: cover;}
 .acbankbox {width: 100% !important;}
-.list_F ul li {height: 400px;}
+.list_F ul li {height: 360px !important;}
 }
 @media screen and (max-width:768px){
-    .list_F ul li {height: 300px;}
+    .list_F ul li {height: 300px !important;}
     .list_M .list_special ul li {width: 32% !important;}
     .protitle {font-size: 6vmin;line-height: 50px;margin: 4% auto 0;}
     .wrapper {width: 100% !important; margin-top: 13vmin;}
@@ -604,7 +604,7 @@ img.n01.wow {z-index: -1;position: relative;}
 /*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區05((4小)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
 @media screen and (min-width: 320px) and (max-width: 750px){
 .list_F{width:100%;float: left;text-align: center;display:block;padding: 1% 1%;margin-bottom: 0;border-radius: 0;}
-.list_F ul li{width: 48.3%;height: 285px;position:relative;text-align: center;margin: 3px 3px;background: #FFF;/* float:left; */box-sizing: border-box;-moz-border-radius: 5px;-webkit-border-radius: 5px;list-style: none;transition: all 0.5s;-webkit-transition: all 0.5s;-ms-transition: all 0.5s;-moz-transition: all 0.5s;/* border: 3px solid #9770ea; */padding: 0;}
+.list_F ul li{width: 48.3%;height: 285px !important;position:relative;text-align: center;margin: 3px 3px;background: #FFF;/* float:left; */box-sizing: border-box;-moz-border-radius: 5px;-webkit-border-radius: 5px;list-style: none;transition: all 0.5s;-webkit-transition: all 0.5s;-ms-transition: all 0.5s;-moz-transition: all 0.5s;/* border: 3px solid #9770ea; */padding: 0;}
 .list_F .itemF_img{width: 100%;margin-bottom:0;display: flex;justify-content: center;}
 .list_F .itemF_img img{width: 120px;height: 120px;}
 .list_F h4 {font-size: 15px; font-weight: bold; background: #fff; color: #eb6a31;  line-height: 25px;  overflow: hidden;  height: 25px;  width: 100%; box-sizing: border-box; display: block;  padding: 0 5px; margin: 0 auto; border-radius: 50px;  letter-spacing: -0.5px;}
@@ -641,13 +641,9 @@ img.n01.wow {z-index: -1;position: relative;}
         opacity: 0;
         transform: rotate3d(0, 1, 0, 0deg);
     }
-    80% {
-        transform: rotate3d(0, 1, 0, 180deg);
-        transform-origin: center;
-        opacity: 1;
-    }
     100% {
         opacity: 1;
-        transform: rotate3d(0, 1, 0, 0deg);
+        transform: rotate3d(0, 1, 0, 360deg);
+        transform-origin: center;
     }
 }
