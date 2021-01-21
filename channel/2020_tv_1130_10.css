@@ -268,6 +268,7 @@ img.n01.wow {
 .banner-btns ul .ddef{justify-content: center;display: flex;}
 .protitle{/* background-size:150px; *//* background-position:20px 100%,calc(100% - 20px) 100%; */background: cover;}
 .acbankbox {width: 100% !important;}
+.list_F ul li {height: 400px;}
 }
 @media screen and (max-width:768px){
     .list_F ul li {height: 300px;}
@@ -593,7 +594,7 @@ img.n01.wow {z-index: -1;position: relative;}
 .list_F li .boxF_price strong i {font-size: 13px;letter-spacing: 0;	font-style: normal;}
 .list_F li .boxF_price strong:before {content: "搶購";display: block;	width: 47px;height: 40px;float: right;border-radius: 5px;color: white;font-size: 0.7em;text-align: center;	line-height: 40px;letter-spacing: 1px;position: absolute;bottom: 7px;right: 5px;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);	background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
 
-.list_F .boxF_price .iconF_pro{ display: block;  background: url(../images/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px; position: absolute;  z-index: 5; font-size: 16px;  box-sizing: border-box; color: #ff2400; line-height: 26px; bottom: 10px; text-align: left;  padding-left: 4px; background-size: 88%;}
+.list_F .boxF_price .iconF_pro{ display: block;  background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px; position: absolute;  z-index: 5; font-size: 16px;  box-sizing: border-box; color: #ff2400; line-height: 26px; bottom: 10px; text-align: left;  padding-left: 4px; background-size: 88%;}
 
 .list_M .list_special .box_price .icon_pro{ top: -110px;}
 
@@ -638,11 +639,15 @@ img.n01.wow {z-index: -1;position: relative;}
 @keyframes rotate-flap {
     0% {
         opacity: 0;
-        transform: rotate3d(0, 1, 0, 180deg);
+        transform: rotate3d(0, 1, 0, 0deg);
     }
-    100% {
-        transform: rotate3d(0, 1, 0, -180deg);
+    80% {
+        transform: rotate3d(0, 1, 0, 180deg);
         transform-origin: center;
         opacity: 1;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate3d(0, 1, 0, 0deg);
     }
 }
