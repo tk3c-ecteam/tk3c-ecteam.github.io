@@ -277,10 +277,10 @@ i {
 
 .electro-title h2 .light {
     position: absolute;
-    width: 50%;
-    height: 100%;
+    width: 45%;
+    height: 30%;
     display: block;
-    top: -10%;
+    top: 0;
     left: -15%;
     animation: light-to-right 3s linear;
     animation-duration: 6s;
@@ -296,10 +296,17 @@ i {
     vertical-align: top;
 }
 
+.boxfor3c .nb {
+    animation: upAndDown 0.6s infinite;
+    animation-duration: 1.2s;
+    animation-direction: alternate;
+}
+
 .boxfor3c p {
     width: 49%;
     display: inline-block;
     vertical-align: top;
+    position: relative;
 }
 
 .boxfor3c .laplop {
@@ -329,10 +336,10 @@ i {
     content: "";
     display: block;
     width: 200px;
-    height: 121px;
+    height: 155px;
     position: absolute;
-    top: -147px;
-    left: -8%;
+    top: -145px;
+    left: -11%;
     z-index: 1;
     background-size: 100%;
 }
@@ -368,7 +375,7 @@ i {
 .rightbtn>.actbtn a.btn01 {
     width: 150px;
     line-height: 40px;
-    color: #3e0e64;
+    color: #000;
     text-decoration: none;
     box-sizing: border-box;
     display: block;
