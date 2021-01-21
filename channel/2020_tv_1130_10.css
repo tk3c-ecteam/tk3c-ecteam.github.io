@@ -268,7 +268,6 @@ img.n01.wow {
 .banner-btns ul .ddef{justify-content: center;display: flex;}
 .protitle{/* background-size:150px; *//* background-position:20px 100%,calc(100% - 20px) 100%; */background: cover;}
 .acbankbox {width: 100% !important;}
-.list_F ul li {height: 360px !important;}
 }
 @media screen and (max-width:768px){
     .list_F ul li {height: 300px !important;}
