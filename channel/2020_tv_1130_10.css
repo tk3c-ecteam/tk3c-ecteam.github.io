@@ -4,7 +4,7 @@
 :focus{outline:0}
 *{-webkit-text-size-adjust:none}
 a{text-decoration:none;cursor:pointer}
-img{border:0}
+img{border:0;width: 100%;height: 100%;}
 i{font-style:normal}
 em{font-style:normal}
 li{list-style:none;display:inline-block;}
@@ -24,10 +24,10 @@ html{margin:0;padding:0;height:100%;}
 body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210114_head.png)center top 45px no-repeat,url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210114_bg.jpg)center top;background-size: 100%;}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:20px}
 .wrapper{display:block;width:1144px;margin:0 auto;margin-top: 7vmax;}
-.wrapper .title {width: 100%;height: 100%;margin: 0 19vmax;position: relative;top: -90px;animation: rotate-flap 1.3s ease-in;animation-delay: 0.5s;animation-duration: 3s;}
+.wrapper .title {width: 42%;height: 100%;margin: 0 auto;position: relative;top: -90px;transform: rotate3d(0, 1, 0, 180deg);transform-origin: center;transition-delay: 1.5s;transition: all 2s;}
 form>div:nth-child(6){width:100%}
 #gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:50%;z-index:9;bottom:0;}
-#gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210120_stagetop.png)no-repeat;bottom: -85px;left: 46.5%;background-size: 100%;position: fixed;}
+#gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210120_stagetop.png)no-repeat;bottom: -92px;left: 46.5%;background-size: 100%;position: fixed;}
 #gotop img{display:none;}
 
 
@@ -243,18 +243,24 @@ img.n01.wow {
 #TopDiv1{position:relative;}
 @media screen and (max-width:1680px){
 .banner-wrapper .b_width{width:100%}
-.protitle {font-size: 6vmax;}
+.protitle {font-size: 5vmax;}
+.wrapper .title {width: 34%;}
+}
+@media screen and (max-width: 1440px) {
+    .wrapper .title {width: 31%;top: -71px;}
 }
 @media screen and (max-width:1280px){
-.wrapper{width:100%}
-.protitle{width:100%;/* background-image: url(../images/0401/protitle_m_01.png); */background-size: 100%;line-height: 180px;margin: 10px 0 23px;}
+.protitle{width:100%;/* background-image: url(../images/0401/protitle_m_01.png); */background-size: 100%;line-height: 85px;margin: 10px 0 23px;}
 .banner-bg{width: 100%;}
 .banner-btns ul .ddef{padding:10px 6px;}
 .banner-btns ul .ddef .icon img{width:40px;}
 .banner-btns ul .ddef{align-items:center;justify-content: center;}
 .list_F ul li {height: 400px;}
+.wrapper .title {width: 28%;}
 }
 @media (min-width: 769px) and (max-width: 1366px){
+.wrapper {width: 100%;}
+.wrapper .title {width: 25%;}
 .banner{background-size:auto;background-position:0;}
 .bannerkok .right, .bannerkok2 .right, .bannerkok3 .right{display:none}
 .banner-btns ul li{align-items: center;flex: 0 1 30%;}
@@ -265,9 +271,11 @@ img.n01.wow {
 @media screen and (max-width:768px){
     .list_F ul li {height: 300px;}
     .list_M .list_special ul li {width: 32%;}
-    .protitle {font-size: 7vmin;line-height: 107px;margin: 2% auto 3%;}
-    .wrapper { margin: 44% auto 0;}
+    .protitle {font-size: 6vmin;line-height: 50px;margin: 4% auto 0;}
+    .wrapper { margin-top: 13vmin;}
+    .wrapper .title {width: 31%;}
     body {background-size: 131% auto;}
+    .list_M .hotpromain .hotpro_price2 span {font-size: 225%;}
 }
 @media screen and (max-width:750px){
 .moset{display:block}
@@ -309,7 +317,8 @@ body {background-size: 164% auto;}
 .pc_version_non{display:block}
 body{margin:0;padding:0;width:100%;height:100%;}
 .copyR{padding-bottom:55px;margin-top:3%;font-size:80%}
-.wrapper{display:block;width:100%;margin: 26vmin auto 0;overflow:hidden;}
+.wrapper{display:block;width:100%;margin: 15vmin auto 0;}
+.wrapper .title {width: 38%;top: -36px;}
 #gotop{display:none;position:fixed;padding:0;cursor:pointer;z-index:999999;bottom:45px;margin:0;left:85%;}
 #gotop img{width:100%;display:none}
 .title02{width:100%;height:auto;position:relative;margin:0 auto;text-align:center;background:0 0;float:left;}
@@ -479,7 +488,7 @@ img.n01.wow {z-index: -1;position: relative;}
 .list_M .list_special .box_price strong i:after{content:"$"}
 .list_M .list_special .box_price strong:before{content:"搶購";display:block;width:47px;height:43px;float:right;border-radius:5px;color:#fff;font-size:.5em;text-align:center;line-height:46px;letter-spacing:1px;position:absolute;bottom:10px;right:5px;box-shadow:0 3px 0 0 #f05151;background:#c60505}
 .list_M .list_special li .box_price strong em{display:block;font-size:10px;position:absolute;bottom:6px;left:81px;color:#8d8d8d;font-weight:lighter;text-decoration:line-through;letter-spacing:1px;font-style:normal}
-.list_M .list_special .box_price .icon_pro{display:block;background:url(../images/icon_pro2.png) 0 0 no-repeat;width:80px;height:43px;position:absolute;z-index:5;font-size:16px;box-sizing:border-box;color:#ff2400;line-height:26px;bottom:10px;text-align:left;padding-left:4px;background-size:88%}
+.list_M .list_special .box_price .icon_pro{display:block;background:url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/icon_pro2.png) 0 0 no-repeat;width:80px;height:43px;position:absolute;z-index:5;font-size:16px;box-sizing:border-box;color:#ff2400;line-height:26px;bottom:10px;text-align:left;padding-left:4px;background-size:88%}
 .list_M .list_special .box_price .icon_pro span{font-size:28px}
 .list_M .list_special ul li:hover{box-shadow:0 0 3px 3px rgba(150,93,12,.8);transform:translateY(.2em)}
 .list_M .list_special ul li:hover .box_price strong:before{box-shadow:none;background:#cb390c;color:#fff7bd;transform:translateY(.2em)}
@@ -614,14 +623,24 @@ img.n01.wow {z-index: -1;position: relative;}
     .protitle {line-height: 2vmin;font-size: 18px;}
 }
 
+@media screen and (min-width: 2500px) {
+    .wrapper .title {width:55%;top: -160px;}
+    #gotop {left: 47.5%;}
+}
+
+@media screen and (min-width: 2000px) {
+    .wrapper {margin-top: 9vmax;}
+    .wrapper .title {width:45%;top: -131px;}
+    #gotop {left: 47%;}
+}
 @keyframes rotate-flap {
     0%,100% {
         opacity: 0;
         transform: rotate(0);
     }
     50% {
-        transform: rotate3d(1,1,1,-180deg);
-        transform-origin: left;
+        transform: rotate3d(1,1,0,180deg);
+        transform-origin: center;
         opacity: 1;
     }
 }
