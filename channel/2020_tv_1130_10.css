@@ -24,7 +24,7 @@ html{margin:0;padding:0;height:100%;}
 body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210114_head.png)center top 45px no-repeat,url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210114_bg.jpg)center top;background-size: 100%;}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:20px}
 .wrapper{display:block;width:1144px;margin:0 auto;margin-top: 7vmax;}
-.wrapper .title {width: 42%;height: 100%;margin: 0 auto;position: relative;top: -90px;transform: rotate3d(0, 1, 0, 180deg);transform-origin: center;transition-delay: 1.5s;transition: all 2s;}
+.wrapper .title {width: 42%;height: 100%;margin: 0 auto;position: relative;top: -90px;animation: rotate-flap 0.7s linear;animation-delay: 1.5s;}
 form>div:nth-child(6){width:100%}
 #gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:50%;z-index:9;bottom:0;}
 #gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210120_stagetop.png)no-repeat;bottom: -92px;left: 46.5%;background-size: 100%;position: fixed;}
@@ -267,12 +267,13 @@ img.n01.wow {
 
 .banner-btns ul .ddef{justify-content: center;display: flex;}
 .protitle{/* background-size:150px; *//* background-position:20px 100%,calc(100% - 20px) 100%; */background: cover;}
+.acbankbox {width: 100%;}
 }
 @media screen and (max-width:768px){
     .list_F ul li {height: 300px;}
     .list_M .list_special ul li {width: 32%;}
     .protitle {font-size: 6vmin;line-height: 50px;margin: 4% auto 0;}
-    .wrapper { margin-top: 13vmin;}
+    .wrapper {width: 100%; margin-top: 13vmin;}
     .wrapper .title {width: 31%;}
     body {background-size: 131% auto;}
     .list_M .hotpromain .hotpro_price2 span {font-size: 225%;}
@@ -555,7 +556,8 @@ img.n01.wow {z-index: -1;position: relative;}
 .list_M .list_special storg{height:38px}
 .protitle:before{right:-30%;width:50%;top:50%;background-position:100% 100%;}
 .protitle:after{left:calc(50% - 130px);width:40px;height:40px;top:17px;background-size:100%;background-repeat:no-repeat}
-	.banner {padding:0;}
+    .banner {padding:0;}
+    .mobile-nuttons #gotop {z-index: -1;}
 }
 @media screen and (max-width:480px){
 .protitle{font-size: 26px;background-size: 100%;line-height: 4vmin;background-size: 142%;}
@@ -639,7 +641,7 @@ img.n01.wow {z-index: -1;position: relative;}
         transform: rotate(0);
     }
     50% {
-        transform: rotate3d(1,1,0,180deg);
+        transform: rotate3d(0, 1, 0, -180deg);
         transform-origin: center;
         opacity: 1;
     }
