@@ -638,11 +638,12 @@ img.n01.wow {z-index: -1;position: relative;}
 @keyframes rotate-flap {
     0% {
         opacity: 0;
-        transform: rotate3d(0, 1, 0, 0deg);
+        transform: rotate3d(0, 1, 0, 180deg);
+        transform-origin: left;
     }
     100% {
+        transform: rotate3d(0, 1, 0, 0deg);
+        transform-origin: left;
         opacity: 1;
-        transform: rotate3d(0, 1, 0, 360deg);
-        transform-origin: center;
     }
 }
