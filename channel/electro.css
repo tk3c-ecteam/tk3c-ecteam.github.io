@@ -286,9 +286,9 @@ i {
     left: 8%;
     opacity: 0;
     mix-blend-mode: screen;
-    background-color: #d818b3;
+    background-color: #17e0f7;
     filter: blur(20px);
-    animation: fade-in-out 0.5s ease-in-out infinite;
+    animation: fade-in-out 1.3s ease-in-out infinite;
     animation-delay: 1s;
 }
 
@@ -304,7 +304,8 @@ i {
     animation: upAndDown 0.6s infinite;
     animation-duration: 1.2s;
     animation-direction: alternate;
-    margin: 8% auto;
+    margin: 3% auto;
+    width: 67%;
 }
 
 .boxfor3c p {
@@ -315,7 +316,7 @@ i {
 }
 
 .boxfor3c .laplop {
-    margin: 15% -19%;
+    margin: 15% -26%;
 }
 
 
@@ -3942,6 +3943,27 @@ strong i:after {
     display: none;
 }
 
+@media screen and (min-width: 2000px) {
+    form>div:nth-of-type(9) {
+        margin-top: 20vmax;
+    }
+    .electro-title h2 {
+        margin: 8vmax -2vmax;
+    }
+    .boxfor3c {
+        margin: 7vmax -2vmax;
+    }
+    .boxfor3c p {
+        width: 65%;
+    }
+    .boxfor3c .nb {
+        margin: 8% auto;
+    }
+    .boxfor3c .laplop {
+        margin: 22% -26%;
+    }
+}
+
 @media screen and (max-width: 1600px) {
     form>div:nth-of-type(9) {
         margin-top: 9vmax;
@@ -3950,7 +3972,7 @@ strong i:after {
         background-position: 0 6vmax;
     }
     .electro-title h2 {
-        margin: 3vmax 4vmax;
+        margin: 4vmax 4vmax;
     }
     .boxfor3c {
         margin: 3vmax 2vmax;
@@ -6351,29 +6373,11 @@ strong i:after {
     .boxfor3c {
         margin: 9vmax -1vmax;
     }
-    .boxfor3c p {
+    .boxfor3c .nb {
         width: 75%;
     }
     .boxfor3c .laplop {
         margin: 22% -30%;
-    }
-}
-
-@media screen and (min-width: 2000px) {
-    form>div:nth-of-type(9) {
-        margin-top: 20vmax;
-    }
-    .electro-title h2 {
-        margin: 8vmax -2vmax;
-    }
-    .boxfor3c {
-        margin: 7vmax -2vmax;
-    }
-    .boxfor3c p {
-        width: 67%;
-    }
-    .boxfor3c .laplop {
-        margin: 22% -26%;
     }
 }
 
