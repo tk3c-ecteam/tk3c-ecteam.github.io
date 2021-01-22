@@ -283,18 +283,18 @@ i {
     height: 30%;
     display: block;
     top: 10%;
-    left: 11%;
+    left: 8%;
     opacity: 0;
     mix-blend-mode: screen;
     background-color: #d818b3;
-    filter: blur(40px);
+    filter: blur(20px);
     animation: fade-in-out 0.5s ease-in-out infinite;
     animation-delay: 1s;
 }
 
 .boxfor3c {
     margin: 6vmax auto;
-    width: 40%;
+    width: 49%;
     height: 100%;
     display: inline-block;
     vertical-align: top;
@@ -304,17 +304,18 @@ i {
     animation: upAndDown 0.6s infinite;
     animation-duration: 1.2s;
     animation-direction: alternate;
+    margin: 8% auto;
 }
 
 .boxfor3c p {
-    width: 49%;
+    width: 52%;
     display: inline-block;
     vertical-align: top;
     position: relative;
 }
 
 .boxfor3c .laplop {
-    margin: 15% -3%;
+    margin: 15% -19%;
 }
 
 
@@ -340,10 +341,10 @@ i {
     content: "";
     display: block;
     width: 200px;
-    height: 155px;
+    height: 145px;
     position: absolute;
     top: -145px;
-    left: -11%;
+    left: -7%;
     z-index: 1;
     background-size: 100%;
 }
@@ -3953,6 +3954,7 @@ strong i:after {
     }
     .boxfor3c {
         margin: 3vmax 2vmax;
+        width: 42%;
     }
 }
 
@@ -3961,7 +3963,14 @@ strong i:after {
         margin-top: 8vmax;
     }
     .electro-title h2 {
-        margin: 1vmax 3vmax;
+        margin: 4vmax 6vmax;
+    }
+    html {
+        background-position: 0 7vmax;
+    }
+    .boxfor3c {
+        margin: 3vmax 4vmax;
+        width: 38%;
     }
 }
 
@@ -3969,9 +3978,15 @@ strong i:after {
     html {
         background-position: 0 8vmax;
     }
+    .electro-title {
+        width: 40%;
+    }
     .electro-title h2 {
-        margin: 2vmax 6vmax;
-        width: 95%;
+        margin: 5vmax 12vmax;
+    }
+    .boxfor3c {
+        margin: 4vmax 10vmax;
+        width: 33%;
     }
     .boxfor3c .nb {
         margin: 5% auto;
@@ -4006,6 +4021,9 @@ strong i:after {
     }
     form>div:nth-of-type(9) {
         margin-top: 4vmin;
+    }
+    .boxfor3c {
+        margin: 6vmax 9vmax;
     }
 }
 
@@ -4096,7 +4114,7 @@ strong i:after {
         background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210119_gotop.png) center top no-repeat;
         margin-top: 8px;
         margin-left: -5px;
-        background-size: 40%;
+        background-size: 30%;
         position: relative;
     }
     /*右側選單-PC-hover*/
@@ -6270,8 +6288,9 @@ strong i:after {
         margin: 2vmin -2vmin;
     }
     .electro-title h2 .light {
-        top: 0;
-        left: -13%;
+        top: 5%;
+        left: 8%;
+        height: 40%;
     }
     .boxfor3c {
         width: 48%;
