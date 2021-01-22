@@ -641,11 +641,15 @@ img.n01.wow {z-index: -1;position: relative;}
     0% {
         opacity: 0;
         transform: rotate3d(0, 1, 0, 180deg);
+        -webkit-transform: rotate3d(0, 1, 0, 180deg);
         transform-origin: left;
+        -webkit-transform-origin: left;
     }
     100% {
         transform: rotate3d(0, 1, 0, 0deg);
+        -webkit-transform: rotate3d(0, 1, 0, 0deg);
         transform-origin: left;
+        -webkit-transform-origin: left;
         opacity: 1;
     }
 }
