@@ -277,6 +277,7 @@ img.n01.wow {
     .wrapper .title {width: 31%;}
     body {background-size: 131% auto;}
     .list_M .hotpromain .hotpro_price2 span {font-size: 225% !important;}
+    .acbankbox {width: 100% !important;}
 }
 @media screen and (max-width:750px){
 .moset{display:block}
@@ -615,7 +616,7 @@ img.n01.wow {z-index: -1;position: relative;}
 .list_F li .boxF_price strong i{ font-size:13px;}
 .list_F li .boxF_price strong em{ display: block; font-size: 11px;color: #8d8d8d; font-weight: lighter; text-decoration: line-through; letter-spacing: 1px; bottom: -5px; }
 .list_F li .boxF_price strong:before { display: none;}
-.list_F .boxF_price .iconF_pro{ display: block; background: url(../images/icon_pro2.png) 0 0 no-repeat;  width: 80px; height: 43px; position: absolute;  z-index: 5;  font-size: 16px; box-sizing: border-box; color: #ff2400;  line-height: 25px;text-align: left;  padding-left: 5px; background-size: 78%;top: -80px;}
+.list_F .boxF_price .iconF_pro{ display: block; background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/icon_pro2.png) 0 0 no-repeat;  width: 80px; height: 43px; position: absolute;  z-index: 5;  font-size: 16px; box-sizing: border-box; color: #ff2400;  line-height: 25px;text-align: left;  padding-left: 5px; background-size: 78%;top: -80px;}
 .list_F .boxF_price .iconF_pro span{ font-size:20px;}
 
 }
