@@ -65,7 +65,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .upbox a.btn_01:hover{background-image:url(../images/btn02.png)}
 .rightbtn{display:block;position:fixed;width:134px;height:auto;margin:368px 0 0 605px;left:50%;z-index:100;bottom:135px;text-align:center;}
 .rightbtn .actbtn{width:100%;height:auto;display:block;position:relative;background: #ffffff;padding:.2% 0;box-sizing:border-box;padding-top:5px;color: black;}
-.rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210120_stagehead.png) no-repeat;width: 215px;height: 200px;position:absolute;bottom: 146px;left: -45px;z-index: -2;filter:drop-shadow(0 4px 2px #6e6e6e);background-size: 100%;}
+.rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210120_stagehead.png) no-repeat;width: 215px;height: 200px;position:absolute;bottom: 184px;left: -45px;z-index: -2;filter:drop-shadow(0 4px 2px #6e6e6e);background-size: 100%;}
 .rightbtn .actbtn a.btn_01{width:100%;height:38px;margin:0 auto;line-height:38px;color: #1d1d1d;text-decoration:none;border-bottom: 1px solid #db6154;box-sizing:border-box;display:block;background-color: #f8ffe6;}
 .rightbtn .actbtn a.btn_01:hover{opacity:.8;transition:all .5s;-webkit-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;background: #c60505;color:white;}
 .rightbtn .actbtn a.btn_01:last-child{border-bottom:none}
