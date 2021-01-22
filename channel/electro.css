@@ -6341,9 +6341,39 @@ strong i:after {
     }
 }
 
+@media screen and (min-width: 2500px) {
+    .electro-title {
+        width: 55%;
+    }
+    .electro-title h2 {
+        margin: 10vmax -4vmax;
+    }
+    .boxfor3c {
+        margin: 9vmax -1vmax;
+    }
+    .boxfor3c p {
+        width: 75%;
+    }
+    .boxfor3c .laplop {
+        margin: 22% -30%;
+    }
+}
+
 @media screen and (min-width: 2000px) {
     form>div:nth-of-type(9) {
         margin-top: 20vmax;
+    }
+    .electro-title h2 {
+        margin: 8vmax -2vmax;
+    }
+    .boxfor3c {
+        margin: 7vmax -2vmax;
+    }
+    .boxfor3c p {
+        width: 67%;
+    }
+    .boxfor3c .laplop {
+        margin: 22% -26%;
     }
 }
 
