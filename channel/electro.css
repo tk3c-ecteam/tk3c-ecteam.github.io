@@ -4665,8 +4665,7 @@ strong i:after {
         display: block;
         width: 100%;
         margin: 0 auto;
-        overflow: hidden;
-        margin: 10% auto 16vmin;
+        margin: 10% auto 36vmin;
     }
     .wrapperMt50 {
         margin-top: 50px;
@@ -6327,7 +6326,7 @@ strong i:after {
         width: 50%;
     }
     .electro-title h2 {
-        margin: 2vmin -2vmin;
+        margin: 11vmin -21vmin;
     }
     .electro-title h2 .light {
         top: 5%;
@@ -6335,18 +6334,17 @@ strong i:after {
         height: 40%;
     }
     .boxfor3c {
-        width: 48%;
-        margin: 7vmin 0 0 -12vmin;
-        display: inline-block;
+        width: 65%;
+        margin: -34vmin 33vmin;
     }
     .boxfor3c p {
-        width: 35%;
+        width: 27%;
     }
     .boxfor3c .laplop {
-        margin: 15% -26%;
+        margin: 14% -22%;
     }
     .boxfor3c .nb {
-        margin: -3% auto;
+        margin: 2% auto;
     }
 }
 
