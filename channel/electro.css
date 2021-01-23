@@ -272,7 +272,7 @@ i {
 
 .electro-title h2 {
     position: relative;
-    margin: 6vmax 0;
+    margin: 6vmax 3vmax;
     width: 100%;
     height: auto;
 }
@@ -288,12 +288,12 @@ i {
     mix-blend-mode: screen;
     background-color: #17e0f7;
     filter: blur(20px);
-    animation: fade-in-out 1.3s ease-in-out infinite;
+    animation: fade-in-out 0.4s ease-in-out infinite;
     animation-delay: 1s;
 }
 
 .boxfor3c {
-    margin: 6vmax auto;
+    margin: 9vmax auto;
     width: 49%;
     height: 100%;
     display: inline-block;
@@ -304,19 +304,19 @@ i {
     animation: upAndDown 0.6s infinite;
     animation-duration: 1.2s;
     animation-direction: alternate;
-    margin: 3% auto;
-    width: 67%;
+    margin: 2% 15%;
+    width: 55%;
 }
 
 .boxfor3c p {
-    width: 52%;
+    width: 35%;
     display: inline-block;
     vertical-align: top;
     position: relative;
 }
 
 .boxfor3c .laplop {
-    margin: 15% -26%;
+    margin: 15% -38%;
 }
 
 
@@ -3972,10 +3972,10 @@ strong i:after {
         background-position: 0 6vmax;
     }
     .electro-title h2 {
-        margin: 4vmax 4vmax;
+        margin: 4vmax 10vmax;
     }
     .boxfor3c {
-        margin: 3vmax 2vmax;
+        margin: 8vmax 2vmax;
         width: 42%;
     }
 }
@@ -3985,13 +3985,13 @@ strong i:after {
         margin-top: 8vmax;
     }
     .electro-title h2 {
-        margin: 4vmax 6vmax;
+        margin: 4vmax 12vmax;
     }
     html {
         background-position: 0 7vmax;
     }
     .boxfor3c {
-        margin: 3vmax 4vmax;
+        margin: 8vmax 4vmax;
         width: 38%;
     }
 }
@@ -4001,13 +4001,13 @@ strong i:after {
         background-position: 0 8vmax;
     }
     .electro-title {
-        width: 40%;
+        width: 35%;
     }
     .electro-title h2 {
-        margin: 5vmax 12vmax;
+        margin: 5vmax 18vmax;
     }
     .boxfor3c {
-        margin: 4vmax 10vmax;
+        margin: 4vmax 14vmax;
         width: 33%;
     }
     .boxfor3c .nb {
@@ -4017,7 +4017,7 @@ strong i:after {
         margin: 15% -23%;
     }
     .boxfor3c p {
-        width: 52%;
+        width: 40%;
     }
 }
 
