@@ -293,30 +293,27 @@ i {
 }
 
 .boxfor3c {
-    margin: 9vmax auto;
-    width: 49%;
+    margin: -16vmax 32vmax;
+    width: 60%;
     height: 100%;
-    display: inline-block;
-    vertical-align: top;
 }
 
 .boxfor3c .nb {
     animation: upAndDown 0.6s infinite;
     animation-duration: 1.2s;
     animation-direction: alternate;
-    margin: 2% 15%;
-    width: 55%;
+    width: 50%;
 }
 
 .boxfor3c p {
-    width: 35%;
+    width: 32%;
     display: inline-block;
     vertical-align: top;
     position: relative;
 }
 
 .boxfor3c .laplop {
-    margin: 15% -38%;
+    margin: 15% -21%;
 }
 
 
@@ -3951,16 +3948,16 @@ strong i:after {
         margin: 8vmax -2vmax;
     }
     .boxfor3c {
-        margin: 7vmax -2vmax;
+        margin: -14vmax 31vmax;
     }
     .boxfor3c p {
-        width: 65%;
+        width: 33%;
     }
     .boxfor3c .nb {
         margin: 8% auto;
     }
     .boxfor3c .laplop {
-        margin: 22% -26%;
+        margin: 25% -26%;
     }
 }
 
@@ -3975,8 +3972,8 @@ strong i:after {
         margin: 4vmax 10vmax;
     }
     .boxfor3c {
-        margin: 8vmax 2vmax;
-        width: 42%;
+        margin: -20vmax 44vmax;
+        width: 50%;
     }
 }
 
@@ -3991,8 +3988,14 @@ strong i:after {
         background-position: 0 7vmax;
     }
     .boxfor3c {
-        margin: 8vmax 4vmax;
-        width: 38%;
+        margin: -22vmax 44vmax;
+        width: 46%;
+    }
+    .electro-title {
+        width: 43%;
+    }
+    .boxfor3c .nb {
+        width: 47%;
     }
 }
 
@@ -4007,17 +4010,18 @@ strong i:after {
         margin: 5vmax 18vmax;
     }
     .boxfor3c {
-        margin: 4vmax 14vmax;
-        width: 33%;
+        margin:-25vmax 50vmax;
+        width: 40%;
     }
     .boxfor3c .nb {
-        margin: 5% auto;
+        margin: 2% auto;
+        width: 45%;
     }
     .boxfor3c .laplop {
         margin: 15% -23%;
     }
     .boxfor3c p {
-        width: 40%;
+        width: 30%;
     }
 }
 
@@ -4045,7 +4049,20 @@ strong i:after {
         margin-top: 4vmin;
     }
     .boxfor3c {
-        margin: 6vmax 9vmax;
+        margin: -23vmax 43vmax;
+        width: 50%;
+    }
+    .electro-title h2 {
+        margin: 5vmax 14vmax;
+    }
+    .boxfor3c .nb {
+        width: 38%;
+    }
+    .boxfor3c .laplop {
+        margin: 15% -18%;
+    }
+    .boxfor3c p {
+        width: 25%;
     }
 }
 
@@ -4067,6 +4084,9 @@ strong i:after {
     .protitle {
         height: 133px;
         font-size: 3em;
+    }
+    .boxfor3c {
+        margin: -34vmax 43vmax;
     }
 }
 
@@ -6317,12 +6337,16 @@ strong i:after {
     .boxfor3c {
         width: 48%;
         margin: 7vmin 0 0 -12vmin;
+        display: inline-block;
     }
     .boxfor3c p {
-        width: 51%;
+        width: 35%;
     }
     .boxfor3c .laplop {
-        margin: 0 -23%;
+        margin: 15% -26%;
+    }
+    .boxfor3c .nb {
+        margin: -3% auto;
     }
 }
 
@@ -6371,13 +6395,14 @@ strong i:after {
         margin: 10vmax -4vmax;
     }
     .boxfor3c {
-        margin: 9vmax -1vmax;
+        margin: -15vmax 26vmax;
+        width: 54%;
     }
     .boxfor3c .nb {
         width: 75%;
     }
     .boxfor3c .laplop {
-        margin: 22% -30%;
+        margin: 31% -36%;
     }
 }
 
