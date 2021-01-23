@@ -6334,17 +6334,17 @@ strong i:after {
         height: 40%;
     }
     .boxfor3c {
-        width: 65%;
-        margin: -34vmin 33vmin;
+        width: 75%;
+        margin: -37vmin 30vmin;
     }
     .boxfor3c p {
         width: 27%;
     }
     .boxfor3c .laplop {
-        margin: 14% -22%;
+        margin: 14% -18%;
     }
     .boxfor3c .nb {
-        margin: 2% auto;
+        margin: 0 auto;
     }
 }
 
