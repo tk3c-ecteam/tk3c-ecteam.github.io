@@ -3949,13 +3949,13 @@ strong i:after {
         margin: 8vmax -2vmax;
     }
     .boxfor3c {
-        margin: -14vmax 31vmax;
+        margin: -13vmax 31vmax;
     }
     .boxfor3c p {
         width: 33%;
     }
     .boxfor3c .nb {
-        margin: 8% auto;
+        margin: 0% auto;
     }
     .boxfor3c .laplop {
         margin: 25% -26%;
@@ -6394,7 +6394,7 @@ strong i:after {
         margin: 10vmax -4vmax;
     }
     .boxfor3c {
-        margin: -15vmax 26vmax;
+        margin: -11vmax 26vmax;
         width: 54%;
     }
     .boxfor3c .nb {
