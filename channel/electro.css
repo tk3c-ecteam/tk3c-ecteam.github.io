@@ -288,12 +288,12 @@ i {
     mix-blend-mode: screen;
     background-color: #17e0f7;
     filter: blur(20px);
-    animation: fade-in-out 0.4s ease-in-out infinite;
+    animation: fade-in-out 1.5s ease-in-out infinite;
     animation-delay: 1s;
 }
 
 .boxfor3c {
-    margin: -16vmax 32vmax;
+    margin: -13vmax 32vmax;
     width: 60%;
     height: 100%;
 }
@@ -303,6 +303,7 @@ i {
     animation-duration: 1.2s;
     animation-direction: alternate;
     width: 50%;
+    margin: -10% auto;
 }
 
 .boxfor3c p {
@@ -3972,7 +3973,7 @@ strong i:after {
         margin: 4vmax 10vmax;
     }
     .boxfor3c {
-        margin: -20vmax 44vmax;
+        margin: -19vmax 44vmax;
         width: 50%;
     }
 }
@@ -3988,7 +3989,7 @@ strong i:after {
         background-position: 0 7vmax;
     }
     .boxfor3c {
-        margin: -22vmax 44vmax;
+        margin: -19vmax 44vmax;
         width: 46%;
     }
     .electro-title {
@@ -4010,11 +4011,11 @@ strong i:after {
         margin: 5vmax 18vmax;
     }
     .boxfor3c {
-        margin:-25vmax 50vmax;
-        width: 40%;
+        margin: -25vmax 48vmax;
+        /* width: 40%; */
     }
     .boxfor3c .nb {
-        margin: 2% auto;
+        margin: -4% auto;
         width: 45%;
     }
     .boxfor3c .laplop {
@@ -4086,7 +4087,7 @@ strong i:after {
         font-size: 3em;
     }
     .boxfor3c {
-        margin: -34vmax 43vmax;
+        margin: -32vmax 43vmax;
     }
 }
 
@@ -6335,7 +6336,7 @@ strong i:after {
     }
     .boxfor3c {
         width: 75%;
-        margin: -37vmin 30vmin;
+        margin: -36vmin 30vmin;
     }
     .boxfor3c p {
         width: 27%;
@@ -6344,7 +6345,7 @@ strong i:after {
         margin: 14% -18%;
     }
     .boxfor3c .nb {
-        margin: 0 auto;
+        margin: -7% auto;
     }
 }
 
