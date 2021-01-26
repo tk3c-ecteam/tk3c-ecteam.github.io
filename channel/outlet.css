@@ -28,6 +28,10 @@ icon_number .bg05{background:#e0136f;}
 @media screen and (max-width: 1600px) {
     .pa07 {background-position: 7vmax 1vmax;}
 }
+@media screen and (max-width: 1025px) {
+    .pa07 {line-height: 218px;}
+    .pa07 > span {padding-right: 204px;}
+}
 @media screen and (min-width:751px){body{margin:0px;padding:0;width:100%;font-family:Century Gothic,"微軟正黑體";/* background: url(../images/kv_20200924.jpg)no-repeat top 100px center,url(../images/bg_20200810.jpg)repeat top 20px center !important; */background-size:100%;background-color: #e32631;}
 form#form1{overflow:hidden;margin-top: 19%;}
 .wrapper{display:block;width:1144px;margin:11.5% auto 0;position:relative;}
@@ -250,7 +254,7 @@ select option{background:#08b288;}
 .wrapper{display:block;width:100%;margin:0 auto;position:relative;}
 form#form1{overflow:hidden;margin-top: -3%;}
 .wrapperMt50{margin-top:50px;}
-body{margin:0px;padding:0;width:103%;height:100%;font-family:Century Gothic,"微軟正黑體";background:#e32631;max-width:1140px;}
+body{margin:0px;padding:0;width:103%;height:100%;font-family:Century Gothic,"微軟正黑體";background:#e32631;max-width:100%;}
 /*上方橫幅*/
  .head_banner{display:block;width:100%;}
 .head_banner a{display:block;width:100%;height:auto;margin:0 auto;}
@@ -766,7 +770,7 @@ li.imgs img{height:250px;}
 /*強打2品*/
  .list{width:100%;float:left;padding:0;position:relative;display:block;border-radius:0px 0px 20px 20px;-webkit-border-radius:0px 0px 20px 20px;-moz-border-radius:0px 0px 20px 20px;/* top:10px;*/
 }
-.hotpro_wrapper{width:98%;height:auto;display:block;position:relative;overflow:hidden;margin:0 5px;}
+.hotpro_wrapper{width:98%;height:auto;display:block;position:relative;overflow:hidden;margin:10px 5px;}
 .hotproboxL{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin:0 auto 0 1%;}
 .hotproboxR{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin:2% 1% 0 1%;}
 .hotpro_pro{width:97%;height:210px;margin:1% auto;}
@@ -775,7 +779,7 @@ li.imgs img{height:250px;}
 /*文字區*/
  .hotpromain{width:45%;height:200px;float:right;overflow:hidden;}
 .hotpro_sale{width:98%;height:30px;font-size:12px;color:#F00;line-height:15px;text-align:left;overflow:hidden;display:block;margin-bottom:0px;}
-.hotpro_name{width:98%;height:40px;font-size:15px;color:#333;line-height:19px;text-align:left;overflow:hidden;display:block;margin-bottom:5px;}
+.hotpro_name{width:98%;height:40px;font-size:12px;color:#333;line-height:19px;text-align:left;overflow:hidden;display:block;margin-bottom:5px;}
 .hotpro_info{width:98%;height:45px;font-size:12px;color:#7e7e7e;line-height:15px;text-align:left;overflow:hidden;display:block;margin:0;}
 .hotpro_price1{display:none;}
 .hotpro_price2{width:100%;height:30px;font-size:13px;color:#C71F5C;line-height:30px;text-align:left;overflow:hidden;display:block;float:left;margin-bottom:5px;}
