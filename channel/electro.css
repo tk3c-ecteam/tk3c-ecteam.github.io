@@ -4050,7 +4050,7 @@ strong i:after {
         margin-top: 4vmin;
     }
     .boxfor3c {
-        margin: -23vmax 43vmax;
+        margin: -20vmax 37vmax;
         width: 50%;
     }
     .electro-title h2 {
@@ -4058,9 +4058,10 @@ strong i:after {
     }
     .boxfor3c .nb {
         width: 38%;
+        margin: -4% 8%;
     }
     .boxfor3c .laplop {
-        margin: 15% -18%;
+        margin: 15% -22%;
     }
     .boxfor3c p {
         width: 25%;
@@ -4087,7 +4088,13 @@ strong i:after {
         font-size: 3em;
     }
     .boxfor3c {
-        margin: -32vmax 43vmax;
+        margin: -30vmax 43vmin;
+    }
+    .boxfor3c .laplop {
+        margin: 15% -39%;
+    }
+    .boxfor3c .nb {
+        margin: -4% 23%;
     }
 }
 
@@ -6336,16 +6343,16 @@ strong i:after {
     }
     .boxfor3c {
         width: 75%;
-        margin: -36vmin 30vmin;
+        margin: -34vmin 25vmin;
     }
     .boxfor3c p {
-        width: 27%;
+        width: 25%;
     }
     .boxfor3c .laplop {
-        margin: 14% -18%;
+        margin: 14% -21%;
     }
     .boxfor3c .nb {
-        margin: -7% auto;
+        margin: -6% 3%;
     }
 }
 
