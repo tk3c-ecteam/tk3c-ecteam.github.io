@@ -28,10 +28,15 @@ icon_number .bg05{background:#e0136f;}
 .copyR{background:#000;color:#FFF;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:2em;}
 .copyR:after{content:"個人資料保護條款:1.本活動參與人員知悉並同意燦坤實業股份有限公司及關係企業基於行銷活動目的，得蒐集於本頁面記載之個人資料(e-mail、電話等)，供前述企業合法且合理方式為必要之處理及應用。 2.本活動人員得依個人資料保護法第三條第三款之規定，以書面、電話、電子文件或其他適當方式向前述企業請求查詢、閱覽、製給複製本、補充、更正、停止處理及利用、刪除等權利。聯絡服務專線：0800-095-885。";font-size:80%;color:#A5A5A5;display:block;width:80%;margin:0.5% auto 0 auto;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+@media screen and (min-width: 2000px) {
+    .pc-animate iframe {width: 100%;}
+    form#form1 {margin-top: 0;}
+}
 @media screen and (max-width: 1600px) {
     .pa07 {background-position: 7vmax 1vmax;}
     .pc-animate {margin: 0 -10vmax;}
     .pa07 > span {padding-right: 190px;}
+    form#form1 {margin-top: -1%;}
 }
 @media screen and (max-width: 1400px) {
     .pc-animate {margin: 0 -17vmax;}
@@ -262,7 +267,7 @@ select option{background:#08b288;}
 }
 .store_list{padding:1em;font-size:14px;text-align:center;line-height:2em;}
 .store_list h4{font-size:1.1rem;color:#fff;}
-.store_list li{width:25%;float:left;padding-bottom:1em;color:#fcedff;}
+.store_list li{width: 55%;float:left;padding-bottom:1em;color:#fcedff;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){#kuai3header{width:100% !important;margin:0px auto;z-index:9999;position:fixed;}
 #kuai3header .words{width:100% !important;}
@@ -270,7 +275,7 @@ select option{background:#08b288;}
 .m_version_non{display:none;}
 .wrapper{display:block;width:100%;margin:0 auto;position:relative;}
 form#form1{overflow:hidden;margin-top: -3%;}
-.pc-animate{margin: -43vmin auto -100vmin;}
+.pc-animate{margin: -43vmin auto -101vmin;}
 .pc-animate iframe {width: 175%;margin: 0 -37vmin;}
 .wrapperMt50{margin-top:50px;}
 body{margin:0px;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background:#e32631;max-width:1140px;}
@@ -292,13 +297,21 @@ select option{background:#08b288;}
 /*清除ie的預設選擇框樣式清除，隱藏下拉箭頭*/
  select::-ms-expand{display:none;}
 /*特殊內容*/
- .special_box{display:block;margin:0 auto;width:100%;height:auto;background:#d23783;/* border:15px solid #fff208;*/
- box-sizing:border-box;}
-.special_box ul{display:block;margin:0 auto;width:100%;box-sizing:border-box;padding:15px;margin-bottom:100px;}
-.special_box ul li{list-style:none;display:block;background:#FFF;border:5px solid #d3933c;margin-bottom:15px;position:relative;}
-.special_box ul li:before{content:"\798f\5229\54c1\512a\8cea\63a8\85a6";display:block;width:100%;z-index:5;height:86px;text-align:center;background:url(https://events.tk3c.com/events_net/events_net/201205benefits/images/20210125_bar_m.png) no-repeat center center;background-size:100%;font-size: 18px;font-weight: bold;}
-a.spcial_boxS{display:block;width:100%;height:280px;box-sizing:border-box;padding:2%;text-align:center;}
-a.spcial_boxS .item_img{width:125px;height:125px;float:none;margin:6px auto;}
+ .special_box{
+ display:block;
+ margin:0 auto;
+ width:100%;
+ height:auto;
+ background: #228fea;
+ /* border:15px solid #fff208;*/
+ box-sizing:border-box;
+ }
+.special_box ul{display:block;margin:0 auto;width:100%;box-sizing:border-box;padding: 1%;margin-bottom:100px;}
+.special_box ul:last-child {margin-bottom: 0;}
+.special_box ul li{list-style:none;display:block;background:#FFF;border: 5px solid #228fea;margin-bottom: 110px;position:relative;margin-top: 105px;}
+.special_box ul li:before{content:"";display:block;width:100%;z-index:5;height:86px;text-align:center;background: url(https://events.tk3c.com/events_net/events_net/201205benefits/images/20210125_bar_m.png) no-repeat center center;background-size: 100%;position: absolute;top: -26%;}
+a.spcial_boxS{display:block;width:100%;height: 400px;box-sizing:border-box;padding: 1%;text-align:center;}
+a.spcial_boxS .item_img{width: 230px;height: 230px;float:none;margin:6px auto;}
 a.spcial_boxS .item_img img{max-width:100%;height:auto;}
 a.spcial_boxS .item_word{display:block;float:none;width:100%;}
 a.spcial_boxS .item_word h4{display:block;height:20px;overflow:hidden;color:#f67b20;font-size:14px;}
@@ -502,7 +515,7 @@ a.spcial_boxS:hover .item_img{display:block;}
 .close img{width:35px;height:35px;}
 .store_list{padding:0;font-size:12px;text-align:center;line-height:2em;}
 .store_list h4{font-size:1rem;color:#fff;}
-.store_list li{width:47%;float:left;padding:0.5em;color:#fcedff;margin: 3% auto;}
+.store_list li{/* width:100%; */float:left;padding:0.5em;color:#fcedff;margin: 3% -5%;/* vertical-align: top; */font-size: 12px;}
 }
 /* IE才能解析的選取器*/
 @media screen\0,screen\9{body{margin:0px;padding:0;width:100%;font-family:Century Gothic,"微軟正黑體";background:url(../images/bg_head.jpg) center 45px repeat-x;}
@@ -782,16 +795,15 @@ select option{background:#08b288;}
 .box_s li.prosold_m{display:none;}
 li.prosold img{width:100%;height:346px;padding-bottom:2px;}
 li.imgs img{height:250px;}
-@media screen and (min-width:320px) and (max-width:750px){/*banner圖*/
+@media screen and (min-width: 320px) and (max-width: 750px){/*banner圖*/
  .ver_banner{display:none;}
 .ver_banner_m{display:block;position:relative;float:left;}
 .ver_banner_m img{max-width:100%;}
 /*強打2品*/
- .list{width:100%;float:left;padding:0;position:relative;display:block;border-radius:0px 0px 20px 20px;-webkit-border-radius:0px 0px 20px 20px;-moz-border-radius:0px 0px 20px 20px;/* top:10px;*/
-}
+ .list{width:100%;float:left;padding:0;position:relative;display:block;border-radius:0px 0px 20px 20px;-webkit-border-radius:0px 0px 20px 20px;-moz-border-radius:0px 0px 20px 20px;/* top:10px;*/}
 .hotpro_wrapper{width:98%;height:auto;display:block;position:relative;overflow:hidden;margin:10px 5px;}
-.hotproboxL{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin:0 auto 0 1.2%;}
-.hotproboxR{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin:2% 1% 0 1.2%;}
+.hotproboxL{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin: 0 auto 0 1.2%;}
+.hotproboxR{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin: 2% 1% 0 1.2%;}
 .hotpro_pro{width:97%;height:210px;margin:1% auto;}
 .hotpro_pic{width:50%;height:200px;overflow:hidden;display:block;float:left;margin:6px;}
 .hotpro_pic img{width:150px;height:150px;}
@@ -808,7 +820,7 @@ li.imgs img{height:250px;}
 .buybtn:hover{background:#FF0;color:#000;box-shadow:3px 3px 2px rgba(20%,20%,40%,0.5);}
 /*特殊節日 商品區塊*/
  .list_special{padding:5px;margin-bottom:2%;box-sizing:border-box;}
-.list_special ul li{width:47%;position:relative;text-align:center;margin:5px 7px 0 5px;background:#FFF;float:left;box-sizing:border-box;transition:none;}
+.list_special ul li{width: 47%;position:relative;text-align:center;margin: 5px 4px 0 5px;background:#FFF;float:left;box-sizing:border-box;transition:none;}
 .list_special .item_img{width:98%;margin:1% 1% 10px 1%;background:#fff;}
 .list_special .item_img img{width:120px;height:120px;margin:5px auto;display:block;}
 .list_special .box_price .icon_pro{top:-110px;}
@@ -829,19 +841,14 @@ li.prosold_m img{width:100%;height:320px;padding:2% 0;}
 @media screen and (max-width: 376px) {
     .pa07 > span {line-height: 126px;}
     .pc-animate {margin: -49vmin auto -110vmin;}
-    .list_special ul li {margin:5px 4px 0 6px;}
-    .store_list li{margin: 3% -3%;}
 }
 
 @media screen and (max-width: 361px) {
     .pa07 > span {line-height: 125px;}
-    .pc-animate {margin: -54vmin auto -110vmin;}
-    .store_list li{margin: 3% -4%;width: 53%;}
+    .pc-animate {margin: -54vmin auto -111vmin;}
 }
 
 @media screen and (max-width: 320px) {
     .pa07 > span {line-height: 114px;font-size: 85%;}
-    .pc-animate {margin: -64vmin auto -120vmin;}
-    .list_special ul li {margin: 5px 4px 0 5px;}
-    .store_list li{margin: 3% -5%;width: 55%;}
+    .pc-animate {margin: -64vmin auto -121vmin;}
 }
