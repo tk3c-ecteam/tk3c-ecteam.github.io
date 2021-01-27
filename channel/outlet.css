@@ -31,7 +31,6 @@ icon_number .bg05{background:#e0136f;}
 @media screen and (min-width: 2000px) {
     .pc-animate iframe {width: 100%;}
     form#form1 {margin-top: 0;}
-    .store_list li {width: 50%}
 }
 @media screen and (max-width: 1600px) {
     .pa07 {background-position: 7vmax 1vmax;}
@@ -267,15 +266,15 @@ select option{background:#08b288;}
 }
 .store_list{padding:1em;font-size:14px;text-align:center;line-height:2em;}
 .store_list h4{font-size:1.1rem;color:#fff;}
-.store_list li{width: 48%;float:left;padding-bottom:1em;color:#fcedff;}
+.store_list li{width: 25%;float:left;padding-bottom:1em;color:#fcedff;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){#kuai3header{width:100% !important;margin:0px auto;z-index:9999;position:fixed;}
 #kuai3header .words{width:100% !important;}
 #kuai3header .words .font{display:none !important;}
-.m_version_non{display:none;}
+.m_version_non,.pc_version_non{display:none;}
 .wrapper{display:block;width:100%;margin:0 auto;position:relative;}
 form#form1{overflow:hidden;margin-top: -3%;}
-.pc-animate{margin: -43vmin auto -101vmin;}
+.pc-animate{margin: -43vmin auto -42vmin;}
 .pc-animate iframe {width: 175%;margin: 0 -37vmin;}
 .wrapperMt50{margin-top:50px;}
 body{margin:0px;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background:#e32631;max-width:1140px;}
@@ -842,20 +841,21 @@ li.prosold_m img{width:100%;height:320px;padding:2% 0;}
 @media screen and (max-width: 376px) {
     .pa07 {height: 205px;}
     .pa07 > span {line-height: 126px;}
-    .pc-animate {margin: -49vmin auto -110vmin;}
+    .pc-animate {margin: -49vmin auto -50vmin;}
     .store_list li {width: 56%;}
+    form#form1 {margin-top: -8%;}
 }
 
 @media screen and (max-width: 361px) {
     .pa07 > span {line-height: 125px;font-size: 20px;}
-    .pc-animate {margin: -54vmin auto -111vmin;}
+    .pc-animate {margin: -54vmin auto -54vmin;}
     .list_special ul li {margin: 5px 5px 0 5px;}
     .special_box ul li:after {font-size: 20px;}
 }
 
 @media screen and (max-width: 320px) {
     .pa07 > span {line-height: 114px;font-size: 18px;}
-    .pc-animate {margin: -64vmin auto -121vmin;}
+    .pc-animate {margin: -64vmin auto -65vmin;}
     .list_special ul li {margin: 5px 4px 0 5px;}
     .special_box ul li:after {font-size: 18px;}
     .store_list li {width: 100%; margin: 0 auto;}
