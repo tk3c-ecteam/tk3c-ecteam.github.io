@@ -296,9 +296,9 @@ select option{background:#08b288;}
  box-sizing:border-box;}
 .special_box ul{display:block;margin:0 auto;width:100%;box-sizing:border-box;padding:15px;margin-bottom:100px;}
 .special_box ul li{list-style:none;display:block;background:#FFF;border:5px solid #d3933c;margin-bottom:15px;position:relative;}
-.special_box ul li:before{content:"";display:block;width:100%;z-index:5;height:86px;text-align:center;background:url(https://events.tk3c.com/events_net/events_net/product/201205benefits/images/t2_m_0518.png) no-repeat center center;background-size:60%;}
+.special_box ul li:before{content:"\798f\5229\54c1\512a\8cea\63a8\85a6";display:block;width:100%;z-index:5;height:86px;text-align:center;background:url(https://events.tk3c.com/events_net/events_net/201205benefits/images/20210125_bar_m.png) no-repeat center center;background-size:100%;font-size: 18px;font-weight: bold;}
 a.spcial_boxS{display:block;width:100%;height:280px;box-sizing:border-box;padding:2%;text-align:center;}
-a.spcial_boxS .item_img{width:120px;height:120px;float:none;margin:6px auto;}
+a.spcial_boxS .item_img{width:125px;height:125px;float:none;margin:6px auto;}
 a.spcial_boxS .item_img img{max-width:100%;height:auto;}
 a.spcial_boxS .item_word{display:block;float:none;width:100%;}
 a.spcial_boxS .item_word h4{display:block;height:20px;overflow:hidden;color:#f67b20;font-size:14px;}
@@ -502,7 +502,7 @@ a.spcial_boxS:hover .item_img{display:block;}
 .close img{width:35px;height:35px;}
 .store_list{padding:0;font-size:12px;text-align:center;line-height:2em;}
 .store_list h4{font-size:1rem;color:#fff;}
-.store_list li{width:100%;float:left;padding:0.5em;color:#fcedff}
+.store_list li{width:47%;float:left;padding:0.5em;color:#fcedff;margin: 3% auto;}
 }
 /* IE才能解析的選取器*/
 @media screen\0,screen\9{body{margin:0px;padding:0;width:100%;font-family:Century Gothic,"微軟正黑體";background:url(../images/bg_head.jpg) center 45px repeat-x;}
@@ -790,8 +790,8 @@ li.imgs img{height:250px;}
  .list{width:100%;float:left;padding:0;position:relative;display:block;border-radius:0px 0px 20px 20px;-webkit-border-radius:0px 0px 20px 20px;-moz-border-radius:0px 0px 20px 20px;/* top:10px;*/
 }
 .hotpro_wrapper{width:98%;height:auto;display:block;position:relative;overflow:hidden;margin:10px 5px;}
-.hotproboxL{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin:0 auto 0 1%;}
-.hotproboxR{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin:2% 1% 0 1%;}
+.hotproboxL{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin:0 auto 0 1.2%;}
+.hotproboxR{width:97%;height:215px;float:left;background-color:#fff;border-radius:5px;margin:2% 1% 0 1.2%;}
 .hotpro_pro{width:97%;height:210px;margin:1% auto;}
 .hotpro_pic{width:50%;height:200px;overflow:hidden;display:block;float:left;margin:6px;}
 .hotpro_pic img{width:150px;height:150px;}
@@ -808,7 +808,7 @@ li.imgs img{height:250px;}
 .buybtn:hover{background:#FF0;color:#000;box-shadow:3px 3px 2px rgba(20%,20%,40%,0.5);}
 /*特殊節日 商品區塊*/
  .list_special{padding:5px;margin-bottom:2%;box-sizing:border-box;}
-.list_special ul li{width:48%;position:relative;text-align:center;margin:5px 3px;background:#FFF;float:left;box-sizing:border-box;transition:none;}
+.list_special ul li{width:47%;position:relative;text-align:center;margin:5px 7px 0 5px;background:#FFF;float:left;box-sizing:border-box;transition:none;}
 .list_special .item_img{width:98%;margin:1% 1% 10px 1%;background:#fff;}
 .list_special .item_img img{width:120px;height:120px;margin:5px auto;display:block;}
 .list_special .box_price .icon_pro{top:-110px;}
@@ -829,14 +829,19 @@ li.prosold_m img{width:100%;height:320px;padding:2% 0;}
 @media screen and (max-width: 376px) {
     .pa07 > span {line-height: 126px;}
     .pc-animate {margin: -49vmin auto -110vmin;}
+    .list_special ul li {margin:5px 4px 0 6px;}
+    .store_list li{margin: 3% -3%;}
 }
 
 @media screen and (max-width: 361px) {
     .pa07 > span {line-height: 125px;}
     .pc-animate {margin: -54vmin auto -110vmin;}
+    .store_list li{margin: 3% -4%;width: 53%;}
 }
 
 @media screen and (max-width: 320px) {
     .pa07 > span {line-height: 114px;font-size: 85%;}
     .pc-animate {margin: -64vmin auto -120vmin;}
+    .list_special ul li {margin: 5px 4px 0 5px;}
+    .store_list li{margin: 3% -5%;width: 55%;}
 }
