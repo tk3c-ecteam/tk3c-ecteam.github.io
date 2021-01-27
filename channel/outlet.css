@@ -857,4 +857,5 @@ li.prosold_m img{width:100%;height:320px;padding:2% 0;}
     .pc-animate {margin: -64vmin auto -121vmin;}
     .list_special ul li {margin: 5px 4px 0 5px;}
     .special_box ul li:after {font-size: 18px;}
+    .store_list li {width: 100%; margin: 0 auto;}
 }
