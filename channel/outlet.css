@@ -31,7 +31,7 @@ icon_number .bg05{background:#e0136f;}
 @media screen and (min-width: 2000px) {
     .pc-animate iframe {width: 100%;}
     form#form1 {margin-top: 0;}
-    .store_list li {width: 50%;}
+    .store_list li {width: 50%}
 }
 @media screen and (max-width: 1600px) {
     .pa07 {background-position: 7vmax 1vmax;}
@@ -267,7 +267,7 @@ select option{background:#08b288;}
 }
 .store_list{padding:1em;font-size:14px;text-align:center;line-height:2em;}
 .store_list h4{font-size:1.1rem;color:#fff;}
-.store_list li{width: 57%;float:left;padding-bottom:1em;color:#fcedff;}
+.store_list li{width: 48%;float:left;padding-bottom:1em;color:#fcedff;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){#kuai3header{width:100% !important;margin:0px auto;z-index:9999;position:fixed;}
 #kuai3header .words{width:100% !important;}
@@ -516,7 +516,7 @@ a.spcial_boxS:hover .item_img{display:block;}
 .close img{width:35px;height:35px;}
 .store_list{padding:0;font-size:12px;text-align:center;line-height:2em;}
 .store_list h4{font-size:1rem;color:#fff;}
-.store_list li{/* width:100%; */float:left;padding:0.5em;color:#fcedff;margin: 3% -5%;/* vertical-align: top; */font-size: 12px;}
+.store_list li{width:57%;float:left;padding:0.5em;color:#fcedff;margin: 3% -5%;/* vertical-align: top; */font-size: 12px;}
 }
 /* IE才能解析的選取器*/
 @media screen\0,screen\9{body{margin:0px;padding:0;width:100%;font-family:Century Gothic,"微軟正黑體";background:url(../images/bg_head.jpg) center 45px repeat-x;}
