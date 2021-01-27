@@ -31,6 +31,7 @@ em,i{font-style:normal;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microsoft JhengHei,"Apple LiGothic Medium";}
 .wrapper{display:block;width:1144px;HEIGHT: 100%;margin: 0 auto;position:relative;TOP: -495PX;}
+body br {display: none;}
 /*主視覺*/
 .title{height:626px;margin:0px auto;position:relative;overflow:hidden;}
 .title .light {width: 50%;height: 45%;display: block;margin: 5vmax 16vmax;}
@@ -142,7 +143,7 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 html{background-position: 0vmax 6vmax;}
 .wrapper{margin:2vmax auto 0;top: -540px;}
 }
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1440px) {
 html{background-position:0vmax 7vmax;}
 .wrapper{margin:-1vmax auto 0;top: -385px;}
 .bg_color > .wrapper > div[id]{margin-top:-0.5%;}
