@@ -30,18 +30,17 @@ em,i{font-style:normal;}
 .copyR{background:#000;color:#FFF;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microsoft JhengHei,"Apple LiGothic Medium";}
-.wrapper{display:block;width:1144px;margin:0 auto;position:relative;}
+.wrapper{display:block;width:1144px;HEIGHT: 100%;margin: 0 auto;position:relative;TOP: -495PX;}
 /*主視覺*/
 .title{height:626px;margin:0px auto;position:relative;overflow:hidden;}
-.title:before {content: '';background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_light.png) no-repeat;position: absolute;top: 14%;left:28%;width: 50%;height: 50%;animation: small-light ease-in-out 0.5s infinite alternate;mix-blend-mode: screen;background-size: 100%;}
 .title .light {width: 50%;height: 45%;display: block;margin: 5vmax 16vmax;}
 .title .arrow{display:block;background:url(../images/title_2.png) 0 0 no-repeat;width:1142px;height:553px;}
 .title .title_word{display:none;background:url(../images/salebox_0518.png) 40px 10px no-repeat;width:1100px;height:600px;z-index:1;position:absolute;top:6px;right:-655px;background-size:35%}
 /*商品橫幅*/
 /*品分類*/
-.bg_color{margin-top:6px;background-color: #faa3a9;/* background-size: cover; */}
-.protitle{position:relative;width:100%;height: 135px;text-align:center;display:block;overflow:hidden;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_bar.png) no-repeat;background-size: 100%;}
-.protitle b{color: #513e3d;font-size: 2em;text-align:center;line-height: 2.2em;}
+.bg_color{margin-top: 25%;background-color: #fbb0b5;background-size: cover;position: relative;}
+.protitle{position:relative;width:100%;height: 135px;text-align:center;display:block;overflow:hidden;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_bar.png) no-repeat;background-size: 100%;/* MARGIN: -22VMAX AUTO 0; */}
+.protitle b{color: #fff;font-size: 2em;text-align:center;line-height: 2.2em;}
 .protitle i{display:block;color:#f0d17b;font-size:2em;text-align:center;line-height:5em}
 /******第一區塊******/
 .list{width:97.15%;float:left;padding:1.45%;margin-bottom:4%;position:relative;display:block;border-radius:0px 0px 20px 20px;-webkit-border-radius:0px 0px 20px 20px;-moz-border-radius:0px 0px 20px 20px;}
@@ -123,14 +122,14 @@ a.more:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.2
 a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.2em);}
 /*右側選單-PC*/
 .rightbtn{position:fixed;width:100%;height:auto;margin:368px 0px 0px 577px;left:50%;z-index:100;bottom:100px;text-align:center;padding-top:8.5%;padding-left:20px;}
-.rightbtn .actbtn{width:150px;height:auto;display:block;position:relative;border-radius:0 0 10px 10px;padding-bottom:10px;margin-left:3px;margin-top:-50px;}
-.rightbtn .actbtn:before{content:'';position:absolute;display:block;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_stagehead.png) no-repeat;background-size: 105%;width:100%;height: 150px;z-index:-1;top: -89px;left: -8px;}
-.rightbtn .actbtn a .link1{height:40px;margin:2% auto;line-height:43px;background: rgb(237 91 125);color:#000;text-decoration:none;box-sizing:border-box;overflow:hidden;text-align:center;border:none;font-size:15px;}
-.rightbtn .actbtn a:last-child::after{content:'';width:100%;height:98px;display:block;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_stagetop.png) no-repeat -15px 15px;mix-blend-mode:screen;background-size: 120%;}
+.rightbtn .actbtn{width: 230px;height:auto;display:block;position:relative;border-radius:0 0 10px 10px;padding-bottom:10px;margin-left:3px;margin-top:-50px;}
+.rightbtn .actbtn:before{content:'';position:absolute;display:block;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_stagehead.png) no-repeat;/* background-size: 136%; */width:100%;height: 165px;z-index:-1;top: -129px;left: -4px;background-size: 100%;}
+.rightbtn .actbtn a .link1{height:40px;margin:2% auto;line-height:43px;background: rgb(255 219 227);color: #000;text-decoration:none;box-sizing:border-box;overflow:hidden;text-align:center;border:none;font-size:15px;WIDTH: 150PX;}
+.rightbtn .actbtn a:last-child::after{content:'';width:100%;height:98px;display:block;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_stagetop.png) no-repeat -10px 15px;mix-blend-mode:screen;background-size: 105%;}
 .rightbtn .actbtn a .link2{display:none;}
 .rightbtn .actbtn .top{display:block;width:134px;height:86px;background:url(../images/gotop_0311_.png) 0 0 no-repeat;}
 /*右側選單-PC-hover*/
- .rightbtn .actbtn a .link1:hover{transition:all 0.5s;-webkit-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;background-color: #513e3d;color:#ffffff;}
+ .rightbtn .actbtn a .link1:hover{transition:all 0.5s;-webkit-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;background-color: #ee5d7c;color:#ffffff;}
 /*版型2 banner*/
  .ver2_banner{display:block;max-width:1144px;}
 .ver2_banner_m{display:none;}
@@ -140,34 +139,32 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 }
 .pc_version_non::before{display:block;height:168px;content:'';background:url(../images/head_m_0623.jpg) no-repeat center center;background-size:cover;}
 @media screen and (max-width:1600px) {
-.bg_color{margin: -10% auto;}
 html{background-position: 0vmax 6vmax;}
-.wrapper{margin:2vmax auto 0;}
-.title:before {top: 8%;left: 31%;width: 43%;}
+.wrapper{margin:2vmax auto 0;top: -540px;}
 }
 @media screen and (max-width:1400px) {
 html{background-position:0vmax 7vmax;}
-.wrapper{margin:-1vmax auto 0;}
+.wrapper{margin:-1vmax auto 0;top: -385px;}
 .bg_color > .wrapper > div[id]{margin-top:-0.5%;}
-.title:before {top: 8%;left: 33%;width: 38%;}
+.bg_color {margin-top: 13%;}
 }
 @media screen and (max-width:1280px){
-    .wrapper{margin:-6vmax auto 0;}
-    .title:before {top: 21%;left: 19%;width: 38%;}
+    .wrapper{margin:-6vmax auto 0;top: -338px;}
+    .bg_color {margin-top: 20%;}
 }
 @media screen and (max-width:1024px){.wrapper{margin:-10.5vmax auto 0;width:100%;}
 html{background-position: 0 7vmax;background-size: 105%;}
 .protitle{height: 12vmin;}
 .protitle b{font-size: 5vmin;line-height: 10vmin;}
 .hotpromain{width:47%;}
-.title:before {top: 30%;left: 22%;}
+.wrapper {top: -216px;}
 }
 @media screen and (max-width:768px){html{background-position:0 10vmax;}
 .wrapper{margin:-18vmax auto 0;}
 .list_special ul li{width:32%;}
 .hotpromain{width:40%;}
 .hotpro_pic{width:150px;height:150px;}
-.title:before {top: 37%;left: 16%;}
+.wrapper {top: -156px;}
 }
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){html{font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size: 175% auto;background-position: -36vmin 22vmin;/* background-position: 55% 21%; */}
@@ -175,7 +172,7 @@ html{background-position: 0 7vmax;background-size: 105%;}
 #kuai3header .words{width:100% !important;}
 #kuai3header .words .font{display:none !important;}
 .m_version_non{display:none;}
-.wrapper{display:block;width:100%;margin: 29vmin auto 0;z-index: 0;}
+.wrapper{display:block;width:100%;margin: 29vmin auto 0;z-index: 0;top: -41px;}
 #gotop{display:none;position:fixed;cursor:pointer;z-index:9;width:15%;left:80%;bottom:45px;margin:0;}
 #gotop img{width:100%;float:right;display:block;}
 div.bg_color > div.wrapper > h2{display:block;width:100%;height: 70px;margin:0 auto;}
@@ -199,7 +196,7 @@ div.bg_color > div.wrapper > h2{display:block;width:100%;height: 70px;margin:0 a
 /*商品內容*/
 .bg_color{/* padding-top:45%; *//* overflow:hidden; */margin: 10% auto 0;}
 .protitle{position:relative;width:100%;text-align:center;height:45px;display:block;overflow:hidden;float:left;position:relative;top:0;background-size: 140%;background-position: -28vmin 0;}
-.protitle b{font-size: 100%;text-align:center;width:100%;line-height: 56px;}
+.protitle b{font-size: 100%;text-align:center;width:100%;line-height: 52px;}
 .protitle i{display:block;font-size:1em;text-align:center;width:100%;line-height:3em}
 .bg04{margin-top:0px!important}
 .bg_color > .wrapper > div[style*=clear]{margin-bottom:10%}
@@ -306,21 +303,22 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 @media screen and (max-width:376px){
 html{background-position: -37vmin 26vmin;}
 .div.bg_color > div.wrapper > h2{height:46px;}
-.protitle b {line-height: 50px;}
+.protitle b {line-height: 45px;}
 .bg_color {margin: 10% auto -5%;}
 }
 @media screen and (max-width:320px){.tbg01{height:220px;}
 html{background-position: -36vmin 30vmin;}
+.protitle b {line-height: 40px;}
 }
 @media screen and (min-width:2500px){.rightbtn .actbtn:before{top:-65%;left:-6%;}
 html{background-position:0vmax 4vmax;}
 }
 @media screen and (min-width:2000px){
-.bg_color{margin:8% auto -1%;}
+.bg_color{margin-top: 29%;}
 .rightbtn .actbtn{width:197px;margin-top:-63px;}
-.rightbtn .actbtn a:last-child::after{background-position:47px 15px;height:109px;}
 .rightbtn .actbtn:before{top:-49%;left:-2%;background-position: 0 1.3vmax;}
 html {background-position: 0 4vmax;}
+.wrapper {top: -580px;}
 }
 @keyframes blink{50%{opacity:0.8;}
 }
