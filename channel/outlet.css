@@ -31,6 +31,7 @@ icon_number .bg05{background:#e0136f;}
 @media screen and (min-width: 2000px) {
     .pc-animate iframe {width: 100%;}
     form#form1 {margin-top: 0;}
+    .store_list li {width: 50%;}
 }
 @media screen and (max-width: 1600px) {
     .pa07 {background-position: 7vmax 1vmax;}
