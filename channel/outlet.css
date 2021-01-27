@@ -266,7 +266,7 @@ select option{background:#08b288;}
 }
 .store_list{padding:1em;font-size:14px;text-align:center;line-height:2em;}
 .store_list h4{font-size:1.1rem;color:#fff;}
-.store_list li{width: 55%;float:left;padding-bottom:1em;color:#fcedff;}
+.store_list li{width: 48%;float:left;padding-bottom:1em;color:#fcedff;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){#kuai3header{width:100% !important;margin:0px auto;z-index:9999;position:fixed;}
 #kuai3header .words{width:100% !important;}
@@ -301,13 +301,13 @@ select option{background:#08b288;}
  margin:0 auto;
  width:100%;
  height:auto;
- background: #228fea;
+ background: #e32631;
  /* border:15px solid #fff208;*/
  box-sizing:border-box;
  }
 .special_box ul{display:block;margin:0 auto;width:100%;box-sizing:border-box;padding: 1%;margin-bottom:100px;}
 .special_box ul:last-child {margin-bottom: -26px;}
-.special_box ul li{list-style:none;display:block;background:#FFF;border: 5px solid #228fea;margin-bottom: 110px;position:relative;margin-top: 105px;}
+.special_box ul li{list-style:none;display:block;background:#FFF;border: 5px solid #e32631;margin-bottom: 110px;position:relative;margin-top: 105px;}
 .special_box ul li:before{content:"";display:block;width:100%;z-index:5;height:86px;text-align:center;background: url(https://events.tk3c.com/events_net/events_net/201205benefits/images/20210125_bar_m.png) no-repeat center center;background-size: 100%;position: absolute;top: -26%;}
 .special_box ul li:after {content: "\798f\5229\54c1\512a\8cea\63a8\85a6";display: block;position: absolute;text-align: center;font-size: 22px;font-weight: bold;line-height: 108px;top: -27%;left: 0;right: 11%;z-index: 10;}
 a.spcial_boxS{display:block;width:100%;height: 400px;box-sizing:border-box;padding: 1%;text-align:center;}
@@ -741,7 +741,7 @@ select option{background:#08b288;}
 .ver_banner{display:block;max-width:1144px;position:relative;}
 .ver_banner_m{display:none;}
 /******第一區塊******/
-.list{width:100%;float:left;padding:1%;position:relative;display:block;border-radius:0px;-webkit-border-radius:0px;-moz-border-radius:0px;box-sizing:border-box;top:-95px;}
+.list{width:100%;float:left;padding:1%;position:relative;display:block;border-radius:5px;-webkit-border-radius:5px;-moz-border-radius:0px;box-sizing:border-box;top:-95px;}
 .list .box{display:inline-block;width:100%;padding:10px 5px 5px 5px;}
 /*強打2品*/
 .hotpro_wrapper{width:100%;height:255px;margin:0 auto;display:block;position:relative;overflow:hidden;display:flex;flex-wrap:nowrap;justify-content:center;}
