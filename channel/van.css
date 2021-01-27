@@ -313,6 +313,7 @@ html{background-position: -36vmin 30vmin;}
 }
 @media screen and (min-width:2500px){.rightbtn .actbtn:before{top:-65%;left:-6%;}
 html{background-position:0vmax 4vmax;}
+.bg_color{margin-top: 34%;}
 }
 @media screen and (min-width:2000px){
 .bg_color{margin-top: 29%;}
