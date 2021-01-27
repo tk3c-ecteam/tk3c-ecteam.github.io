@@ -4,7 +4,8 @@
 *{-webkit-text-size-adjust:none;}
 /*字體尺寸限制解除*/
 a{text-decoration:none;cursor:pointer}
-img{border:0px;}
+img{border:0px;max-width: 100%;max-height: 100%;}
+iframe{border: 0}
 /*圖片超連結邊框消除*/
 html{margin:0;padding:0;height:100%;}
 .boxfly{position:absolute;left:-9999em;top:-9999em;}
@@ -21,20 +22,36 @@ em,i{font-style:normal;}
 .bg03{background:#0b6bee;}
 .bg04{background: #fd8702;/* margin-top:10px;*/}
 icon_number .bg05{background:#e0136f;}
+.pa07 > span {padding-right: 140px;}
+.wrapper {margin:7% auto 0;}
 /*尾巴告示*/
 .copyR{background:#000;color:#FFF;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:2em;}
 .copyR:after{content:"個人資料保護條款:1.本活動參與人員知悉並同意燦坤實業股份有限公司及關係企業基於行銷活動目的，得蒐集於本頁面記載之個人資料(e-mail、電話等)，供前述企業合法且合理方式為必要之處理及應用。 2.本活動人員得依個人資料保護法第三條第三款之規定，以書面、電話、電子文件或其他適當方式向前述企業請求查詢、閱覽、製給複製本、補充、更正、停止處理及利用、刪除等權利。聯絡服務專線：0800-095-885。";font-size:80%;color:#A5A5A5;display:block;width:80%;margin:0.5% auto 0 auto;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (max-width: 1600px) {
     .pa07 {background-position: 7vmax 1vmax;}
+    .pc-animate {margin: 0 -10vmax;}
+    .pa07 > span {padding-right: 190px;}
 }
-@media screen and (max-width: 1025px) {
-    .pa07 {line-height: 218px;}
-    .pa07 > span {padding-right: 204px;}
+@media screen and (max-width: 1400px) {
+    .pc-animate {margin: 0 -17vmax;}
+}
+@media screen and (max-width: 1024px) {
+    .pc-animate {margin: -12vmax auto;}
+    .pc-animate iframe {width: 1144px;}
+    .pa07 {line-height: 219px;}
+    .pa07 > span {padding-right: 197px;}
+    .wrapper {margin: 12% auto 0;}
+}
+@media screen and (max-width: 768px) {
+    .pc-animate {margin: -23vmin auto;}
+    .pc-animate iframe {width: 100%;}
+    .pa07 {line-height: 215px;}
+    .pa07 > span {padding-right: 246px;}
 }
 @media screen and (min-width:751px){body{margin:0px;padding:0;width:100%;font-family:Century Gothic,"微軟正黑體";/* background: url(../images/kv_20200924.jpg)no-repeat top 100px center,url(../images/bg_20200810.jpg)repeat top 20px center !important; */background-size:100%;background-color: #e32631;}
-form#form1{overflow:hidden;margin-top: 19%;}
-.wrapper{display:block;width:1144px;margin:11.5% auto 0;position:relative;}
+form#form1{overflow:hidden;}
+.wrapper{display:block;width:1144px;position:relative;}
 .wrapperMt50{margin-top:62px;}
 .wrapperMt50:first-child{margin-top:0px;}
 .pc_version_non{display:none;}
@@ -136,7 +153,7 @@ select option{background:#08b288;}
 .pa05{background:url(../images/title_1_05.png?3) 0 0 no-repeat;width:991px;height:90px;}
 .pa06{background:url(../images/title_1_06.png?3) 0 0 no-repeat;width:991px;height:90px;}
 .pa07{background:url(https://events.tk3c.com/events_net/events_net/201205benefits/images/20210125_bar.png) 0 0 no-repeat;width: 90%;height: 200px;line-height: 230px;top: -76px;/* background-size: 100%; */background-position: 6vmax 1vmax;}
-.pa07 > span{font-size: 200%;font-weight:bold;color: #000;display:block;letter-spacing:3px;padding-right: 140px;}
+.pa07 > span{font-size: 200%;font-weight:bold;color: #000;display:block;letter-spacing:3px;}
 /*第一區塊*/
  .list0{width:1112px;float:left;padding:16px;margin-bottom:25px;position:relative;display:block;}
 .list0 .box{display:inline-block;width:100%;background:#842bad;padding:5px 5px 13px 5px;}
@@ -253,8 +270,10 @@ select option{background:#08b288;}
 .m_version_non{display:none;}
 .wrapper{display:block;width:100%;margin:0 auto;position:relative;}
 form#form1{overflow:hidden;margin-top: -3%;}
+.pc-animate{margin: -43vmin auto -100vmin;}
+.pc-animate iframe {width: 175%;margin: 0 -37vmin;}
 .wrapperMt50{margin-top:50px;}
-body{margin:0px;padding:0;width:103%;height:100%;font-family:Century Gothic,"微軟正黑體";background:#e32631;max-width:100%;}
+body{margin:0px;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background:#e32631;max-width:1140px;}
 /*上方橫幅*/
  .head_banner{display:block;width:100%;}
 .head_banner a{display:block;width:100%;height:auto;margin:0 auto;}
@@ -276,7 +295,7 @@ select option{background:#08b288;}
  .special_box{display:block;margin:0 auto;width:100%;height:auto;background:#d23783;/* border:15px solid #fff208;*/
  box-sizing:border-box;}
 .special_box ul{display:block;margin:0 auto;width:100%;box-sizing:border-box;padding:15px;margin-bottom:100px;}
-.special_box ul li{list-style:none;display:block;background:#FFF;border:5px solid #d3933c;margin-bottom:15px;border-radius:0 10px;position:relative;}
+.special_box ul li{list-style:none;display:block;background:#FFF;border:5px solid #d3933c;margin-bottom:15px;position:relative;}
 .special_box ul li:before{content:"";display:block;width:100%;z-index:5;height:86px;text-align:center;background:url(https://events.tk3c.com/events_net/events_net/product/201205benefits/images/t2_m_0518.png) no-repeat center center;background-size:60%;}
 a.spcial_boxS{display:block;width:100%;height:280px;box-sizing:border-box;padding:2%;text-align:center;}
 a.spcial_boxS .item_img{width:120px;height:120px;float:none;margin:6px auto;}
@@ -779,7 +798,7 @@ li.imgs img{height:250px;}
 /*文字區*/
  .hotpromain{width:45%;height:200px;float:right;overflow:hidden;}
 .hotpro_sale{width:98%;height:30px;font-size:12px;color:#F00;line-height:15px;text-align:left;overflow:hidden;display:block;margin-bottom:0px;}
-.hotpro_name{width:98%;height:40px;font-size:12px;color:#333;line-height:19px;text-align:left;overflow:hidden;display:block;margin-bottom:5px;}
+.hotpro_name{width:98%;height:40px;font-size:15px;color:#333;line-height:19px;text-align:left;overflow:hidden;display:block;margin-bottom:5px;}
 .hotpro_info{width:98%;height:45px;font-size:12px;color:#7e7e7e;line-height:15px;text-align:left;overflow:hidden;display:block;margin:0;}
 .hotpro_price1{display:none;}
 .hotpro_price2{width:100%;height:30px;font-size:13px;color:#C71F5C;line-height:30px;text-align:left;overflow:hidden;display:block;float:left;margin-bottom:5px;}
@@ -809,12 +828,15 @@ li.prosold_m img{width:100%;height:320px;padding:2% 0;}
 
 @media screen and (max-width: 376px) {
     .pa07 > span {line-height: 126px;}
+    .pc-animate {margin: -49vmin auto -110vmin;}
 }
 
 @media screen and (max-width: 361px) {
     .pa07 > span {line-height: 125px;}
+    .pc-animate {margin: -54vmin auto -110vmin;}
 }
 
 @media screen and (max-width: 320px) {
     .pa07 > span {line-height: 114px;font-size: 85%;}
+    .pc-animate {margin: -64vmin auto -120vmin;}
 }
