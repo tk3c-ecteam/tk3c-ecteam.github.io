@@ -39,7 +39,7 @@ body br {display: none;}
 /*商品橫幅*/
 /*品分類*/
 .bg_color{margin-top: 0;position: relative;width: 100%;height: 100%;}
-.bg_color:after{content: '';position: absolute;display: block;background-color: #fbb0b5;background-size: cover;width: 100%;height: 420vh;top: 9%;z-index: -1;}
+.bg_color:after{content: '';position: absolute;display: block;background-color: #fbb0b5;background-size: cover;width: 100%;height: 91%;top: 9%;z-index: -1;}
 .protitle{position:relative;width:100%;height: 135px;text-align:center;display:block;overflow:hidden;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_bar.png) no-repeat;background-size: 100%;/* MARGIN: -22VMAX AUTO 0; */}
 .protitle b{color: #fff;font-size: 2em;text-align:center;line-height: 2.2em;}
 .protitle i{display:block;color:#f0d17b;font-size:2em;text-align:center;line-height:5em}
@@ -142,19 +142,19 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 @media screen and (max-width:1600px) {
 html{background-position: 0vmax 6vmax;}
 .wrapper{margin:-5vmax auto 0;}
-.bg_color:after{height: 425vh;top: 8%;}
+.bg_color:after{height: 92%;top: 8%;}
 .rightbtn {left: 48%;}
 }
 @media screen and (max-width:1440px) {
 html{background-position:0vmax 7vmax;}
 .wrapper{margin:-6vmax auto 0;}
 .bg_color > .wrapper > div[id]{margin-top:-0.5%;}
-.bg_color:after{height: 512vh;top: 7%;}
+.bg_color:after{height: 93%;top: 7%;}
 .rightbtn{left: 45%;}
 }
 @media screen and (max-width:1280px){
     .wrapper{margin:-9vmax auto 0;}
-    .bg_color:after{height: 582vh;top: 6%;}
+    .bg_color:after{height: 94%;top: 6%;}
     .rightbtn{left: 38%;}
 }
 @media screen and (max-width:1024px){.wrapper{margin:-10.5vmax auto 0;width:100%;}
@@ -162,14 +162,12 @@ html{background-position: 0 7vmax;background-size: 105%;}
 .protitle{height: 12vmin;}
 .protitle b{font-size: 5vmin;line-height: 10vmin;}
 .hotpromain{width:47%;}
-.bg_color:after{height: 335vh;top: 6%;}
 }
 @media screen and (max-width:768px){html{background-position:0 10vmax;}
 .wrapper{margin:-18vmax auto 0;}
 .list_special ul li{width:32%;}
 .hotpromain{width:40%;}
 .hotpro_pic{width:150px;height:150px;}
-.bg_color:after{height: 565vh;top: 6%;}
 }
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){html{font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size: 175% auto;background-position: -36vmin 22vmin;/* background-position: 55% 21%; */}
@@ -325,14 +323,15 @@ html{background-position: -36vmin 30vmin;}
 }
 @media screen and (min-width:2500px){.rightbtn .actbtn:before{top:-65%;left:-6%;}
 html{background-position:0vmax 4vmax;}
-.bg_color:after{height: 300vh;top: 15%;}
+.bg_color:after{height: 86%  !important;top: 14% !important;}
+.wrapper {margin: 7vmin auto 0 !important;}
 }
 @media screen and (min-width:2000px){
 .rightbtn .actbtn{width:197px;margin-top:-63px;}
 .rightbtn .actbtn:before{top:-49%;left:-2%;background-position: 0 1.3vmax;}
 html {background-position: 0 4vmax;}
 .wrapper {margin: 5vmin auto 0;}
-.bg_color:after{height: 411vh;top: 12%;}
+.bg_color:after{height: 88%;top: 12%;}
 }
 @keyframes blink{50%{opacity:0.8;}
 }
