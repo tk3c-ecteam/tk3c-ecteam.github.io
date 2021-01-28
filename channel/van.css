@@ -6,7 +6,7 @@
 a{text-decoration:none;cursor:pointer}
 img{border:0px;max-width: 100%;max-height: 100%;}
 /*圖片超連結邊框消除*/
-html{margin:0;padding:0;height:100%;background:url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_head_2.jpg) no-repeat 39% 19%;font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size:100% auto;background-position:0vmax 5vmax;}
+html{margin:0;padding:0;height:100%;background:url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210128_head_1.jpg) no-repeat 39% 19%;font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size:100% auto;background-position:0vmax 5vmax;}
 .boxfly{position:absolute;left:-9999em;top:-9999em;}
 em,i{font-style:normal;}
 .fred{color:#F00;font-weight:bold;}
@@ -30,7 +30,7 @@ em,i{font-style:normal;}
 .copyR{background:#000;color:#FFF;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microsoft JhengHei,"Apple LiGothic Medium";}
-.wrapper{display:block;width:1144px;HEIGHT: 100%;margin: 0 auto;position:relative;}
+.wrapper{display:block;width:1144px;HEIGHT: 100%;margin: -1vmax auto 0;position:relative;}
 body br {display: none;}
 /*主視覺*/
 .title{height:626px;margin:0px auto;position:relative;overflow:hidden;}
@@ -38,8 +38,8 @@ body br {display: none;}
 .title .title_word{display:none;background:url(../images/salebox_0518.png) 40px 10px no-repeat;width:1100px;height:600px;z-index:1;position:absolute;top:6px;right:-655px;background-size:35%}
 /*商品橫幅*/
 /*品分類*/
-.bg_color{margin-top: 0;position: relative;width: 100%;height: 100%;}
-.bg_color:after{content: '';position: absolute;display: block;background-color: #fbb0b5;background-size: cover;width: 100%;height: 91%;top: 9%;z-index: -1;}
+.bg_color{margin-top: 0;position: relative;width: 100%;height: 100%;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210128_head_2.jpg) no-repeat;background-position: 0 -1vmax;background-size: 100% auto;background-color: #fbb0b5;margin-bottom: 0;}
+/*.bg_color:after{content: '';position: absolute;display: block;background-color: #fbb0b5;background-size: cover;width: 100%;height: 91%;top: 9%;z-index: -1;}*/
 .protitle{position:relative;width:100%;height: 135px;text-align:center;display:block;overflow:hidden;background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210126_bar.png) no-repeat;background-size: 100%;/* MARGIN: -22VMAX AUTO 0; */}
 .protitle b{color: #fff;font-size: 2em;text-align:center;line-height: 2.2em;}
 .protitle i{display:block;color:#f0d17b;font-size:2em;text-align:center;line-height:5em}
@@ -141,41 +141,41 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 .pc_version_non::before{display:block;height:168px;content:'';background:url(../images/head_m_0623.jpg) no-repeat center center;background-size:cover;}
 @media screen and (max-width:1600px) {
 html{background-position: 0vmax 6vmax;}
-.wrapper{margin:-5vmax auto 0;}
+.wrapper{margin:-5.5vmax auto 0;}
 .bg_color:after{height: 92%;top: 8%;}
 .rightbtn {left: 48%;}
 }
 @media screen and (max-width:1440px) {
 html{background-position:0vmax 7vmax;}
-.wrapper{margin:-6vmax auto 0;}
+.wrapper{margin:-7vmax auto 0;}
 .bg_color > .wrapper > div[id]{margin-top:-0.5%;}
 .bg_color:after{height: 93%;top: 7%;}
 .rightbtn{left: 45%;}
 }
 @media screen and (max-width:1280px){
-    .wrapper{margin:-9vmax auto 0;}
+    .wrapper{margin:-10vmax auto 0;}
     .bg_color:after{height: 94%;top: 6%;}
     .rightbtn{left: 38%;}
 }
-@media screen and (max-width:1024px){.wrapper{margin:-10.5vmax auto 0;width:100%;}
+@media screen and (max-width:1024px){.wrapper{margin:-10.9vmax auto 0;width:100%;}
 html{background-position: 0 7vmax;background-size: 105%;}
 .protitle{height: 12vmin;}
 .protitle b{font-size: 5vmin;line-height: 10vmin;}
 .hotpromain{width:47%;}
 }
 @media screen and (max-width:768px){html{background-position:0 10vmax;}
-.wrapper{margin:-18vmax auto 0;}
+.wrapper{margin:-18.5vmax auto 0;}
 .list_special ul li{width:32%;}
 .hotpromain{width:40%;}
 .hotpro_pic{width:150px;height:150px;}
 }
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){html{font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size: 175% auto;background-position: -36vmin 22vmin;/* background-position: 55% 21%; */}
-#kuai3header{width:100%;!important;margin:0px auto;z-index:9999;position:fixed;}
+#kuai3header{width:100%!important;margin:0px auto;z-index:9999;position:fixed;}
 #kuai3header .words{width:100% !important;}
 #kuai3header .words .font{display:none !important;}
 .m_version_non{display:none;}
-.wrapper{display:block;width:100%;margin: 29vmin auto 0;z-index: 0;top: -41px;}
+.wrapper{display:block;width:100%;margin: 23vmin auto 0;z-index: 0;}
 #gotop{display:none;position:fixed;cursor:pointer;z-index:9;width:15%;left:80%;bottom:45px;margin:0;}
 #gotop img{width:100%;float:right;display:block;}
 div.bg_color > div.wrapper > h2{display:block;width:100%;height: 70px;margin:0 auto;}
@@ -307,9 +307,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 html{background-position: -37vmin 26vmin;}
 .div.bg_color > div.wrapper > h2{height:46px;}
 .protitle b {line-height: 45px;}
-.bg_color {margin: 10% auto -5%;}
 .list{margin-bottom: 4%;}
-.bg_color:after{height: 800vh;}
 }
 @media screen and (max-width:361px){
     .list{margin-bottom: 3%;}
@@ -317,9 +315,7 @@ html{background-position: -37vmin 26vmin;}
 @media screen and (max-width:320px){.tbg01{height:220px;}
 html{background-position: -36vmin 30vmin;}
 .protitle b {line-height: 40px;}
-.wrapper{margin: 30vmin auto 0;}
 .copyR{margin-bottom: -17%;}
-.bg_color:after{height: 905vh;}
 }
 @media screen and (min-width:2500px){.rightbtn .actbtn:before{top:-65%;left:-6%;}
 html{background-position:0vmax 4vmax;}
