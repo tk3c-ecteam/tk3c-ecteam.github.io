@@ -268,7 +268,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 .navibar_m_btn > .inkbar_top{width:50px;height:50px;float:left;line-height:50px;background-color:#f4e30f;text-align:center;box-sizing:border-box;font-size:16px;color:#000;border-radius:100%;box-shadow:0px 1px 5px 0px #0b3159;position:absolute;z-index:55;bottom:110%;right:6px;opacity:0.9;box-sizing:border-box;}
 .navibar_m_btn > .linkbar_btn5{width:43.5%;height:45px;float:left;text-align:center;box-sizing:border-box;font-size:15px;color:#fff;padding-top:5px;border-radius:2px;margin-right:1%;margin-left:1%;line-height:35px;}
 /*顏色用*/
-.navibar_m_btn > .bg1{background-color:#000;box-shadow:0px 1px 5px 0px #0b3159;}
+.navibar_m_btn > .bg1{background-color: #df3d4d;box-shadow:0px 1px 5px 0px #0b3159;}
 /*黑色*/
 .navibar_m_btn > .bg2{background-color:#0C8717;box-shadow:0px 1px 5px 0px #0C8717;}
 /*綠色*/
@@ -276,7 +276,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 /*淺綠色*/
 .navibar_m_btn > .bg4{background-color:#0c4a7b;box-shadow:0px 1px 5px 0px #03a9f4;}
 /*深藍色*/
-.navibar_m_btn > .bg5{background-color: #513e3d;box-shadow: 0px 1px 5px 0px #e0d3cb;}
+.navibar_m_btn > .bg5{background-color: #963648;box-shadow: 0px 1px 5px 0px #e0d3cb;}
 /*橘黃色*/
 .navibar_m_btn > .bg6{background-color:#0f8082;box-shadow:0px 1px 5px 0px #15b7ba;}
 /*最新降價色*/
@@ -296,7 +296,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 .navibar_m_btn > .dropdown-menu > span:focus ~ div{display:block;}
 .navibar_m_btn > .dropdown-menu > ul{position:absolute;z-index:-1;visibility:hidden;transition:visibility 0.5s;opacity:0;bottom:42px;width:100%;border-bottom:5px solid #F30;}
 .navibar_m_btn > .dropdown-menu > span:focus ~ ul{visibility:visible;opacity:1;}
-.navibar_m_btn > .sample-menu-style li{border:1px solid #000;box-shadow:2px 2px 5px #666;padding:0.2em 0.4em 0;height:3em;background:#fff;white-space:nowrap;-webkit-tap-highlight-color:rgba(0,0,0,0);line-height:3em;}
+.navibar_m_btn > .sample-menu-style li{border:1px solid #000;box-shadow:2px 2px 5px #666;padding:0.2em 0.4em 0;height:3em;background: #fff1f1;white-space:nowrap;-webkit-tap-highlight-color:rgba(0,0,0,0);line-height:3em;}
 .navibar_m_btn > .sample-menu-style li:not(:first-child){border-top:none;}
 .navibar_m_btn > .sample-menu-style li:hover{background:#f8f8f4;}
 .navibar_m_btn > .sample-menu-style a{text-decoration:none;color:#000;}
