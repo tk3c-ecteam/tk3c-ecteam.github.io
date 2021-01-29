@@ -106,7 +106,7 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 /* 加入右側選單收合按鈕 */
 .rightbtn .toggle-rightbn { display:block;position: absolute; width: 25px;height: 25px;top: -50%;left: -2%;color: #FFC107;z-index: 300; cursor: pointer;font-size: 25px;}
 .rightbtn .actbtn {transition: all 0.8s;}
-.toggleR {transform: translateX(300%);}
+.toggleR {transform: translateX(1000%);}
 /*M版本((下方))按鈕*/
 .fix_btn{ display:none;}
 
