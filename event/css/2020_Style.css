@@ -105,7 +105,7 @@ background: -moz-linear-gradient(top, #7d7e7d 0%, #0e0e0e 100%); background: -we
 
 /* 加入右側選單收合按鈕 */
 .rightbtn .toggle-rightbn { display:block;position: absolute; width: 25px;height: 25px;top: -50%;left: -2%;color: #FFC107;z-index: 300; cursor: pointer;font-size: 25px;}
-.toggleR {transform: translateX(18%);}
+.toggleR {transform: translateX(300%);}
 /*M版本((下方))按鈕*/
 .fix_btn{ display:none;}
 
@@ -124,18 +124,6 @@ a.ad01 img{display:none;}
 	.acbankbox .list2 .item_text05 em {font-size: 2.5vmin !important;}
 }
 
-@media screen and (min-width:2500px) {
-	.toggleR {transform: translateX(26%);}
-}
-@media screen and (min-width:2000px) {
-	.toggleR {transform: translateX(21%);}
-}
-@media screen and (max-width:1600px) {
-	.toggleR {transform: translateX(12%);}
-}
-@media screen and (max-width:1280px) {
-	.toggleR {transform: translateX(6%);}
-}
 @media screen and (min-width:751px) {
 	
 /*主視覺((大凸))*/
