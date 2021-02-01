@@ -70,13 +70,17 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide" v-for="p in products[2]['img'].length">
-                            <div class="slide-bg" :style="{background: 'url('+ getImgUrl(products[3]['background'][p -1])+')'}">
-                                <h2 class="title place">{{ products[1]['place'][p -1] }}</h2>
-                                <h3 class="title">{{ products[0]['name'][p -1] }}</h3>
-                                <p class="score-text">
-                                    <span class="score">{{ products[4]['score'][p - 1] }}/</span>
-                                    9
-                                </p>
+                            <div class="slide-bg" :style="{background: 'url('+ getImgUrl(products[3]['background'][p -1])+')','background-size': 'cover'}">
+                                <div class="text-area">
+                                    <h2 class="title place">{{ products[1]['place'][p -1] }}</h2>
+                                    <h3 class="title">{{ products[0]['name'][p -1] }}</h3>
+                                    <p class="score-text">
+                                        <span class="score">
+                                            {{ products[4]['score'][p - 1] }}
+                                        </span>
+                                        <sup>/9</sup>
+                                    </p>
+                                </div>
                                 <p><img :src="getImgUrl(products[2]['img'][p -1])"></p>
                             </div>
                         </div>
