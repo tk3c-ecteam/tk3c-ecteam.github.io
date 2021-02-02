@@ -58,7 +58,7 @@
     <div id="coffee-mobile-container">
         <div class="header">
             <h2>logo</h2>
-            <div class="nav-bar" @click="toggleNav">
+            <div class="nav-bar" @click="toggleNav" :class="{active: headerActive}">
                 <i class="fas fa-align-justify"></i>
             </div>
         </div>
@@ -96,40 +96,39 @@
             <a class="buy" :href="otherDetail[2]['url'][other -1]" target="_blank">購買</a>
         </div>
         <div class="content-area">
-            <section id="coffee1" class="coffee">
-                <h2>咖啡1</h2>
+            <section class="coffee" v-for="n in 8" :id="`coffee${n}`">
                 <span class="close" @click="cancel">
                     <i class="fas fa-times"></i>
                 </span>
+                <div class="coffee-detail"><img :src="getImgUrl(otherDetail[3]['content'])"></div>
+                <div class="link-group">
+                    <a class="prev" @click="goPrevUrl(`${n}`)">上一個</a>
+                    <a class="next" @click="goNextUrl(`${n}`)">下一個</a>
+                </div>
+                <div class="sure-buy"><a :href="otherDetail[2]['url'][n - 1]" target="_blank">我要購買</a></div>
             </section>
-            <section id="coffee2" class="coffee">咖啡2</section>
-            <section id="coffee3" class="coffee">咖啡3</section>
-            <section id="coffee4" class="coffee">咖啡4</section>
         </div>
        
 
         <!-- 類別獨立選單 -->
         <section id="mobile-nav" :class="{ active: isNav,disable:isDisable}">
             <div class="nav-content">
-                <span class="close" @click="closeNav">
-                    <i class="fas fa-times"></i>
-                </span>
                 <div class="nav-box">
                     <h4>活動專區</h4>
                     <div>尚未開放</div>
                 </div>
                 <div class="nav-box">
                     <h4>單一產區</h4>
-                    <div v-for="pro in products[0]['name'].length - 4" :value="pro - 1" @click="goDetail">{{ products[0]['name'][pro - 1] }}</div>
+                    <div v-for="pro in products[0]['name'].length - 4" :value="pro - 1" :class="{active: isMobileActive === `${pro -1}`}" @click="goDetail">{{ products[0]['name'][pro - 1] }}</div>
                 </div>
                 <div class="nav-box">
                     <h4>綜合產區</h4>
-                    <div v-for="pro in products[0]['name'].length - 4" :value="pro + 3" @click="goDetail">{{ products[0]['name'][pro + 3] }}</div>
+                    <div v-for="pro in products[0]['name'].length - 4" :value="pro + 3" :class="{active: isMobileActive === `${pro + 3}` }" @click="goDetail">{{ products[0]['name'][pro + 3] }}</div>
                 </div>
             </div>
         </section>
     </div>
-        <script src="./dist/js/coffee.min.js"></script>
+    <script src="./dist/js/coffee.min.js"></script>
 </body>
 
 </html>
