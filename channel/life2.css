@@ -87,8 +87,8 @@ i {
 }
 
 .bg01 {
-    background: #1b56e3;
-    border: solid #1e4cdd 3px;
+    background: #d97b7c;
+    border: solid 3px #d97b7c;
 }
 
 .bg02 {
@@ -155,10 +155,10 @@ i {
     background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/2021backtowork_backtotop.png) top 0px left 0px no-repeat;
     display: block;
     margin: 0;
-    width: 70%;
-    height: 50px;
-    background-size: 100%;
-    margin: 0 0 0 22px;
+    width: 100%;
+    height: 100px;
+    background-size: 30%;
+    margin: 15px 0 0 69px;
 }
 
 #mobimg {
@@ -581,10 +581,12 @@ i {
         float: left;
         color: #fff;
         font-size: 3vmax;
-        line-height: 7.5vmax;
+        line-height: 13vmax;
         margin: 0 auto 0;
         background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/2021backtowork_titlebar.png) left bottom no-repeat;
         background-size: 100%;
+        /* background-position: 0 2vmax; */
+        z-index: 10;
     }
     .protitle .more {
         position: absolute;
@@ -874,7 +876,7 @@ i {
     .rightbtn>.actbtn {
         height: 290px;
         display: block;
-        margin: 0.8vmax auto;
+        margin: 5vmax auto;
     }
     .rightbtn>.actbtn a.btn01 {
         width: 136px;
@@ -887,7 +889,7 @@ i {
         box-sizing: border-box;
         display: block;
         border-bottom: none;
-        background-color: #283fd4;
+        background-color: #ff9800;
     }
     .rightbtn>.actbtn a.imgbtn {
         height: 0;
@@ -904,7 +906,7 @@ i {
         -ms-transition: all 0.5s;
         -moz-transition: all 0.5s;
         transform: translateY(0.1em);
-        background-color: #111a6d;
+        background-color: #d05051;
         color: #ffffff;
     }
     .rightbtn>a.btn02 {
@@ -2303,6 +2305,7 @@ i {
     display: block;
     box-sizing: border-box;
     border-radius: 15px;
+    margin: -1% auto;
 }
 
 .pro_wrapper1 ul {}
@@ -2325,7 +2328,7 @@ i {
 }
 
 .pro_wrapper1 ul li:hover {
-    border: 3px solid #31a4e5;
+    border: 3px solid #eadbdb;
     transform: translateY(0.2em);
 }
 
@@ -2355,7 +2358,7 @@ i {
     padding: 3px 0px;
     overflow: hidden;
     color: #000;
-    background: #cedaf9;
+    background: #eadbdb;
     transition: all 0.3s;
     -webkit-transition: all 0.3s;
     -ms-transition: all 0.3s;
@@ -2367,7 +2370,7 @@ i {
 }
 
 .pro_wrapper1 ul li:hover .CVbtext01 {
-    background: #1b56e3;
+    background: #f78a8c;
     color: #fff;
 }
 
@@ -2446,7 +2449,7 @@ i {
     position: absolute;
     left: 0;
     bottom: 13%;
-    background: #1b56e3;
+    background: #d97b7c;
     color: #fff;
 }
 
@@ -2470,7 +2473,7 @@ i {
     content: "";
     width: 8px;
     height: 40px;
-    background: #9bb8ff;
+    background: #debaba;
     display: inline-block;
     margin-left: -5%;
 }
@@ -2819,24 +2822,34 @@ div#NewProductAll {
         margin: -23vmax auto 0;
     }
     .protitle01 {
-        line-height: 8vmax;
+        line-height: 16.5vmax;
         font-size: 4vmax;
     }
     .rightbtn>.actbtn {
-        margin: 1vmax auto;
+        margin: 5.5vmax auto;
     }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1440px) {
     .protitle01 {
         font-size: 5vmax;
-        line-height: 9vmax;
+        line-height: 17.2vmax;
     }
 }
 
 @media screen and (max-width: 1280px) {
     .wrapper {
         margin: -16vmax auto 0;
+    }
+    .protitle01 {
+        line-height: 20vmax;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .protitle01 {
+        font-size: 4vmax;
+        line-height: 18.5vmax;
     }
 }
 
@@ -2845,8 +2858,8 @@ div#NewProductAll {
         background-size: 158%, 100%;
     }
     .protitle01 {
-        font-size: 11vmin;
-        line-height: 16vmin;
+        font-size: 8vmin;
+        line-height: 32vmin;
     }
 }
 
@@ -2855,13 +2868,14 @@ div#NewProductAll {
         margin: -3vmax auto 0;
     }
     .protitle01 {
-        line-height: 6vmax;
+        line-height: 11.5vmax;
     }
     .rightbtn {
-        background-position: -0.6vmax 0;
+        background-position: 0.2vmax 0;
+        width: 200px;
     }
     .rightbtn>.actbtn {
-        margin: 0.6vmax auto;
+        margin: 1.5vmax auto;
     }
 }
 
@@ -2870,8 +2884,8 @@ div#NewProductAll {
         margin: 0 auto 0;
     }
     .protitle01 {
-        line-height: 5vmax;
-        font-size: 3vmax;
+        line-height: 10vmax;
+        font-size: 2vmax;
     }
 }
 
@@ -2886,7 +2900,6 @@ div#NewProductAll {
         margin-top: 63%;
     }
     html {
-        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210113_head.jpg) top 95px center no-repeat, url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210113_bg.jpg) top 105px center repeat-y;
         background-size: 180%;
     }
       /*手機專用浮動選單*/
@@ -3479,13 +3492,14 @@ div#NewProductAll {
         background-size: contain;
         color: #fff;
         margin: 0 auto;
-        line-height: 20vmin;
+        line-height: 22vmin;
         height: 105px;
         clear: both;
         font-size: 9vmin;
-        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210108_bar.png) left bottom no-repeat;
-        background-size: 150% 88%;
-        background-position: -15vmin 0;
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/2021backtowork_titlebar.png) left bottom no-repeat;
+        background-size: 138% 69%;
+        background-position: -12vmin 0;
+        z-index: 20;
     }
     .protitle01 span {
         line-height: 25px;
@@ -4743,7 +4757,7 @@ div#NewProductAll {
     }
     /*4品一排*/
     .pro_wrapper1 {
-        margin-bottom: 6%;
+        margin: -10% 0 6% 0;
     }
     .pro_wrapper1 ul li {
         width: 46.4%;
@@ -6721,16 +6735,13 @@ screen\9 {
 
 @media screen and (max-width: 376px) {
     .protitle01 {
-        line-height: 21vmin;
+        line-height: 25vmin;
+    }
+    .pro_wrapper1 {
+        margin: -12% auto 6% 0;
     }
     .pro_wrapper1 ul li {
         width: 46.2%;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .protitle01 {
-        height: 99px;
     }
 }
 
@@ -6739,7 +6750,7 @@ screen\9 {
         width: 46%;
     }
     .protitle01 {
-        line-height: 20vmin;
+        line-height: 23vmin;
         height: 85px;
     }
 }
