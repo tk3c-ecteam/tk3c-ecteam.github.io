@@ -585,8 +585,10 @@ i {
         margin: 0 auto 0;
         background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/2021backtowork_titlebar.png) left bottom no-repeat;
         background-size: 100%;
-        /* background-position: 0 2vmax; */
+        background-position: 0 2.5vmax;
         z-index: 10;
+        display: flex;
+        justify-content: center;
     }
     .protitle .more {
         position: absolute;
@@ -828,6 +830,7 @@ i {
         height: 280px;
         display: block;
         position: relative;
+        z-index: -1;
     }
     .rightbtn .actbtn a .link1 {
         width: 130px;
@@ -851,7 +854,7 @@ i {
     .rightbtn {
         position: fixed;
         width: 191px;
-        height: 138px;
+        height: 95px;
         margin: 349px 0px 0px 635px;
         left: 48%;
         z-index: 100;
@@ -2304,8 +2307,8 @@ i {
     position: relative;
     display: block;
     box-sizing: border-box;
-    border-radius: 15px;
-    margin: -1% auto;
+    /* border-radius: 15px; */
+    /* margin: -1% auto; */
 }
 
 .pro_wrapper1 ul {}
@@ -2824,6 +2827,7 @@ div#NewProductAll {
     .protitle01 {
         line-height: 16.5vmax;
         font-size: 4vmax;
+        background-position: 0 3.2vmax;
     }
     .rightbtn>.actbtn {
         margin: 5.5vmax auto;
@@ -2834,6 +2838,7 @@ div#NewProductAll {
     .protitle01 {
         font-size: 5vmax;
         line-height: 17.2vmax;
+        background-position: 0 3.4vmax;
     }
 }
 
@@ -2843,6 +2848,7 @@ div#NewProductAll {
     }
     .protitle01 {
         line-height: 20vmax;
+        background-position: 0 3.8vmax;
     }
 }
 
@@ -2850,6 +2856,7 @@ div#NewProductAll {
     .protitle01 {
         font-size: 4vmax;
         line-height: 18.5vmax;
+        background-position: 0 3.6vmax;
     }
 }
 
@@ -2860,6 +2867,7 @@ div#NewProductAll {
     .protitle01 {
         font-size: 8vmin;
         line-height: 32vmin;
+        background-position: 0 6.4vmin;
     }
 }
 
@@ -3497,8 +3505,8 @@ div#NewProductAll {
         clear: both;
         font-size: 9vmin;
         background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/2021backtowork_titlebar.png) left bottom no-repeat;
-        background-size: 138% 69%;
-        background-position: -12vmin 0;
+        background-size: 138% 70%;
+        background-position: -10vmin 0;
         z-index: 20;
     }
     .protitle01 span {
@@ -5214,8 +5222,9 @@ div#NewProductAll {
         color: #FFF;
         text-align: center;
         font-size: 90%;
-        padding: 5px 10px 15px 10px;
+        padding: 50px 10px 15px 10px;
         width: 100%;
+        /* margin-bottom: 100px; */
     }
     /*浮動視窗*/
     .fixbox {
