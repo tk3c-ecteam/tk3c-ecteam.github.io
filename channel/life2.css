@@ -403,7 +403,7 @@ i {
         padding: 0;
         width: 100%;
         font-family: "微軟正黑體", sans-serif;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
     .wrapper {
         display: block;
@@ -2817,7 +2817,7 @@ i {
 }
 
 div#NewProductAll {
-    margin-top: 78%
+    margin-top: 78%;
 }
 
 @media screen and (max-width: 1600px) {
@@ -2840,15 +2840,24 @@ div#NewProductAll {
         line-height: 17.2vmax;
         background-position: 0 3.4vmax;
     }
+    .rightbtn {
+        left: 44%;
+    }
+    .wrapper {
+        margin: -26vmax auto 0;
+    }
 }
 
 @media screen and (max-width: 1280px) {
     .wrapper {
-        margin: -16vmax auto 0;
+        margin: -33vmax auto 0;
     }
     .protitle01 {
         line-height: 20vmax;
         background-position: 0 3.8vmax;
+    }
+    .rightbtn {
+        left: 37%;
     }
 }
 
@@ -2856,7 +2865,10 @@ div#NewProductAll {
     .protitle01 {
         font-size: 4vmax;
         line-height: 18.5vmax;
-        background-position: 0 3.6vmax;
+        background-position: 0 4.5vmax;
+    }
+    .wrapper {
+        width: 100%;
     }
 }
 
@@ -2865,9 +2877,13 @@ div#NewProductAll {
         background-size: 158%, 100%;
     }
     .protitle01 {
-        font-size: 8vmin;
-        line-height: 32vmin;
-        background-position: 0 6.4vmin;
+        font-size: 6vmin;
+        line-height: 36vmin;
+        background-position: 0 11.5vmin;
+    }
+
+    .wrapper {
+        margin: -18vmax auto 0;
     }
 }
 
@@ -6728,7 +6744,7 @@ screen\9 {
 
 @media screen and (max-width: 1440px) and (min-width: 751px) {
     html {
-        width: 149%;
+        width: 100%;
         max-width: 1440px;
     }
     form>div:nth-of-type(9) {
@@ -6736,8 +6752,6 @@ screen\9 {
     }
     .wrapper {
         display: block;
-        width: 1144px;
-        margin: -26vmax auto 0;
         position: relative;
     }
 }
