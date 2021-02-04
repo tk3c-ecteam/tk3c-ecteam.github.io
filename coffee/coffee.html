@@ -6,52 +6,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>咖啡</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-    <link rel="stylesheet" href="./dist/css/coffee.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./dist/css/coffee.css" type="text/css">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div id="coffee-container">
-        <!-- 選單區  -->
-        <section class="nav">
-            <h2 class="logo"></h2>
-            <div class="nav-box">
-                <h4>活動專區</h4>
-                <div>尚未開放</div>
+        <!-- 選單區 -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">淺口袋</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" id="singleMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    單一產區
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="singleMenuLink">
+                    <a class="dropdown-item" v-for="p in products.single.length"  @click="alert(p)" href="#">{{ products.single[p - 1] }}</a>
+                  </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="mixMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      綜合產區
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="mixMenuLink">
+                      <a class="dropdown-item" href="#" v-for="p in products.mix.length" @click="alert(p + 4)">{{ products.mix[p - 1] }}</a>
+                    </div>
+                  </li>
+                <li class="nav-item"><a class="nav-link" href="#">活動專區</a></li>
+              </ul>
             </div>
-            <div class="nav-box">
-                <h4>單一產區</h4>
-                <div :class="{active: isActive === 'c1'}" @click="theClick('c1')" :value="0">耶加雪菲</div>
-                <div :class="{active: isActive === 'c2'}" @click="theClick('c2')" :value="1">微微特南果</div>
-                <div :class="{active: isActive === 'c3'}" @click="theClick('c3')" :value="2">高山極硬豆</div>
-                <div :class="{active: isActive === 'c4'}" @click="theClick('c4')" :value="3">曼特寧</div>
-            </div>
-            <div class="nav-box">
-                <h4>綜合產區</h4>
-                <div :class="{active: isActive === 'c5'}" @click="theClick('c5')" :value="4">非洲小農特區</div>
-                <div :class="{active: isActive === 'c6'}" @click="theClick('c6')" :value="5">經典綜合咖啡豆</div>
-                <div :class="{active: isActive === 'c7'}" @click="theClick('c7')" :value="6">中南美洲莊園特選</div>
-                <div :class="{active: isActive === 'c8'}" @click="theClick('c8')" :value="7">特級綜合咖啡豆</div>
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-        </section>
-        <section class="content">
+          </nav>
+
+        <!-- topic區 -->
+        <section id="topic" class="set-height">topic</section>
+        <!-- 主要內容區域 -->
+        <section id="content">
             <!-- Slider main container -->
-            <div class="swiper-container">
+            <div class="swiper-pc">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide" data-swiper-parallax="-50%" data-swiper-parallax-duration="3000" v-for="p in products.img.length">
-                        <a :href="products.url[p]" target="_blank"><img :src="getImgUrl(products.img[p -1])"></a>
+                    <div class="swiper-slide" v-for="p in products.img.length">
+                        <div class="slide-bg" :style="{background: 'url('+ getImgUrl(products.background[p- 1])+')','background-size': 'cover'}">
+                            <div class="text-area">
+                                <h2 class="title place">{{ products.place[p - 1] }}</h2>
+                                <h3 class="title">{{ products.name[p - 1] }}</h3>
+                                <p class="score-text">
+                                    <span class="score">
+                                        {{ products.score[p - 1] }}
+                                    </span>
+                                    <sup>/9</sup>
+                                </p>
+                            </div>
+                            <p><img :src="getImgUrl(products.coffee_img[p - 1])"></p>
+                        </div>
                     </div>
                 </div>
+        </div>
+
+         <!-- If we need pagination -->
+         <div class="swiper-pagination"></div>
+
+         <!-- If we need navigation buttons -->
+         <div class="swiper-button-prev"></div>
+         <div class="swiper-button-next"></div>
+        </section>
+        <!-- 活動特區 -->
+        <section id="event-area">
+            <div class="youtube">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/-yULWrkkahA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
         <section class="footer"></section>
+
+        <!-- 彈出產品區域 -->
+        <section class="lightbox" v-for="p in products.img.length" :id="`box${p}`" :value="p" @click="cancel">
+            <span class="close" @click="cancel">
+                <i class="fas fa-times"></i>
+            </span>
+            <span class="prev angle" @click="goPrev()"><i class="fas fa-angle-left"></i></span>
+            <a :href="products.url[p - 1]"><img :src="getImgUrl(products.img[p - 1])"></a>
+            <span class="next angle" @click="goNext()"><i class="fas fa-angle-right"></i></span>
+        </section>
     </div>
 
     <!-- 手機版 -->
