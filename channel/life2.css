@@ -860,10 +860,10 @@ i {
         z-index: 100;
         text-align: center;
         background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/2021backtowork_elevatortop.png) no-repeat;
-        background-size: 94%;
+        background-size: 65%;
         padding: 133px 0 0 0;
         bottom: 38%;
-        background-position: 0.3vmax 3.6VMAX;
+        background-position: 1.8vmax 6.2VMAX;
     }
     .actbtn::after {
         content: "";
@@ -887,12 +887,12 @@ i {
         margin: 2% 0 0 16%;
         padding-bottom: 36px;
         line-height: 36px;
-        color: #fff;
+        color: #000;
         text-decoration: none;
         box-sizing: border-box;
         display: block;
         border-bottom: none;
-        background-color: #ff9800;
+        background-color: #ffffff;
     }
     .rightbtn>.actbtn a.imgbtn {
         height: 0;
@@ -2832,6 +2832,9 @@ div#NewProductAll {
     .rightbtn>.actbtn {
         margin: 5.5vmax auto;
     }
+    .rightbtn {
+        background-position: 2vmax 7vmax;
+    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -2858,6 +2861,7 @@ div#NewProductAll {
     }
     .rightbtn {
         left: 37%;
+        background-position: 3vmax 7vmax;
     }
 }
 
