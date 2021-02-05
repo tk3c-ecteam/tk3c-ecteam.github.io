@@ -16,36 +16,35 @@
 </head>
 
 <body>
+     <!-- 選單區 -->
+     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">淺口袋</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="singleMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                單一產區
+              </a>
+              <div class="dropdown-menu" aria-labelledby="singleMenuLink">
+                <a class="dropdown-item" v-for="p in products.single.length"  @click="alert(p)" href="#">{{ products.single[p - 1] }}</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="mixMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  綜合產區
+                </a>
+                <div class="dropdown-menu" aria-labelledby="mixMenuLink">
+                  <a class="dropdown-item" href="#" v-for="p in products.mix.length" @click="alert(p + 4)">{{ products.mix[p - 1] }}</a>
+                </div>
+              </li>
+            <li class="nav-item"><a class="nav-link" href="#">活動專區</a></li>
+          </ul>
+        </div>
+      </nav>
     <div id="coffee-container">
-        <!-- 選單區 -->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">淺口袋</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav">
-                <li class="nav-item dropdown active">
-                  <a class="nav-link dropdown-toggle" href="#" id="singleMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    單一產區
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="singleMenuLink">
-                    <a class="dropdown-item" v-for="p in products.single.length"  @click="alert(p)" href="#">{{ products.single[p - 1] }}</a>
-                  </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="mixMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      綜合產區
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="mixMenuLink">
-                      <a class="dropdown-item" href="#" v-for="p in products.mix.length" @click="alert(p + 4)">{{ products.mix[p - 1] }}</a>
-                    </div>
-                  </li>
-                <li class="nav-item"><a class="nav-link" href="#">活動專區</a></li>
-              </ul>
-            </div>
-          </nav>
-
         <!-- topic區 -->
         <section id="topic" class="set-height">topic</section>
         <!-- 主要內容區域 -->
@@ -71,14 +70,13 @@
                         </div>
                     </div>
                 </div>
-        </div>
+                 <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
 
          <!-- If we need pagination -->
          <div class="swiper-pagination"></div>
-
-         <!-- If we need navigation buttons -->
-         <div class="swiper-button-prev"></div>
-         <div class="swiper-button-next"></div>
         </section>
         <!-- 活動特區 -->
         <section id="event-area">
