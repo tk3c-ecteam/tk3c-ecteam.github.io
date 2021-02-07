@@ -22,7 +22,8 @@
 
 
 <title>家用生活｜開春個人小物 6折起</title>
-<link href="./life2.css" rel="stylesheet" type="text/css">
+<link href="https://tk3c-ecteam.github.io/animation/animation.css" rel="stylesheet" type="text/css">
+<link href="./life3.css" rel="stylesheet" type="text/css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
     function TopScript() {
@@ -149,6 +150,30 @@
         });
 
     });
+</script>
+
+<!-- 新增標題動畫 -->
+<script>
+ $(function(){
+     var titleHtml = `
+     <div class="title-group">
+      <h2>
+      <img src="https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/2021backtowork_title.png">
+      </h2>
+      <p><img src="https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/2021backtowork_subtitle.png"></p>
+     </div>`;
+
+     $(titleHtml).appendTo($('#NewProductAll'));
+
+     var titleGroup = $('.title-group');
+     setTimeout(() => {
+        $(titleGroup).find('h2').css('opacity',1);
+     },1800);
+
+     setTimeout(() => {
+        $(titleGroup).find('p').css('opacity',1);
+     },1200);
+ });
 </script>
 </head>
 <body>
