@@ -47,7 +47,7 @@ body{margin:0px;padding:0;width:100%;}
 }
 .animate-group .flower {
     animation: zoom-out-in 4s ease-in-out infinite;
-    margin: 23vmax auto;
+    margin: -17vmax auto;
     width: 75%;
     position: relative;
     z-index: 20;
@@ -711,7 +711,7 @@ body{margin:0px;padding:0;width:100%;height:auto;}
     margin-left: 39vmin;
 }
 .animate-group .leaf-group {
-    margin: -82vmin 65vmin 0;
+    margin: -53.6vmin 65vmin 0;
 }
 .animate-group .leaf-group span {
     width: 28%;
