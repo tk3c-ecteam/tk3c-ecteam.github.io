@@ -998,7 +998,10 @@ h2.protitle:first-child{}
         font-size: 1.3em;
     }
     .animate-group {
-        margin: -36vmin auto 45vmin;
+        margin: -36vmin auto 61vmin;
+    }
+    .animate-group .leaf-group {
+        margin: -53.6vmin 67vmin 0;
     }
 }
 @media screen and (max-width: 361px)  {
@@ -1009,7 +1012,7 @@ h2.protitle:first-child{}
         width: 48.2%;
     }
     .animate-group {
-        margin: -36vmin auto 50vmin;
+        margin: -36vmin auto 65vmin;
     }
 }
 @media screen and (max-width: 320px) {
@@ -1023,7 +1026,7 @@ h2.protitle:first-child{}
         background-position: -39vmin 30vmin;
     }
     .animate-group {
-        margin: -39vmin auto 50vmin;
+        margin: -39vmin auto 70vmin;
     }
     .animate-group .leaf-group span {
         width: 27%;
