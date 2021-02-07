@@ -645,14 +645,17 @@ body{margin:0px;padding:0;width:100%;}
         margin: -7vmax auto 0;
     }
     .animate-group {
-        margin: -5vmax auto 30vmax;
+        margin: -4vmax auto 27vmax;
     }
     .animate-group .bird {
-        left: 22vmax;
+        margin-left: 21vmax;
     }
     .animate-group .leaf-group {
-        right: 6vmax;
+        margin: -27.2vmax 35.5vmax 0;
         width: 20%;
+    }
+    .animate-group .leaf-group span:nth-of-type(1) {
+        left: 43px;
     }
 }
 @media screen and (min-width: 2500px) {
@@ -666,10 +669,16 @@ body{margin:0px;padding:0;width:100%;}
         margin: -5.8vmax auto 27vmax;
     }
     .animate-group .bird {
-        left: 18vmax;
+        margin-left: 18vmax;
     }
     .animate-group .leaf-group {
-        right: 3vmax;
+        margin: -23vmax 31.5vmax 0;
+    }
+    .animate-group .leaf-group span:nth-of-type(1) {
+        left: 75px;
+    }
+    .animate-group .leaf-group span:nth-of-type(3) {
+        right: 63px;
     }
 }
 
