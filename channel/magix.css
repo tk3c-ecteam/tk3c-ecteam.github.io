@@ -6414,6 +6414,7 @@ strong i:after {
     }
     .magic-title:before {
         top: -26%;
+        height: 60%;
     }
     .magic-title:after {
         bottom: -44%;
