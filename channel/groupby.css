@@ -47,10 +47,11 @@ body{margin:0px;padding:0;width:100%;}
 }
 .animate-group .flower {
     animation: zoom-out-in 4s ease-in-out infinite;
-    margin: -26vmax -7vmax;
+    margin: -26vmax -9vmax;
     width: 75%;
     position: relative;
     z-index: 20;
+    transform: scale(0.3);
     opacity: 0;
 }
 .animate-group .leaf-group {
