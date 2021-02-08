@@ -2832,7 +2832,7 @@ div#NewProductAll {
 .title-group h2 {
     width: 100%;
     opacity: 0;
-    animation: fade-in-left 2s ease-in;
+    animation: fade-in-left 1.5s linear;
 }
 
 .title-group p {
