@@ -22,7 +22,7 @@
     <title>家電精選｜窩的新生活，外宿家電5折起</title>
 
     <link href="https://tk3c-ecteam.github.io/animation/animation.css" rel="stylesheet" type="text/css">
-    <link href="./groupby18.css" rel="stylesheet" type="text/css">
+    <link href="./groupby.css" rel="stylesheet" type="text/css">
     <link href="https://events.tkec.com.tw/events_net/events_net/2018_channel_banner/css/201810_channel.css" rel="stylesheet" type="text/css">
     <link href="https://events.tkec.com.tw/events_net/events_net/2018_channel_banner/css/201810_channel_window.css" rel="stylesheet" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -87,31 +87,46 @@
                     scrollTop: '0px'
                 }, 900);
             });
-            $('.p07').click(function() {
+            $('#p07').click(function() {
                 $('html,body').animate({
                     scrollTop: $('.protitle').eq(0).offset().top - 60
                 }, 900);
             });
-            $('.p08').click(function() {
+            $('#p08').click(function() {
                 $('html,body').animate({
                     scrollTop: $('.protitle').eq(1).offset().top - 60
                 }, 900);
             });
-            $('.p09').click(function() {
+            $('#p09').click(function() {
                 $('html,body').animate({
                     scrollTop: $('.protitle').eq(2).offset().top - 60
                 }, 900);
             });
-            $('.p10').click(function() {
+            $('#p10').click(function() {
                 $('html,body').animate({
                     scrollTop: $('.protitle').eq(3).offset().top - 60
                 }, 900);
             });
-            $('.p11').click(function() {
+            $('#p11').click(function() {
                 $('html,body').animate({
                     scrollTop: $('.protitle').eq(4).offset().top - 60
                 }, 900);
             });
+        });
+    </script>
+
+    <script>
+        $(function(){
+            var animateHtml = `<div class="animate-group">
+                <h2 class="bird"><img src="https://events.tk3c.com/events_net/events_net/groupbuy/images/20210205_bird.gif"></h2>
+                <p class="flower"><img src="https://events.tk3c.com/events_net/events_net/groupbuy/images/20210205_flower.png"></p>
+                <div class="leaf-group">
+                    <span><img src="https://events.tk3c.com/events_net/events_net/groupbuy/images/20210205_leaf_01.png"></span>
+                    <span><img src="https://events.tk3c.com/events_net/events_net/groupbuy/images/20210205_leaf_02.png"></span>
+                    <span><img src="https://events.tk3c.com/events_net/events_net/groupbuy/images/20210205_leaf_03.png"></span>
+                </div>
+            </div>`;
+            $('.wrapper').eq(0).append(animateHtml);
         });
     </script>
 </head>
