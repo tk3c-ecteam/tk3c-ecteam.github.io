@@ -2826,7 +2826,7 @@ div#NewProductAll {
     width: 78%;
     margin: -42vmax 8vmax 0;
     position: relative;
-    z-index: 101;
+    z-index: 0;
 }
 
 .title-group h2 {
@@ -6833,16 +6833,5 @@ screen\9 {
     .protitle01 {
         line-height: 23vmin;
         height: 85px;
-    }
-}
-
-@keyframes fade-in-right {
-    70% {
-        opacity: 0;
-        transform: translateX(-100%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
     }
 }

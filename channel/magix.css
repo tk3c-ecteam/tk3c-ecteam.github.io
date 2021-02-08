@@ -303,26 +303,27 @@ i {
     width: 100%;
     opacity: 0;
     animation: flashit 8s infinite;
+    z-index: 50;
 }
 
 .magic-title .wifi {
-    width: 12%;
+    width: 10%;
     height: auto;
     position: absolute;
-    top: -3%;
-    right: 27%;
+    top: 0;
+    right: 29%;
     animation: upAndDown 0.9s linear infinite alternate;
 }
 .boxfor3c {
-    margin: 0 6vmax;
+    margin: 0 11vmax;
     text-align: left;
     width: 100%;
     height: 100%;
-    animation: upAndDown 0.85s linear infinite alternate;
+    animation: upAndDown 1s linear infinite alternate;
 }
 
 .boxfor3c p {
-    width: 10%;
+    width: 8%;
     height: 100%;
     display: inline-block;
     margin: 0 5px;
@@ -356,10 +357,10 @@ i {
     width: 250px;
     height: 265px;
     position: absolute;
-    top: -262px;
-    left: -34%;
+    top: -265px;
+    left: -36%;
     z-index: 1;
-    background-size: 113%;
+    background-size: 115% auto;
 }
 
 .actbtn::after {
@@ -685,8 +686,8 @@ form>div:nth-of-type(9) {
 .protitle:nth-of-type(3),
 .protitle:nth-of-type(4),
 .protitle:nth-of-type(5) {
-    background-size: 112%;
-    background-position: -3vmax 1vmax;
+    background-size: 113%;
+    background-position: -3.5vmax 1vmax;
 }
 
 .pa00 {
@@ -4018,9 +4019,11 @@ strong i:after {
     .magic-title .wifi {
         top: 5%;
         right: 20%;
+        width: 13%;
     }
     .boxfor3c {
         margin: -5vmax 15vmax;
+        width: 90%;
     }
     .boxfor3c p {
         width: 8%;
@@ -4168,7 +4171,7 @@ strong i:after {
         bottom: 39%;
     }
     .boxfor3c {
-        margin: -24vmin 22vmin;
+        margin: -24vmin 24vmin;
         width: 78%;
     }
 
