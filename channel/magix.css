@@ -266,7 +266,7 @@ i {
     position: relative;
     width: 100%;
     height: 100%;
-    margin: 8vmax auto 0;
+    margin: 10vmax auto 0;
     text-align: center;
 }
 .magic-title:before {
@@ -274,12 +274,12 @@ i {
     display: block;
     position: absolute;
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210205_start.png) no-repeat;
-    width: 43%;
-    height: 100%;
+    width: 25%;
+    height: 45%;
     background-size: 100%;
-    top: -57%;
-    left: 31%;
-    z-index: -1;
+    top: -28%;
+    left: 40%;
+    z-index: 1;
     animation: hide-and-show 0.6s linear infinite alternate;
 }
 .magic-title:after {
@@ -289,41 +289,43 @@ i {
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210205_light.png) no-repeat;
     width: 100%;
     height: 100%;
-    bottom: -25%;
+    bottom: -15%;
     left: 3%;
     background-size: 100%;
-    z-index: 5;
+    z-index: -1;
     animation: hide-and-show 0.9s linear infinite alternate;
 }
 
 .magic-title .flash-bg {
     position: absolute;
-    top: 12%;
+    top: 20%;
     left: 0;
     width: 100%;
     opacity: 0;
     animation: flashit 8s infinite;
-    z-index: 50;
+    z-index: -1;
 }
 
 .magic-title .wifi {
-    width: 10%;
+    width: 15%;
     height: auto;
     position: absolute;
-    top: 0;
-    right: 29%;
+    top: -14%;
+    right: 26%;
     animation: upAndDown 0.9s linear infinite alternate;
 }
 .boxfor3c {
-    margin: 0 11vmax;
+    margin: -8vmax 17vmax;
     text-align: left;
     width: 100%;
     height: 100%;
     animation: upAndDown 1s linear infinite alternate;
+    POSITION: RELATIVE;
+    Z-INDEX: 30;
 }
 
 .boxfor3c p {
-    width: 8%;
+    width: 12%;
     height: 100%;
     display: inline-block;
     margin: 0 5px;
@@ -331,6 +333,11 @@ i {
 
 .boxfor3c p:nth-of-type(2) {
     margin-left: 6px;
+    WIDTH: 30%;
+}
+
+.boxfor3c p:nth-of-type(3) {
+    margin-left: -101px;
 }
 
 
@@ -358,9 +365,9 @@ i {
     height: 265px;
     position: absolute;
     top: -265px;
-    left: -36%;
+    left: -36.5%;
     z-index: 1;
-    background-size: 115% auto;
+    background-size: 116%;
 }
 
 .actbtn::after {
@@ -438,7 +445,7 @@ body {
 }
 
 form>div:nth-of-type(9) {
-    margin-top: 7vmax;
+    margin-top: 2vmax;
     z-index: 80;
 }
 
@@ -647,7 +654,7 @@ form>div:nth-of-type(9) {
     position: relative;
     width: 1144px;
     text-align: center;
-    height: 162px;
+    height: 132px;
     display: flex;
     justify-content: center;
     overflow: hidden;
@@ -663,31 +670,27 @@ form>div:nth-of-type(9) {
 
 .protitle:nth-of-type(1) {
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210205_bar01.png) no-repeat;
+    background-size: 100%;
 }
 
 .protitle:nth-of-type(2) {
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210205_bar02.png) no-repeat;
+    background-size: 100%;
 }
 
 .protitle:nth-of-type(3) {
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210205_bar03.png) no-repeat;
+    background-size: 100%;
 }
 
 .protitle:nth-of-type(4) {
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210205_bar04.png) no-repeat;
+    background-size: 100%;
 }
 
 .protitle:nth-of-type(5) {
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210205_bar05.png) no-repeat;
-}
-
-.protitle:nth-of-type(1),
-.protitle:nth-of-type(2),
-.protitle:nth-of-type(3),
-.protitle:nth-of-type(4),
-.protitle:nth-of-type(5) {
-    background-size: 113%;
-    background-position: -3.5vmax 1vmax;
+    background-size: 100%;
 }
 
 .pa00 {
@@ -1273,7 +1276,7 @@ form>div:nth-of-type(9) {
     float: left;
     text-align: center;
     display: block;
-    background-color: #cca660;
+    background-color: #741d8b;
     border-radius: 10px;
     margin-top: -40px;
 }
@@ -1320,7 +1323,7 @@ li .box_price strong em {
     width: 23%;
     position: relative;
     text-align: center;
-    margin: 10px 1px 21px 17px;
+    margin: 20px 1px 21px 17px;
     float: left;
     background-color: #fff;
     box-sizing: border-box;
@@ -3994,7 +3997,10 @@ strong i:after {
         bottom: -19%;
     }
     .boxfor3c {
-        margin: 2vmax 10vmax;
+        margin: -6vmax 14vmax;
+    }
+    .boxfor3c p:nth-of-type(3) {
+        width: 20%;
     }
 }
 
@@ -4009,24 +4015,27 @@ strong i:after {
         width: 60%;
     }
     .magic-title:before {
-        top: -33%;
-        left: 32%;
-        height: 60%;
+        top: -15%;
+        left: 41%;
     }
     .magic-title:after {
         bottom: -36%;
     }
     .magic-title .wifi {
-        top: 5%;
-        right: 20%;
-        width: 13%;
+        top: -4%;
+        right: 14%;
+        width: 20%;
     }
     .boxfor3c {
-        margin: -5vmax 15vmax;
-        width: 90%;
+        margin: -12vmax 21vmax;
+        width: 85%;
     }
     .boxfor3c p {
-        width: 8%;
+        width: 13%;
+    }
+    .boxfor3c p:nth-of-type(3) {
+        margin-left: -61px;
+        width: 16%;
     }
 }
 
@@ -4038,22 +4047,16 @@ strong i:after {
         background-position: 0 7vmax;
     }
     .boxfor3c {
-        margin: -5vmax 16vmax;
+        margin: -12vmax 23vmax;
+        width: 83%;
     }
     .magic-title {
         margin: 8vmax auto 0;
     }
     .magic-title:before {
         width: 30%;
-        top: -22%;
-        left: 38%;
-    }
-    .protitle:nth-of-type(1),
-    .protitle:nth-of-type(2),
-    .protitle:nth-of-type(3),
-    .protitle:nth-of-type(4),
-    .protitle:nth-of-type(5) {
-        background-position: -4vmax 1vmax;
+        top: -19%;
+        left: 39%;
     }
     .rightbtn {
         left: 46%;
@@ -4065,21 +4068,20 @@ strong i:after {
         background-position: 0 8vmax;
     }
     .boxfor3c {
-        margin: -6vmax 22vmax;
-        width: 80%;
+        margin: -15vmax 29vmax;
+        width: 69%;
+    }
+    .boxfor3c p:nth-of-type(2) {
+        width: 23%;
+    }
+    .boxfor3c p:nth-of-type(3) {
+        margin-left: 7px;
     }
     .magic-title {
         width: 53%;
     }
     .magic-title:after {
         bottom: -28%;
-    }
-    .protitle:nth-of-type(1),
-    .protitle:nth-of-type(2),
-    .protitle:nth-of-type(3),
-    .protitle:nth-of-type(4),
-    .protitle:nth-of-type(5) {
-        background-position: -4.5vmax 1.5vmax;
     }
     .rightbtn {
         left: 39%;
@@ -4098,7 +4100,7 @@ strong i:after {
     .protitle {
         width: 100%;
         line-height: 2em;
-        height: 156px;
+        height: 124px;
     }
     .list02 ul li {
         width: 22.9%;
@@ -4107,30 +4109,24 @@ strong i:after {
         margin-right: 27%;
     }
     form>div:nth-of-type(9) {
-        margin-top: -4vmin;
+        margin-top: -9vmin;
     }
     .boxfor3c {
-        margin: -9vmax 17vmax;
+        margin: -16vmax 24vmax;
+        width: 61%;
     }
     .magic-title {
         margin: 10vmin auto 0;
         width: 54%;
     }
     .magic-title:before {
-        top: -19%;
+        top: -16%;
         left: 39%;
     }
     .magic-title .wifi {
-        width: 14%;
-        top: 0;
-        right: 19%;
-    }
-    .protitle:nth-of-type(1),
-    .protitle:nth-of-type(2),
-    .protitle:nth-of-type(3),
-    .protitle:nth-of-type(4),
-    .protitle:nth-of-type(5) {
-        background-position: -5vmin 2vmin;
+        width: 20%;
+        top: -9%;
+        right: 14%;
     }
 }
 
@@ -4141,7 +4137,7 @@ strong i:after {
         max-width: unset;
     }
     form>div:nth-of-type(9) {
-        margin-top: -9vmin;
+        margin-top: -16vmin;
     }
     html {
         background-position: -6vmax 10vmax;
@@ -4150,31 +4146,33 @@ strong i:after {
         width: 30.3%;
     }
     .protitle {
-        height: 133px;
-    }
-    .protitle:nth-of-type(1), 
-    .protitle:nth-of-type(2), 
-    .protitle:nth-of-type(3), 
-    .protitle:nth-of-type(4), 
-    .protitle:nth-of-type(5) {
-        background-size: 180%,auto;
-        background-position: -39vmin -4vmin;
+        height: 179px;
     }
     .magic-title {
         margin: 13vmin auto 0;
     }
+    .magic-title .wifi {
+        top: -6%;
+    }
     .magic-title:before {
-        top: -15%;
+        top: -12%;
         left: 39%;
     }
     .magic-title:after {
-        bottom: 39%;
+        bottom: -20%;
     }
     .boxfor3c {
-        margin: -24vmin 24vmin;
-        width: 78%;
+        margin: -34vmin 32vmin;
+        width: 66%;
     }
-
+    .protitle:nth-of-type(1),
+    .protitle:nth-of-type(2),
+    .protitle:nth-of-type(3),
+    .protitle:nth-of-type(4),
+    .protitle:nth-of-type(5) {
+        background-size: 180%;
+        background-position:-39vmin 1vmin;
+    }
 }
 
 @media screen and (min-width:751px) {
@@ -4832,7 +4830,7 @@ strong i:after {
     /*end fb_box*/
     /*商品內容*/
     .protitle {
-        height: 83px;
+        height: 107px;
         font-size: 0;
         line-height: 12vmin;
         letter-spacing: 1px;
@@ -6415,17 +6413,23 @@ strong i:after {
         margin: 17vmin auto 0;
     }
     .magic-title:before {
-        top: -29%;
+        top: -26%;
     }
     .magic-title:after {
         bottom: -44%;
     }
     .boxfor3c {
-        margin: 0 8vmin;
-        width: 90%;
+        margin: -9vmin 23vmin;
+        width: 72%;
     }
     .boxfor3c p {
-        width: 13%;
+        width: 16%;
+    }
+    .boxfor3c p:nth-of-type(2) {
+        width: 30%;
+    }
+    .boxfor3c p:nth-of-type(3) {
+        width: 20%;
     }
 }
 
@@ -6441,7 +6445,7 @@ strong i:after {
         background-position: -39vmin 25vmin, top;
     }
     .protitle {
-        height: 78px;
+        height: 101px;
     }
     .magic-title {
         width: 85%;
@@ -6456,6 +6460,9 @@ strong i:after {
     .list02 ul li {
         width: 47.7%;
     }
+    .protitle {
+        height: 98px;
+    }
 }
 
 @media screen and (max-width: 320px) {
@@ -6469,7 +6476,7 @@ strong i:after {
         width: 47.4%;
     }
     .protitle {
-        height: 73px;
+        height: 90px;
     }
     .magic-title {
         margin: 22vmin auto 0;
@@ -6484,14 +6491,7 @@ strong i:after {
         margin: 13vmax auto 0;
     }
     .boxfor3c {
-        margin: 3vmax 9vmax;
-    }
-    .protitle:nth-of-type(1), 
-    .protitle:nth-of-type(2), 
-    .protitle:nth-of-type(3), 
-    .protitle:nth-of-type(4), 
-    .protitle:nth-of-type(5) {
-        background-position: -2.3vmax 1vmax;
+        margin: -5vmax 12vmax;
     }
 }
 
@@ -6503,78 +6503,3 @@ strong i:after {
     display: block;
 }
 
-/* 由左往右發漸漸亮文字 */
-@keyframes light-to-right {
-    0% {
-        transform: translateX(-100px);
-    }
-    50% {
-        transform: translateX(20%);
-        filter: brightness(5);
-        opacity: 1;
-    }
-    70% {
-        transform: translateX(70%);
-        filter: brightness(10);
-        opacity: 1;
-    }
-    100% {
-        transform: translateX(130%);
-        filter: brightness(1);
-        opacity: 0.3;
-    }
-}
-
-@keyframes fade-in-out {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes flashit {
-    0% {
-      opacity: 0;
-    }
-    49% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    51% {
-      opacity: 0;
-    }
-    69% {
-      opacity: 0;
-    }
-    70% {
-      opacity: 0.8;
-    }
-    71% {
-      opacity: 0;
-    }
-    79% {
-      opacity: 0;
-    }
-    80% {
-      opacity: 0.2;
-    }
-    81% {
-      opacity: 0;
-    }
-    85% {
-      opacity: 0;
-    }
-    86% {
-      opacity: 0.5;
-    }
-    87% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
-  }
