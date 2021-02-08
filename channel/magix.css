@@ -4830,7 +4830,7 @@ strong i:after {
     /*end fb_box*/
     /*商品內容*/
     .protitle {
-        height: 107px;
+        height: 105px;
         font-size: 0;
         line-height: 12vmin;
         letter-spacing: 1px;
@@ -6462,7 +6462,7 @@ strong i:after {
         width: 47.7%;
     }
     .protitle {
-        height: 98px;
+        height: 97px;
     }
 }
 
