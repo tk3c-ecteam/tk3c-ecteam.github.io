@@ -705,12 +705,12 @@ body{margin:0px;padding:0;width:100%;}
         left: 43px;
     }
     .animate-group .flower {
-        margin: -26vmax -7vmax;
+        margin: -26vmax -9vmax;
     }
 }
 @media screen and (min-width: 2200px) {
     .animate-group .flower {
-        margin: -23vmax -7vmax;
+        margin: -23vmax -9vmax;
     }
     .animate-group .leaf-group {
         margin: -27.5vmax 36vmax 0;
