@@ -51,6 +51,8 @@ body{margin:0px;padding:0;width:100%;}
     width: 75%;
     position: relative;
     z-index: 20;
+    transform: scale(0.8);
+    opacity: 0;
 }
 .animate-group .leaf-group {
     width: 15%;
@@ -658,7 +660,7 @@ body{margin:0px;padding:0;width:100%;}
 .rightbtn .actbtn2 a .link3{width:68px;height:68px;margin:0 auto;border-radius:50%;color:#FFF;line-height:19px;box-sizing:border-box;padding-top:21px;margin-top:6px;background:#20a0dc;border:6px solid #3cbcf8;}
 .rightbtn .actbtn2 a .link4{
  line-height:36px;
- color: #000;
+ color: #5b3871;
  text-decoration:none;
  box-sizing:border-box;
  padding:2px 0;
@@ -668,7 +670,7 @@ body{margin:0px;padding:0;width:100%;}
  background-color: #ffffff;
  font-weight: bold;
  }
-.rightbtn .actbtn2 a .link4:hover{color: #ffffff;background-color: #8d0909;}
+.rightbtn .actbtn2 a .link4:hover{color: #ffffff;background-color: #59a8ac;}
 }
 .rightbtn .actbtn2 a .link4 span{background:#f3930a;box-sizing:border-box;border-radius:10px;color:white;display:block;height:31px;line-height:31px;font-size:14px;position:relative;text-align:left;text-indent:27%;}
 .rightbtn .actbtn2 a .link4 span:before{content:"";display:inline-block;background:url(../images/icon-rb.png) 0 0 no-repeat;width:14px;height:14px;position:absolute;left:10px;top:7px;}
