@@ -39,15 +39,15 @@ body{margin:0px;padding:0;width:100%;}
 .animate-group {
     width: 100%;
     height: 100%;
-    margin: -6vmax auto 26vmax;
+    margin: -5vmax auto 26vmax;
 }
 .animate-group .bird {
-    width: 10%;
+    width: 6%;
     margin-left: 25vmax;
 }
 .animate-group .flower {
     animation: zoom-out-in 4s ease-in-out infinite;
-    margin: -17vmax auto;
+    margin: -26vmax -7vmax;
     width: 75%;
     position: relative;
     z-index: 20;
@@ -433,6 +433,42 @@ body{margin:0px;padding:0;width:100%;}
 .btnarea ul{display:flex;justify-content:center;flex-wrap:wrap;list-style:none}
 .btnarea ul li{width:85%}
 .btnarea ul li img{width:100%;height:auto}
+@media screen and (max-width: 1900px) {
+    .animate-group {
+        margin: -7vmax auto 26vmax;
+    }
+    .animate-group .bird {
+        margin-left: 26vmax;
+    }
+    .animate-group .leaf-group {
+        margin: -33vmax 41vmax 0;
+    }
+}
+@media screen and (max-width: 1800px) {
+    .animate-group {
+        margin: -8vmax auto 26vmax;
+    }
+    .animate-group .bird {
+        margin-left: 29vmax;
+    }
+    .animate-group .leaf-group {
+        margin: -36.5vmax 43vmax 0;
+    }
+}
+@media screen and (max-width: 1700px) {
+    .animate-group {
+        margin: -9vmax auto 26vmax;
+    }
+    .animate-group .bird {
+        margin-left: 30vmax;
+    }
+    .animate-group .leaf-group {
+        margin: -34.5vmax 44vmax 0;
+    }
+    .animate-group .flower {
+        margin: -38vmax -7vmax;
+    }
+}
 @media screen and (max-width: 1600px) {
     .wrapper {
         margin: 7vmax auto 0;
@@ -441,13 +477,16 @@ body{margin:0px;padding:0;width:100%;}
         top: -4%;
     }
     .animate-group {
-        margin: -23vmax auto 14vmax;
+        margin: -21vmax auto 14vmax;
     }
     .animate-group .bird {
-        margin-left: 32vmax;
+        margin-left: 33vmax;
     }
     .animate-group .leaf-group {
-       margin: -41.2vmax 46.5vmax 0;
+       margin: -41vmax 46.5vmax 0;
+    }
+    .animate-group .flower {
+        margin: -37vmax -7vmax;
     }
 }
 @media screen and (max-width: 1440px) {
@@ -458,7 +497,7 @@ body{margin:0px;padding:0;width:100%;}
         margin: -5vmax auto 30vmax;
     }
     .animate-group .bird {
-        margin-left: 34vmax;
+        margin-left: 35vmax;
     }
     .animate-group .leaf-group {
         margin: -43.8vmax 48vmax 0;
@@ -469,14 +508,17 @@ body{margin:0px;padding:0;width:100%;}
         margin: -23vmax auto 7vmax;
     }
     .animate-group {
-        margin: -2vmax auto 37vmax;
+        margin: -1vmax auto 37vmax;
     }
     .animate-group .bird {
-        margin-left: 39vmax;
+        margin-left: 40vmax;
     }
     .animate-group .leaf-group {
         margin: -49.8vmax 52.5vmax 0;
         width: 14%;
+    }
+    .animate-group .flower {
+        margin: -49vmax -7vmax;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -509,13 +551,13 @@ body{margin:0px;padding:0;width:100%;}
         background-size: 122%;
     }
     .animate-group {
-        margin: -8vmax auto 28vmax;
+        margin: -6vmax auto 28vmax;
     }
     .animate-group .bird {
-        margin-left: 32vmax;
+        margin-left: 33vmax;
     }
     .animate-group .leaf-group {
-        margin: -46vmax 45vmax 0;
+        margin: 3vmax 45vmax 0;
     }
 }
 @media screen and (max-width: 800px) {
@@ -560,14 +602,17 @@ body{margin:0px;padding:0;width:100%;}
         font-size: 23px;
     }
     .animate-group {
-        margin: -21vmin auto 45vmin;
+        margin: -17vmin auto 45vmin;
     }
     .animate-group .bird {
-        margin-left: 41vmin;
+        margin-left: 43vmin;
     }
     .animate-group .leaf-group {
        margin: -58vmin 66vmin 0;
        width: 16%;
+    }
+    .animate-group .flower {
+        margin: -49vmin -18vmin;
     }
 }
 @media screen and (min-width:751px)
@@ -648,14 +693,28 @@ body{margin:0px;padding:0;width:100%;}
         margin: -4vmax auto 27vmax;
     }
     .animate-group .bird {
-        margin-left: 21vmax;
+        margin-left: 23vmax;
     }
     .animate-group .leaf-group {
-        margin: -27.2vmax 35.5vmax 0;
+        margin: -29vmax 36vmax 0;
         width: 20%;
     }
     .animate-group .leaf-group span:nth-of-type(1) {
         left: 43px;
+    }
+    .animate-group .flower {
+        margin: -26vmax -7vmax;
+    }
+}
+@media screen and (min-width: 2200px) {
+    .animate-group .flower {
+        margin: -23vmax -7vmax;
+    }
+    .animate-group .leaf-group {
+        margin: -27.5vmax 36vmax 0;
+    }
+    .animate-group .bird {
+        margin-left: 22vmax;
     }
 }
 @media screen and (min-width: 2500px) {
@@ -666,19 +725,20 @@ body{margin:0px;padding:0;width:100%;}
         font-size: 2.5vmax;
     }
     .animate-group {
-        margin: -5.8vmax auto 27vmax;
+        margin: -4vmax auto 27vmax;
     }
     .animate-group .bird {
         margin-left: 18vmax;
+        width: 8%;
     }
     .animate-group .leaf-group {
-        margin: -23vmax 31.5vmax 0;
+        margin: -23vmax 32.5vmax 0;
     }
     .animate-group .leaf-group span:nth-of-type(1) {
-        left: 75px;
+        left: 47px;
     }
     .animate-group .leaf-group span:nth-of-type(3) {
-        right: 63px;
+        right: 31px;
     }
 }
 
@@ -714,10 +774,13 @@ body{margin:0px;padding:0;width:100%;height:auto;}
 .title > .movie02{display:block;width:96%;height:220px;margin:0 auto;overflow:hidden;background:#000;padding:5px 0;}
 /* 標題動畫組 */
 .animate-group {
-    margin: -33vmin auto 57vmin;
+    margin: -30vmin auto 57vmin;
 }
 .animate-group .bird {
-    margin-left: 39vmin;
+    margin-left: 41vmin;
+}
+.animate-group .flower {
+    margin: -44vmin -18vmin;
 }
 .animate-group .leaf-group {
     margin: -53.6vmin 65vmin 0;
@@ -998,10 +1061,13 @@ h2.protitle:first-child{}
         font-size: 1.3em;
     }
     .animate-group {
-        margin: -36vmin auto 61vmin;
+        margin: -34vmin auto 61vmin;
+    }
+    .animate-group .bird {
+        margin-left: 43vmin;
     }
     .animate-group .leaf-group {
-        margin: -53.6vmin 67vmin 0;
+        margin: -53vmin 67vmin 0;
     }
 }
 @media screen and (max-width: 361px)  {
@@ -1012,7 +1078,7 @@ h2.protitle:first-child{}
         width: 48.2%;
     }
     .animate-group {
-        margin: -36vmin auto 65vmin;
+        margin: -33vmin auto 65vmin;
     }
 }
 @media screen and (max-width: 320px) {
@@ -1026,10 +1092,16 @@ h2.protitle:first-child{}
         background-position: -39vmin 30vmin;
     }
     .animate-group {
-        margin: -39vmin auto 70vmin;
+        margin: -37vmin auto 70vmin;
+    }
+    .animate-group .bird {
+        margin-left: 43vmin;
     }
     .animate-group .leaf-group span {
         width: 27%;
+    }
+    .animate-group .leaf-group {
+        margin: -50vmin 66vmin 0;
     }
 }
 
