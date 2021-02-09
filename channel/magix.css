@@ -275,7 +275,7 @@ i {
     position: absolute;
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210205_start.png) no-repeat;
     width: 25%;
-    height: 45%;
+    height: 55%;
     background-size: 100%;
     top: -28%;
     left: 40%;
@@ -298,11 +298,11 @@ i {
 
 .magic-title .flash-bg {
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 0;
     width: 100%;
     opacity: 0;
-    animation: flashit 8s infinite;
+    animation: flashit 4s infinite;
     z-index: -1;
 }
 
@@ -362,12 +362,12 @@ i {
     content: "";
     display: block;
     width: 250px;
-    height: 265px;
+    height: 270px;
     position: absolute;
-    top: -265px;
-    left: -36.5%;
+    top: -274px;
+    left: -37.3%;
     z-index: 1;
-    background-size: 116%;
+    background-size: 117%;
 }
 
 .actbtn::after {
@@ -407,7 +407,7 @@ i {
     display: block;
     margin-bottom: 2px;
     margin: 3% 0 0 6%;
-    background-color: #dfbf81;
+    background-color: #feecbb;
     font-size: 18px;
 }
 
@@ -416,12 +416,12 @@ i {
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -moz-transition: all 0.5;
-    color: #fff;
+    color: #000;
     font-weight: bold;
     width: 150px;
     margin: 0 0 0 6%;
     transform: translateY(0.01em);
-    background: #b10a88;
+    background: #e0bf81;
 }
 
 .rightbtn>a.btn02 {
@@ -6413,8 +6413,10 @@ strong i:after {
         margin: 17vmin auto 0;
     }
     .magic-title:before {
-        top: -26%;
+        top: -30%;
         height: 60%;
+        width: 35%;
+        left: 36%;
     }
     .magic-title:after {
         bottom: -44%;
