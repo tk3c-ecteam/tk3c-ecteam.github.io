@@ -233,9 +233,10 @@ body {
   #recover-container #rule {
     background: -webkit-gradient(linear, left top, right top, from(#fef0c3), to(#fddf82));
     background: linear-gradient(90deg, #fef0c3, #fddf82);
-    -webkit-box-shadow: 5PX 0PX 0PX 0PX #a0a09c2e;
-            box-shadow: 5PX 0PX 0PX 0PX #a0a09c2e;
+    -webkit-box-shadow: 2PX 2PX 2PX 2PX #f8b70d;
+            box-shadow: 2PX 2PX 2PX 2PX #f8b70d;
     border-radius: 10px;
+    width: 98%;
   }
   #recover-container #rule h2 {
     position: relative;
@@ -243,7 +244,7 @@ body {
   }
   #recover-container #rule .rule-text {
     width: 90%;
-    margin: -2vmax auto 50px;
+    margin: -2vmax 32px 50px;
   }
   #recover-container #rule .rule-text p {
     font-size: 1.3em;
@@ -284,8 +285,12 @@ body {
     font-size: 2em;
     line-height: 3.6em;
   }
+  #recover-container #rule {
+    border-radius: 8px;
+  }
   #recover-container #rule .rule-text {
     top: 135px;
+    margin: -12vmin auto 80px;
   }
   #recover-container #rule .rule-text h4 {
     font-size: 2.5em;
