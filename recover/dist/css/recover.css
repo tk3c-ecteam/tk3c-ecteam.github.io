@@ -80,7 +80,7 @@ body {
   margin-top: 5vmax;
   background: url("https://tk3c-ecteam.github.io/recover/dist/images/textcube.png") no-repeat center;
   position: relative;
-  background-size: 100%;
+  background-size: 100% 100%;
   background-position: 0 2vmax;
   height: auto;
 }
@@ -127,6 +127,7 @@ body {
   height: 100%;
   display: block;
   cursor: pointer;
+  margin: 0 auto;
 }
 
 /* 手機版選單 */
@@ -183,6 +184,9 @@ body {
   #recover-container #rule .rule-text {
     width: 75%;
   }
+  #recover-container #count a {
+    width: 90%;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
@@ -208,7 +212,7 @@ body {
     cursor: default;
   }
   #recover-container .content {
-    background-size: cover;
+    background-size: 100% 90%;
   }
   #recover-container .content h2 {
     background-size: 50%;
@@ -261,11 +265,15 @@ body {
   #recover-container .content {
     background-position: 0 13vmin;
     padding-bottom: 1px;
+    background-size: 100% 85%;
   }
   #recover-container .content h2 {
     background-size: 60%;
     font-size: 2em;
     line-height: 3.6em;
+  }
+  #recover-container #rule {
+    background-size: 100% 90%;
   }
   #recover-container #rule .rule-text {
     top: 135px;
@@ -278,6 +286,7 @@ body {
   }
   #recover-container #recover-step p {
     width: 90%;
+    margin: 0 17px 0;
   }
   #mobile-tab ul li {
     width: 34%;
@@ -287,6 +296,9 @@ body {
 @media only screen and (max-width: 376px) {
   #recover-container #rule .rule-text p {
     font-size: 0.95em;
+  }
+  #mobile-tab ul li {
+    width: 33.3%;
   }
 }
 
