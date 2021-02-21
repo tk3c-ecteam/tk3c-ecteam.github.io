@@ -49,8 +49,8 @@ figure.pattern{width:20%;margin:2% 0 0 2vmax;}
 .last .row ul li{width:100%;border-bottom:#fff 1px solid;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;padding:.5vmax 0.5vmax 3vmax;position: relative;}
 h4.exptitle{font-size:1.2vmax;font-weight:bold;color: #6c6c6c;}
 h5.expword{}
-figure.real{background-image:url(../assets/images/coffee/beans_bake_real.png);background-position:top left;background-size:15vmax;background-repeat:no-repeat;width:18%;height:1.5vmax;position:absolute;margin:3vmax 0 0 0;overflow:hidden;top:0;left:1.5vmax;}
-figure.total{background-image:url(../assets/images/coffee/beans_bake_total.png);background-position:top left;background-size:15vmax;background-repeat:no-repeat;width:100%;height:1.5vmax;position:absolute;margin:3vmax 0 0 0;overflow:hidden;top:0;left:1.5vmax;}
+figure.real{background-image:url(https://tk3c-ecteam.github.io/coffee/assets/images/coffee/beans_bake_real.png);background-position:top left;background-size:15vmax;background-repeat:no-repeat;width:18%;height:1.5vmax;position:absolute;margin:3vmax 0 0 0;overflow:hidden;top:0;left:1.5vmax;}
+figure.total{background-image:url(https://tk3c-ecteam.github.io/coffee/assets/images/coffee/beans_bake_total.png);background-position:top left;background-size:15vmax;background-repeat:no-repeat;width:100%;height:1.5vmax;position:absolute;margin:3vmax 0 0 0;overflow:hidden;top:0;left:1.5vmax;}
 figure.radarmap{width:100%;padding: 1.5vmax;margin: -1vmax 0 0 0;}
 .pdname h5{color:#fff;text-align:end;font-weight:bold;}
 .last .row ul li:last-child{border:none;}
