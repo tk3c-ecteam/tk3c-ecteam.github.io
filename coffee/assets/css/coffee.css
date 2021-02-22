@@ -1000,7 +1000,7 @@ section#crown_container nav {
   }
 }
 
-@media screen and (max-width: 376px) and (min-height: 650px) and (max-height: 670px) {
+@media screen and (max-width: 376px) and (max-height: 670px) {
   #coffee-mobile-container .mobile-content {
     margin: 25vmin auto 0;
   }
@@ -1027,6 +1027,18 @@ section#crown_container nav {
   }
 }
 
+@media only screen and (max-width: 360px) {
+  .swiper-mobile {
+    height: 46vh;
+  }
+  .swiper-mobile .swiper-slide {
+    height: 35vh;
+  }
+  .price-area h2 {
+    font-size: 30px;
+  }
+}
+
 @media only screen and (max-width: 320px) {
   #coffee-mobile-container .mobile-content {
     margin: 30vmin auto 0;
@@ -1034,6 +1046,9 @@ section#crown_container nav {
   #coffee-mobile-container .coffee .close {
     top: 10%;
     font-size: 2em;
+  }
+  .swiper-mobile .swiper-slide {
+    height: 50vh;
   }
   .swiper-mobile .swiper-slide .slide-bg .title {
     font-size: 12px;
