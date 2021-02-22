@@ -797,6 +797,9 @@
       <div class="content-area">
           <section class="coffee" v-for="n in 8" :id="`coffee${n}`">
               <a class="top-buy" :href="otherDetail[2]['url'][n - 1]" target="_blank"></a>
+              <span class="close" @click="cancel">
+                <i class="fas fa-times"></i>
+              </span>
               <div class="coffee-detail"><img :src="getImgUrl(otherDetail[3]['content'][n - 1])"></div>
               <div class="link-group">
                   <a class="prev" @click="alert(`${otherDetail[4]['singlePrev'][n - 1]}`)">上一個</a>
@@ -804,7 +807,6 @@
               </div>
               <div class="bottom-group">
                   <a class="sure-buy" :href="otherDetail[2]['url'][n - 1]" target="_blank">我要購買</a>
-                  <a class="close" @click="cancel">關閉</a>
             </div>
           </section>
       </div>
