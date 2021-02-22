@@ -1028,21 +1028,21 @@ section#crown_container nav {
 }
 
 @media only screen and (max-width: 360px) {
-  .swiper-mobile {
+  .swiper-mobile .swiper-slide {
     height: 46vh;
   }
-  .swiper-mobile .swiper-slide {
-    height: 35vh;
+  .swiper-mobile .swiper-slide .slide-bg {
+    height: 33vh;
   }
   .price-area h2 {
     font-size: 30px;
   }
-}
-
-@media only screen and (max-width: 320px) {
   #coffee-mobile-container .mobile-content {
     margin: 30vmin auto 0;
   }
+}
+
+@media only screen and (max-width: 320px) {
   #coffee-mobile-container .coffee .close {
     top: 10%;
     font-size: 2em;
