@@ -341,7 +341,7 @@ figure.real, figure.total {
 }
 
 .bottomlow h3 {
-  font-size: 2.5vmax;
+  font-size: 2vmax;
   margin: 0 0 0 -5vmax;
 }
 
@@ -356,18 +356,18 @@ figure.real, figure.total {
 }
 
 .fade-left {
-  -webkit-animation: fade-in-left 0.8s ease-in;
-          animation: fade-in-left 0.8s ease-in;
-}
-
-.fade-left-fast {
   -webkit-animation: fade-in-left 1.2s ease-in;
           animation: fade-in-left 1.2s ease-in;
 }
 
+.fade-left-fast {
+  -webkit-animation: fade-in-left 0.8s ease-in;
+          animation: fade-in-left 0.8s ease-in;
+}
+
 .fade-left-last {
-  -webkit-animation: fade-in-left 1.5s ease-in;
-          animation: fade-in-left 1.5s ease-in;
+  -webkit-animation: fade-in-left 1.3s ease-in;
+          animation: fade-in-left 1.3s ease-in;
 }
 
 /* 上方選單 */

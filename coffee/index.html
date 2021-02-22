@@ -171,10 +171,10 @@
                             <div class="middle">
                                 <div class="row">
                                     <div class="imggroup">
-                                        <figure class="pd" data-swiper-parallax="-500" data-swiper-parallax-opacity="0.5">
+                                        <figure class="pd">
                                             <img src="./assets/images/coffee/product/beans_style_2.png">
                                         </figure>
-                                        <figure class="pdbg" data-swiper-parallax="-300" data-swiper-parallax-opacity="0.5">
+                                        <figure class="pdbg">
                                             <img src="./assets/images/coffee/background/beans_style_2.png">
                                         </figure>
                                     </div>
@@ -796,16 +796,16 @@
       </div>
       <div class="content-area">
           <section class="coffee" v-for="n in 8" :id="`coffee${n}`">
-              <span class="close" @click="cancel">
-                  <i class="fas fa-times"></i>
-              </span>
               <a class="top-buy" :href="otherDetail[2]['url'][n - 1]" target="_blank"></a>
               <div class="coffee-detail"><img :src="getImgUrl(otherDetail[3]['content'][n - 1])"></div>
               <div class="link-group">
                   <a class="prev" @click="alert(`${otherDetail[4]['singlePrev'][n - 1]}`)">上一個</a>
                   <a class="next" @click="alert(`${otherDetail[5]['mixNext'][n - 1]}`)">下一個</a>
               </div>
-              <div class="sure-buy"><a :href="otherDetail[2]['url'][n - 1]" target="_blank">我要購買</a></div>
+              <div class="bottom-group">
+                  <a class="sure-buy" :href="otherDetail[2]['url'][n - 1]" target="_blank">我要購買</a>
+                  <a class="close" @click="cancel">關閉</a>
+            </div>
           </section>
       </div>
   </div>
