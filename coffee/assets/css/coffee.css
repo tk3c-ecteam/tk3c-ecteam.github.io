@@ -149,6 +149,11 @@ a {
   width: 20px;
   height: 20px;
   margin: 0 2%;
+  bottom: 3vmax !important;
+}
+
+.swiper-pagination-bullet {
+  opacity: 0.3 !important;
 }
 
 .swiper-button-prev,
