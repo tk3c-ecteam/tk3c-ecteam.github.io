@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>咖啡</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://tk3c-ecteam.github.io/coffee/assets/css/style.css">
+    <link rel="stylesheet" href="https://tk3c-ecteam.github.io/coffee/assets/css/coffee.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="crown_container">
+        <!-- 選單區 -->
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="./index.html">淺口袋</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse nav justify-content-center" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="singleMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  單一產區
+                </a>
+                <div class="dropdown-menu" aria-labelledby="singleMenuLink">
+                 <a class="dropdown-item"  @click="alert(i)" v-for="(p,i) in coffees.single" :value="p">{{ p }}</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" id="mixMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    綜合產區
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="mixMenuLink">
+                   <a class="dropdown-item" v-for="(p,i) in coffees.mix" @click="alert(i + 4)">{{ p }}</a>
+                  </div>
+                </li>
+              <li class="nav-item"><a class="nav-link">活動專區</a></li>
+            </ul>
+          </div>
+      </nav>
+
+        <!-- 主要內容區  -->
+        <!-- 耶加雪菲 -->
+        <article id="trisection" class="beans_type_1">
+            <div class="swiper-container">
+                <div class="parallax-bg" data-swiper-parallax="-23%"></div>
+                    <div class="swiper-wrapper">
+
+                        <!-- 耶加雪菲 -->
+                        <div class="swiper-slide beans_type_1">
+                            <div class="first">
+                                <div class="row">
+                                    <div class="tophigh" style="background: linear-gradient(180deg,#fae79c,#f7d75e);">
+                                        <div class="pdtitle" data-swiper-parallax="-100">
+                                            <h2>衣索比亞</h2>
+                                            <h3>耶加雪菲</h3>
+                                        </div>
+                                        <figure class="pattern">
+                                            <img src="./assets/images/pattern/beans_style_01.png">
+                                        </figure>
+                                        <div class="en_pdtitle" data-swiper-parallax="-300">
+                                            <h2>Ethiopia</h2>
+                                            <h3>Yegachefi</h3>
+                                        </div>
+                                    </div>
+                                    <div class="bottomlow">
+                                        <h3 data-swiper-parallax-opacity="0.5">經典風味 咖啡原鄉</h3>
+                                        <p data-swiper-parallax-scale="0.15">經典的花香及鮮明的酸甜清香，以及入口後的檸檬果香韻味，讓耶加雪菲顯得優雅且細緻</p>
+                                        <div class="buyarea">
+                                            <div class="price">
+                                                <sub>$</sub>
+                                                <b>490</b>
+                                                <i>/227g</i>
+                                            </div>
+                                            <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_1.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_1.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(180deg,#fae79c,#f7d75e);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>2</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">淺烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_01.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">花香、檸檬、柑橘</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">衣索比亞</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">可能喜歡</h4>
+                                            <div class="expword">
+                                                <h5><a class="like-link" @click="alert(1)">微微特南果</a></h5>
+                                                <h5><a class="like-link" @click="alert(4)">非洲小農特選</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 微微特南果 -->
+                        <div class="swiper-slide beans_type_2">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(180deg,#87d9d7,#69cfcc);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>瓜地馬拉</h2>
+                                        <h3>微微特南果</h3>
+                                    </div>
+                                    <figure class="pattern">
+                                        <img src="./assets/images/pattern/beans_style_01.png">
+                                    </figure>
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Guatemala</h2>
+                                        <h3>HueHuetenango</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">莊園精選 產地直進</h3>
+                                    <p data-swiper-parallax-scale="0.15">淺度烘培下瓜地馬拉豆種，具有優質且強烈及獨特清香，隨著溫度感受多元細膩的風味變化。</p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>490</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_2.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_2.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(180deg,#87d9d7,#69cfcc);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>2</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">淺烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_02.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">柑橘、柑柚、金桔</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">瓜地馬拉</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">可能喜歡</h4>
+                                            <div class="expword">
+                                                <h5><a class="like-link" @click="alert(0)">耶加雪菲</a></h5>
+                                                <h5><a class="like-link" @click="alert(4)">非洲小農特選</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- 高山極硬豆 -->
+                        <div class="swiper-slide beans_type_3">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(180deg,#b5b6e2,#8687d0);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>瓜地馬拉</h2>
+                                        <h3>高山極硬豆</h3>
+                                    </div>
+                                    <figure class="pattern">
+                                        <img src="./assets/images/pattern/beans_style_01.png">
+                                    </figure>
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Guatemala</h2>
+                                        <h3>Strict Hightland</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">莊園經典 口感厚實</h3>
+                                    <p data-swiper-parallax-scale="0.15">經過較長的烘培過程使獨有的清香風味 提增了一份焦糖般的香甜，濃醇不過份強烈，搭配上酸甜苦的完美結合，入口甘甜，圓潤順口。</p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>490</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_5.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_5.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(180deg,#b5b6e2,#8687d0);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>7</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">深烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/radarmap/beans_style_06.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">核桃、焦糖、巧克力</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">瓜地馬拉</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">可能喜歡</h4>
+                                            <div class="expword">
+                                                <h5><a class="like-link" @click="alert(6)">綜合經典</a></h5>
+                                                <h5><a class="like-link" @click="alert(5)">中南美洲莊園特選</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 曼特寧 -->
+                        <div class="swiper-slide beans_type_4">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(180deg,#c9d99d,#a8c363);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>蘇門答臘</h2>
+                                        <h3>曼特寧</h3>
+                                    </div>
+                                    <figure class="pattern">
+                                        <img src="./assets/images/pattern/beans_style_01.png">
+                                    </figure>
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Sumatra</h2>
+                                        <h3>Mandheling</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">經典風味 深培代表</h3>
+                                    <p data-swiper-parallax-scale="0.15">經典中的絕妙風味，口味較為濃厚，深培獨有的醇度及苦度結合洽大好處，更被視為最醇厚的咖啡</p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>490</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/pt.aspx?pid=166077" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_8.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_8.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(180deg,#c9d99d,#a8c363);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>8</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">深烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_08.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">甜藥草、焦糖、巧克力</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">蘇門答臘</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">可能喜歡</h4>
+                                            <div class="expword">
+                                                <h5><a class="like-link" @click="alert(8)">特選綜合</a></h5>
+                                                <h5><a class="like-link" @click="alert(2)">高山極硬豆</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 非洲小農  -->
+                        <div class="swiper-slide beans_type_5">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(180deg,#fbb8c9,#f88ea9);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>非洲</h2>
+                                        <h3>小農特選</h3>
+                                    </div>
+
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Africa</h2>
+                                        <h3>Micro-farmer Choices</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">柔順果香 口感扎實</h3>
+                                    <p data-swiper-parallax-scale="0.15">花果清香的巧妙搭配，相互補足 將原始的風味保留及提增餘韻，使酸甜感更加圓潤平衡。</p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>490</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_4.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_4.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(180deg,#fbb8c9,#f88ea9);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>4</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">中烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_03.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">花香、柳橙、話梅</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">衣索比亞、肯亞</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">可能喜歡</h4>
+                                            <div class="expword">
+                                                <h5><a class="like-link" @click="alert(0)">耶加雪菲</a></h5>
+                                                <h5><a class="like-link" @click="alert(1)">微微特南果</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                         <!-- 中南美洲莊園特選  -->
+                         <div class="swiper-slide beans_type_6">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(180deg,#ffbfeb,#ff9ae0);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>中南美洲</h2>
+                                        <h3>莊園特選</h3>
+                                    </div>
+
+                                    <figure class="pattern">
+                                        <img src="./assets/images/pattern/beans_style_02.png">
+                                    </figure>
+
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>South</h2>
+                                        <h3>Pentral Selection</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">莊園綜合 適合加奶</h3>
+                                    <p data-swiper-parallax-scale="0.15">主調產於高地瓜地馬拉風味，再以口感較為平庸溫順低海拔豆品作為襯托，圓潤乾口且帶有微微酸甜，為奶類調飲搭配首選。</p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>490</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/pt.aspx?cid=83187&aid=22279&hid=67843&pid=186890" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_3.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_3.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(180deg,#ffbfeb,#ff9ae0);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>5</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">中烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_03.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">堅果、果乾、紅茶</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">瓜地馬拉、尼加拉瓜</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">可能喜歡</h4>
+                                            <div class="expword">
+                                                <h5><a class="like-link" @click="alert(2)">高山極硬豆</a></h5>
+                                                <h5><a class="like-link" @click="alert(6)">綜合咖啡豆</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 經典綜合咖啡豆 -->
+                        <div class="swiper-slide beans_type_7">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(180deg,#414141,#080808);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>經典</h2>
+                                        <h3>綜合咖啡豆</h3>
+                                    </div>
+
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Crown</h2>
+                                        <h3>Classic Blend</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">嚴選經典 風味平衡</h3>
+                                    <p data-swiper-parallax-scale="0.15">綜合亞洲/非洲/中美洲三大生產地，將主流豆品完美結合，絕佳經典風味，是喜愛咖啡不容錯過的常備豆品！</p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>490</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_7.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_7.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(180deg,#414141,#080808);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>6</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">中烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_07.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">橙皮、牛奶糖、甘草</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">瓜地馬拉、衣索比亞 印尼、巴西、肯亞</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">可能喜歡</h4>
+                                            <div class="expword">
+                                                <h5><a class="like-link" @click="alert(2)">高山極硬豆</a></h5>
+                                                <h5><a class="like-link" @click="alert(7)">特選綜合咖啡豆</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 特級綜合咖啡豆 -->
+                        <div class="swiper-slide beans_type_8">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(180deg,#d7b98d,#caa368);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>特級</h2>
+                                        <h3>綜合咖啡豆</h3>
+                                    </div>
+
+                                    <figure class="pattern">
+                                        <img src="./assets/images/pattern/beans_style_02.png">
+                                    </figure>
+
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Crown</h2>
+                                        <h3>Estate Boutique</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">特級綜合 適合加奶</h3>
+                                    <p data-swiper-parallax-scale="0.15">綜合經典特選豆經深度烘培後 後韻十足，饕客首選 精品原味風味經典 加奶特調香醇濃厚。</p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>490</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_6.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_6.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(180deg,#d7b98d,#caa368);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>9</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">深烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_05.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">堅果、奶油、巧克力</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">瓜地馬拉、哥倫比亞 巴西</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">可能喜歡</h4>
+                                            <div class="expword">
+                                                <h5><a class="like-link" @click="alert(2)">高山極硬豆</a></h5>
+                                                <h5><a class="like-link" @click="alert(6)">經典綜合咖啡豆</a></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 藝妓 -->
+                        <div class="swiper-slide beans_type_9">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(to left top,#997d54,#be9a64);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>藝妓</h2>
+                                    </div>
+
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Geisha</h2>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">莊園嚴選  清新優雅</h3>
+                                    <p data-swiper-parallax-scale="0.15">
+                                        翡翠莊園屢次獲獎，藝妓咖啡已成為全球咖啡愛好者眼中無價瑰寶。
+                                    </p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>1,500</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_11.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_special.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(to left top,#997d54,#be9a64);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>1</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">淺烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_special.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">花香、百香果、紅茶</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">巴拿馬</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 肯亞 -->
+                        <div class="swiper-slide beans_type_10">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(to top left,#997d54,#be9a64);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>肯亞</h2>
+                                        <h3>特級圓豆</h3>
+                                    </div>
+
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Kenya</h2>
+                                        <h3>Coop.PB</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">特色產區 酸甜果汁</h3>
+                                    <p data-swiper-parallax-scale="0.15">通過公平貿易認證的農民組織。在肯亞特有磷酸土壤中，孕育出具特色的南非風味。</p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>990</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_10.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_special.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(to top left,#997d54,#be9a64);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>4</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">中烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_special.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">黑醋栗、覆盆子、莓果</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">肯亞</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 西達摩 日曬 -->
+                        <div class="swiper-slide beans_type_11">
+                            <div class="first">
+                            <div class="row">
+                                <div class="tophigh" style="background: linear-gradient(to left top,#997d54,#be9a64);">
+                                    <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <h2>西達摩</h2>
+                                        <h3>日曬</h3>
+                                    </div>
+
+                                    <div class="en_pdtitle" data-swiper-parallax="-300">
+                                        <h2>Ethiopia</h2>
+                                        <h3>Sidamo Natural</h3>
+                                    </div>
+                                </div>
+                                <div class="bottomlow">
+                                    <h3 data-swiper-parallax-opacity="0.5">莊園嚴選 豐富口感</h3>
+                                    <p data-swiper-parallax-scale="0.15">
+                                        衣索比亞特色產區之一，
+                                        經過日曬，豆品水果風味濃郁飽滿，
+                                         口感醇厚，帶有莓果及蜂蜜般的甜味。
+                                    </p>
+                                    <div class="buyarea">
+                                        <div class="price">
+                                            <sub>$</sub>
+                                            <b>990</b>
+                                            <i>/227g</i>
+                                        </div>
+                                        <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="middle">
+                                <div class="row">
+                                    <div class="imggroup">
+                                        <figure class="pd">
+                                            <img src="./assets/images/product/beans_style_9.png">
+                                        </figure>
+                                        <figure class="pdbg">
+                                            <img src="./assets/images/background/beans_style_special.png">
+                                        </figure>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="last" style="background: linear-gradient(to left top,#997d54,#be9a64);">
+                                <div class="row">
+                                    <div class="bakenum">
+                                        <i>2</i>
+                                        <b>/9</b>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <h4 class="exptitle">烘培程度</h4>
+                                            <h5 class="expword">淺烘培</h5>
+                                            <figure class="real"></figure>
+                                            <figure class="total"></figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">感官評鑑</h4>
+                                            <figure class="radarmap">
+                                                <img src="./assets/images/radarmap/beans_style_special.png">
+                                            </figure>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">風味</h4>
+                                            <h5 class="expword">花香、莓果、鳳梨、蜂蜜</h5>
+                                        </li>
+                                        <li>
+                                            <h4 class="exptitle">產地</h4>
+                                            <h5 class="expword">衣索比亞</h5>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+            </div>
+        </article>
+      </section>
+
+
+    <!-- 手機版 -->
+    <div id="coffee-mobile-container">
+      <!-- 選單區 -->
+      <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="./index.html">淺口袋</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown active">
+              <a class="nav-link dropdown-toggle" href="#" id="singleMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                單一產區
+              </a>
+              <div class="dropdown-menu" aria-labelledby="singleMenuLink">
+                <a class="dropdown-item" v-for="p in products[6]['single'].length"  @click="alert(p)" :value="p" href="#">{{ products[6]['single'][p - 1] }}</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="mixMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  綜合產區
+                </a>
+                <div class="dropdown-menu" aria-labelledby="mixMenuLink">
+                  <a class="dropdown-item" href="#" v-for="p in products[7]['mix'].length" @click="alert(p + 4)">{{ products[7]['mix'][p - 1] }}</a>
+                </div>
+              </li>
+            <li class="nav-item"><a class="nav-link">活動專區</a></li>
+          </ul>
+        </div>
+    </nav>
+      <div class="header">
+          <h2>logo</h2>
+          <div class="nav-bar" @click="toggleNav" :class="{active: headerActive}">
+              <i class="fas fa-align-justify"></i>
+          </div>
+      </div>
+
+      <div class="mobile-content" :style="{'background': 'linear-gradient(180deg,'+ changeColor +')'}">
+          <!-- Slider main container -->
+          <div class="swiper-mobile">
+                  <!-- Additional required wrapper -->
+                  <div class="swiper-wrapper">
+                      <!-- Slides -->
+                      <div class="swiper-slide" v-for="p in products[2]['img'].length">
+                          <div class="slide-bg" :style="{background: 'url('+ getImgUrl(products[3]['background'][p -1])+')','background-size': 'cover'}">
+                              <div class="text-area">
+                                  <h2 class="title place">{{ products[1]['place'][p -1] }}</h2>
+                                  <h3 class="title">{{ products[0]['name'][p -1] }}</h3>
+                                  <p class="score-text">
+                                      <span class="score">
+                                          {{ products[4]['score'][p - 1] }}
+                                      </span>
+                                      <sup>/9</sup>
+                                  </p>
+                                  <div class="textEN-group">
+                                    <h2>{{ products[9]['placeEN'][p -1] }}</h2>
+                                    <h3>{{ products[8]['nameEN'][p -1] }}</h3>
+                                  </div>
+                              </div>
+                              <p><img :src="getImgUrl(products[2]['img'][p -1])"></p>
+                          </div>
+                      </div>
+                  </div>
+          </div>
+      </div>
+
+      <!-- 價錢連結區 -->
+      <div class="price-area" v-for="other in otherDetail[0]['price'].length" :value="other - 1">
+          <div class="price">
+              <h2>${{ otherDetail[0]['price'][n - 1] }}/<em>227g</em></h2>
+          </div>
+          <a class="buy" :href="goCoffeeUrl()" target="_blank">購買</a>
+      </div>
+      <div class="content-area">
+          <section class="coffee" v-for="n in 8" :id="`coffee${n}`">
+              <a class="top-buy" :href="otherDetail[2]['url'][n - 1]" target="_blank"></a>
+              <span class="close" @click="cancel">
+               <img src="./assets/images/close.png">
+              </span>
+              <div class="coffee-detail"><img :src="getImgUrl(otherDetail[3]['content'][n - 1])"></div>
+              <div class="link-group">
+                  <a class="prev" @click="alert(`${otherDetail[4]['singlePrev'][n - 1]}`)">上一個</a>
+                  <a class="next" @click="alert(`${otherDetail[5]['mixNext'][n - 1]}`)">下一個</a>
+              </div>
+              <div class="bottom-group">
+                  <a class="sure-buy" :href="goCoffeeUrl()" target="_blank">我要購買</a>
+            </div>
+          </section>
+      </div>
+  </div>
+    <script src="https://tk3c-ecteam.github.io/coffee/assets/js/coffee.min.js"></script>
+</body>
+
+</html>
