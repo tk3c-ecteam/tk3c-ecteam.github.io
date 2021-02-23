@@ -325,8 +325,8 @@ figure.real, figure.total {
 }
 
 .en_pdtitle h2, .en_pdtitle h3 {
-  font-family: Palatino,serif;
-  font-weight: bold;
+  font-family: Palatino,serif !important;
+  font-weight: bold !important;
 }
 
 .last li:nth-of-type(5) .expword {
@@ -596,10 +596,9 @@ figure.real, figure.total {
     display: block;
     margin: 0 auto 0;
     color: #4c4646;
-    font-size: 5vmin;
-    font-weight: bold;
+    font-size: 4.5vmin;
     text-align: center;
-    line-height: 8vmin;
+    line-height: 9vmin;
   }
   #coffee-mobile-container .coffee .top-buy {
     position: absolute;
@@ -907,8 +906,8 @@ figure.real, figure.total {
   }
   #coffee-mobile-container .coffee .bottom-group a {
     height: 40px;
-    line-height: 40px;
-    font-size: 1.5em;
+    line-height: 11vmin;
+    font-size: 1.3em;
   }
   #coffee-mobile-container .coffee .coffee-detail {
     margin-top: 13vmin;
@@ -1019,6 +1018,9 @@ figure.real, figure.total {
   #coffee-mobile-container .mobile-content {
     margin: 25vmin auto 0;
   }
+  #coffee-mobile-container .coffee .bottom-group a {
+    font-size: 1.1em;
+  }
   .price-area {
     margin: 17vmin auto 10%;
   }
@@ -1060,7 +1062,6 @@ figure.real, figure.total {
   }
   #coffee-mobile-container .coffee .bottom-group a {
     line-height: 37px;
-    font-size: 1.3em;
   }
   #coffee-mobile-container .coffee .close {
     font-size: 1.7em;
@@ -1072,7 +1073,7 @@ figure.real, figure.total {
     top: 10%;
   }
   #coffee-mobile-container .coffee .bottom-group a {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .swiper-mobile .swiper-slide {
     height: 50vh;
@@ -1110,6 +1111,13 @@ figure.real, figure.total {
   .swiper-pc .swiper-slide
 .slide-bg .score-text sup {
     font-size: 25px;
+  }
+}
+
+/* for ie */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .bottomlow p {
+    word-break: normal;
   }
 }
 
