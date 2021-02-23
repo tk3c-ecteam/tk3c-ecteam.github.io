@@ -310,7 +310,7 @@
                                         <h3>曼特寧</h3>
                                     </div>
                                     <figure class="pattern">
-                                        <img src="./assets/images/coffee/pattern/beans_style_01.png">
+                                        <img src="./assets/images/pattern/beans_style_01.png">
                                     </figure>
                                     <div class="en_pdtitle" data-swiper-parallax="-300">
                                         <h2>Sumatra</h2>
@@ -1012,7 +1012,7 @@
       <!-- 價錢連結區 -->
       <div class="price-area" v-for="other in otherDetail[0]['price'].length" :value="other - 1">
           <div class="price">
-              <h2>$`${otherDetail[0]['price'][n -1]}`/<em>227g</em></h2>
+              <h2>${{ otherDetail[0]['price'][n - 1] }}/<em>227g</em></h2>
           </div>
           <a class="buy" :href="goCoffeeUrl(other)" target="_blank">購買</a>
       </div>
