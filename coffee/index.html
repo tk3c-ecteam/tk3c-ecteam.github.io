@@ -277,7 +277,7 @@
                                         <li>
                                             <h4 class="exptitle">感官評鑑</h4>
                                             <figure class="radarmap">
-                                                <img src="./assets/coffee/radarmap/beans_style_06.png">
+                                                <img src="./assets/radarmap/beans_style_06.png">
                                             </figure>
                                         </li>
                                         <li>
@@ -1012,7 +1012,7 @@
       <!-- 價錢連結區 -->
       <div class="price-area" v-for="other in otherDetail[0]['price'].length" :value="other - 1">
           <div class="price">
-              <h2>${{ otherDetail[0]['price'][n - 1] }}/<em>227g</em></h2>
+              <h2>${{ otherDetail[0]['price'][other - 1] }}/<em>227g</em></h2>
           </div>
           <a class="buy" :href="goCoffeeUrl(other)" target="_blank">購買</a>
       </div>
@@ -1028,7 +1028,7 @@
                   <a class="next" @click="alert(`${otherDetail[5]['mixNext'][n - 1]}`)">下一個</a>
               </div>
               <div class="bottom-group">
-                  <a class="sure-buy" :href="goCoffeeUrl(other)" target="_blank">我要購買</a>
+                  <a class="sure-buy" :href="goCoffeeUrl()" target="_blank">我要購買</a>
             </div>
           </section>
       </div>
