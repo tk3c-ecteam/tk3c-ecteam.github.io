@@ -1120,7 +1120,7 @@ figure.real, figure.total {
   }
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 993px) {
   #coffee-mobile-container {
     display: none;
   }
