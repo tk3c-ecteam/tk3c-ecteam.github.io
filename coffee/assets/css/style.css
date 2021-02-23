@@ -19,7 +19,7 @@ section#crown_container nav{display:flex;justify-content:flex-start;flex-wrap:no
 ul.nav-box{display:flex;justify-content:flex-start;flex-wrap:nowrap;}
 ul.nav-box li>ul{display:none;}
 article#trisection{display:flex;flex-wrap:nowrap;justify-content:space-evenly;width:100vw;height:100vh;}
-.first{position: relative;overflow: hidden;flex-basis: 30%;display: flex;justify-content: center;align-items: center;}
+.first{position: relative;overflow: hidden;flex-basis: 30%;display: flex;justify-content: center;align-items: center;background-color: #fae69b;}
 .middle{position: relative;flex-basis: 40%;display: flex;justify-content: center;align-items: center;}
 .last{position: relative;overflow: hidden;flex-basis: 30%;display: flex;justify-content: center;align-items: center;}
 figure.pd{width: 23vmax;position:absolute;z-index:1;top: 27%;left: 23%;}
@@ -34,7 +34,7 @@ figure.pattern{width:20%;margin:2% 0 0 2vmax;}
 .en_pdtitle>h2,.en_pdtitle>h3{font-family:'Palatino Bold Italic' !important;}
 .pdtitle>h2,.pdtitle>h3,.bakenum,.expword{color:#fff;font-weight:bold;}
 .bottomlow h3{font-size: 2vmax;color: #c3a986;}
-.bottomlow{width:100%;text-align:center;padding: 2vmax 0 10vmax 0;}
+.bottomlow{width:100%;text-align:center;padding: 2vmax 0 12vmax 0;background-color: #fff;}
 .bottomlow p{font-size:1vmax;font-weight:bold;margin:0 auto;width: 55%;text-align:initial;word-break:keep-all;}
 .buyarea{margin: 1vmax 0 0 0;}
 .buyarea>a.buybtn{width:71%;padding:1%;background-color:#c3a986;color:#fff;border-radius:5px;display:block;margin:3% auto 0;font-size: 1.2vmax;}
