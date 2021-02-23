@@ -382,6 +382,9 @@ figure.real, figure.total {
   -ms-flex-align: center;
   -webkit-box-align: center;
           align-items: center;
+  -webkit-box-flex: inherit;
+      -ms-flex-positive: inherit;
+          flex-grow: inherit;
 }
 
 /* 動畫區 */
@@ -538,7 +541,7 @@ figure.real, figure.total {
 }
 
 /* 手機版 */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 992px) {
   /* 手機頁面區 */
   #coffee-mobile-container {
     display: block;
