@@ -258,7 +258,7 @@ figure.real, figure.total {
 .tophigh {
   height: 55vh;
   padding: 6vmax 0 2vmax 0;
-  background-color: #fff;
+  background-color: transparent;
 }
 
 .beans_type_2 .pdbg,
@@ -443,7 +443,7 @@ figure.real, figure.total {
 }
 
 .vod-area .sub-title .event-name {
-  color: #d9b87d;
+  color: #ad8d5d;
 }
 
 .vod-slide {
@@ -464,13 +464,13 @@ figure.real, figure.total {
 }
 
 .vod-slide a {
-  width: 50%;
+  width: 80%;
   height: auto;
   display: block;
 }
 
 .vod-slide .swiper-slide {
-  width: 50%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1084,7 +1084,7 @@ figure.real, figure.total {
     font-size: 22px;
   }
   .vod-area h2 {
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
   }
   .vod-area p {
@@ -1258,10 +1258,11 @@ figure.real, figure.total {
     margin: 16vmin auto 10%;
   }
   .vod-area h2 {
-    font-size: 2em;
+    font-size: 1.5em;
   }
   .vod-area p {
     width: 34%;
+    font-size: 0.8em;
   }
 }
 
