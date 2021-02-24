@@ -1089,8 +1089,8 @@
                 </span>
                 <div class="coffee-detail"><img :src="getImgUrl(otherDetail[3]['content'][n - 1])"></div>
                 <div class="link-group">
-                    <a class="prev" @click="alert(`${otherDetail[4]['singlePrev'][n - 1]}`)">上一個</a>
-                    <a class="next" @click="alert(`${otherDetail[5]['mixNext'][n - 1]}`)">下一個</a>
+                    <a class="prev" @click="goLikcoffee(`${otherDetail[4]['singlePrev'][n - 1]}`)">上一個</a>
+                    <a class="next" @click="goLikcoffee(`${otherDetail[5]['mixNext'][n - 1]}`)">下一個</a>
                 </div>
                 <div class="bottom-group">
                     <a class="sure-buy" :href="goCoffeeUrl()" target="_blank">我要購買</a>
