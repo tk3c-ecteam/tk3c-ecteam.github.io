@@ -258,6 +258,7 @@ figure.real, figure.total {
 .tophigh {
   height: 55vh;
   padding: 6vmax 0 2vmax 0;
+  background-color: #fff;
 }
 
 .beans_type_2 .pdbg,
@@ -333,6 +334,10 @@ figure.real, figure.total {
 .beans_type_7 .pdtitle,
 .beans_type_5 .pdtitle {
   margin: 0 0 0 -9vmax;
+}
+
+.bottomlow {
+  background: #fff;
 }
 
 .bottomlow h3 {
