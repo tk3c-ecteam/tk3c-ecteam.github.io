@@ -18,85 +18,9 @@ a {
   text-decoration: none;
 }
 
-/* 咖啡頁面區 */
-#coffee-container {
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  position: relative;
-  /* 咖啡內容區 */
-}
-
-#coffee-container .content {
-  width: 100%;
-  height: auto;
-  min-height: 100%;
-}
-
-#coffee-container .content.fade-in {
-  -webkit-animation: fade-in 3s ease-in;
-          animation: fade-in 3s ease-in;
-}
-
-#coffee-container .content .coffee-wrap {
-  width: 1500px;
-  height: 100%;
-}
-
-#coffee-container .content .coffee-description {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  bottom: 0;
-  background-color: #fff;
-}
-
-#coffee-container .content .coffee-description.go-to-left {
-  -webkit-animation: fade-in-left 2s linear;
-          animation: fade-in-left 2s linear;
-}
-
-#coffee-container .content .coffee-description h3 {
-  text-align: center;
-  font-size: 2em;
-  margin: 4% auto 0;
-  color: #6f470a;
-}
-
-#coffee-container .content .coffee-description p {
-  width: 50%;
-  margin: 0 auto;
-  line-height: 1.4em;
-  word-break: keep-all;
-  padding: 20px;
-}
-
-#coffee-container .content .coffee-description .price {
-  width: 50%;
-  text-align: center;
-  margin: 0 auto;
-}
-
-#coffee-container .content .coffee-description .price span,
-#coffee-container .content .coffee-description .price a {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-#coffee-container .content .coffee-description .price a {
-  background-color: #8b6225;
-  color: #fff;
-  text-align: center;
-  margin: 2% auto 2%;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-
-#coffee-container .coffee-content {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
+body {
+  overflow: hidden;
+  overflow-y: auto;
 }
 
 /* 頁尾區 */
@@ -141,17 +65,6 @@ a {
   display: flex;
 }
 
-.swiper-pagination {
-  margin: 0 auto 0;
-}
-
-.swiper-pagination-bullets {
-  width: 20px;
-  height: 20px;
-  margin: 0 2%;
-  bottom: 3vmax !important;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   display: -webkit-box;
@@ -164,38 +77,6 @@ a {
 
 .swiper-button-next {
   right: 20px;
-}
-
-.swiper-pagination > .swiper-pagination-bullet:nth-of-type(1) {
-  background-color: #f7df7d;
-}
-
-.swiper-pagination > .swiper-pagination-bullet:nth-of-type(2) {
-  background-color: #96dedb;
-}
-
-.swiper-pagination > .swiper-pagination-bullet:nth-of-type(3) {
-  background-color: #9c9ed9;
-}
-
-.swiper-pagination > .swiper-pagination-bullet:nth-of-type(4) {
-  background-color: #bacf82;
-}
-
-.swiper-pagination > .swiper-pagination-bullet:nth-of-type(5) {
-  background-color: #fba3b9;
-}
-
-.swiper-pagination > .swiper-pagination-bullet:nth-of-type(6) {
-  background-color: #fface7;
-}
-
-.swiper-pagination > .swiper-pagination-bullet:nth-of-type(7), .swiper-pagination > .swiper-pagination-bullet:nth-of-type(9), .swiper-pagination > .swiper-pagination-bullet:nth-of-type(10), .swiper-pagination > .swiper-pagination-bullet:nth-of-type(11) {
-  background-color: #404040;
-}
-
-.swiper-pagination > .swiper-pagination-bullet:nth-of-type(8) {
-  background-color: #d6b789;
 }
 
 /*  咖啡背景與包裝調整 */
@@ -480,6 +361,13 @@ figure.real, figure.total {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+/* 置頂TKEC樣式 */
+#TkecTop {
+  width: 100vw;
+  height: auto;
+  background-color: #000;
 }
 
 /* 動畫區 */

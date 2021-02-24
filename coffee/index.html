@@ -8,15 +8,31 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://tk3c-ecteam.github.io/coffee/assets/css/style.css">
+    <link rel="stylesheet" href="https://tk3c-ecteam.github.io/coffee/style.css">
     <link rel="stylesheet" href="https://tk3c-ecteam.github.io/coffee/assets/css/coffee.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
 <body>
+     <!--置頂TKEC-->
+     <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "../../top/top.aspx?url=" + location.href,
+                type: "POST",
+                dataType: 'text',
+                success: function (msg) {
+                    $("#TkecTop").html(msg);
+                }
+            });
+        });
+    </script>
+    <div id="TkecTop" style="height:45px;"></div>
+    <!-- the end -->
+
     <section id="crown_container">
         <!-- 選單區 -->
       <nav class="navbar sticky-top navbar-expand-lg">
@@ -941,8 +957,7 @@
                             </div>
                         </div>
                     </div>
-                        <!-- If we need pagination -->
-                    <div class="swiper-pagination"></div>
+
                     <!-- If we need navigation buttons -->
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-button-next"></div>
