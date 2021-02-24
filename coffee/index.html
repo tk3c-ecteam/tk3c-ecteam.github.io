@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://tk3c-ecteam.github.io/coffee/assets/css/style.css">
     <link rel="stylesheet" href="https://tk3c-ecteam.github.io/coffee/assets/css/coffee.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
@@ -992,6 +993,8 @@
                     </div>
                 </div>
             </div>
+
+            <div class="footer"></div>
         </div>
     </section>
       
@@ -1002,8 +1005,8 @@
         <!-- 選單區 -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="./index.html">淺口袋</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <button id="nav-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-angle-down"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
@@ -1012,7 +1015,7 @@
                     單一產區
                 </a>
                 <div class="dropdown-menu" aria-labelledby="singleMenuLink">
-                    <a class="dropdown-item" v-for="p in products[6]['single'].length"  @click="alert(p)" :value="p" href="#">{{ products[6]['single'][p - 1] }}</a>
+                    <a class="dropdown-item"  data-toggle="collapse" v-for="p in products[6]['single'].length"  @click="alert(p)" :value="p" href="#">{{ products[6]['single'][p - 1] }}</a>
                 </div>
                 </li>
                 <li class="nav-item dropdown">
@@ -1028,10 +1031,10 @@
                     精品產區
                     </a>
                     <div class="dropdown-menu" aria-labelledby="mixMenuLink">
-                    <a class="dropdown-item" href="#" v-for="p in products[10]['special'].length" @click="alert(p + 8)">{{ products[10]['special'][p - 1] }}</a>
+                    <a class="dropdown-item"  data-toggle="collapse" href="#" v-for="p in products[10]['special'].length" @click="alert(p + 8)">{{ products[10]['special'][p - 1] }}</a>
                     </div>
                 </li>
-                <li class="nav-item event"><a class="nav-link">活動專區</a></li>
+                <li class="nav-item event"  data-toggle="collapse"><a class="nav-link">活動專區</a></li>
             </ul>
             </div>
         </nav>
@@ -1125,6 +1128,15 @@
             </div>
         </div>
     </div>
+
+    <!-- 彈出廣告 -->
+
+    <section id="alert">
+        <a class="close"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/close.png"></a>
+        <div class="alert-content">
+            <a class="go-event"><img src="https://p2.bahamut.com.tw/B/2KU/25/9ad282b4d96012ded3a4b2120219vhh5.JPG"></a>
+        </div>
+    </section>
 
     <script src="https://tk3c-ecteam.github.io/coffee/assets/js/coffee.min.js"></script>
 </body>

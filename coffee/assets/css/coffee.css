@@ -80,11 +80,6 @@ body {
 }
 
 /*  咖啡背景與包裝調整 */
-section#crown_container {
-  overflow-y: inherit !important;
-  overflow-x: hidden;
-}
-
 section#crown_container nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,8 +199,9 @@ figure.real, figure.total {
 .beans_type_9 .pdbg,
 .beans_type_10 .pdbg,
 .beans_type_11 .pdbg {
-  width: 45vmax;
+  width: 61vmax;
   left: 0;
+  top: 0;
 }
 
 .pdtitle {
@@ -213,8 +209,14 @@ figure.real, figure.total {
 }
 
 .beans_type_7 .pdtitle,
-.beans_type_5 .pdtitle {
+.beans_type_5 .pdtitle,
+.beans_type_10 .pdtitle {
   margin: 0 0 0 -9vmax;
+}
+
+.beans_type_9 .pdtitle,
+.beans_type_11 .pdtitle {
+  margin: 0 14vmax 0 -2vmax;
 }
 
 .bottomlow {
@@ -261,8 +263,13 @@ figure.real, figure.total {
 }
 
 /* 上方選單 */
-.navbar-dark .navbar-nav .nav-link {
-  color: #fff;
+.navbar-dark .navbar-nav .nav-link,
+.navbar-dark .navbar-nav .active > .nav-link {
+  color: #000;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: transparent;
 }
 
 .navbar-collapse {
@@ -277,10 +284,18 @@ figure.real, figure.total {
           flex-grow: inherit;
 }
 
+.navbar-toggler-icon {
+  outline: none;
+}
+
 /* 活動專區 */
 #activity-area,
 #activity-mb-area {
   display: none;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  position: relative;
 }
 
 #activity-area .banner,
@@ -301,20 +316,33 @@ figure.real, figure.total {
           align-items: center;
 }
 
+#activity-area .vod-slide,
+#activity-mb-area .vod-slide {
+  margin: 0 auto 15vmin;
+}
+
+#activity-area .footer,
+#activity-mb-area .footer {
+  width: 100%;
+  height: 40px;
+  position: absolute;
+  background-color: #9c7f54;
+}
+
 .vod-area {
   width: 100%;
   margin: 3vmax auto 0;
 }
 
 .vod-area h2 {
-  font-size: 6em;
-  margin: 0 4vmax 3vmax;
+  font-size: 3em;
+  margin: 0 4vmax 1vmax;
   padding: 3%;
 }
 
 .vod-area p {
-  width: 18%;
-  font-size: 2em;
+  width: 11%;
+  font-size: 1.5em;
   display: inline-block;
   margin: 0 10px;
 }
@@ -368,6 +396,49 @@ figure.real, figure.total {
   width: 100vw;
   height: auto;
   background-color: #000;
+}
+
+/* 彈出廣告 */
+#alert {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #f0f8ff99;
+  z-index: 1100;
+  top: 0;
+}
+
+#alert .close {
+  position: absolute;
+  top: 13vmax;
+  right: 30vmax;
+  text-shadow: none;
+  opacity: 1;
+  display: block;
+}
+
+#alert .alert-content {
+  width: 25%;
+  height: 50%;
+  z-index: 99;
+  position: relative;
+  margin: 16vmax auto 0;
+  background-color: #009688;
+}
+
+#alert .alert-content .go-event {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* 動畫區 */
@@ -538,10 +609,10 @@ figure.real, figure.total {
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    overflow-x: hidden;
     -ms-scroll-snap-type: y mandatory;
         scroll-snap-type: y mandatory;
     position: relative;
+    overflow-x: hidden;
   }
   #coffee-mobile-container .header {
     width: 100%;
@@ -661,6 +732,12 @@ figure.real, figure.total {
   }
   #crown_container {
     display: none;
+  }
+  .navbar-dark .navbar-brand {
+    color: #000;
+  }
+  .sticky-top {
+    top: 8vmin;
   }
   /* 手機版swiper輪播 */
   .swiper-mobile {
@@ -803,7 +880,17 @@ figure.real, figure.total {
     display: none;
   }
   .vod-area p {
-    font-size: 2em;
+    font-size: 1.3em;
+  }
+  .vod-area h2 {
+    font-size: 3em;
+    margin: 0 4vmax 3vmax;
+  }
+  #alert .close {
+    right: 19vmax;
+  }
+  #activity-mb-area .banner {
+    margin: 43vmin auto 0;
   }
 }
 
@@ -814,9 +901,19 @@ figure.real, figure.total {
   #coffee-mobile-container .coffee .close {
     top: 10vmin;
   }
+  .vod-area {
+    margin: 34vmin auto 0;
+  }
   .vod-area p {
     width: 30%;
     font-size: 1.5em;
+  }
+  #activity-mb-area .swiper-slide a {
+    -webkit-transform: scale(2.2);
+            transform: scale(2.2);
+  }
+  #activity-mb-area .banner {
+    margin: 21vmin auto 0;
   }
 }
 
@@ -872,9 +969,6 @@ figure.real, figure.total {
   }
   #coffee-mobile-container .mobile-content {
     margin: 26vmin auto 0;
-  }
-  #coffee-mobile-container .coffee-detail {
-    margin-top: 9vmin;
   }
   .price-area {
     margin: 20vmin auto 10%;
@@ -945,9 +1039,6 @@ figure.real, figure.total {
     line-height: 11vmin;
     font-size: 1.3em;
   }
-  #coffee-mobile-container .coffee .coffee-detail {
-    margin-top: 13vmin;
-  }
   #coffee-mobile-container .coffee .close {
     font-size: 2em;
     top: 15vmin;
@@ -972,7 +1063,7 @@ figure.real, figure.total {
     font-size: 22px;
   }
   .vod-area h2 {
-    font-size: 2em;
+    font-size: 1.7em;
     text-align: center;
   }
   .vod-area p {
@@ -980,7 +1071,22 @@ figure.real, figure.total {
     font-size: 1em;
   }
   #activity-mb-area {
-    margin: 13vmin auto 0;
+    margin: 16vmin auto 0;
+  }
+  .vod-area {
+    margin: 30vmin auto 0;
+  }
+  #alert .close {
+    right: 3vmin;
+    top: 17vmin;
+  }
+  #alert .alert-content {
+    width: 70%;
+    height: 50%;
+    margin: 26vmin auto 0;
+  }
+  .sticky-top {
+    top: 11vmin;
   }
 }
 
@@ -1062,9 +1168,6 @@ figure.real, figure.total {
   }
   #coffee-mobile-container .coffee .close {
     top: 17vmin;
-  }
-  .vod-area h2 {
-    font-size: 2em;
   }
   .vod-area .sub-title {
     margin: 0 3vmin 5vmax 6vmin;
