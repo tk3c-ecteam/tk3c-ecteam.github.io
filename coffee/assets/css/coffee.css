@@ -444,20 +444,19 @@ button:focus {
 #alert .close {
   width: 2%;
   position: absolute;
-  top: 13vmax;
-  right: 30vmax;
+  top: 6vmax;
+  right: 19vmax;
   text-shadow: none;
   opacity: 0.6;
   display: block;
 }
 
 #alert .alert-content {
-  width: 25%;
-  height: 50%;
+  width: 50vw;
+  height: 50vh;
   z-index: 99;
   position: relative;
-  margin: 16vmax auto 0;
-  background-color: #009688;
+  margin: 23vmax auto 0;
 }
 
 #alert .alert-content .go-event {
@@ -604,7 +603,9 @@ button:focus {
 
 @media only screen and (max-width: 1025px) {
   #alert .close {
-    right: 23vmax;
+    right: 9vmax;
+    top: 20vmax;
+    width: 4%;
   }
 }
 
@@ -925,7 +926,7 @@ button:focus {
     margin: 0 4vmax 3vmax;
   }
   #alert .close {
-    right: 19vmax;
+    top: 16vmax;
     width: 3%;
   }
   #activity-mb-area {
@@ -1142,7 +1143,6 @@ button:focus {
   }
   #alert .close {
     right: 5vmin;
-    top: 17vmin;
   }
   #alert .alert-content {
     width: 70%;
