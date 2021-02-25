@@ -37,7 +37,7 @@
     <section id="crown_container">
         <!-- 選單區 -->
       <nav class="navbar sticky-top navbar-expand-lg">
-          <a class="navbar-brand" href="./index.html">淺口袋</a>
+          <a class="navbar-brand" href="./index.html"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/logo.png"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -61,7 +61,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="mixMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      精品產區
+                      高階精品豆
                     </a>
                     <div class="dropdown-menu" aria-labelledby="mixMenuLink">
                      <a class="dropdown-item" v-for="(p,i) in coffees.special" @click="alert(i + 8)">{{ p }}</a>
@@ -489,7 +489,7 @@
 
                          <!-- 中南美洲莊園特選  -->
                          <div class="swiper-slide beans_type_6">
-                            <div class="first" style="background: linear-gradient(180deg,#ffbfeb,#ff9ae0);">
+                            <div class="first" style="background: linear-gradient(180deg,#d47fd4,#dd9bde);">
                             <div class="row">
                                 <div class="tophigh">
                                     <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
@@ -532,7 +532,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="last" style="background: linear-gradient(180deg,#ffbfeb,#ff9ae0);">
+                            <div class="last" style="background: linear-gradient(180deg,#d47fd4 ,#dd9bde);">
                                 <div class="row">
                                     <div class="bakenum">
                                         <i>5</i>
@@ -1004,7 +1004,7 @@
     <div id="coffee-mobile-container">
         <!-- 選單區 -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="./index.html">淺口袋</a>
+            <a class="navbar-brand" href="./index.html"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/logo.png"></a>
             <button id="nav-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-angle-down"></i>
             </button>
@@ -1028,7 +1028,7 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="mixMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    精品產區
+                    高階精品豆
                     </a>
                     <div class="dropdown-menu" aria-labelledby="mixMenuLink">
                     <a class="dropdown-item"  data-toggle="collapse" href="#" v-for="p in products[10]['special'].length" @click="alert(p + 8)">{{ products[10]['special'][p - 1] }}</a>
@@ -1085,7 +1085,7 @@
             <section class="coffee" v-for="n in 11" :id="`coffee${n}`">
                 <a class="top-buy" :href="goCoffeeUrl()" target="_blank"></a>
                 <span class="close" @click="cancel">
-                <img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/close.png">
+                <img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/close2.png">
                 </span>
                 <div class="coffee-detail"><img :src="getImgUrl(otherDetail[3]['content'][n - 1])"></div>
                 <div class="link-group">
@@ -1132,7 +1132,7 @@
     <!-- 彈出廣告 -->
 
     <section id="alert">
-        <a class="close"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/close.png"></a>
+        <a class="close"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/close2.png"></a>
         <div class="alert-content">
             <a class="go-event"><img src="https://p2.bahamut.com.tw/B/2KU/25/9ad282b4d96012ded3a4b2120219vhh5.JPG"></a>
         </div>
