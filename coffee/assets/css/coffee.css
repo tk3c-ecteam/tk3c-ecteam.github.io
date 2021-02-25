@@ -144,6 +144,12 @@ figure.real, figure.total {
   left: -4vmax;
 }
 
+.beans_type_2 .pd,
+.beans_type_3 .pd {
+  top: 33%;
+  left: 23%;
+}
+
 .beans_type_3 figure.real {
   width: 70%;
 }
@@ -162,6 +168,10 @@ figure.real, figure.total {
   width: 40%;
 }
 
+.beans_type_5 .pd {
+  top: 33%;
+}
+
 .beans_type_6 .pdbg {
   width: 45vmax;
   top: 2vmax;
@@ -176,7 +186,7 @@ figure.real, figure.total {
 .beans_type_8 .pdbg {
   width: 40vmax;
   top: 0;
-  left: -4vmax;
+  left: -2vmax;
 }
 
 .beans_type_7 figure.real,
@@ -431,6 +441,11 @@ button:focus {
   background-color: #000;
 }
 
+#kuai3header {
+  position: fixed;
+  top: 0;
+}
+
 /* 彈出廣告 */
 #alert {
   width: 100%;
@@ -551,6 +566,137 @@ button:focus {
   }
   #alert .mobile {
     display: none;
+  }
+}
+
+@media screen and (min-height: 1400px) {
+  figure.pdbg {
+    width: 62vmax;
+    top: 8vmax;
+    left: -7vmax;
+  }
+  figure.pd {
+    top: 37%;
+    left: 23%;
+  }
+  .beans_type_2 .pdbg,
+  .beans_type_3 .pdbg {
+    width: 68vmax;
+    top: -4vmax;
+    left: -4vmax;
+  }
+  .beans_type_5 .pdbg {
+    width: 48vmax;
+    top: 5vmax;
+  }
+  .beans_type_6 .pdbg {
+    top: 6vmax;
+    width: 50vmax;
+  }
+  .beans_type_6 .pd {
+    top: 43%;
+  }
+  .beans_type_7 .pdbg,
+  .beans_type_8 .pdbg {
+    top: 4vmax;
+    left: -4vmax;
+    width: 48vmax;
+  }
+  .beans_type_7 .pd,
+  .beans_type_8 .pd {
+    top: 45%;
+  }
+}
+
+@media screen and (min-height: 1600px) {
+  figure.pdbg {
+    width: 62vmax;
+    top: 15vmax;
+    left: -7vmax;
+  }
+  figure.pd {
+    top: 43%;
+    left: 23%;
+  }
+  .beans_type_2 .pdbg,
+  .beans_type_3 .pdbg {
+    width: 75vmax;
+    top: -3vmax;
+    left: -4vmax;
+  }
+  .beans_type_5 .pdbg {
+    top: 10vmax;
+  }
+  .beans_type_6 .pdbg {
+    top: 12vmax;
+    width: 50vmax;
+  }
+  .beans_type_7 .pdbg,
+  .beans_type_8 .pdbg {
+    top: 9vmax;
+  }
+  .beans_type_9 .pdbg,
+  .beans_type_10 .pdbg,
+  .beans_type_11 .pdbg {
+    width: 73vmax;
+  }
+}
+
+@media screen and (min-height: 1800px) {
+  .beans_type_2 .pdbg,
+  .beans_type_3 .pdbg {
+    width: 78vmax;
+    top: -3vmax;
+  }
+  .beans_type_2 .pd,
+  .beans_type_3 .pd {
+    top: 48%;
+  }
+  .beans_type_5 .pdbg {
+    width: 50vmax;
+    top: 11vmax;
+  }
+  .beans_type_6 .pdbg {
+    top: 12vmax;
+  }
+  .beans_type_6 .pd {
+    top: 48%;
+  }
+  .beans_type_7 .pdbg,
+  .beans_type_8 .pdbg {
+    width: 50vmax;
+  }
+  .beans_type_7 .pd,
+  .beans_type_8 .pd {
+    top: 50%;
+  }
+  .beans_type_9 .pdbg,
+  .beans_type_10 .pdbg,
+  .beans_type_11 .pdbg {
+    width: 80vmax;
+  }
+}
+
+@media screen and (min-height: 2000px) {
+  .beans_type_3 .pdbg {
+    width: 84vmax;
+  }
+  .beans_type_6 .pdbg {
+    width: 60vmax;
+  }
+  .beans_type_7 .pdbg,
+  .beans_type_8 .pdbg {
+    width: 56vmax;
+  }
+  .beans_type_9 .pdbg,
+  .beans_type_10 .pdbg,
+  .beans_type_11 .pdbg {
+    width: 90vmax;
+  }
+  .beans_type_9 .pd,
+  .beans_type_10 .pd,
+  .beans_type_11 .pd {
+    top: 47%;
   }
 }
 
