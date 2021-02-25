@@ -935,7 +935,7 @@ button:focus {
     font-size: 1.5em;
   }
   #activity-mb-area {
-    margin: 6vmin auto 0;
+    margin: 8vmin auto 0;
   }
   #activity-mb-area .banner a {
     -webkit-transform: scale(2.2);
