@@ -444,7 +444,7 @@ button:focus {
 #alert .close {
   width: 2%;
   position: absolute;
-  top: 6vmax;
+  top: 4vmax;
   right: 19vmax;
   text-shadow: none;
   opacity: 0.6;
@@ -456,7 +456,7 @@ button:focus {
   height: 50vh;
   z-index: 99;
   position: relative;
-  margin: 23vmax auto 0;
+  margin: 13vmax auto 0;
 }
 
 #alert .alert-content .go-event {
@@ -545,6 +545,15 @@ button:focus {
 }
 
 /* 其他電腦尺寸*/
+@media only screen and (min-width: 993px) {
+  #coffee-mobile-container {
+    display: none;
+  }
+  #alert .mobile {
+    display: none;
+  }
+}
+
 @media only screen and (max-width: 1600px) {
   #coffee-container .nav .nav-box div {
     font-size: 1.2em;
@@ -761,6 +770,9 @@ button:focus {
   }
   #coffee-mobile-container nav {
     background-color: #d9b87d !important;
+  }
+  #alert .pc {
+    display: none;
   }
   #crown_container {
     display: none;
@@ -1324,12 +1336,6 @@ button:focus {
   }
   .sticky-top {
     top: 14vmin;
-  }
-}
-
-@media only screen and (min-width: 993px) {
-  #coffee-mobile-container {
-    display: none;
   }
 }
 
