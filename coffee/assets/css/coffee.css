@@ -304,7 +304,7 @@ figure.real {
 }
 
 .navbar-brand {
-  width: 6%;
+  width: 3%;
   cursor: default;
 }
 
@@ -969,7 +969,7 @@ button:focus {
     text-align: center;
   }
   .navbar-brand {
-    width: 22%;
+    width: 8%;
   }
   #alert .close {
     width: 5%;
@@ -1153,7 +1153,7 @@ button:focus {
     top: 11vmin;
   }
   .navbar-dark .navbar-brand {
-    width: 30%;
+    width: 10%;
   }
 }
 
