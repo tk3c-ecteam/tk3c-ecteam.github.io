@@ -145,11 +145,11 @@ figure.real, figure.total {
 }
 
 .beans_type_3 figure.real {
-  width: 65%;
+  width: 70%;
 }
 
 .beans_type_4 figure.real {
-  width: 75%;
+  width: 80%;
 }
 
 .beans_type_5 .pdbg {
@@ -159,7 +159,7 @@ figure.real, figure.total {
 }
 
 .beans_type_5 figure.real {
-  width: 35%;
+  width: 40%;
 }
 
 .beans_type_6 .pdbg {
@@ -169,7 +169,7 @@ figure.real, figure.total {
 }
 
 .beans_type_6 figure.real {
-  width: 45%;
+  width: 50%;
 }
 
 .beans_type_7 .pdbg,
@@ -181,7 +181,7 @@ figure.real, figure.total {
 
 .beans_type_7 figure.real,
 .beans_type_8 figure.real {
-  width: 55%;
+  width: 60%;
 }
 
 .beans_type_8 figure.real {
@@ -193,7 +193,7 @@ figure.real, figure.total {
 }
 
 .beans_type_10 figure.real {
-  width: 35%;
+  width: 40%;
 }
 
 .beans_type_9 .pdbg,
@@ -257,6 +257,26 @@ figure.real, figure.total {
   width: 60%;
 }
 
+.beans_type_2 .tophigh,
+.beans_type_3 .tophigh {
+  margin: 0 0 0 4vmax;
+}
+
+.beans_type_2 .bottomlow p,
+.beans_type_3 .bottomlow p {
+  width: 53%;
+}
+
+.beans_type_2 .buyarea > a.buybtn,
+.beans_type_3 .buyarea > a.buybtn {
+  width: 54%;
+}
+
+figure.total,
+figure.real {
+  background-size: 16vmax;
+}
+
 .fade-left {
   -webkit-animation: fade-in-left 0.9s linear;
           animation: fade-in-left 0.9s linear;
@@ -285,6 +305,7 @@ figure.real, figure.total {
 
 .navbar-brand {
   width: 6%;
+  cursor: default;
 }
 
 .navbar-collapse {
@@ -356,6 +377,7 @@ button:focus {
   font-size: 1.5em;
   display: inline-block;
   margin: 0 10px;
+  font-weight: bold;
 }
 
 .vod-area .sub-title {
@@ -385,7 +407,7 @@ button:focus {
 
 .vod-slide a {
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
 }
 
@@ -414,7 +436,7 @@ button:focus {
   width: 100%;
   height: 100%;
   position: fixed;
-  background-color: #f0f8ff99;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1100;
   top: 0;
 }
@@ -425,7 +447,7 @@ button:focus {
   top: 13vmax;
   right: 30vmax;
   text-shadow: none;
-  opacity: 0.5;
+  opacity: 0.8;
   display: block;
 }
 
@@ -524,12 +546,6 @@ button:focus {
 }
 
 /* 其他電腦尺寸*/
-@media only screen and (min-width: 2000px) {
-  #alert .close {
-    margin: 23vmax auto 0;
-  }
-}
-
 @media only screen and (max-width: 1600px) {
   #coffee-container .nav .nav-box div {
     font-size: 1.2em;
@@ -750,6 +766,7 @@ button:focus {
   }
   .navbar-brand {
     color: #000;
+    cursor: default;
   }
   .navbar-expand-lg {
     -webkit-box-pack: center;
@@ -928,7 +945,7 @@ button:focus {
     top: 10vmin;
   }
   .vod-area {
-    margin: 26vmin auto 0;
+    margin: 13vmin auto 0;
   }
   .vod-area p {
     width: 30%;
@@ -936,6 +953,9 @@ button:focus {
   }
   #activity-mb-area {
     margin: 8vmin auto 0;
+  }
+  #activity-mb-area .banner {
+    height: 500px;
   }
   #activity-mb-area .banner a {
     -webkit-transform: scale(2.2);
@@ -949,6 +969,9 @@ button:focus {
   }
   .navbar-brand {
     width: 22%;
+  }
+  #alert .close {
+    width: 5%;
   }
 }
 
@@ -1097,6 +1120,9 @@ button:focus {
   #mobile-nav .nav-content .nav-box div {
     font-size: 22px;
   }
+  .vod-area {
+    margin: 10vmin auto 0;
+  }
   .vod-area h2 {
     font-size: 1.7em;
     text-align: center;
@@ -1106,7 +1132,10 @@ button:focus {
     font-size: 1em;
   }
   #activity-mb-area {
-    margin: 16vmin auto 0;
+    margin: 11vmin auto 0;
+  }
+  #activity-mb-area .banner {
+    height: 300px;
   }
   .vod-area {
     margin: 30vmin auto 0;

@@ -37,7 +37,7 @@
     <section id="crown_container">
         <!-- 選單區 -->
       <nav class="navbar sticky-top navbar-expand-lg">
-          <a class="navbar-brand" href="./index.html"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/logo.png"></a>
+          <a class="navbar-brand"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/logo.png"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -489,7 +489,7 @@
 
                          <!-- 中南美洲莊園特選  -->
                          <div class="swiper-slide beans_type_6">
-                            <div class="first" style="background: linear-gradient(180deg,#d47fd4,#dd9bde);">
+                            <div class="first" style="background: linear-gradient(180deg,#d787d7 ,#e5b3e5);">
                             <div class="row">
                                 <div class="tophigh">
                                     <div class="pdtitle" data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
@@ -532,7 +532,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="last" style="background: linear-gradient(180deg,#d47fd4 ,#dd9bde);">
+                            <div class="last" style="background: linear-gradient(180deg,#d686d6 ,#e6b4e6);">
                                 <div class="row">
                                     <div class="bakenum">
                                         <i>5</i>
@@ -989,7 +989,7 @@
             <div class="vod-slide">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" v-for="vod in coffees.vodImages">
-                        <a><img :src="vod"></a>
+                        <a><img :src="getImgUrl(`${vod}`)"></a>
                     </div>
                 </div>
             </div>
@@ -1004,7 +1004,7 @@
     <div id="coffee-mobile-container">
         <!-- 選單區 -->
         <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="./index.html"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/logo.png"></a>
+            <a class="navbar-brand"><img src="https://events.cdn-tkec.tw/events_net/events_net/crowncoffee/images/new/logo.png"></a>
             <button id="nav-button" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-angle-down"></i>
             </button>
@@ -1122,7 +1122,7 @@
             <div class="vod-slide">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" v-for="vod in forMobileData.vodImages">
-                        <a><img :src="vod"></a>
+                        <a><img :src="getImgUrl(`${vod}`)"></a>
                     </div>
                 </div>
             </div>
