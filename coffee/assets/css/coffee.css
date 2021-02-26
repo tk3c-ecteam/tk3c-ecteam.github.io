@@ -133,12 +133,12 @@ figure.real, figure.total {
   margin: 2.5vmax  0 0 0;
 }
 
-figure .pd {
+figure.pd {
   top: 37vmin;
   left: 7vmax;
 }
 
-figure .pdbg {
+figure.pdbg {
   top: 7vmin;
 }
 
