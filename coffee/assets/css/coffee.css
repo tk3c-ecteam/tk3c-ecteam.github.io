@@ -710,6 +710,17 @@ button:focus {
     width: 78vmax;
     top: -3vmin;
   }
+  .beans_type_5 .pdbg {
+    top: 19vmin;
+  }
+  .beans_type_5 .pd {
+    top: 48vmin;
+  }
+  .beans_type_9 .pdbg,
+  .beans_type_10 .pdbg,
+  .beans_type_11 .pdbg {
+    width: 80vmax;
+  }
 }
 
 @media only screen and (max-width: 1440px) {
@@ -720,17 +731,15 @@ button:focus {
     width: 11%;
     font-size: 1.2em;
   }
+  figure .pdbg {
+    top: 19vmin;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
-  #coffee-container .nav .nav-box div {
-    font-size: 1em;
-  }
-  #coffee-container .nav .nav-box h4 {
-    font-size: 1.3em;
-  }
-  #coffee-container .nav .logo {
-    height: 100px;
+  figure.pdbg {
+    top: 16vmin;
+    width: 58vmax;
   }
   .beans_type_2 .pdbg,
   .beans_type_3 .pdbg {
