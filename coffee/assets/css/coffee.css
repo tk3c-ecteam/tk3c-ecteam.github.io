@@ -133,6 +133,15 @@ figure.real, figure.total {
   margin: 2.5vmax  0 0 0;
 }
 
+figure .pd {
+  top: 37vmin;
+  left: 7vmax;
+}
+
+figure .pdbg {
+  top: 7vmin;
+}
+
 .tophigh {
   height: 55vh;
   padding: 6vmax 0 2vmax 0;
@@ -146,12 +155,6 @@ figure.real, figure.total {
   left: -4vmax;
 }
 
-.beans_type_2 .pd,
-.beans_type_3 .pd {
-  top: 33%;
-  left: 23%;
-}
-
 .beans_type_3 figure.real {
   width: 70%;
 }
@@ -162,7 +165,7 @@ figure.real, figure.total {
 
 .beans_type_5 .pdbg {
   width: 44vmax;
-  top: 1vmax;
+  top: 7vmin;
   left: -2vmax;
 }
 
@@ -170,13 +173,9 @@ figure.real, figure.total {
   width: 40%;
 }
 
-.beans_type_5 .pd {
-  top: 33%;
-}
-
 .beans_type_6 .pdbg {
-  width: 45vmax;
-  top: 2vmax;
+  width: 47vmax;
+  top: 10vmin;
   left: -4vmax;
 }
 
@@ -184,15 +183,17 @@ figure.real, figure.total {
   width: 50%;
 }
 
-.beans_type_6 .pd {
-  top: 35%;
-}
-
 .beans_type_7 .pdbg,
 .beans_type_8 .pdbg {
   width: 43vmax;
-  top: 0;
+  top: 10vmin;
   left: -2vmax;
+}
+
+.beans_type_7 .pd,
+.beans_type_8 .pd {
+  top: 48vmin;
+  left: 7vmax;
 }
 
 .beans_type_7 figure.real,
@@ -578,157 +579,170 @@ button:focus {
   }
 }
 
-@media screen and (min-height: 1400px) {
-  figure.pdbg {
-    width: 62vmax;
-    top: 8vmax;
-    left: -7vmax;
-  }
-  figure.pd {
-    top: 37%;
-    left: 23%;
-  }
-  .beans_type_2 .pdbg,
-  .beans_type_3 .pdbg {
-    width: 68vmax;
-    top: -4vmax;
-    left: -4vmax;
-  }
-  .beans_type_2 .pd,
-  .beans_type_3 .pd {
-    top: 41%;
-  }
-  .beans_type_5 .pdbg {
-    width: 50vmax;
-    top: 5vmax;
-    left: -4vmax;
-  }
-  .beans_type_5 .pd {
-    top: 41%;
-  }
-  .beans_type_6 .pdbg {
-    top: 6vmax;
-    width: 50vmax;
-  }
-  .beans_type_6 .pd {
-    top: 43%;
-  }
-  .beans_type_7 .pdbg,
-  .beans_type_8 .pdbg {
-    top: 18vmax;
-    left: -4vmax;
-    width: 48vmax;
-  }
-  .beans_type_7 .pd,
-  .beans_type_8 .pd {
-    top: 57%;
-  }
-}
+/*@media screen and (min-height: '1400px') {
+    figure.pdbg {
+        width: 62vmax;
+        top: 32vmax;
+        left: 9vmax;
+    }
+    figure.pd {
+        top: 48vmin;
+        left: 9vmax;
+    }
+    .beans_type_2,
+    .beans_type_3 {
+        .pdbg {
+            width: 78vmax;
+            top: 48vmin;
+            left: -4vmax;
+        }
+        .pd {
+            top: 48vmin;
+        }
+    }
 
-@media screen and (min-height: 1600px) {
-  figure.pdbg {
-    width: 62vmax;
-    top: 19vmax;
-    left: -7vmax;
-  }
-  figure.pd {
-    top: 39%;
-    left: 23%;
-  }
-  .beans_type_2 .pdbg,
-  .beans_type_3 .pdbg {
-    width: 75vmax;
-    top: 0;
-    left: -4vmax;
-  }
-  .beans_type_2 .pd,
-  .beans_type_3 .pd {
-    top: 49%;
-  }
-  .beans_type_5 .pdbg {
-    top: 10vmax;
-    width: 58vmax;
-  }
-  .beans_type_5 .pd {
-    top: 52%;
-  }
-  .beans_type_6 .pdbg {
-    top: 17vmax;
-    width: 50vmax;
-  }
-  .beans_type_6 .pd {
-    top: 51%;
-  }
-  .beans_type_7 .pdbg,
-  .beans_type_8 .pdbg {
-    top: 9vmax;
-  }
-  .beans_type_9 .pdbg,
-  .beans_type_10 .pdbg,
-  .beans_type_11 .pdbg {
-    width: 73vmax;
-  }
-  .beans_type_9 .pd,
-  .beans_type_10 .pd,
-  .beans_type_11 .pd {
-    top: 49%;
-  }
-}
+    .beans_type_5 {
+        .pdbg {
+            width: 50vmax;
+            top: 5vmax;
+            left: -4vmax;
+        }
+        .pd {
+            top: 41%;
+        }
+    }
 
-@media screen and (min-height: 1800px) {
-  .beans_type_2 .pdbg,
-  .beans_type_3 .pdbg {
-    width: 78vmax;
-    top: -3vmax;
-  }
-  .beans_type_2 .pd,
-  .beans_type_3 .pd {
-    top: 48%;
-  }
-  .beans_type_5 .pdbg {
-    width: 50vmax;
-    top: 11vmax;
-  }
-  .beans_type_6 .pdbg {
-    top: 12vmax;
-  }
-  .beans_type_6 .pd {
-    top: 48%;
-  }
-  .beans_type_7 .pdbg,
-  .beans_type_8 .pdbg {
-    width: 50vmax;
-  }
-  .beans_type_9 .pdbg,
-  .beans_type_10 .pdbg,
-  .beans_type_11 .pdbg {
-    width: 80vmax;
-  }
-}
+    .beans_type_6  {
+        .pdbg {
+            top: 6vmax;
+            width: 50vmax;
+        }
+        .pd {
+            top: 43%;
+        }
+    }
 
-@media screen and (min-height: 2000px) {
-  .beans_type_3 .pdbg {
-    width: 84vmax;
-  }
-  .beans_type_6 .pdbg {
-    width: 60vmax;
-  }
-  .beans_type_7 .pdbg,
-  .beans_type_8 .pdbg {
-    width: 56vmax;
-  }
-  .beans_type_9 .pdbg,
-  .beans_type_10 .pdbg,
-  .beans_type_11 .pdbg {
-    width: 90vmax;
-  }
-  .beans_type_9 .pd,
-  .beans_type_10 .pd,
-  .beans_type_11 .pd {
-    top: 47%;
-  }
-}
+    .beans_type_7,
+    .beans_type_8 {
+        .pdbg {
+            width: 48vmax;
+            top: 15vmin;
+        }
+    }
+}*/
+/*@media screen and (min-height: '1600px') {
+    figure.pdbg {
+        width: 62vmax;
+        top: 41vmax;
+        left: -7vmax;
+    }
 
+    .beans_type_2,
+    .beans_type_3 {
+        .pdbg {
+            width: 75vmax;
+            top: 0;
+            left: -4vmax;
+        }
+        .pd {
+            top: 49%;
+        }
+    }
+
+    .beans_type_5 {
+        .pdbg {
+            top: 10vmax;
+            width: 58vmax;
+        }
+    }
+
+    .beans_type_6 {
+        .pdbg {
+            top: 17vmax;
+            width: 50vmax;
+        }
+    }
+
+    .beans_type_7,
+    .beans_type_8 {
+        .pdbg {
+            top: 9vmax;
+        }
+    }
+
+    .beans_type_9,
+    .beans_type_10,
+    .beans_type_11 {
+        .pdbg {
+            width: 73vmax;
+        }
+    }
+}*/
+/*@media screen and (min-height: '1800px') {
+    .beans_type_2,
+    .beans_type_3 {
+        .pdbg {
+            width: 78vmax;
+            top: -3vmax;
+        }
+    }
+
+    .beans_type_5 {
+        .pdbg {
+            width: 50vmax;
+            top: 11vmax;
+        }
+    }
+
+    .beans_type_6 {
+        .pdbg {
+            top: 12vmax;
+        }
+    }
+
+    .beans_type_7,
+    .beans_type_8 {
+        .pdbg {
+            width: 50vmax;
+        }
+    }
+
+    .beans_type_9,
+    .beans_type_10,
+    .beans_type_11 {
+        .pdbg {
+            width: 80vmax;
+        }
+    }
+}*/
+/*@media screen and (min-height: '2000px') {
+    .beans_type_3 {
+        .pdbg {
+            width: 84vmax;
+        }
+    }
+
+    .beans_type_6 {
+        .pdbg {
+            width: 60vmax;
+        }
+    }
+
+    .beans_type_7,
+    .beans_type_8 {
+        .pdbg {
+            width: 56vmax;
+        }
+    }
+
+    .beans_type_9,
+    .beans_type_10,
+    .beans_type_11 {
+        .pdbg {
+            width: 90vmax;
+        }
+    }
+}*/
 @media only screen and (max-width: 1600px) {
   #coffee-container .nav .nav-box div {
     font-size: 1.2em;
