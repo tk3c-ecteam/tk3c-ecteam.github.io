@@ -708,7 +708,6 @@ button:focus {
 @media only screen and (max-width: 1600px) {
   .beans_type_2 .pdbg,
   .beans_type_3 .pdbg {
-    width: 78vmax;
     top: -3vmin;
   }
   .beans_type_5 .pdbg {
