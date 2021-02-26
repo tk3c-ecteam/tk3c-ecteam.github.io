@@ -745,6 +745,10 @@ button:focus {
   .beans_type_3 .pdbg {
     top: 0;
   }
+  .beans_type_7 .pdbg,
+  .beans_type_8 .pdbg {
+    top: 11vmin;
+  }
   .bottomlow p {
     margin: 1vmax auto 0;
   }
