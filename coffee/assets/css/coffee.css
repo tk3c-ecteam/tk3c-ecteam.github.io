@@ -92,6 +92,8 @@ section#crown_container nav {
   width: 100vw;
   height: 5vh;
   background-color: #d9b87d;
+  position: fixed;
+  top: 45px;
 }
 
 .row {
@@ -1079,7 +1081,7 @@ button:focus {
   }
   .sticky-top {
     position: fixed;
-    top: 4vmin;
+    top: 45px;
     width: 100%;
   }
   #coffee-container nav {
@@ -1134,7 +1136,6 @@ button:focus {
             transform: scale(2.2);
   }
   .sticky-top {
-    top: 6vmin;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1326,9 +1327,6 @@ button:focus {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
-  .sticky-top {
-    top: 11vmin;
-  }
   .navbar-dark .navbar-brand {
     width: 10%;
   }
@@ -1507,9 +1505,6 @@ button:focus {
   .vod-area p {
     width: 34%;
     font-size: 0.8em;
-  }
-  .sticky-top {
-    top: 14vmin;
   }
 }
 
