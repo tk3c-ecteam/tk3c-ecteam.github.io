@@ -629,10 +629,6 @@ button:focus {
   .beans_type_6 .pdbg {
     top: 19vmin;
   }
-  .beans_type_7 .pdbg,
-  .beans_type_8 .pdbg {
-    top: 9vmax;
-  }
   .beans_type_9 .pdbg,
   .beans_type_10 .pdbg,
   .beans_type_11 .pdbg {
@@ -734,6 +730,10 @@ button:focus {
   figure .pdbg {
     top: 19vmin;
   }
+  .beans_type_7 .pdbg,
+  .beans_type_8 .pdbg {
+    top: 51vmin;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -743,7 +743,7 @@ button:focus {
   }
   .beans_type_2 .pdbg,
   .beans_type_3 .pdbg {
-    top: -10vmax;
+    top: 0;
   }
   .bottomlow p {
     margin: 1vmax auto 0;
