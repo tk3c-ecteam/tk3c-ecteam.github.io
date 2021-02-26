@@ -603,15 +603,8 @@ button:focus {
     top: 5vmax;
     left: -4vmax;
   }
-  .beans_type_5 .pd {
-    top: 41%;
-  }
   .beans_type_6 .pdbg {
-    top: 6vmax;
     width: 50vmax;
-  }
-  .beans_type_6 .pd {
-    top: 43%;
   }
   .beans_type_7 .pdbg,
   .beans_type_8 .pdbg {
@@ -712,8 +705,10 @@ button:focus {
     }
 }*/
 @media only screen and (max-width: 1600px) {
-  #coffee-container .nav .nav-box div {
-    font-size: 1.2em;
+  .beans_type_2 .pdbg,
+  .beans_type_3 .pdbg {
+    width: 78vmax;
+    top: -3vmin;
   }
 }
 
