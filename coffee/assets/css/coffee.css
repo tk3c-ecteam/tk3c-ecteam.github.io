@@ -615,20 +615,20 @@ button:focus {
   }
   .beans_type_7 .pdbg,
   .beans_type_8 .pdbg {
-    top: 4vmax;
+    top: 18vmax;
     left: -4vmax;
     width: 48vmax;
   }
   .beans_type_7 .pd,
   .beans_type_8 .pd {
-    top: 45%;
+    top: 57%;
   }
 }
 
 @media screen and (min-height: 1600px) {
   figure.pdbg {
     width: 62vmax;
-    top: 9vmax;
+    top: 19vmax;
     left: -7vmax;
   }
   figure.pd {
@@ -638,15 +638,26 @@ button:focus {
   .beans_type_2 .pdbg,
   .beans_type_3 .pdbg {
     width: 75vmax;
-    top: -3vmax;
+    top: 0;
     left: -4vmax;
+  }
+  .beans_type_2 .pd,
+  .beans_type_3 .pd {
+    top: 49%;
   }
   .beans_type_5 .pdbg {
     top: 10vmax;
+    width: 58vmax;
+  }
+  .beans_type_5 .pd {
+    top: 52%;
   }
   .beans_type_6 .pdbg {
-    top: 12vmax;
+    top: 17vmax;
     width: 50vmax;
+  }
+  .beans_type_6 .pd {
+    top: 51%;
   }
   .beans_type_7 .pdbg,
   .beans_type_8 .pdbg {
@@ -656,6 +667,11 @@ button:focus {
   .beans_type_10 .pdbg,
   .beans_type_11 .pdbg {
     width: 73vmax;
+  }
+  .beans_type_9 .pd,
+  .beans_type_10 .pd,
+  .beans_type_11 .pd {
+    top: 49%;
   }
 }
 
@@ -682,10 +698,6 @@ button:focus {
   .beans_type_7 .pdbg,
   .beans_type_8 .pdbg {
     width: 50vmax;
-  }
-  .beans_type_7 .pd,
-  .beans_type_8 .pd {
-    top: 50%;
   }
   .beans_type_9 .pdbg,
   .beans_type_10 .pdbg,
