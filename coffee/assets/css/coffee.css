@@ -221,6 +221,12 @@ figure.pdbg {
   top: 0;
 }
 
+.beans_type_9 .pd,
+.beans_type_10 .pd,
+.beans_type_11 .pd {
+  left: 9vmax;
+}
+
 .beans_type_9 .exptitle,
 .beans_type_10 .exptitle,
 .beans_type_11 .exptitle {
@@ -579,105 +585,67 @@ button:focus {
   }
 }
 
-/*@media screen and (min-height: '1400px') {
-    figure.pdbg {
-        width: 62vmax;
-        top: 32vmax;
-        left: 9vmax;
-    }
-    figure.pd {
-        top: 48vmin;
-        left: 9vmax;
-    }
-    .beans_type_2,
-    .beans_type_3 {
-        .pdbg {
-            width: 78vmax;
-            top: 48vmin;
-            left: -4vmax;
-        }
-        .pd {
-            top: 48vmin;
-        }
-    }
+@media screen and (min-height: 1400px) {
+  figure.pdbg {
+    width: 66vmax;
+    top: 13vmin;
+  }
+  figure.pd {
+    top: 44vmin;
+    left: 7vmax;
+  }
+  .beans_type_2 .pdbg,
+  .beans_type_3 .pdbg {
+    width: 70vmax;
+  }
+  .beans_type_5 .pdbg {
+    width: 50vmax;
+    top: 5vmax;
+    left: -4vmax;
+  }
+  .beans_type_5 .pd {
+    top: 41%;
+  }
+  .beans_type_6 .pdbg {
+    top: 6vmax;
+    width: 50vmax;
+  }
+  .beans_type_6 .pd {
+    top: 43%;
+  }
+  .beans_type_7 .pdbg,
+  .beans_type_8 .pdbg {
+    width: 48vmax;
+    top: 8vmin;
+    left: -5vmax;
+  }
+}
 
-    .beans_type_5 {
-        .pdbg {
-            width: 50vmax;
-            top: 5vmax;
-            left: -4vmax;
-        }
-        .pd {
-            top: 41%;
-        }
-    }
+@media screen and (min-height: 1600px) {
+  .beans_type_2 .pdbg,
+  .beans_type_3 .pdbg {
+    width: 76vmax;
+    top: -7vmin;
+    left: -4vmax;
+  }
+  .beans_type_5 .pdbg {
+    top: 11vmin;
+    width: 52vmax;
+  }
+  .beans_type_6 .pdbg {
+    top: 19vmin;
+  }
+  .beans_type_7 .pdbg,
+  .beans_type_8 .pdbg {
+    top: 9vmax;
+  }
+  .beans_type_9 .pdbg,
+  .beans_type_10 .pdbg,
+  .beans_type_11 .pdbg {
+    width: 80vmax;
+  }
+}
 
-    .beans_type_6  {
-        .pdbg {
-            top: 6vmax;
-            width: 50vmax;
-        }
-        .pd {
-            top: 43%;
-        }
-    }
-
-    .beans_type_7,
-    .beans_type_8 {
-        .pdbg {
-            width: 48vmax;
-            top: 15vmin;
-        }
-    }
-}*/
-/*@media screen and (min-height: '1600px') {
-    figure.pdbg {
-        width: 62vmax;
-        top: 41vmax;
-        left: -7vmax;
-    }
-
-    .beans_type_2,
-    .beans_type_3 {
-        .pdbg {
-            width: 75vmax;
-            top: 0;
-            left: -4vmax;
-        }
-        .pd {
-            top: 49%;
-        }
-    }
-
-    .beans_type_5 {
-        .pdbg {
-            top: 10vmax;
-            width: 58vmax;
-        }
-    }
-
-    .beans_type_6 {
-        .pdbg {
-            top: 17vmax;
-            width: 50vmax;
-        }
-    }
-
-    .beans_type_7,
-    .beans_type_8 {
-        .pdbg {
-            top: 9vmax;
-        }
-    }
-
-    .beans_type_9,
-    .beans_type_10,
-    .beans_type_11 {
-        .pdbg {
-            width: 73vmax;
-        }
-    }
-}*/
 /*@media screen and (min-height: '1800px') {
     .beans_type_2,
     .beans_type_3 {
