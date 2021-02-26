@@ -136,6 +136,7 @@ figure.real, figure.total {
 figure.pd {
   top: 37vmin;
   left: 7vmax;
+  width: 21vmax;
 }
 
 figure.pdbg {
@@ -150,9 +151,9 @@ figure.pdbg {
 
 .beans_type_2 .pdbg,
 .beans_type_3 .pdbg {
-  width: 60vmax;
-  top: -7vmax;
-  left: -4vmax;
+  width: 58vmax;
+  top: -13vmin;
+  left: -3vmax;
 }
 
 .beans_type_3 figure.real {
@@ -185,14 +186,14 @@ figure.pdbg {
 
 .beans_type_7 .pdbg,
 .beans_type_8 .pdbg {
-  width: 43vmax;
-  top: 10vmin;
+  width: 40vmax;
+  top: 7vmin;
   left: -2vmax;
 }
 
 .beans_type_7 .pd,
 .beans_type_8 .pd {
-  top: 48vmin;
+  top: 41vmin;
   left: 7vmax;
 }
 
