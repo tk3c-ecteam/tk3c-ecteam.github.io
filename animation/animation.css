@@ -1020,8 +1020,8 @@
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate(600%, -500%);
-            transform: translate(600%, -500%);
+    -webkit-transform: translate(600%, -600%);
+            transform: translate(600%, -600%);
     opacity: 1;
   }
 }
@@ -1032,8 +1032,8 @@
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate(600%, -500%);
-            transform: translate(600%, -500%);
+    -webkit-transform: translate(600%, -600%);
+            transform: translate(600%, -600%);
     opacity: 1;
   }
 }
