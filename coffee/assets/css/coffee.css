@@ -234,6 +234,12 @@ figure.pdbg {
   color: #c3a986;
 }
 
+.beans_type_9 .last ul li:last-child,
+.beans_type_10 .last ul li:last-child,
+.beans_type_11 .last ul li:last-child {
+  display: none;
+}
+
 .pdtitle {
   margin: 0 0 0 -2vmax;
 }
@@ -251,6 +257,14 @@ figure.pdbg {
 
 .beans_type_7 .exptitle {
   color: #969696;
+}
+
+.beans_type_5 .pattern,
+.beans_type_7 .pattern,
+.beans_type_9 .pattern,
+.beans_type_10 .pattern,
+.beans_type_11 .pattern {
+  display: none;
 }
 
 .bottomlow {
@@ -294,6 +308,10 @@ figure.pdbg {
 .beans_type_2 .buyarea > a.buybtn,
 .beans_type_3 .buyarea > a.buybtn {
   width: 54%;
+}
+
+.beans_type_11 figure.real {
+  width: 8%;
 }
 
 figure.total,
@@ -728,11 +746,11 @@ button:focus {
     font-size: 1.2em;
   }
   figure .pdbg {
-    top: 19vmin;
+    top: 16vmin;
   }
   .beans_type_7 .pdbg,
   .beans_type_8 .pdbg {
-    top: 51vmin;
+    width: 43vmax;
   }
 }
 
@@ -1069,17 +1087,31 @@ button:focus {
   .price-area .buy {
     width: 70%;
     height: 100%;
-    display: block;
+    display: inline-block;
     color: #fff;
-    background-color: #c3a270;
-    padding: 10px 0;
     font-size: 2.5em;
     font-weight: bold;
-    margin: 3% auto;
+    line-height: 3em;
     position: relative;
     z-index: 80;
     text-decoration: none;
-    border-radius: 20px;
+  }
+  .price-area .btn-group {
+    width: 70%;
+    height: 100px;
+    background-color: #c3a270;
+    border-radius: 50px;
+    text-align: center;
+    margin: 2% auto;
+  }
+  .price-area .btn-group .show-detail {
+    font-size: 2.5em;
+    width: 30%;
+    background: #ffffff;
+    border: 2px solid #c3a270;
+    border-radius: 50px;
+    height: auto;
+    line-height: 2.8em;
   }
   .sticky-top {
     position: fixed;
@@ -1253,7 +1285,15 @@ button:focus {
     font-size: 16px;
   }
   .price-area .buy {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    line-height: 2.5em;
+  }
+  .price-area .btn-group {
+    height: 50px;
+  }
+  .price-area .btn-group .show-detail {
+    font-size: 1.2em;
+    line-height: 2.5em;
   }
   #coffee-mobile-container .nav-bar {
     right: 5%;
@@ -1367,9 +1407,7 @@ button:focus {
     margin: 18vmin auto 0;
   }
   .price-area .buy {
-    width: 60%;
     font-size: 1.5em;
-    padding: 6px 0;
   }
   .swiper-mobile .swiper-slide {
     height: 50vh;
@@ -1445,7 +1483,8 @@ button:focus {
     font-size: 12px;
   }
   .price-area .buy {
-    font-size: 1em;
+    font-size: 1.2em;
+    line-height: 3.5em;
   }
   .swiper-mobile .swiper-slide {
     height: 46vh;
@@ -1532,10 +1571,35 @@ button:focus {
   }
 }
 
-/* for ie */
+/* for ie 10 以上 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   .bottomlow p {
     word-break: normal;
+  }
+  #alert .alert-content {
+    margin: 13% auto 0;
+  }
+  #alert .close {
+    top: 8%;
+    right: 17%;
+  }
+  .bakenum {
+    margin: 0 0 0 calc(-5 * (1vw + 1vh - 1vmin));
+  }
+  .bakenum i {
+    font-size: calc(10 * (1vw + 1vh - 1vmin));
+  }
+  .bakenum b {
+    font-size: calc(2 * (1vw + 1vh - 1vmin));
+  }
+  .last .row ul {
+    width: calc(18 * (1vw + 1vh - 1vmin));
+  }
+  .last .row ul li {
+    padding: calc(0.3 * (1vw + 1vh - 1vmin)) calc(0.5 * (1vw + 1vh - 1vmin)) calc(1 * (1vw + 1vh - 1vmin));
+  }
+  .last .row ul li:nth-of-type(1) {
+    padding: 0 calc(0.5 * (1vw + 1vh - 1vmin)) calc(3.1 * (1vw + 1vh - 1vmin));
   }
 }
 
