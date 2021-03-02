@@ -1075,8 +1075,8 @@ button:focus {
     margin-top: -5vmin;
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
-    -webkit-transition: all s linear;
-    transition: all s linear;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
   }
   .price-area {
     width: 100%;
