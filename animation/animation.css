@@ -1014,26 +1014,26 @@
 
 /* 往右上飛 */
 @-webkit-keyframes fly-to-top-right {
-  20% {
+  0% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate(500%, -500%);
-            transform: translate(500%, -500%);
+    -webkit-transform: translate(600%, -500%);
+            transform: translate(600%, -500%);
     opacity: 1;
   }
 }
 @keyframes fly-to-top-right {
-  20% {
+  0% {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translate(500%, -500%);
-            transform: translate(500%, -500%);
+    -webkit-transform: translate(600%, -500%);
+            transform: translate(600%, -500%);
     opacity: 1;
   }
 }
