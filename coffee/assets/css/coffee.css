@@ -979,6 +979,7 @@ button:focus {
     width: 100%;
     height: 100%;
     margin: 0 auto 0;
+    will-change: transform;
   }
   .swiper-mobile .swiper-slide {
     /* Center slide text vertically */
@@ -1041,6 +1042,7 @@ button:focus {
     width: 86%;
     color: white;
     font-family: sans-serif;
+    display: none;
   }
   .swiper-mobile .swiper-slide .slide-bg .score-text .score {
     font-size: 8vmin;
