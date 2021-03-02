@@ -1304,7 +1304,7 @@ button:focus {
     right: 5%;
   }
   #coffee-mobile-container .mobile-content {
-    margin: 30vmin auto 0;
+    margin: 20vmin auto 0;
     height: auto;
   }
   #coffee-mobile-container .coffee .link-group {
@@ -1470,7 +1470,7 @@ button:focus {
 
 @media screen and (max-width: 376px) and (max-height: 670px) {
   #coffee-mobile-container .mobile-content {
-    margin: 25vmin auto 0;
+    margin: 21vmin auto 0;
   }
   #coffee-mobile-container .coffee .bottom-group a {
     font-size: 1.1em;
@@ -1511,9 +1511,6 @@ button:focus {
   }
   .price-area h2 {
     font-size: 30px;
-  }
-  #coffee-mobile-container .mobile-content {
-    margin: 30vmin auto 0;
   }
   #coffee-mobile-container .coffee .bottom-group {
     height: 35px;
