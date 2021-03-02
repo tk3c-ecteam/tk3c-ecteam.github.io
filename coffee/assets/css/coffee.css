@@ -479,7 +479,7 @@ button:focus {
 #kuai3header {
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 9999 !important;
 }
 
 /* 彈出廣告 */
