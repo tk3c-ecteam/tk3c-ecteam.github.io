@@ -367,6 +367,10 @@ button:focus {
   outline: none;
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
 /* 活動專區 */
 #activity-area,
 #activity-mb-area {
