@@ -910,7 +910,7 @@ button:focus {
     position: fixed;
     bottom: 0;
     z-index: 98;
-    background-color: #e4e4e4;
+    background-color: #c3a270;
   }
   #coffee-mobile-container .coffee .bottom-group a {
     width: 100%;
@@ -921,6 +921,7 @@ button:focus {
     font-size: 4.5vmin;
     text-align: center;
     line-height: 9vmin;
+    font-weight: bold;
   }
   #coffee-mobile-container .coffee .top-buy {
     position: absolute;
