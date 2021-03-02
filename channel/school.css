@@ -27,7 +27,7 @@ a {
 img {
     border: 0px;
     max-width: 100%;
-    max-height: 100%;
+    height: auto;
 }
 
 
@@ -36,9 +36,10 @@ img {
 html {
     margin: 0;
     padding: 0;
-    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210303_kv_bg2.png) no-repeat top 100px center, url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210303_bg2.jpg) repeat-y top center;
+    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210303_kv2_bg.png) no-repeat top 100px center, url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210303_bg_1.jpg) repeat-y top center;
     background-size: 100%;
     background-position: 0vmax 5vmax;
+    overflow-x: hidden;
 }
 
 .boxfly {
@@ -279,13 +280,13 @@ i {
 }
 
 .actbtn::before {
-    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210303_icon-01.png) no-repeat;
+    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/r20210303_ight_top.png) no-repeat;
     content: "";
     display: block;
     width: 250px;
-    height: 170px;
+    height: 120px;
     position: absolute;
-    top: -163px;
+    top: -114px;
     left: 3%;
     z-index: 1;
     background-size: 60%;
@@ -367,14 +368,47 @@ body {
 form>div:nth-of-type(9) {
     margin-top: 2vmax;
     z-index: 80;
+    position: relative;
+}
+
+form>div:nth-of-type(9):before {
+    content: '';
+    display: block;
+    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/r20210303_ight_top.png) no-repeat;
+    width: 100%;
+    height: 130px;
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    animation: fly-to-top-right 2s linear 0.7s infinite alternate;
+    z-index: 20;
 }
 
 /* 開學季應援標題 */
+.electro-group {
+    margin: -19vmax auto 8vmax;
+    width: 100%;
+    height: 100%;
+}
+
+.electro-group p{
+    width: 15%;
+}
+
+.electro-group .pad {
+    margin: 0 10vmax;
+    animation: shake 0.6s linear alternate infinite;
+}
+
+.electro-group .computer {
+    margin: -6vmax 28vmax;
+    animation: upAndDown 0.7s  linear alternate infinite;
+}
 .school-title {
     width: 100%;
-    animation: fade-in-right linear 0.55s;
+    animation: rubberBand linear 0.5s;
     text-align: center;
-    margin: -15vmax auto 0;
+    margin: 6vmax auto 0;
 }
 /*主視覺*/
 
@@ -3894,18 +3928,10 @@ strong i:after {
     form>div:nth-of-type(9) {
         margin-top: 8vmax;
     }
-    .magic-title {
-        margin: 11vmax auto 0;
+    .electro-group {
+        margin: -14vmax auto 8vmax;
     }
-    .magic-title:after {
-        bottom: -19%;
-    }
-    .boxfor3c {
-        margin: -6vmax 14vmax;
-    }
-    .boxfor3c p:nth-of-type(3) {
-        width: 20%;
-    }
+    
 }
 
 @media screen and (max-width: 1600px) {
@@ -3915,8 +3941,19 @@ strong i:after {
     html {
         background-position: 0 6vmax;
     }
+    .electro-group {
+        margin: -22vmax auto 8vmax;
+    }
+
+    .electro-group .group {
+        margin: 0 9vmax;
+    }
+
     .school-title {
-        margin: -24vmax auto 0;
+        width: 58%;
+    }
+    .electro-group p {
+        width: 10%;
     }
 }
 
@@ -3927,18 +3964,10 @@ strong i:after {
     html {
         background-position: 0 7vmax;
     }
-    .boxfor3c {
-        margin: -12vmax 23vmax;
-        width: 83%;
+    .electro-group {
+        margin: -25vmax auto 8vmax;
     }
-    .magic-title {
-        margin: 8vmax auto 0;
-    }
-    .magic-title:before {
-        width: 30%;
-        top: -19%;
-        left: 39%;
-    }
+    
     .rightbtn {
         left: 46%;
     }
@@ -3948,24 +3977,14 @@ strong i:after {
     html {
         background-position: 0 8vmax;
     }
-    .boxfor3c {
-        margin: -15vmax 29vmax;
-        width: 69%;
-    }
-    .boxfor3c p:nth-of-type(2) {
-        width: 23%;
-    }
-    .boxfor3c p:nth-of-type(3) {
-        margin-left: 7px;
-    }
-    .magic-title {
-        width: 53%;
-    }
-    .magic-title:after {
-        bottom: -28%;
+    .electro-group {
+        margin: -30vmax auto 8vmax;
     }
     .rightbtn {
         left: 39%;
+    }
+    .school-title {
+        width: 50%;
     }
 }
 
@@ -3993,6 +4012,9 @@ strong i:after {
     form>div:nth-of-type(9) {
         margin-top: 2vmin;
     }
+    .electro-group {
+        margin: -26vmax auto 8vmax;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -4011,8 +4033,11 @@ strong i:after {
         width: 30.3%;
     }
     .protitle {
-        height: 158px;
-        line-height: 5em;
+        height: 129px;
+        line-height: 3em;
+    }
+    .electro-group {
+        margin: -36vmax auto 8vmax;
     }
 }
 
@@ -6252,7 +6277,7 @@ strong i:after {
         height: 100%;
         display: block;
     }
-    .school-title {
+    .electro-group {
         display: none;
     }
 }
@@ -6311,6 +6336,12 @@ strong i:after {
     }
     .boxfor3c {
         margin: -5vmax 12vmax;
+    }
+    html {
+        background-position: 0 4vmax;
+    }
+    .electro-group {
+        margin: -11vmax auto 12vmax;
     }
 }
 
