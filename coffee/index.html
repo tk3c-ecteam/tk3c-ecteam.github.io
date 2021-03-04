@@ -92,8 +92,8 @@
                      <a class="dropdown-item" v-for="(p,i) in coffees.special" @click="alert(i + 8)">{{ p }}</a>
                     </div>
                   </li>
-                <li class="nav-item"><a @click="goEvent" class="nav-link event">活動花絮</a></li>
-                <li class="nav-item"><a @click="goSpoke('spoke')" class="nav-link event">年度代言人</a></li>
+                <li class="nav-item"  data-toggle="collapse"><a @click="goEvent" class="nav-link event">活動花絮</a></li>
+                <li class="nav-item"  data-toggle="collapse"><a @click="goSpoke('spoke')" class="nav-link event">年度代言人</a></li>
             </ul>
           </div>
       </nav>
@@ -202,14 +202,6 @@
 
         <!-- 活動專區 -->
         <div id="activity-area">
-            <!-- 活動輪播banner -->
-            <div class="banner">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" v-for="bn in coffees.eventBN">
-                        <a><img :src="bn"></a>
-                    </div>
-                </div>
-            </div>
 
             <!-- 幕後花絮 -->
             <div class="vod-area">
@@ -227,6 +219,9 @@
                         <img :src="getImgUrl(`${vod}`)">
                     </div>
                 </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
 
             <div class="footer"></div>
@@ -269,8 +264,8 @@
                     <a class="dropdown-item"  data-toggle="collapse" href="#" v-for="(p,i) in forMobileData.special" @click="alert((i+ 8) + 1)">{{ p }}</a>
                     </div>
                 </li>
-                <li class="nav-item"><a @click="goEvent" class="nav-link event">活動花絮</a></li>
-                <li class="nav-item"><a @click="goSpoke('spoke')" class="nav-link event">年度代言人</a></li>
+                <li class="nav-item"  data-toggle="collapse"><a @click="goEvent" class="nav-link event">活動花絮</a></li>
+                <li class="nav-item"  data-toggle="collapse"><a @click="goSpoke('spoke')" class="nav-link event">年度代言人</a></li>
             </ul>
             </div>
         </nav>
@@ -318,7 +313,7 @@
 
             <div class="btn-group">
                 <a class="buy" :href="goCoffeeUrl(other)" target="_blank">立即購買</a>
-                <a class="show-detail" @click="goDetail">詳細</a>
+                <a class="show-detail" @click="goDetail">詳情</a>
             </div>
         </div>
         <div class="content-area">
@@ -346,14 +341,6 @@
 
         <!-- 活動專區 -->
         <div id="activity-mb-area">
-            <!-- 活動輪播banner -->
-            <div class="banner">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" v-for="bn in forMobileData.eventBN">
-                        <a><img :src="bn"></a>
-                    </div>
-                </div>
-            </div>
 
             <!-- 幕後花絮 -->
             <div class="vod-area">
@@ -371,6 +358,9 @@
                         <img :src="getImgUrl(`${vod}`)">
                     </div>
                 </div>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
             <div class="footer"></div>
         </div>

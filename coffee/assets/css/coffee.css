@@ -372,6 +372,10 @@ button:focus {
   display: none;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-right: 1rem;
+}
+
 /* 活動專區 */
 #activity-area,
 #activity-mb-area {
@@ -382,24 +386,6 @@ button:focus {
   z-index: 10;
   overflow-x: hidden;
   overflow-y: auto;
-}
-
-#activity-area .banner,
-#activity-mb-area .banner {
-  width: 100%;
-}
-
-#activity-area .swiper-slide,
-#activity-mb-area .swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #activity-area .footer,
@@ -446,18 +432,20 @@ button:focus {
   height: auto;
   margin: 0 auto 5vmin;
   overflow: hidden;
+  position: relative;
 }
 
 .vod-slide img {
   min-width: 100%;
   max-width: 100%;
-  max-height: 450px;
-  min-height: 450px;
+  max-height: 400px;
+  min-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .vod-slide .swiper-slide {
   width: 50%;
-  min-height: 40vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1407,9 +1395,6 @@ button:focus {
   }
   #activity-mb-area {
     margin: 11vmin auto 0;
-  }
-  #activity-mb-area .banner {
-    height: 300px;
   }
   #alert .close {
     right: 5vmin;
