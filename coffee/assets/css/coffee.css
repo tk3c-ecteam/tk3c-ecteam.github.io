@@ -388,17 +388,6 @@ button:focus {
   overflow-y: auto;
 }
 
-#activity-area .footer,
-#activity-mb-area .footer {
-  width: 100%;
-  height: 50px;
-  position: static;
-  bottom: 0;
-  background-color: #9c7f54;
-  display: block;
-  z-index: 5;
-}
-
 .vod-area {
   width: 100%;
   margin: 3vmax auto 0;
@@ -416,6 +405,7 @@ button:focus {
   display: inline-block;
   margin: 0 10px;
   font-weight: bold;
+  line-height: 5vmin;
 }
 
 .vod-area .sub-title {
@@ -463,7 +453,7 @@ button:focus {
   background: #b3b2b28f;
   width: 3%;
   height: 19%;
-  color: #FBC700;
+  color: #d9b87d;
 }
 
 /* 年度代言人專區 */
