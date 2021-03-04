@@ -1159,7 +1159,7 @@ button:focus {
   .vod-slide .swiper-button-prev,
   .vod-slide .swiper-button-next {
     background: #b3b2b28f;
-    width: 3%;
+    width: 6%;
     height: 19%;
     color: #FBC700;
   }
@@ -1407,6 +1407,13 @@ button:focus {
   }
   .vod-slide .swiper-slide {
     min-height: 20vmin;
+  }
+  .vod-slide .swiper-button-prev,
+  .vod-slide .swiper-button-next {
+    background: #b3b2b28f;
+    width: 10%;
+    height: 19%;
+    color: #FBC700;
   }
   #activity-mb-area {
     margin: 11vmin auto 0;
