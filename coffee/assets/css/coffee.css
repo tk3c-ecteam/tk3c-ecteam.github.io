@@ -1156,6 +1156,13 @@ button:focus {
     font-size: 2.5em;
     margin: 0 4vmax 3vmax;
   }
+  .vod-slide .swiper-button-prev,
+  .vod-slide .swiper-button-next {
+    background: #b3b2b28f;
+    width: 3%;
+    height: 19%;
+    color: #FBC700;
+  }
   #alert .close {
     top: 16vmax;
     right: 4vmax;
