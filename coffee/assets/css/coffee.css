@@ -377,10 +377,11 @@ button:focus {
 #activity-mb-area {
   display: none;
   width: 100%;
-  height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
+  height: 100%;
   position: relative;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #activity-area .banner,
@@ -404,9 +405,12 @@ button:focus {
 #activity-area .footer,
 #activity-mb-area .footer {
   width: 100%;
-  height: 40px;
-  position: absolute;
+  height: 50px;
+  position: static;
+  bottom: 0;
   background-color: #9c7f54;
+  display: block;
+  z-index: 5;
 }
 
 .vod-area {
@@ -429,39 +433,31 @@ button:focus {
 }
 
 .vod-area .sub-title {
-  margin: 0 1vmax 5vmax 7vmax;
+  margin: 0 1vmax 3vmax 7vmax;
 }
 
 .vod-area .sub-title .event-name {
   color: #ad8d5d;
+  width: 100%;
 }
 
 .vod-slide {
-  width: 80%;
-  margin: 0 auto 15vmin;
+  width: 100%;
+  height: auto;
+  margin: 0 auto 5vmin;
   overflow: hidden;
 }
 
-.vod-slide ul li {
-  width: 30%;
-  margin: 0 10px;
-}
-
-.vod-slide ul li a {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.vod-slide a {
-  width: 100%;
-  height: 100%;
-  display: block;
+.vod-slide img {
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 450px;
+  min-height: 450px;
 }
 
 .vod-slide .swiper-slide {
-  width: 40%;
-  min-height: 80vmin;
+  width: 50%;
+  min-height: 40vmin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -472,6 +468,25 @@ button:focus {
       -ms-flex-pack: center;
           justify-content: center;
   border: none;
+}
+
+/* 年度代言人專區 */
+#spokes-area,
+#spokes-mb-area {
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+#spokes-area .spoke-image,
+#spokes-mb-area .spoke-image {
+  -webkit-animation: fade-in-left 0.8s linear;
+          animation: fade-in-left 0.8s linear;
+  margin-top: 5vmin;
 }
 
 /* 置頂TKEC樣式 */
@@ -808,6 +823,9 @@ button:focus {
     right: 9vmax;
     top: 20vmax;
     width: 4%;
+  }
+  #spokes-area .spoke-image {
+    margin-top: 6vmin;
   }
 }
 
@@ -1169,6 +1187,9 @@ button:focus {
     width: 30%;
     font-size: 1.5em;
   }
+  .vod-slide .swiper-slide {
+    width: 100%;
+  }
   #activity-mb-area {
     margin: 8vmin auto 0;
   }
@@ -1374,6 +1395,16 @@ button:focus {
     width: 43%;
     font-size: 1em;
   }
+  .vod-area .sub-title {
+    margin: 0 1vmax 3vmax 4vmin;
+  }
+  .vod-slide img {
+    max-height: 300px;
+    min-height: 300px;
+  }
+  .vod-slide .swiper-slide {
+    min-height: 20vmin;
+  }
   #activity-mb-area {
     margin: 11vmin auto 0;
   }
@@ -1395,6 +1426,9 @@ button:focus {
   }
   .navbar-dark .navbar-brand {
     width: 10%;
+  }
+  #spokes-mb-area .spoke-image {
+    margin-top: 12vmin;
   }
 }
 
@@ -1476,8 +1510,7 @@ button:focus {
     top: 17vmin;
   }
   .vod-area .sub-title {
-    margin: 0 3vmin 5vmax 6vmin;
-    text-align: center;
+    margin: 0 3vmin 2vmax 0;
   }
   .vod-area p {
     width: 32%;
