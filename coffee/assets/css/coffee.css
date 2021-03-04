@@ -428,7 +428,7 @@ button:focus {
 }
 
 .vod-slide {
-  width: 100%;
+  width: 85%;
   height: auto;
   margin: 0 auto 5vmin;
   overflow: hidden;
@@ -456,6 +456,14 @@ button:focus {
       -ms-flex-pack: center;
           justify-content: center;
   border: none;
+}
+
+.vod-slide .swiper-button-prev,
+.vod-slide .swiper-button-next {
+  background: #b3b2b28f;
+  width: 3%;
+  height: 19%;
+  color: #FBC700;
 }
 
 /* 年度代言人專區 */
