@@ -277,6 +277,9 @@ figure.pdbg {
 
 .bottomlow p {
   width: 68%;
+  -ms-word-break: keep-all;
+  -webkit-word-break: keep-all;
+  -moz-word-break: keep-all;
 }
 
 .expword {
