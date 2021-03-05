@@ -1667,3 +1667,10 @@ button:focus {
   }
 }
 
+/* Microsoft Edge 12-18 */
+@supports (-ms-ime-align: auto) {
+  .bottomlow p {
+    word-break: normal;
+  }
+}
+
