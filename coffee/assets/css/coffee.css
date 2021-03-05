@@ -133,7 +133,7 @@ figure.real, figure.total {
 }
 
 figure.pd {
-  top: 37vmin;
+  top: 33vmin;
   left: 7vmax;
   width: 21vmax;
 }
@@ -192,7 +192,7 @@ figure.pdbg {
 
 .beans_type_7 .pd,
 .beans_type_8 .pd {
-  top: 41vmin;
+  top: 38vmin;
   left: 7vmax;
 }
 
@@ -218,7 +218,7 @@ figure.pdbg {
 .beans_type_11 .pdbg {
   width: 61vmax;
   left: 0;
-  top: 0;
+  top: -15vmin;
 }
 
 .beans_type_9 .pd,
