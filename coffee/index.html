@@ -213,7 +213,7 @@
             </div>
 
             <!-- 花絮圖片輪播區 -->
-            <div class="vod-slide">
+            <div class="vod-slide" v-if="coffees.vodImages !== null && coffees.vodImages !== '">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" v-for="vod in coffees.vodImages">
                         <img :src="getImgUrl(vod)">
@@ -350,7 +350,7 @@
             </div>
 
             <!-- 花絮圖片輪播區 -->
-            <div class="vod-slide">
+            <div class="vod-slide" v-if="forMobileData.vodImages !== null && forMobileData.vodImages !== ''">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" v-for="vod in forMobileData.vodImages">
                         <img :src="getImgUrl(vod)">
@@ -380,7 +380,7 @@
             <h3>或使用IE最新版本edge來獲得更良好的體驗。</h3>
         </div>
     </div>
-    <script src="https://tk3c-ecteam.github.io/coffee/assets/js/coffee.min.js"></script>
+    <script src="../dist/js/coffee.min.js"></script>
 </body>
 
 </html>
