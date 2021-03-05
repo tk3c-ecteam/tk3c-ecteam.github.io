@@ -343,9 +343,9 @@
             <!-- 幕後花絮 -->
             <div class="vod-area">
                 <h2>活動花絮</h2>
-                <div class="sub-title">
-                    <p class="date">| 2021.01.03 |</p>
-                    <p class="event-name">世界咖啡協會講師教您在家沖出香醇咖啡及拉花 </p>
+                <div class="sub-title" v-for="(co,index) in coffees.vod">
+                    <p class="date">| {{ co.date }} |</p>
+                    <p class="event-name">{{ co.title }} </p>
                 </div>
             </div>
 
