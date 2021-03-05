@@ -964,7 +964,7 @@ button:focus {
     right: 0;
   }
   #coffee-mobile-container .coffee .coffee-detail {
-    margin-top: -48vmin;
+    margin-top: 0;
     margin-bottom: 15vmin;
   }
   #coffee-mobile-container .coffee .close {
