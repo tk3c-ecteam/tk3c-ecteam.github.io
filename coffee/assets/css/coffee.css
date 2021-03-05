@@ -938,7 +938,7 @@ button:focus {
   }
   #coffee-mobile-container .coffee .bottom-group {
     width: 100%;
-    height: 80px;
+    height: 100px;
     position: fixed;
     bottom: 0;
     z-index: 98;
@@ -950,9 +950,9 @@ button:focus {
     display: block;
     margin: 0 auto 0;
     color: #fff;
-    font-size: 4.5vmin;
+    font-size: 5vmin;
     text-align: center;
-    line-height: 9vmin;
+    line-height: 11vmin;
     font-weight: bold;
   }
   #coffee-mobile-container .coffee .top-buy {
@@ -964,7 +964,7 @@ button:focus {
     right: 0;
   }
   #coffee-mobile-container .coffee .coffee-detail {
-    margin-top: 0;
+    margin-top: -48vmin;
     margin-bottom: 15vmin;
   }
   #coffee-mobile-container .coffee .close {
@@ -1192,8 +1192,9 @@ button:focus {
 }
 
 @media only screen and (max-width: 768px) {
-  #coffee-mobile-container .coffee .bottom-group {
-    height: 60px;
+  #coffee-mobile-container .coffee .bottom-group a {
+    font-size: 6vmin;
+    line-height: 14vmin;
   }
   #coffee-mobile-container .coffee .close {
     top: 10vmin;
@@ -1372,12 +1373,12 @@ button:focus {
     height: 35vh;
   }
   #coffee-mobile-container .coffee .bottom-group {
-    height: 40px;
+    height: 50px;
   }
   #coffee-mobile-container .coffee .bottom-group a {
     height: 40px;
-    line-height: 11vmin;
-    font-size: 1.3em;
+    line-height: 13vmin;
+    font-size: 1.6em;
   }
   #coffee-mobile-container .coffee .close {
     font-size: 2em;
@@ -1550,7 +1551,7 @@ button:focus {
     margin: 21vmin auto 0;
   }
   #coffee-mobile-container .coffee .bottom-group a {
-    font-size: 1.1em;
+    font-size: 1.4em;
   }
   .price-area {
     margin: 20vmin auto 10%;
