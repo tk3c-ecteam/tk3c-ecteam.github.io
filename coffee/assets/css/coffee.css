@@ -1677,7 +1677,7 @@ button:focus {
 }
 
 /* FOR safari */
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
+@media screen and (-webkit-min-device-pixel-ratio) {
   .bottomlow p {
     word-break: normal;
     overflow-wrap: break-word;
