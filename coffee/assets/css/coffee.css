@@ -1677,8 +1677,8 @@ button:focus {
   }
 }
 
-/* FOR safari */
-@media screen and (-webkit-min-device-pixel-ratio) {
+/* for safari */
+@media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
   .bottomlow p {
     word-break: normal;
     overflow-wrap: break-word;
