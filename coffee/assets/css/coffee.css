@@ -279,7 +279,6 @@ figure.pdbg {
   width: 68%;
   -ms-word-break: keep-all;
   -webkit-word-break: keep-all;
-  -moz-word-break: keep-all;
 }
 
 .expword {
@@ -1674,6 +1673,14 @@ button:focus {
 @supports (-ms-ime-align: auto) {
   .bottomlow p {
     word-break: normal;
+  }
+}
+
+/* FOR safari */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .bottomlow p {
+    word-break: normal;
+    overflow-wrap: break-word;
   }
 }
 
