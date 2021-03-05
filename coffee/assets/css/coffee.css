@@ -133,13 +133,13 @@ figure.real, figure.total {
 }
 
 figure.pd {
-  top: 37vmin;
+  top: 36vmin;
   left: 7vmax;
   width: 18vmax;
 }
 
 figure.pdbg {
-  top: 6vmin;
+  top: 4vmin;
   width: 53vmax;
 }
 
@@ -169,6 +169,10 @@ figure.pdbg {
   width: 80%;
 }
 
+.beans_type_4 .pd {
+  top: 41vmin;
+}
+
 .beans_type_5 .pdbg {
   width: 40vmax;
   top: 4vmin;
@@ -177,6 +181,10 @@ figure.pdbg {
 
 .beans_type_5 figure.real {
   width: 40%;
+}
+
+.beans_type_5 .pd {
+  top: 39vmin;
 }
 
 .beans_type_6 .pdbg {
@@ -189,6 +197,10 @@ figure.pdbg {
   width: 50%;
 }
 
+.beans_type_6 .pd {
+  top: 41vmin;
+}
+
 .beans_type_7 .pdbg,
 .beans_type_8 .pdbg {
   width: 40vmax;
@@ -198,7 +210,7 @@ figure.pdbg {
 
 .beans_type_7 .pd,
 .beans_type_8 .pd {
-  top: 38vmin;
+  top: 41vmin;
   left: 7vmax;
 }
 
@@ -216,7 +228,7 @@ figure.pdbg {
 }
 
 .beans_type_9 .pd {
-  top: 37vmin;
+  top: 35vmin;
 }
 
 .beans_type_10 figure.real {
@@ -397,6 +409,7 @@ button:focus {
   z-index: 10;
   overflow-x: hidden;
   overflow-y: auto;
+  padding-bottom: 3%;
 }
 
 .vod-area {
@@ -764,12 +777,6 @@ button:focus {
   .beans_type_3 .pdbg {
     top: -19vmin;
   }
-  .beans_type_5 .pdbg {
-    top: 19vmin;
-  }
-  .beans_type_5 .pd {
-    top: 48vmin;
-  }
   .beans_type_9 .pdbg,
   .beans_type_10 .pdbg,
   .beans_type_11 .pdbg {
@@ -796,8 +803,11 @@ button:focus {
 
 @media only screen and (max-width: 1280px) {
   figure.pdbg {
-    top: 16vmin;
+    top: 8vmin;
     width: 58vmax;
+  }
+  figure.pd {
+    top: 39vmin;
   }
   .beans_type_2 .pdbg,
   .beans_type_3 .pdbg {
