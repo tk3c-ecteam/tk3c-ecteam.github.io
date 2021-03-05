@@ -133,13 +133,14 @@ figure.real, figure.total {
 }
 
 figure.pd {
-  top: 33vmin;
+  top: 37vmin;
   left: 7vmax;
-  width: 21vmax;
+  width: 18vmax;
 }
 
 figure.pdbg {
-  top: 7vmin;
+  top: 6vmin;
+  width: 53vmax;
 }
 
 .tophigh {
@@ -151,8 +152,13 @@ figure.pdbg {
 .beans_type_2 .pdbg,
 .beans_type_3 .pdbg {
   width: 58vmax;
-  top: -13vmin;
+  top: -31vmin;
   left: -3vmax;
+}
+
+.beans_type_2 .pd,
+.beans_type_3 .pd {
+  top: 42vmin;
 }
 
 .beans_type_3 figure.real {
@@ -164,8 +170,8 @@ figure.pdbg {
 }
 
 .beans_type_5 .pdbg {
-  width: 44vmax;
-  top: 7vmin;
+  width: 40vmax;
+  top: 4vmin;
   left: -2vmax;
 }
 
@@ -175,7 +181,7 @@ figure.pdbg {
 
 .beans_type_6 .pdbg {
   width: 47vmax;
-  top: 10vmin;
+  top: -8vmin;
   left: -4vmax;
 }
 
@@ -209,6 +215,10 @@ figure.pdbg {
   width: 8%;
 }
 
+.beans_type_9 .pd {
+  top: 37vmin;
+}
+
 .beans_type_10 figure.real {
   width: 40%;
 }
@@ -218,7 +228,7 @@ figure.pdbg {
 .beans_type_11 .pdbg {
   width: 61vmax;
   left: 0;
-  top: -15vmin;
+  top: -30vmin;
 }
 
 .beans_type_9 .pd,
