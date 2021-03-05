@@ -752,7 +752,7 @@ button:focus {
 @media only screen and (max-width: 1600px) {
   .beans_type_2 .pdbg,
   .beans_type_3 .pdbg {
-    top: -3vmin;
+    top: -19vmin;
   }
   .beans_type_5 .pdbg {
     top: 19vmin;
@@ -763,7 +763,7 @@ button:focus {
   .beans_type_9 .pdbg,
   .beans_type_10 .pdbg,
   .beans_type_11 .pdbg {
-    width: 80vmax;
+    top: -23vmin;
   }
 }
 
