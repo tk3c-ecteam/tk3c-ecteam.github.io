@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="電視,顯示器,JVC,大尺寸,65吋,50吋,55吋,43吋,球賽,看電視" />
+	<meta name="description" content="NEW視大吉，電視全館5折起｜燦坤首選電視，日系JVC品牌，65Q、50Q大尺寸超便宜！獨家熱銷機種；各品牌主打電視，燦坤應有盡有！" />
+	<link href="https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_fb_share.jpg" rel="image_src" />
+	<meta hhttp-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!--FB meta-->
+
+	<meta property="og:site_name" content="燦坤線上購物" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="NEW視大吉，電視全館5折起｜燦坤首選電視，日系JVC品牌" />
+	<meta property="og:image" content="https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_fb_share.jpg" />
+	<meta property="og:url" content="https://events.tk3c.com/events_net/2020TVforever/index.html" />
+	<meta property="og:description" content="NEW視大吉，電視全館5折起｜燦坤首選電視，日系JVC品牌，65Q、50Q大尺寸超便宜！獨家熱銷機種；各品牌主打電視，燦坤應有盡有！" />
+
+	<!--Google+ meta-->
+
+	<meta itemprop="name" content="NEW視大吉，電視全館5折起｜燦坤首選電視，日系JVC品牌" />
+	<meta itemprop="description" content="NEW視大吉，電視全館5折起｜燦坤首選電視，日系JVC品牌，65Q、50Q大尺寸超便宜！獨家熱銷機種；各品牌主打電視，燦坤應有盡有！" />
+	<meta itemprop="url" content="https://events.tk3c.com/events_net/2020TVforever/index.html" />
+	<meta itemprop="image" content="https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_fb_share.jpg" />
+	<title>NEW視大吉，電視全館5折起｜燦坤首選電視，日系JVC品牌</title>
+	<link href="./tv.css" rel="stylesheet" type="text/css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    
+    <script>
+        function ChkEvent(MainID) {
+            $.ajax({
+                url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+                type: "POST",
+                dataType: 'text',
+                data: {
+                    "url": encodeURI(document.location.toString())
+                },
+                success: function (msg) {
+                    if (msg == "0") {
+                        location.href = "http://www.tk3c.com";
+                    }
+                    if (msg == "1") {
+                        TopScript();
+                    }
+                }
+            });
+        }
+    
+        function TopScript() {
+            $.ajax({
+                url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+                type: "POST",
+                dataType: 'text',
+                success: function (msg) {
+                    $("#TkecTop").html(msg);
+                }
+            });
+        }    
+        var WebSiteName = "2020TVforever";
+        $(document).ready(function () {
+            //M板下方選單右側動態載入
+            $('.fix_btn p a').each(function () {
+                var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+                $(this).attr('onclick', strjs);
+            });
+        });
+        $(document).ready(function () {
+            //延遲讀取
+            var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                $('img[lazy="2"]').each(function () {
+                    var self = $(this);
+                    self.one("appear", function () {
+                        //alert("appeared");
+                        self.attr("src", self.attr("org"));
+                        self.removeAttr("lazy");
+                    });
+                    self.appear();
+    
+                    if (self.offset().top <= clientHitght) {
+                        self.trigger('appear');
+                    }
+                });
+        });
+    </script>
+    <!-- GO TOP -->
+    <script type="text/javascript">
+        $(function(){
+            $("#gotop").click(function(){
+                jQuery("html,body").animate({
+                    scrollTop:0
+                },1000);
+            });
+            $(window).scroll(function() {
+                if ( $(this).scrollTop() > 300){
+                    $('#gotop').fadeIn("fast");
+                } else {
+                    $('#gotop').stop().fadeOut("fast");
+                }
+            });
+        });
+    </script>
+    <!-- 選單固定效果 -->
+    <script>
+        $(window).load(function () {
+            $.ajax({
+                url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+                type: "POST",           
+                dataType: 'script',
+                success: function () {                
+                    $("#btnBox03").sticky({ topSpacing: 0 });
+                }
+            });
+        });	
+    </script>
+    <!--選單ping住後更換底圖的效果 記得前面要有function-->
+    <script type="text/javascript">
+        $(function(){
+        var top = $('#btnBox03').offset().top;
+            $(window).scroll(function () {
+                var y = $(this).scrollTop();
+                if (y >= top) {
+                    $('body').addClass('fixing');
+                } else {
+                    $('body').removeClass('fixing');
+                }
+            });	
+        });
+    </script>
+    <script type="text/javascript">
+        function myFunction(btn) {
+                   if (btn == 'btn2') {
+                       document.getElementById("btn_02").className = "btn_02a";
+                   }
+                   else
+                   {
+                       document.getElementById("btn_02").className = "btn_02";
+                   }
+               }
+       </script>
+       <script>
+        $.ajax({
+           url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+           type: "POST",           
+           dataType: 'script',
+           success: function () {                
+               jQuery(function () {
+                   jQuery.scrollDepth(
+                       {
+                           pixelDepth: false,
+                           gtmOverride: true
+                       });
+               });
+           }
+       });        
+   </script>
+</head>
+<body class="fixing">
+    
+    <!-- Bing Ads UET -->
+    <script>(function (w, d, t, r, u) { var f, n, i; w[u] = w[u] || [], f = function () { var o = { ti: "20101928" }; o.q = w[u], w[u] = new UET(o), w[u].push("pageLoad") }, n = d.createElement(t), n.src = r, n.async = 1, n.onload = n.onreadystatechange = function () { var s = this.readyState; s && s !== "loaded" && s !== "complete" || (f(), n.onload = n.onreadystatechange = null) }, i = d.getElementsByTagName(t)[0], i.parentNode.insertBefore(n, i) })(window, document, "script", "//bat.bing.com/bat.js", "uetq");</script>
+    <!-- Bing Ads UET End-->
+    
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFQTW5B"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
+    
+    
+        
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF2WKF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        
+        <script>
+            var newpage = 1;
+            function ScriptAddBtn() {
+                document.getElementById("RTTop_ctl00_leftbtn").style.display = "block";
+                document.getElementById("RTTop_ctl00_rightbtn").style.display = "block";
+                newpage += 1;
+                for (i = 1; i <= maxpage; i++) {
+                    document.getElementById("TopDiv" + i).style.display = "none";
+                }
+                document.getElementById("TopDiv" + newpage).style.display = "block";
+                if (newpage == maxpage) {
+                    document.getElementById("RTTop_ctl00_rightbtn").style.display = "none";
+                }
+            }
+            function ScriptDelBtn() {
+                document.getElementById("RTTop_ctl00_leftbtn").style.display = "block";
+                document.getElementById("RTTop_ctl00_rightbtn").style.display = "block";
+                newpage -= 1;
+                for (i = 1; i <= maxpage; i++) {
+                    document.getElementById("TopDiv" + i).style.display = "none";
+                }
+                document.getElementById("TopDiv" + newpage).style.display = "block";
+                if (newpage == 1) {
+                    document.getElementById("RTTop_ctl00_leftbtn").style.display = "none";
+                }
+            }
+        </script>
+        <form name="form1" method="post" action="./index.aspx?mainid=1193&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTYyNjg3MjIyNWRkN4Rv7DRFOBCUeXU2yUJTwGI/66U=">
+    
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height:45px;">
+    
+    
+    
+        <form name="form1" method="post" action="./top.aspx?url=https%3a%2f%2fevents.tk3c.com%2fevents_net%2f2020TVforever%2findex.html" id="form1">
+    <div>
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE5OTQzODI4NTMPZBYCAgEPZBYCAgEPZBYEAgEPFgIeBFRleHQFtAE8bGkgY2xhc3M9Im5ld3NhbGUiPjxhIGhyZWY9Imh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvMjAyMTM4Z2lybC9pbmRleC5odG1sP2VjPWJsYWNrYmFyIiB0YXJnZXQ9Il9ibGFuayI+PGI+5pyA5paw5rS75YuVPC9iPuWls+elnuevgOS+huilsu+8muWFqOWgtDM45oqY6LW377yBPC9hPjwvbGk+DQpkAgMPFgIfAAWmATxhIGhyZWY9Imh0dHBzOi8vd3d3LnRrM2MuY29tL21lbWJlci9tZW1iZXJfbG9naW4uYXNweD9kb25lPVdBcEloOWVTbEJ6Rktad2N4aVRaSVFhR21PWlpmWi9OcnNlalMwQ2NxemVQUkpWMG9qWEJiQ0p1QWxYMzFLRkNYRGE3Z0Z2QXB3S2phSUxDVGlpSlVnPT0iPuacg+WToeeZu+WFpTwvYT5kZLF756bEwyAvUQdKq/CRBpWfecIc">
+    </div>
+    
+    <div>
+    
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6A345315">
+    </div>
+            <div id="PnTop">
+        
+                <script>
+                    var url = document.location.toString();
+                    var arrUrl = url.split("?");
+                    var fbhtml_url = arrUrl[0];
+                </script>
+    
+    
+    
+    
+                <!--活動頁上方灰bar st--->
+                <style>
+                    #kuai3header {
+                        width: 100%;
+                        box-sizing: border-box;
+                        z-index: 999;
+                        background: #494949;
+                        height: 45px;
+                        line-height: 45px;
+                    }
+    
+                        #kuai3header .words {
+                            margin: 0 auto;
+                            max-width: 1144px;
+                        }
+    
+                            #kuai3header .words h1.logo {
+                                background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+                                width: 219px;
+                                height: 35px;
+                                display: inline-block;
+                                text-indent: -9999px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                float: left;
+                                margin: 5px 10px;
+                            }
+    
+                            #kuai3header .words ul.font {
+                                /*float: right;*/
+                                line-height: 45px;
+                                display: block;
+                                z-index: 99999;
+                                list-style: none;
+                                margin: 0;
+                                height: 45px;
+                                padding: 0;
+                                overflow: hidden;
+                                display :flex;
+                                justify-content :flex-end ;
+                            }
+    
+                                #kuai3header .words ul.font li {
+                                    width: auto;
+                                    margin: 0;
+                                    padding: 0;
+                                    height: 40px;
+                                    display: inline-block;
+                                    text-align: right;
+                                    overflow: hidden;
+                                    flex-shrink:0;
+                                }
+    
+                                    #kuai3header .words ul.font li > a {
+                                        color: #fff;
+                                        text-decoration: none;
+                                        font-size: 12px;
+                                        border-right: 1px solid #fff;
+                                        padding: 0 8px;
+                                        letter-spacing: 1px;
+                                        width: auto;
+                                    }
+    
+                    li.newsale a {
+                        color: #FDFF00 !important;
+                        line-height: 40px;
+                    }
+    
+                        li.newsale a > b {
+                            background: #FDFF00;
+                            color: #494949;
+                            border-radius: 5px;
+                            padding: 0 2%;
+                            font-size: 10px;
+                            margin-right: 5px;
+                        }
+    
+                        li.newsale a:after {
+                            content: "▶";
+                            margin-left: 5px;
+                            font-size: 80%;
+                        }
+    
+                    @media (max-width: 750px) {
+                        .TkecTop .menu {
+                            width: 100%;
+                            background: #494949;
+                            background: rgba(73, 73, 73, 0.95);
+                            float: none;
+                            overflow: hidden;
+                            z-index: 99999;
+                            max-height: 0;
+                            position: absolute;
+                            top: 44px;
+                            right: 0;
+                            left: 0;
+                            -webkit-transition: max-height 1s;
+                            -o-transition: max-height 1s;
+                            transition: max-height 1s;
+                        }
+    
+                            .TkecTop .menu li {
+                                float: none;
+                            }
+    
+                                .TkecTop .menu li:active {
+                                    background: rgba(120, 120, 120, 0.4);
+                                }
+    
+                            .TkecTop .menu a {
+                                height: 45px;
+                                border: 0;
+                                width: 100%;
+                                display: block;
+                            }
+                    }
+    
+                    .menu-show .menu {
+                        max-height: 480px;
+                    }
+    
+                    #showmenu {
+                        color: #FFF;
+                        position: absolute;
+                        top: 8px;
+                        right: 15px;
+                        font-size: 24px;
+                        cursor: pointer;
+                        display: none;
+                        width: 30px;
+                        height: 30px;
+                    }
+    
+                        #showmenu span {
+                            position: absolute;
+                            display: block;
+                            width: 20px;
+                            height: 2px;
+                            background: #fff;
+                            top: 50%;
+                            margin-top: -1px;
+                            left: 50%;
+                            margin-left: -10px;
+                            -webkit-transition: background 0.3s;
+                            -o-transition: background 0.3s;
+                            transition: background 0.3s;
+                        }
+    
+                            #showmenu span:before, #showmenu span:after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                background: inherit;
+                                width: 100%;
+                                height: 100%;
+                                -webkit-backface-visibility: hidden;
+                                backface-visibility: hidden;
+                                -webkit-transition: -webkit-transform 0.3s, background 0s;
+                                -webkit-transition: background 0s, -webkit-transform 0.3s;
+                                transition: background 0s, -webkit-transform 0.3s;
+                                -o-transition: transform 0.3s, background 0s;
+                                transition: transform 0.3s, background 0s;
+                                transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+                            }
+    
+                            #showmenu span:before {
+                                top: -6px;
+                            }
+    
+                            #showmenu span:after {
+                                bottom: -6px;
+                            }
+    
+    
+                    /*瀏覽區域的寬度小於750像素*/
+                    @media screen and (min-width: 320px) and (max-width: 750px) {
+                        #showmenu {
+                            display: block;
+                        }
+    
+                        #kuai3header .words ul.font li {
+                            width: 100%;
+                            display: block;
+                            text-align: left;
+                        }
+    
+                            #kuai3header .words ul.font li > a {
+                                border-right: 0px solid #fff;
+                                font-size: 90%;
+                            }
+    
+                        li.newsale a > b {
+                            padding: 0.5% 2%;
+                        }
+    
+                        #kuai3header .words .font {
+                            display: block !important;
+                        }
+    
+                        #kuai3header .words ul.font {
+                            height: auto;
+                        }
+                    }
+                </style>
+                <div id="kuai3header" class="TkecTop">
+                    <div class="words">
+                        <a href="https://www.tk3c.com/">
+                            <h1 class="logo">快3網路商城</h1>
+                        </a>
+                        <ul class="font menu">
+                            <li class="newsale"><a href="https://events.tk3c.com/events_net/202138girl/index.html?ec=blackbar" target="_blank"><b>最新活動</b>女神節來襲：全場38折起！</a></li>
+    
+                            <li>
+                                <a href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0CcqzePRJV0ojXBbCJuAlX31KFCXDa7gFvApwKjaILCTiiJUg==">會員登入</a></li>
+                            <li><a href="https://www.tk3c.com/member/member_center.aspx">會員中心</a></li>
+                            <li><a href="https://www.tk3c.com/service/serviceindex.aspx">客服中心</a></li>
+                            <li><a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a></li>
+                        </ul>
+                        <div id="showmenu" class="menu-is-open"><span></span></div>
+                    </div>
+                </div>
+                <script>
+                    /*
+                    $(document).ready(function () {
+                        $('#showmenu').click(function (e) {
+                            e.preventDefault();
+                            $('body').toggleClass('menu-show');
+                            $(this).toggleClass('menu-is-open');
+                        });
+                    });
+                    */
+    
+                    function domReady(fn) {
+                        // If early
+                        document.addEventListener("DOMContentLoaded", fn);
+                        // If late
+                        if (document.readyState === "interactive" || document.readyState === "complete") {
+                            fn();
+                        }
+                    }
+    
+                    function regTopBarMenu() {
+                        document.getElementById('showmenu').addEventListener('click', function (e) {
+                            e.preventDefault();
+                            var body = document.querySelector('body');
+                            if (body.classList.contains('menu-show')) {
+                                body.classList.remove('menu-show');
+                            } else {
+                                body.classList.add('menu-show');
+                            }
+    
+                            var menuBtn = e.target;
+                            if (menuBtn.classList.contains('menu-is-open')) {
+                                menuBtn.classList.remove('menu-is-open');
+                            } else {
+                                menuBtn.classList.add('menu-is-open');
+                            }
+                        });
+                    }
+                    domReady(regTopBarMenu);
+                </script>
+            
+    </div>
+    
+            
+            
+    
+        </form>
+    
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="opacity: 1; display: none;"><img src="../events_net/2020TVforever/images/scroll-top.png"></div>
+    <div class="fix_btn">
+        <!-- The dropdown menu begins -->
+        <div class="sample-menu-style dropdown-menu btn1">
+            <span tabindex="0" onclick="return true">商品列表</span>
+            <div tabindex="0" onclick="return true"></div>
+            <ul>
+                <li><a href="#pro1371" onclick="ProcessGaEvent('2020TVforever','click','1371-熱銷高CP值');">熱銷高CP值</a></li>
+    <li><a href="#pro1854" onclick="ProcessGaEvent('2020TVforever','click','1854-清晰大視野');">清晰大視野</a></li>
+    <li><a href="#pro1855" onclick="ProcessGaEvent('2020TVforever','click','1855-追劇GAME正好');">追劇GAME正好</a></li>
+    <li><a href="#pro1376" onclick="ProcessGaEvent('2020TVforever','click','1376-劇院級環繞享受');">劇院級環繞享受</a></li>
+    <li><a href="#pro1856" onclick="ProcessGaEvent('2020TVforever','click','1856-獨樂樂不如眾樂樂');">獨樂樂不如眾樂樂</a></li>
+                
+            </ul>
+        </div>
+        <!-- End of the dropdown menu -->
+        
+    </div>
+    <div class="wrapper">
+    
+             
+                                 
+                        
+    
+                        
+                <!--/////////////////////////////////////  主視覺Banner  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="bannerkok3">&nbsp;</div>
+    <div class="tv-title">
+       <h2><img src="https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210308_kv_title.png"></h2>
+       <h5><img src="https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210308_kv_title_b.png"></h5>
+    </div>
+
+    <script>
+                    wow = new WOW(
+                        {
+                            boxClass: 'wow',      // default
+                            animateClass: 'animated', // default
+                            offset: 0,          // default
+                            mobile: true,       // default
+                            live: true        // default
+                        }
+                    )
+                    wow.init();	  
+                </script> 			<!----+手機板紐---->
+    <div class="mobile-nuttons moset">
+            <p id="gobbank"><a href="https://events.cdn-tkec.tw/events_net/events_net/banks/bank.html?ec=202003air" target="_blank">銀行優惠</a></p>
+            <p id="btnHome"><img src="https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210120_stagehead.png" alt=""></p>
+            <p id="gotop" class="mo-gotop"><a href="#"><img src="https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210120_stagetop.png" alt=""></a></p>
+     </div>
+    <!--/////////////////////////////////////  主視覺  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+            
+        
+    </div>
+    <div class="itemBox m_version_non">
+        <div id="btnBox03-sticky-wrapper" class="sticky-wrapper" style="height: 2px;"><div id="btnBox03" style="width: 0px;"><div class="upbox">
+        <a href="#pro1371" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('2020TVforever','click','1371-熱銷高CP值')">熱銷高CP值</a>
+    <a href="#pro1376" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('2020TVforever','click','1376-劇院級環繞享受')">劇院級環繞享受</a>
+    
+        </div></div></div>
+    </div>
+    <div class="rightbtn">
+        <div class="actbtn">
+        <a href="#pro1371" class="btn_01 p01" onclick="ProcessGaEvent('2020TVforever','click','1371-熱銷高CP值')">熱銷高CP值</a>
+    <a href="#pro1854" class="btn_01 p01" onclick="ProcessGaEvent('2020TVforever','click','1854-清晰大視野')">清晰大視野</a>
+    <a href="#pro1855" class="btn_01 p01" onclick="ProcessGaEvent('2020TVforever','click','1855-追劇GAME正好')">追劇GAME正好</a>
+    <a href="#pro1376" class="btn_01 p01" onclick="ProcessGaEvent('2020TVforever','click','1376-劇院級環繞享受')">劇院級環繞享受</a>
+    <a href="#pro1856" class="btn_01 p01" onclick="ProcessGaEvent('2020TVforever','click','1856-獨樂樂不如眾樂樂')">獨樂樂不如眾樂樂</a>
+    
+        </div>
+    </div>
+    
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+       
+         
+        
+                <h2 class="protitle"><a name="pro1371" id="pro1371"></a>熱銷高CP值</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=212935&amp;ec=2020TVforever" id="prod212935" name="prod212935"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202010/212935_M.jpg?t=20201207091019" border="0"></p>
+            <storg>JVC 40型FHD 多媒體LED液晶顯示器</storg>
+            <h4>房東最愛 小資電視最划算</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>7</span>折</p>
+            <strong class="txt_red fred"> <em>市價$9999</em> <i>活動價$</i>6999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=202751&amp;ec=2020TVforever" id="prod202751" name="prod202751"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201909/202751_M.jpg?t=20200911141159" border="0"></p>
+            <storg>JVC 50型4K HDR 防眩抗藍光 護眼液晶顯示器</storg>
+            <h4>獨家熱賣67折</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>74</span>折</p>
+            <strong class="txt_red fred"> <em>市價$14999</em> <i>活動價$</i>10999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=home-202750&amp;ec=2020TVforever" id="prodhome-202750" name="prodhome-202750"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201910/home-202750_M.jpg?t=20200911172301" border="0"></p>
+            <storg>瑞軒AmTRAN 32型 HD顯示器 32H</storg>
+            <h4>15:00前下單當日發貨</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>58</span>折</p>
+            <strong class="txt_red fred"> <em>市價$6999</em> <i>活動價$</i>3999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=204158&amp;ec=2020TVforever" id="prod204158" name="prod204158"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201911/204158_M.jpg?t=20200911143300" border="0"></p>
+            <storg>JVC 65型 4K HDR 護眼 液晶顯示器</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>64</span>折</p>
+            <strong class="txt_red fred"> <em>市價$24999</em> <i>活動價$</i>15999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=208198&amp;ec=2020TVforever" id="prod208198" name="prod208198"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202005/208198_M.jpg?t=20200911143613" border="0"></p>
+            <storg>JVC 65型 量子點廣色域 4K HDR 聯網WiFi顯示器</storg>
+            <h4>65型 QLED超低價</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>44</span>折</p>
+            <strong class="txt_red fred"> <em>市價$45999</em> <i>活動價$</i>19999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=215139&amp;ec=2020TVforever" id="prod215139" name="prod215139"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202101/215139_M.jpg?t=20210120174836" border="0"></p>
+            <storg>JVC 55型4K 安卓語音聯網顯示器</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>79</span>折</p>
+            <strong class="txt_red fred"> <em>市價$18999</em> <i>活動價$</i>14999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214000&amp;ec=2020TVforever" id="prod214000" name="prod214000"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214000_M.jpg?t=20210120174948" border="0"></p>
+            <storg>JVC 50型4K 安卓語音聯網顯示器</storg>
+            <h4>搭載最新Android TV◆Google認證</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>65</span>折</p>
+            <strong class="txt_red fred"> <em>市價$19999</em> <i>活動價$</i>12999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214001&amp;ec=2020TVforever" id="prod214001" name="prod214001"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214001_M.jpg?t=20201216144538" border="0"></p>
+            <storg>JVC 55型4K HDR窄邊框 液晶顯示器</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>8</span>折</p>
+            <strong class="txt_red fred"> <em>市價$18900</em> <i>活動價$</i>14999 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+                <h2 class="protitle"><a name="pro1854" id="pro1854"></a>清晰大視野</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207033&amp;ec=2020TVforever" id="prod207033" name="prod207033"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207033_M.jpg?t=20200911110130" border="0"></p>
+            <storg>國際牌Panasonic 55型 六原色 4K 智慧聯網顯示器</storg>
+            <h4>Panasonic 視訊盒+送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>89</span>折</p>
+            <strong class="txt_red fred"> <em>市價$26900</em> <i>活動價$</i>23900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207058&amp;ec=2020TVforever" id="prod207058" name="prod207058"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207058_M.jpg?t=20200924155541" border="0"></p>
+            <storg>三星SAMSUNG 55型 4K 智慧連網電視</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>96</span>折</p>
+            <strong class="txt_red fred"> <em>市價$24900</em> <i>活動價$</i>23900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=209501&amp;ec=2020TVforever" id="prod209501" name="prod209501"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202007/209501_M.jpg?t=20200910180513" border="0"></p>
+            <storg>三星SAMSUNG 65型4K QLED 智慧連網電視</storg>
+            <h4>登錄送市值4990 Soundbar+2000元7-11虛擬商品卡</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>91</span>折</p>
+            <strong class="txt_red fred"> <em>市價$54900</em> <i>活動價$</i>49900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207063&amp;ec=2020TVforever" id="prod207063" name="prod207063"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207063_M.jpg?t=20200910111149" border="0"></p>
+            <storg>三星SAMSUNG 55型 4K 智慧連網電視</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>93</span>折</p>
+            <strong class="txt_red fred"> <em>市價$27900</em> <i>活動價$</i>25900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207059&amp;ec=2020TVforever" id="prod207059" name="prod207059"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207059_M.jpg?t=20200910113831" border="0"></p>
+            <storg>三星SAMSUNG 65型 4K 智慧連網電視</storg>
+            <h4>送3月獨家好禮二選一</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>87</span>折</p>
+            <strong class="txt_red fred"> <em>市價$36900</em> <i>活動價$</i>31900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=208694&amp;ec=2020TVforever" id="prod208694" name="prod208694"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202006/208694_M.jpg?t=20200911184458" border="0"></p>
+            <storg>索尼SONY 55型4K智慧連網電視</storg>
+            <h4>送免費標準安裝定位</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$32900</em> <i>活動價$</i>32900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=210117&amp;ec=2020TVforever" id="prod210117" name="prod210117"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202007/210117_M.jpg?t=20201021144249" border="0"></p>
+            <storg>國際牌Panasonic 55型 4K六原色智慧聯網顯示器</storg>
+            <h4>附視訊盒+送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>92</span>折</p>
+            <strong class="txt_red fred"> <em>市價$34900</em> <i>活動價$</i>31900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207067&amp;ec=2020TVforever" id="prod207067" name="prod207067"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207067_M.jpg?t=20200910111322" border="0"></p>
+            <storg>三星SAMSUNG 55型 4K QLED 智慧連網電視</storg>
+            <h4>送免費標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>87</span>折</p>
+            <strong class="txt_red fred"> <em>市價$36900</em> <i>活動價$</i>31900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207622&amp;ec=2020TVforever" id="prod207622" name="prod207622"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl08_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207622_M.jpg?t=20200909175118" border="0"></p>
+            <storg>樂金LG 65型 1奈米 4K AI語音物聯網電視</storg>
+            <h4>登錄送陶板屋禮券*1</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>93</span>折</p>
+            <strong class="txt_red fred"> <em>市價$64900</em> <i>活動價$</i>59900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=210116&amp;ec=2020TVforever" id="prod210116" name="prod210116"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl09_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202007/210116_M.jpg?t=20200911110540" border="0"></p>
+            <storg>國際牌Panasonic 65型 4K六原色智慧聯網顯示器</storg>
+            <h4>附視訊盒+送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>94</span>折</p>
+            <strong class="txt_red fred"> <em>市價$44900</em> <i>活動價$</i>41900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=204161&amp;ec=2020TVforever" id="prod204161" name="prod204161"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl10_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201911/204161_M.jpg?t=20200911114046" border="0"></p>
+            <storg>禾聯HERAN 65型4K QLED聯網顯示器</storg>
+            <h4>送免費標準安裝+附HERAN 視訊盒</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>66</span>折</p>
+            <strong class="txt_red fred"> <em>市價$63900</em> <i>活動價$</i>41900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=210148&amp;ec=2020TVforever" id="prod210148" name="prod210148"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl11_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202008/210148_M.jpg?t=20201104180600" border="0"></p>
+            <storg>索尼SONY 65型 4K 智慧連網顯示器</storg>
+            <h4>送3月獨家好禮二選一</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$55900</em> <i>活動價$</i>55900 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+                <h2 class="protitle"><a name="pro1855" id="pro1855"></a>追劇GAME正好</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=208202&amp;ec=2020TVforever" id="prod208202" name="prod208202"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202005/208202_M.jpg?t=20200908145451" border="0"></p>
+            <storg>明基BenQ 40型 FHD 安卓連網顯示器 低藍光</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>63</span>折</p>
+            <strong class="txt_red fred"> <em>市價$14900</em> <i>活動價$</i>9290 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=194171&amp;ec=2020TVforever" id="prod194171" name="prod194171"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201812/194171_M.jpg?t=20200911150146" border="0"></p>
+            <storg>夏普SHARP 40型 FHD 智慧聯網顯示器+視訊盒</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>95</span>折</p>
+            <strong class="txt_red fred"> <em>市價$8888</em> <i>活動價$</i>8388 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214136&amp;ec=2020TVforever" id="prod214136" name="prod214136"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214136_M.jpg?t=20201217182403" border="0"></p>
+            <storg>明基BenQ 40型 FHD低藍光不閃屏顯示器</storg>
+            <h4>隨貨附BenQ視訊盒+送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>85</span>折</p>
+            <strong class="txt_red fred"> <em>市價$9999</em> <i>活動價$</i>8490 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214135&amp;ec=2020TVforever" id="prod214135" name="prod214135"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214135_M.jpg?t=20201217182023" border="0"></p>
+            <storg>明基BenQ 32型 HD低藍光不閃屏顯示器</storg>
+            <h4>隨貨附BenQ視訊盒+送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>82</span>折</p>
+            <strong class="txt_red fred"> <em>市價$7990</em> <i>活動價$</i>6490 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=804036&amp;ec=2020TVforever" id="prod804036" name="prod804036"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201803/804036_M.jpg?t=20210119182634" border="0"></p>
+            <storg>(展示機) 國際牌Panasonic 32型 HD六原色顯示器</storg>
+            <h4>送視訊盒＋標準安裝</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>67</span>折</p>
+            <strong class="txt_red fred"> <em>市價$10490</em> <i>活動價$</i>6990 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207062&amp;ec=2020TVforever" id="prod207062" name="prod207062"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207062_M.jpg?t=20200910110204" border="0"></p>
+            <storg>三星SAMSUNG 50型 4K 智慧連網電視</storg>
+            <h4>送3月獨家好禮二選一</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>96</span>折</p>
+            <strong class="txt_red fred"> <em>市價$23900</em> <i>活動價$</i>22900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=205438&amp;ec=2020TVforever" id="prod205438" name="prod205438"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202001/205438_M.jpg?t=20200911174832" border="0"></p>
+            <storg>AOC 40型 液晶顯示器</storg>
+            <h4>◆AOC 40吋 活動特價!!!◆</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>86</span>折</p>
+            <strong class="txt_red fred"> <em>市價$6999</em> <i>活動價$</i>5999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=200544&amp;ec=2020TVforever" id="prod200544" name="prod200544"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201907/200544_M.jpg?t=20200911164147" border="0"></p>
+            <storg>飛利浦PHILIPS 32型 LED液晶顯示器</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>8</span>折</p>
+            <strong class="txt_red fred"> <em>市價$7490</em> <i>活動價$</i>5990 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207037&amp;ec=2020TVforever" id="prod207037" name="prod207037"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl08_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207037_M.jpg?t=20200911105754" border="0"></p>
+            <storg>國際牌Panasonic 32型 HD顯示器</storg>
+            <h4>Panasonic 視訊盒+送標準安裝定位</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>94</span>折</p>
+            <strong class="txt_red fred"> <em>市價$9900</em> <i>活動價$</i>9290 </strong> </div></a></li>
+                    
+                                <li><a href="javascript:void(0)" onclick="alert('抱歉!此商品已售完! \n感謝您蒞臨[燦坤線上購物] ')" id="prod202750-game" name="prod202750-game"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl09_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201909/202750-game_M.jpg?t=20210121181341" border="0"></p>
+            <storg>(Switch主機組)AmTRAN 32型HD顯示器+TOSHIBA藍牙家庭劇院(TY-SBX1000)</storg>
+            <h4>線上電玩展◆超值組合</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$22478</em> <i>活動價$</i>22478 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=203328&amp;ec=2020TVforever" id="prod203328" name="prod203328"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl10_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201910/203328_M.jpg?t=20200911172715" border="0"></p>
+            <storg>聲寶Sampo 50型 4K 智慧聯網顯示器</storg>
+            <h4>送3月獨家好禮二選一</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>96</span>折</p>
+            <strong class="txt_red fred"> <em>市價$15900</em> <i>活動價$</i>15210 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=207057&amp;ec=2020TVforever" id="prod207057" name="prod207057"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl11_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202004/207057_M.jpg?t=20200910105722" border="0"></p>
+            <storg>三星SAMSUNG 50型 4K 智慧連網電視</storg>
+            <h4>送標準安裝定位</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$21900</em> <i>活動價$</i>21900 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+                <h2 class="protitle"><a name="pro1376" id="pro1376"></a>劇院級環繞享受</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=212177&amp;ec=2020TVforever" id="prod212177" name="prod212177"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202010/212177_M.jpg?t=20201012143126" border="0"></p>
+            <storg>TOSHIBA 藍牙無線家庭劇院</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>75</span>折</p>
+            <strong class="txt_red fred"> <em>市價$7999</em> <i>活動價$</i>5990 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=192854&amp;ec=2020TVforever" id="prod192854" name="prod192854"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201811/192854_M.jpg?t=20190412155051" border="0"></p>
+            <storg>國際牌Panasonic 藍牙微型劇院</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>7</span>折</p>
+            <strong class="txt_red fred"> <em>市價$9990</em> <i>活動價$</i>6990 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214086&amp;ec=2020TVforever" id="prod214086" name="prod214086"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214086_M.jpg?t=20201214183116" border="0"></p>
+            <storg>飛利浦PHILIPS 藍牙微型劇院</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>91</span>折</p>
+            <strong class="txt_red fred"> <em>市價$10900</em> <i>活動價$</i>9900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=194322&amp;ec=2020TVforever" id="prod194322" name="prod194322"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201901/194322_M.jpg?t=20190111105341" border="0"></p>
+            <storg>JVC 5.1聲道無線家庭劇院</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$14990</em> <i>活動價$</i>14990 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=212930&amp;ec=2020TVforever" id="prod212930" name="prod212930"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202010/212930_M.jpg?t=20201026105244" border="0"></p>
+            <storg>山葉YAMAHA 藍牙微型劇院</storg>
+            <h4>享有完全不同的豐富音場和沉浸式體驗</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$12900</em> <i>活動價$</i>12900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=187314&amp;ec=2020TVforever" id="prod187314" name="prod187314"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201805/187314_M.jpg?t=20191030104436" border="0"></p>
+            <storg>索尼SONY Hi-Res Wi-Fi 微型劇院</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>91</span>折</p>
+            <strong class="txt_red fred"> <em>市價$21900</em> <i>活動價$</i>19900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=215279&amp;ec=2020TVforever" id="prod215279" name="prod215279"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202101/215279_M.jpg?t=20210121104408" border="0"></p>
+            <storg>山葉YAMAHA 藍牙微型劇院</storg>
+            <h4>專為您的房間設計的小巧Sound Bar</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$7500</em> <i>活動價$</i>7500 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=208769&amp;ec=2020TVforever" id="prod208769" name="prod208769"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202006/208769_M.jpg?t=20200729113622" border="0"></p>
+            <storg>索尼SONY ATMOS 藍牙微型劇院</storg>
+            <h4>劇院級環繞音效</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>92</span>折</p>
+            <strong class="txt_red fred"> <em>市價$17900</em> <i>活動價$</i>16400 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214243&amp;ec=2020TVforever" id="prod214243" name="prod214243"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl08_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214243_M.jpg?t=20201221143202" border="0"></p>
+            <storg>飛利浦PHILIPS 藍牙微型劇院</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>95</span>折</p>
+            <strong class="txt_red fred"> <em>市價$19900</em> <i>活動價$</i>18900 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=196857&amp;ec=2020TVforever" id="prod196857" name="prod196857"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl09_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201904/196857_M.jpg?t=20190402193015" border="0"></p>
+            <storg>DAYEN 家庭劇院影音環繞小型擴大機</storg>
+            <h4>3C產品家庭劇院多媒體卡拉OK擴大機</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$1580</em> <i>活動價$</i>1580 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214087&amp;ec=2020TVforever" id="prod214087" name="prod214087"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl10_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214087_M.jpg?t=20201218111151" border="0"></p>
+            <storg>飛利浦PHILIPS 藍牙微型劇院</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>9</span>折</p>
+            <strong class="txt_red fred"> <em>市價$6990</em> <i>活動價$</i>6290 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=191035&amp;ec=2020TVforever" id="prod191035" name="prod191035"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl11_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201809/191035_M.jpg?t=20180919120010" border="0"></p>
+            <storg>BOSE 藍牙/Wi-Fi微型劇院</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$28999</em> <i>活動價$</i>28999 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+                <h2 class="protitle"><a name="pro1856" id="pro1856"></a>獨樂樂不如眾樂樂</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="javascript:void(0)" onclick="alert('抱歉!此商品已售完! \n感謝您蒞臨[燦坤線上購物] ')" id="prod203202" name="prod203202"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201910/203202_M.jpg?t=20191015183033" border="0"></p>
+            <storg>Switch 健身環大冒險 中文版</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>93</span>折</p>
+            <strong class="txt_red fred"> <em>市價$2550</em> <i>活動價$</i>2350 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=215019&amp;ec=2020TVforever" id="prod215019" name="prod215019"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202101/215019_M.jpg?t=20210302104329" border="0"></p>
+            <storg>Switch 瑪利歐亮麗紅x亮麗藍主機組合</storg>
+            <h4>*限量販售*送瑪利歐關卡造型磁石掛鉤</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$9780</em> <i>活動價$</i>9780 </strong> </div></a></li>
+                    
+                                <li><a href="javascript:void(0)" onclick="alert('抱歉!此商品已售完! \n感謝您蒞臨[燦坤線上購物] ')" id="prod207917" name="prod207917"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202005/207917_M.jpg?t=20200511112410" border="0"></p>
+            <storg>Switch 世界遊戲大全51</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>93</span>折</p>
+            <strong class="txt_red fred"> <em>市價$1290</em> <i>活動價$</i>1190 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=202796&amp;ec=2020TVforever" id="prod202796" name="prod202796"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201910/202796_M.jpg?t=20191001183012" border="0"></p>
+            <storg>Switch Joy-Con 左右手套裝-電光紫/橘</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>97</span>折</p>
+            <strong class="txt_red fred"> <em>市價$2290</em> <i>活動價$</i>2200 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=212896&amp;ec=2020TVforever" id="prod212896" name="prod212896"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202010/212896_M.jpg?t=20201022183057" border="0"></p>
+            <storg>XBOX 無線控制器 冰雪白</storg>
+            <h4>新一代Xbox控制器</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$1549</em> <i>活動價$</i>1549 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214308&amp;ec=2020TVforever" id="prod214308" name="prod214308"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214308_M.jpg?t=20201224143313" border="0"></p>
+            <storg>Switch超級瑪利歐3D世界+狂怒世界 中文版</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$1790</em> <i>活動價$</i>1790 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=213385&amp;ec=2020TVforever" id="prod213385" name="prod213385"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202011/213385_M.jpg?t=20201119145230" border="0"></p>
+            <storg>PS5 DualSense 充電座</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$980</em> <i>活動價$</i>980 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=200931-X12&amp;ec=2020TVforever" id="prod200931-X12" name="prod200931-X12"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201907/200931-X12_M.jpg?t=20210111160626" border="0"></p>
+            <storg>(組合包)Switch紅藍主機 電池加強版+指定遊戲片x1+防撞包+螢幕保貼</storg>
+            <h4>指定$1790遊戲片選一</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>94</span>折</p>
+            <strong class="txt_red fred"> <em>市價$12559</em> <i>活動價$</i>11680 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=213384&amp;ec=2020TVforever" id="prod213384" name="prod213384"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl08_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202011/213384_M.jpg?t=20201119145254" border="0"></p>
+            <storg>PS5 PULSE 3D 無線耳機組</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$3080</em> <i>活動價$</i>3080 </strong> </div></a></li>
+                    
+                                <li><a href="javascript:void(0)" onclick="alert('抱歉!此商品已售完! \n感謝您蒞臨[燦坤線上購物] ')" id="prod213112" name="prod213112"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl09_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202011/213112_M.jpg?t=20201102143128" border="0"></p>
+            <storg>XBOX 無線控制器 磨砂黑 + Win10無線轉接器</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$2099</em> <i>活動價$</i>2099 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=212895&amp;ec=2020TVforever" id="prod212895" name="prod212895"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl10_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202010/212895_M.jpg?t=20210129110827" border="0"></p>
+            <storg>XBOX 無線控制器 磨砂黑</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$1549</em> <i>活動價$</i>1549 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214611&amp;ec=2020TVforever" id="prod214611" name="prod214611"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl11_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202101/214611_M.jpg?t=20210107183317" border="0"></p>
+            <storg>Switch 超級瑪利歐3D世界+狂怒世界+矽膠套</storg>
+            <h4>隨貨送joycon矽膠保護套</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$1790</em> <i>活動價$</i>1790 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+        <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->			  
+            
+            
+         <div id="TkecFooter"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+    
+    
+    <style>
+    @charset "utf-8";
+    *{margin: 0;padding: 0}
+    *:focus { outline: none; }/*黃框消除*/
+    *{-webkit-text-size-adjust:none;}/*字體尺寸限制解除*/
+    a{text-decoration:none;cursor: pointer}
+    img {border:0px; } /*圖片超連結邊框消除*/
+    .acbankbox  .fred{color:#F00; font-weight:bold;}
+    .acbankbox  .fgray{color: #666;}
+    .acbankbox .bgcolor{ background:#999;}
+    /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+    
+    @media screen and (min-width:751px) {
+    
+    
+    .acbankbox{ display:block; width:1144px; margin:0 auto; font-family: Century Gothic,"微軟正黑體"; overflow:hidden;}
+    /*銀行刷卡資料*/
+    .acbankbox .list2{width:100%;float: left;text-align: center; padding:16px;  position:relative; display:block;border-radius: 40px 40px 0 0;-moz-border-radius: 40px 40px 0 0;-webkit-border-radius: 40px 40px 0 0; box-sizing: border-box; }
+    .acbankbox .list2 u{ line-height:60px; background:#666; color:#FF0; text-align:center; font-weight:bold;border-radius: 40px;-moz-border-radius: 40px;-webkit-border-radius: 40px; display:block; font-size:40px; text-decoration:none; margin-bottom:10px; letter-spacing:1px;}
+    
+    .acbankbox .list2 ul li{height: 105px; width: 210px;text-align: center; float: left;margin: 6px;background:#FFF; border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px; list-style:none;}
+    .acbankbox .list2 .item_img{width: 100%; float:left; margin:10px auto 5px auto;}
+    .acbankbox .list2 .item_img img{width: 85%; }
+    .acbankbox .list2 p{width: 100%; display:block; float:left;}
+    .acbankbox .list2 .item_text05{ font-size:14px; margin-top:3px; text-align: center;}
+    .acbankbox .list2 .item_text05 em{ line-height:38px;font-size: 38px; font-style:normal; display:inline-block;}
+    .acbankbox .list2 .item_text05 em:before {content:"最高" ; width:16px;  display:inline-block; line-height:17px; margin-right:2px; color:#666; padding:1px; font-size: 15px; }
+    .acbankbox .box06{ display:none;}
+    
+    
+    }
+    /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+    
+    @media screen and (min-width: 320px) and (max-width: 750px){
+    .acbankbox{ display:block; width:100%; margin:0 auto; font-family: Century Gothic,"微軟正黑體";}
+    /*銀行刷卡資料*/
+    .acbankbox .list2{width:100%;float: left;text-align: center; position:relative; display:block; box-sizing:border-box; padding-bottom:1%;}
+    .acbankbox .list2 u{width:96%; line-height:60px; background:#666; color:#FF0; text-align:center; font-weight:bold; display:block; font-size:200%; text-decoration:none; margin-bottom:10px; margin:2% auto;border-radius: 40px;-moz-border-radius: 40px;-webkit-border-radius: 40px;}
+    
+    .acbankbox .list2 ul li{height: auto; width: 48%;text-align: center; float: left;margin:1%;background:#FFF; border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px; list-style:none;box-sizing:border-box; padding-bottom: 4%;}
+    .acbankbox .list2 .item_img{width: 100%; float:left; margin:10px auto 5px auto;}
+    .acbankbox .list2 .item_img img{width: 85%; }
+    .acbankbox .list2 p{width: 100%; display:block; float:left;}
+    .acbankbox .list2 .item_text05{ font-size:100%; margin-top:3px;}
+    .acbankbox .list2 .item_text05 em{ line-height:1em;font-size: 200%; font-style:normal; display:inline-block;}
+    .acbankbox .list2 .item_text05 em:before {content:"最高" ; width:16px;  display:inline-block; line-height:17px; margin-right:2px; color:#666; padding:1px;  font-size: 15px; }
+    .acbankbox .box06{}
+    }
+    
+    </style>
+    <div class="acbankbox">
+            <!--銀行區 st-->
+            <div class="list2 bgcolor">
+              <u>3月銀行 刷卡享好康</u>
+              <ul>
+                <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202103/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送$5000</em></p>
+                  </a></li>
+                  <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202103/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$3000</em></p>
+                  </a></li> 
+                <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202103/images/sbank-17.jpg"></p>
+                  <p class="item_text05 fred"><em>送$5000</em></p>
+                  </a></li>
+                
+    
+                <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202103/images/sbank-13.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2500</em></p>
+                  </a></li>
+                <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202103/images/sbank-09.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2000</em></p>
+                  </a></li>
+              </ul>
+            </div>
+            <!--銀行區 end-->
+    </div>
+    
+    </div>	
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+                  
+            
+    
+        </form><iframe height="0" width="0" style="display: none; visibility: hidden;" src="https://10406106.fls.doubleclick.net/activityi;src=10406106;type=invmedia;cat=allla0;ord=732152617592;gtm=2od2o0;auiddc=471973565.1609164623;~oref=https%3A%2F%2Fevents.tk3c.com%2Fevents_net%2F2020TVforever%2Findex.html?"></iframe>
+    
+    
+    
+    <div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon933961135646"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon544763718464" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=20101928&amp;Ver=2&amp;mid=7412c942-f2d9-47f3-a0b0-5e02f66882f3&amp;sid=a3806e507e5111eb9825b50ed0dae19d&amp;vid=ea0c690037df11eba33ee989f56617e2&amp;vids=0&amp;pi=1200101525&amp;lg=zh-TW&amp;sw=1280&amp;sh=720&amp;sc=24&amp;tl=NEW%E8%A6%96%E5%A4%A7%E5%90%89%EF%BC%8C%E9%9B%BB%E8%A6%96%E5%85%A8%E9%A4%A85%E6%8A%98%E8%B5%B7%EF%BD%9C%E7%87%A6%E5%9D%A4%E9%A6%96%E9%81%B8%E9%9B%BB%E8%A6%96%EF%BC%8C%E6%97%A5%E7%B3%BBJVC%E5%93%81%E7%89%8C&amp;kw=%E9%9B%BB%E8%A6%96,%E9%A1%AF%E7%A4%BA%E5%99%A8,JVC,%E5%A4%A7%E5%B0%BA%E5%AF%B8,65%E5%90%8B,50%E5%90%8B,55%E5%90%8B,43%E5%90%8B,%E7%90%83%E8%B3%BD,%E7%9C%8B%E9%9B%BB%E8%A6%96&amp;p=https%3A%2F%2Fevents.tk3c.com%2Fevents_net%2F2020TVforever%2Findex.html&amp;r=&amp;lt=826&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=993499"></div>
+    <script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2471447686441595");fbq("set","agent","tmgoogletagmanager","2471447686441595");fbq("track","PageView");</script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2471447686441595&amp;ev=PageView&amp;noscript=1"></noscript>
+    <script type="text/javascript" id="">(function(d,a,b,f,e){d[e]=d[e]||[];d[e].push({projectId:"10000",properties:{pixelId:"10068939"}});var c=a.createElement(b);c.src=f;c.async=!0;c.onload=c.onreadystatechange=function(){var a=this.readyState,c=d[e];if(!a||"complete"==a||"loaded"==a)try{var b=YAHOO.ywa.I13N.fireBeacon;d[e]=[];d[e].push=function(a){b([a])};b(c)}catch(g){}};a=a.getElementsByTagName(b)[0];b=a.parentNode;b.insertBefore(c,a)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+    
+    <script type="text/javascript" id="">(function(a,b,d){a._ltq=a._ltq||[];a._lt=a._lt||function(){a._ltq.push(arguments)};var e="https:"===location.protocol?"https://d.line-scdn.net":"http://d.line-cdn.net",c=b.createElement("script");c.async=1;c.src=d||e+"/n/line_tag/public/release/v1/lt.js";b=b.getElementsByTagName("script")[0];b.parentNode.insertBefore(c,b)})(window,document);_lt("init",{customerType:"lap",tagId:"14d0e575-4adc-4b9e-be6e-331b6a51909b"});_lt("send","pv",["14d0e575-4adc-4b9e-be6e-331b6a51909b"]);</script>
+    <noscript>
+      <img height="1" width="1" style="display:none" src="https://tr.line.me/tag.gif?c_t=lap&amp;t_id=14d0e575-4adc-4b9e-be6e-331b6a51909b&amp;e=pv&amp;noscript=1">
+    </noscript>
+    <script type="text/javascript" id="">(function(a,c,e,k,b){a[b]=a[b]||[];a[b].push({projectId:"10000",properties:{pixelId:"10133146"}});var d=c.createElement(e);d.src=k;d.async=!0;d.onload=d.onreadystatechange=function(){var f=this.readyState,l=a[b];if(!f||"complete"==f||"loaded"==f)try{var g=YAHOO.ywa.I13N.fireBeacon;a[b]=[];a[b].push=function(h){g([h])};g(l)}catch(h){}};c=c.getElementsByTagName(e)[0];e=c.parentNode;e.insertBefore(d,c)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script><script type="application/javascript" id="ywa-1615017719515-915260" class="ywa-10000" defer="" src="https://sp.analytics.yahoo.com/sp.pl?a=10000&amp;d=Sat%2C%2006%20Mar%202021%2008%3A01%3A59%20GMT&amp;n=-8&amp;b=NEW%E8%A6%96%E5%A4%A7%E5%90%89%EF%BC%8C%E9%9B%BB%E8%A6%96%E5%85%A8%E9%A4%A85%E6%8A%98%E8%B5%B7%EF%BD%9C%E7%87%A6%E5%9D%A4%E9%A6%96%E9%81%B8%E9%9B%BB%E8%A6%96%EF%BC%8C%E6%97%A5%E7%B3%BBJVC%E5%93%81%E7%89%8C&amp;.yp=10068939&amp;f=https%3A%2F%2Fevents.tk3c.com%2Fevents_net%2F2020TVforever%2Findex.html&amp;enc=UTF-8&amp;tagmgr=gtm"></script><script type="application/javascript" id="ywa-1615017719516-310857" class="ywa-10000" defer="" src="https://sp.analytics.yahoo.com/sp.pl?a=10000&amp;b=NEW%E8%A6%96%E5%A4%A7%E5%90%89%EF%BC%8C%E9%9B%BB%E8%A6%96%E5%85%A8%E9%A4%A85%E6%8A%98%E8%B5%B7%EF%BD%9C%E7%87%A6%E5%9D%A4%E9%A6%96%E9%81%B8%E9%9B%BB%E8%A6%96%EF%BC%8C%E6%97%A5%E7%B3%BBJVC%E5%93%81%E7%89%8C&amp;.yp=10068939&amp;f=https%3A%2F%2Fevents.tk3c.com%2Fevents_net%2F2020TVforever%2Findex.html&amp;enc=UTF-8&amp;tagmgr=gtm"></script><script type="application/javascript" id="ywa-1615017719518-312226" class="ywa-10000" defer="" src="https://sp.analytics.yahoo.com/sp.pl?a=10000&amp;b=NEW%E8%A6%96%E5%A4%A7%E5%90%89%EF%BC%8C%E9%9B%BB%E8%A6%96%E5%85%A8%E9%A4%A85%E6%8A%98%E8%B5%B7%EF%BD%9C%E7%87%A6%E5%9D%A4%E9%A6%96%E9%81%B8%E9%9B%BB%E8%A6%96%EF%BC%8C%E6%97%A5%E7%B3%BBJVC%E5%93%81%E7%89%8C&amp;.yp=10133146&amp;f=https%3A%2F%2Fevents.tk3c.com%2Fevents_net%2F2020TVforever%2Findex.html&amp;enc=UTF-8&amp;tagmgr=gtm"></script></body>
+</html>
