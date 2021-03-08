@@ -340,7 +340,7 @@ img.n01.wow {
 .banner-btns ul .ddef .btn-name h2{font-size:20px;line-height: 36px;}
 .banner-btns ul .ddef .btn-name p{font-size:12px}
 .banner-btns ul .ddef{/* width: 100%; */}
-.mobile-nuttons #btnHome{width: 120px;left: calc(50% - 58px);bottom: -1.5%;background-color: #143c75;}
+.mobile-nuttons #btnHome{width: 120px;left: calc(50% - 58px);bottom: -1.5%}
 body {background-size: 165% auto;}
 .tv-title {display: none;}
 }
