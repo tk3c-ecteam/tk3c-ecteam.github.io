@@ -294,8 +294,8 @@ img.n01.wow {
 
 .banner-btns ul .ddef{justify-content: center;display: flex;}
 .acbankbox {width: 100% !important;}
-.protitle {margin: 10px 0 -2px;line-height: 5.5em;}
-.tv-title {margin: -5vmax 18vmax;}
+.protitle {margin: 10px 0 -43px;line-height: 5.5em;}
+.tv-title {margin: -5vmax 18vmax -25vmin;}
 }
 @media acreen and (max-width:1025px) {
     .tv-title {margin: -6vmax 16vmax;}
