@@ -49,8 +49,8 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
     filter: brightness(100%);
 }*/
 form>div:nth-child(6){width:100%}
-#gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:50%;z-index:9;bottom:0;}
-#gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_go_top.png)no-repeat;bottom: 0;left: 52.3%;background-size: 22%;position: fixed;}
+#gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:54%;z-index:9;bottom:0;}
+#gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_go_top.png)no-repeat;bottom: 0;left: 54%;background-size: 22%;position: fixed;}
 #gotop img{display:none;}
 
 
@@ -86,9 +86,9 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .fixing #btnBox03{background:0 0}
 .upbox a.btn_01{display:block;height:103px;width:202px;font-size:160%;line-height:103px;color:#fff;font-weight:700;background-image:url(../images/btn01.png);background-repeat:no-repeat;background-position:50%}
 .upbox a.btn_01:hover{background-image:url(../images/btn02.png)}
-.rightbtn{display:block;position:fixed;width: 160px;height:auto;margin:368px 0 0 605px;left:50%;z-index:100;bottom: 243px;text-align:center;}
+.rightbtn{display:block;position:fixed;width: 230px;height:auto;margin:368px 0 0 605px;left:50%;z-index:100;bottom: 243px;text-align:center;}
 .rightbtn .actbtn{width:100%;height:auto;display:block;position:relative;background: #ffffff;padding:.2% 0;box-sizing:border-box;padding-top:5px;color: black;}
-.rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_right_top.png) no-repeat;width: 215px;height: 200px;position:absolute;bottom: 189px;left: -28px;z-index: 0;filter:drop-shadow(0 4px 2px #6e6e6e);background-size: 100%;}
+.rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_right_top.png) no-repeat;width: 255px;height: 240px;position:absolute;bottom: 180px;left: -13px;z-index: 0;filter:drop-shadow(0 4px 2px #6e6e6e);background-size: 100%;}
 .rightbtn .actbtn a.btn_01{width:100%;height:38px;margin:0 auto;line-height:38px;color: #1d1d1d;text-decoration:none;border-bottom: 1px solid #000;box-sizing:border-box;display:block;background-color: #ffffff;}
 .rightbtn .actbtn a.btn_01:hover{opacity:.8;transition:all .5s;-webkit-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;background: #b69650;color:white;}
 .rightbtn .actbtn a.btn_01:last-child{border-bottom:none}
@@ -268,10 +268,11 @@ img.n01.wow {
 .banner-wrapper .b_width{width:100%}
 .protitle {font-size: 4vmax;margin: 10px auto -18px;}
 .tv-title {margin: -4vmax 7vmax;width: 35%;}
+.rightbtn {left: 47%}
+#gotop {left: 51.5%}
 }
 @media screen and (max-width: 1440px) {
     .tv-title{width: 30%;margin: -3vmax 12vmax;}
-    #gotop {left: 49%}
     .rightbtn {letter-spacing: 46%;}
 }
 @media screen and (max-width:1280px){
@@ -282,6 +283,8 @@ img.n01.wow {
 .banner-btns ul .ddef{align-items:center;justify-content: center;}
 .list_F ul li {height: 400px !important;}
 .tv-title{width: 26%;margin: -3vmax 20vmax;}
+.rightbtn {left: 37%}
+#gotop {left: 43%}
 }
 @media (min-width: 769px) and (max-width: 1366px){
 .wrapper {width: 100%;}
@@ -302,7 +305,7 @@ img.n01.wow {
     .list_F ul li {height: 300px !important;}
     .list_M .list_special ul li {width: 32% !important;}
     .protitle {font-size: 6vmin;line-height: 5em;height: 180px;margin: 10px 0 -45px;}
-    .wrapper {width: 100% !important; margin-top: 0;margin-bottom: -27vmin;}
+    .wrapper {width: 100% !important; margin-top: 13vmin;margin-bottom: -25vmin;}
     body {background-size: 131% auto;}
     .list_M .hotpromain .hotpro_price2 span {font-size: 225% !important;}
     .acbankbox {width: 100% !important;}
@@ -315,8 +318,8 @@ img.n01.wow {
 .mobile-nuttons p img{max-width:100%;}
 .mobile-nuttons p a{display:block}
 .mobile-nuttons #gobbank{width:calc(50% - 36px);right:0;text-align:center}
-.mobile-nuttons #gobbank a{width:100%;height:45px;background-color: #b69650;text-align:center;box-sizing:border-box;font-size:20px;color:#fff;font-weight:700;line-height:40px;border:2px solid #fff;}
-.mobile-nuttons #btnHome{left: calc(50% - 50px);bottom:-5px;width: 107px;background-color: #b69650;border-radius: 15px;box-shadow: 0 0 5px #705723;}
+.mobile-nuttons #gobbank a{width:100%;height:45px;background-color: #143c75;text-align:center;box-sizing:border-box;font-size:20px;color:#fff;font-weight:700;line-height:40px;border:2px solid #fff;}
+.mobile-nuttons #btnHome{left: calc(50% - 50px);bottom:-5px;width: 107px;background-color: #143c75;border-radius: 15px;box-shadow: 0 0 5px #143c75;}
 .mobile-nuttons #gotop{z-index:999999;margin:0;padding:0;width:70px;right:10px;left:initial;bottom: -60px;}
 .mobile-nuttons #gotop img{display:block}
 .banner-btns ul li{align-items: center;flex: 1 1 50%;}
@@ -339,7 +342,7 @@ img.n01.wow {
 .banner-btns ul .ddef{/* width: 100%; */}
 .mobile-nuttons #btnHome{width: 120px;left: calc(50% - 58px);bottom: 0;}
 body {background-size: 165% auto;}
-.tv-title {width: 37%;margin: 16vmin 9vmin;}
+.tv-title {display: none;}
 }
 @media screen and (min-width:320px) and (max-width:750px){
 #kuai3header{width:100%!important;margin:0 auto;z-index:9999;position:fixed}
@@ -349,12 +352,13 @@ body {background-size: 165% auto;}
 .pc_version_non{display:block}
 body{margin:0;padding:0;width:100%;height:100%;}
 .copyR{padding-bottom:55px;margin-top:3%;font-size:80%}
-.wrapper{display:block;width:100%;margin: 12vmin auto -57vmin;}
+.wrapper{display:block;width:100%;margin: 79vmin auto 0;}
 .wrapper .title {width: 45%;top: -36px;}
 #gotop{display:none;position:fixed;padding:0;cursor:pointer;z-index:999999;bottom:45px;margin:0;left:85%;}
 #gotop img{width:100%;display:none}
 .title02{width:100%;height:auto;position:relative;margin:0 auto;text-align:center;background:0 0;float:left;}
 img.n01.wow {z-index: -1;position: relative;}
+body {background: url(https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210308_m_kv.jpg) no-repeat;background-size: 110%;background-position: -7vmin 11vmin;}
 
 .bannerkok {
     background: url(../images/title_head_m-01.jpg) no-repeat;
@@ -431,7 +435,7 @@ img.n01.wow {z-index: -1;position: relative;}
 .rightbtn{display:none}
 .fix_btn{display:block;width:100%;height:44px;position:fixed;bottom:0;z-index:88;clear:both;background-color: #30096d;}
 .fix_btn>a{display:none}
-.fix_btn .btn1{width:calc(50% - 36px);height:45px;background-color: #b69752;text-align:center;box-sizing:border-box;font-size:15px;color:#fff;line-height:40px;border:2px solid #fff;position:fixed!important;bottom:0;font-size:20px;color:#fff;font-weight:700;}
+.fix_btn .btn1{width:calc(50% - 36px);height:45px;background-color: #143c75;text-align:center;box-sizing:border-box;font-size:15px;color:#fff;line-height:40px;border:2px solid #fff;position:fixed!important;bottom:0;font-size:20px;color:#fff;font-weight:700;}
 .fix_btn .btn2{width:15%;background-color:#555;color:#fff}
 .fix_btn .btn3{width:27%;background-color:#006abe;color:#fff}
 .fix_btn .btnbox{height:45px;float:left;text-align:center;box-sizing:border-box;font-size:100%;padding-top:5px;border-radius:2px;margin-right:1px;margin-left:2px;box-shadow:0 1px 5px 0 #0b3159;line-height:35px}
@@ -655,9 +659,6 @@ img.n01.wow {z-index: -1;position: relative;}
 @media screen and (max-width:320px){
     .list_F ul li {width: 48%;}
     .protitle {line-height: 23vmin;font-size: 18px;margin: 2% auto -7%;}
-    .wrapper {
-        margin-bottom: -75vmin;
-    }
 }
 
 @media screen and (min-width: 2500px) {
@@ -672,7 +673,7 @@ img.n01.wow {z-index: -1;position: relative;}
 @media screen and (min-width: 2000px) {
     .wrapper {margin-top: 9vmax;}
     .wrapper .tv-title {margin: 0 -12vmax;width: 100%;}
-    #gotop {left: 47%;}
+    #gotop {left: 53%;}
 }
 @keyframes rotate-flap {
     0% {
