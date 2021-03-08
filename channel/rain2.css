@@ -6834,11 +6834,3 @@ screen\9 {
         width: 57%;
     }
 }
-
-/* 下雨效果動畫 */
-@-webkit-keyframes fall {
-	to {margin-top:900px;}
-}
-@-moz-keyframes fall {
-	to {margin-top:900px;}
-}
