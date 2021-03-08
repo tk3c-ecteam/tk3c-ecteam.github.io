@@ -583,12 +583,12 @@ i {
         overflow: hidden;
         float: left;
         color: #fff;
-        font-size: 5vmax;
-        line-height: 14vmax;
+        font-size: 4vmax;
+        line-height: 16vmax;
         margin: 0 auto 0;
         background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210308_bar.png) left bottom no-repeat;
-        background-size: 70%;
-        background-position: 9vmax 5vmax;
+        background-size: 100%;
+        background-position: 13vmax 5vmax;
         z-index: 10;
         display: flex;
         justify-content: center;
@@ -2836,7 +2836,7 @@ div#NewProductAll {
     }
     .protitle01 {
         line-height: 17vmax;
-        background-position: 12vmax 5vmax;
+        /* background-position: 0 3.2vmax; */
     }
     .rightbtn>.actbtn {
         margin: 5.5vmax auto;
@@ -2848,7 +2848,9 @@ div#NewProductAll {
 
 @media screen and (max-width: 1440px) {
     .protitle01 {
+        /* font-size: 6vmax; */
         line-height: 18vmax;
+        /* background-position: 0 3.4vmax; */
     }
     .rightbtn {
         left: 44%;
@@ -2873,7 +2875,7 @@ div#NewProductAll {
     }
     .protitle01 {
         line-height: 20vmax;
-        background-position: 13vmax 5vmax;
+        /* background-position: 0 3.8vmax; */
     }
     .rightbtn {
         left: 37%;
@@ -2888,7 +2890,7 @@ div#NewProductAll {
     .protitle01 {
         font-size: 5vmax;
         line-height: 17vmax;
-        background-position: 13vmax 5vmax;
+        /* background-position: 0 4.5vmax; */
     }
     .wrapper {
         width: 100%;
@@ -2908,7 +2910,6 @@ div#NewProductAll {
         font-size: 6vmin;
         line-height: 39vmin;
         background-position: 0 11.5vmin;
-        background-size: 100%;
     }
 
     .wrapper {
@@ -2926,9 +2927,7 @@ div#NewProductAll {
         margin: -33vmax auto 0;
     }
     .protitle01 {
-        line-height: 15vmax;
-        background-position: 7.5vmax 5vmax;
-        font-size: 3vamx;
+        line-height: 13vmax;
     }
     .rightbtn {
         background-position: 0.5vmax 3vmax;
@@ -2952,8 +2951,8 @@ div#NewProductAll {
         margin: -24vmax auto 0;
     }
     .protitle01 {
-        line-height: 15vmax;
-        font-size: 3vmax;
+        line-height: 12vmax;
+        font-size: 4vmax;
         height: 265px;
     }
     .title-group {
@@ -2970,11 +2969,11 @@ div#NewProductAll {
     }
     .rain-title {
         width: 60%;
-        margin: -45vmin auto -8vmin;
+        margin: -57vmin auto -8vmin;
     }
     html {
         background-size: 180%;
-        background-position: -38vmin 22vmin;
+        background-position: -38vmin 10vmin;
     }
       /*手機專用浮動選單*/
     .fix_btn {
@@ -6813,6 +6812,9 @@ screen\9 {
     }
     .rain-title {
         margin: 0 auto -12vmin;
+    }
+    .wrapper {
+        margin: -58vmin auto 0;
     }
 }
 
