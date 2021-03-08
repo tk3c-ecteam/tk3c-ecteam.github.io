@@ -35,7 +35,7 @@ html {
     margin: 0;
     padding: 0;
     height: auto;
-    background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210308_head.jpg) top 105px center no-repeat, url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210308_bg.jpg) top 105px center repeat-y;
+    background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210308_heads.jpg) top 105px center no-repeat, url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210308_bg.jpg) top 105px center repeat-y;
     background-size: 100%, 100%;
     overflow-x: hidden;
 }
