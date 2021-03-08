@@ -302,6 +302,7 @@ figure.pdbg {
 .bottomlow p {
   width: 68%;
   margin: 1vmax auto 0;
+  word-break: normal;
 }
 
 .expword {
