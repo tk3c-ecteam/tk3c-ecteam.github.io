@@ -126,8 +126,8 @@
             filter: brightness(65%);
   }
   55% {
-    -webkit-filter: brightness(200%);
-            filter: brightness(200%);
+    -webkit-filter: brightness(120%);
+            filter: brightness(120%);
   }
   80% {
     -webkit-filter: brightness(30%);
@@ -148,8 +148,8 @@
             filter: brightness(65%);
   }
   55% {
-    -webkit-filter: brightness(200%);
-            filter: brightness(200%);
+    -webkit-filter: brightness(120%);
+            filter: brightness(120%);
   }
   80% {
     -webkit-filter: brightness(30%);

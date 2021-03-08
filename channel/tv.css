@@ -24,7 +24,7 @@ html{margin:0;padding:0;height:100%;}
 body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_kv_bg.jpg)center top 45px no-repeat,url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_bg.jpg)center top;background-size: 100%;overflow-x: hidden;}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:20px}
 .wrapper{display:block;width:1144px;margin:0 auto;margin-top: 12vmax;}
-.tv-title{width: 42%;position: relative;MARGIN: -2VMAX 0;overflow: hidden;}
+.tv-title{width: 49%;position: relative;MARGIN: -4VMAX 0;overflow: hidden;}
 .mask {
     width: 100%;
     background: url(https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210308_kv_titlt_1.png) no-repeat center top;
@@ -33,11 +33,6 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微�
     z-index: 10;
     height: 300px;
     padding: 0;
-    transform: translateY(-100%);
-}
-.go-down {
-    transform: translateY(0);
-    transition: all 0.6s linear;
     animation: small-light 0.9s ease-in-out;
     animation-delay: 2s;
 }
@@ -276,6 +271,8 @@ img.n01.wow {
 }
 @media screen and (max-width: 1440px) {
     .tv-title{width: 30%;margin: -3vmax 12vmax;}
+    #gotop {left: 49%}
+    .rightbtn {letter-spacing: 46%;}
 }
 @media screen and (max-width:1280px){
 .protitle{width:100%;line-height: 7.5em;margin: 10px 0 -2px;height: 225px;}
@@ -294,17 +291,18 @@ img.n01.wow {
 
 .banner-btns ul .ddef{justify-content: center;display: flex;}
 .acbankbox {width: 100% !important;}
+.protitle {margin: 10px 0 -2px;line-height: 5.5em;}
+.tv-title {margin: -5vmax 18vmax;}
 }
 @media acreen and (max-width:1025px) {
     .tv-title {margin: -6vmax 16vmax;}
-    .protitle {margin: 10px 0 -44px;line-height: 5.5em;}
     .acbankbox .list2 ul li{width: 186px;}
 }
 @media screen and (max-width:768px){
     .list_F ul li {height: 300px !important;}
     .list_M .list_special ul li {width: 32% !important;}
     .protitle {font-size: 6vmin;line-height: 5em;height: 180px;margin: 10px 0 -45px;}
-    .wrapper {width: 100% !important; margin-top: 11vmin;}
+    .wrapper {width: 100% !important; margin-top: 0;margin-bottom: -27vmin;}
     body {background-size: 131% auto;}
     .list_M .hotpromain .hotpro_price2 span {font-size: 225% !important;}
     .acbankbox {width: 100% !important;}
@@ -351,7 +349,7 @@ body {background-size: 165% auto;}
 .pc_version_non{display:block}
 body{margin:0;padding:0;width:100%;height:100%;}
 .copyR{padding-bottom:55px;margin-top:3%;font-size:80%}
-.wrapper{display:block;width:100%;margin: 12vmin auto 0;}
+.wrapper{display:block;width:100%;margin: 12vmin auto -57vmin;}
 .wrapper .title {width: 45%;top: -36px;}
 #gotop{display:none;position:fixed;padding:0;cursor:pointer;z-index:999999;bottom:45px;margin:0;left:85%;}
 #gotop img{width:100%;display:none}
@@ -657,11 +655,21 @@ img.n01.wow {z-index: -1;position: relative;}
 @media screen and (max-width:320px){
     .list_F ul li {width: 48%;}
     .protitle {line-height: 23vmin;font-size: 18px;margin: 2% auto -7%;}
+    .wrapper {
+        margin-bottom: -75vmin;
+    }
 }
 
 @media screen and (min-width: 2500px) {
     .wrapper .title {top: -160px;}
     #gotop {left: 47.5%;}
+    .protitle {
+        font-size: 2.5vmax;
+        line-height: 5em;
+    }
+    .tv-title {
+        margin: 0 -13vmax;
+    }
 }
 
 @media screen and (min-width: 2000px) {
