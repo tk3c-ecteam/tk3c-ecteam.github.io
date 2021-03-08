@@ -2969,11 +2969,11 @@ div#NewProductAll {
     }
     .rain-title {
         width: 60%;
-        margin: 0 auto -8vmin;
+        margin: -45vmin auto -8vmin;
     }
     html {
         background-size: 180%;
-        background-position: -38vmin 35vmin;
+        background-position: -38vmin 22vmin;
     }
       /*手機專用浮動選單*/
     .fix_btn {
