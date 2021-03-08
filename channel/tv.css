@@ -667,14 +667,11 @@ img.n01.wow {z-index: -1;position: relative;}
         font-size: 2.5vmax;
         line-height: 5em;
     }
-    .tv-title {
-        margin: 0 -13vmax;
-    }
 }
 
 @media screen and (min-width: 2000px) {
     .wrapper {margin-top: 9vmax;}
-    .wrapper .title {top: -131px;}
+    .wrapper .tv-title {margin: 0 -12vmax;width: 100%;}
     #gotop {left: 47%;}
 }
 @keyframes rotate-flap {
