@@ -142,6 +142,7 @@ figure.pd {
 figure.pdbg {
   top: 7vmin;
   width: 48vmax;
+  left: -5vmax;
 }
 
 .tophigh {
