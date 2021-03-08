@@ -25,18 +25,23 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:20px}
 .wrapper{display:block;width:1144px;margin:0 auto;margin-top: 12vmax;}
 .tv-title{width: 42%;position: relative;MARGIN: -2VMAX 0;overflow: hidden;}
-.tv-title h2 {
+.mask {
     width: 100%;
-    height: 200px;
-    mask:  url(https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210308_kv_titlt_1.png) no-repeat center top;
-    -webkit-mask: url(https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210308_kv_titlt_1.png) no-repeat center top;
-    -webkit-mask-size: contain;
-    background: url(https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210308_kv_titlt_2.png) no-repeat center top;
+    background: url(https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210308_kv_titlt_1.png) no-repeat center top;
     background-size: contain;
-    font-size: 0;
-    text-indent: -9999px;
+    position: relative;
+    z-index: 10;
+    height: 300px;
+    padding: 0;
+    transform: translateY(-100%);
+    animation: small-light 0.9s linear;
+    animation-delay: 1s;
 }
-.tv-title h2:after{
+.go-down {
+    transform: translateY(0);
+    transition: all 0.6s linear;
+}
+/*.tv-title:after{
     content: '';
     position: absolute;
     top: 0;
@@ -47,7 +52,7 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
     animation: left-light 3s linear infinite;
     opacity: 0;
     filter: brightness(100%);
-}
+}*/
 form>div:nth-child(6){width:100%}
 #gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:50%;z-index:9;bottom:0;}
 #gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210308_go_top.png)no-repeat;bottom: 0;left: 52.3%;background-size: 22%;position: fixed;}
