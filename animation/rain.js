@@ -24,4 +24,7 @@ function createRain() {
 
 }
 // Make it rain
-createRain();
+
+$(function() {
+    createRain();
+});
