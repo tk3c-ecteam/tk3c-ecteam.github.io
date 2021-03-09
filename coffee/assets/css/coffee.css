@@ -302,7 +302,6 @@ figure.pdbg {
 .bottomlow p {
   width: 68%;
   margin: 1vmax auto 0;
-  word-break: normal;
 }
 
 .expword {
@@ -401,6 +400,11 @@ button:focus {
   padding-right: 1rem;
 }
 
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #795548;
+}
+
 /* 活動專區 */
 #activity-area,
 #activity-mb-area {
@@ -410,7 +414,6 @@ button:focus {
   position: relative;
   z-index: 10;
   overflow-x: hidden;
-  overflow-y: auto;
   padding-bottom: 3%;
 }
 
