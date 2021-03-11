@@ -1060,21 +1060,25 @@
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  80% {
+  30% {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
   }
-  85% {
+  33% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
-  90% {
+  36% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
-  95% {
+  39% {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
+  }
+  40% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 @keyframes rotate-fast-shake {
@@ -1082,21 +1086,25 @@
     -webkit-transform: rotate(0);
             transform: rotate(0);
   }
-  80% {
+  30% {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
   }
-  85% {
+  33% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
-  90% {
+  36% {
     -webkit-transform: rotate(10deg);
             transform: rotate(10deg);
   }
-  95% {
+  39% {
     -webkit-transform: rotate(-10deg);
             transform: rotate(-10deg);
+  }
+  40% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
   }
 }
 
@@ -1106,17 +1114,13 @@
     -webkit-transform: translateY(-200%);
             transform: translateY(-200%);
   }
-  85% {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-  95% {
-    opacity: 0;
+  90% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    opacity: 1;
   }
 }
 @keyframes go-down-back {
@@ -1124,17 +1128,13 @@
     -webkit-transform: translateY(-200%);
             transform: translateY(-200%);
   }
-  85% {
-    -webkit-transform: translateY(150%);
-            transform: translateY(150%);
-  }
-  95% {
-    opacity: 0;
+  90% {
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
   }
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0);
-    opacity: 1;
   }
 }
 
