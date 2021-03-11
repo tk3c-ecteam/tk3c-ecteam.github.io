@@ -1141,24 +1141,24 @@
 /* 漸變 */
 @-webkit-keyframes fade-slow {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.2;
   }
   100% {
-    opacity: 0.2;
+    opacity: 0.8;
   }
 }
 @keyframes fade-slow {
   0% {
-    opacity: 1;
+    opacity: 0;
   }
   50% {
-    opacity: 0.8;
+    opacity: 0.2;
   }
   100% {
-    opacity: 0.2;
+    opacity: 0.8;
   }
 }
 
