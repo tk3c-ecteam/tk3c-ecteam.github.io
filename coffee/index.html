@@ -528,7 +528,7 @@
                     <p class="product"><img :src="getImgUrl(products[2]['img'][n -1])"></p>
                     <div class="intro-group">
                         <h2>{{ products[11]['title'][n -1] }}</h2>
-                        <p>{{ products[12]['content'][n -1] }}</p>
+                        <p v-html="products[12]['content'][n -1]"></p>
                     </div>
                     <div class="price-group">
                         <sup>$</sup>
