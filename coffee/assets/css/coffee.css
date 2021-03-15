@@ -2091,19 +2091,9 @@ button:focus {
 
 /* for ie 10 以上 */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  .bottomlow p {
-    word-break: normal;
-  }
   .forIeNotice {
     display: block;
     position: expression(fixed);
-  }
-}
-
-/* Microsoft Edge 12-18 */
-@supports (-ms-ime-align: auto) {
-  .bottomlow p {
-    word-break: normal;
   }
 }
 
