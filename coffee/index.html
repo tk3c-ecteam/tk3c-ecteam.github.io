@@ -312,7 +312,7 @@
                                                 <b>{{products.left[p - 1][p -1][7].price }}</b>
                                                 <i>/{{products.left[p - 1][p -1][8].weight }}g</i>
                                             </div>
-                                            <a href="http://www.tk3c.com/dic2.aspx?cid=83187&aid=22279&hid=67843" target="_blank" class="buybtn">購買</a>
+                                            <a :href="products.left[p - 1][p -1][9].url" target="_blank" class="buybtn">購買</a>
                                         </div>
                                     </div>
                                 </div>
@@ -505,7 +505,7 @@
             </div>
 
             <div class="btn-group">
-                <a class="buy" :href="goCoffeeUrl(other)" target="_blank">立即購買</a>
+                <a class="buy" :href="otherDetail[2]['url'][other - 1]" target="_blank">立即購買</a>
                 <a class="show-detail" @click="goDetail">詳情</a>
             </div>
         </div>
@@ -567,13 +567,8 @@
                         </li>
                     </ul>
                 </div>
-                <!-- <div class="coffee-detail"><img :src="getImgUrl(otherDetail[3]['content'][n - 1])"></div>
-                <div class="link-group">
-                    <a class="prev" @click="goLikcoffee(otherDetail[4]['singlePrev'][n - 1])">上一個</a>
-                    <a class="next" @click="goLikcoffee(otherDetail[5]['mixNext'][n - 1])">下一個</a>
-                </div> -->
                 <div class="bottom-group">
-                    <a class="sure-buy" :href="goCoffeeUrl()" target="_blank">我要購買</a>
+                    <a class="sure-buy" :href="otherDetail[2]['url'][n - 1]" target="_blank">我要購買</a>
                 </div>
             </section>
         </div>
