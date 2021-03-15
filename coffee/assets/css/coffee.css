@@ -1208,8 +1208,9 @@ button:focus {
     padding: 5%;
   }
   #coffee-mobile-container .bottom-intro ul li:nth-of-type(1) .sub-text {
-    margin-bottom: 90px;
+    margin-bottom: 150px;
     margin-left: 13vmin;
+    width: 30%;
   }
   #coffee-mobile-container .bottom-intro ul li:nth-of-type(5) .sub-text {
     display: -webkit-box;
@@ -1762,7 +1763,7 @@ button:focus {
     border-bottom: 2px solid #ddc5a0;
   }
   #coffee-mobile-container .bottom-intro ul li:nth-of-type(1) .sub-text {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
   #coffee6 .intro .background .titleEN h2 {
     font-size: 13vmin;
@@ -1972,6 +1973,9 @@ button:focus {
   }
   #coffee-mobile-container .coffee .bottom-group a {
     font-size: 1.4em;
+  }
+  #coffee-mobile-container .intro .background {
+    height: 60vh;
   }
   #coffee-mobile-container .intro .background .titleEN {
     margin-top: 30vmin;
