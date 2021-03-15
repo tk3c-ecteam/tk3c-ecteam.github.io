@@ -1294,6 +1294,9 @@ button:focus {
   #coffee7 .bottom-intro .real {
     width: 58%;
   }
+  #coffee7 .intro .intro-group p {
+    width: 100%;
+  }
   #coffee8 .bottom-intro .real {
     width: 100%;
   }
@@ -1753,6 +1756,7 @@ button:focus {
   }
   #coffee-mobile-container .intro .intro-group p {
     line-height: 1.4em;
+    width: 100%;
   }
   #coffee-mobile-container .bottom-intro .real,
   #coffee-mobile-container .bottom-intro .total {
