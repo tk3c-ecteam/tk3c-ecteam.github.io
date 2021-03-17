@@ -1,6 +1,6 @@
 //活動頁面圖片網址轉換成cdn https://events.cdn-tkec.tw
 
-$(function() {
+$(document).ready(function() {
 var images = document.getElementsByTagName('img');
 var imageUrl = '';
 var imageStr = '/events_net/events_net';
