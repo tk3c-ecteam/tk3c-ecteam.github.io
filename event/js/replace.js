@@ -8,15 +8,15 @@ var newUrl = 'https://events.cdn-tkec.tw';
 var originUrl = 'https://events.tk3c.com';
 var location = window.location.pathname.split('/');
 
+    setTimeout(function(){
+        $(images).on('error',function(data){
+            return false;
+        });
+    },400);
+
     for (var i = 0; i < images.length; i++) {
         imageUrl = images[i];
         var newImagePath = imageUrl.getAttribute('src');
-
-        //若圖片不存則連結為空
-       $(imageUrl).error(function(){
-         $(this).onerror = null;
-         $(this).remove();
-       });
 
         //排除含有cdn網址的圖片
             if (imageUrl.src.indexOf(newUrl) < 0) {
@@ -30,6 +30,9 @@ var location = window.location.pathname.split('/');
                     if (imageUrl.src.indexOf("https://www.cdn-tkec.tw") < 0 && 
                         newImagePath.indexOf('/images') > -1 &&
                         location[2] != undefined) {
+                            imageUrl.src.onerror = function(){
+                                this.remove();
+                            }
                         var localImage = newImagePath.replace('./images','/images');
                         imageUrl.src = newUrl + imageStr + '/' + location[2] + localImage;
                     }
