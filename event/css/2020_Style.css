@@ -724,7 +724,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 .list_F ul li:hover{ box-shadow: 0px 0px 3px 3px rgba(150,93,12,0.8); background:#FFC; transform: translateY(0.2em);}
 .list_F .itemF_img{width: 100%; margin-bottom:10px;}
 .list_F .itemF_img img{width: 100%;height: auto;margin: 0 auto;display: block;}
-.list_F h4 {font-size: 15px; font-weight: bold; background: #0d8f92; color: #FFF; line-height: 25px; overflow: hidden; height: 25px; width: 100%; box-sizing: border-box; display: block; float: left; padding:0 5px;}
+.list_F h4 {font-size: 15px; font-weight: bold; color: #0d8f92; line-height: 25px; overflow: hidden; height: 25px; width: 100%; box-sizing: border-box; display: block; float: left; padding:0 5px;}
 .list_F storg { font-size: 14px; line-height: 18px; font-weight: bold;  height: 40px; overflow: hidden; width: 100%; color: #000; display: block;box-sizing: border-box; padding: 0 5px;}
 .list_F p{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;}
 .list_F .boxF_price{ display:block; text-align:right; width:100%; position:relative;box-sizing: border-box; padding: 0 3px 0 0;}
