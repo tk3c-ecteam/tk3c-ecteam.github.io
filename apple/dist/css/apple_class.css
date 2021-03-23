@@ -143,7 +143,6 @@ body {
 }
 
 .tab-content .class-content .table {
-  display: table;
   width: 47%;
   margin: 1% 1%;
   border: 1px solid;
@@ -151,13 +150,16 @@ body {
 }
 
 .tab-content .class-content .table .row {
-  display: table-row;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
 }
 
 .tab-content .class-content .table .cell {
-  display: table-cell;
   border: 1px solid;
-  width: 66%;
+  width: 28.5%;
   padding: 10px;
   line-height: 1.1em;
 }
@@ -165,14 +167,12 @@ body {
 .tab-content .class-content .table .cell-group,
 .tab-content .class-content .table .col-group {
   display: block;
-  width: 189%;
   padding: 10px;
   border: 1px solid;
   line-height: 1.3em;
-}
-
-.tab-content .class-content .table .col-group {
-  width: 182%;
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
 }
 
 .tab-content .class-content .table #sign {
@@ -390,12 +390,6 @@ body {
   .tab-content .class-content .table {
     width: 100%;
   }
-  .tab-content .class-content .table .cell-group {
-    width: 167%;
-  }
-  .tab-content .class-content .table .col-group {
-    width: 131%;
-  }
   #Applemain {
     width: 100% !important;
   }
@@ -414,12 +408,6 @@ body {
   .tab-content .class-content .table {
     width: 100%;
   }
-  .tab-content .class-content .table .cell-group {
-    width: 170%;
-  }
-  .tab-content .class-content .table .col-group {
-    width: 137%;
-  }
 }
 
 @media only screen and (max-width: 850px) {
@@ -436,12 +424,6 @@ body {
     font-size: 1.5em;
     width: 48.2%;
   }
-  .tab-content .class-content .table .cell-group {
-    width: 177%;
-  }
-  .tab-content .class-content .table .col-group {
-    width: 153%;
-  }
   .tab-content .title-name {
     width: 99%;
   }
@@ -457,12 +439,6 @@ body {
 }
 
 @media only screen and (max-width: 576px) {
-  .tab-content .class-content .table .cell-group {
-    width: 205%;
-  }
-  .tab-content .class-content .table .col-group {
-    width: 229%;
-  }
   .class-tab ul li {
     width: 100%;
     font-size: 1.5em;
@@ -504,13 +480,6 @@ body {
 }
 
 @media only screen and (max-width: 376px) {
-  .tab-content .class-content .table .cell-group {
-    width: 212%;
-  }
-  .tab-content .class-content .table .col-group {
-    width: 285%;
-    padding: 31px 0;
-  }
   .EJnewFootercontent {
     margin: 30px 25px 0 97px !important;
   }
@@ -526,12 +495,6 @@ body {
 }
 
 @media only screen and (max-width: 320px) {
-  .tab-content .class-content .table .col-group {
-    width: 369%;
-  }
-  .tab-content .class-content .table .cell-group {
-    width: 222%;
-  }
   .tab-content .title-name {
     width: 98%;
   }
