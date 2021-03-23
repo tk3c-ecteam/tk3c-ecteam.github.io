@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple 小教室</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="./dist/css/apple_class.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./dist/js/apple_class.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="fb-root" style="display:none" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+    <script>
+        var fb_app_id = '606825782724291';
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;            
+            js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1&appId=" + fb_app_id;
+            fjs.parentNode.insertBefore(js, fjs);
+        } (document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- end of facebook js SDK -->
+    <!-- google plus js SDK -->
+    <!--<script type="text/javascript">
+        window.___gcfg = { lang: 'zh-TW' };
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>-->
+    <!-- end of google plus js SDK -->
+
+<!-- Google 再行銷代碼 -->
+<!--------------------------------------------------
+再行銷代碼不得與個人身份信息相關聯，也不得放置在與敏感類別相關的網頁上。有關如何設置代碼的詳細信息和說明，請訪問：http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+
+
+
+
+
+<!-- Global site tag (gtag.js) - AdWords: 935005938 --> 
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-935005938"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-935005938'); </script> 
+
+
+
+<!-- Google 再行銷代碼 -->
+
+<script>    
+    //破圖處理
+    function ImgError(source) {
+        var s = source.src
+        //source.src = "http://s.tkec.com.tw/images/nopic.jpg";
+        if (s.indexOf("kuai3imagecdn.azureedge.net") != -1)
+        {
+            source.src = s.replace("kuai3imagecdn.azureedge.net", "www.tkec.com.tw");            
+        }
+        else{
+            source.src = "http://s.tkec.com.tw/images/nopic.jpg";
+        }
+        
+        source.onerror = "";
+        return true;
+    }
+    function ImgError2(source) {
+        source.src = "http://s.tkec.com.tw/images/nopic.jpg";
+        source.onerror = "";
+        return true;
+    }  
+</script>
+ 
+
+
+
+
+<!-- Criteo 埋碼 -->
+
+
+
+    <script type="text/javascript">
+        //var appInsights = window.appInsights || function (config) {
+        //    function i(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, u = document, e = window, o = "script", s = "AuthenticatedUserContext", h = "start", c = "stop", l = "Track", a = l + "Event", v = l + "Page", y = u.createElement(o), r, f; y.src = config.url || "https://az416426.vo.msecnd.net/scripts/a/ai.0.js"; u.getElementsByTagName(o)[0].parentNode.appendChild(y); try { t.cookie = u.cookie } catch (p) { } for (t.queue = [], t.version = "1.0", r = ["Event", "Exception", "Metric", "PageView", "Trace", "Dependency"]; r.length;) i("track" + r.pop()); return i("set" + s), i("clear" + s), i(h + a), i(c + a), i(h + v), i(c + v), i("flush"), config.disableExceptionTracking || (r = "onerror", i("_" + r), f = e[r], e[r] = function (config, i, u, e, o) { var s = f && f(config, i, u, e, o); return s !== !0 && t["_" + r](config, i, u, e, o), s }), t
+        //}({
+        //    instrumentationKey: "e787f436-a48c-4d7b-95a9-82c12c4e4d28"
+        //});
+
+        //window.appInsights = appInsights;
+        //appInsights.trackPageView();
+    </script>
+
+
+
+    <!--不要移動此段位置 Google Tag Manager  (noscript) 不要移動此段位置-->
+    
+
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!--<script src="/js/jquery-1.9.1.min.js?571
+"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+$(document).ready(function(){
+if (0 <= ["/member/official_card_member_add_step3.aspx","/member/member_add_done_has_buycar.aspx"].indexOf(window.location.pathname)) fbq('track','CompleteRegistration');
+if (0 <= ["/shop/auth.aspx","/shop/Sinfo.aspx","/mobile/mob_auth.aspx","/mobile/mob_Sinfo.aspx"].indexOf(window.location.pathname)) fbq('track','InitiateCheckout');
+if (0 <= ["/Shop/Result.aspx","/Shop/Sresult.aspx","/mobile/mob_Result.aspx","/mobile/mob_Sresult.aspx","/Shop/CarResult.aspx"].indexOf(window.location.pathname)) {
+var fbPixelPars = {content_ids:[],content_type:'product',value:'0.00',currency:'TWD'};
+if ("undefined" != typeof _tkec.od.basket.amount) fbPixelPars.value = _tkec.od.basket.amount.toString();
+for (var basketProductsKey in _tkec.od.basket.products) fbPixelPars.content_ids.push(_tkec.od.basket.products[basketProductsKey].id);
+fbq('track','Purchase',fbPixelPars);
+}
+if (0 <= ["/pt.aspx","/mobile/mob_pt.aspx"].indexOf(window.location.pathname) && "undefined" != typeof _tkec.od && "undefined" != typeof _tkec.od.product && "undefined" != typeof _tkec.od.product.id) fbq('track','ViewContent',{content_ids:[_tkec.od.product.id],content_type:'product'});
+if (0 <= ["/shop/info.aspx", "/shop/scart.aspx", "/mobile/mob_info.aspx", "/mobile/mob_Scart.aspx"].indexOf(window.location.pathname) && "undefined" != typeof _tkec.od && "undefined" != typeof _tkec.od.product && "undefined" != typeof _tkec.od.product.id) fbq('track','AddToCart',{content_ids:[_tkec.od.product.id],content_type:'product'});
+});
+</script>
+<script>
+$(document).ready(function(){
+if ("undefined" != typeof _tkec.od && "undefined" != typeof _tkec.od.sitemap && "transaction" == _tkec.od.sitemap) $('head').append('<img src="https://www.tkec.com.tw/Ashx/ShopLog.ashx?url='+encodeURI(window.location.toString())+'&OrderNo='+_tkec.od.basket.orderno+'&s='+(1*new Date())+'" height="0" width="0" style="display:none;visibility:hidden">');
+});
+</script>
+<!-- Bing Ads UET -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"20101928"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+<!-- Bing Ads UET End-->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFQTW5B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script>
+var vizLayer = {
+	type: 'other_page'
+};
+</script>
+
+
+
+
+    
+
+    
+    <form name="aspnetForm" method="post" action="./AppleRoom.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPBeAmZU5yVld1MXpFOWU1cjJVTGdnbWxIeHAvNlIxWXRwVWwzY2pTN2txeUpkc3lCWnNRTjVoUWJPQURrOUdzZG8ra0RhdGRzYnZ5UzRFWktERUVDSVFHeU1XQlFwblFoSlJBQ0xrQkZ5ZmhqK2lmRUZZdm45ci80TjdubkYxSks5bkdOaWE5Y3pVZWFjLzc3M2wvbnJQK241YU43dlZkYklUdGpzU2lUS1I3WTBmYnB0YkI0U0ZYeTZZMXd3Ykt3ZFB2TzF6cGpSczdYSnRlR2MycUV5TklLV1RGampYcGpXSkhtMnNON204YlE1T0dlMjkvRGhrOGxkZlVQTktNcVFTdFpucWxISjlCTkNXb2lvRVVJMEZuRFNQZkd3cE5URXdFalVOSUNBcHFMbWhNaE1nMFBaUkZ2Q2psTXNGMzg1bXRIRTJGQmtUWEszQ0tLMjE5ZGJnMnQ3b3Z1ZnAxUVpQeUJtVk01VkdDTnVEbzBMdjhPRy8xMGdNYjJxVTA1YU1MaW9qU2tvSkVta29reUZ3MVRTWHhvZFRSbzlRVzh1U254bm5ON2t4UVI0NzFiV2duamFBcVFydjJDUE9ieDQ1c2FLZDBDZGpENTNzcFdqV3lTS01EMERjdW9RbDhGblNLU0Q5a3FIblNuZVgxckNUMmttV1N5TUlvNlpaRURqOXVhRDhHTFJHTlN3TENzK2pENDJFalBSazJ0SW5Vb1pRNGxjMHAwWGVSWUhBY3d6Rk1uSW5oRlJ2YSswTVd5VUN4NkdyQjBuRHk2ZUZyUy9McE56NVJGUW81RUl3L3FBSHJwM3pwZ2lJWWtxcjQvRWNzTmpKVWY0STZTSWR5S0pkQ1draE5weVZCNHVXa3dHdGkwdXBNOHFLWTFBMlVEd2Q1UFQ5SkIycXpIZU9pcXFBa2NDR1pLa3pCV212bU8wRUpoRFQ1ZHRvM0FRL3FSRkJXQlI0Zkg4enpSbGJoYzhqdnA5S3B3ejZ2b2ZIQ0lXL0FPNmptOGpJeTBGNlVrWFRveEpPOS9yNUdySHBXellmNGdwR3Q0U0U5bzVLU1Z1c1ExWlFrSS95VGJKanE2SGNzV0RuU1lVVXlKTjVBZzFra0hGSUx4anlVb3hqVFhxUVhaS04yT09rYjFSbzdIWWoyTGpyU3ZJanNOTWhyemhYTElnTGtqbTBpbmRvalRTSjVENi9wV050dCswMUtvdDU3OEoxQXRVazAzUXNHTHhZRXd4c1k1K1VDdEprZ3czZ0RRa0hUa0NKTTlYckhEZ3g1ai9YTk44c3RqV1lKaGhWTThmb2hCSEJ6YWdHVTBva2lTRFozV0dYajNLQ2hqaHFhcEdSOG1NOXBWYU44bUF4cnpoNExvUDRXbXFJa1pkNE9ObjY5OFR3SHljRjhRYy82Rmx0MmNONGh3R2lSd0hBcXhKNkNKb0FCSUcvQWNRcWVkYXhSTC9JTHlqZS9mQmxTblozVTg5bTg5SXdxY2N1ZmlVbHV0SUQ5NEFvSExTWjZBNDBhdE1EaXhaVHEySUxXN1RCbHl1N1N3YTBZOVQ0SDd4b25PNDJtdnVUL0VWKzNpZUtZQ3FhOWFxNlNMMGNRNmE4OUxTTXdySm9UZHZRa000RTBSZWZKQVNSYU4wL3lVNy94ZVhGeTRQVUgrWHdlS2FMUDJ3K0pBcVZyZ3BWVDZBc2tGZHYwN0NSeGhMdlVERWc1TzdtMW9Na0o3K3ZnbFZRUjdkczdQRS9XZFNmaWY5M2IrYlltSW0yM0NpdWFUVi9GSTRvS2MzUVk5YkgvcWFBSmFnaThQVmxJVTFra1piS1E3VEEwTlNHSlJwWTg2Y2FVREhGWWxQUzh6RS8xS2hBUis4WWxYUUoxbEl5cFhzZ1BSS1RRQTk0RlJiT2xxNHZhRHNpb2JhSk83ZHN4Um5WMU9TUldGODlFUUF3WUFTMVE4QjhoYmp5Z0JLUytpWU9GZHhMNDYraFJjTjdwaEVPWWVKS2FPR0pJdlRUSHNBd2I1Mkwwc1Q0MWVKak1ENUNWbURnNDBxZjZTZHZ5aG5RZU1yWmRLaS9TL21NQkpTRUdCVkFVQSsyUUVWWWJuK0VQS0VFc0hRMStlWDFLRVJJc1BLbUtERXNTK0lIb2xXN0FHbkNMU2dZMW85SVRSbGJTTGZVYnhkUDY5TTVPZlVzaVFlTXRRS25zbG1DbkJQVFJvNzYwejcvRUlVcEJsZ0d3QklBenlMRFI2dHVueHZqTWJqQnl3SDJRZVNjZ2dkVkQ4REoyZzU2QVk5QWhuZDJPSUtnZ0g3RFRmOHh2SzA2Z2FpVUIyazZxd0dtSFVyd1JUSUdvc0JxU3hyczY5QmVRY1pqMjl6MVhwanNVMFJJckh0bXBxaGtaVVFDTUd1RVZZRGFFTkVXMVZ2dHQ4VmZiQS8xU1dnUDQ4KzBoUTNZeCtFek8yb09BVXZSZzFzakpXeVV4c1hOc3BHdnNqZCtQSFlodWg2UnlOWHJiSDdJd3dFTU5sazBLMExVY2NuQWE2N0tTMTkvV2ZSSFdoWEhwRDd2NEtWaENFdTkxVm9MdEpWbDNFdXVoRnl5bXJ5a2hka0V1L0lwVnRxemRqK0hLS0d1WEVtMnVWbHpsdUFsbGFOTWFTMkhjRzBlUXJzTnVnemloZ0R3Q2x6aTR1TWxxS08wZWJQUXlZZUpsbWhKZFdjMUlDb2tuV3hGb1B1WmxrckxHeUZBdE45OVFtcGt6cC84YUt0K1pNMCtkeGNsN1I5dm10ZTcxSVJLRXlBNmIxcXFLSUV2Q0lmZHY2MGw3THkrREt2cTg1VysrSzUzNW9qeDM5dG5zdmVMRGo0clh6NWhYVHBtWFR2enp1dy9NcDNmTkMzT1Y0OWZnejd6NCtSWndKOVZqa2NYZVRldVRXM0JoUjhoMHJlMzRPYWthQUFNWjI4MlBTeG13bDMyYTdJNHRTTE9kaW16TmcvcXc0VGpYM2QwSjFFcmlaRkpEQXE1L2tBalZJYWJKdGFrVkZOTDlPK2MyZ3FoMEVXOWFyZnBDZGt3S2dmOEpNN0dRdFdWeWhCU0JSZ0o2WXd6TGRyT1JNQmZwRWJIa01BYzNiOWVJK0trM2QzV3hMTXRRbFd1UHpRZnZtZWNmbEcvZEtYNXhVM1M1cllsdFhDVE9XT1dSVGVQbTltVVF4akV4Tmg1YmxMRE42NWRQRlpSczBaQzFuNE1xWE1nQjhFaTRtdzNYcU9yNTNmNUJxanRxM2poSFZVNS9hTjY3V0ptN1ljNTlXajd6MEx4NWs0cThSYjA1dEpjcW4vaXE5T2poQWVrTnFYTHJxOUx0SitiTW5ScTFiallPSDB2NVYwWnVOUGJ5eU9WQzFuNE41SUtRZWxnMnluRmNqZHd0NFJHS2plMnFYSnNwWG5tLzlNV1Q0b05QaTdQVHhjZDNLak8zaTArdk9NWG9CakZpT2JhdWxEQ1dBNzE1U1lTeFRNamFyNUV3aG8wQVZaeERqdit4TFE4eGlaTDJaTUZaVWl3SGY3R2QyNm5TelBjZ1NnZE5QVEVHYUdwYk9VME04OUtFRlE5Wit6WHBaaGhmTkVRamJJMG1YK25tTjVXLzNDdGVPR2xlZndDaUFiVjc5dVRKYURlNDg4bjlsSzk0OVNaSXNETDNKLzg4WlhTdm5MNTRPUHBTWlFiN05jcU1ZM3JBL2lEZnFkT0hiUy9DZ08yOThlWVFaZDcreFB6YlI1VzdsM2Z0R0NvK2VsaWNlVFRmMk5xNkNYbHJWbXhyWVRiYTgxTElZK09ZUExKZkUzbGNISlF5RXEzYldxLzV3LzN5M00wUlNkQlVYVTBiMUdoQlMvTUNvcUJ1cFhxd2FsWk8vNG55U2RFdWxnbEhkMFpDb0xBaG9yWU9nWEl4K05qTnRxemxWWDl1K1ZZU2FUZTNaYW9YVU91YUlndXdwcWZoOG04bDBhUWFuVjRaeGd6QW9lbGx4cFRtNkxBa3prV0RRM1dQVjE5cWRHaDI1OHZBdDRnM2Z6RjhTN256WnErOE5MN0ZuUElMNFZ2U0t6ZDcyT1hnVzlqQnZoai9sdkt3elI1eU9mZ1dkcENyNE45elBHU3ppMXVHL2kzaTRWNEEzekpjbksxL3RTUzNyZXFlM0RiZzZFS0FHMU4zKzhDa29ocVNnQWdwVmJyVE51VGR6NGU4RDZyRU55UVo2ZERPSkhreGhDOEVRN3ZSeExhaEpEWWlKZ0lPaDR1RTJSZ1hEZWFWREs1TElEdlFORlZ6Ynh6T1pYYmdKeCt1ZWYxOW9tc3RLVk5JRHIwZXlpNEJaVlZaUkpwN2pYbnFNYVJKZFpXeDd2cGY3ZWNwWEtZazZHQXdwQ05lRTZ3YjdhMkhFeDRVOWNTNlBTbkdnM284UFBLa1dDd1lhMDVXTldqS3JqTVNOQUFXb0FJNndFdkdtSnFIQW1pVVRIb0xUUjFRTlhFVUdUdTMrYnptcVFlbCsxOURWVUVQV0kvOUlYNmdVMG5wK2I2ajFnL1VZYzhCRS9mRTR4NCs0a0VBS2UySlIvRURENTNwVmFHcUpZd0VXSzMxUEd4VmFhSnhmQU5RMXd1cm5WU1FaUjFqKzNIZFB3NmFZdFZtcEhBK25EREdvUjRXY0FWbHEzbFhEZnZxQ0xrMlYvN3M0Mmp4N05YeXQ0OHRZcHc5eXlHb1FjdEZTZUNxekI5UkZkMUEycHNBR21uellRdGd1ZDFjdkpQSEZvdy9uVmtjazlsSWpGdWR5bFR1WFlacXRYVCtXOGdYTFpJY0hhdWlhQmdva1dVcEF4TGJoYXR0U2Nrc1RGY3N3aEc2MkhBc3h0VG9ZbU9yb3FzNDg2UTQvWG5wOVB2bXRDVXFaOGNLelNMcWlUT2VWQXcvOEt3bkZTVTlZQ2lyUTJoZW5EVnZmUXM1cTJXdjFkWUtzY1VBaGljZXc1YUtIVWszOFNnaTRGd1Z0dktkcThWVGo4enp0d2kyV211RjJIcXc4MGp4eEowd0hqNU1IbUtlR1BFcnFSNk0vS1U0R0dkMVduVXpUWDByUkE3d0lwNTREMkV2YXlOZlBjN2lmLzlYK2RhblZZUzExZ0xZUkZmN1JqdFFRdVhoc2tQbERqdFVQdGNyc2oxSkJac2IrTCs4cWpndXJmQzFsOEtQcy9XMzBPSDZOWDMxSlQ5Wm1wUUUvRzVGeWVDMy9PYnQ2K1dIbDh5bmQ0djNuNWpYcjlvMUM0N2diZlVBM080ZVhSNjJRVFdYVTBYSmtIQW9ib0NHczVHbUdZNGcrbXJ4K3ZIaXh3OHFNK2ZOazMrM2N1NzI2dGl2cXZlUitEYnlMU3BCc2ZXYjNGcUo5WS9XZmxtaXdMZlErRjhrZHJNMEpjaThyaWRvSGNsSU1KQ0kzN25YVklKY0VleFYxWndGYjNCNEtNSCt1cnBRVlhKcVFVY3F4QjFydDJFbFh6QjhiSUR6MXdjTGhqWDJOb3hBLzBDL251ZVY2cG40OWFza0ZPUkNMbWxNR2d4THptNlNSWWhnc0w2VGJJU0ZISlVOUnlHcDRyaG90Q3FjL3BRV2dyVWp2QUFVd3dFRFdKZjZRN0kwMEVBdHR4UngzRkxFY1M5TUhMY1M0dUp4THRiZFJKeTBCL0kxNjdhbW1VZzduV3gxLzZzRjAxc0QwQ1dqdEpFRGdFc0t0ZFA2TDVwRXJDWmVteGo3WWwxUVpWWHIvWFU0MVNPZ0NCanRqeWZuUUEyTFo4NFZyOHlZOTJZZGdQQU5OMENDbjFVaXFja0NIMVk1L3JEeXlZWHkzeDZXN3B4ck9LVlc5Mys4cmo5dnU0OTVYSzVtNmlMU0JXeCszVXkzUGJKamFJUUpNOTBNdy9wWVA4N2NheThWSWd4VGYwZkdScUkweGN2d1JBUVN5bU1BdGVPcXpRYU9wVlhGNkVyek9VbWU2cVc4WTFJTzZSUWsydFJlTmNjcjNqNTZnZG02OUFmVVM3RmMzc0NCY1BwejgvN2Z6USttell0M3kxZlBGVzljeDBuVzlHZWxUOTR6Yno0cDNiNVF2blBQdlAvSmo4ZFA0Smx6VDhwek55dDNMMXZpZURiM1YvUERzMVdoa0hOa1hza2s2QjI3dS9hTjBvc2Y2akNnNTZNcmZUTlgrdmJyOHZ1blgrQ1FBK1M5bEw3TWc0RGN4L2RMVng3ODg3c1BhbHBtLy93YnBGRDU4dzF6ZHJaeTRndno0dnVsTDc5OE5udTgrT1d0Wjk4L0xWMisweVNVNHZWejVvZndkeEtZZ2w5eFBMaHRUajhxWHYzS1BIUE4vT0hHVDg0bVN4NlB2eWwrL24zbHhJVm5QNXo2ditGWDhkSmw4K25KbjE3emdQL1BacytYbm41VW5QNjB4bnpDOXE5QlJtQVg1YzlPQUJOQUhPYlp2L3lVY0p4ZThNZmpmNXpQOGxxQkRwSGF6amRhWVhleEh0RWRPK0NJL2d2eEY2KzFyQ3ZmUFZjNU1WdThkUHExbHAvOTh2WFdsa3hIU3hvSGNUSzZCbWl2ekZ4OHJhV0ZxWSsxTFR4bTN5eTFXVzh0clh5RkhMd092L2JrdUs2dUFmRi9BY2JGeWs4PRgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WAQUjY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRCdG5TZWFyY2hox26hD6gIZ2y/0hyMEGR7jUlI3w==">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=fL6GmB8PmGMGcZmhdtyRD0Eyu-je3uyrjXHOvk3MFJh_DWv08NfYnnd6WWA759Oxx2ryxHYWeBBtHHUjwsUJOtLPtuo1&amp;t=637454357640000000" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=zHND8mISkLJ6RC2FmDB3Gfvq78X7LEpumF1zmddegHx2PHZLyMCB68lPEQHIj_JSrndwEsFf_l_9IdsT4xEqIdIgc2H_t0rEsnCaJXVR9mSFVERhJBVifEq8uOG-bkWLkKOLmA2&amp;t=3a1336b1" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 用戶端架構無法載入。');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=Mki-8FbLqnRlVGi7ZCDxgN_mKwhWtcy9CnAwYoffQPwRoNlPvPsEP-kPKIYJnFxRdYClAs4EK3fjHaByCQ7ZV09YsrOgTxOPisODzgbfo2EnO9wEB-ByW9SPO3tNRt2IFUzKiKSQFjbPhLY0nqo7PqyEXqc1&amp;t=3a1336b1" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="27F835E1">
+</div>                      
+<!-- 共用 css -->
+        <link rel="stylesheet" type="text/css" href="https://www.tkec.com.tw/css/cssreset-min.css?571
+">
+        <link rel="stylesheet" type="text/css" href="https://www.tkec.com.tw/css/cssgrids-min.css?571
+">
+        <link rel="stylesheet" type="text/css" href="https://www.tkec.com.tw/css/main.css?571
+">
+        <link href="https://www.tkec.com.tw/css/menusystemad.css?571
+" rel="stylesheet" type="text/css">
+        <link href="https://www.tkec.com.tw/css/aboMessageStyle.css?571
+" rel="stylesheet" type="text/css">
+        
+        <link href="https://www.tkec.com.tw/css/tkecPC/fontawesome.min.css?571
+" rel="stylesheet" type="text/css">
+        <link href="https://www.tkec.com.tw/css/tkecPC/rightbar.css?571
+" rel="stylesheet" type="text/css">
+
+        <!-- 共用 js -->
+        <script src="https://www.tkec.com.tw/js/jquery-migrate-1.2.1.min.js?480"></script>
+        <script src="https://www.tkec.com.tw/js/main.js?480"></script>
+
+        <!-- lazyload js -->
+        <script src="https://www.tkec.com.tw/js/jquery.lazyload.min.js?480"></script>
+        <script src="https://www.tkec.com.tw/js/jquery.blockUI.js?480"></script>
+        <script>
+    function ADRecord(Kind, Block, ExtID, ItemID) {
+        $.ajax({
+            url: "Ashx/AD_Record.ashx",
+            type: "POST",
+            data: "Kind=" + Kind + "&Block=" + Block + "&ExtID=" + ExtID + "&ItemID=" + ItemID,
+            async: false,
+            cache: false
+        });
+    }   
+</script> 
+        
+
+<script>
+    function ProcessWait() {
+        $.blockUI({ message: $('#divImg'),
+            css: {
+                top: '40%',
+                left: '40%',
+                border: 'none',
+                background: 'none'
+            }
+        });
+    }
+</script>
+       
+       
+       
+            <div id="divImg" style="display:none;">
+                    <img src="https://www.tk3c.com/images/icons/loading2.gif" alt="Progress" align="absmiddle">
+                    <!--<img src="http://kuai3cdn.azureedge.net/images/loading2.gif" alt="Progress" align="absmiddle" />-->
+                </div>
+        <div id="main">            
+            
+   <script src="https://www.tkec.com.tw/js/jquery.autocomplete.js?480"></script>
+    <link href="https://www.tkec.com.tw/css/jquery.autocomplete.css?571
+" rel="stylesheet" type="text/css">
+                    
+<style>
+    .contentbox {
+    background: white;
+    height: 136px;
+}
+</style>
+<script>
+    function ScriptGoldNT(id1, id2) {
+        document.getElementById(id1).style.display = "inline-block";
+        document.getElementById(id2).style.display = "none";
+    }
+</script>
+    <script>
+        function TopCouponConts() {
+            $.ajax({
+                url: "/ashx/CouponConts.ashx?kind=1",
+                type: "POST",
+                dataType: 'html',
+                success: function (msg) {
+                    if (msg != "") {
+                        $("#TopCouponConts").html(msg);
+                    }
+                }
+            });
+        }
+        function TopTrackConts() {
+            $.ajax({
+                url: "/ashx/TrackConts.ashx",
+                type: "POST",
+                dataType: 'html',
+                success: function (msg) {
+                    if (msg != "") {
+                        $("#TopTrackConts").html(msg);
+                    }
+                }
+            });
+        }
+        function TopCart() {
+            $.ajax({
+                url: "/ashx/TopCart.ashx",
+                type: "POST",
+                dataType: 'html',
+                success: function (msg) {
+                    if (msg != "") {
+                        $("#TopCart").html(msg);
+                    }
+                }
+            });
+        }
+        function TopGoldNT() {
+            $.ajax({
+                url: "/ashx/TopGoldNT.ashx",
+                type: "POST",
+                dataType: 'html',
+                success: function (msg) {
+                    if (msg != "") {
+                        $("#TopGoldNT").html(msg);
+                    }
+                }
+            });
+        }
+        function onkey() {
+            //偵測瀏覽器版本
+            var browser = navigator.appName;
+            if (browser == "Netscape") {    //如果瀏覽器為Netscape或者Firefox
+                //開始監聽鍵盤事件
+                document.captureEvents(Event.KEYDOWN);
+                document.onkeydown = function (event) {                    
+                    if (event.which == 13) {
+                        document.getElementById("ctl00_tophead1_BtnSearch").focus();
+                        //SearchAct();                
+                    }
+                };
+            }
+            else {
+                document.onkeydown = function () {
+                    var a = window.event.keyCode;                    
+                    if (a == 13) {                        
+                        document.getElementById("ctl00_tophead1_BtnSearch").focus();
+                        //SearchAct();                
+                    }
+                };
+            }
+        }
+        function SearchAct() {            
+            ProcessWaitTop();            
+            var q = '';
+            var noencode = '';
+            if (document.getElementById("ctl00_tophead1_txt_Search").value == '') {                
+                q = encodeURIComponent($("#ctl00_tophead1_txt_Search").attr('placeholder'));
+                noencode = $("#ctl00_tophead1_txt_Search").attr('placeholder');
+                document.location.href = '/search.aspx?q=' + q + '&ec=search';                
+            }
+            else {                
+                q = encodeURIComponent(document.getElementById("ctl00_tophead1_txt_Search").value.trim());
+                noencode = document.getElementById("ctl00_tophead1_txt_Search").value.trim();
+                document.location.href = '/search.aspx?q=' + q + '&ec=search';                  
+            }
+            ga('send', 'event', '全站_搜尋', 'click', '全站_搜尋鍵_' + noencode);
+            return false;
+        }
+        function SearchKeyWordSetGA(km) {                       
+             ga('send', 'event', '全站_搜尋', 'click', '全站_熱門關鍵字_'+km);
+            return false;
+        }
+        $(function() {
+            setInterval(flicker, 1000); //迴圈閃爍，間隔1秒
+        });
+        function flicker() {//閃爍函數
+            $('.shine').fadeOut(650).fadeIn(650);
+        }
+        function ProcessWaitTop() {
+            $.blockUI({
+                message: $('#divTopImg'),
+                css: {
+                    top: '40%',
+                    left: '40%',
+                    border: 'none',
+                    background: 'none'
+                }
+            });
+        }
+
+        function SearchRecordLog() {
+            $.ajax({
+                url: "/Ashx/SearchRecord.ashx",
+                type: "POST",
+                data: "q=" + encodeURIComponent(document.getElementById("ctl00_tophead1_txt_Search").value.trim()),
+                async: false,
+                cache: false
+            });
+        } 
+    </script>    
+<script>
+    $(function () {
+        //搜尋結果優化  2019.11
+        //$(".search_input").autocomplete("/ashx/SearchAutoComplete.ashx",
+        //{
+        //    delay: 10,
+        //    width: 420,
+        //    minChars: 1,
+        //    matchSubset: false,
+        //    matchContains: false,
+        //    cacheLength: 0,
+        //    noCache: true,
+        //    selectFirst:false,                
+        //    onFindValue: findValue,
+        //    formatItem: function (row) {
+        //        var msg = "<div style='height:12px' class='tt' onclick='SearchGo(&#39;" + row[0] + "&#39;)'><div style='float:left'>" + row[0] + "</div>";
+        //        if (row[1] != 0) {
+        //            msg = msg + "<div style='float:right;padding-right:5px;'>約" + row[1] + "結果</div>";
+        //        }
+        //        msg = msg + "</div></div>";
+        //        return msg;
+        //    },
+        //    autoFill: false,
+        //    mustMatch: false
+        //});
+
+        function findValue(li) {
+            if (li == null) return alert("No match!");
+            $(".search_input").val(li.extra[0].trim());            
+        }
+        //$(document).on('change', '.search_input', function (event) {
+        //    var myVar = setTimeout(function () {
+        //        var selfValue = encodeURIComponent($('.search_input').val());
+        //        window.location.href = '/search.aspx?q=' + selfValue.trim()+'';
+        //        clearInterval(myVar);
+        //    }, 200);
+        //});
+        });
+    function SearchGo(key) {
+        var selfValue = encodeURIComponent(key);
+        window.location.href = '/search.aspx?q=' + selfValue.trim() + '';
+    }
+    function trackTopBarLink(url) {
+            if (window.ga && ga.loaded) {
+                ga('send', 'event', 'trackmenu', 'click', url, {
+                    'transport': 'beacon'
+                });
+            }
+        }
+</script>
+    <div id="divTopImg" style="display: none;">
+        <img src="https://www.tk3c.com/images/icons/loading2.gif" alt="Progress" align="absmiddle">
+    </div>
+     <!--天廣告HTML顯示-->    
+
+    <div id="header">
+        <div id="header_content">
+            <div class="yui3-u social_plugin">
+                <div class="yui3-u fb">
+                    <!-- facebook like btn -->
+                    <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/tkec520" data-height="35" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=606825782724291&amp;color_scheme=light&amp;container_width=0&amp;height=35&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftkec520&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey&amp;send=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 90px; height: 28px;"><iframe name="f1d2edaed4e95a4" width="1000px" height="35px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like.php?action=like&amp;app_id=606825782724291&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df4892cc4650894%26domain%3Dwww.tkec.com.tw%26origin%3Dhttps%253A%252F%252Fwww.tkec.com.tw%252Ff2b93dbdc96c4%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=0&amp;height=35&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftkec520&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey&amp;send=false&amp;show_faces=false" style="border: none; visibility: visible; width: 90px; height: 28px;" class=""></iframe></span></div>
+                </div>
+                <div class="yui3-u gp">
+                    <!-- google +1 btn -->
+                    <div class="g-plusone" data-size="medium"></div>
+                </div>
+            </div>
+            <!-- end of .social_plugin -->
+            <div class="yui3-u header_function">
+               <span id="ctl00_tophead1_span_login"><a onclick="trackTopBarLink('toplogin');" id="ctl00_tophead1_LinkBtn" href="javascript:__doPostBack('ctl00$tophead1$LinkBtn','')">會員加入 / 登入</a>
+               
+               </span>
+                
+                <span class="service">
+                
+                    <a href="/member/member_coupon.aspx"><img src="https://www.tk3c.com/images/header_icon_coupon.png" alt="">
+                    <font style="color:#F00; font-weight:bolder;">折價券</font>
+                        <bl id="TopCouponConts"></bl>                    
+                    </a></span>
+                <span class="shopping_survey" onclick="trackTopBarLink('topnotice');"><a id="ctl00_tophead1_HyLink" href="http://www.tk3c.com/member/member_product_notice.aspx" target="_blank"><img src="https://www.tk3c.com/images/header_icon_talk.png" alt="" style="position: relative;top: 4px;margin-right: 6px;">                    
+                    <bl id="TopTrackConts">追蹤清單(0)</bl>                    
+                                              </a> </span>
+                <span class="member">
+                    
+                    <img src="https://www.tk3c.com/images/header_icon_member.png" alt="">  <a href="/member/member_center.aspx">會員中心</a> </span>
+                <span class="order">
+                    <img src="https://www.tk3c.com/images/header_icon_order.png" alt=""><a href="/checkout/order_index_new.aspx?parm=order">訂單查詢</a></span>
+                
+                
+        <span class="edm"><a href="/edmlist.aspx"><img src="https://www.tk3c.com/images/header_icon_mail.png" alt="" style="position: relative;top: 4px;margin-right: 6px;">電子報</a></span>
+
+                <span class="service">
+                    <img src="https://www.tk3c.com/images/header_icon_service.png" alt=""> <a href="/service/serviceindex.aspx">客服中心</a></span>
+             <span id="TopCart" onclick="trackTopBarLink('topcheckcar');"></span>                                
+            </div>
+        </div>
+        <!-- end of #header_content -->
+    </div>
+
+<div>
+    <div id="content">
+        <div id="search">
+            <!-- 燦坤快３ logo -->
+            
+<link rel="stylesheet" type="text/css" href="https://www.tkec.com.tw/css/allstyle.css?571
+">
+<a href="/"><img id="ctl00_tophead1_LogoUC1_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/UserFiles/img_ad/Prod/NewAD_2002041612431825.png" style="height:82px;width:199px;border-width:0px;"><em class="boxfly">燦坤線上購物</em></a>
+            
+            <!-- 搜尋區 -->            
+            <div class="yui3-u search">
+            <div id="ctl00_tophead1_PnSearch">
+	
+                <input name="ctl00$tophead1$txt_Search" type="text" id="ctl00_tophead1_txt_Search" class="search_input" placeholder="冷氣" onkeydown="onkey(event)" autocomplete="off">
+                <input name="ctl00$tophead1$BtnSearch" type="button" id="ctl00_tophead1_BtnSearch" class="yui3-u search_submit" value="搜尋" onclick="SearchAct()">
+                <div id="ctl00_tophead1_panSearchkeyword">
+		
+                    <h3 class="search_keyword">
+                        <a href="../search.aspx?q=%e5%86%b0%e7%ae%b1&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('冰箱');">冰箱</a>&nbsp;|&nbsp;
+<a href="../search.aspx?q=%e9%99%a4%e6%bf%95%e6%a9%9f&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('除濕機');">除濕機</a>&nbsp;|&nbsp;
+<a href="https://events.tk3c.com/events_net/2020TVforever/index.html?q=tvdiscount&amp;ec=idx-searchhot&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('電視5折起');">電視5折起</a>&nbsp;|&nbsp;
+<a href="https://www.tk3c.com/dic2.aspx?q=MonsterHunter&amp;ec=idx-searchhot&amp;cid=629&amp;aid=22222&amp;hid=114821&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('魔物獵人');">魔物獵人</a>&nbsp;|&nbsp;
+<a href="https://www.tk3c.com/dic2.aspx?q=IntelligentLighting&amp;ec=idx-searchhot&amp;cid=842&amp;aid=13880&amp;hid=114818&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('智慧燈具');">智慧燈具</a>&nbsp;|&nbsp;
+<a href="../search.aspx?q=%e5%90%b8%e5%a1%b5%e5%99%a8&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('吸塵器');">吸塵器</a>&nbsp;|&nbsp;
+<a href="../search.aspx?q=%e8%a8%98%e6%86%b6%e5%8d%a1&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('記憶卡');">記憶卡</a>&nbsp;|&nbsp;
+<a href="../search.aspx?q=%e7%a9%ba%e6%b0%a3%e6%b8%85%e6%b7%a8%e6%a9%9f&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('空氣清淨機');">空氣清淨機</a>&nbsp;|&nbsp;
+<a href="../search.aspx?q=%e6%b4%97%e8%a1%a3%e6%a9%9f&amp;ec=searchhot" onclick="ProcessWaitTop();SearchKeyWordSetGA('洗衣機');">洗衣機</a>&nbsp;|&nbsp;
+
+                        
+                    </h3>                    
+                
+	</div>
+                
+</div>
+                </div>
+                
+            
+            <!-- end of 搜尋區 -->
+            <!-- 燦坤logo -->
+            
+            
+        </div>
+        <!-- end of #search -->
+
+        <div id="menu">
+            
+            
+            <!-- end of #menu_top -->
+        </div>
+        </div>
+    </div>
+<script>
+    TopCouponConts();    
+    TopTrackConts();    
+    TopCart();
+    TopGoldNT();
+</script>
+             
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'aspnetForm', ['tctl00$ContentPlaceHolder1$UpdatePanel1',''], [], [], 90, 'ctl00');
+//]]>
+</script>
+   
+    <link href="https://www.tkec.com.tw/css/Apple/appleinx.css?571
+" rel="stylesheet" type="text/css">
+<link type="text/css" rel="stylesheet" href="https://www.tkec.com.tw/css/Apple/jquery.custom-scrollbar.css?571
+">
+<script src="https://www.tkec.com.tw/js/jquery.custom-scrollbar.js"></script>
+<link href="https://www.tkec.com.tw/css/Apple/blog.css?571
+" rel="stylesheet" type="text/css">
+<script type="text/javascript">
+    $(window).load(function () {
+        $("#outer").customScrollbar();
+    });
+
+    $(window).load(function () {
+        $("#outer-01").customScrollbar();
+    });
+	  
+</script>
+<script>var K = 1;</script>
+<script>
+function MenuInput(N, Conts) {
+    for (i = 1; i <= Conts; i++) {
+        if (i == N) {
+            $("#MenuN" + i).attr("class", "selected");            
+        }
+        else {
+            $("#MenuN" + i).removeAttr("class");
+        }
+    }
+}
+
+function MenuOut(Conts) {
+    for (i = 1; i <= Conts; i++) {
+        if (i == K) {
+            $("#MenuN" + i).attr("class", "selected");
+        }
+        else {
+            $("#MenuN" + i).removeAttr("class");
+        }
+    }
+}
+</script>
+<!--頂部bar-->
+<!--頂部bar-->
+<div id="topbar">
+  <div style="position:relative; width:1144px; margin:auto;">
+    <a class="logo"><img src="https://events.tk3c.com/events_net/events_net/top/images/header-home-new.svg" style="height:82px;width:199px;border-width:0px;"></a>
+    <span>
+        燦坤 APPLE 小教室
+        <div id="toplink">
+            <a href="http://www.tkec.com.tw/apple/AppleRoom.aspx">課程介紹報名</a> / 
+            <a href="http://www.tkec.com.tw/apple/AppleService.aspx">維修進度查詢</a>
+        </div>
+    </span>
+  </div>
+ </div>
+ <!--頂部bar-->
+<!--頂部bar-->           
+<!--上方區塊star-->
+
+ <!-- 內容區塊 -->
+ <div id="Applemain">
+    <!-- 課程介紹 -->
+    <section class="class-tab">
+        <ul>
+            <li value="1">Mac</li>
+            <li value="2">iPhone</li>
+            <li value="3">Mac</li>
+            <li value="4">iPhone</li>
+            <li value="5">Mac</li>
+            <li value="6">iPhone</li>
+        </ul>
+    </section>
+
+    <div class="tab-content">
+        <div class="tab-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="title-group">
+                        <h3>title</h3>
+                        <p>content</p>
+                    </div>
+                    <a value="1"><img src="https://p2.bahamut.com.tw/B/2KU/35/df99ea1f04a6518cbb882483e01buhb5.JPG?v=1616146743070"></a>
+                </div>
+                <div class="swiper-slide">
+                    <div class="title-group">
+                        <h3>狙擊猴子</h3>
+                        <p>射程涵蓋全螢幕
+                            一次可擊破2層氣球</p>
+                    </div>
+                    <a value="2"><img src="https://p2.bahamut.com.tw/B/2KU/57/918515105b9a693375b0c5b2481btsx5.JPG?v=1616057614521"></a>
+                </div>
+            </div>
+            <!-- swiper pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+         <!-- 課程列表 -->
+         <h2 class="title-name">目前課程</h2>
+        <div class="class-content">
+            <div class="table">
+                <!-- tr -->
+                <div class="row">
+                    <!-- td -->
+                    <div class="cell">基隆旗艦店</div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                </div>
+                <div class="row">
+                    <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
+                </div>
+                <div class="row">
+                    <div class="cell">2021/03/31 19：30</div>
+                    <div class="cell"><a id="sign" value="1">報名</a></div>
+                </div>
+            </div>
+            <div class="table">
+                <!-- tr -->
+                <div class="row">
+                    <!-- td -->
+                    <div class="cell">基隆旗艦店</div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                </div>
+                <div class="row">
+                    <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
+                </div>
+                <div class="row">
+                    <div class="cell">2021/03/31 19：30</div>
+                    <div class="cell"><a id="sign" value="2">報名</a></div>
+                </div>
+            </div>
+            <div class="table">
+                <!-- tr -->
+                <div class="row">
+                    <!-- td -->
+                    <div class="cell">基隆旗艦店</div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                </div>
+                <div class="row">
+                    <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
+                </div>
+                <div class="row">
+                    <div class="cell">2021/03/31 19：30</div>
+                    <div class="cell"><a id="sign" value="2">報名</a></div>
+                </div>
+            </div>
+            <div class="table">
+                <!-- tr -->
+                <div class="row">
+                    <!-- td -->
+                    <div class="cell">基隆旗艦店</div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                </div>
+                <div class="row">
+                    <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
+                </div>
+                <div class="row">
+                    <div class="cell">2021/03/31 19：30</div>
+                    <div class="cell"><a id="sign" value="2">報名</a></div>
+                </div>
+            </div>
+            <div class="table">
+                <!-- tr -->
+                <div class="row">
+                    <!-- td -->
+                    <div class="cell">基隆旗艦店</div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                </div>
+                <div class="row">
+                    <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
+                </div>
+                <div class="row">
+                    <div class="cell">2021/03/31 19：30</div>
+                    <div class="cell"><a id="sign" value="2">報名</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="title-group">
+                    <h3>title</h3>
+                    <p>content</p>
+                </div>
+                <a><img src=""></a>
+            </div>
+        </div>
+
+         <!-- 課程列表 -->
+         <h2 class="title-name">目前課程</h2>
+        <div class="class-content">
+            <div class="table">
+                <!-- tr -->
+                <div class="row">
+                    <!-- td -->
+                    <div class="cell">基隆旗艦店</div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                </div>
+                <div class="row">
+                    <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
+                </div>
+                <div class="row">
+                    <div class="cell">2021/03/31 19：30</div>
+                    <div class="cell">報名</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sign-area">
+        <a class="close"><img src="./dist/images/close.png"></a>
+        <div class="sign-cotent">
+            <h2>您要報名的課程</h2>
+            <div class="info-group">
+                <ul>
+                    <li>2021/03/31 19: 30</li>
+                    <li>iPhone拍攝技巧</li>
+                    <li><p>基隆旗艦店</p><p>0224215860</p></li>
+                    <li>基隆市仁愛區義一路18號</li>
+                </ul>
+            </div>
+            <h2>輸入報名資訊</h2><hr>
+            <div class="sign-group">
+                <ul>
+                    <li><label>姓名</label><input type="text" name="name" placeholder="最多10個字" maxlength="10"></li>
+                    <li><label>連絡電話</label><input type="number" name="phone" placeholder="最多11個數字" maxlength="11"></li>
+                </ul>
+            </div>
+            <label>
+                <input type="checkbox" name="check-sure">
+                我同意以上個人資料供燦坤使用於Apple小教室課程聯絡使用
+            </label><br>
+            <button type="button" id="sure-btn">完成報名</button>
+        </div>
+    </div>
+</div>
+	             
+     
+            
+   <link href="https://www.tkec.com.tw/css/index/2019index.css?1" rel="stylesheet">
+
+<div id="footer" style="display: none">
+    <div class="banner" style="width: 914px; margin: 0px auto;">
+        
+
+        
+        
+
+        <div style="float: right;">
+            <img src="//www.tkec.com.tw/images/footer_sp_line.png" class="sp" alt=""></div>
+        <div style="margin-top: 31px;">
+            <img id="ctl00_footer_Img" usemap="#copyR02" border="0" src="//www.tkec.com.tw/images/footer_brand.png" style="border-width:0px;">&nbsp;</div>
+        <map name="copyR02">
+            <area alt="燦坤門市" style="outline: none" shape="rect" coords="4,6,84,34" href="http://www.tkec.com.tw/other_store.aspx">
+            <area alt="燦星旅遊" style="outline: none" shape="rect" coords="92,5,190,33" href="http://www.startravel.com.tw/" target="_blank">
+            <area alt="金礦咖啡" style="outline: none" shape="rect" coords="194,4,284,34" href="http://www.crownfancy.com/index.php" target="_blank">
+            <area alt="燦坤" style="outline: none" shape="rect" coords="288,3,341,33" href="http://www.tk3c.com.tw/" target="_blank">
+        </map>
+    </div>
+    <div class="link">
+        <ul>
+            <li><a href="http://www.tk3c.com/corporate/index.aspx" target="_blank">關於燦坤</a></li>
+            <li><a href="http://events.tk3c.com/events_net/events_net/memberonly/index.html" target="_blank">會員權益</a></li>
+            <li><a href="/html.aspx?SuperKey=TKECmember">會員條款</a></li>
+            <li><a href="/html.aspx?SuperKey=aboutprivacy">隱私權政策</a></li>
+            <li><a href="http://events.tk3c.com/events_net/events_net/201512_service/index.html" target="_blank">企業用戶服務</a></li>
+            <li><a href="/html.aspx?SuperKey=recruit">配裝廠商&amp;人員招募</a></li>
+            <li><a href="/service/cooperation.aspx">招商/廣告合作</a></li>
+            <li><a href="https://www.facebook.com/tkec520/" target="_blank">FB粉絲專頁</a></li>
+            <li><a href="http://events.tk3c.com/events_net/events_net/line_index/index.html" target="_blank">加入Line@</a></li>
+            
+        </ul>
+    </div>
+    <div class="copyright">
+        
+        ® 2021  TK3C All Rights Reserved. </div>
+</div>
+<div class="clearbox"></div>
+<div class="EJnewFooterbox">
+    <div class="EJnewFooter">
+        <div class="EJnewFootercontent">
+            <div class="aboutuser">
+                <dl>
+                    <dt>
+                        <span>關於我們</span>
+                    </dt>
+                    <dd>
+                        <a href="https://www.tk3c.com/corporate/index_new.aspx">燦坤官網</a>
+                    </dd>
+                    <dd>
+                        <a href="/html.aspx?SuperKey=recruit">配裝&amp;人員招募</a>
+                    </dd>
+                    <dd>
+                        <a href="/service/cooperation.aspx">招商/廣告合作</a>
+                    </dd>
+                    <dd>
+                        <a href="/other_store.aspx">全台燦坤門市</a>
+                    </dd>
+                    <!--<dd>
+                            <a href="https://www.tk3c.com/corporate/page_view.aspx?mnuid=1196">關於燦坤</a>
+                        </dd>-->
+                </dl>
+            </div>
+            <div class="tkmember">
+                <dl>
+                    <dt>
+                        <span>會員權益</span>
+                    </dt>
+                    <dd>
+                        <a href="/html.aspx?SuperKey=TKECmember">燦坤會員條款</a>
+                    </dd>
+                    <dd>
+                        <a href="https://events.tk3c.com/events_net/events_net/memberonly/index.html">燦坤會員權益</a>
+                    </dd>
+                    <dd>
+                        <a href="/html.aspx?SuperKey=aboutprivacy">隱私權政策</a>
+                    </dd>
+                    <dd>
+                        <a href="/html.aspx?SuperKey=privacy">個人資料保護條款</a>
+                    </dd>
+                    <dd>
+                        <a href="/edmlist.aspx">電子報</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="services">
+                <dl>
+                    <dt>
+                        <span>客戶服務</span>
+                    </dt>
+                    <dd>
+                        <a href="/checkout/order_index_new.aspx?parm=order">訂單/配送進度查詢</a>
+                    </dd>
+                    <dd>
+                        <a href="/member/member_product_notice.aspx">追蹤清單查詢</a>
+                    </dd>
+                    <dd>
+                        <a href="https://events.tk3c.com/events_net/events_net/201512_service/index.html">企業用戶服務</a>
+                    </dd>
+                    <dd>
+                        <a href="/DrTK.aspx">電器醫院</a>
+                    </dd>
+                    <dd>
+                        <a href="https://events.tk3c.com/events_net/apple_service/reservation.aspx">APPLE授權維修中心</a>
+                    </dd>
+                    <dd>
+                        <a href="/service/serviceindex.aspx">客服中心Q&amp;A</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="platform">
+                <dl>
+                    <dt>
+                        <span>服務平台</span>
+                    </dt>
+                    <dd>
+                        <a href="https://events.tk3c.com/events_net/repair/index.html">燦坤幫服務</a>
+                    </dd>
+
+                    <dd>
+                        <a href="http://blog.tkec.com.tw/">燦坤幫你挑</a>
+                    </dd>
+                    <dd>
+                        <a href="https://events.tk3c.com/events_net/events_net/support/index.html">燦坤幫你捐</a>
+                    </dd>
+                    <dd>
+                        <a href="https://events.tk3c.com/events_net/kuai3tv/index.aspx">燦坤影音</a>
+                    </dd>
+                    <dd>
+                        <a href="https://events.tk3c.com/events_net/events_net/line_index/index.html">加入LINE@</a>
+                    </dd>
+                    <dd>
+                        <a href="https://www.facebook.com/tkec520/">加入FB粉絲團</a>
+                    </dd>
+                    <dd>
+                        <a href="https://events.tk3c.com/events_net/events_net/201506_backhome/index1.html">下載燦坤APP</a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="company">
+                <!--<dl>
+                        <dt>
+                            <span>相關企業</span>
+                        </dt>
+                    </dl>
+                    <div class="logobox">
+                        <a href="https://www.tk3c.com/corporate/index.aspx"><i class="tklogo"></i></a>
+                        <a href="https://www.startravel.com.tw/">
+                            <i class="tslogo"></i>
+                        </a>
+                        <a href="https://www.crownfancy.com/index.php"><i class="tclogo"></i></a>
+                    </div>-->
+                <dl>
+                    <dt>
+                        <span>行動APP</span>
+                    </dt>
+                </dl>
+                <div class="logobox">
+                    <i class="tklogoapp"></i>
+                </div>
+            </div>
+            <div class="clearbox"></div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+     <div class="copyright">® 2019 TK3C All Rights Reserved. </div>
+
+
+<!-- end of #footer -->
+<!--22-->
+
+
+<script type="text/javascript">
+
+    
+    //顯示倒數秒收
+    function showTime(t) {
+        t -= 1;
+        if (t == 0) {
+        //跳出視窗
+            ajaxMemMsg();       
+        }
+
+        //每秒執行一次,showTime()
+        setTimeout("showTime("+t+")", 1000);
+    }
+    function ajaxMemMsg() {
+        $.blockUI({
+            message: $('<iframe src="/Message/MemberMsg.aspx" scrolling="no" allowtransparency="yes" frameborder="0" border="0" cellspacing="0" id="plusframe" width="500" height="280" ></iframe>'),
+            css: {
+                top: '30%',
+                left: '30%',
+                border: 'none',
+                background: 'none'
+            }
+        }
+        );
+        return false;
+    }
+    function ajaxMemAg() {
+        $.unblockUI();
+        showTime(900);
+    }
+    function ajaxMemOut() {
+        $.unblockUI();
+        location.href = '/member/member_logout.aspx';
+    }
+    function showTimeOut(t) {
+        t -= 1;
+        if (t == 0) {
+            //直接登出
+            ajaxMemOut();
+        }
+
+        //每秒執行一次,showTime()
+        setTimeout("showTimeOut(" + t + ")", 1000);
+    }
+    function showTimeOutMob(t) {
+        t -= 1;
+        if (t == 0) {
+            //直接登出
+            location.href = '/member/member_logout.aspx';
+        }
+
+        //每秒執行一次,showTime()
+        setTimeout("showTimeOutMob(" + t + ")", 1000);
+    }
+</script>
+
+
+
+
+
+        </div>
+        <script src="/js/tkecPC/rightbar.js?480" type="text/javascript"></script>   
+    </form>
+<script type="text/javascript" id="">!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("init","2471447686441595");fbq("set","agent","tmgoogletagmanager","2471447686441595");fbq("track","PageView");</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2471447686441595&amp;ev=PageView&amp;noscript=1"></noscript>
+<script type="text/javascript" id="">(function(d,a,b,f,e){d[e]=d[e]||[];d[e].push({projectId:"10000",properties:{pixelId:"10068939"}});var c=a.createElement(b);c.src=f;c.async=!0;c.onload=c.onreadystatechange=function(){var a=this.readyState,c=d[e];if(!a||"complete"==a||"loaded"==a)try{var b=YAHOO.ywa.I13N.fireBeacon;d[e]=[];d[e].push=function(a){b([a])};b(c)}catch(g){}};a=a.getElementsByTagName(b)[0];b=a.parentNode;b.insertBefore(c,a)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script>
+
+<script type="text/javascript" id="">(function(a,b,d){a._ltq=a._ltq||[];a._lt=a._lt||function(){a._ltq.push(arguments)};var e="https:"===location.protocol?"https://d.line-scdn.net":"http://d.line-cdn.net",c=b.createElement("script");c.async=1;c.src=d||e+"/n/line_tag/public/release/v1/lt.js";b=b.getElementsByTagName("script")[0];b.parentNode.insertBefore(c,b)})(window,document);_lt("init",{customerType:"lap",tagId:"14d0e575-4adc-4b9e-be6e-331b6a51909b"});_lt("send","pv",["14d0e575-4adc-4b9e-be6e-331b6a51909b"]);</script>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://tr.line.me/tag.gif?c_t=lap&amp;t_id=14d0e575-4adc-4b9e-be6e-331b6a51909b&amp;e=pv&amp;noscript=1">
+</noscript>
+<iframe height="0" width="0" style="display: none; visibility: hidden;" src="https://10406106.fls.doubleclick.net/activityi;src=10406106;type=invmedia;cat=allla0;ord=8324857775248;gtm=2od3a0;auiddc=989231704.1613564641;~oref=https%3A%2F%2Fwww.tkec.com.tw%2Fapple%2FAppleRoom.aspx?"></iframe><script type="text/javascript" id="">(function(a,c,e,k,b){a[b]=a[b]||[];a[b].push({projectId:"10000",properties:{pixelId:"10133146"}});var d=c.createElement(e);d.src=k;d.async=!0;d.onload=d.onreadystatechange=function(){var f=this.readyState,l=a[b];if(!f||"complete"==f||"loaded"==f)try{var g=YAHOO.ywa.I13N.fireBeacon;a[b]=[];a[b].push=function(h){g([h])};g(l)}catch(h){}};c=c.getElementsByTagName(e)[0];e=c.parentNode;e.insertBefore(d,c)})(window,document,"script","https://s.yimg.com/wi/ytc.js","dotq");</script><script type="application/javascript" id="ywa-1616164450095-657646" class="ywa-10000" defer="" src="https://sp.analytics.yahoo.com/sp.pl?a=10000&amp;d=Fri%2C%2019%20Mar%202021%2014%3A34%3A10%20GMT&amp;n=-8&amp;b=%E7%87%A6%E5%9D%A4%E7%B7%9A%E4%B8%8A%E8%B3%BC%E7%89%A9%20%3E%20%E7%87%A6%E5%9D%A4Apple%E9%A4%A8%20%3E%20Apple%E6%95%99%E5%AE%A4&amp;.yp=10068939&amp;f=https%3A%2F%2Fwww.tkec.com.tw%2Fapple%2FAppleRoom.aspx&amp;e=https%3A%2F%2Fwww.google.com%2F&amp;enc=UTF-8&amp;tagmgr=gtm"></script><script type="application/javascript" id="ywa-1616164450097-451320" class="ywa-10000" defer="" src="https://sp.analytics.yahoo.com/sp.pl?a=10000&amp;b=%E7%87%A6%E5%9D%A4%E7%B7%9A%E4%B8%8A%E8%B3%BC%E7%89%A9%20%3E%20%E7%87%A6%E5%9D%A4Apple%E9%A4%A8%20%3E%20Apple%E6%95%99%E5%AE%A4&amp;.yp=10068939&amp;f=https%3A%2F%2Fwww.tkec.com.tw%2Fapple%2FAppleRoom.aspx&amp;e=https%3A%2F%2Fwww.google.com%2F&amp;enc=UTF-8&amp;tagmgr=gtm"></script><script type="application/javascript" id="ywa-1616164450100-84295" class="ywa-10000" defer="" src="https://sp.analytics.yahoo.com/sp.pl?a=10000&amp;b=%E7%87%A6%E5%9D%A4%E7%B7%9A%E4%B8%8A%E8%B3%BC%E7%89%A9%20%3E%20%E7%87%A6%E5%9D%A4Apple%E9%A4%A8%20%3E%20Apple%E6%95%99%E5%AE%A4&amp;.yp=10133146&amp;f=https%3A%2F%2Fwww.tkec.com.tw%2Fapple%2FAppleRoom.aspx&amp;e=https%3A%2F%2Fwww.google.com%2F&amp;enc=UTF-8&amp;tagmgr=gtm"></script>
+    
+
+<!--LocalStorage-->
+<script src="https://www.tkec.com.tw/js/ptchecker.js?6"></script>
+
+
+<iframe src="/TracerForm.aspx" onload="javascript:checker.log()" name="forPostMessage" style="display:none;"></iframe><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon597517697831"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon600097900115" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=5187926&amp;Ver=2&amp;mid=3b3974de-1398-4441-bd6b-133d27a7bcee&amp;sid=2b515a1088c011eb85ffe350a4f22697&amp;vid=d43506d02d9011ebb9f12d94b1ac46d1&amp;vids=0&amp;pi=1200101525&amp;lg=zh-TW&amp;sw=1280&amp;sh=720&amp;sc=24&amp;tl=%E7%87%A6%E5%9D%A4%E7%B7%9A%E4%B8%8A%E8%B3%BC%E7%89%A9%20%3E%20%E7%87%A6%E5%9D%A4Apple%E9%A4%A8%20%3E%20Apple%E6%95%99%E5%AE%A4&amp;p=https%3A%2F%2Fwww.tkec.com.tw%2Fapple%2FAppleRoom.aspx&amp;r=https%3A%2F%2Fwww.google.com%2F&amp;lt=2286&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=50479"></div><div style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon895829968200"><img style="width:0px; height:0px; display:none; visibility:hidden;" id="batBeacon152043081509" width="0" height="0" alt="" src="https://bat.bing.com/action/0?ti=20101928&amp;Ver=2&amp;mid=edc0e26d-59a3-4bce-93d1-49706f584b6c&amp;sid=2b515a1088c011eb85ffe350a4f22697&amp;vid=d43506d02d9011ebb9f12d94b1ac46d1&amp;vids=0&amp;pi=1200101525&amp;lg=zh-TW&amp;sw=1280&amp;sh=720&amp;sc=24&amp;tl=%E7%87%A6%E5%9D%A4%E7%B7%9A%E4%B8%8A%E8%B3%BC%E7%89%A9%20%3E%20%E7%87%A6%E5%9D%A4Apple%E9%A4%A8%20%3E%20Apple%E6%95%99%E5%AE%A4&amp;p=https%3A%2F%2Fwww.tkec.com.tw%2Fapple%2FAppleRoom.aspx&amp;r=https%3A%2F%2Fwww.google.com%2F&amp;lt=2286&amp;evt=pageLoad&amp;msclkid=N&amp;sv=1&amp;rn=734415">
+</div>
+</body>
+</html>
