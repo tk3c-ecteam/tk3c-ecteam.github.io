@@ -433,51 +433,22 @@ if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 用戶端架構�
     <div id="divTopImg" style="display: none;">
         <img src="https://www.tk3c.com/images/icons/loading2.gif" alt="Progress" align="absmiddle">
     </div>
-     <!--天廣告HTML顯示-->    
-
-    <div id="header">
-        <div id="header_content">
-            <div class="yui3-u social_plugin">
-                <div class="yui3-u fb">
-                    <!-- facebook like btn -->
-                    <div class="fb-like fb_iframe_widget" data-href="https://www.facebook.com/tkec520" data-height="35" data-colorscheme="light" data-layout="button_count" data-action="like" data-show-faces="false" data-send="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=606825782724291&amp;color_scheme=light&amp;container_width=0&amp;height=35&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftkec520&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey&amp;send=false&amp;show_faces=false"><span style="vertical-align: bottom; width: 90px; height: 28px;"><iframe name="f1d2edaed4e95a4" width="1000px" height="35px" data-testid="fb:like Facebook Social Plugin" title="fb:like Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="https://www.facebook.com/plugins/like.php?action=like&amp;app_id=606825782724291&amp;channel=https%3A%2F%2Fstaticxx.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df4892cc4650894%26domain%3Dwww.tkec.com.tw%26origin%3Dhttps%253A%252F%252Fwww.tkec.com.tw%252Ff2b93dbdc96c4%26relation%3Dparent.parent&amp;color_scheme=light&amp;container_width=0&amp;height=35&amp;href=https%3A%2F%2Fwww.facebook.com%2Ftkec520&amp;layout=button_count&amp;locale=zh_TW&amp;sdk=joey&amp;send=false&amp;show_faces=false" style="border: none; visibility: visible; width: 90px; height: 28px;" class=""></iframe></span></div>
-                </div>
-                <div class="yui3-u gp">
-                    <!-- google +1 btn -->
-                    <div class="g-plusone" data-size="medium"></div>
-                </div>
-            </div>
-            <!-- end of .social_plugin -->
-            <div class="yui3-u header_function">
-               <span id="ctl00_tophead1_span_login"><a onclick="trackTopBarLink('toplogin');" id="ctl00_tophead1_LinkBtn" href="javascript:__doPostBack('ctl00$tophead1$LinkBtn','')">會員加入 / 登入</a>
-               
-               </span>
-                
-                <span class="service">
-                
-                    <a href="/member/member_coupon.aspx"><img src="https://www.tk3c.com/images/header_icon_coupon.png" alt="">
-                    <font style="color:#F00; font-weight:bolder;">折價券</font>
-                        <bl id="TopCouponConts"></bl>                    
-                    </a></span>
-                <span class="shopping_survey" onclick="trackTopBarLink('topnotice');"><a id="ctl00_tophead1_HyLink" href="http://www.tk3c.com/member/member_product_notice.aspx" target="_blank"><img src="https://www.tk3c.com/images/header_icon_talk.png" alt="" style="position: relative;top: 4px;margin-right: 6px;">                    
-                    <bl id="TopTrackConts">追蹤清單(0)</bl>                    
-                                              </a> </span>
-                <span class="member">
-                    
-                    <img src="https://www.tk3c.com/images/header_icon_member.png" alt="">  <a href="/member/member_center.aspx">會員中心</a> </span>
-                <span class="order">
-                    <img src="https://www.tk3c.com/images/header_icon_order.png" alt=""><a href="/checkout/order_index_new.aspx?parm=order">訂單查詢</a></span>
-                
-                
-        <span class="edm"><a href="/edmlist.aspx"><img src="https://www.tk3c.com/images/header_icon_mail.png" alt="" style="position: relative;top: 4px;margin-right: 6px;">電子報</a></span>
-
-                <span class="service">
-                    <img src="https://www.tk3c.com/images/header_icon_service.png" alt=""> <a href="/service/serviceindex.aspx">客服中心</a></span>
-             <span id="TopCart" onclick="trackTopBarLink('topcheckcar');"></span>                                
-            </div>
-        </div>
-        <!-- end of #header_content -->
-    </div>
+    
+    <!--置頂TKEC-->
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "https://events.tk3c.com/events_net/top/top.aspx?url=" + location.href,
+                type: "POST",
+                dataType: 'text',
+                success: function (msg) {
+                    $("#TkecTop").html(msg);
+                }
+            });
+        });
+    </script>
+    <div id="TkecTop" style="height:45px;"></div>
+    <!-- the end -->
 
 <div>
     <div id="content">
@@ -587,8 +558,7 @@ function MenuOut(Conts) {
 <!--頂部bar-->
 <!--頂部bar-->
 <div id="topbar">
-  <div style="position:relative; width:1144px; margin:auto;">
-    <a class="logo"><img src="https://events.tk3c.com/events_net/events_net/top/images/header-home-new.svg" style="height:82px;width:199px;border-width:0px;"></a>
+  <div style="position:relative; width:100%; margin:auto;">
     <span>
         燦坤 APPLE 小教室
         <div id="toplink">
@@ -607,12 +577,10 @@ function MenuOut(Conts) {
     <!-- 課程介紹 -->
     <section class="class-tab">
         <ul>
-            <li value="1">Mac</li>
-            <li value="2">iPhone</li>
-            <li value="3">Mac</li>
-            <li value="4">iPhone</li>
-            <li value="5">Mac</li>
-            <li value="6">iPhone</li>
+            <li value="1">iPhone讓忙碌生活更便利</li>
+            <li value="2">你可能不認識的iPad</li>
+            <li value="3">Mac X 輕鬆做海報</li>
+            <li value="4">Phone X 拍出網美風格</li>
         </ul>
     </section>
 
@@ -649,75 +617,80 @@ function MenuOut(Conts) {
                 <!-- tr -->
                 <div class="row">
                     <!-- td -->
+                    <div class="cell">2021/03/31 19：30</div>
                     <div class="cell">基隆旗艦店</div>
-                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="cell">0224215860</div>
                 </div>
                 <div class="row">
                     <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
                 </div>
                 <div class="row">
-                    <div class="cell">2021/03/31 19：30</div>
-                    <div class="cell"><a id="sign" value="1">報名</a></div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="col-group"><a id="sign" value="1">報名</a></div>
                 </div>
             </div>
             <div class="table">
                 <!-- tr -->
                 <div class="row">
                     <!-- td -->
+                    <div class="cell">2021/03/31 19：30</div>
                     <div class="cell">基隆旗艦店</div>
-                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="cell">0224215860</div>
                 </div>
                 <div class="row">
                     <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
                 </div>
                 <div class="row">
-                    <div class="cell">2021/03/31 19：30</div>
-                    <div class="cell"><a id="sign" value="2">報名</a></div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="col-group"><a id="sign" value="1">報名</a></div>
                 </div>
             </div>
             <div class="table">
                 <!-- tr -->
                 <div class="row">
                     <!-- td -->
+                    <div class="cell">2021/03/31 19：30</div>
                     <div class="cell">基隆旗艦店</div>
-                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="cell">0224215860</div>
                 </div>
                 <div class="row">
                     <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
                 </div>
                 <div class="row">
-                    <div class="cell">2021/03/31 19：30</div>
-                    <div class="cell"><a id="sign" value="2">報名</a></div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="col-group"><a id="sign" value="1">報名</a></div>
                 </div>
             </div>
             <div class="table">
                 <!-- tr -->
                 <div class="row">
                     <!-- td -->
+                    <div class="cell">2021/03/31 19：30</div>
                     <div class="cell">基隆旗艦店</div>
-                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="cell">0224215860</div>
                 </div>
                 <div class="row">
                     <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
                 </div>
                 <div class="row">
-                    <div class="cell">2021/03/31 19：30</div>
-                    <div class="cell"><a id="sign" value="2">報名</a></div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="col-group"><a id="sign" value="1">報名</a></div>
                 </div>
             </div>
             <div class="table">
                 <!-- tr -->
                 <div class="row">
                     <!-- td -->
+                    <div class="cell">2021/03/31 19：30</div>
                     <div class="cell">基隆旗艦店</div>
-                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="cell">0224215860</div>
                 </div>
                 <div class="row">
                     <div class="cell-group">新北市林口區文化二路1段269號1樓、271號1樓、2樓</div>
                 </div>
                 <div class="row">
-                    <div class="cell">2021/03/31 19：30</div>
-                    <div class="cell"><a id="sign" value="2">報名</a></div>
+                    <div class="cell">iPhone拍攝技巧</div>
+                    <div class="col-group"><a id="sign" value="1">報名</a></div>
                 </div>
             </div>
         </div>
@@ -756,7 +729,7 @@ function MenuOut(Conts) {
     </div>
 
     <div class="sign-area">
-        <a class="close"><img src="./dist/images/close.png"></a>
+        <a class="close"><img src="./dist/images/apple/close.png"></a>
         <div class="sign-cotent">
             <h2>您要報名的課程</h2>
             <div class="info-group">

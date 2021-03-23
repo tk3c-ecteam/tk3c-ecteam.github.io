@@ -20,20 +20,12 @@ a {
 
 #Applemain {
   z-index: 999;
+  background-image: none !important;
 }
 
 #content,
 #toplink {
   display: none;
-}
-
-#topbar .logo {
-  position: absolute;
-  width: 8%;
-  height: 100%;
-  display: block;
-  bottom: 20px;
-  cursor: pointer;
 }
 
 #topbar span {
@@ -46,11 +38,16 @@ a {
   right: 0;
   margin: 0 auto;
   text-align: center;
+  font-weight: bold;
 }
 
 #toplink {
   left: 594px !important;
   top: 5px !important;
+}
+
+#TkecTop {
+  background-color: #000;
 }
 
 body {
@@ -68,19 +65,21 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .class-tab ul li {
-  width: 42.5%;
+  width: 48.8%;
   cursor: pointer;
   font-size: 2em;
   background: #e3e4e6;
   border-right: 1px solid #fff;
+  padding: 5px;
+  margin: 10px auto 0;
 }
 
 .class-tab ul li.active {
@@ -148,6 +147,7 @@ body {
   width: 47%;
   margin: 1% 1%;
   border: 1px solid;
+  text-align: center;
 }
 
 .tab-content .class-content .table .row {
@@ -157,15 +157,22 @@ body {
 .tab-content .class-content .table .cell {
   display: table-cell;
   border: 1px solid;
-  width: 50%;
+  width: 66%;
   padding: 10px;
+  line-height: 1.1em;
 }
 
-.tab-content .class-content .table .cell-group {
+.tab-content .class-content .table .cell-group,
+.tab-content .class-content .table .col-group {
   display: block;
-  width: 190%;
+  width: 189%;
   padding: 10px;
   border: 1px solid;
+  line-height: 1.3em;
+}
+
+.tab-content .class-content .table .col-group {
+  width: 182%;
 }
 
 .tab-content .class-content .table #sign {
@@ -173,6 +180,8 @@ body {
   width: 100%;
   height: 100%;
   display: block;
+  text-decoration: underline;
+  color: #2196f3;
 }
 
 .sign-area {
@@ -374,7 +383,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1200px) {
   .sign-area .sign-cotent .info-group {
     width: 87%;
   }
@@ -382,44 +391,84 @@ body {
     width: 100%;
   }
   .tab-content .class-content .table .cell-group {
-    width: 195%;
+    width: 167%;
+  }
+  .tab-content .class-content .table .col-group {
+    width: 131%;
   }
   #Applemain {
     width: 100% !important;
+  }
+  .EJnewFooter {
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .class-tab ul li {
+    width: 48.5%;
+  }
+  .EJnewFootercontent {
+    margin: 30px 46px 0 192px !important;
+  }
+  .tab-content .class-content .table {
+    width: 100%;
+  }
+  .tab-content .class-content .table .cell-group {
+    width: 170%;
+  }
+  .tab-content .class-content .table .col-group {
+    width: 137%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .class-tab ul li {
+    width: 47.5%;
   }
 }
 
 @media only screen and (max-width: 768px) {
   #topbar span {
-    right: 333px;
+    width: 40%;
   }
   .class-tab ul li {
     font-size: 1.5em;
+    width: 48.2%;
   }
   .tab-content .class-content .table .cell-group {
-    width: 193%;
+    width: 177%;
+  }
+  .tab-content .class-content .table .col-group {
+    width: 153%;
   }
   .tab-content .title-name {
     width: 99%;
+  }
+  .EJnewFootercontent {
+    margin: 30px 46px 0 145px !important;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .class-tab ul li {
+    width: 47.8%;
   }
 }
 
 @media only screen and (max-width: 576px) {
   .tab-content .class-content .table .cell-group {
-    width: 187%;
+    width: 205%;
   }
-  .class-tab ul {
-    overflow: hidden;
-    overflow-x: auto;
+  .tab-content .class-content .table .col-group {
+    width: 229%;
   }
   .class-tab ul li {
-    width: 25%;
-    margin: 0 5% 0 0;
+    width: 100%;
     font-size: 1.5em;
   }
   .sign-area .sign-cotent {
-    width: 35%;
-    margin: 0;
+    width: 95%;
   }
   .sign-area .sign-cotent .sign-group li label {
     width: 35%;
@@ -431,11 +480,9 @@ body {
     font-size: 1.2em;
   }
   .sign-area .close {
-    right: 65%;
-    top: 8%;
-  }
-  #topbar span {
-    right: 675px;
+    right: 0;
+    top: 4%;
+    width: 10%;
   }
   .EJnewFooter {
     width: 100% !important;
@@ -457,11 +504,45 @@ body {
 }
 
 @media only screen and (max-width: 376px) {
-  .sign-area .sign-cotent {
-    width: 32%;
+  .tab-content .class-content .table .cell-group {
+    width: 212%;
   }
-  .sign-area .close {
-    right: 68%;
+  .tab-content .class-content .table .col-group {
+    width: 285%;
+    padding: 31px 0;
+  }
+  .EJnewFootercontent {
+    margin: 30px 25px 0 97px !important;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .tab-content .class-content .table .col-group {
+    width: 304%;
+  }
+  .EJnewFootercontent {
+    margin: 30px 25px 0 81px !important;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .tab-content .class-content .table .col-group {
+    width: 369%;
+  }
+  .tab-content .class-content .table .cell-group {
+    width: 222%;
+  }
+  .tab-content .title-name {
+    width: 98%;
+  }
+  .EJnewFootercontent {
+    margin: 30px 25px 0 55px !important;
+  }
+  #topbar span {
+    font-size: 15px;
+  }
+  .class-tab ul li {
+    font-size: 1.2em;
   }
 }
 
