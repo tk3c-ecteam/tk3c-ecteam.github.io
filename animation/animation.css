@@ -1165,40 +1165,36 @@
 /* 往左移動 */
 @-webkit-keyframes move-to-left {
   10% {
-    left: -100%;
+    left: 25%;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    left: 0;
   }
 }
 @keyframes move-to-left {
   10% {
-    left: -100%;
+    left: 25%;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    left: 0;
   }
 }
 
 /* 往右移動 */
 @-webkit-keyframes move-to-right {
   10% {
-    right: 100%;
+    right: 25%;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    right: 0;
   }
 }
 @keyframes move-to-right {
   10% {
-    right: 100%;
+    right: 25%;
   }
   100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
+    right: 0;
   }
 }
 
