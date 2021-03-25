@@ -1165,8 +1165,8 @@
 /* 往左移動 */
 @-webkit-keyframes move-to-left {
   10% {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -1175,8 +1175,8 @@
 }
 @keyframes move-to-left {
   10% {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -1187,8 +1187,8 @@
 /* 往右移動 */
 @-webkit-keyframes move-to-right {
   10% {
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
+    -webkit-transform: translateX(-55%);
+            transform: translateX(-55%);
   }
   100% {
     -webkit-transform: translateX(0);
@@ -1197,8 +1197,8 @@
 }
 @keyframes move-to-right {
   10% {
-    -webkit-transform: translateX(-150%);
-            transform: translateX(-150%);
+    -webkit-transform: translateX(-55%);
+            transform: translateX(-55%);
   }
   100% {
     -webkit-transform: translateX(0);
