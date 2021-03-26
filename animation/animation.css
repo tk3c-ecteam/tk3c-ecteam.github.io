@@ -1190,19 +1190,11 @@
     -webkit-transform: translateX(150%);
             transform: translateX(150%);
   }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
 }
 @keyframes move-to-right {
   10% {
     -webkit-transform: translateX(150%);
             transform: translateX(150%);
-  }
-  100% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
   }
 }
 
