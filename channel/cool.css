@@ -555,7 +555,7 @@ body{margin:0px;padding:0;width:100%;position: relative;z-index: -1;}
 
 @media screen and (max-width: 1600px) {
     .rightbtn {
-        margin: 158px 0px 0px 549px;
+        margin: 70px 0px 0px 549px;
     }
     .rightbtn:before {
         background-position: 0 30px;
