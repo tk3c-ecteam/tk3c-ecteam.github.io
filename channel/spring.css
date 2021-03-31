@@ -6,7 +6,7 @@
 a{text-decoration:none;cursor:pointer}
 img{border:0px;max-width: 100%;height: auto;}
 /*圖片超連結邊框消除*/
-html{margin:0;padding:0;height:100%;background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210330_kv_bg.jpg) no-repeat 39% 19%;background-size:100% auto;background-position:0vmax 5vmax;background-color: #e2aeb0;}
+html{margin:0;padding:0;height:100%;background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210330_kv_bg.jpg) no-repeat 39% 19%;background-size:100% auto;background-position:0vmax 5vmax;background-color: #e2aeb0;overflow: hidden;}
 .boxfly{position:absolute;left:-9999em;top:-9999em;}
 em,i{font-style:normal;}
 .fred{color:#F00;font-weight:bold;}
@@ -119,7 +119,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     z-index: 2;
     left: 0;
     right: 0;
-    top: -4%;
+    top: -3%;
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
@@ -277,6 +277,7 @@ html{background-position:0vmax 7vmax;}
     .wrapper{margin:0 auto 0;}
     .title {height: 540px;}
     .rightbtn {left: 40%;}
+    .cloud-group {top: -2%;}
 }
 @media screen and (max-width:1024px){
 .wrapper{width:100%;margin: 0 auto -24vmin;}
@@ -286,7 +287,8 @@ html{background-position:0vmax 7vmax;}
 .title-group {width: 55%;}
 .cloud-group {top: -2%;}
 }
-@media screen and (max-width:768px){html{background-position:0 10vmax;}
+@media screen and (max-width:768px){
+html{background-position:-37vmin 13vmin;background-size: 150vmin;}
 .wrapper{margin:0 auto -43vmin;}
 .list_special ul li{width:32%;}
 .hotpromain{width:40%;}
@@ -294,8 +296,8 @@ html{background-position:0vmax 7vmax;}
 .cloud-group {top: -1%;}
 .protitle b {font-size: 4vmin;line-height: 21vmin;}
 .protitle {height: 140px;}
-.bg_color {margin-top: 8%;}
-.title-group {margin: 12vmin;}
+.bg_color {margin-top: 20%;}
+.title-group {margin: 15vmin 1vmin;width: 85%;}
 }
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){
@@ -315,10 +317,12 @@ div.bg_color > div.wrapper > h2{display: flex;width:100%;height: 90px;margin: 0 
 .title img{width:100%;display:block;z-index:0;position:static;}
 .title .box_pc{display:block;background:#fff;border:10px solid white;width:100%;height:200px;z-index:10;position:static;top:-27px;right:67px;overflow:hidden;box-sizing:border-box;padding:11px;text-align:center;border-color:#b296ff;}
 /* 職人必備動畫標題區 */
-.title-group {width: 65%;margin: -9vmin auto 0;}
-.cloud-group {top: -1%;}
-.title-group .bird {width: 13%;top: 2px;}
+.title-group {width: 85%;margin: -8vmin 4vmin;}
+.cloud-group {top: -0.5%;}
+.cloud-group span {width: 100%;}
+.title-group .bird {width: 13%;top: 21px;}
 .title-group .bag {width: 26%;}
+.title-group h2 {top: 15px;}
 /*主標品*/
  .title .box_pc img{width:130px;height:130px;margin:0 auto;text-align:center;float:left;}
 .title .box_pc .box_word{display:inline-block;width:53%;text-align:left;}
@@ -330,7 +334,7 @@ div.bg_color > div.wrapper > h2{display: flex;width:100%;height: 90px;margin: 0 
 .title .box_pc .box_price strong i{font-size:14px;}
 .title .box_pc:hover{opacity:1;transition:none;-webkit-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;transform:none;}
 /*商品內容*/
-.bg_color{padding-top:0;overflow:unset;margin: 26% auto 0;}
+.bg_color{padding-top:0;overflow:unset;margin: 32% auto 0;}
 .protitle{position:relative;width:100%;text-align:center;height:100px;display:block;overflow:hidden;float:left;position:relative;top:0;background-size: 100%;}
 .protitle b{font-size: 90%;text-align:center;width:100%;line-height: 25vmin;}
 .protitle i{display:block;font-size:1em;text-align:center;width:100%;line-height:3em}
@@ -438,16 +442,17 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 #titleheadm{display:none}
 @media screen and (max-width:376px){
 .div.bg_color > div.wrapper > h2{height:46px;}
-html {background-position: 0 25vmin;}
+html {background-position: -37vmin 20vmin;}
 .list_special ul li {margin: 5px 3.5px;}
 .wrapper {margin: 24vmin auto 0;}
+.title-group {margin: -4vmin 4vmin;}
 }
 @media screen and (max-width:320px){.tbg01{height:220px;}
-html{background-position:0 30vmin;}
 .protitle b {font-size: 75%;}
-.protitle {height: 70px;}
+div.bg_color > div.wrapper > h2 {height: 70px;}
 .list_special ul li {margin: 5px 3px;}
 .wrapper {margin: 27vmin auto 0;}
+.title-group {margin: -8vmin 4vmin;}
 }
 @media screen and (min-width:2500px){
 html{background-position:0vmax 4vmax;}
