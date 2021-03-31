@@ -49,28 +49,6 @@
   }
 }
 
-/* 上下小移動 */
-@-webkit-keyframes upAndDown-small {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
-  }
-}
-@keyframes upAndDown-small {
-  from {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  to {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
-  }
-}
-
 /* 閃爍、發光 */
 .light {
   -webkit-animation: light 2s infinite;
@@ -1370,6 +1348,66 @@
   to {
     -webkit-transform: perspective(400px);
             transform: perspective(400px);
+  }
+}
+
+/* 緩慢往右移動 */
+@-webkit-keyframes move-right {
+  0% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  50% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes move-right {
+  0% {
+    -webkit-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+  50% {
+    -webkit-transform: translateX(30%);
+            transform: translateX(30%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+/* 緩慢往左移動 */
+@-webkit-keyframes move-left {
+  0% {
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+  50% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes move-left {
+  0% {
+    -webkit-transform: translateX(60%);
+            transform: translateX(60%);
+  }
+  50% {
+    -webkit-transform: translateX(-30%);
+            transform: translateX(-30%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
