@@ -6,7 +6,7 @@
 a{text-decoration:none;cursor:pointer}
 img{border:0px;max-width: 100%;height: auto;}
 /*圖片超連結邊框消除*/
-html{margin:0;padding:0;height:100%;background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210330_kv_bg.jpg) no-repeat 39% 19%;background-size:100% auto;background-position:0vmax 5vmax;background-color: #e2aeb0;overflow: hidden;}
+html{margin:0;padding:0;height:100%;background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210330_kv_bg.jpg) no-repeat 39% 19%;background-size:100% auto;background-position:0vmax 5vmax;background-color: #e2aeb0;overflow-x: hidden;}
 .boxfly{position:absolute;left:-9999em;top:-9999em;}
 em,i{font-style:normal;}
 .fred{color:#F00;font-weight:bold;}
