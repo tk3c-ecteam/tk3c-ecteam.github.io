@@ -104,12 +104,12 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     position: absolute;
     right: 7%;
     top: 0;
-    transform: translateX(150px);
+    transform: translateX(500%);
 }
 
 .title-group .balloon.fadeIn{
-    transform: translateX(-2000px);
-    transition: all 35s ease-in;
+    transform: translateX(0);
+    transition: all 25s ease-in;
 }
 
  .cloud-group {
@@ -137,8 +137,8 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 }
 
 .cloud-group span:nth-of-type(2) {
-    transform: translateX(100%);
-    animation: move-left 25s ease infinite reverse;
+    transform: translateX(-100%);
+    animation: move-right 25s ease infinite reverse;
 }
 
 /*商品橫幅*/
@@ -266,6 +266,9 @@ html{background-position:0vmax 7vmax;}
 .bg_color > .wrapper > div[id]{margin-top:-0.5%;}
 .protitle b {font-size: 2em;line-height: 5em;}
 .title-group {width: 74%;}
+.rightbtn {
+    left: 47%;
+}
 }
 
 @media screen and (max-width:1280px){
@@ -273,6 +276,7 @@ html{background-position:0vmax 7vmax;}
     .title-group {width: 66%;}
     .wrapper{margin:0 auto 0;}
     .title {height: 540px;}
+    .rightbtn {left: 40%;}
 }
 @media screen and (max-width:1024px){
 .wrapper{width:100%;margin: 0 auto -24vmin;}
@@ -280,6 +284,7 @@ html{background-position:0vmax 7vmax;}
 .protitle b{font-size: 3.8vmin;line-height: 20vmin;}
 .hotpromain{width:47%;}
 .title-group {width: 55%;}
+.cloud-group {top: -2%;}
 }
 @media screen and (max-width:768px){html{background-position:0 10vmax;}
 .wrapper{margin:0 auto -43vmin;}
@@ -290,6 +295,7 @@ html{background-position:0vmax 7vmax;}
 .protitle b {font-size: 4vmin;line-height: 21vmin;}
 .protitle {height: 140px;}
 .bg_color {margin-top: 8%;}
+.title-group {margin: 12vmin;}
 }
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){
