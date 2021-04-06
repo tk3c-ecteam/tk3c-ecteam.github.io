@@ -44,7 +44,7 @@ body{margin:0px;padding:0;width:100%;position: relative;z-index: -1;}
 }
 .animate-group .sub-title {
     width: 30%;
-    animation: slide-down 0.55s linear;
+    animation: slide-down 0.7s linear;
 }
 
 .animate-group .big-title {
