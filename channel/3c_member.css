@@ -265,10 +265,10 @@ i {
 .animate-group {
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210409_stage.png) no-repeat center;
     width: 100%;
-    height: 700px;
+    height: 770px;
     margin: 0 auto;
-    background-size: 100%;
-    background-position: 0 8vmax;
+    background-size: 105%;
+    background-position: -2vmax 8vmax;
     position: relative;
 }
 
@@ -279,14 +279,14 @@ i {
 
 .animate-group .big-title {
     text-align: center;
-    width: 55%;
+    width: 58%;
     margin: 0 auto 0;
     animation: rubberBand 0.6s linear;
     display: none;
 }
 
 .animate-group .product {
-    width: 38%;
+    width: 45%;
     margin: 0 auto 0;
     height: 100%;
     text-align: center;
@@ -373,12 +373,12 @@ i {
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
     -moz-transition: all 0.5;
-    color: #000;
+    color: #fff;
     font-weight: bold;
     width: 150px;
     margin: 0 0 0 6%;
     transform: translateY(0.01em);
-    background: #09ecfb;
+    background: #4a75c4;
 }
 
 .rightbtn>a.btn02 {
@@ -397,7 +397,7 @@ body {
 .wrapper {
     display: block;
     width: 1144px;
-    margin: 8vmax auto -38vmax;
+    margin: 8vmax auto -44vmax;
     position: relative;
 }
 
@@ -616,15 +616,15 @@ form>div:nth-of-type(9) {
     justify-content: center;
     overflow: hidden;
     color: #fff;
-    font-size: 4em;
-    line-height: 2.1em;
+    font-size: 3em;
+    line-height: 3em;
     font-weight: bold;
     top: 0px;
-    margin-bottom: 3%;
+    margin-bottom: 2%;
     letter-spacing: 5px;
-    background-size: 100%;
-    background-size: 100% !important;
+    background-size: 70%;
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210409_bar.png) no-repeat;
+    background-position: 6vmax 1vmax;
 }
 
 .pa00 {
@@ -1271,7 +1271,7 @@ li .box_price strong em {
 }
 
 .list02 ul li:hover {
-    box-shadow: 0px 0px 3px 3px #e88c3f;
+    box-shadow: 0px 0px 3px 3px #03a9f4;
     background: #Fff;
     transform: translateY(0.2em);
 }
@@ -3930,13 +3930,16 @@ strong i:after {
 }
 @media screen and (max-width: 1600px) {
     form>div:nth-of-type(9) {
-        margin-top: 16vmax;
+        margin-top: 8vmax;
     }
     html {
         background-position: 0 6vmax;
     }
     .animate-group {
-        background-position: 0 10vmax;
+        background-position: -2vmax 10vmax;
+    }
+    .protitle {
+        background-position: 7vmax 1vmax;
     }
 }
 
@@ -3944,20 +3947,14 @@ strong i:after {
     form>div:nth-of-type(9) {
         margin-top: 8vmax;
     }
-    .electro-title h2 {
-        margin: 4vmax 12vmax;
-    }
     html {
         background-position: 0 7vmax;
     }
-    .animate-group {
-        background-position: 0 11vmax;
-    }
-    .animate-group .product {
-        width: 35%;
-    }
     .rightbtn {
-        left: 46%;
+        left: 46% !important;
+    }
+    .protitle {
+        background-position: 8vmax 1vmax;
     }
 }
 
@@ -3965,12 +3962,18 @@ strong i:after {
     html {
         background-position: 0 8vmax;
     }
-    .animate-group {
-        background-position: 0 12vmax;
-    }
     .rightbtn {
         bottom: 30px;
-        left: 36%;
+        left: 39% !important;
+    }
+    .protitle {
+        background-position: 9vmax 1.5vmax;
+    }
+    .animate-group {
+        background-position: -3vmax 12vmax;
+    }
+    form>div:nth-of-type(9) {
+        margin-top: 2vmax;
     }
 }
 
@@ -3985,8 +3988,9 @@ strong i:after {
     }
     .protitle {
         width: 100%;
-        line-height: 1.8em;
+        line-height: 3em;
         height: 156px;
+        background-position: 5vmax 1vmax;
     }
     .list02 ul li {
         width: 22.9%;
@@ -4008,11 +4012,11 @@ strong i:after {
 @media screen and (max-width: 768px) {
     .wrapper {
         width: 100%;
-        margin: 15vmin auto -85vmin;
+        margin: 15vmin auto -96vmin;
         max-width: unset;
     }
     form>div:nth-of-type(9) {
-        margin-top: -9vmin;
+        margin-top: 0;
     }
     html {
         background-position: -6vmax 10vmax;
@@ -4021,11 +4025,17 @@ strong i:after {
         width: 30.3%;
     }
     .protitle {
-        height: 133px;
-        font-size: 3em;
+        height: 115px;
+        font-size: 2em;
+        line-height: 2.5em;
+        background-position: 15vmin 1vmin;
+        background-size: 70%;
     }
     .list0 {
         margin-bottom: 10px;
+    }
+    .animate-group {
+        background-position: -2vmax 12vmax;
     }
 }
 
@@ -4597,13 +4607,13 @@ strong i:after {
         background-position:-140vmin 23vmin, top;
     }
     form>div:nth-of-type(9) {
-        margin-top: -6vmin;
+        margin-top: 0;
         margin-bottom: -75px;
     }
     .wrapper {
         display: block;
         width: 100%;
-        margin: 15vmin auto -120vmin;
+        margin: 15vmin auto -132vmin;
     }
     .wrapperMt50 {
         margin-top: 50px;
@@ -4684,11 +4694,11 @@ strong i:after {
     /*商品內容*/
     .protitle {
         height: 75px;
-        font-size: 6vmin;
-        line-height: 12vmin;
+        font-size: 4vmin;
+        line-height: 10vmin;
         letter-spacing: 1px;
         width: 100%;
-        margin-bottom: 5%;
+        margin-bottom: 3%;
     }
     .pa00 {
         background: url(../images/title_1_0A.jpg) 0 0 no-repeat;
@@ -6261,13 +6271,13 @@ strong i:after {
         display: block;
     }
     .animate-group {
-        background-position: 0 17vmin;
+        background-position: -3vmin 17vmin;
     }
     .animate-group .big-title {
         margin: 2vmin auto;
     }
     .animate-group .product {
-        width: 35%;
+        width: 45%;
     }
     .list0 {
         margin-bottom: 20px;
@@ -6286,7 +6296,7 @@ strong i:after {
         background-position: -34vmin 25vmin, top;
     }
     .wrapper {
-        margin: 15vmin auto -135vmin;
+        margin: 15vmin auto -155vmin;
     }
 }
 
@@ -6295,7 +6305,7 @@ strong i:after {
         width: 47.7%;
     }
     .wrapper {
-        margin: 15vmin auto -145vmin;
+        margin: 15vmin auto -165vmin;
     }
     .protitle {
         height: 70px;
@@ -6316,19 +6326,22 @@ strong i:after {
         height: 70px;
     }
     .wrapper {
-        margin: 20vmin auto -170vmin;
+        margin: 20vmin auto -190vmin;
     }
 }
 
 @media screen and (min-width: 2500px) {
     .animate-group {
-        background-position: 0 6vmax;
+        background-position: -1vmax 6vmax;
     }
     form>div:nth-of-type(9) {
-        margin-top: 20vmax;
+        margin-top: 23vmax;
     }
     html {
         background-position: 0 4vmax;
+    }
+    .protitle {
+        background-position: 5vmax 1vmax;
     }
 }
 
