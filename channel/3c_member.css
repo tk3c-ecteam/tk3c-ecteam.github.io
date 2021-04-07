@@ -4016,7 +4016,7 @@ strong i:after {
         max-width: unset;
     }
     form>div:nth-of-type(9) {
-        margin-top: 0;
+        margin-top: 6vmin;
     }
     html {
         background-position: -6vmax 10vmax;
@@ -4026,16 +4026,27 @@ strong i:after {
     }
     .protitle {
         height: 115px;
-        font-size: 2em;
-        line-height: 2.5em;
-        background-position: 15vmin 1vmin;
-        background-size: 70%;
+        font-size: 3em;
+        line-height: 2em;
+        background-position: -14vmin -1vmin;
+        background-size: 130%;
     }
     .list0 {
-        margin-bottom: 10px;
+        margin-bottom: 50px;
     }
     .animate-group {
-        background-position: -2vmax 12vmax;
+        background-position: -17vmax 7vmax;
+        background-size: 140%;
+    }
+    .animate-group .big-title {
+        margin: -5vmin auto 0;
+        width: 70%;
+    }
+    .animate-group .product {
+        width: 70%;
+    }
+    .copyR {
+        margin-top: -50px;
     }
 }
 
@@ -4607,7 +4618,7 @@ strong i:after {
         background-position:-140vmin 23vmin, top;
     }
     form>div:nth-of-type(9) {
-        margin-top: 0;
+        margin-top: 20vmin;
         margin-bottom: -75px;
     }
     .wrapper {
@@ -4694,8 +4705,8 @@ strong i:after {
     /*商品內容*/
     .protitle {
         height: 75px;
-        font-size: 4vmin;
-        line-height: 10vmin;
+        font-size: 6vmin;
+        line-height: 12vmin;
         letter-spacing: 1px;
         width: 100%;
         margin-bottom: 3%;
@@ -6235,6 +6246,7 @@ strong i:after {
         font-size: 90%;
         padding: 1% 0;
         margin-bottom: 50px;
+        margin-top: -40px;
     }
     .list0>.list02 .ac_3csale {
         width: 100%;
@@ -6271,13 +6283,13 @@ strong i:after {
         display: block;
     }
     .animate-group {
-        background-position: -3vmin 17vmin;
+        background-position: -22vmin 14vmin;
     }
     .animate-group .big-title {
-        margin: 2vmin auto;
+        margin: -2vmin auto;
     }
     .animate-group .product {
-        width: 45%;
+        width: 65%;
     }
     .list0 {
         margin-bottom: 20px;
@@ -6298,6 +6310,12 @@ strong i:after {
     .wrapper {
         margin: 15vmin auto -155vmin;
     }
+    form>div:nth-of-type(9) {
+        margin-top: 26vmin;
+    }
+    .protitle {
+        height: 70px;
+    }
 }
 
 @media screen and (max-width: 361px) {
@@ -6306,9 +6324,6 @@ strong i:after {
     }
     .wrapper {
         margin: 15vmin auto -165vmin;
-    }
-    .protitle {
-        height: 70px;
     }
 }
 
@@ -6323,7 +6338,7 @@ strong i:after {
         width: 47.4%;
     }
     .protitle {
-        height: 70px;
+        height: 65px;
     }
     .wrapper {
         margin: 20vmin auto -190vmin;
