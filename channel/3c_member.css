@@ -6286,10 +6286,11 @@ strong i:after {
         background-position: -22vmin 14vmin;
     }
     .animate-group .big-title {
-        margin: -2vmin auto;
+        margin: -5vmin auto;
     }
     .animate-group .product {
         width: 65%;
+        top: 34vmin;
     }
     .list0 {
         margin-bottom: 20px;
