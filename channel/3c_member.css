@@ -30,13 +30,16 @@ img {
     max-height: 100%;
 }
 
+#form1 {
+    overflow: hidden;
+}
 
 /*圖片超連結邊框消除*/
 
 html {
     margin: 0;
     padding: 0;
-    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210409_kv_bg.jpg) no-repeat top 100px center, url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210409_bg.jpg) repeat-y top center;
+    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210413_bg.jpg) no-repeat top 100px center, url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210413_bg2.jpg) repeat-y top center;
     background-size: 100%;
     background-position: 0vmax 5vmax;
 }
@@ -261,39 +264,40 @@ i {
 }
 
 
-/* 會員特典 3c分會場 */
+/* 3c春電展 */
 .animate-group {
-    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210409_stage.png) no-repeat center;
     width: 100%;
-    height: 770px;
+    height: 100%;
     margin: 0 auto;
-    background-size: 105%;
-    background-position: -2vmax 8vmax;
     position: relative;
-}
-
-.animate-group .sub-title {
-    width: 30%;
-    animation: slide-down 0.7s linear;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .animate-group .big-title {
     text-align: center;
     width: 58%;
-    margin: 0 auto 0;
     animation: rubberBand 0.6s linear;
+    position: relative;
     display: none;
+    animation: upAndDown 0.7s linear infinite alternate;
+}
+
+.animate-group span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    z-index: -1;
 }
 
 .animate-group .product {
-    width: 45%;
-    margin: 0 auto 0;
+    width: 55%;
     height: 100%;
     text-align: center;
     position: absolute;
-    left: 0;
     right: 0;
-    animation: slide-up 1.6s ease-in-out;
+    animation: slide-up 1s ease-in-out;
     display: none;
 }
 
@@ -308,23 +312,23 @@ i {
     width: 100%;
     height: auto;
     margin: 368px 0px 0px 565px;
-    left: 50%;
+    left: 49%;
     z-index: 100;
     bottom: 135px;
     text-align: center;
 }
 
 .actbtn::before {
-    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210409_right_top.png) no-repeat;
+    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210413_stagekv.png) no-repeat;
     content: "";
     display: block;
     width: 200px;
-    height: 190px;
+    height: 145px;
     position: absolute;
-    top: -185px;
-    left: -7%;
+    top: -143px;
+    left: 6%;
     z-index: 1;
-    background-size: 100%;
+    background-size: 85%;
 }
 
 .actbtn::after {
@@ -356,7 +360,7 @@ i {
 }
 
 .rightbtn>.actbtn a.btn01 {
-    width: 150px;
+    width: 170px;
     line-height: 40px;
     color: #000;
     text-decoration: none;
@@ -375,7 +379,7 @@ i {
     -moz-transition: all 0.5;
     color: #fff;
     font-weight: bold;
-    width: 150px;
+    width: 170px;
     margin: 0 0 0 6%;
     transform: translateY(0.01em);
     background: #4a75c4;
@@ -397,12 +401,12 @@ body {
 .wrapper {
     display: block;
     width: 1144px;
-    margin: 8vmax auto -44vmax;
+    margin: 8vmax auto 0;
     position: relative;
 }
 
 form>div:nth-of-type(9) {
-    margin-top: 14vmax;
+    margin-top: -21vmax;
     z-index: 80;
 }
 
@@ -617,14 +621,13 @@ form>div:nth-of-type(9) {
     overflow: hidden;
     color: #fff;
     font-size: 3em;
-    line-height: 3em;
+    line-height: 2.5em;
     font-weight: bold;
     top: 0px;
     margin-bottom: 2%;
     letter-spacing: 5px;
-    background-size: 70%;
-    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210409_bar.png) no-repeat;
-    background-position: 6vmax 1vmax;
+    background-size: 100%;
+    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210413_bar.png) no-repeat;
 }
 
 .pa00 {
@@ -1210,7 +1213,7 @@ form>div:nth-of-type(9) {
     float: left;
     text-align: center;
     display: block;
-    background-color: #4a75c4;
+    background-color: #f5896c;
     border-radius: 10px;
     margin-top: -40px;
 }
@@ -3921,59 +3924,29 @@ strong i:after {
 }
 
 @media screen and (min-width: 2000px) {
-    form>div:nth-of-type(9) {
-        margin-top: 20vmax;
-    }
     .animate-group {
         height: 750px;
     }
 }
 @media screen and (max-width: 1600px) {
-    form>div:nth-of-type(9) {
-        margin-top: 8vmax;
-    }
     html {
         background-position: 0 6vmax;
-    }
-    .animate-group {
-        background-position: -2vmax 10vmax;
-    }
-    .protitle {
-        background-position: 7vmax 1vmax;
     }
 }
 
 @media screen and (max-width: 1440px) {
-    form>div:nth-of-type(9) {
-        margin-top: 8vmax;
-    }
     html {
         background-position: 0 7vmax;
     }
     .rightbtn {
         left: 46% !important;
     }
-    .protitle {
-        background-position: 8vmax 1vmax;
-    }
 }
 
 @media screen and (max-width: 1281px) {
-    html {
-        background-position: 0 8vmax;
-    }
     .rightbtn {
         bottom: 30px;
         left: 39% !important;
-    }
-    .protitle {
-        background-position: 9vmax 1.5vmax;
-    }
-    .animate-group {
-        background-position: -3vmax 12vmax;
-    }
-    form>div:nth-of-type(9) {
-        margin-top: 2vmax;
     }
 }
 
@@ -3988,9 +3961,8 @@ strong i:after {
     }
     .protitle {
         width: 100%;
-        line-height: 3em;
         height: 156px;
-        background-position: 5vmax 1vmax;
+        background-size: 100%;
     }
     .list02 ul li {
         width: 22.9%;
@@ -3998,25 +3970,19 @@ strong i:after {
     .list02 .box_price strong {
         margin-right: 27%;
     }
+    .animate-group {
+        width: 90%;
+    }
     form>div:nth-of-type(9) {
-        margin-top: 4vmin;
-    }
-    .animate-group .sub-title {
-        margin-left: 20px;
-    }
-    .animate-group .product {
-        width: 40%;
+        margin-top: -28vmax;
     }
 }
 
 @media screen and (max-width: 768px) {
     .wrapper {
         width: 100%;
-        margin: 15vmin auto -96vmin;
+        margin: 15vmin auto -70vmin;
         max-width: unset;
-    }
-    form>div:nth-of-type(9) {
-        margin-top: 6vmin;
     }
     html {
         background-position: -6vmax 10vmax;
@@ -4026,27 +3992,31 @@ strong i:after {
     }
     .protitle {
         height: 115px;
-        font-size: 3em;
-        line-height: 2em;
-        background-position: -14vmin -1vmin;
-        background-size: 130%;
+        font-size: 5vmin;
     }
     .list0 {
         margin-bottom: 50px;
     }
     .animate-group {
-        background-position: -17vmax 7vmax;
-        background-size: 140%;
+        margin: 0 3vmin;
+        width: 100%;
     }
     .animate-group .big-title {
-        margin: -5vmin auto 0;
-        width: 70%;
+        width: 55%;
+    }
+    .animate-group span {
+        height: 110%;
     }
     .animate-group .product {
-        width: 70%;
+        width: 63%;
+        height: 118%;
+        top: 25%;
     }
     .copyR {
         margin-top: -50px;
+    }
+    form>div:nth-of-type(9) {
+        margin-top: 20vmax;
     }
 }
 
@@ -4113,10 +4083,10 @@ strong i:after {
         display: block;
         width: 119px;
         height: 40px;
-        background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210409_gotop.png) center top no-repeat;
+        background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210413_stagetop.png) center top no-repeat;
         margin-top: 8px;
-        margin-left: -5px;
-        background-size: 30%;
+        margin-left: 8px;
+        background-size: 85%;
         position: relative;
     }
     /*右側選單-PC-hover*/
@@ -4618,13 +4588,13 @@ strong i:after {
         background-position:-140vmin 23vmin, top;
     }
     form>div:nth-of-type(9) {
-        margin-top: 20vmin;
         margin-bottom: -75px;
+        margin-top: 48vmax;
     }
     .wrapper {
         display: block;
         width: 100%;
-        margin: 15vmin auto -132vmin;
+        margin: 15vmin auto --10vmin;
     }
     .wrapperMt50 {
         margin-top: 50px;
@@ -6282,16 +6252,6 @@ strong i:after {
         height: 100%;
         display: block;
     }
-    .animate-group {
-        background-position: -22vmin 14vmin;
-    }
-    .animate-group .big-title {
-        margin: -5vmin auto;
-    }
-    .animate-group .product {
-        width: 65%;
-        top: 34vmin;
-    }
     .list0 {
         margin-bottom: 20px;
     }
@@ -6308,12 +6268,6 @@ strong i:after {
     html {
         background-position: -34vmin 25vmin, top;
     }
-    .wrapper {
-        margin: 15vmin auto -155vmin;
-    }
-    form>div:nth-of-type(9) {
-        margin-top: 26vmin;
-    }
     .protitle {
         height: 70px;
     }
@@ -6322,9 +6276,6 @@ strong i:after {
 @media screen and (max-width: 361px) {
     .list02 ul li {
         width: 47.7%;
-    }
-    .wrapper {
-        margin: 15vmin auto -165vmin;
     }
 }
 
@@ -6341,23 +6292,11 @@ strong i:after {
     .protitle {
         height: 65px;
     }
-    .wrapper {
-        margin: 20vmin auto -190vmin;
-    }
 }
 
 @media screen and (min-width: 2500px) {
-    .animate-group {
-        background-position: -1vmax 6vmax;
-    }
-    form>div:nth-of-type(9) {
-        margin-top: 23vmax;
-    }
     html {
         background-position: 0 4vmax;
-    }
-    .protitle {
-        background-position: 5vmax 1vmax;
     }
 }
 
