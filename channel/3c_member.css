@@ -4016,7 +4016,7 @@ strong i:after {
         margin-top: -50px;
     }
     form>div:nth-of-type(9) {
-        margin-top: 20vmax;
+        margin-top: 27min;
     }
 }
 
@@ -4589,7 +4589,7 @@ strong i:after {
     }
     form>div:nth-of-type(9) {
         margin-bottom: -75px;
-        margin-top: 48vmax;
+        margin-top: 88vmin;
     }
     .wrapper {
         display: block;
