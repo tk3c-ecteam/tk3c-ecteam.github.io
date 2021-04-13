@@ -3992,7 +3992,9 @@ strong i:after {
     }
     .protitle {
         height: 115px;
-        font-size: 5vmin;
+        font-size: 6vmin;
+        background-size: 130%;
+        background-position: -15vmin 0;
     }
     .list0 {
         margin-bottom: 50px;
@@ -4676,7 +4678,7 @@ strong i:after {
     .protitle {
         height: 75px;
         font-size: 6vmin;
-        line-height: 12vmin;
+        line-height: 15vmin;
         letter-spacing: 1px;
         width: 100%;
         margin-bottom: 3%;
