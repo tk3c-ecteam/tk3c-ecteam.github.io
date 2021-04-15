@@ -374,7 +374,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); }
 
 /*強打2品*/
 .list_M .hotpro_wrapper { width:100%; height:255px; margin:0 auto; display:block; position:relative;overflow:hidden;}
-.list_M .hotproboxL{ width:48%; height:250px; float:left; margin:0 1%; background-color:#fff;border-radius: 39px 5px 5px 5px; -webkit-border-radius: 39px 5px 5px 5px; -moz-border-radius: 39px 5px 5px 5px; position:relative;  }
+.list_M .hotproboxL{ width:48.6%; height:250px; float:left; margin:0 0.3% 0 1%; background-color:#fff;border-radius: 39px 5px 5px 5px; -webkit-border-radius: 39px 5px 5px 5px; -moz-border-radius: 39px 5px 5px 5px; position:relative;  }
 .list_M .hotproboxR{ width:49%; height:251px; float:left; margin:0 0.2%; background-color:#fff;border-radius: 5px 39px 5px 5px; -webkit-border-radius: 5px 39px 5px 5px; -moz-border-radius: 5px 39px 5px 5px; position:relative; }
 .list_M .hotpro_pro { width:97%; height:auto; margin:0.8em auto 0 auto; }
 .list_M .hotpro_pic { width: 45%; height: auto;  overflow: hidden; display: block; float: left; margin: 6px 3% 9px 1%; text-align: center;}
@@ -385,7 +385,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); }
 
 
 /*文字區*/
-.list_M .hotpromain { width:50%; height:230px;float:left; overflow:hidden; }
+.list_M .hotpromain { width:50%; height:220px;float:left; overflow:hidden; }
 .list_M .hotpromain .hotpro_sale{ width: 89%; height: 23px; font-size: 16px; color: #F00; line-height: 24px;text-align: left; overflow: hidden; display: block; margin-bottom: 5px;}
 .list_M .hotpromain .hotpro_name{ width: 98%; height: 40px;font-size: 20px;color: #333;line-height: 21px;text-align:left;overflow: hidden;display: block; margin-bottom:5px;}
 .list_M .hotpromain .hotpro_info{width: 98%; height: 70px;font-size: 13px;color: #7e7e7e;line-height: 20px; text-align:left;overflow: hidden;display: block; margin:5px 0 0 0; border-top: 1px dashed #dcdcdc;  border-bottom: 1px dashed #dcdcdc;  box-sizing: border-box; padding: 8px 4px;}
@@ -403,7 +403,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); }
 
 
 /*商品區塊*/
-.list_M .list_special{width:100%;float: left;text-align: center; padding:1% 0 1% 1%; display:block; }
+.list_M .list_special{width:100%;float: left;text-align: center; padding:0.3% 0 0.3% 1%; display:block; }
 .list_M .list_special ul li{ width: 24%;position:relative; text-align: center; margin:0 8px 8px 0;  background: #FFF; float:left; box-sizing: border-box;-moz-border-radius: 5px; -webkit-border-radius: 5px; list-style: none; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;}
 .list_M .list_special .item_img{width: 98%; margin:1% 1% 10px 1%; background:#fff;}
 .list_M .list_special .item_img img{ width: 210px; height: 210px;  margin: 5px auto; display: block; object-fit: contain}
@@ -436,8 +436,8 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 /*強打2品*/
 .list_M{width:100%; float: left; padding:0; position:relative; display:block;}
 .list_M .hotpro_wrapper { width:98%; height:440px; display:block; position:relative; overflow:hidden; margin:3% 5px 0 5px;}
-.list_M .hotproboxL{ width:97%; height:215px; float:left; background-color:#fff;border-radius:5px; margin:0 auto 0 1%;}
-.list_M .hotproboxR{ width:97%; height:215px; float:left; background-color:#fff;border-radius:5px; margin:2% 1%;}
+.list_M .hotproboxL{ width:97%; height:240px; float:left; background-color:#fff;border-radius:5px; margin:0 auto 0 1%;}
+.list_M .hotproboxR{ width:97%; height:240px; float:left; background-color:#fff;border-radius:5px; margin:2% 1%;}
 .list_M .hotpro_pro { width:97%; height:210px; margin:1% auto; }
 .list_M .hotpro_pic {width: 50%;height: 200px;overflow: hidden;display: block;float: left; margin: 6px;}
 .list_M .hotpro_pic img {max-width: 100%;}
