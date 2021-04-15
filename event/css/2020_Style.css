@@ -385,7 +385,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%); }
 
 
 /*文字區*/
-.list_M .hotpromain { width:50%; height:220px;float:left; overflow:hidden; }
+.list_M .hotpromain { width:50%; height:230px;float:left; overflow:hidden; }
 .list_M .hotpromain .hotpro_sale{ width: 89%; height: 23px; font-size: 16px; color: #F00; line-height: 24px;text-align: left; overflow: hidden; display: block; margin-bottom: 5px;}
 .list_M .hotpromain .hotpro_name{ width: 98%; height: 40px;font-size: 20px;color: #333;line-height: 21px;text-align:left;overflow: hidden;display: block; margin-bottom:5px;}
 .list_M .hotpromain .hotpro_info{width: 98%; height: 70px;font-size: 13px;color: #7e7e7e;line-height: 20px; text-align:left;overflow: hidden;display: block; margin:5px 0 0 0; border-top: 1px dashed #dcdcdc;  border-bottom: 1px dashed #dcdcdc;  box-sizing: border-box; padding: 8px 4px;}
