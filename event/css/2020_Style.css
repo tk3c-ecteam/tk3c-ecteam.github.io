@@ -881,9 +881,14 @@ border-radius: 0px 0px 20px 20px;
 .acbankbox .list2 .item_img {margin: 10px auto 5px 15px !important;}
 };
 
+/* 576手機版 */
 
-}}
+@media screen and (max-width: 576px) {
+	.list_M .list_special ul li {width: 47%;margin: 5px 4px 0 5px;}
+	.list_M .hotpro_wrapper {height: 460px;}
+	.list_M .list_special {padding: 0.3% 0 4% 1%;}
+}
 
-};}
-
+@media screen and (max-width: 376px) {
+	.list_M .list_special ul li {margin: 5px 2px 0 5px;}
 }
