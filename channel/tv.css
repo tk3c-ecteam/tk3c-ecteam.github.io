@@ -339,8 +339,10 @@ img.n01.wow {
 
 .banner-btns ul .ddef{justify-content: center;display: flex;}
 .acbankbox {width: 100% !important;}
-.protitle {line-height: 5.5em;}
+.protitle {line-height: 2em;font-size: 4vmax;}
 .tv-title {margin: -5vmax 18vmax -25vmin;}
+.step-group a:nth-of-type(2) {top: 155px;}
+div:nth-of-type(6) {margin-top: 470px;}
 }
 @media screen and (max-width:1025px) {
     .acbankbox .list2 ul li{width: 186px;}
