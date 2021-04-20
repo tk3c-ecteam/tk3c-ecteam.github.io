@@ -187,13 +187,19 @@ const rigntbtnShow = () => {
 }
 
 const scrollFadeIn = () => {
-    $.each($('.wrapper'),function(i,v){
+    let scrollTop = 0;
+    let scrollPos = 0;
+    $.each($('.wrapper'),function(){
         $(window).scroll(function(){
-            const scrollTop = $(window).scrollTop();
-            console.log($('.wrapper').eq(i).position().top);
-           if ($('.wrapper').eq(i).position().top < scrollTop) {
-                $('.wrapper').eq(i).addClass('slide-up').siblings('.wrapper').removeClass('slide-up');
-           }
+            scrollTop = $(this).scrollTop() + $(this).innerHeight();
+            $('.wrapper').each(function(){
+                scrollPos = $(this).offset().top + $(this).outerHeight();
+                if (scrollPos < scrollTop) {
+                   $(this).addClass('slide-up');
+               } else {
+                   $(this).removeClass('slide-up');
+               }
+            });
         });
     });
 }
