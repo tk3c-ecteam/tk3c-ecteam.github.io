@@ -190,8 +190,8 @@ const scrollFadeIn = () => {
     $.each($('.wrapper'),function(i,v){
         $(window).scroll(function(){
             const scrollTop = $(window).scrollTop();
-           if ($('.wrapper').position() > scrollTop) {
-                $('.wrapper').addClass('slide-up').siblings('.wrapper').removeClass('slide-up');
+           if ($('.wrapper').eq(i).position() < scrollTop) {
+                $('.wrapper').eq(i).addClass('slide-up').siblings('.wrapper').removeClass('slide-up');
            }
         });
     });
@@ -212,7 +212,7 @@ $(document).ready(function() {
     productSubstr();
 
     scrollFadeIn();
-    
+
     $(document).on('click', 'a[href^="#"]', function (e) {
         if ($($.attr(this, 'href')).length > 0) {
             e.preventDefault();
