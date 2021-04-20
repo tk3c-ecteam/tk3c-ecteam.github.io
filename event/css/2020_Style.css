@@ -148,7 +148,7 @@ a.ad01 img{display:none;}
 .title02 .box_pc:hover{ opacity:0.9; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s;transform: translateY(0.5em);}
 .title02 .box_pc .box_price strong .price_pur{ font-size:42px; display:block; }
 
-.acbankbox {width:100% !important}
+.acbankbox {width:100% !important;display: none !important;}
 .acbankbox .list2 ul{display:flex;justify-content:space-between;flex-wrap:wrap}
 .acbankbox .list2 ul li{width: 19% !important;padding: 0;margin: 0 !important;}
 .acbankbox .list2 .item_text05 em{font-size: 3.5vmin !important;}
