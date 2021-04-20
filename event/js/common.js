@@ -186,6 +186,17 @@ const rigntbtnShow = () => {
     });
 }
 
+const scrollFadeIn = () => {
+    $.each($('.wrapper'),function(i,v){
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop();
+           if ($('.wrapper').position() > scrollTop) {
+                $('.wrapper').addClass('slide-up').siblings('.wrapper').removeClass('slide-up');
+           }
+        });
+    });
+}
+
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
     let fixBtn = $('body').find('.fix_btn');
@@ -200,6 +211,8 @@ $(document).ready(function() {
     //商品名稱太長省略文字
     productSubstr();
 
+    scrollFadeIn();
+    
     $(document).on('click', 'a[href^="#"]', function (e) {
         if ($($.attr(this, 'href')).length > 0) {
             e.preventDefault();
