@@ -216,8 +216,6 @@ $(document).ready(function() {
     //商品名稱太長省略文字
     productSubstr();
 
-    scrollFadeIn();
-
     $(document).on('click', 'a[href^="#"]', function (e) {
         if ($($.attr(this, 'href')).length > 0) {
             e.preventDefault();
