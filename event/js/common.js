@@ -190,7 +190,7 @@ const scrollFadeIn = () => {
     $.each($('.wrapper'),function(i,v){
         $(window).scroll(function(){
             const scrollTop = $(window).scrollTop();
-           if ($('.wrapper').eq(i).position() < scrollTop) {
+           if ($('.wrapper').eq(i).position().top < scrollTop) {
                 $('.wrapper').eq(i).addClass('slide-up').siblings('.wrapper').removeClass('slide-up');
            }
         });
