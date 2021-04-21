@@ -202,6 +202,19 @@ const scrollFadeIn = () => {
     });
 }
 
+const scrollUp = (element) => {
+    $(window).scroll(function(){
+        //滑鼠滾動時更新背景移動位置
+       let scrollTop = $(window).scrollTop();
+
+       if (scrollTop > 300) {
+           $(element).css({'transform': 'translateY('+ (scrollTop + 200) + 'px' +')'});
+       } else {
+           $(element).css({'transform': 'translateY('+ -(scrollTop + 200) + 'px' +')'});
+       }
+    });
+}
+
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
     let fixBtn = $('body').find('.fix_btn');
