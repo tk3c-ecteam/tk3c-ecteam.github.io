@@ -186,17 +186,22 @@ const rigntbtnShow = () => {
     });
 }
 
+//滑鼠滾動後顯示物件
 const scrollFadeIn = () => {
     let scrollTop = 0;
     let scrollPos = 0;
     $(window).scroll(function(){
         scrollTop = $(this).scrollTop() + $(this).innerHeight();
         $('.wrapper').each(function(){
-            scrollPos = $(this).offset().top + $(this).outerHeight();
+            scrollPos = $(this).offset().top + $(this).outerHeight() - 800;
             if (scrollPos < scrollTop) {
-               $(this).addClass('slide-up');
+               if ($(this).css('opacity') == 0) {
+                   $(this).fadeTo('500',1);
+               }
            } else {
-               $(this).removeClass('slide-up');
+            if ($(this).css('opacity') == 1) {
+                $(this).fadeTo('500',0);
+            }
            }
         });
     });
@@ -213,6 +218,11 @@ const scrollUp = (element) => {
            $(element).css({'transform': 'translateY('+ -(scrollTop + 200) + 'px' +')'});
        }
     });
+}
+
+//價錢百位數加上逗號
+const addNumComma = (number) => {
+    return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 $(document).ready(function() {
