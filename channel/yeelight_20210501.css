@@ -314,7 +314,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner .slogan{padding:51vmin 0 0;}
 .banner p{width:130px;right:-30px;bottom:40px}
 .vdList h3{font-size:30px;width: 130% !important;margin: 0 -16%;}
-.bonus-area {margin: -10VMIN auto 30px -24PX;width: 115% !important;}
+.bonus-area {margin: -10VMIN auto 30px -30PX;width: 115% !important;}
 .vdList ul li {width: 50%;background: none;}
 #bank-area {margin: 0 auto -15%;}
 }
@@ -535,7 +535,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
 }
 @media screen and (max-width: 360px) {
     .acbankbox .list2 ul li {width: 172px !important;}
-    .bonus-area {margin: -12VMIN auto 30px -24PX;}
+    .bonus-area {margin: -12VMIN auto 30px -30PX;}
 }
 @media screen and (min-width:320px) and (max-width:750px){
     .swiper-container .picbox_pc{display:none}
