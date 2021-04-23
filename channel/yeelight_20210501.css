@@ -228,7 +228,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .list_F ul li:hover {box-shadow: 0px 0px 3px 3px #ffbd44 !important;}
 
 @media screen and (min-width:2000px) {
-    #gotop{left: 48%;}
+    #gotop{left: 48.2%;}
     #bank-area {
         background-size: 55%;
     }
@@ -599,5 +599,8 @@ body{margin:0;padding:0;width:100%;height:100%;}
     }
     #bank-area a {
         width: 40%;
+    }
+    #gotop {
+        left: 48.5%;
     }
 }
