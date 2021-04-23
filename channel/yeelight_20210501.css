@@ -64,7 +64,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .rightbtn .actbtn{width:100%;height:auto;display:block;position:relative;background: #ffffff;padding:.2% 0;box-sizing:border-box;border-radius:10px;padding-top:5px;}
 .rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210422_stagekv.png) no-repeat;width:150px;height: 120px;position:absolute;bottom: calc(100% + -3px);left:calc(50% - 75px);z-index:2;background-size: 100%;}
 .rightbtn .actbtn a.btn_01{width:100%;height:38px;margin:0 auto;line-height:38px;color: #000000;text-decoration:none;border-bottom: 1px #d43405 dotted;box-sizing:border-box;display:block;}
-.rightbtn .actbtn a.btn_01:hover{opacity:.8;transition:all .5s;-webkit-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;background: #fe4a00;color:#fff;}
+.rightbtn .actbtn a.btn_01:hover{opacity:.8;transition:all .5s;-webkit-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;background: #e61673;color:#fff;}
 .rightbtn .actbtn a.btn_01:last-child{border-bottom:none}
 .rightbtn .actbtn a.btn_01:nth-child(1){height:auto}
 .rightbtn .toggle-rightbn {display: none;}
@@ -225,6 +225,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     width: 55%;
 }
 
+.list_F ul li:hover {box-shadow: 0px 0px 3px 3px #ffbd44 !important;}
 
 @media screen and (min-width:2000px) {
     #gotop{left: 48%;}
@@ -521,7 +522,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
 .vdList{padding: 3% 0 0;text-align: center;}
 .acbankbox .list2 ul li{width: 197px !important;}
 .nav_btn ul li{width: 25%;}
-.list_F .boxF_price:after{background: #fde544;color: #000;}
+.list_F .boxF_price:after{background: #ff4a6f;color: #ffffff;}
 }
 @media screen and (max-width:480px){
 .protitle:after{left:calc(50% - 160px)}
