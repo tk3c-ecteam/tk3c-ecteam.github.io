@@ -128,7 +128,9 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .nav_btn{margin:1% auto 1%}
 .event_banner ul{display:flex;justify-content:center;flex-wrap:wrap;width:100%;height:auto;}
 .vdList ul{margin-top: 0;display: flex;flex-wrap: wrap;}
-.vdList ul li{border-radius: 45px;width:33%;position:relative;overflow:hidden;margin:10px 0;}
+.vdList ul li{border-radius: 45px;width:50%;position:relative;overflow:hidden;margin:5px auto;}
+.vdList ul li a{width: 100%;height: 100%;display: block;}
+.vdList ul li a:hover {transform: translateY(-1.5em);transition: all 0.45s linear;}
 .vdList ul li .box{display:flex;flex-wrap:wrap;position:relative}
 .vdList ul li .box .left{width:450px;position:relative;z-index:4;margin:18px 8px 0 18px;overflow:hidden;padding-bottom: 20px;}
 .vdList ul li .box.noneP .left:before{display:none}
@@ -263,6 +265,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 @media screen and (max-width: 1150px) {
     .acbankbox{width: 100% !important;}
     .acbankbox .list2 ul li{width: 185px !important;}
+    .vdList ul li a:hover {transform: translateY(0);transition: none;}
 }
 @media screen and (max-width:980px){
 .banner .slogan{text-align:center;padding:41vmin 0 0;}
