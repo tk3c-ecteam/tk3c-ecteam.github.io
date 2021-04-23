@@ -117,7 +117,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner .slogan{text-align:left;padding:29vmax 0 0;}
 .banner .slogan h1{position:relative;display:inline-block;transform:translateX(-60px)}
 .banner p{position:absolute;right:-300px;bottom:0}
-.bonus-area {margin: 4% auto 0;}
+.bonus-area {margin: 4% auto -80px;}
 .bonus-area a {width: 100%;height: 100%;display: block;}
 .nav_btn ul{display:flex;justify-content:center;flex-wrap:nowrap;width:100%;height:auto;}
 .nav_btn ul li {width: 13%;margin: 0 1%;}
@@ -217,6 +217,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 /* 銀行區 */
 #bank-area {
     background-size: 60%;
+    margin: -3% auto 50px;
 }
 #bank-area a {
     width: 55%;
@@ -309,8 +310,8 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner{background-size:181%;background-position: -39vmin 0;}
 .banner .slogan{padding:51vmin 0 0;}
 .banner p{width:130px;right:-30px;bottom:40px}
-.vdList h3{font-size:30px}
-.bonus-area {margin: 0 auto 30px;}
+.vdList h3{font-size:30px;width: 130% !important;margin: 0 -16%;}
+.bonus-area {margin: -10VMIN auto 30px -24PX;width: 115% !important;}
 .vdList ul li {width: 50%;background: none;}
 #bank-area {margin: 0 auto -15%;}
 }
@@ -531,6 +532,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
 }
 @media screen and (max-width: 360px) {
     .acbankbox .list2 ul li {width: 172px !important;}
+    .bonus-area {margin: -12VMIN auto 30px -24PX;}
 }
 @media screen and (min-width:320px) and (max-width:750px){
     .swiper-container .picbox_pc{display:none}
@@ -540,7 +542,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
     .event_banner ul{display:flex;justify-content:center;flex-wrap:wrap;width:95%;height:auto;margin:0 auto;}
     .event_banner ul li{width:33%;}
     .bg01{width:95%;margin:0 0 0 2.5%;padding:2%;}
-    .protitle{width: 95%;display:block;height:45px;font-size:0; text-indent: -9999px;margin-left: 2.5%;margin-top: 1%;margin-bottom: 1%;}
+    .protitle{width: 100%;display:block;height:60px;font-size:0; text-indent: -9999px;margin-top: 1%;margin-bottom: 1%;background-size: 130% !important;background-position: -13vmin 0 !important;}
     .acbankbox {display: none !important;}
     #bank-area {background-size: 133%;}
     #bank-area a {width: 90%;}
@@ -557,7 +559,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
     position: relative;
     width:100%;
     text-align: center;
-    height: 37px;
+    height: 45px;
     display: block;
     float: left;
     color: #ffffff;
