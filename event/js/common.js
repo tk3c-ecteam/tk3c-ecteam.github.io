@@ -142,15 +142,7 @@ const addLeftAside = () => {
     `<div class="leftbtn">
         <div class="side-content">
             <a href="#" target="_blank">銀行優惠</a>
-            <a href="#" target="_blank">搶紅包</a>
-            <a href="#" target="_blank">33333333</a>
-            <a href="#" target="_blank">444444</a>
-        </div>
-        <div class="other-content">
-            <a href="#" target="_blank">會場1</a>
-            <a href="#" target="_blank">會場2</a>
-            <a href="#" target="_blank">會場3</a>
-            <a href="#" target="_blank">會場4</a>
+            <a href="#" target="_blank">回主會場</a>
         </div>
     </div>`;
 
