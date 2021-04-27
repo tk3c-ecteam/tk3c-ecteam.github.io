@@ -144,6 +144,7 @@ const addLeftAside = () => {
             <a href="#" target="_blank">銀行優惠</a>
             <a href="#" target="_blank">回主會場</a>
         </div>
+        <a class="top"></a>
     </div>`;
 
     if ($('.rightbtn').length > 0) {
