@@ -141,7 +141,7 @@ const addLeftAside = () => {
     let leftbtnHtml = 
     `<div class="leftbtn">
         <div class="side-content">
-            <a href="#" target="_blank">銀行優惠</a>
+            <a href="#" class="bank" target="_blank">銀行優惠</a>
             <a href="#" target="_blank">回主會場</a>
         </div>
         <a class="top"></a>
