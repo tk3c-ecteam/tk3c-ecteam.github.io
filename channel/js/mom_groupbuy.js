@@ -2,7 +2,7 @@
 $(function(){
     let rightbtn = $('.rightbtn');
     let leftbtn = $('.leftbtn .side-content');
-    let momHtml = "<a href='https://events.tk3c.com/events_net/groupbuy/index.aspx' target='_blank'>【老媽!不要動!】</a>";
+    let momHtml = "<a href='https://events.tk3c.com/events_net/seasonsale/index.aspx' target='_blank'>【老媽!不要動!】</a>";
     let animateHtml = "<div class='animate-group'>" + 
     "<div class='aside-left'>" +
     "<p class='child'><img src='https://events.tk3c.com/events_net/events_net/groupbuy/images/20210427_son.png'></p>"+
@@ -30,12 +30,11 @@ $(function(){
 
     //新增手機版列表
     $('.navibar_m_btn ul').prepend(mobileHtml);
-    $('.navibar_m_btn span').text('綜合選單');
 
     setTimeout(() => {
         $('.aside-left .child').fadeIn('slow');
         $('.aside-left .dog').css('opacity',1);
         $('.aside-right .mother').css('opacity',1);
         $('.aside-right .product').css('opacity',1);
-    }, 1000);
+    }, 800);
 });
