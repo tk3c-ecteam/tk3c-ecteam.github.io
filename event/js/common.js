@@ -158,17 +158,16 @@ const addLeftAside = () => {
 //右側選單滑鼠滾到後顯示
 const scrollToShow = () =>  {
     let rightbtn = $('body').find('.rightbtn');
-    let leftbtn = $('body').find('.leftbtn');
 
     $(window).scroll(function(){
         const scrollTop = $(window).scrollTop();
 
         if (scrollTop < 300) {
             $(rightbtn).fadeOut('fast');
-            $(leftbtn).fadeOut('fast');
+            $('.leftbtn').fadeOut('fast');
         } else {
             $(rightbtn).fadeIn('slow');
-            $(leftbtn).fadeIn('slow');
+            $('.leftbtn').fadeIn('slow');
         }
     });
 }
