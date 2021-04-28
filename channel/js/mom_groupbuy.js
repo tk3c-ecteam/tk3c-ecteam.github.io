@@ -16,7 +16,7 @@ $(function(){
     "<p class='product'><img src='https://events.tk3c.com/events_net/events_net/groupbuy/images/20210427_car.png'></p></div>" +
     "</div>";
     let mobileHtml = "<li><a href='https://events.tk3c.com/events_net/mom2021/index.html?ec=groupbuy' target='_blank'>【老媽!你被開除啦!】</a></li>" +
-    "<li><a href='https://events.tk3c.com/events_net/groupbuy/index.aspx' target='_blank'>【老媽!不要動!】</a></li>";
+    "<li><a href='https://events.tk3c.com/events_net/seasonsale/index.aspx' target='_blank'>【老媽!不要動!】</a></li>";
 
     //顯示左側選單
     addLeftAside();
