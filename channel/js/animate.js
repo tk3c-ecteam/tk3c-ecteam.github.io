@@ -2,10 +2,7 @@ $(function(){
     //新增母親節主會場和家電分會場導入連結
     var actbtn= $('.rightbtn .actbtn');
     var navBarm = $('.navibar_m_btn ul');
-    var momSaleHtml = "<a href='https://events.tk3c.com/events_net/mom2021/index.html?ec=seasonsale'><div class='link1'>【老媽!你被開除啦!】</div></a>" + 
-    "<a href='https://events.tk3c.com/events_net/groupbuy/index.aspx'><div class='link1'>【老媽!出去浪!】</div></a>";
-    var momSaleMobile = "<li><a href='https://events.tk3c.com/events_net/mom2021/index.html?ec=seasonsale'><div class='link1'>【老媽!你被開除啦!】</div></a></li>" + 
-    "<li><a href='https://events.tk3c.com/events_net/groupbuy/index.aspx'><div class='link1'>【老媽!出去浪!】</div></a></li>";
+    var momHtml = "<a href='https://events.tk3c.com/events_net/groupbuy/index.aspx' target='_blank'>【老媽!出去浪!】</a>";
 
     var animateHtml = "<div class='animate-group'>" + 
     "<div class='aside-left'>" +
@@ -19,12 +16,20 @@ $(function(){
     "<p class='product'><img src='https://events.tk3c.com/events_net/events_net/seasonsale/images/20210427_potato.png'></p></div>" +
     "</div>";
 
-    var animateGroup = $('.animate-group');
-    var asideLeft = $('.animate-group .aside-left');
+    var mobileHtml = "<li><a href='https://events.tk3c.com/events_net/mom2021/index.html?ec=seasonsale' target='_blank'>【老媽!你被開除啦!】</a></li>" + 
+    "<li><a href='https://events.tk3c.com/events_net/groupbuy/index.aspx' target='_blank'>【老媽!出去浪!】</a></li>";
 
-   $(actbtn).prepend(momSaleHtml);
-   $(navBarm ).prepend(momSaleMobile);
+    //顯示左側選單
+    addLeftAside();
+    $('.leftbtn .side-content a').last().text('【老媽!你被開除啦!】');
+    $('.leftbtn .side-content a').last().attr('href','https://events.tk3c.com/events_net/mom2021/index.html?ec=seasonsale');
+    $('.leftbtn .bank').attr('href','https://events.tk3c.com/events_net/events_net/banks/bank.html');
+    $('.leftbtn .side-content').prepend(momHtml);
+
    $('.wrapper').eq(0).append(animateHtml);
+
+   //新增手機版列表
+   $('.navibar_m_btn ul').prepend(mobileHtml);
 
     setTimeout(() => {
         $('.animate-group .aside-left .mother').css('opacity',1);
