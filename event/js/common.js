@@ -150,6 +150,9 @@ const addLeftAside = () => {
     if ($('.rightbtn').length > 0) {
         $('.rightbtn').after(leftbtnHtml);
     }
+    
+    $('.navibar_m_btn span').text('快速選單');
+    $('.fix_btn span').text('快速選單');
 }
 
 //右側選單滑鼠滾到後顯示
