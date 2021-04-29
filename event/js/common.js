@@ -159,17 +159,19 @@ const addLeftAside = () => {
 const scrollToShow = () =>  {
     let rightbtn = $('body').find('.rightbtn');
 
-    $(window).scroll(function(){
-        const scrollTop = $(window).scrollTop();
-
-        if (scrollTop < 300) {
-            $(rightbtn).fadeOut('fast');
-            $('.leftbtn').fadeOut('fast');
-        } else {
-            $(rightbtn).fadeIn('slow');
-            $('.leftbtn').fadeIn('slow');
-        }
-    });
+    if (isMobile() === false) {
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop();
+    
+            if (scrollTop < 300) {
+                $(rightbtn).fadeOut('fast');
+                $('.leftbtn').fadeOut('fast');
+            } else {
+                $(rightbtn).fadeIn('slow');
+                $('.leftbtn').fadeIn('slow');
+            }
+        });
+    }
 }
 
 //右側選單永遠顯示
