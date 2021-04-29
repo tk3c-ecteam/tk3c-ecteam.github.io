@@ -276,7 +276,6 @@ i {
 .animate-group .big-title {
     text-align: center;
     width: 58%;
-    animation: rubberBand 0.6s linear;
     position: absolute;
     z-index: 1;
     right: 0;
@@ -291,8 +290,7 @@ i {
     position: absolute;
     right: 10%;
     top: 22%;
-    animation: upAndDown 0.8s linear infinite alternate;
-    animation-delay: 0.6s;
+    animation: upAndDown 0.7s linear infinite alternate;
 }
 
 .animate-group .light img {
