@@ -286,12 +286,12 @@ i {
 
 .animate-group .light {
     width: 20%;
-    height: 40%;
+    height: 48%;
     display: block;
     position: absolute;
-    right: 11%;
-    top: 17%;
-    animation: light 0.7s linear alternate infinite;
+    right: 10%;
+    top: 22%;
+    animation: light 0.6s linear alternate infinite;
 }
 
 .animate-group .light img {
