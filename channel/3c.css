@@ -320,7 +320,13 @@ i {
 
 
 #bank-area {
-    margin: -33% auto 80px;
+    margin: -27% auto 80px;
+    position: relative;
+    background: none;
+}
+
+.swiper-slide {
+    width: 50% !important;
 }
 
 
