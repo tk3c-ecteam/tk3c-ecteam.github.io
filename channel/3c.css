@@ -291,11 +291,12 @@ i {
     position: absolute;
     right: 10%;
     top: 22%;
-    animation: upAndDown 0.7s linear infinite alternate;
+    animation: upAndDown 0.8s linear infinite alternate;
+    animation-delay: 0.6s;
 }
 
 .animate-group .light img {
-    animation: light 0.5s linear infinite alternate;
+    animation: light 0.5s linear infinite;
 }
 
 .animate-group .product {
