@@ -291,11 +291,11 @@ i {
     position: absolute;
     right: 10%;
     top: 22%;
-    animation: light 0.6s linear alternate infinite;
+    animation: light 0.5s linear infinite alternate;
 }
 
 .animate-group .light img {
-    animation: upAndDown 1.5s linear infinite alternate;
+    animation: upAndDown 0.7s linear infinite alternate;
 }
 
 .animate-group .product {
@@ -325,8 +325,21 @@ i {
     background: none;
 }
 
+#bank-area a {
+    display: unset;
+    margin: 0 1%;
+}
+
 .swiper-slide {
     width: 50% !important;
+}
+
+.swiper-button-next {
+    display: none !important;
+}
+
+.swiper-button-prev {
+    color: #eafb59 !important;
 }
 
 
@@ -3968,8 +3981,8 @@ strong i:after {
         margin: -35% auto 80px;
     }
     .animate-group .light{
-        right: 9%;
-        top: 27%;
+        right: 10%;
+        top: 23%;
     }
 }
 
@@ -3985,7 +3998,7 @@ strong i:after {
         left: 39% !important;
     }
     #bank-area {
-        margin: -30% auto 80px;
+        margin: -38% auto 80px;
     }
 }
 
@@ -4054,6 +4067,12 @@ strong i:after {
         width: 63%;
         height: 118%;
         top: 25%;
+    }
+    form>div:nth-of-type(9) {
+        margin-top: 70vmin;
+    }
+    #bank-area {
+        margin: -54% auto 80px;
     }
 }
 
@@ -6291,7 +6310,10 @@ strong i:after {
         margin-bottom: 20px;
     }
     #bank-area {
-        margin: 20vmin auto 80px;
+        margin: -7vmin auto 80px;
+    }
+    #bank-area .swiper-slide {
+        width: auto !important;
     }
     .animate-group {
         margin: 0 -8%;
