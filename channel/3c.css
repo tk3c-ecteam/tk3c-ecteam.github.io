@@ -34,6 +34,7 @@ img {
     overflow: hidden;
 }
 
+.tab-container> ul.nav-tabtop > li > a {position: relative;z-index: 50;}
 /*圖片超連結邊框消除*/
 
 html {
