@@ -4074,6 +4074,9 @@ strong i:after {
     #bank-area {
         margin: -54% auto 80px;
     }
+    .copyR {
+        margin-top: 16%;
+    }
 }
 
 @media screen and (min-width:751px) {
