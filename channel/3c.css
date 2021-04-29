@@ -6314,7 +6314,7 @@ strong i:after {
         margin: -7vmin auto 80px;
     }
     #bank-area .swiper-slide {
-        width: 90% !important;
+        width: 95% !important;
     }
     .animate-group {
         margin: 0 -8%;
@@ -6345,6 +6345,9 @@ strong i:after {
         height: 40%;
         right: 35%;
         top: 15%;
+    }
+    .swiper-button-prev {
+        top: 33% !important;
     }
 }
 
