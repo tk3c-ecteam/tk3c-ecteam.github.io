@@ -51,12 +51,14 @@ body{margin:0px;padding:0;width:100%;position: relative;z-index: -1;}
     content: '';
     display: block;
     position: absolute;
-    background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/20210427_stage.png) no-repeat;
+    background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/kv_title_s.png) no-repeat;
     width: 15%;
-    height: 20%;
+    height: 25%;
     background-size: 100%;
-    top: 0;
+    top: -47%;
     left: 0;
+    mix-blend-mode: soft-light;
+    filter: brightness(120%);
 }
 
 .animate-group .aside-left {
