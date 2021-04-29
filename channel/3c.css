@@ -279,7 +279,6 @@ i {
     position: absolute;
     z-index: 1;
     right: 0;
-    display: none;
     animation: upAndDown 0.7s linear infinite alternate;
 }
 
