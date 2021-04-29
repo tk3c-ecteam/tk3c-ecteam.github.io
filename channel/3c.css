@@ -323,6 +323,7 @@ i {
     margin: -27% auto 80px;
     position: relative;
     background: none;
+    z-index: 99;
 }
 
 #bank-area a {
@@ -444,7 +445,7 @@ body {
     width: 1144px;
     margin: 8vmax auto 0;
     position: relative;
-    z-index: -1;
+    z-index: 0;
 }
 
 form>div:nth-of-type(9) {
@@ -6313,7 +6314,7 @@ strong i:after {
         margin: -7vmin auto 80px;
     }
     #bank-area .swiper-slide {
-        width: auto !important;
+        width: 80% !important;
     }
     .animate-group {
         margin: 0 -8%;
