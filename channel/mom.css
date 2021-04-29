@@ -53,12 +53,14 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     content: '';
     display: block;
     position: absolute;
-    background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210427_LTT.png) no-repeat;
+    background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/kv_title_s.png) no-repeat;
     width: 15%;
-    height: 20%;
+    height: 25%;
     background-size: 100%;
-    top: -45%;
+    top: -47%;
     left: 0;
+    mix-blend-mode: soft-light;
+    filter: brightness(120%);
 }
 
 .animate-group .aside-left {
@@ -147,6 +149,10 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     margin-left: 4%;
 }
 
+.leftbtn .side-content a:hover {
+    background: #bb77fe;
+}
+
 /*商品橫幅*/
 /*品分類*/
 .bg_color{margin-top: 0}
@@ -213,7 +219,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 .rightbtn .actbtn:before{height:274px;top:-55%;left:3%;}
 html {background-position: 0 4vmax;}
 .animate-group {margin: 15vmax auto 5%;}
-.animate-group::before {width: 23%;}
+.animate-group::before {width: 15%;}
 .animate-group .aside-left {width: 30%;margin: -5% auto 0;}
 .animate-group .aside-left .mother {left: 5%;}
 .animate-group .aside-left .product {
@@ -263,6 +269,9 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 .ver3_banner_m{display:none;}
 }
 .pc_version_non::before{display:block;height:168px;content:'';background:url(../images/head_m_0623.jpg) no-repeat center center;background-size:cover;}
+@media screen and (max-width:1750px) {
+    html {background-position: 39% 50%;}
+}
 @media screen and (max-width:1600px) {
 .bg_color{margin:-4% auto 0;}
 html{background-position:0vmax 6vmax;}
@@ -283,6 +292,7 @@ html{background-position:0vmax 7vmax;}
 .leftbtn {
     top: 45%;
 }
+.animate-group::before {top: -44%;}
 }
 
 @media screen and (max-width:1281px){
@@ -349,7 +359,7 @@ div.bg_color > div.wrapper > h2{display: flex;width:100%;height: 50px;margin: 0 
 .title .box_pc{display:block;background:#fff;border:10px solid white;width:100%;height:200px;z-index:10;position:static;top:-27px;right:67px;overflow:hidden;box-sizing:border-box;padding:11px;text-align:center;border-color:#b296ff;}
 /* 母親節會場動畫區 */
 .animate-group {width: 100%;margin: 34vmin auto 48%;}
-.animate-group::before {width: 25%;height: 25%;top: -47%;}
+.animate-group::before {top: -47%;}
 .animate-group .aside-left {
     margin: -5% auto 0;
     width: 30%;
