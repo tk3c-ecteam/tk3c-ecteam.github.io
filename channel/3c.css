@@ -3959,9 +3959,6 @@ strong i:after {
     #bank-area {
         margin: -50% auto 80px;
     }
-    form>div:nth-of-type(9) {
-        margin-top: -36%;
-    }
     .animate-group .light {
         top: 10%;
     }
@@ -3969,9 +3966,6 @@ strong i:after {
 @media screen and (max-width: 1600px) {
     #bank-area {
         margin: -35% auto 80px;
-    }
-    form>div:nth-of-type(9) {
-        margin-top: -27%;
     }
     .animate-group .light{
         right: 9%;
@@ -3992,9 +3986,6 @@ strong i:after {
     }
     #bank-area {
         margin: -30% auto 80px;
-    }
-    form>div:nth-of-type(9) {
-        margin-top: -31%;
     }
 }
 
@@ -4027,9 +4018,6 @@ strong i:after {
     .animate-group .product {
         width: 80%;
         margin: -9% -15%;
-    }
-    form>div:nth-of-type(9) {
-        margin-top: -42%;
     }
     .rightbtn {
         left: 24%;
@@ -4066,9 +4054,6 @@ strong i:after {
         width: 63%;
         height: 118%;
         top: 25%;
-    }
-    form>div:nth-of-type(9) {
-        margin-top: 21vmin;
     }
 }
 
@@ -4641,7 +4626,6 @@ strong i:after {
     }
     form>div:nth-of-type(9) {
         margin-bottom: -75px;
-        margin-top: 60vmin;
     }
     .wrapper {
         display: block;
@@ -6376,15 +6360,10 @@ strong i:after {
     .wrapper {
         margin: 18vmin auto -85vmin;
     }
-    form>div:nth-of-type(9) {
-        margin-top: 73vmin;
-    }
 }
 
 @media screen and (min-width: 2500px) {
-    form>div:nth-of-type(9) {
-        margin-top: -30%;
-    }
+
 
 }
 
