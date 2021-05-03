@@ -229,21 +229,22 @@ const addNumComma = (number) => {
 }
 
 //新增銀行區
-function appendBanks(banks,type = '') {
+const appendBanks = (banks = '',type = '') => {
     if (banks == '') {
         banks = [
-            {"image": "groupbuy/images/202100503_bank_01.png"},
-            {"image": "groupbuy/images/20210416_bank_02.png"},
-            {"image": "groupbuy/images/20210416_bank_03.png"},
-            {"image": "groupbuy/images/20210416_bank_04.png"}
+            {"url": "https://events.tk3c.com/events_net/events_net/banks/202105/web/bank-01.html","image": "groupbuy/images/202100503_bank_01.png"},
+            {"url": "https://events.tk3c.com/events_net/events_net/banks/202105/web/bank-12.html","image": "groupbuy/images/20210416_bank_02.png"},
+            {"url": "https://events.tk3c.com/events_net/events_net/banks/202105/web/bank-02.html","image": "groupbuy/images/20210416_bank_03.png"},
         ];
     }
     let imagePath = "https://events.tk3c.com/events_net/events_net/";
     let bankBannerHtml = "<div id='bank-area'>" +
     "<div class='swiper-wrapper'>";
     for (let x = 0; x < banks.length;x++) {
-        bankBannerHtml += "<div class='swiper-slide'><a href='"+ banks.url +"' target='_blank'><img src='"+ imagePath + banks.image +"'></a></div>";
+        bankBannerHtml += "<div class='swiper-slide'><a href='"+ banks[x].url +"' target='_blank'><img src='"+ imagePath + banks[x].image +"'></a></div>";
     }
+
+    bankBannerHtml += "</div>";
 
     //顯示頁數(下方點點)
     if (type == 'page') {
@@ -262,12 +263,12 @@ function appendBanks(banks,type = '') {
         "<div class='swiper-button-next'></div>";
     }
 
-    bankBannerHtml += "</div></div>";
+    bankBannerHtml += "</div>";
     return bankBannerHtml;
 }
 
 //啟動輪播
-function swiperBank(options = '',element = '') {
+const swiperBank = (options = '',element = '') => {
     if (options == '') {
         options = {
             autoplay: {
@@ -286,7 +287,7 @@ function swiperBank(options = '',element = '') {
 }
 
 //新增fb粉絲團
-function addFBArea(){
+const addFBArea = () => {
     let location = window.location.pathname.split('/');
     let fbfansHtml ="<a href='https://www.facebook.com/TDdd331/' target='_blank' class='fb-fans'><img src='https://events.tk3c.com/events_net/events_net/groupbuy/images/20210416_bt_fb.png'></a>";
 
@@ -325,5 +326,7 @@ $(document).ready(function() {
         $('div#gotop').toggleClass('toggleR');
         $(rightbtn).find('i').toggleClass('fas fa-angle-double-right fas fa-angle-double-left');
     });
+
+    addFBArea();
 });
 
