@@ -232,7 +232,7 @@ const addNumComma = (number) => {
 function appendBanks(banks,type = '') {
     if (banks == '') {
         banks = [
-            {"image": "groupbuy/images/20210416_bank_01.png"},
+            {"image": "groupbuy/images/202100503_bank_01.png"},
             {"image": "groupbuy/images/20210416_bank_02.png"},
             {"image": "groupbuy/images/20210416_bank_03.png"},
             {"image": "groupbuy/images/20210416_bank_04.png"}
