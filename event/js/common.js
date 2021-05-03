@@ -242,7 +242,7 @@ function appendBanks(banks,type = '') {
     let bankBannerHtml = "<div id='bank-area'>" +
     "<div class='swiper-wrapper'>";
     for (let x = 0; x < banks.length;x++) {
-        bankBannerHtml += "<div class='swiper-slide'><a href='https://events.tk3c.com/events_net/events_net/banks/bank.html' target='_blank'><img src='"+ imagePath + banks.image +"'></a></div>";
+        bankBannerHtml += "<div class='swiper-slide'><a href='"+ banks.url +"' target='_blank'><img src='"+ imagePath + banks.image +"'></a></div>";
     }
 
     //顯示頁數(下方點點)
