@@ -228,6 +228,76 @@ const addNumComma = (number) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
+//新增銀行區
+function appendBanks(banks,type = '') {
+    if (banks == '') {
+        banks = [
+            {"image": "groupbuy/images/20210416_bank_01.png"},
+            {"image": "groupbuy/images/20210416_bank_02.png"},
+            {"image": "groupbuy/images/20210416_bank_03.png"},
+            {"image": "groupbuy/images/20210416_bank_04.png"}
+        ];
+    }
+    let imagePath = "https://events.tk3c.com/events_net/events_net/";
+    let bankBannerHtml = "<div id='bank-area'>" +
+    "<div class='swiper-wrapper'>";
+    for (let x = 0; x < banks.length;x++) {
+        bankBannerHtml += "<div class='swiper-slide'><a href='https://events.tk3c.com/events_net/events_net/banks/bank.html' target='_blank'><img src='"+ imagePath + banks.image +"'></a></div>";
+    }
+
+    //顯示頁數(下方點點)
+    if (type == 'page') {
+        bankBannerHtml += "<div class='swiper-pagination'></div>";
+    }
+
+    //顯示上下頁(左右箭頭)
+    if (type == 'arrow') {
+        bankBannerHtml += "<div class='swiper-button-prev'></div><div class='swiper-button-next'></div>";
+    }
+
+    //顯示左右箭頭與頁數
+    if (type == 'all') {
+        bankBannerHtml += "<div class='swiper-pagination'></div>" + 
+        "<div class='swiper-button-prev'></div>" +
+        "<div class='swiper-button-next'></div>";
+    }
+
+    bankBannerHtml += "</div></div>";
+    return bankBannerHtml;
+}
+
+//啟動輪播
+function swiperBank(options = '',element = '') {
+    if (options == '') {
+        options = {
+            autoplay: {
+                delay: 3000
+            }
+        };
+    }
+
+    //預設為銀行區塊
+    if (element == '') {
+        element = '#bank-area';
+    }
+    setTimeout(function(){
+        new Swiper(element,options);
+      },400);
+}
+
+//新增fb粉絲團
+function addFBArea(){
+    let location = window.location.pathname.split('/');
+    let fbfansHtml ="<a href='https://www.facebook.com/TDdd331/' target='_blank' class='fb-fans'><img src='https://events.tk3c.com/events_net/events_net/groupbuy/images/20210416_bt_fb.png'></a>";
+
+    if (location[2] == '201708_thousand') {
+        //家用生活頻道頁
+        $('.wrapper').append(fbfansHtml);
+    } else {
+        $('.wrapper').eq(1).append(fbfansHtml);
+    }
+}
+
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
     let fixBtn = $('body').find('.fix_btn');
