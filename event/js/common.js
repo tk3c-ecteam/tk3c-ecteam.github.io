@@ -142,13 +142,29 @@ const addLeftAside = () => {
     `<div class="leftbtn">
         <div class="side-content">
             <a href="#" class="bank" target="_blank">銀行優惠</a>
+            <a href="https://www.tk3c.com/dic2.aspx?cid=12504&aid=22579&hid=114972&strPreView=y" target="_blank">三菱|獻給一家之煮的好禮</a>
+            <a href="https://www.tk3c.com/dic2.aspx?cid=108783&aid=22319&hid=114940" target="_blank">THERMOS 四折起</a>
+            <a href="https://events.tk3c.com/events_net/Yeelight_event/index.html" target="_blank">Yeelight母親節</a>
+            <a href="https://www.tk3c.com/dic2.aspx?cid=83185&aid=22281&hid=114911" target="_blank">母親節感謝季加碼活動</a>
+            <a href="https://www.tk3c.com/dic2.aspx?cid=842&aid=13880&hid=114919" target="_blank">寵媽有禮(舒壓家電)</a>
+            <a href="https://www.tkec.com.tw/dic2.aspx?cid=14719&aid=5959&hid=114923" target="_blank">Logitech羅技-美力放異彩</a>
             <a href="#" target="_blank">回主會場</a>
         </div>
         <a class="top"></a>
     </div>`;
+    let mobileHtml = '<li> <a href="https://events.tk3c.com/events_net/events_net/banks/bank.html" target="_blank">銀行優惠</a></li>' +
+    '<li> <a href="https://www.tk3c.com/dic2.aspx?cid=12504&aid=22579&hid=114972&strPreView=y" target="_blank">三菱|獻給一家之煮的好禮</a></li>' +
+    '<li><a href="https://www.tk3c.com/dic2.aspx?cid=108783&aid=22319&hid=114940" target="_blank">THERMOS 四折起</a></li>'+
+    '<li><a href="https://events.tk3c.com/events_net/Yeelight_event/index.html" target="_blank">Yeelight母親節</a></li>' + 
+    '<li><a href="https://www.tk3c.com/dic2.aspx?cid=83185&aid=22281&hid=114911" target="_blank">母親節感謝季加碼活動</a></li>' +
+    '<li> <a href="https://www.tk3c.com/dic2.aspx?cid=842&aid=13880&hid=114919" target="_blank">寵媽有禮(舒壓家電)</a></li>' + 
+    '<li> <a href="https://www.tkec.com.tw/dic2.aspx?cid=14719&aid=5959&hid=114923" target="_blank">Logitech羅技-美力放異彩</a></li>';
 
     if ($('.rightbtn').length > 0) {
         $('.rightbtn').after(leftbtnHtml);
+        $('.navibar_m_btn ul').append(mobileHtml);
+        $('.fix_btn ul').append(mobileHtml);
+        scrollToShow();
     }
     
     $('.navibar_m_btn span').text('快速選單');
