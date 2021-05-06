@@ -315,6 +315,13 @@ const addFBArea = () => {
     }
 }
 
+//新增看更多按鈕
+const readMore = (links) => {
+    for (let i = 0; i < links.length; i++) {
+        $('.protitle a').eq(i).attr('href',links.url);
+    }
+}
+
 $(document).ready(function() {
     let rightbtn = $('body').find('.rightbtn');
     let fixBtn = $('body').find('.fix_btn');
