@@ -201,7 +201,7 @@ i {
 #bank-area {
     background: none;
     position: relative;
-    z-index: 99;
+    z-index: 0;
     height: auto;
     padding: 0 20px;
 }
@@ -2898,6 +2898,7 @@ div#NewProductAll {
 @media screen and (max-width: 1440px) {
     .rightbtn {
         left: 44%;
+        bottom: 35%;
     }
     .animate-group {
         width: 75%;
@@ -2910,15 +2911,16 @@ div#NewProductAll {
 
 @media screen and (max-width: 1280px) {
     .rightbtn {
-        left: 36%;
-        background-position: 0 3vmax;
+        left: 34%;
+        background-position: 0 7vmax;
     }
     .animate-group {
         width: 68%;
         margin: 0 auto 10%;
     }
     .protitle01 {
-        background-position: 14vmax --1vmax;
+        background-position: 14vmax -1vmax;
+        line-height: 30vmin;
     }
 }
 
@@ -2940,6 +2942,13 @@ div#NewProductAll {
     #bank-area a img {
         min-height: 235px;
         max-height: 235px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #bank-area a img {
+        min-height: 170px;
+        max-height: 170px;
     }
 }
 
