@@ -3021,8 +3021,8 @@ div#NewProductAll {
     }
 
     .navibar_m_btn > .bg1 {
-        background-color: #226b40;
-        border: 2px solid #226b40;
+        background-color: #226b40 !important;
+        border: 2px solid #226b40 !important;
     }
     
       /*手機專用浮動選單*/
