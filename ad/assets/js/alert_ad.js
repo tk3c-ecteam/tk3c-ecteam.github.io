@@ -9,10 +9,8 @@ document.addEventListener('readystatechange',function(){
             this.isAlert = false;
         },
         mounted:function() {
-            setTimeout(() => {
-                this.isAlert = true;
-                this.countdown();
-            },1000);
+            this.isAlert = true;
+            this.countdown();
 
             document.addEventListener('click',e => {
                 this.isAlert = false;
