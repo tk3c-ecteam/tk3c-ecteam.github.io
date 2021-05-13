@@ -1,12 +1,9 @@
-document.addEventListener('readystatechange',function(){
+document.addEventListener('DOMContentLoaded',function(){
     var app = new Vue ({
         el: '#alertAd-box',
         data: {
             isAlert: false,
             count: 5
-        },
-        created() {
-            this.isAlert = false;
         },
         mounted:function() {
             this.isAlert = true;
