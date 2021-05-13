@@ -1,17 +1,18 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('readystatechange',function(){
     var app = new Vue ({
         el: '#alertAd-box',
         data: {
             isAlert: false,
             count: 5
         },
-        mounted() {
-            //延遲1秒載入
+        created() {
+            this.isAlert = false;
+        },
+        mounted:function() {
             setTimeout(() => {
                 this.isAlert = true;
-            }, 1000);
-    
-            this.countdown();
+                this.countdown();
+            },1000);
 
             document.addEventListener('click',e => {
                 this.isAlert = false;
