@@ -740,7 +740,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 /*▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區05((4小)) 手機版 ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓*/
 @media screen and (min-width: 320px) and (max-width: 750px){
 .list_F{width:100%;float: left;text-align: center;display:block;padding:0;}
-.list_F ul li{  width: 48.3%; height: 355px; position:relative; text-align: center; margin:6px 2px;  background: #FFF;  float:left; box-sizing: border-box;-moz-border-radius: 5px; -webkit-border-radius: 5px; list-style: none; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s; border: 3px solid #4ce2e6; padding: 0;}
+.list_F ul li{  width: 48.3%; height: auto; position:relative; text-align: center; margin:6px 2px;  background: #FFF;  float:left; box-sizing: border-box;-moz-border-radius: 5px; -webkit-border-radius: 5px; list-style: none; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s; border: 3px solid #4ce2e6; padding: 0;}
 .list_F .itemF_img{width: 100%; margin-bottom:0;}
 .list_F .itemF_img img{ width: 100%;  height: auto;}
 .list_F h4 {font-size: 15px; font-weight: bold; background: #42b5b8; color: #FFF;  line-height: 25px;  overflow: hidden;  height: 25px;  width: 100%; box-sizing: border-box; display: block;  padding: 0 5px; margin: 0 auto; border-radius: 50px;  letter-spacing: -0.5px;}
