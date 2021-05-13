@@ -733,7 +733,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 .list_F li .boxF_price strong i {font-size: 13px;letter-spacing: 0;	font-style: normal;}
 .list_F li .boxF_price strong:before {content: "搶購";display: block;	width: 47px;height: 40px;float: right;border-radius: 5px;color: white;font-size: 0.7em;text-align: center;	line-height: 40px;letter-spacing: 1px;position: absolute;bottom: 7px;right: 5px;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);	background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
 
-.list_F .boxF_price .iconF_pro{ display: none;  background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px; position: absolute;  z-index: 5; font-size: 16px;  box-sizing: border-box; color: #ff2400; line-height: 26px; bottom: 10px; text-align: left;  padding-left: 4px; background-size: 88%;}
+.list_F .boxF_price .iconF_pro{ display: block;  background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px; position: absolute;  z-index: 5; font-size: 16px;  box-sizing: border-box; color: #ff2400; line-height: 26px; bottom: 10px; text-align: left;  padding-left: 4px; background-size: 88%;}
 .list_F .boxF_price .iconF_pro span{ font-size:28px;}
 
 
@@ -742,7 +742,6 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 .list_F{width:100%;float: left;text-align: center;display:block;padding:0;}
 .list_F ul li{  width: 48.3%; height: auto; position:relative; text-align: center; margin:6px 2px;  background: #FFF;  float:left; box-sizing: border-box;-moz-border-radius: 5px; -webkit-border-radius: 5px; list-style: none; transition: all 0.5s; -webkit-transition: all 0.5s; -ms-transition: all 0.5s; -moz-transition: all 0.5s; border: 3px solid #4ce2e6; padding: 0;}
 .list_F .itemF_img{width: 100%; margin-bottom:0;}
-.list_F .itemF_img img{ width: 100%;  height: auto;}
 .list_F h4 {font-size: 15px; font-weight: bold; background: #42b5b8; color: #FFF;  line-height: 25px;  overflow: hidden;  height: 25px;  width: 100%; box-sizing: border-box; display: block;  padding: 0 5px; margin: 0 auto; border-radius: 50px;  letter-spacing: -0.5px;}
 .list_F storg { font-size: 14px; line-height: 17px; font-weight: bold;  height: 35px; overflow: hidden; width: 100%; color: #000; display: block;box-sizing: border-box; padding: 0 5px;}
 .list_F p{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;}
