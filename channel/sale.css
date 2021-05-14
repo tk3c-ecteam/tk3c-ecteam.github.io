@@ -69,6 +69,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 
 .swiper-button-prev {
     color:  #fdf28e !important;
+    left: -2% !important;
 }
 
 /*商品橫幅*/
@@ -378,9 +379,6 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 .copyR{padding:5px 0 60px;}
 .fb-fans {margin: 0 auto 0;}
 #bank-area .swiper-slide {width: 50% !important;margin: 0 0;}
-.swiper-button-prev {
-    left: -2% !important;
-}
 .swiper-button-prev:after {font-size: 20px;}
 #bank-area a img {min-height: 145px;max-height: 145px;}
 }
