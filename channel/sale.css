@@ -379,9 +379,10 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 .fb-fans {margin: 0 auto 0;}
 #bank-area .swiper-slide {width: 50% !important;margin: 0 0;}
 .swiper-button-prev {
-    left: 0 !important;
+    left: -2% !important;
 }
 .swiper-button-prev:after {font-size: 20px;}
+#bank-area a img {min-height: 145px;max-height: 145px;}
 }
 #titleheadm{display:none}
 @media screen and (max-width:376px){
@@ -396,6 +397,7 @@ div.bg_color > div.wrapper > h2 {height: 30px;}
 .list_special ul li {margin: 5px 3px;}
 .title-group {margin: -8vmin 4vmin;}
 .title{padding-top: 130px;}
+#bank-area a img {min-height: 115px;max-height: 115px;}
 }
 @media screen and (min-width:2500px){
 html{background-position:0vmax 4vmax;}
