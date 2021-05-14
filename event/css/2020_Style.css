@@ -503,7 +503,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 .list_Q .list02 ul li {	width: 24%;	position: relative;	text-align: center;	margin: 0 8px 8px 0;background: #FFF;float: left;box-sizing: border-box;-moz-border-radius: 5px;-webkit-border-radius: 5px;list-style: none;transition: all 0.5s;-webkit-transition: all 0.5s;-ms-transition: all 0.5s;	-moz-transition: all 0.5s;}
 .list_Q .list02 ul li:hover {box-shadow: 0px 0px 3px 3px rgba(150, 93, 12, 0.8);background: #FEF20B;transform: translateY(0.2em);}
 .list_Q .list02 .item_img {	width: 98%;	margin: 1% 1% 10px 1%;background: #fff;}
-.list_Q .list02 .item_img img {	width: 210px;height: 210px;	margin: 5px auto;display: block;}
+.list_Q .list02 .item_img img {	width: 100%;height: auto;	margin: 5px auto;display: block;}
 .list_Q .list02 ul li .icon_pro{ display: block; background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px;  position: absolute;  z-index: 5;  font-size: 140%;  box-sizing: border-box;  color: #ff2400;  line-height: 26px;  bottom: 138px;   text-align: left;  padding-left: 4px;  background-size: 88%;}
 .list_Q .list02 ul li .icon_02 {display: block;	z-index: 10;background: url(../images/tag02.png) 0 0 no-repeat;	width: 61px;height: 106px;	position: absolute;	top: -5px;	left: 11px;}
 .list_Q .list02 h4 {font-size: 15px;font-weight: bold;background: #154cc9;color: #FFF;line-height: 25px;overflow: hidden;height: 25px;	width: 100%;	box-sizing: border-box;	display: block;	float: left;	padding: 0 5px;}
