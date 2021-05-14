@@ -37,3 +37,17 @@
     top: 2%;
     z-index: 10;
 }
+
+/*手機橫向*/
+@media screen 
+and (min-width: 480px)
+and (max-width: 749px)
+and (orientation: landscape) {
+    #alertAd-box .alert-content {
+        width: 30%;
+    }
+    #alertAd-box .alert-content .alert-close {
+        width: 7%;
+        right: -7%;
+    }
+}

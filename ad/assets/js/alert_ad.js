@@ -6,8 +6,11 @@ document.addEventListener('DOMContentLoaded',function(){
             count: 5
         },
         mounted:function() {
-            this.isAlert = true;
-            this.countdown();
+            this.isAlert = false;
+            setTimeout(() => {
+                this.isAlert = true;
+                this.countdown();
+            },1000);
 
             document.addEventListener('click',e => {
                 this.isAlert = false;
