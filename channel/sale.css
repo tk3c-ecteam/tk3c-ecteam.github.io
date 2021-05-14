@@ -275,7 +275,7 @@ div.bg_color > div.wrapper > h2{display: flex;width:100%;height: 53px;margin: 0 
 /*商品內容*/
 .bg_color{padding-top:0;overflow:unset;margin: -22% auto 0;}
 .protitle{position:relative;width:100%;text-align:center;height:100px;display:block;overflow:hidden;float:left;position:relative;top:0;background-size: 100%;}
-.protitle b{font-size: 6vmin;text-align:center;width:100%;line-height: 12vmin;}
+.protitle b{font-size: 7vmin;text-align:center;width:100%;line-height: 13vmin;}
 .protitle i{display:block;font-size:1em;text-align:center;width:100%;line-height:3em}
 .bg04{margin-top:0px!important}
 .bg_color > .wrapper > div[style*=clear]{margin-bottom:10%}
