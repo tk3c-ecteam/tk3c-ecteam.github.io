@@ -75,7 +75,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 /*商品橫幅*/
 /*品分類*/
 .bg_color{margin-top: 0;}
-.protitle{position:relative;width:100%;height: 115px;text-align:center;display:block;overflow:hidden;background: url('https://events.tk3c.com/events_net/events_net/seasonsale/images/20210514_bar.png') no-repeat;background-size: 100%;display: flex;justify-content: center;}
+.protitle{position:relative;width:100%;height: 113px;text-align:center;display:block;overflow:hidden;background: url('https://events.tk3c.com/events_net/events_net/seasonsale/images/20210514_bar.png') no-repeat;background-size: 100%;display: flex;justify-content: center;}
 .protitle b{color: #006375;font-size: 2.5em;text-align:center;line-height: 1.5em;}
 .protitle i{display:block;color:#f0d17b;font-size:2em;text-align:center;line-height:5em}
 /******第一區塊******/
@@ -165,9 +165,9 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 /*右側選單-PC*/
 .rightbtn{position:fixed;width:100%;height:auto;margin:368px 0px 0px 577px;left:50%;z-index:100;bottom:100px;text-align:center;padding-top:8.5%;padding-left:20px;}
 .rightbtn .actbtn{width:160px;height:auto;display:block;position:relative;border-radius:0 0 10px 10px;padding-bottom:10px;margin-left:3px;margin-top:-50px;}
-.rightbtn .actbtn:before{content:'';position:absolute;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210514_right_top.png) no-repeat;background-size: 100%;width: 130%;height: 190px;z-index:-1;top: -190px;left: -39px;}
+.rightbtn .actbtn:before{content:'';position:absolute;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210514_right_top.png) no-repeat;background-size: 100%;width: 130%;height: 190px;z-index:-1;top: -199px;left: -39px;}
 .rightbtn .actbtn a .link1{height:40px;margin:2% auto;line-height:43px;background: rgb(255 255 255);color:#000;text-decoration:none;box-sizing:border-box;overflow:hidden;text-align:center;border:none;font-size:15px;}
-.rightbtn .actbtn a:last-child::after{content:'';width:100%;height:98px;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210514_go_top.png) no-repeat 60px 15px;mix-blend-mode:screen;background-size: 30% auto;}
+.rightbtn .actbtn a:last-child::after{content:'';width:100%;height:98px;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210514_go_top.png) no-repeat 40px 15px;mix-blend-mode:screen;background-size: 54% auto;}
 .rightbtn .actbtn a .link2{display:none;}
 .rightbtn .actbtn .top{display:block;width:134px;height:86px;background:url(../images/gotop_0311_.png) 0 0 no-repeat;}
 /*右側選單-PC-hover*/
