@@ -49,8 +49,8 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 }
 
 #bank-area .swiper-slide {
-    width: 31% !important;
-    margin: 0 10px;
+    width: auto !important;
+    margin: 0 11px;
 }
 
 #bank-area a {
@@ -59,8 +59,8 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 }
 
 #bank-area a img {
-    min-height: auto;
-    max-height: auto;
+    min-height: 280px;
+    max-height: 280px;
     object-fit: cover;
 }
 .swiper-button-next {
