@@ -190,7 +190,7 @@ html{background-position:0vmax 6vmax;}
 .cloud-group {top: -4%;}
 #bank-area {margin: -8% auto 80px;}
 }
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1440px) {
 html{background-position:0vmax 7vmax;}
 .wrapper{margin:4vmax auto 0;}
 .bg_color > .wrapper > div[id]{margin-top:-0.5%;}
