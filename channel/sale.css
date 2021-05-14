@@ -395,11 +395,12 @@ html {background-position: -37vmin 25vmin;}
 div.bg_color > div.wrapper > h2 {height: 30px;}
 .list_special ul li {margin: 5px 3px;}
 .title-group {margin: -8vmin 4vmin;}
-.title{padding-top: 130px;margin: 160px auto 0 auto !important;}
+.title{padding-top: 130px;}
 }
 @media screen and (min-width:2500px){
 html{background-position:0vmax 4vmax;}
 .title-group {margin: 9vmax auto 0;}
+.title {margin: 160px auto 0 auto !important;}
 }
 @keyframes blink{50%{opacity:0.8;}
 }
