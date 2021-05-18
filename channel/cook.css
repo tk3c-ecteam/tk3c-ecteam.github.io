@@ -657,7 +657,7 @@ body{margin:0px;padding:0;width:100%;position: relative;}
 #kuai3header .words{width:100% !important;}
 #kuai3header .words .font{display:none !important;}
 .m_version_non{display:none;}
-body{margin:0px;padding:0;width:100%;height:auto;}
+body{margin:0px;padding:0;width:100%;height:auto;overflow: hidden;}
 .wrapper{display: block;width:100%;}
 .copyR{padding-bottom: 16vmin;}
 .title:before {width: 34%;top: -3%;left: 35%;}
