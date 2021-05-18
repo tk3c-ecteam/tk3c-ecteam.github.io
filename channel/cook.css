@@ -664,16 +664,17 @@ body{margin:0px;padding:0;width:100%;height:auto;overflow: hidden;}
 .title:after {width: 41%;top: -12%;left: 34%;}
 .navibar_m_btn > .sample-menu-style li {font-size: 14px;}
 
-#bank-area {margin: 0 0 0;padding: 0 0;width: 100%;}
+#bank-area {margin: 0 0 0;padding: 0 5px;width: 100%;}
 #bank-area .swiper-slide {
-    width: 50% !important;
+    width: 54.5% !important;
+    margin-right: 0 !important;
 }
 #bank-area .swiper-button-prev {
     left: 0 !important;
 }
 
 #bank-area a {
-    width: 90%;
+    width: 85%;
 }
 #gotop{display:none;position:fixed;cursor:pointer;z-index:9;width:15%;left:80%;bottom:45px;margin:0;}
 #gotop img{width:100%;float:right;display:block;}
