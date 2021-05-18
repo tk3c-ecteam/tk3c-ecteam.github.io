@@ -666,7 +666,7 @@ body{margin:0px;padding:0;width:100%;height:auto;overflow: hidden;}
 
 #bank-area {margin: 0 0 0;padding: 0 0;width: 100%;}
 #bank-area .swiper-wrapper {
-    margin-left: 56px;
+    margin-left: 5px;
 }
 #bank-area .swiper-slide {
     width: 50% !important;
@@ -674,10 +674,6 @@ body{margin:0px;padding:0;width:100%;height:auto;overflow: hidden;}
 }
 #bank-area .swiper-button-prev {
     left: 0 !important;
-}
-
-#bank-area a {
-    width: 88%;
 }
 
 #gotop{display:none;position:fixed;cursor:pointer;z-index:9;width:15%;left:80%;bottom:45px;margin:0;}
