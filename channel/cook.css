@@ -664,9 +664,10 @@ body{margin:0px;padding:0;width:100%;height:auto;}
 .title:after {width: 41%;top: -12%;left: 34%;}
 .navibar_m_btn > .sample-menu-style li {font-size: 14px;}
 
-#bank-area {margin: 0 auto 0;padding: 0 0;width: 100%;}
+#bank-area {margin: 0 auto 0;padding: 0 9px;width: 100%;}
 #bank-area .swiper-slide {
     width: 47% !important;
+    margin-right: 0 !important;
 }
 #bank-area .swiper-button-prev {
     left: 0 !important;
@@ -982,7 +983,11 @@ h2.protitle:first-child{}
     }
 
     html {
-        background-position: -33vmin 29vmin;
+        background-position: -45vmin 30vmin;
+    }
+
+    .title {
+        margin-top: -25% !important;
     }
 }
 
