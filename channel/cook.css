@@ -666,14 +666,14 @@ body{margin:0px;padding:0;width:100%;height:auto;overflow: hidden;}
 
 #bank-area {margin: 75% auto 0;padding: 0 5px;width: 100%;}
 #bank-area .swiper-slide {
-    width: 53% !important;
+    width: 52.4% !important;
 }
 #bank-area .swiper-button-prev {
     left: 0 !important;
 }
 
 #bank-area a {
-    width: 100%;
+    width: 90%;
 }
 #gotop{display:none;position:fixed;cursor:pointer;z-index:9;width:15%;left:80%;bottom:45px;margin:0;}
 #gotop img{width:100%;float:right;display:block;}
