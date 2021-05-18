@@ -498,6 +498,9 @@ body{margin:0px;padding:0;width:100%;position: relative;}
     .leftbtn {
         top: 30%;
     }
+    .fb-fans {
+        display: block;
+    }
 }
 
 @media screen and (min-width:751px)
@@ -667,7 +670,6 @@ body{margin:0px;padding:0;width:100%;height:auto;overflow: hidden;}
 #bank-area {margin: 75% auto 0;padding: 0 5px;width: 100%;}
 #bank-area .swiper-slide {
     width: 52% !important;
-    margin-right: 2px !important;
 }
 #bank-area .swiper-button-prev {
     left: 0 !important;

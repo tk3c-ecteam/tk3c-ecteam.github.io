@@ -32,8 +32,8 @@ em,i{font-style:normal;}
 .copyR{background:#000;color:#FFF;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microsoft JhengHei,"Apple LiGothic Medium";position: relative;z-index: -1;overflow: hidden;}
-
-.wrapper{display:block;width:1144px;margin:0 auto;position:relative;z-index: -1;}
+.tab-container> ul.nav-tabtop > li {z-index: 10;}
+.wrapper{display:block;width:1144px;margin:0 auto;position:relative;}
 /*主視覺*/
 .title{height:626px;margin:0px auto 0 auto !important;position:relative;}
 .title .arrow{display:block;background:url(../images/title_2.png) 0 0 no-repeat;width:1142px;height:553px;}
@@ -43,7 +43,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 #bank-area {
     background: none;
     position: relative;
-    z-index: 99;
+    z-index: 50;
     height: auto;
     margin: 0 auto 0;
 }
