@@ -664,12 +664,9 @@ body{margin:0px;padding:0;width:100%;height:auto;overflow: hidden;}
 .title:after {width: 41%;top: -12%;left: 34%;}
 .navibar_m_btn > .sample-menu-style li {font-size: 14px;}
 
-#bank-area {margin: 0 0 0;padding: 0 0 0 14px;width: 100%;}
-#bank-area .swiper-wrapper {
-    margin-left: 5px;
-}
+#bank-area {margin: 0 0 0;padding: 0 0 0 5px;width: 100%;}
 #bank-area .swiper-slide {
-    width: 53% !important;
+    width: 57% !important;
     margin-right: 5px !important;
 }
 #bank-area .swiper-button-prev {
