@@ -597,30 +597,6 @@ body{margin:0px;padding:0;width:100%;position: relative;}
     .rightbtn {
         margin: 70px 0px 0px 465px;
     }
-    .leftbtn {
-       left: 5%;
-    }
-    .title-area {
-        width: 50%;
-    }
-    .title-area .sub-title {
-        width: 85%;
-        margin-left: 17%;
-    }
-    .animate-group .aside-right {
-        width: 25%;
-    }
-    .aside-right .mother {
-        top: 11%;
-        right: -8%;
-    }
-    .aside-right .product {
-        bottom: -40%;
-        right: -78%;
-    }
-    .animate-group .aside-left {
-        margin: 15% auto 0;
-    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -632,7 +608,7 @@ body{margin:0px;padding:0;width:100%;position: relative;}
 
 @media screen and (max-width: 1280px) {
     .rightbtn {
-        margin: -116px 0px 0px 404px;
+        margin: -45px 0px 0px 404px;
     }
     #bank-area {
         margin: 5% auto 0;
