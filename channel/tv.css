@@ -85,7 +85,6 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
     top: 140px;
 }
 .step-group span {width: 32%;height: auto;display: block;position: absolute;left: 8%;animation: upAndDown 0.8s  linear infinite alternate;}
-.step-group a {display: block;width: 21%;height: auto;}
 div:nth-of-type(3) {width: 100%;position: relative;}
 .tv-title{width: 49%;position: relative;MARGIN: -4VMAX 12VMAX;overflow: hidden;}
 form>div:nth-child(6){width:100%}
