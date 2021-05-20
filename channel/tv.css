@@ -422,14 +422,14 @@ body{margin:0;padding:0;width:100%;height:100%;}
 #gotop img{width:100%;display:none}
 .title02{width:100%;height:auto;position:relative;margin:0 auto;text-align:center;background:0 0;float:left;}
 img.n01.wow {z-index: -1;position: relative;}
-body {background-size: 185%;background-position:-38vmin 11vmin;}
+body {background-size: 185%;background-position:-46vmin 11vmin;}
 .step-group {margin: -24vmin auto 0;}
 .step-group span {width: 93%;top: -17%;left: -16%;}
 .step-group a{position: static;width: 79%;margin-top: 5%;}
 .step-group a:nth-of-type(1) {margin-top: 40%;}
-.title-group .girl{margin-top: 9%;width: 35%;}
-.title-group h2{top: 0;width: 65%;right: -15%;}
-.title-group span{bottom: 20%;right: 4%;width: 37%;}
+.title-group .girl{margin-top: 9%;margin-left: -9%;width: 45%;}
+.title-group h2{top: 0;width: 68%;right: -17%;}
+.title-group span{bottom: 34%;right: 4%;width: 40%;}
 div:nth-of-type(6) {margin-top: 0;}
 .bannerkok {
     background: url(../images/title_head_m-01.jpg) no-repeat;
