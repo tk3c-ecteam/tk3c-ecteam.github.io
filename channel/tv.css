@@ -57,7 +57,7 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
     width: 100%;
     height: 100%;
     position: relative;
-    margin: -11vmax auto 0;
+    margin: -11vmax auto 32%;
     text-align: center;
 }
 
@@ -87,7 +87,6 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
 }
 .step-group span {width: 32%;height: auto;display: block;position: absolute;left: 8%;animation: upAndDown 0.8s  linear infinite alternate;}
 .step-group a {display: block;width: 21%;height: auto;}
-div:nth-of-type(6) {margin-top: 580px;}
 div:nth-of-type(3) {width: 100%;position: relative;}
 .tv-title{width: 49%;position: relative;MARGIN: -4VMAX 12VMAX;overflow: hidden;}
 form>div:nth-child(6){width:100%}
@@ -193,8 +192,6 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 }
 
 @media screen and (min-width: 2000px) {
-    div:nth-of-type(6) {margin-top: 625px;}
-    .wrapper .tv-title {margin: 0 -12vmax;width: 100%;}
     #gotop {bottom: 4%;}
     .rightbtn {bottom: 300px;}
 }
@@ -324,9 +321,11 @@ img.n01.wow {
     .tv-title{width: 30%;margin: -5vmax 22vmax;}
     .rightbtn {left: 44%;}
     #gotop {left: 41%;bottom: -18%;}
+    .step-group {margin: -13vmax auto 38%;}
+    .protitle {font-size: 4vmax;}
 }
 @media screen and (max-width:1280px){
-.protitle{width:100%;}
+.protitle{width:100%;font-size: 5vmax;line-height: 13vmin;}
 .banner-bg{width: 100%;}
 .banner-btns ul .ddef{padding:10px 6px;}
 .banner-btns ul .ddef .icon img{width:40px;}
@@ -347,7 +346,6 @@ img.n01.wow {
 .protitle {line-height: 2em;font-size: 4vmax;}
 .tv-title {margin: -5vmax 18vmax -25vmin;}
 .step-group a:nth-of-type(2) {top: 155px;}
-div:nth-of-type(6) {margin-top: 470px;}
 }
 @media screen and (max-width:1025px) {
     .acbankbox .list2 ul li{width: 186px;}
@@ -371,12 +369,11 @@ div:nth-of-type(6) {margin-top: 470px;}
     body {background-size: 131% auto;}
     .list_M .hotpromain .hotpro_price2 span {font-size: 225% !important;}
     .acbankbox {width: 100% !important;}
-    .step-group span{top: 90px;left: 3%;}
+    .step-group{margin: -12vmin auto 52%;}
     .step-group a {width: 25%;}
     .step-group a:nth-of-type(1){left: -44%;top: 142px;}
     .step-group a:nth-of-type(2){left: 5%;top: 90px;}
     .step-group a:nth-of-type(3) {left: 55%;top: 10px;}
-    div:nth-of-type(6){margin-top: 30rem;}
     .title span {width: 55%;left: 78%;top: 44%;}
     .wrapper .title {width: 58%;}
 }
