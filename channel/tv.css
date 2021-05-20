@@ -43,7 +43,6 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
     right: 14%;
     top: -13%;
     z-index: -1;
-    animation: slide-up 1.5s linear;
 }
 .title-group span {
     width: 25%;
@@ -51,19 +50,19 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
     position: absolute;
     right: 20%;
     bottom: 23%;
-    animation: slide-up 1.8s linear;
+    animation: slide-up 1.5s linear;
 }
 .step-group {
     width: 100%;
     height: 100%;
     position: relative;
-    margin: -11vmax auto 32%;
+    margin: -11vmax auto 35%;
     text-align: center;
 }
 
 .step-group a {
     display: block;
-    width: 21%;
+    width: 25%;
     height: auto;
     margin: 0 auto;
     position: absolute;
@@ -74,15 +73,15 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
     transition: all 0.5s linear;
 }
 .step-group a:nth-of-type(1) {
-    left: -36%;
+    left: -47%;
     top: 273px;
 }
 .step-group a:nth-of-type(2) {
-    left: 2%;
+    left: -2%;
     top: 215px;
 }
 .step-group a:nth-of-type(3) {
-    left: 40%;
+    left: 44%;
     top: 140px;
 }
 .step-group span {width: 32%;height: auto;display: block;position: absolute;left: 8%;animation: upAndDown 0.8s  linear infinite alternate;}
@@ -314,14 +313,14 @@ img.n01.wow {
 .banner-wrapper .b_width{width:100%}
 .rightbtn {left: 44%;bottom: 100px;}
 #gotop {left: 41%;bottom: -13%;}
-.step-group {margin: -13vmax auto 0;}
+.step-group {margin: -13vmax auto 38%;}
 .step-group span {top: 60px;}
 }
 @media screen and (max-width: 1440px) {
     .tv-title{width: 30%;margin: -5vmax 22vmax;}
     .rightbtn {left: 44%;}
     #gotop {left: 41%;bottom: -18%;}
-    .step-group {margin: -13vmax auto 38%;}
+    .step-group {margin: -13vmax auto 40%;}
     .protitle {font-size: 4vmax;}
 }
 @media screen and (max-width:1280px){
@@ -334,6 +333,7 @@ img.n01.wow {
 .tv-title{margin: -3vmax 20vmax;}
 .rightbtn {left: 38%;}
 #gotop {left: 35%;bottom: -20%;}
+.step-group {margin: -13vmax auto 42%;}
 }
 @media screen and (min-width: 769px) and (max-width: 1100px){
 .wrapper {width: 100%;}
@@ -351,15 +351,15 @@ img.n01.wow {
     .acbankbox .list2 ul li{width: 186px;}
     .protitle {line-height: 2em;}
     .rightbtn {left: 22%;}
-    .step-group a {transition: none;transform: translateY(0);}
+    .step-group a {transition: none;transform: translateY(0);width: 30%;}
     .title-group .girl {width: 30%;}
     .title-group h2{width: 48%;right: 0;top: -13%;}
     .title-group span {width: 30%;right: 12%;bottom: 30%;}
     .step-group span{left: -7%;top: -75px;width: 45%;}
-    .step-group {margin: -10vmax auto 0;}
-    .step-group a:nth-of-type(1){left: -42%;top: 215px;}
+    .step-group {margin: -10vmax auto 45%;}
+    .step-group a:nth-of-type(1){left: -60%;top: 215px;}
     .step-group a:nth-of-type(2){left: -2%;top: 155px;}
-    .step-group a:nth-of-type(3){left: 40%;top: 90px;}
+    .step-group a:nth-of-type(3){left: 55%;top: 90px;}
 }
 @media screen and (max-width:768px){
     .list_F ul li {height: 300px !important;}
@@ -428,9 +428,9 @@ body {background-size: 185%;background-position:-38vmin 11vmin;}
 .step-group span {width: 93%;top: -17%;left: -16%;}
 .step-group a{position: static;width: 79%;margin-top: 5%;}
 .step-group a:nth-of-type(1) {margin-top: 40%;}
-.title-group .girl{margin-top: 9%;}
-.title-group h2{top: 0;width: 58%;right: -9%;}
-.title-group span{bottom: 20%;right: 7%;}
+.title-group .girl{margin-top: 9%;width: 35%;}
+.title-group h2{top: 0;width: 65%;right: -15%;}
+.title-group span{bottom: 20%;right: 4%;width: 37%;}
 div:nth-of-type(6) {margin-top: 0;}
 .bannerkok {
     background: url(../images/title_head_m-01.jpg) no-repeat;
@@ -747,7 +747,7 @@ div:nth-of-type(6) {margin-top: 0;}
         left: 48.5%;
     }
     .step-group {
-        margin: -8vmax auto 0;
+        margin: -8vmax auto 33%;
     }
     .step-group span {
         top: -100px;
