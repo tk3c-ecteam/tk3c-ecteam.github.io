@@ -1,0 +1,520 @@
+﻿@charset "utf-8";
+*{margin: 0;padding: 0}
+*:focus { outline: none; }/*黃框消除*/
+*{-webkit-text-size-adjust:none;}/*字體尺寸限制解除*/
+a{text-decoration:none;}
+img {border:0px; } /*圖片超連結邊框消除*/
+ul { margin: 0; padding: 0;}
+li{ list-style-type:none; margin: 0; padding: 0;}
+body{margin: 0px;padding: 0;height: auto;font-family: Century Gothic,"微軟正黑體";}
+html { margin: 0; padding: 0; height: 100%; background:url(../images/indexbg2.jpg) 0 0 repeat; }
+.boxfly{position: absolute; left:-9999em; top:-9999em;}
+
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+@media screen and (min-width:751px) {
+body {background-image:url(../images/indexbg.jpg); background-repeat:repeat-x; background-position:top center;}
+
+/*主視覺*/
+.title_wrapper{ max-width:1144px; height: auto; position:relative; margin:10px auto 0px auto;background-image:url(../images/title_wrapperbg.png); background-repeat:no-repeat;}
+.titleLeft{ width:560px; height:auto; position: relative; float:left;}
+
+/*title樣式-24hr*/
+.title1{ width:560px; height: 320px; position: relative; float:left;background-image: url(../images/title-24hr.png); background-repeat:no-repeat; background-position:center; margin-top:5px;}
+
+/*title樣式-8hr*/
+.title2{ width:560px; height: 320px; position: relative; float:left;background-image: url(../images/title-8hr.png); background-repeat:no-repeat; background-position:center; margin-top:5px;}
+
+/*title樣式-3hr*/
+.title3{ width:560px; height: 320px; position: relative; float:left;background-image: url(../images/title-3hr.png); background-repeat:no-repeat; background-position:center; margin-top:5px;}
+/*快閃購物最上面banner_手機版*/
+.banner_m{ display:none;}
+
+/*置頂頁籤*/
+.topbar{ width:100%; background-image:url(../images/vipbar4-7_bg.jpg); background-repeat:repeat-x; background-color:#ffe941;}
+.topbar_main{width:1144px; height:120px; background-image:url(../images/vipbar4-7.jpg); background-repeat:no-repeat; background-position:center; display:block; margin:0 auto;}
+
+/*遊戲規則*/
+.playrules1{ width:525px; height:270px; position: relative; float:left;
+ background-image: url(../images/playrules.png); background-repeat:no-repeat; background-position:center; background-size:cover; margin-left:10px; }
+.fontbox01{width: 445px;height: 145px;position: absolute;top: 63px;left: 52px;color: #756881;font-size: 15px;line-height: 26px;letter-spacing: 1px;}
+.fontbox01 strong{font-size:16px; font-weight:normal;}
+.fontbox01 strong em{ color:#f65a07; font-weight:bold;font-style:normal;}
+.copyR{ width:100%;background: #000; color:#FFF; text-align:center; font-size:14px; margin:0 auto; line-height:28px; box-sizing:border-box; padding:10px; letter-spacing:1px; }
+.playrules2{ display:none}
+
+.btn1{
+	width: 206px;
+	height: 43px;
+	position: absolute;
+	bottom: 5px;
+	left: 52px;
+	z-index: 1;
+	background-image: url(../images/btn_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 24px;
+	color: #fff;
+	line-height: 43px;
+	text-align: center;
+	font-weight: bold;
+}
+.btn2{
+	width: 206px;
+	height: 43px;
+	position: absolute;
+	bottom: 5px;
+	left: 287px;
+	z-index: 1;
+	background-image: url(../images/btn_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 24px;
+	color: #fff;
+	line-height: 43px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/**/
+.fix_btn{ display:none; width:100%; height:50px; position:fixed; bottom:0; z-index:88; clear:both;}
+
+
+/*轉盤*/
+.turncircle{ width:580px; height:580px; position: relative; float:right;
+ background-image: url(../images/turncircle.png); background-repeat:no-repeat; background-position:center; background-size:cover; margin-top:20px; }
+.btnshare{width:106px;height:106px;position: absolute;
+background-image: url(../images/fbshare.png); background-repeat:no-repeat; background-position:center; bottom: 8px;right: 21px;background-size:cover; }
+
+/*轉盤轉針－ turn1：轉／turn2:不轉*/
+.turn1{ width:316px; height:316px; position: absolute; background: url(../images/turn1.png); top: 140px; right: 135px;
+/* microsoft ie */
+animation-name: spin; 
+animation-duration: 400ms; /* 2 seconds */
+animation-iteration-count: infinite; 
+animation-timing-function: linear;}
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -632px; }
+}
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -632px; }
+} 
+
+
+.turn2{
+	width: 316px;
+	height: 316px;
+	background: url(../images/turn2.png) 0 0 no-repeat;
+	position: absolute;
+	top: 145px;
+	right: 136px;
+}
+
+
+
+
+/*注意事項*/
+.table_wrapper{width: 1144px; height:auto;background-image: url(../images/mainbg.jpg);background-repeat: y-repeat; padding:10px 0px; margin:70px auto 0 auto;;}
+.note{ display:block; box-sizing:border-box; padding:20px; width:1100px; background-color:rgba(0,0,0,0.5);border-radius: 10px; margin:0 auto; padding-bottom: 130px; }
+.note_title{ width:345px; height: 37px; margin:5px auto;background-image: url(../images/note_title.png);background-repeat: no-repeat;background-position: center;}
+.fontbox02 { width:900px; }
+.fontbox02 ul {
+	display:block;
+	box-sizing:border-box;
+	padding:10px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: normal;
+	list-style-image: url(../images/note_dot.png);
+}
+.fontbox02 ul li{ padding-bottom:10px; letter-spacing:1px;}
+.left_fonbox{ float:left; width:45%; margin-right:50px; margin-left:40px;}
+.right_fontbox{ float:left; width:45%;}
+
+
+/*浮動視窗*/
+.fixbox{background: rgba(0,0,0,0.6); width:100%; height:100%; position:fixed; z-index:9;}
+.fixbox .alignbox{width:1144px; margin:0 auto; text-align:center; }
+.fixbox .alignbox .midbox{width:513px; height:auto;margin:10% auto;position:relative;}
+.fixbox .alignbox .midbox .midbg{background:url(../images/acbox_01.png) no-repeat center top;}
+
+
+.fixbox .alignbox .midbox .midbg .title{ padding:55px 20px 25px 20px; color:#fff; font-size:42px; width:473px; height:47px; line-height:47px;}
+.fixbox .alignbox .midbox .midbg .fontbg{background:url(../images/acbox_02.png) repeat-y center;}
+
+
+.fixbox .alignbox .midbox .midbg .fontbox{padding:0 80px; font-size:22px; width:353px;}
+.fixbox .alignbox .midbox .midbg .fontbox p{ color:#9c500c;font-size:14px; line-height:18px; margin-bottom:0px; display:block; text-align:left; box-sizing:border-box; padding:10px; text-align:justify;}
+.fixbox .alignbox .midbox .midbg .fontbox b{ font-size:36px; line-height:50px; margin-bottom:15px; display:block;}
+.fixbox .alignbox .midbox .midbg .fontbox input{ height: 40px; margin:15px 15px 10px 15px;padding: 0 10px; border: 1px solid #9e9e9e;display: inline-block; text-align: left; width:75%;font-size:16px;}
+.fixbox .alignbox .midbox .midbg .box_foot{ background:url(../images/acbox_04.png) no-repeat center bottom; width:100%; height:34px;}
+
+.fixbox .alignbox .midbox .midbg .fontbox03{padding: 0; font-size: 22px; width: 397px; overflow-y: auto; height: 350px; height: 300px; overflow-y: auto; margin-left:58px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 span{ font-size:16px; line-height:20px; display:block; text-align:center;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong{ width: 40%; font-size: 15px; line-height: 20px; display: inline-block; background: #e6081b; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; color: #fff; padding: 3px 0; text-align: center; font-weight: normal; margin: 0px 3px 5px 3px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong em{ display:block; width:90%; margin:3px; font-style:normal;background: rgba(0,0,0,0.4);border-radius:5px; color:#ff0; padding:5px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong em b{ font-size:28px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 .git_txt{ display:block; height:20px; overflow:hidden; line-height:22px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 .gift_title{ display:block; height:20px; overflow:hidden; font-size:13px; background-color:#F60; color:#fff1ab; }
+
+.fixbox .alignbox .midbox .midbg02{background:url(../images/acbox_03.png) no-repeat center top; height:460px;}
+.fixbox .alignbox .midbox .midbg02 .title-pop {
+    padding: 40px 20px 0px 20px;
+    color: #b10226;
+    font-size: 36px;
+    width: 473px;
+    height: 47px;
+    line-height: 47px;
+}
+.fixbox .alignbox .midbox .midbg02 .title{ padding:40px 20px 0px 20px; color:#b10226; font-size:36px; width:473px; height:47px; line-height:47px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox{padding:0 80px; font-size:22px; width:353px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox em{ display:block; font-size:120px; font-style:normal; font-weight:bold; line-height:100px; color:#c52228;}
+.fixbox .alignbox .midbox .midbg02 .fontbox em b{font-size:28px; background:#c52228; color:#ffd837; border-radius:28px; padding:5px 8px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox p{ display:block; font-size:16px; line-height:26px; margin-top:-15px; margin-bottom:35px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox span{ display:block; color:#fff; font-size:14px; margin-top:10px;}
+
+
+
+/*按鈕*/
+.btn {cursor: pointer;border: 0 none;height: 60px;padding: 10px 25px 10px 70px;  font-size: 30px; border-radius: 10px;  margin: 5px; line-height:70px;}
+.btnr {background: url(../images/hand.png) no-repeat 25px center #e10030;color: #fff;}
+.btny {background: url(../images/hand2.png) no-repeat 25px center #fdef00;color: #922200;}
+
+.close {position:absolute; right:35px; top:-30px; width:59px; height:59px; z-index:9;}
+
+
+
+}
+
+
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ ＩＥ版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+@media screen\0,screen\9 {
+body {background-image:url(../images/indexbg.jpg); background-repeat:no-repeat; background-position:top center;}
+/*快閃購物最上面banner_手機版*/
+.banner_m{ display:none;}
+/*主視覺*/
+.title_wrapper{ max-width:1144px;height:680px; position:relative; margin:10px auto 0px auto;background-image:url(../images/title_wrapperbg.png); background-repeat:no-repeat;}
+.titleLeft{ width:560px; height:auto; position: relative; float:left;}
+
+/*title樣式-24hr*/
+.title1{ width:560px; height: 320px; position: relative; float:left;background-image: url(../images/title-24hr.png); background-repeat:no-repeat; background-position:center; margin-top:5px;}
+
+/*title樣式-8hr*/
+.title2{ width:560px; height: 320px; position: relative; float:left;background-image: url(../images/title-8hr.png); background-repeat:no-repeat; background-position:center; margin-top:5px;}
+
+/*title樣式-3hr*/
+.title3{ width:560px; height: 320px; position: relative; float:left;background-image: url(../images/title-3hr.png); background-repeat:no-repeat; background-position:center; margin-top:5px;}
+
+
+/*遊戲規則*/
+.playrules1{ width:525px; height:270px; position: relative; float:left;
+ background-image: url(../images/playrules.png); background-repeat:no-repeat; background-position:center; background-size:cover; margin-left:10px; }
+.fontbox01{width: 445px;height: 145px;position: absolute;top: 63px;left: 52px;color: #756881;font-size: 15px;line-height: 26px;letter-spacing: 1px;}
+.fontbox01 strong{font-size:16px; font-weight:normal;}
+.fontbox01 strong em{ color:#f65a07; font-weight:bold;font-style:normal;}
+.copyR{ width:100%;background: #000; color:#FFF; text-align:center; font-size:14px; margin:0 auto; line-height:28px; box-sizing:border-box; padding:10px; letter-spacing:1px; }
+.playrules2{ display:none}
+
+.btn1{
+	width: 206px;
+	height: 43px;
+	position: absolute;
+	bottom: 5px;
+	left: 52px;
+	z-index: 1;
+	background-image: url(../images/btn_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 24px;
+	color: #fff;
+	line-height: 43px;
+	text-align: center;
+	font-weight: bold;
+}
+.btn2{
+	width: 206px;
+	height: 43px;
+	position: absolute;
+	bottom: 5px;
+	left: 287px;
+	z-index: 1;
+	background-image: url(../images/btn_bg.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 24px;
+	color: #fff;
+	line-height: 43px;
+	text-align: center;
+	font-weight: bold;
+}
+
+/**/
+.fix_btn{ display:none; width:100%; height:50px; position:fixed; bottom:0; z-index:88; clear:both;}
+
+
+/*轉盤*/
+.turncircle{ width:580px; height:580px; position: relative; float:right;
+ background-image: url(../images/turncircle.png); background-repeat:no-repeat; background-position:center; background-size:cover; margin-top:20px; }
+.btnshare{width:106px;height:106px;position: absolute;
+background-image: url(../images/fbshare.png); background-repeat:no-repeat; background-position:center; bottom: 8px;right: 21px;background-size:cover; }
+
+/*轉盤轉針－ turn1：轉／turn2:不轉*/
+.turn1{ width:316px; height:316px; position: absolute; background: url(../images/turn1.png); top: 140px; right: 135px;
+/* microsoft ie */
+animation-name: spin; 
+animation-duration: 400ms; /* 2 seconds */
+animation-iteration-count: infinite; 
+animation-timing-function: linear;}
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -632px; }
+}
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -632px; }
+} 
+
+
+.turn2{
+	width: 316px;
+	height: 316px;
+	background: url(../images/turn2.png) 0 0 no-repeat;
+	position: absolute;
+	top: 145px;
+	right: 136px;
+}
+
+
+
+
+/*注意事項*/
+.table_wrapper{width: 1144px; height:auto;background-image: url(../images/mainbg.jpg);background-repeat: y-repeat; padding:10px 0px; margin:0px auto;}
+.note{ display:block; box-sizing:border-box; padding:20px; width:1100px; background-color:rgba(0,0,0,0.5);border-radius: 10px; margin:0 auto; margin-bottom:20px; }
+.note_title{ width:345px; height: 37px; margin:5px auto;background-image: url(../images/note_title.png);background-repeat: no-repeat;background-position: center;}
+.fontbox02 { width:900px; }
+.fontbox02 ul {
+	display:block;
+	box-sizing:border-box;
+	padding:10px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: normal;
+	list-style-image: url(../images/note_dot.png);
+}
+.fontbox02 ul li{ padding-bottom:10px; letter-spacing:1px;}
+.left_fonbox{ float:left; width:45%; margin-right:50px; margin-left:40px;}
+.right_fontbox{ float:left; width:45%;}
+
+
+/*浮動視窗*/
+.fixbox{background: rgba(0,0,0,0.6); width:100%; height:100%; position:fixed; z-index:9;}
+.fixbox .alignbox{width:1144px; margin:0 auto; text-align:center; }
+.fixbox .alignbox .midbox{width:513px; height:auto;margin:10% auto;position:relative;}
+.fixbox .alignbox .midbox .midbg{background:url(../images/acbox_01.png) no-repeat center top;}
+
+
+.fixbox .alignbox .midbox .midbg .title{ padding:55px 20px 25px 20px; color:#fff; font-size:42px; width:473px; height:47px; line-height:47px;}
+.fixbox .alignbox .midbox .midbg .fontbg{background:url(../images/acbox_02.png) repeat-y center;}
+
+
+.fixbox .alignbox .midbox .midbg .fontbox{padding:0 80px; font-size:22px; width:353px;}
+.fixbox .alignbox .midbox .midbg .fontbox p{ color:#9c500c;font-size:14px; line-height:18px; margin-bottom:0px; display:block; text-align:left; box-sizing:border-box; padding:10px; text-align:justify;}
+.fixbox .alignbox .midbox .midbg .fontbox b{ font-size:36px; line-height:50px; margin-bottom:15px; display:block;}
+.fixbox .alignbox .midbox .midbg .fontbox input{ height: 40px; margin:15px 15px 10px 15px;padding: 0 10px; border: 1px solid #9e9e9e;display: inline-block; text-align: left; width:75%;font-size:16px;}
+.fixbox .alignbox .midbox .midbg .box_foot{ background:url(../images/acbox_04.png) no-repeat center bottom; width:100%; height:34px;}
+
+.fixbox .alignbox .midbox .midbg .fontbox03{padding:0 80px; font-size:22px; width:353px; text-align:left;  }
+.fixbox .alignbox .midbox .midbg .fontbox03 span{ font-size:16px; line-height:24px; display:block; text-align:center;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong{ width:108px; font-size:19px; line-height:24px;display: inline-block; background:#e6081b; border-radius:10px; color:#fff; padding:3px 0; margin:0 5px 5px 0; text-align:center; font-weight:normal;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong em{ display:block; width:92px; margin:3px; font-style:normal;background: rgba(0,0,0,0.4);border-radius:10px; color:#ff0; padding:5px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong em b{ font-size:28px;}
+
+.fixbox .alignbox .midbox .midbg02{background:url(../images/acbox_03.png) no-repeat center top; height:460px;}
+.fixbox .alignbox .midbox .midbg02 .title{ padding:40px 20px 0px 20px; color:#b10226; font-size:36px; width:473px; height:47px; line-height:47px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox{padding:0 80px; font-size:22px; width:353px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox em{ display:block; font-size:120px; font-style:normal; font-weight:bold; line-height:100px; color:#c52228;}
+.fixbox .alignbox .midbox .midbg02 .fontbox em b{font-size:28px; background:#c52228; color:#ffd837; border-radius:28px; padding:5px 8px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox p{ display:block; font-size:16px; line-height:26px; margin-top:-15px; margin-bottom:35px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox span{ display:block; color:#fff; font-size:14px; margin-top:10px;}
+
+
+
+/*按鈕*/
+.btn {cursor: pointer;border: 0 none;height: 60px;padding: 10px 25px 10px 70px;  font-size: 30px; border-radius: 10px;  margin: 5px; line-height:70px;}
+.btnr {background: url(../images/hand.png) no-repeat 25px center #e10030;color: #fff;}
+.btny {background: url(../images/hand2.png) no-repeat 25px center #fdef00;color: #922200;}
+
+.close {position:absolute; right:35px; top:-30px; width:59px; height:59px; z-index:9;}
+
+}
+
+
+/*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+@media screen and (min-width: 320px) and (max-width: 750px){
+	
+body { width:100%; height:auto; background-size:100%; background-image:url(../images/indexbg_m.jpg); background-repeat:no-repeat; background-position:top center; background-color:#004379; }
+
+#kuai3header{ width:100%; !important; margin: 0px auto; z-index:9999; position:fixed;}
+#kuai3header .words{ width:100% !important;}
+#kuai3header .words .font{ display:none !important;}
+
+
+
+/*手機banner*/
+.banner_m{ display:block; width:100%; padding-top:45px;margin-bottom: 10px;}
+.banner_m img{ width:100%;}
+/*主視覺*/
+.title_wrapper{ max-width:100%;height:auto; position:relative; margin:0 auto;}
+.titleLeft{ width:100%; height:auto;float:none; /*padding-top:45px;*/}
+
+/*title樣式-24hr*/
+.title1{width: 100%;  height: 200px; float: none; background-image: url(../images/title-24hr_m.png); background-repeat: no-repeat; margin: 0px auto;  background-size: contain; background-position: center top;}
+
+/*title樣式-8hr*/
+.title2{width:320px; height: 190px; float:none;background-image: url(../images/title-8hr_m.png); background-repeat:no-repeat; margin:10px auto;}
+
+/*title樣式-3hr*/
+.title3{width:320px; height: 190px; float:none;background-image: url(../images/title-3hr_m.png); background-repeat:no-repeat; margin:10px auto;}
+
+/*轉盤*/
+.turncircle{ width:325px; height:325px; background-size:cover; position: relative; float:none;
+ background-image: url(../images/turncircle.png); background-repeat:no-repeat; margin:0 auto; }
+/*turn1：轉／turn2:不轉*/
+.turncircle .turn1 img{ width:100%; height:auto;}
+.turncircle .turn1{ width:168px; height:168px; position: absolute; background: url(../images/turn1.png); top: 25%; right:25%;background-size:cover;
+/* microsoft ie */
+animation-name: spin; 
+animation-duration: 400ms; /* 2 seconds */
+animation-iteration-count: infinite; 
+animation-timing-function: linear;}
+@keyframes spin {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+@-webkit-keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -632px; }
+}
+@keyframes play {
+   from { background-position:    0px; }
+     to { background-position: -632px; }
+} 
+.turncircle .turn2{ width:168px; height:168px; background: url(../images/turn2.png); position: absolute;top: 25%; right:24%; background-size:cover;}
+
+
+/*遊戲規則*/
+.playrules1{ display:none}
+.playrules2{ display:block; width:100%; height:auto; float:none; margin:10px auto 0 auto; position:relative;/*background-image: url(../images/mainbg_m.jpg);background-repeat: y-repeat;*/ padding:5px 0px; }
+.playrules2 img{ width:100%;}
+.playrules2 .fontbox01{width:100%;height:auto; overflow:hidden; color: #756881;font-size: 16px;line-height: 24px;letter-spacing: 1px; box-sizing:border-box; padding:5% 7% 5% 8%; background-image: url(../images/playrules_m_content.png); background-repeat:repeat-y;  background-position: top center; background-size: 100% 100%;}
+.playrules2 .fontbox01 strong{font-size:17px; font-weight:normal;}
+.playrules2 .fontbox01 strong em{ color:#f65a07; font-weight:bold;font-style:normal;}
+
+
+/*手機專用浮動選單*/
+.fix_btn{ display:block; width:100%; height:55px; position:fixed; bottom:0; z-index:500; clear:both; box-shadow:1px 5px 10px 5px #0b3159;}
+.btn1{ width: 30%; height:55px; float:left; background-color:#fbad05; text-align:center; box-sizing:border-box; padding-top:2px;  font-size:18px; color:#000; padding-top:5px;}
+.btn2{ width: 30%; height:55px; float:left; background-color:#e4007f; text-align:center; box-sizing:border-box; padding-top:2px;  font-size:18px; color:#fff; padding-top:5px;}
+.btn3{ width: 20%; height:55px; float:left; background-color:#3b5998; text-align:center; box-sizing:border-box; padding-top:2px;  font-size:18px; color:#fff; padding-top:5px;}
+.btn4{ width: 20%; height:55px; float:left; background-color:#000; text-align:center; box-sizing:border-box; padding-top:2px;  font-size:18px; color:#fff; padding-top:10px;}
+
+
+/*注意事項*/
+.note{ width:100%; height:auto; margin:10px auto; background-color:rgba(0,0,0,0.5);border-radius: 5px; float:none; box-sizing:border-box; padding:15px 30px 30px 30px;}
+.note_title{ width:80%; height: 35px; margin:5px auto;background-image: url(../images/note_title.png);background-repeat: no-repeat;background-position: center;background-size:cover; }
+.fontbox02 { margin:10px auto;float:none; }
+.fontbox02 ul {width: 100%;height: auto;letter-spacing:1px;float:none;padding-left:10px;color: #fff;font-size: 16px;line-height: 25px;font-weight: normal;list-style-image: url(../images/note_dot.png);}
+.fontbox02 ul li{ padding-bottom:10px; letter-spacing:1px;}
+.left_fonbox{ float:none; }
+.right_fontbox{ float:none; }
+
+.btnshare{width:68px;height:68px;position: absolute;
+background-image: url(../images/fbshare.png); background-repeat:no-repeat; background-position:center; bottom: 4px;right: 1px;background-size:cover; }
+
+.copyR{ width:100%;background: #000; color:#FFF; text-align:center; font-size:14px; margin:0 auto; line-height:20px; box-sizing:border-box; padding:10px 10px 70px 10px; letter-spacing:1px; }
+
+.table_wrapper{width:100%; height:auto;background-image: url(../images/mainbg_m.jpg);background-repeat: y-repeat; padding:5px 0px; margin:0px auto;}
+
+
+
+
+/*浮動視窗*/
+.fixbox{background: rgba(0,0,0,0.6); width:100%; height:100%; position:fixed; z-index:99;}
+.fixbox .alignbox{width:100%; margin:0 auto; text-align:center; }
+.fixbox .alignbox .midbox{ display:block; height:auto; margin:0 auto;position:relative; margin-top:60px;}
+.fixbox .alignbox .midbox .midbg{background:url(../images/acbox_01.png) no-repeat center top; width:320px; height:auto; margin:0 auto; }
+
+
+.fixbox .alignbox .midbox .midbg .title{ padding:0; color:#fff; font-size:20px; width:100%; height:47px; line-height:135px;}
+.fixbox .alignbox .midbox .midbg .fontbg{background:url(../images/acbox_02.png) repeat-y center;}
+
+
+.fixbox .alignbox .midbox .midbg .fontbox{ font-size:22px; width:100%; margin-top:12%; padding-top:10px;}
+.fixbox .alignbox .midbox .midbg .fontbox p{ color:#9c500c;font-size:14px; line-height:18px; margin-bottom:0px; display:block; text-align:left; box-sizing:border-box; padding:10px 10px 0 10px; text-align:justify;}
+.fixbox .alignbox .midbox .midbg .fontbox b{ font-size:36px; line-height:50px; margin-bottom:15px; display:block;}
+.fixbox .alignbox .midbox .midbg .fontbox input{ height: 40px;margin:5px 15px 0px 15px;padding: 0 10px; border: 1px solid #9e9e9e;display: inline-block; text-align: left; width:75%;font-size:16px;}
+.fixbox .alignbox .midbox .midbg .box_foot{ background:url(../images/acbox_04.png) no-repeat center bottom; width:100%; height:34px;}
+
+.fixbox .alignbox .midbox .midbg .fontbox03{ font-size:22px; width:100%; margin-top:40px; padding-top:10px; max-height:310px; overflow-x: hidden; overflow-y: auto;}
+.fixbox .alignbox .midbox .midbg .fontbox03 span{ font-size:16px; line-height:24px; display:block;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong{ width:30%; font-size:19px; line-height:24px;display: inline-block; background:#e6081b; border-radius:10px; color:#fff; padding:3px 0; margin:0 5px 5px 0; text-align:center; font-weight:normal;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong em{ display:block; width:80%; margin:3px; font-style:normal;background: rgba(0,0,0,0.4);border-radius:10px; color:#ff0; padding:5px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong em b{ font-size:28px;}
+.detail{}
+
+.fixbox .alignbox .midbox .midbg02{ display:block; width:100%; height:auto; background:url(../images/acbox_03.png) no-repeat center top; height:auto;}
+.fixbox .alignbox .midbox .midbg02 .title-pop {
+    padding: 40px 20px 0px 20px;
+    color: #b10226;
+    font-size: 36px;
+    width: 320px;
+}
+
+.fixbox .alignbox .midbox .midbg02 .title{ padding:0; color:#b10226; font-size:36px; width:100%; height:47px; line-height:110px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox{padding:0; font-size:22px; width:100%;}
+.fixbox .alignbox .midbox .midbg02 .fontbox em{ display:block; font-size:120px; font-style:normal; font-weight:bold; line-height:100px; color:#c52228;}
+.fixbox .alignbox .midbox .midbg02 .fontbox em b{font-size:28px; background:#c52228; color:#ffd837; border-radius:28px; padding:5px 8px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox p{ display:block; font-size:16px; line-height:26px; margin-top:-15px; margin-bottom:35px;}
+.fixbox .alignbox .midbox .midbg02 .fontbox span{ display:block; color:#fff; font-size:14px; margin-top:10px; padding-bottom:100px;}
+
+.fixbox .alignbox .midbox .midbg .fontbox03{padding: 0; font-size: 22px; width: 320px; overflow-y: auto; height: 350px; height: 300px; overflow-y: auto;}
+.fixbox .alignbox .midbox .midbg .fontbox03 span{ font-size:16px; line-height:20px; display:block; text-align:center;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong{ width: 45%; font-size: 15px; line-height: 20px; display: inline-block; background: #e6081b;color: #fff; padding: 3px 0; text-align: center; font-weight: normal; margin: 5px 3px 5px 3px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong em{ display:block; width:89%; margin:3px; font-style:normal;background: rgba(0,0,0,0.4);border-radius:5px; color:#ff0; padding:5px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 strong em b{ font-size:28px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 .git_txt{ display:block; height:20px; overflow:hidden; line-height:22px;}
+.fixbox .alignbox .midbox .midbg .fontbox03 .gift_title{ display:block; height:20px; overflow:hidden; font-size:13px; background-color:#F60; color:#fff1ab; }
+.fixbox .alignbox .midbox .midbg .photo03{padding: 0; background:#F7D14F; height:15px;}
+.fixbox .alignbox .midbox .midbg .photo03 img{ display:none;}
+
+
+
+
+/*按鈕*/
+.btn {cursor: pointer;border: 0 none;height: 60px;padding: 10px 25px 10px 50px;  font-size: 20px; border-radius: 10px;  margin: 5px; line-height:70px;}
+.btnr {background: url(../images/hand_m.png) no-repeat 25px center #e10030;color: #fff;}
+.btny {background: url(../images/hand2_m.png) no-repeat 25px center #fdef00;color: #922200;}
+
+
+.close {position:absolute; right:2%; top:-3%; width:15%; height:150%; z-index:9;}
+.close img{ width:45px; height:45px;}
+
+
+
+
+}
