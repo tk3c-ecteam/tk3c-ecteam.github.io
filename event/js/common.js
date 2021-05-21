@@ -255,6 +255,7 @@ const appendBanks = (banks = '',type = '') => {
     }
     let imagePath = "https://events.tk3c.com/events_net/events_net/";
     let bankBannerHtml = "<div id='bank-area'>" +
+    "<div class='bank-container'>" +
     "<div class='swiper-wrapper'>";
     for (let x = 0; x < banks.length;x++) {
         bankBannerHtml += "<div class='swiper-slide'><a href='"+ banks[x].url +"' target='_blank'><img src='"+ imagePath + banks[x].image +"'></a></div>";
@@ -279,7 +280,7 @@ const appendBanks = (banks = '',type = '') => {
         "<div class='swiper-button-next'></div>";
     }
 
-    bankBannerHtml += "</div>";
+    bankBannerHtml += "</div></div>";
     return bankBannerHtml;
 }
 
@@ -295,7 +296,7 @@ const swiperBank = (options = '',element = '') => {
 
     //預設為銀行區塊
     if (element == '') {
-        element = '#bank-area';
+        element = '.bank-container';
     }
     setTimeout(function(){
         new Swiper(element,options);
