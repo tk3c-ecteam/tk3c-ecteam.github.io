@@ -62,7 +62,7 @@ function microtime() {
 						function () {
 							//var options = {};
 							var options = {
-								amount: 80,
+								amount: 50,
 								size: [10,40],
 								rotation: [10, 0],
 								speed: [150, 500],
