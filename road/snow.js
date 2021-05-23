@@ -71,9 +71,9 @@ function microtime() {
 								amplitude: [30, 80],
 								alpha: [0.4, 1],
 								images: [
-									"http://localhost:5566/piyan/dist/images/red.png",
-									"http://localhost:5566/piyan/dist/images/dollar.png",
-									"http://localhost:5566/piyan/dist/images/red_open.png"
+									"https://tk3c-ecteam.github.io/road/dist/images/red.png",
+									"https://tk3c-ecteam.github.io/road/dist/images/dollar.png",
+									"https://tk3c-ecteam.github.io/road/dist/images/red_open.png"
 								]
 							};
 
@@ -100,9 +100,9 @@ function microtime() {
 								amplitude: [60, 80],
 								alpha: [0.4, 1],
 								images: [
-									"http://localhost:5566/piyan/dist/images/red.png",
-									"http://localhost:5566/piyan/dist/images/dollar.png",
-									"http://localhost:5566/piyan/dist/images/red_open.png"
+									"https://tk3c-ecteam.github.io/road/dist/images/red.png",
+									"https://tk3c-ecteam.github.io/road/dist/images/dollar.png",
+									"https://tk3c-ecteam.github.io/road/dist/images/red_open.png"
 								]
 							};
 
