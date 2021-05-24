@@ -42,6 +42,7 @@ var app = new Vue({
       this.count++;
       if (this.count > 1) {
         this.isWarn = true;
+        alert('今天已玩過，明天請早');
         return false;
       }
 
@@ -57,6 +58,7 @@ var app = new Vue({
       setTimeout(() => {
         this.roll = false;
         this.reward = this.rewardList[data];
+        alert(this.reward);
         this.isAlert = true;
       },4000);
     },
