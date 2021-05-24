@@ -1,0 +1,159 @@
+var app = new Vue({
+  el: '#envelope-container',
+  data: {
+    rewardList: [0,10,50,100],
+    isShow: false,
+    isAlert: false,
+    isWarn: false,
+    reward: '',
+    email: '',
+    phone: '',
+    emailError: '',
+    phoneError: '',
+    timing: 3,
+    active: false,
+    redImg: 'red',
+    count: 0,
+    rewardImg: '',
+    alertImg: '',
+    isRule: false
+  },
+  mounted() {
+    let today = new Date();
+    let incoming = new Date('2021/06/07 10:00:00');
+    let future = new Date('2021/06/18');
+
+    /*if (today < incoming) {
+        this.alertImg = this.getImgUrl('incoming');
+        this.isWarn = true;
+        return false;
+    }*/
+    this.delayShow();
+
+    this.alertImg = this.getImgUrl('red_alert');
+    if (today > future) {
+      this.alertImg = this.getImgUrl('red_alert_end');
+    }
+  },
+  methods: {
+    delayShow() {
+      //延遲載入
+      setTimeout(() => {
+        this.isShow = true;
+      },2000);
+    },
+    closeAlert() {
+      //關閉視窗
+      if (event.target.getAttribute('class') == 'detail') {
+        return false;
+      }
+      this.isShow = false;
+      this.isAlert = false;
+      this.isWarn = false;
+      $("#alert-group").css('overflow-y','none');
+      $('body').css('overflow-y','auto');
+    },
+    randomList() {
+        const number = Math.floor(Math.random() * this.rewardList.length);
+        return number;
+    },
+    choice(e) {
+        this.count++;
+
+        if (this.count > 1) {
+            this.isWarn = true;
+            return false;
+        }
+
+        e.target.src = this.getImgUrl('red_open');
+        this.reward = this.rewardList[this.randomList()];
+        this.getRewardImg(this.reward);
+            setTimeout(() => {
+                this.isAlert = true;
+            }, 300);
+    },
+    goRain() {
+      //紅包雨
+      this.isShow = false;
+      $('#particle_canvas').fadeIn();
+      var countdown = setInterval(() => {
+          this.timing--;
+          if (this.timing === 0) {
+              $('#particle_canvas').hide();
+              this.active = true;
+              clearInterval(countdown);
+          }
+      }, 1000);
+    },
+    checkform(e) {
+      //登入驗證
+      if (!this.email) {
+        this.emailError = "email不能為空!";
+      }
+      if (!this.phone) {
+        this.phoneError = "電話不能為空!";
+      }
+
+      if (this.checkEmail(this.email) === false) {
+        this.emailError = 'email缺少@格式不正確!';
+      }
+      if (this.email && this.phone) {;
+        this.closeAlert(); //關閉彈跳視窗
+        this.goRain();
+        //this.sendAjaxData(); 傳資料到後端
+        setTimeout(() => {
+          this.emailError = '';
+          this.phoneError = '';
+        },80);
+        return true;
+      }
+      e.preventDefault();
+    },
+    checkEmail(email) {
+      //email格式驗證
+      const rule = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if (!rule.test(email)) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    sendAjaxData() {
+      //傳送會員資料到後端
+      $.ajax({
+        url: '',
+        data: '',
+        type: 'json',
+        method: 'post',
+        success: function(data) {
+          console.log(data);
+        }
+      });
+    },
+    getImgUrl(image) {
+        let img = 'https://tk3c-ecteam.github.io/road/dist/images/' + image + '.png';
+        return img;
+    },
+    getRewardImg(reward) {
+      switch (reward) {
+        case 0:
+          this.rewardImg = this.getImgUrl('bg_0');
+          break;     
+        case 10:
+          this.rewardImg = this.getImgUrl('bg_10');
+          break;
+        case 50:
+          this.rewardImg = this.getImgUrl('bg_50');
+          break;        
+        case 100:
+          this.rewardImg = this.getImgUrl('bg_100');
+          break;
+      }
+    },
+    seeRule() {
+      this.isRule = true;
+      $("#alert-group").css('overflow-y','scroll');
+      $('body').css('overflow-y','none');
+    }
+  },
+});

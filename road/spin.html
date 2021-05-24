@@ -24,50 +24,62 @@
         <div id="login-group" class="alert-style" v-if="isShow">
             <div class="alert-content">
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
-                <h2>618搶先攻略</h2>
                 <div class="inner-group">
+                    <div class="loginimg"><img class="loginimg" src="./dist/images/login.png"></div>
                     <form class="login-form">
                         <label for="email">
                             <input name="email" v-model="email" type="text" placeholder="請輸入您的email">
                             <p v-if="emailError" class="error">{{ emailError }}</p>
                         </label>
-                        <label for="phone"><input name="phone" v-model="phone" type="text" maxlength="11" placeholder="請輸入您的手機號碼">
+                        <label for="phone"><input name="phone" v-model="phone" type="tel" maxlength="11" placeholder="請輸入您的手機號碼">
                             <p v-if="phoneError" class="error">{{ phoneError }}</p>
                         </label>
-                        <a class="normalGet" type="submit" @click="checkform">會員領獎</a>
+                        <a class="normalGet" type="submit" @click="checkform"><img src="./dist/images/bt_ok.png"></a>
                     </form>
                 </div>
             </div>
         </div>
 
-        <!-- 領取折價券視窗 -->
-        <div id="alert-group" class="alert-style" v-if="isAlert">
+         <!-- 領取折價券視窗 -->
+         <div id="alert-group" class="alert-style" v-if="isAlert">
             <div class="alert-content">
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
-                <h2>行家帶路瘋狂 go</h2>
                 <div class="inner-group">
-                    <h3>恭喜您 獲得</h3>
-                    <p class="reward-text">{{ reward }} 元</p>
-                    <h5>折價券</h5>
+                    <p class="light"><img src="./dist/images/light.png"></p>
+                    <img class="rewardimg" :src="rewardImg">
                 </div>
                 <div class="bottom-footer">
-                    <a class="sure-get" @click="closeAlert">確定領券</a>
-                    <a class="check-list" href="" target="_blank">查看已領折價券</a>
-                    <a class="detail">查看折價券使用說明</a>
+                    <a class="sure-get" @click="closeAlert"><img src="./dist/images/bt_ok.png"></a>
+                    <a class="check-list" href="" target="_blank"><img src="./dist/images/bt_query.png"></a>
+                    <a class="detail" href="#pay-rule" @click="seeRule"><img src="./dist/images/bt_Instructions.png"></a>
+                </div>
+
+                <div id="discount-rule" class="rule-group" v-if="isRule">
+                    <h2><img src="./dist/images/pay_rule.png"></h2>
+                    <div class="rule-text">
+                        <h3>Q: AWESOME轉好禮的折價券使用期限?</h3>
+                        <p>A: 使用期限為2021/06/011 00:00~2021/06/23 23:59</p>
+                        <h3>Q: 什麼是燦坤線上購物折價券?</h3>
+                        <p>A:燦坤線上購物結帳指定商品時折抵，折抵範圍、方式與使用期限，依各折價券使用方式為準。</p>
+                        <h3>Q: 怎麼使用折價券?</h3>
+                        <p>A: 結帳時輸入折價券序號，按下確定按鈕立即享受折扣優惠!</p>
+                        <h3>Q: 購物金能跟折價券一起使用嗎?</h3>
+                        <p>A: 一個商品可使用一種折扣方式。您可選擇用折價券或是購物金折抵，兩者僅可擇一使用</p>
+    
+                        <div class="copyright">*本公司保有最終修改、變更、活動解釋即取消活動之權利，若有相關異動將會公告於網站，恕不另行通知。</div>
+                    </div>
                 </div>
             </div>
-        </div>
 
         <!-- 彈出警告訊息 -->
-        <div id="warning-group" class="alert-style" v-if="isWarn">
+        <div id="warning-group" class="alert-style" v-if="isWarn" @click="closeAlert">
             <div class="alert-content">
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
-                <h2>行家帶路瘋狂 go</h2>
                 <div class="inner-group">
-                    <p class="warning-text" v-html="warnText"></p>
+                    <p class="warning-text"><img :src="alertImg"></p>
                 </div>
                 <div class="bottom-footer">
-                    <a id="sure" @click="closeAlert">確定</a>
+                    <a id="sure" @click="closeAlert"><img src="./dist/images/bt_ok.png"></a>
                 </div>
             </div>
         </div>

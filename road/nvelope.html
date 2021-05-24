@@ -14,6 +14,7 @@
 <body>
     <canvas id="particle_canvas"></canvas>
     <div id="envelope-container">
+        <a class="exciting-game"><img src=""></a>
         <section class="envel-content" :class="{active: active}">
             <ul>
                 <li v-for="(x,index) in rewardList">
@@ -33,10 +34,10 @@
                             <input name="email" v-model="email" type="text" placeholder="請輸入您的email">
                             <p v-if="emailError" class="error">{{ emailError }}</p>
                         </label>
-                        <label for="phone"><input name="phone" v-model="phone" type="text" maxlength="11" placeholder="請輸入您的手機號碼">
+                        <label for="phone"><input name="phone" v-model="phone" type="tel" maxlength="11" placeholder="請輸入您的手機號碼">
                             <p v-if="phoneError" class="error">{{ phoneError }}</p>
                         </label>
-                        <a class="normalGet" type="submit" @click="checkform('red');"><img src="./dist/images/bt_ok.png"></a>
+                        <a class="normalGet" type="submit" @click="checkform"><img src="./dist/images/bt_ok.png"></a>
                     </form>
                 </div>
             </div>
@@ -53,24 +54,46 @@
                 <div class="bottom-footer">
                     <a class="sure-get" @click="closeAlert"><img src="./dist/images/bt_ok.png"></a>
                     <a class="check-list" href="" target="_blank"><img src="./dist/images/bt_query.png"></a>
-                    <a class="detail"><img src="./dist/images/bt_Instructions.png"></a>
+                    <a class="detail" href="#pay-rule" @click="seeRule"><img src="./dist/images/bt_Instructions.png"></a>
+                </div>
+            </div>
+
+            <div id="pay-rule" class="rule-group" v-if="isRule">
+                <h2><img src="./dist/images/pay_rule.png"></h2>
+                <div class="rule-text">
+                    <h3>Q: 年中慶紅包送的購物金?</h3>
+                    <p>A: 使用期限為2021/06/07 00:00~2021/06/23 23:59</p>
+                    <h3>Q: 什麼是燦坤線上購物金?</h3>
+                    <p>A: 結帳時可在購物車勾選[我要使用購物金]，折抵的金額以會員帳戶購物金餘額與該商品可抵購物金上限取低者為折抵上限</p>
+                    <b>使用範例:</b>
+                    <p class="normal">A 商品網路價2500可折購物金1%，若米小鴨有購物金1000元，<br>
+                    則可以用2475元的價格購買A商品，並且剩下購物金975元。</p>
+                    <p class="normal">B 商品網路價37800可折購物金3%，若米小鴨有購物金5000元，<br>
+                        則可以用36666元的價格購買B商品，購物金餘額3866元。</p>
+                    <h3>Q: 購物金能跟折價券同時使用嗎?</h3>
+                    <p>A: 一個商品可使用一種折扣方式。您可選擇用折價券或是購物金折抵，兩者僅可擇一使用。</p>
+                    <h3>Q: 購物金能夠折抵運費嗎?</h3>
+                    <p>購物金不可用於底運費</p>
+
+                    <div class="copyright">*本公司保有最終修改、變更、活動解釋即取消活動之權利，若有相關異動將會公告於網站，恕不另行通知。</div>
                 </div>
             </div>
         </div>
 
         <!-- 彈出警告訊息 -->
-        <div id="warning-group" class="alert-style" v-if="isWarn">
+        <div id="warning-group" class="alert-style" v-if="isWarn" @click="closeAlert">
             <div class="alert-content">
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
                 <div class="inner-group">
                     <p class="warning-text"><img :src="alertImg"></p>
                 </div>
                 <div class="bottom-footer">
-                    <a id="sure" @click="closeAlert">確定</a>
+                    <a id="sure" @click="closeAlert"><img src="./dist/images/bt_ok.png"></a>
                 </div>
             </div>
         </div>
     </div>
+    <script src="./assets/js/snow.js"></script>
     <script src="./dist/js/red.js"></script>
 </body>
 </html>
