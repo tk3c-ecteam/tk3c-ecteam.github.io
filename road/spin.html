@@ -26,9 +26,6 @@
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
                 <h2>618搶先攻略</h2>
                 <div class="inner-group">
-                    <a class="memberGet" @click="closeAlert">會員領獎</a>
-                    <hr>
-                    <p>還不是會員嗎?請輸入email和手機號碼</p>
                     <form class="login-form">
                         <label for="email">
                             <input name="email" v-model="email" type="text" placeholder="請輸入您的email">
@@ -37,7 +34,7 @@
                         <label for="phone"><input name="phone" v-model="phone" type="text" maxlength="11" placeholder="請輸入您的手機號碼">
                             <p v-if="phoneError" class="error">{{ phoneError }}</p>
                         </label>
-                        <a class="normalGet" type="submit" @click="checkform">非會員領獎</a>
+                        <a class="normalGet" type="submit" @click="checkform">會員領獎</a>
                     </form>
                 </div>
             </div>

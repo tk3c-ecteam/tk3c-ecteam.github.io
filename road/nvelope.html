@@ -27,9 +27,6 @@
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
                 <h2>618搶先攻略</h2>
                 <div class="inner-group">
-                    <a class="memberGet" @click="goRain">會員領獎</a>
-                    <hr>
-                    <p>還不是會員嗎?請輸入email和手機號碼</p>
                     <form class="login-form">
                         <label for="email">
                             <input name="email" v-model="email" type="text" placeholder="請輸入您的email">
@@ -38,7 +35,7 @@
                         <label for="phone"><input name="phone" v-model="phone" type="text" maxlength="11" placeholder="請輸入您的手機號碼">
                             <p v-if="phoneError" class="error">{{ phoneError }}</p>
                         </label>
-                        <a class="normalGet" type="submit" @click="checkform">非會員領獎</a>
+                        <a class="normalGet" type="submit" @click="checkform('red')">會員領獎</a>
                     </form>
                 </div>
             </div>
@@ -48,16 +45,21 @@
         <div id="alert-group" class="alert-style" v-if="isAlert">
             <div class="alert-content">
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
-                <h2>行家帶路瘋狂 go</h2>
                 <div class="inner-group">
-                    <h3>恭喜您 獲得</h3>
-                    <p class="reward-text">{{ reward }} 元</p>
-                    <h5>購物金</h5>
+                    <div class="rewardimg"><img :src="rewardImg"></div>
+                    <div class="reward" v-if="reward == 0">
+                        <p class="reward-text">別氣餒!<br>明天繼續抽~</p>
+                    </div>
+                    <div class="reward" v-else>
+                        <h3>恭喜您獲得</h3><br>
+                        <p class="reward-text">{{ reward }}</p><em>元</em>購物金
+                        <h5>真是太幸運了</h5>
+                    </div>
                 </div>
                 <div class="bottom-footer">
-                    <a class="sure-get" @click="closeAlert">確定領取</a>
-                    <a class="check-list" href="" target="_blank">查看已領購物金</a>
-                    <a class="detail">查看購物金使用說明</a>
+                    <a class="sure-get" @click="closeAlert"><img src="./dist/images/bt_ok.png"></a>
+                    <a class="check-list" href="" target="_blank"><img src="./dist/images/bt_query.png"></a>
+                    <a class="detail"><img src="./dist/images/bt_Instructions.png"></a>
                 </div>
             </div>
         </div>
