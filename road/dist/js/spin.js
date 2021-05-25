@@ -1,1 +1,127 @@
-!function(e){var t={};function r(n){if(t[n])return t[n].exports;var i=t[n]={i:n,l:!1,exports:{}};return e[n].call(i.exports,i,i.exports,r),i.l=!0,i.exports}r.m=e,r.c=t,r.d=function(e,t,n){r.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},r.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},r.t=function(e,t){if(1&t&&(e=r(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var i in e)r.d(n,i,function(t){return e[t]}.bind(null,i));return n},r.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return r.d(t,"a",t),t},r.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},r.p="",r(r.s=39)}({39:function(e,t,r){r(40),e.exports=r(41)},40:function(e,t,r){},41:function(e,t){new Vue({el:"#spin-container",data:{roll:!1,count:0,angle:0,rewardList:["spin9","spin100","spin202","spin300","spin500","spin1000","spin1500","spin2000","spinM100","spinMM500"],isShow:!1,isAlert:!1,isWarn:!1,reward:"",email:"",password:"",emailError:"",passError:"",rewardImg:"",alertImg:"",isRule:!1,isOpen:!0},mounted:function(){var e=new Date,t=new Date("2021/06/18");new Date("2021/06/07 10:00:00");this.alertImg="./dist/images/spin_alert.png",e>t&&(this.alertImg="./dist/images/spin_alert_end.png")},methods:{closeAlert:function(){this.isAlert=!1,this.isWarn=!1,$("#alert-group").css("overflow-y","none"),$("body").css("overflow-y","auto")},spin:function(){if(this.count++,this.count>1)return console.log("NO"),this.isWarn=!0,!1;var e=Math.floor(Math.random()*this.rewardList.length);this.rotate(e)},rotate:function(e){var t=this;this.roll=!0;var r=this.angle,n=this.rewardList;this.angle=r-r%360+2880+360/n.length*e,setTimeout((function(){t.roll=!1,t.reward=t.rewardList[e],t.rewardImg="./dist/images/"+t.reward+".png",t.isAlert=!0}),4e3)},delayShow:function(){var e=this;setTimeout((function(){e.isShow=!0}),2e3)},checkform:function(e){var t=this;if(this.email||(this.emailError="email不能為空!"),this.password||(this.passError="密碼不能為空!"),!1===this.checkEmail(this.email)&&(this.emailError="email缺少@格式不正確!"),this.email&&this.password)return this.closeAlert(),setTimeout((function(){t.emailError="",t.passError=""}),80),!0;e.preventDefault()},checkEmail:function(e){return!!/^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(e)},sendAjaxData:function(){$.ajax({url:"",data:"",type:"json",method:"post",success:function(e){console.log(e)}})},seeRule:function(){this.isRule=!0,$("#alert-group").css("overflow-y","scroll"),$("body").css("overflow-y","none")}}})}});
+var app = new Vue({
+  el: '#spin-container',
+  data: {
+    roll: false,
+    count: 0,
+    angle: 0,
+    rewardList: ["spin9","spin100","spin202","spin300",
+    "spin500","spin1000","spin1500","spin2000","spinM100","spinMM500"],
+    isShow: false,
+    isAlert: false,
+    isWarn: false,
+    reward: '',
+    email: '',
+    password: '',
+    emailError: '',
+    passError: '',
+    rewardImg: '',
+    alertImg: '',
+    isRule: false,
+    isOpen: true
+  },
+  mounted() {
+    let today = new Date();
+    let future = new Date('2021/06/18');
+    let incoming = new Date('2021/06/07 10:00:00');
+
+    //活動尚未開放顯示圖
+    /*if (today < incoming) {
+      this.isOpen = false;
+      return false;
+    }*/
+
+    this.alertImg = './dist/images/spin_alert.png';
+    if (today > future) {
+      this.alertImg = './dist/images/spin_alert_end.png';
+    }
+  },
+  methods: {
+    closeAlert() {
+      //關閉視窗
+      this.isAlert = false;
+      this.isWarn = false;
+      $("#alert-group").css('overflow-y','none');
+      $('body').css('overflow-y','auto');
+    },
+    spin() {
+      //按下轉盤按鈕
+      this.count++;
+      if (this.count > 1) {
+        console.log('NO');
+        this.isWarn = true;
+        return false;
+      }
+
+     const data = Math.floor(Math.random() * this.rewardList.length);
+     this.rotate(data);
+    },
+    rotate(data) {
+      //轉盤旋轉
+      this.roll = true;
+      const {angle,rewardList} = this;
+      this.angle = angle - angle % 360 + 8 * 360 + (360 / rewardList.length * data);
+      setTimeout(() => {
+        this.roll = false;
+        this.reward = this.rewardList[data];
+        this.rewardImg = './dist/images/' + this.reward + '.png';
+        this.isAlert = true;
+      },4000);
+    },
+    delayShow() {
+      //延遲載入
+      setTimeout(() => {
+        this.isShow = true;
+      },2000);
+    },
+    checkform(e) {
+      //登入驗證
+      if (!this.email) {
+        this.emailError = "email不能為空!";
+      }
+      if (!this.password) {
+        this.passError = "密碼不能為空!";
+      }
+
+      if (this.checkEmail(this.email) === false) {
+        this.emailError = 'email缺少@格式不正確!';
+      }
+      if (this.email && this.password) {;
+        this.closeAlert(); //關閉彈跳視窗
+        //this.sendAjaxData(); 傳資料到後端
+        setTimeout(() => {
+          this.emailError = '';
+          this.passError = '';
+        },80);
+        return true;
+      }
+      e.preventDefault();
+    },
+    checkEmail(email) {
+      //email格式驗證
+      const rule = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if (!rule.test(email)) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    sendAjaxData() {
+      //傳送會員資料到後端
+      $.ajax({
+        url: '',
+        data: '',
+        type: 'json',
+        method: 'post',
+        success: function(data) {
+          console.log(data);
+        }
+      });
+    },
+    seeRule() {
+      this.isRule = true;
+
+      $("#alert-group").css('overflow-y','scroll');
+      $('body').css('overflow-y','none');
+    }
+  },
+});
