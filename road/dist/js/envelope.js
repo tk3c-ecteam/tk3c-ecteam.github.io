@@ -23,18 +23,18 @@ var app = new Vue({
     let incoming = new Date('2021/06/07 10:00:00');
     let future = new Date('2021/06/18');
 
-    //尚未開放
-    /*if (today < incoming) {
-        this.alertImg = this.getImgUrl('incoming');
-        this.isWarn = true;
-        return false;
-    }*/
     this.alertImg = this.getImgUrl('red_alert');
     if (today > future) {
       this.alertImg = this.getImgUrl('red_alert_end');
     }
 
     this.goRain();
+     //還沒到6/7顯示尚未開放
+    /*if (today < incoming) {
+        this.alertImg = this.getImgUrl('incoming');
+        this.isWarn = true;
+        $('#particle_canvas').hide();
+    }*/
   },
   methods: {
     delayShow() {
@@ -91,7 +91,7 @@ var app = new Vue({
       }, 1000);
     },
     checkform(e) {
-      //登入驗證
+       //登入驗證(用不到可跳過)
       if (!this.email) {
         this.emailError = "email不能為空!";
       }

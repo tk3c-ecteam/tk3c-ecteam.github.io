@@ -4,6 +4,7 @@ var app = new Vue({
     roll: false,
     count: 0,
     angle: 0,
+    //轉盤轉到的獎勵
     rewardList: ["spin9","spin100","spin202","spin300",
     "spin500","spin1000","spin1500","spin2000","spinM100","spinMM500"],
     isShow: false,
@@ -20,34 +21,56 @@ var app = new Vue({
     isOpen: true
   },
   mounted() {
-    let today = new Date();
-    let future = new Date('2021/06/18');
-    let incoming = new Date('2021/06/07 10:00:00');
-
-    //活動尚未開放顯示圖
-    /*if (today < incoming) {
-      this.isOpen = false;
-      return false;
-    }*/
-
-    this.alertImg = './dist/images/spin_alert.png';
-    if (today > future) {
-      this.alertImg = './dist/images/spin_alert_end.png';
-    }
+    //
   },
   methods: {
     closeAlert() {
       //關閉視窗
       this.isAlert = false;
       this.isWarn = false;
-      $("#alert-group").css('overflow-y','none');
+      $("#alert-group").css('overflow-y','hidden');
       $('body').css('overflow-y','auto');
     },
     spin() {
       //按下轉盤按鈕
+      let today = new Date();
+      let incoming = new Date('2021/06/08 10:00:00');
+      let incoming2 = new Date('2021/06/03 10:00:00');
+      let incoming3 = new Date('2021/06/10 10:00:00');
+      let future = new Date('2021/06/18');
+
+       //活動時間6/8還沒到顯示
+      /*if (today < incoming) {
+        this.isOpen = false;
+        return false;
+      }*/
+
+      //活動時間6/3還沒到顯示(備用)
+      /*if (today < incoming2) {
+        this.alertImg = './dist/images/incoming63.png';
+        this.isWarn = true;
+        return false;
+      }*/
+
+      //活動時間6/10還沒到顯示(備用)
+      /*if (today < incoming3) {
+        this.alertImg = './dist/images/incoming610.png';
+        this.isWarn = true;
+        return false;
+      }*/
+
       this.count++;
+
+      //玩超過1次顯示
       if (this.count > 1) {
-        console.log('NO');
+        this.alertImg = './dist/images/spin_alert.png';
+        this.isWarn = true;
+        return false;
+      }
+
+      //活動時間最後一天更換提示視窗
+      if (today > future) {
+        this.alertImg = './dist/images/spin_alert_end.png';
         this.isWarn = true;
         return false;
       }
@@ -74,7 +97,7 @@ var app = new Vue({
       },2000);
     },
     checkform(e) {
-      //登入驗證
+      //登入驗證(用不到可跳過)
       if (!this.email) {
         this.emailError = "email不能為空!";
       }
@@ -118,10 +141,11 @@ var app = new Vue({
       });
     },
     seeRule() {
+      //觀看使用規則
       this.isRule = true;
 
       $("#alert-group").css('overflow-y','scroll');
-      $('body').css('overflow-y','none');
+      $('body').css('overflow-y','hidden');
     }
   },
 });

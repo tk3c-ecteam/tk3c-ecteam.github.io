@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 
     <!-- 登入頁樣式 -->
-    <link href="./dist/css/spin.css" rel="stylesheet">
+    <link href="./dist/css/alert.css" rel="stylesheet">
+    <!-- 轉盤樣式 -->
     <link href="./dist/css/spin.css" rel="stylesheet">
     <script src="https://www.tkec.com.tw/js/vue.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div id="spin-container">
+
+        <!-- 轉盤區 -->
         <section class="wheel-content" v-if="isOpen">
             <p class="outside"><img src="./dist/images/outsidebg.png"></p>
             <p class="wheel" :style="{'transform':'rotate('+angle+'deg)'}">
@@ -26,7 +29,7 @@
             <p class="outside"><img src="./dist/images/spin_incoming.png"></p>
         </section>
 
-        <!-- 登入彈出視窗 -->
+        <!-- 登入彈出視窗(用不到可跳過) -->
         <div id="login-group" class="alert-style" v-if="isShow">
             <div class="alert-content">
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
@@ -60,11 +63,11 @@
                     <a class="detail" href="#discount-rule" @click="seeRule"><img src="./dist/images/discount_instruct.png"></a>
                 </div>
 
-                <div id="discount-rule" class="rule-group">
+                <div id="discount-rule" class="rule-group" v-if="isRule">
                     <h2><img src="./dist/images/discount_rule.png"></h2>
                     <div class="rule-text">
                         <h3>Q: AWESOME轉好禮的折價券使用期限?</h3>
-                        <p>A: 使用期限為2021/06/011 00:00~2021/06/23 23:59</p>
+                        <p>A: 使用期限為領取後的14天</p>
                         <h3>Q: 什麼是燦坤線上購物折價券?</h3>
                         <p>A:燦坤線上購物結帳指定商品時折抵，折抵範圍、方式與使用期限，依各折價券使用方式為準。</p>
                         <h3>Q: 怎麼使用折價券?</h3>
