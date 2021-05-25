@@ -4,34 +4,40 @@ var app = new Vue({
     roll: false,
     count: 0,
     angle: 0,
-    rewardList: [500,1000,30,200,80,87,7414,13,"下次會更好",55555],
+    rewardList: ["spin9","spin100","spin202","spin300",
+    "spin500","spin1000","spin1500","spin2000","spinM100","spinMM500"],
     isShow: false,
     isAlert: false,
     isWarn: false,
-    warnText: '一天只有一次搶券機會，<br>明天也要準時搶券喲!',
     reward: '',
     email: '',
-    phone: '',
+    password: '',
     emailError: '',
-    phoneError: '',
+    passError: '',
     rewardImg: '',
-    alertImg: ''
+    alertImg: '',
+    isRule: false,
+    isOpen: true
   },
   mounted() {
-    this.delayShow();
-
     let today = new Date();
     let future = new Date('2021/06/18');
+    let incoming = new Date('2021/06/07 10:00:00');
 
+    //活動尚未開放顯示圖
+    /*if (today < incoming) {
+      this.isOpen = false;
+      return false;
+    }*/
+
+    this.alertImg = './dist/images/spin_alert.png';
     if (today > future) {
-      this.warnText = '一天只有一次搶券機會喲~';
+      this.alertImg = './dist/images/spin_alert_end.png';
     }
-
   },
   methods: {
     closeAlert() {
       //關閉視窗
-      this.isShow = false;
       this.isAlert = false;
       this.isWarn = false;
       $("#alert-group").css('overflow-y','none');
@@ -41,8 +47,8 @@ var app = new Vue({
       //按下轉盤按鈕
       this.count++;
       if (this.count > 1) {
+        console.log('NO');
         this.isWarn = true;
-        alert('今天已玩過，明天請早');
         return false;
       }
 
@@ -54,11 +60,10 @@ var app = new Vue({
       this.roll = true;
       const {angle,rewardList} = this;
       this.angle = angle - angle % 360 + 8 * 360 + (360 / rewardList.length * data);
-      console.log(this.angle);
       setTimeout(() => {
         this.roll = false;
         this.reward = this.rewardList[data];
-        alert(this.reward);
+        this.rewardImg = './dist/images/' + this.reward + '.png';
         this.isAlert = true;
       },4000);
     },
@@ -73,19 +78,19 @@ var app = new Vue({
       if (!this.email) {
         this.emailError = "email不能為空!";
       }
-      if (!this.phone) {
-        this.phoneError = "電話不能為空!";
+      if (!this.password) {
+        this.passError = "密碼不能為空!";
       }
 
       if (this.checkEmail(this.email) === false) {
         this.emailError = 'email缺少@格式不正確!';
       }
-      if (this.email && this.phone) {
+      if (this.email && this.password) {;
         this.closeAlert(); //關閉彈跳視窗
         //this.sendAjaxData(); 傳資料到後端
         setTimeout(() => {
           this.emailError = '';
-          this.phoneError = '';
+          this.passError = '';
         },80);
         return true;
       }
@@ -112,5 +117,11 @@ var app = new Vue({
         }
       });
     },
+    seeRule() {
+      this.isRule = true;
+
+      $("#alert-group").css('overflow-y','scroll');
+      $('body').css('overflow-y','none');
+    }
   },
 });

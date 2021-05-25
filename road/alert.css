@@ -1,0 +1,46 @@
+.jumpWindowStyle{display:flex;position:fixed;top:0;left:0;width:100%;height:100vh;flex-wrap:wrap;z-index:-99999;justify-content:center;align-items:center}
+.jumpWindowStyle.open{z-index:9999}
+.jumpWindowStyle .bg{background:rgba(8,8,8,.8);display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:-1}
+.jumpWindowStyle .jumpWindowStyle-content{width:952px;background:#fff;transition:ease-in-out all .2s;position:relative;border-radius:10px}
+.jumpWindowStyle .jumpWindowStyle-content h2{position:relative;background:#0ff;text-align:center;font-size:40px;padding:15px 0 10px;color:#0e5252;font-weight:700;border-top-right-radius:10px;border-top-left-radius:10px}
+.jumpWindowStyle .jumpWindowStyle-close-btn{position:absolute;right:-25px;top:-25px;display:block;color:#fff;width:60px;font-size:32px;height:60px;text-align:center;line-height:60px;font-weight:700;background:#636363;border-radius:50px;text-shadow:0 0 10px #000;cursor:pointer;transition:all ease-in-out .2s;z-index:5;color:#fff}
+.jumpWindowStyle .jumpWindowStyle-close-btn:hover{font-size:25px}
+.jumpWindowStyle .jumpWindowStyle-close-btn:hover:after{box-shadow:0 2px 5px #000 inset,0 0 10px rgba(19,19,19,.64) inset,0 2px 8px #000 inset,0 2px 5px #000}
+.jumpWindowStyle .jumpWindowStyle-content article{padding:50px;line-height:180%}
+#check-coupon-box .check-coupon-content article{background:#fff}
+.jumpWindowStyle .jumpWindowStyle-content article ol{display:flex;flex-wrap:wrap;justify-content:space-between;overflow:auto;margin:40px 0}
+.jumpWindowStyle .jumpWindowStyle-content article li{width:calc(48% - 15px)}
+.jumpWindowStyle .jumpWindowStyle-content article li a{display:block;color:#fff;padding:30px 20px;font-size:32px;font-weight:700;background:#001d69;border-radius:50px;text-shadow:0 0 10px #000;line-height:150%}
+.jumpWindowStyle .jumpWindowStyle-content article h3{font-size:62px;text-align:center;color:#0ff;line-height:100%;margin:20px 0}
+.jumpWindowStyle .jumpWindowStyle-content article h3 span{background:#c1c0c0;vertical-align:initial;margin-right:15px;display:inline-block;padding:0 8px}
+.jumpWindowStyle .jumpWindowStyle-content article p{font-size:20px;color:#fff}
+.jumpWindowStyle .jumpWindowStyle-content article p b{color:#0ff}
+#check-coupon-box .check-coupon-content{width:450px}
+#check-coupon-box .midbox .midbg .fontbox{display:block;box-sizing:border-box;padding:2% 0 0 0;position:relative}
+#check-coupon-box .midbox .midbg .fontbox .normal-input{position:relative}
+#check-coupon-box .midbox .midbg .fontbox .normal-input input{width:100%;height:44px;border:1px solid #c7c7c7;color:#666;border-radius:3px;margin-bottom:4%;text-indent:17%;font-size:.9em}
+#check-coupon-box .midbox .midbg .fontbox .normal-input input.icon_person{background:url(https://www.tk3c.com/images/ic_person_black_48dp_2x.png) 5px 5px no-repeat;background-size:10%}
+#check-coupon-box .midbox .midbg .fontbox .normal-input input.icon_password{background:url(https://www.tk3c.com/images/ic_https_black_48dp_2x.png) 5px 5px no-repeat;background-size:10%}
+#check-coupon-box .midbox .midbg .fontbox .normal-input a.passChange{position:absolute;top:5px;right:7px;display:block;width:35px;height:35px;background:url(https://www.tk3c.com/images/see1.png) no-repeat;background-size:35px}
+#check-coupon-box .midbox .midbg .fontbox .loginStyleOne input{background:#fc0;width:55%;margin:5% 0 3% 0;border-radius:3px;clear:both;font-size:16px;/* color: #ffff; */}
+#check-coupon-box .midbox .midbg .fontbox .loginStyleOne a{display:inline-block}
+#check-coupon-box .midbox .midbg .fontbox .loginStyleTwo input{cursor:pointer;display:block;border:0 none;height:44px;width:100%;margin:2% 0 3% 0;border-radius:3px;clear:both;font-size:18px;padding-top:4px;text-indent:19px;color:#fff}
+#check-coupon-box .midbox .midbg .fontbox .loginStyleTwo .bg_linegreen{background:url(https://www.tk3c.com/images/icon_line.png) 25px -1px no-repeat #2dc301}
+#check-coupon-box .midbox .midbg .fontbox .loginStyleTwo .bg_fbblue{background:url(https://www.tk3c.com/images/icon_fb.png) 42px 9px no-repeat #4a67a2}
+#check-coupon-box .midbox .midbg .fontbox .checkCodeBox{justify-content:space-between;align-items:center;flex-wrap: nowrap;display: flex;}
+#check-coupon-box .midbox .midbg .fontbox .checkCodeBox>div{display:inline-block;vertical-align:middle}
+#check-coupon-box .midbox .midbg .fontbox .checkCodeBox>div input{width:120px;display:block;border:1px solid #b2b2b2;padding:5px;border-radius: 3px;}
+
+@media screen and (max-width:1280px) {
+    #check-coupon-box.jumpWindowStyle .jumpWindowStyle-content article{height:auto}
+    #check-coupon-box.jumpWindowStyle .jumpWindowStyle-close-btn{right:-40px;top:-40px;background:#000}
+}
+
+@media screen and (max-width:480px) {
+    #check-coupon-box.jumpWindowStyle .jumpWindowStyle-close-btn{right:0}
+    #check-coupon-box .check-coupon-content{width:90%}
+    .jumpWindowStyle .jumpWindowStyle-content article{padding:20px}
+    #check-coupon-box .midbox .midbg .fontbox .normal-input input{width:calc(100% - 12px);padding:0 5px}
+    #check-coupon-box .midbox .midbg .fontbox .loginStyleOne input{width:calc(100% - 145px)}
+    #check-coupon-box .midbox .midbg .fontbox .checkCodeBox>div input{width:100px}
+}

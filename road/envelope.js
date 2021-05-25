@@ -7,9 +7,9 @@ var app = new Vue({
     isWarn: false,
     reward: '',
     email: '',
-    phone: '',
+    password: '',
     emailError: '',
-    phoneError: '',
+    passError: '',
     timing: 3,
     active: false,
     redImg: 'red',
@@ -23,24 +23,25 @@ var app = new Vue({
     let incoming = new Date('2021/06/07 10:00:00');
     let future = new Date('2021/06/18');
 
+    //尚未開放
     /*if (today < incoming) {
         this.alertImg = this.getImgUrl('incoming');
         this.isWarn = true;
         return false;
     }*/
-    this.delayShow();
-
     this.alertImg = this.getImgUrl('red_alert');
     if (today > future) {
       this.alertImg = this.getImgUrl('red_alert_end');
     }
+
+    this.goRain();
   },
   methods: {
     delayShow() {
       //延遲載入
       setTimeout(() => {
         this.isShow = true;
-      },2000);
+      },800);
     },
     closeAlert() {
       //關閉視窗
@@ -54,6 +55,7 @@ var app = new Vue({
       $('body').css('overflow-y','auto');
     },
     randomList() {
+       //搶紅包隨機購物金
         const number = Math.floor(Math.random() * this.rewardList.length);
         return number;
     },
@@ -66,7 +68,10 @@ var app = new Vue({
         }
 
         e.target.src = this.getImgUrl('red_open');
+
+        //搶紅包隨機購物金
         this.reward = this.rewardList[this.randomList()];
+        console.log(this.reward);
         this.getRewardImg(this.reward);
             setTimeout(() => {
                 this.isAlert = true;
@@ -90,20 +95,20 @@ var app = new Vue({
       if (!this.email) {
         this.emailError = "email不能為空!";
       }
-      if (!this.phone) {
-        this.phoneError = "電話不能為空!";
+      if (!this.password) {
+        this.passError = "密碼不能為空!";
       }
 
       if (this.checkEmail(this.email) === false) {
         this.emailError = 'email缺少@格式不正確!';
       }
-      if (this.email && this.phone) {;
+      if (this.email && this.password) {;
         this.closeAlert(); //關閉彈跳視窗
         this.goRain();
         //this.sendAjaxData(); 傳資料到後端
         setTimeout(() => {
           this.emailError = '';
-          this.phoneError = '';
+          this.passError = '';
         },80);
         return true;
       }
@@ -131,7 +136,7 @@ var app = new Vue({
       });
     },
     getImgUrl(image) {
-        let img = 'https://tk3c-ecteam.github.io/road/dist/images/' + image + '.png';
+        let img = './dist/images/' + image + '.png';
         return img;
     },
     getRewardImg(reward) {
@@ -152,6 +157,7 @@ var app = new Vue({
     },
     seeRule() {
       this.isRule = true;
+
       $("#alert-group").css('overflow-y','scroll');
       $('body').css('overflow-y','none');
     }
