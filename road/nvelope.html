@@ -49,7 +49,8 @@
                 <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
                 <div class="inner-group">
                     <p class="light"><img src="./dist/images/light.png"></p>
-                    <img class="rewardimg" :src="rewardImg">
+                    <img v-if="reward == 0" class="noRewardimg" :src="rewardImg">
+                    <img v-else class="rewardimg" :src="rewardImg">
                 </div>
                 <div class="bottom-footer">
                     <a class="sure-get" @click="closeAlert"><img src="./dist/images/bt_ok.png"></a>
