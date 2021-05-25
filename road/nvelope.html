@@ -34,8 +34,8 @@
                             <input name="email" v-model="email" type="text" placeholder="請輸入您的email">
                             <p v-if="emailError" class="error">{{ emailError }}</p>
                         </label>
-                        <label for="phone"><input name="phone" v-model="phone" type="tel" maxlength="11" placeholder="請輸入您的手機號碼">
-                            <p v-if="phoneError" class="error">{{ phoneError }}</p>
+                        <label for="password"><input name="password" v-model="password" type="text" placeholder="請輸入8-16英數密碼">
+                            <p v-if="passError" class="error">{{ passError }}</p>
                         </label>
                         <a class="normalGet" type="submit" @click="checkform"><img src="./dist/images/bt_ok.png"></a>
                     </form>
@@ -93,6 +93,8 @@
             </div>
         </div>
     </div>
+
+    <script src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
     <script src="./snow.js"></script>
     <script src="./dist/js/red.js"></script>
 </body>
