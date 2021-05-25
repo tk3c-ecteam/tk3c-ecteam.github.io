@@ -10,7 +10,7 @@ var app = new Vue({
     password: '',
     emailError: '',
     passError: '',
-    timing: 3,
+    timing: 5,
     active: false,
     redImg: 'red',
     count: 0,
