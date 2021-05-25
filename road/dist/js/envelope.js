@@ -1,7 +1,7 @@
 var app = new Vue({
   el: '#envelope-container',
   data: {
-    rewardList: [0,10,50,100],
+    rewardList: [0,10,50,100,0],
     isShow: false,
     isAlert: false,
     isWarn: false,

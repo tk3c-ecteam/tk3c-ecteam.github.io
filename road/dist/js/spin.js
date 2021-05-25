@@ -5,7 +5,7 @@ var app = new Vue({
     count: 0,
     angle: 0,
     //轉盤轉到的獎勵
-    rewardList: ["spin9","spin100","spin202","spin300",
+    rewardList: ["spin9","spin100","spinCom2000","spin300",
     "spin500","spin1000","spin1500","spin2000","spinM100","spinMM500"],
     isShow: false,
     isAlert: false,
