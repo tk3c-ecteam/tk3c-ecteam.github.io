@@ -1,1 +1,113 @@
-!function(t){var e={};function r(n){if(e[n])return e[n].exports;var o=e[n]={i:n,l:!1,exports:{}};return t[n].call(o.exports,o,o.exports,r),o.l=!0,o.exports}r.m=t,r.c=e,r.d=function(t,e,n){r.o(t,e)||Object.defineProperty(t,e,{enumerable:!0,get:n})},r.r=function(t){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},r.t=function(t,e){if(1&e&&(t=r(t)),8&e)return t;if(4&e&&"object"==typeof t&&t&&t.__esModule)return t;var n=Object.create(null);if(r.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:t}),2&e&&"string"!=typeof t)for(var o in t)r.d(n,o,function(e){return t[e]}.bind(null,o));return n},r.n=function(t){var e=t&&t.__esModule?function(){return t.default}:function(){return t};return r.d(e,"a",e),e},r.o=function(t,e){return Object.prototype.hasOwnProperty.call(t,e)},r.p="",r(r.s=24)}({24:function(t,e,r){r(25),t.exports=r(26)},25:function(t,e,r){},26:function(t,e){new Vue({el:"#spin-container",data:{roll:!1,count:0,angle:0,rewardList:[500,1e3,30,200,80,87,7414,13,"下次會更好",55555],isShow:!1,isAlert:!1,isWarn:!1,warnText:"一天只有一次搶券機會，<br>明天也要準時搶券喲!",reward:"",email:"",password:"",emailError:"",passError:"",rewardImg:"",alertImg:""},mounted:function(){new Date>new Date("2021/06/18")&&(this.warnText="一天只有一次搶券機會喲~")},methods:{closeAlert:function(){this.isShow=!1,this.isAlert=!1,this.isWarn=!1,$("#alert-group").css("overflow-y","none"),$("body").css("overflow-y","auto")},spin:function(){if(this.count++,this.delayShow(),this.count>1)return this.isWarn=!0,alert("今天已玩過，明天請早"),!1;var t=Math.floor(Math.random()*this.rewardList.length);this.rotate(t)},rotate:function(t){var e=this;this.roll=!0;var r=this.angle,n=this.rewardList;this.angle=r-r%360+2880+360/n.length*t,console.log(this.angle),setTimeout((function(){e.roll=!1,e.reward=e.rewardList[t],alert(e.reward),e.isAlert=!0}),4e3)},delayShow:function(){var t=this;setTimeout((function(){t.isShow=!0}),2e3)},checkform:function(t){var e=this;if(this.email||(this.emailError="email不能為空!"),this.password||(this.passError="密碼不能為空!"),!1===this.checkEmail(this.email)&&(this.emailError="email缺少@格式不正確!"),this.email&&this.password)return this.closeAlert(),this.goRain(),setTimeout((function(){e.emailError="",e.passError=""}),80),!0;t.preventDefault()},checkEmail:function(t){return!!/^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(t)},sendAjaxData:function(){$.ajax({url:"",data:"",type:"json",method:"post",success:function(t){console.log(t)}})}}})}});
+var app = new Vue({
+  el: '#spin-container',
+  data: {
+    roll: false,
+    count: 0,
+    angle: 0,
+    rewardList: [500,1000,30,200,80,87,7414,13,"下次會更好",55555],
+    isShow: false,
+    isAlert: false,
+    isWarn: false,
+    warnText: '一天只有一次搶券機會，<br>明天也要準時搶券喲!',
+    reward: '',
+    email: '',
+    password: '',
+    emailError: '',
+    passError: '',
+    rewardImg: '',
+    alertImg: ''
+  },
+  mounted() {
+    let today = new Date();
+    let future = new Date('2021/06/18');
+
+    if (today > future) {
+      this.warnText = '一天只有一次搶券機會喲~';
+    }
+  },
+  methods: {
+    closeAlert() {
+      //關閉視窗
+      this.isShow = false;
+      this.isAlert = false;
+      this.isWarn = false;
+      $("#alert-group").css('overflow-y','none');
+      $('body').css('overflow-y','auto');
+    },
+    spin() {
+      //按下轉盤按鈕
+      this.count++;
+      if (this.count > 1) {
+        this.isWarn = true;
+        alert('今天已玩過，明天請早');
+        return false;
+      }
+
+     const data = Math.floor(Math.random() * this.rewardList.length);
+     this.rotate(data);
+    },
+    rotate(data) {
+      //轉盤旋轉
+      this.roll = true;
+      const {angle,rewardList} = this;
+      this.angle = angle - angle % 360 + 8 * 360 + (360 / rewardList.length * data);
+      console.log(this.angle);
+      setTimeout(() => {
+        this.roll = false;
+        this.reward = this.rewardList[data];
+        alert(this.reward);
+        this.isAlert = true;
+      },4000);
+    },
+    delayShow() {
+      //延遲載入
+      setTimeout(() => {
+        this.isShow = true;
+      },2000);
+    },
+    checkform(e) {
+      //登入驗證
+      if (!this.email) {
+        this.emailError = "email不能為空!";
+      }
+      if (!this.password) {
+        this.passError = "密碼不能為空!";
+      }
+
+      if (this.checkEmail(this.email) === false) {
+        this.emailError = 'email缺少@格式不正確!';
+      }
+      if (this.email && this.password) {;
+        this.closeAlert(); //關閉彈跳視窗
+        //this.sendAjaxData(); 傳資料到後端
+        setTimeout(() => {
+          this.emailError = '';
+          this.passError = '';
+        },80);
+        return true;
+      }
+      e.preventDefault();
+    },
+    checkEmail(email) {
+      //email格式驗證
+      const rule = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      if (!rule.test(email)) {
+        return false;
+      } else {
+        return true;
+      }
+    },
+    sendAjaxData() {
+      //傳送會員資料到後端
+      $.ajax({
+        url: '',
+        data: '',
+        type: 'json',
+        method: 'post',
+        success: function(data) {
+          console.log(data);
+        }
+      });
+    },
+  },
+});
