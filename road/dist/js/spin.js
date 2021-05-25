@@ -34,7 +34,7 @@ var app = new Vue({
     spin() {
       //按下轉盤按鈕
       let today = new Date();
-      let incoming = new Date('2021/06/08 10:00:00');
+      let incoming = new Date();
       let incoming2 = new Date('2021/06/03 10:00:00');
       let incoming3 = new Date('2021/06/10 10:00:00');
       let future = new Date('2021/06/18');

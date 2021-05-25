@@ -10,7 +10,7 @@ var app = new Vue({
     password: '',
     emailError: '',
     passError: '',
-    timing: 5,
+    timing: 4,
     active: false,
     redImg: 'red',
     count: 0,
@@ -19,22 +19,8 @@ var app = new Vue({
     isRule: false
   },
   mounted() {
-    let today = new Date();
-    let incoming = new Date('2021/06/07 10:00:00');
-    let future = new Date('2021/06/18');
-
-    this.alertImg = this.getImgUrl('red_alert');
-    if (today > future) {
-      this.alertImg = this.getImgUrl('red_alert_end');
-    }
-
+    //測試版一開始先下紅包雨(正常流程登入成功後->下紅包雨)
     this.goRain();
-     //還沒到6/7顯示尚未開放
-    /*if (today < incoming) {
-        this.alertImg = this.getImgUrl('incoming');
-        this.isWarn = true;
-        $('#particle_canvas').hide();
-    }*/
   },
   methods: {
     delayShow() {
@@ -60,13 +46,33 @@ var app = new Vue({
         return number;
     },
     choice(e) {
+      let today = new Date('2021/06/20');
+      let incoming = new Date('2021/06/07 10:00:00');
+      let future = new Date('2021/06/18');
+
+       //還沒到6/7顯示尚未開放
+      /*if (today < incoming) {
+          this.alertImg = this.getImgUrl('incoming');
+          this.isWarn = true;
+          $('#particle_canvas').hide();
+          return false;
+      }*/
+
         this.count++;
 
         if (this.count > 1) {
+            this.alertImg = this.getImgUrl('red_alert');
             this.isWarn = true;
             return false;
         }
 
+        if (today > future) {
+          this.alertImg = this.getImgUrl('red_alert_end');
+          this.isWarn = true;
+          return false;
+        }
+
+        //點擊紅包後換圖
         e.target.src = this.getImgUrl('red_open');
 
         //搶紅包隨機購物金
