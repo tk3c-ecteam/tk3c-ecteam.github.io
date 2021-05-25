@@ -51,7 +51,7 @@ var app = new Vue({
       this.isShow = false;
       this.isAlert = false;
       this.isWarn = false;
-      $("#alert-group").css('overflow-y','none');
+      $("#alert-group").css('overflow-y','hidden');
       $('body').css('overflow-y','auto');
     },
     randomList() {
@@ -159,7 +159,7 @@ var app = new Vue({
       this.isRule = true;
 
       $("#alert-group").css('overflow-y','scroll');
-      $('body').css('overflow-y','none');
+      $('body').css('overflow-y','hidden');
     }
   },
 });
