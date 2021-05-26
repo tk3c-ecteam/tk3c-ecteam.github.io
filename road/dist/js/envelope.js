@@ -46,7 +46,7 @@ var app = new Vue({
         return number;
     },
     choice(e) {
-      let today = new Date('2021/06/20');
+      let today = new Date();
       let incoming = new Date('2021/06/07 10:00:00');
       let future = new Date('2021/06/18');
 
