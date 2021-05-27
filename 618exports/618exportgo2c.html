@@ -32,6 +32,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
 </head>
 <body>
+    <!--置頂TKEC-->
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "../../top/top.aspx?url=" + location.href,
+                type: "POST",
+                dataType: 'text',
+                success: function (msg) {
+                    $("#TkecTop").html(msg);
+                }
+            });
+        });
+    </script>
+    <div id="TkecTop" style="height:45px;"></div>
+
     <!-- 2c分會場頁面 -->
     <div id="export2c-container">
         <div class="animate-group">
@@ -62,15 +77,58 @@
             <a class="go-top"><img src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/gototop.png"></a>
         </aside>
 
+        <!-- 左側選單 -->
+        <div id="event_left_menu" class="sidemenu">
+            <div class="headphoto">
+                <figure><img src="https://events.tk3c.com/events_net/events_net/618exportgo1c/images/l_top.png"></figure>
+            </div>
+            <div class="event_part1">
+                <figure><img src="https://events.tk3c.com/events_net/events_net/618exportgo1c/images/l_bg.png"></figure>
+                <ul>
+                    <li><a href="" target="_self">行家帶路主會場</a></li>
+                    <li><a href="" target="_self">品質家電 放肆購</a></li>
+                    <li><a href="" target="_self">遊戲狂歡 嗨搶購</a></li>
+                    <li><a href="" target="_self">福利良品 聰明購</a></li>
+                </ul>
+            </div>
+            <div class="event_part2">
+                <figure><img src="https://events.tk3c.com/events_net/events_net/618exportgo1c/images/l_bg.png"></figure>
+                <ul>
+                    <li><a href="" target="_self"></a></li>
+                    <li><a href="" target="_self"></a></li>
+                    <li><a href="" target="_self">品牌週三</a></li>
+                    <li><a href="" target="_self">品牌週四</a></li>
+                    <li><a href="" target="_self">品牌週五</a></li>
+                    <li><a href="" target="_self">品牌週六</a></li>
+                </ul>
+            </div>
+            <div class="event_part3">
+                <figure><img src="https://events.tk3c.com/events_net/events_net/618exportgo1c/images/l_bg.png"></figure>
+                <ul>
+                    <li><a href="" target="_self">未定</a></li>
+                    <li><a href="" target="_self">未定</a></li>
+                    <li><a href="" target="_self">未定</a></li>
+                    <li><a href="" target="_self">未定</a></li>
+                    <li><a href="" target="_self">未定</a></li>
+                    <li><a href="" target="_self">未定</a></li>
+                </ul>
+            </div>
+        </div>
+
         <!-- 轉盤遊戲區  -->
         <div id="wheel-game" class="alert-style" v-if="isOpen">
-            <section class="wheel-content">
+            <section class="wheel-content" v-if="!isIncoming">
                 <a class="close-alert" @click="closeGame"><i class="fas fa-times-circle"></i></a>
                 <p class="outside"><img src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/outsidebg.png"></p>
                 <p class="wheel" :style="{'transform':'rotate('+angle+'deg)'}">
                     <img src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/wheels_spin.png">
                 </p>
                 <a id="spin" @click="spin"><img src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/pointer_btn.png"></a>
+            </section>
+            <section class="wheel-content" v-else>
+                <a class="close-alert" @click="closeGame"><i class="fas fa-times-circle"></i></a>
+                <p class="wheel-incoming"><img src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/spin_incoming.png"></p>
+                <a id="incoming-sure" @click="closeAlert"><img src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/bt_ok.png"></a>
             </section>
         </div>
 
@@ -605,7 +663,7 @@
         <div class="nav-box">
             <ul>
                 <li data-id="1">精選商品</li>
-                <li data-id="top">家電放肆購</li>
+                <li data-id="top">品質家電放肆購</li>
                 <li data-id="2">熱門活動</li>
             </ul>
         </div>
