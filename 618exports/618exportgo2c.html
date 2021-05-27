@@ -30,8 +30,179 @@
     <script src="https://www.tkec.com.tw/js/vue.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+
+     <!-- GA cookie -->
+     <script>
+        function getCookie(cookieName) {
+            var name = cookieName + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+            }
+            return "";
+        }
+    
+        if (getCookie("tkecm") != null) var tkecm_cookie = getCookie("tkecm").split("&");
+    
+        for (var item in tkecm_cookie)
+            if (tkecm_cookie[item].split("=").length > 1) {
+                var arg = tkecm_cookie[item].split("=")
+                if (arg[0] == "ID" && arg[1] != undefined) {
+                    var user_id = tkecm_cookie[item].split("=")[1]
+                }
+            }
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-22041504-48', 'auto');
+        if (user_id != undefined) {
+            ga('set', 'userId', user_id);
+            ga('set', 'dimension2', user_id);
+        }
+        ga('send', 'pageview');
+    </script>
+    
+    <!-- Start of global snippet: Please do not remove Place this snippet between the <head> and </head> tags on every page of your site.-->
+    <!-- Global site tag (gtag.js) - Google Marketing Platform -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=DC-10406106"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'DC-10406106');
+    </script>
+    <!-- End of global snippet: Please do not remove -->
+    <!--Event snippet for All.Landing on : Please do not remove.Place this snippet on pages with events you’re tracking. Creation date: 10/29/2020-->
+    <script>
+    gtag('event', 'conversion', {
+        'allow_custom_scripts': true,
+        'send_to': 'DC-10406106/invmedia/allla0+standard'
+    });
+    </script>
+    <noscript>
+    <img src="https://ad.doubleclick.net/ddm/activity/src=10406106;type=invmedia;cat=allla0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>
+    </noscript>
+    <!-- End of event snippet: Please do not remove -->
+
+    <!-- Global site tag (gtag.js) - Google Ads: 494785326 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-494785326"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-494785326');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '383360303018527');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=383360303018527&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '333989513612649'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display: none"
+            src="https://www.facebook.com/tr?id=333989513612649&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+    <!-- Facebook Pixel Code -->
+
+    <!-- End Facebook Pixel Code -->
+
+    <!-- GA Events -->
+    <script type="text/javascript">
+        function sendGaEvent(eventCategory, eventAction, eventLabel) {
+            ga('send', 'event', eventCategory, eventAction, eventLabel)
+        }
+    
+        function ProcessGaEvent(eventCategory, eventAction, eventLabel) {
+            var CookieEc = getCookie('ec');
+            if (CookieEc != "") {
+                eventCategory = CookieEc + '-' + eventCategory;
+            }
+            sendGaEvent(eventCategory, eventAction, eventLabel)
+        }
+    </script>
+    <!-- End GA Events -->
+    
+    
+    <script>
+        var _piq = _piq || [];
+        _piq.push(
+            ['setCustomVar', 'venue', 'ef-5d89d7d323920'],
+            ['setCustomVar', 'visitor_id', ''],
+            ['setCustomVar', 'label', ''],
+            ['trackPageView'],
+            ['trackPageClick']
+        );
+        (function (d, t, u, f, j) {
+            f = d.getElementsByTagName(t)[0];
+            j = d.createElement(t);
+            j.async = 1;
+            j.src = u;
+            f.parentNode.insertBefore(j, f);
+        })(document, 'script', 'https://s.pixanalytics.com/js/pi.min.js');
+    </script>  
+    
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TFQTW5B');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body>
+     <!-- Google Tag Manager (noscript) -->
+     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFQTW5B"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+        
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NF2WKF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <!--置頂TKEC-->
     <script>
         $(document).ready(function() {
