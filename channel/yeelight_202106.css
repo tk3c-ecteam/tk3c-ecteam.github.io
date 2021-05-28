@@ -13,7 +13,7 @@ html{margin:0;padding:0;height:100%}
 .fgray{color:#666}
 .fpur{color:#8232a4}
 .pc_version_non{display:none}
-.bg01{background:#460e48;}
+.bg01{background:#460e48;border-radius: 15px;}
 .bg02{background:#006665}
 .bg03{background:#006665}
 .bg04{background:#006665}
@@ -25,11 +25,11 @@ html{margin:0;padding:0;height:100%}
 .list_F ul li{height: auto;}
 .list_F .boxF_price .iconF_pro{display:  none !important;}
 .fb-fans {width: 80%;}
-body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background-image: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/yl_bg.jpg);background-repeat: repeat-y;background-size: cover;background-position: 0px 85vmax;}
+body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background-image: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/yl_bg.jpg);background-repeat: repeat-y;background-size: 100%;background-position: 0px 37vmax;}
 body:after{display:block;background-image:url(../images/banner/h1-2.png),url(../images/banner/h2-2.png),url(../images/banner/ha3-2.png);content:''}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top: 0;}
 .wrapper{display:block;width:1144px;margin:0 auto}
-div:nth-of-type(3) {width: 100%;}
+/* div:nth-of-type(3) {width: 100%;} */
 form>div:nth-child(6){width:100%}
 #gotop{display:none;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:51.5%;z-index:9;bottom:100px;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/gototop.png) no-repeat;width: 100%;height: 40px;}
 #gotop img {display: none;}
@@ -117,7 +117,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .event_note>ul li .why2{display:inline-block;width:calc(100% - 34px);vertical-align:top}
 .wow{animation-name:fadeInUp;animation-duration:1s}
 .banner{position:relative;overflow:hidden;background-image:url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/yl_kv.jpg);width:100%;background-position:50% 0;background-repeat:no-repeat;background-size:cover;}
-.banner-bg{width: 1144px;margin: 0 auto 100px;position:relative;z-index:2;}
+.banner-bg{width: 1144px;margin: 0 auto 7%;position:relative;z-index:2;}
 .banner img{max-width:100%}
 .banner .slogan{text-align:left;padding:29vmax 0 0;}
 .banner .slogan h1{position:relative;display:inline-block;transform:translateX(-60px)}
@@ -130,7 +130,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .nav_btn ul li a:hover{transform: translateY(-0.5em);transition: all 0.8s linear;}
 .event_banner li:last-child{width:100%;margin:2% auto 0;text-align:center;}
 .event_banner{margin-top: 2%;width: 1144px;margin: 3% auto 0;position: relative;}
-.nav_btn{margin:1% auto 1%}
+.nav_btn{margin: 0% auto 3%;width: 75%;}
 .event_banner ul{display:flex;justify-content:center;flex-wrap:wrap;width:100%;height:auto;}
 .vdList ul{margin-top: 0;display: flex;flex-wrap: wrap;}
 .vdList ul li{width:24%;position:relative;margin:5px auto 0;}
@@ -252,8 +252,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
         left: 47%;
     }
 }
-@media screen and (max-width:1280px){.wrapper{width:100%}
-.banner-bg{width: 75%;}
+@media screen and (max-width:1280px){
 .banner{/* background-size: 100%; *//* width: 75%; *//* margin: 0 auto 3%; */}
 .banner .slogan{padding:4vmax 0 300px;}
 .banner .slogan h1{transform:inherit}
@@ -270,8 +269,8 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     .acbankbox{width: 100% !important;}
     .acbankbox .list2 ul li{width: 185px !important;}
     .vdList ul li a:hover {transform: translateY(0);transition: none;}
-    body {background-position: 0 28vmax;}
-    .banner-bg {margin: 0 auto 55px;}
+    .banner-bg {margin: 0 auto 55px;width: 100%;}
+    .wrapper{width: 100%;}
 }
 @media screen and (max-width:980px){
 .banner .slogan{text-align:center;padding:41vmin 0 0;}
@@ -280,7 +279,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 }
 @media screen and (max-width: 768px) {
     .banner-bg {
-        margin: 0 auto -66px;
+        margin: 0 auto 0;
     }
     .list_F ul li{width: 32.3%;}
     .vdList ul li .box .left{width: 370px;}
@@ -321,7 +320,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner p{width:130px;right:-30px;bottom:40px}
 .vdList h3{font-size:30px;width: 135% !important;margin: 0 -16%;}
 .bonus-area {margin: -10VMIN auto 30px -30PX;width: 115% !important;}
-.vdList ul li {width: 50%;background: none;}
+.vdList ul li {width: 50%;background: none;FONT-WEIGHT: 100;}
 #bank-area {margin: 0 auto -15%;}
 }
 @media screen and (min-width:320px) and (max-width:750px){
@@ -332,7 +331,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .pc_version_non{display:block}
 body{margin:0;padding:0;width:100%;height:100%;}
 .copyR{padding-bottom:40px;margin-top:3%;font-size:80%}
-.wrapper{display:block;width:100%;margin:0 auto;overflow:hidden}
+.wrapper{display:block;width:100%;margin:0 auto;overflow:hidden;}
 .title02{width:100%;height:auto;position:relative;margin:0 auto;text-align:center;background:0 0;float:left}
 .title02 .title_word{display:block;background:0 0;height:auto}
 .title02 .addlink{top:15%;left:0;width:34%;height:83%}
@@ -522,7 +521,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
 .list_M .list_special storg{height:38px}
 .protitle:before{right:-30%;width:50%;top:50%;background-position:100% 100%}
 .protitle:after{left:calc(50% - 130px);width:40px;height:40px;top:17px;background-size:100%;background-repeat:no-repeat}
-.banner-bg{margin: 0 auto 45px;}
+.banner-bg{margin: 0 auto 45px;width: 95%;}
 .list_F ul li{width: 48.3%;border: none;}
 .vdList{padding: 0 0 0;text-align: center;}
 .acbankbox .list2 ul li{width: 197px !important;}
@@ -550,7 +549,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
     .event_banner {width: 100%;}
     .event_banner ul{display:flex;justify-content:center;flex-wrap:wrap;width:95%;height:auto;margin:0 auto;}
     .event_banner ul li{width:33%;}
-    .bg01{width:95%;margin:0 0 0 2.5%;padding:2%;}
+    .bg01{width:95%;margin:0 0 0 2.5%;padding:2%;border-radius: 15px;}
     .protitle{width: 100%;display:block;height:85px;font-size:0; text-indent: -9999px;margin-top: 1%;margin-bottom: 1%;background-size: 130% !important;background-position: -16vmin 0 !important;}
     .acbankbox {display: none !important;}
     #bank-area {background-size: 133%;}
