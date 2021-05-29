@@ -330,7 +330,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .m_version_non{display:none}
 .pc_version_non{display:block}
 body{margin:0;padding:0;width:100%;height:100%;}
-.copyR{padding-bottom:40px;margin-top:3%;font-size:80%}
+.copyR{padding-bottom: 45px;margin-top:3%;font-size:80%;}
 .wrapper{display:block;width:100%;margin:0 auto;overflow:hidden;}
 .title02{width:100%;height:auto;position:relative;margin:0 auto;text-align:center;background:0 0;float:left}
 .title02 .title_word{display:block;background:0 0;height:auto}
