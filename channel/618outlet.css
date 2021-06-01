@@ -44,7 +44,7 @@ icon_number .bg05{background:#e0136f;}
     text-align: center;
     width: 100%;
     height: 100%;
-    animation: move-to-right 1.3s linear;
+    animation: move-to-right 1.1s linear;
 }
 .animate-group .girl {
     width: 55%;
@@ -349,7 +349,7 @@ select option{background:#08b288;}
 #kuai3header .words .font{display:none !important;}
 .m_version_non,.pc_version_non{display:none;}
 .wrapper{display:block;width:100%;margin:0 auto;position:relative;}
-form#form1{overflow:hidden;}
+form#form1{overflow:hidden;margin: -0.5rem auto 0;}
 .wrapperMt50{margin-top:50px;}
 body{margin:0px;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";max-width:1140px;background: url(https://events.tk3c.com/events_net/events_net/201205benefits/images/20210601_kv.jpg)no-repeat top 100px center;background-size:140%;background-position: -24vmin 0;background-color: #f83c17;background-position: -27vmin 23vmin !important;}
 .animate-group {width: 90%;margin: 0 auto -10%;}
