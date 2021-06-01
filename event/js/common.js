@@ -1,5 +1,5 @@
 ﻿//判斷為手機裝置(電腦尺寸在768以下進行手機裝置判斷)
-const isMobile = () => {
+function isMobile() {
     let ua = navigator.userAgent;
     let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
 
@@ -19,13 +19,13 @@ const isMobile = () => {
 * 2. 到其他位置 - goAnchor($(element));
 * $(element) -----> 選擇器(區域)名稱
 */
-const goAnchor = (element = null) => {
+function goAnchor(element = null) {
     let offset = '';
 
     if (element === null) {
         offset = 0;
     } else {
-        offset = $(element).offset().top - 120;
+        offset = $(element).offset().top - 25;
     }
     $('html,body').animate({'scrollTop': offset},'swing');
 }
@@ -41,7 +41,7 @@ type - 如果是輪播要用的 type == 'slider'
 appendItems(miTypes,$(miNav)imageUrl); 生成錨點按鈕
 appendItems(miSliderImages,$(sliderContainer),imageUrl,'slider'); 生成輪播圖片
 */
-const appendItems = (items,element,imageUrl,type = '') => {
+function appendItems(items,element,imageUrl,type = '') {
     let typeHtml = '';
     let hrefHtml = '';
     let item = '';
@@ -74,7 +74,7 @@ const appendItems = (items,element,imageUrl,type = '') => {
 * id相同可進行錨點
 * 使用方法: addProID($(element))
 */
-const addProID = (element) => {
+function addProID(element){
     if ($('.protitle').find('a').length > 0) {
         $.each($('.protitle').find('a'),function(i,v){
             let id = $('.protitle').find('a').attr('id');
@@ -137,7 +137,7 @@ function jsLoader(url) {
 * 若需要使用 .leftbtn => display: block
 即可顯示
 */
-const addLeftAside = () => {
+function addLeftAside() {
     let leftbtnHtml = 
     `<div class="leftbtn">
         <div class="side-content">
@@ -172,7 +172,7 @@ const addLeftAside = () => {
 }
 
 //右側選單滑鼠滾到後顯示
-const scrollToShow = () =>  {
+function scrollToShow(){
     let rightbtn = $('body').find('.rightbtn');
 
     if (isMobile() === false) {
@@ -194,7 +194,7 @@ const scrollToShow = () =>  {
 }
 
 //右側選單永遠顯示
-const rigntbtnShow = () => {
+function rigntbtnShow(){
     let rightbtn = $('body').find('.rightbtn');
     $(window).scroll(function(){
         const scrollTop = $(window).scrollTop();
@@ -206,7 +206,7 @@ const rigntbtnShow = () => {
 }
 
 //滑鼠滾動後顯示物件
-const scrollFadeIn = () => {
+function scrollFadeIn() {
     let scrollTop = 0;
     let scrollPos = 0;
     $(window).scroll(function(){
@@ -226,7 +226,7 @@ const scrollFadeIn = () => {
     });
 }
 
-const scrollUp = (element) => {
+function scrollUp(element){
     $(window).scroll(function(){
         //滑鼠滾動時更新背景移動位置
        let scrollTop = $(window).scrollTop();
@@ -240,12 +240,12 @@ const scrollUp = (element) => {
 }
 
 //價錢百位數加上逗號
-const addNumComma = (number) => {
+function addNumComma(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 //新增銀行區
-const appendBanks = (banks = '',type = '') => {
+function appendBanks(banks = '',type = '') {
     if (banks == '') {
         banks = [
             {"url": "https://events.tk3c.com/events_net/events_net/banks/202105/web/bank-01.html","image": "groupbuy/images/202100503_bank_01.png"},
@@ -285,7 +285,7 @@ const appendBanks = (banks = '',type = '') => {
 }
 
 //啟動輪播
-const swiperBank = (options = '',element = '') => {
+function swiperBank(options = '',element = '') {
     if (options == '') {
         options = {
             autoplay: {
@@ -304,7 +304,7 @@ const swiperBank = (options = '',element = '') => {
 }
 
 //新增fb粉絲團
-const addFBArea = () => {
+function addFBArea() {
     let location = window.location.pathname.split('/');
     let fbfansHtml ="<a href='https://www.facebook.com/TDdd331/' target='_blank' class='fb-fans'><img src='https://events.tk3c.com/events_net/events_net/groupbuy/images/20210416_bt_fb.png'></a>";
 
@@ -317,10 +317,16 @@ const addFBArea = () => {
 }
 
 //新增看更多按鈕
-const readMore = (links) => {
+function readMore(links) {
     for (let i = 0; i < links.length; i++) {
         $('.protitle a').eq(i).attr('href',links.url);
     }
+}
+
+//使用slick 輪播
+function slideForSlick() {
+    jsLoader('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js');
+    cssLoader('//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
 }
 
 $(document).ready(function() {
