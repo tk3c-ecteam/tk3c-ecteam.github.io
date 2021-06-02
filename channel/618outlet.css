@@ -851,7 +851,8 @@ select option{background:#08b288;}
 .buybtn:hover{box-shadow:none;background:#cb390c;color:#fff7bd;transition:all 0.5s;-webkit-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;transform:translateY(0.2em);}
 /*特殊節日 商品區塊*/
 .list_special{width:100%;float:left;text-align:center;padding:0.6% 0 1% 1%;display:block;}
-.list_special ul li{width:24%;position:relative;text-align:center;margin:0 8px 8px 0;background:#FFF;float:left;box-sizing:border-box;-moz-border-radius:5px;-webkit-border-radius:5px;list-style:none;transition:all 0.5s;-webkit-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;}
+.list_special ul {text-align: left;}
+.list_special ul li{width:23.7%;position:relative;text-align:center;margin:0 8px 8px 0;background:#FFF;float:unset;display: inline-block;box-sizing:border-box;-moz-border-radius:5px;-webkit-border-radius:5px;list-style:none;transition:all 0.5s;-webkit-transition:all 0.5s;-ms-transition:all 0.5s;-moz-transition:all 0.5s;}
 .list_special .item_img{width:98%;margin:1% 1% 10px 1%;background:#fff;}
 .list_special .item_img img{width:210px;height:210px;margin:5px auto;display:block;}
 .list_special ul li .icon_02{display:block;z-index:10;background:url(../images/tag02.png) 0 0 no-repeat;width:61px;height:106px;position:absolute;top:-5px;left:11px;}
@@ -902,7 +903,7 @@ li.imgs img{height:250px;}
 .buybtn:hover{background:#FF0;color:#000;box-shadow:3px 3px 2px rgba(20%,20%,40%,0.5);}
 /*特殊節日 商品區塊*/
  .list_special{padding:5px;margin-bottom:2%;box-sizing:border-box;}
-.list_special ul li{width: 47% !important;position:relative;text-align:center;margin: 5px 3px 0 7px;background:#FFF;float:left;box-sizing:border-box;transition:none;}
+.list_special ul li{width: 46.3% !important;position:relative;text-align:center;margin: 5px 3px 0 7px;background:#FFF;float:unset; display: inline-block;box-sizing:border-box;transition:none;}
 .list_special .item_img{width:98%;margin:1% 1% 10px 1%;background:#fff;}
 .list_special .item_img img{width:120px;height:120px;margin:5px auto;display:block;}
 .list_special .box_price .icon_pro{top:-110px;}
