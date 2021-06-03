@@ -238,14 +238,17 @@ i {
     width: 100%;
     height: auto;
     margin: 0 auto 0;
-    animation: zoom-out 2s ease-in;
+    animation: zoom-out-in 2s linear;
 }
 .animate-group h4 {
-    margin: -6% auto 0;
+    margin: -4% auto 0;
     width: 100%;
     height: auto;
     text-align: center;
-    animation: zoom-in-up 2s linear alternate;
+    animation: zoom-in 0.8s linear alternate infinite;
+}
+.animate-group .hide {
+    display: none;
 }
 /*3格動畫*/
 
@@ -632,7 +635,7 @@ i {
         position: relative;
         width: 100%;
         text-align: center;
-        height: 295px;
+        height: 255px;
         display: block;
         overflow: hidden;
         float: left;
@@ -661,7 +664,8 @@ i {
         background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_06.png) left bottom no-repeat;
     }
     .protitle01 {
-        background-size: 100% !important;
+        background-size: 80% !important;
+        background-position: 7vmax 0 !important;
     }
     .protitle .more {
         position: absolute;
@@ -2911,10 +2915,11 @@ div#NewProductAll {
     }
     .animate-group {
         width: 40%;
-        margin: 7rem auto 10%;
+        margin: 7rem auto 20%;
     }
     .animate-group  h4 {
-        margin: -12% auto 0;
+        margin: -9% auto 0;
+        width: 45%;
     }
 }
 
@@ -2930,12 +2935,12 @@ div#NewProductAll {
         bottom: 52%;
     }
     .animate-group {
-        width: 35%;
+        width: 32%;
         margin: 7rem auto 15%;
     }
     .protitle01 {
         line-height: 1.7em;
-        background-position: 12vmax -1vmax;
+        background-position: 8vmax 0 !important;
     }
     .animate-group h4 {
         width: 50%;
@@ -2979,16 +2984,17 @@ div#NewProductAll {
     .protitle01 {
         background-position: 0 0;
         background-size: 100%;
+        height: 180px;
     }
     #bank-area {
         margin: 0 auto;
     }
     .animate-group {
-        width: 60%;
-        margin: 7rem auto 20%;
+        width: 55%;
+        margin: 7rem auto 25%;
     }
     .animate-group h4 {
-        margin: -10% auto 0;
+        margin: -7% auto 0;
         width: 40%;
     }
     .rightbtn {
@@ -3134,11 +3140,11 @@ div#NewProductAll {
         width: 50% !important;
     }
     .animate-group {
-        width: 55%;
+        width: 54%;
         margin: 5rem auto 25%;
     }
     .animate-group h4 {
-        margin: -12% auto 0;
+        margin: -10% auto 0;
     }
     body {
         margin: 0px;
@@ -3666,8 +3672,8 @@ div#NewProductAll {
         line-height: 25px;
     }
     .protitle01 {
-        background-size: 120% !important;
-        background-position: -9vmin 0 !important;
+        background-size: 100% !important;
+        background-position: 0 0 !important;
     }
     .protitle02 {
         position: relative;
@@ -6935,13 +6941,19 @@ screen\9 {
 
 @keyframes zoom-in-up {
     0% {
-        transform: scale(1);
+        transform: scale(0);
     }
     50% {
-        transform: scale(1.5);
+        transform: scale(1.3);
+    }
+    60% {
+        transform: scale(1.1);
     }
     70% {
         transform: scale(0.5);
+    }
+    80% {
+        transform: scale(0.8);
     }
     100% {
         transform: scale(1);

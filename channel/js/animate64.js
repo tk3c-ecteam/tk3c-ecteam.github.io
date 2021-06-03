@@ -29,6 +29,18 @@ $(function(){
         <div class='animate-group'>
             <h2><img src='https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/title.png'></h2>
             <h4><img src='https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/title_s_01.png'></h4>
+            <h4><img src='https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/title_s_02.png'></h4>
         </div>
     `);
+
+    $('.animate-group h4').eq(1).addClass('hide');
+
+    setTimeout(function(){
+        $('.animate-group h4').eq(0).addClass('hide');
+        $('.animate-group h4').eq(1).removeClass('hide');
+        setTimeout(function(){
+            $('.animate-group h4').eq(0).removeClass('hide');
+        $('.animate-group h4').eq(1).addClass('hide');
+        },1000);
+    },2000);
 });
