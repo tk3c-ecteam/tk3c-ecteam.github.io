@@ -32,6 +32,9 @@ img {
     display: none !important;
 }
 
+.scrollBox {
+    position: relative !important;
+}
  /*圖片超連結邊框消除*/
 
 html {
