@@ -3120,6 +3120,7 @@ div#NewProductAll {
         width: 100%;
         margin: 0 auto 0;
         position: relative;
+        overflow: hidden;
     }
     #bank-area {
         margin: 0 auto 0;
