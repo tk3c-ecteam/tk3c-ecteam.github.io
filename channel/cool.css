@@ -3027,8 +3027,8 @@ div#NewProductAll {
 
 @media screen and (min-width:320px) and (max-width:750px) {
     html {
-        background-size: 190%;
-        background-position: -40vmin 22vmin;
+        background-size: 230%;
+        background-position: -70vmin 22vmin;
     }
 
     .navibar_m_btn > .bg1 {
@@ -3137,8 +3137,8 @@ div#NewProductAll {
         width: 50% !important;
     }
     .animate-group {
-        width: 54%;
-        margin: 5rem auto 25%;
+        width: 80%;
+        margin: 5rem auto 28%;
     }
     .animate-group h4 {
         margin: -7% auto 0;
@@ -6933,7 +6933,10 @@ screen\9 {
         width: 57%;
     }
     html {
-        background-position: -38vmin 27vmin;
+        background-position: -70vmin 30vmin;
+    }
+    .animate-group {
+        margin: 5rem auto 25%;
     }
 }
 
