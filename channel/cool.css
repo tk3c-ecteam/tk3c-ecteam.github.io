@@ -238,17 +238,14 @@ i {
     width: 100%;
     height: auto;
     margin: 0 auto 0;
-    animation: zoom-out-in 2s linear;
+    animation: flipX 2s linear;
 }
 .animate-group h4 {
     margin: -4% auto 0;
-    width: 100%;
+    width: 20%;
     height: auto;
     text-align: center;
     animation: zoom-in 0.8s linear alternate infinite;
-}
-.animate-group .hide {
-    display: none;
 }
 /*3格動畫*/
 
@@ -2918,8 +2915,8 @@ div#NewProductAll {
         margin: 7rem auto 20%;
     }
     .animate-group  h4 {
-        margin: -9% auto 0;
-        width: 45%;
+        margin: -7% auto 0;
+        width: 38%;
     }
 }
 
@@ -2943,7 +2940,7 @@ div#NewProductAll {
         background-position: 8vmax 0 !important;
     }
     .animate-group h4 {
-        width: 50%;
+        width: 35%;
     }
 }
 
@@ -3144,7 +3141,8 @@ div#NewProductAll {
         margin: 5rem auto 25%;
     }
     .animate-group h4 {
-        margin: -10% auto 0;
+        margin: -7% auto 0;
+        width: 30%;
     }
     body {
         margin: 0px;
