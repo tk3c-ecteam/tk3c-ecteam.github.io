@@ -38,10 +38,9 @@ html {
     margin: 0;
     padding: 0;
     height: auto;
-    background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210511_head.jpg) top 105px center no-repeat;
+    background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/kv_bg_01.jpg) top 105px center no-repeat,url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bg.jpg) repeat-y center;
     background-size: 100%, 100%;
     overflow-x: hidden;
-    background-color: #e5e1d6;
 }
 
 .boxfly {
@@ -94,8 +93,8 @@ i {
 }
 
 .bg01 {
-    background: #65ca8f;
-    border: solid 3px #65ca8f;
+    background: #769f5d;
+    border: solid 3px #769f5d;
 }
 
 .bg02 {
@@ -159,13 +158,13 @@ i {
 
 .rightbtn .actbtn a:last-child::after {
     content: "";
-    background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210511_stagetop.png) top 0px left 0px no-repeat;
+    background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/gotop.png) top 0px left 0px no-repeat;
     display: block;
     margin: 0;
     width: 100%;
     height: 100px;
-    background-size: 65%;
-    margin: 15px 0 0 45px;
+    background-size: 55%;
+    margin: 10px 0 0 60px;
 }
 
 #mobimg {
@@ -204,21 +203,16 @@ i {
     z-index: 0;
     height: auto;
     padding: 0 20px;
+    width: 98%;
 }
 
 #bank-area .swiper-slide {
-    width: 35% !important;
+    width: 33% !important;
 }
 
 #bank-area a {
     display: block;
-    margin: 0 0 0 -7px
-}
-
-#bank-area a img {
-    min-height: 220px;
-    max-height: 220px;
-    object-fit: cover;
+    width: 90%;
 }
 
 .swiper-button-next {
@@ -230,17 +224,25 @@ i {
     color: #65ca8f !important;
 }
 
-/* 涼風 動畫區 */
+/* 宅家涼爽 動畫區 */
 .animate-group {
     width: 100%;
     height: auto;
-    margin: 0 auto 15%;
+    margin: 7rem auto 25%;
+    text-align: center;
 }
 .animate-group h2 {
-    width: 40%;
+    width: 100%;
     height: auto;
-    margin: 7vmax 6%;
-    animation: flipX 4s ease-in;
+    margin: 0 auto 0;
+    animation: zoom-out 2s ease-in;
+}
+.animate-group h4 {
+    margin: -6% auto 0;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    animation: zoom-in-up 2s linear alternate;
 }
 /*3格動畫*/
 
@@ -627,20 +629,36 @@ i {
         position: relative;
         width: 100%;
         text-align: center;
-        height: 160px;
+        height: 295px;
         display: block;
         overflow: hidden;
         float: left;
         color: #625e5d;
-        font-size: 6em;
+        font-size: 0;
         line-height: 1.6em;
         margin: 0 auto 0;
-        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210511_bar.png) left bottom no-repeat;
-        background-size: 70%;
-        background-position: 9vmax -1vmax;
         z-index: 10;
-        display: flex;
-        justify-content: center;
+    }
+    .protitle01:nth-of-type(1) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_01.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(2) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_02.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(3) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_03.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(4) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_04.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(5) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_05.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(6) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_06.png) left bottom no-repeat;
+    }
+    .protitle01 {
+        background-size: 100% !important;
     }
     .protitle .more {
         position: absolute;
@@ -911,11 +929,11 @@ i {
         left: 48%;
         z-index: 100;
         text-align: center;
-        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210511_stagekv.png) no-repeat;
-        background-size: 100%;
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/right_top.png) no-repeat;
+        background-size: 90%;
         padding: 133px 0 0 0;
         bottom: 33%;
-        background-position: 0vmax 6.5VMAX;
+        background-position:1vmax 4.5VMAX;
     }
     .actbtn::after {
         content: "";
@@ -2356,6 +2374,7 @@ i {
     text-align: center;
     padding: 2px 0 1% 0;
     margin-bottom: 4%;
+    margin-top: -4%;
     position: relative;
     display: block;
     box-sizing: border-box;
@@ -2885,15 +2904,14 @@ div#NewProductAll {
     }
     .rightbtn {
         left: 45%;
-        background-position: 0.7vmax 7vmax;
         background-size: 93%;
     }
     .animate-group {
-        width: 85%;
-        margin: 0 auto 10%;
+        width: 40%;
+        margin: 7rem auto 10%;
     }
-    .protitle01 {
-        background-position: 10.5vmax -1vmax;
+    .animate-group  h4 {
+        margin: -12% auto 0;
     }
 }
 
@@ -2909,24 +2927,27 @@ div#NewProductAll {
         bottom: 52%;
     }
     .animate-group {
-        width: 75%;
-        margin: 0 auto 12%;
+        width: 35%;
+        margin: 7rem auto 15%;
     }
     .protitle01 {
         line-height: 1.7em;
         background-position: 12vmax -1vmax;
     }
+    .animate-group h4 {
+        width: 50%;
+    }
 }
 
 @media screen and (max-width: 1280px) {
     .rightbtn {
-        left: 34%;
-        background-position: 0 7.5vmax;
+        left: 31%;
         bottom: 45%;
+        background-position: 3vmax 6vmax;
+        background-size: 80%;
     }
     .animate-group {
-        width: 68%;
-        margin: 0 auto 10%;
+        width: 30%;
     }
     .protitle01 {
         background-position: 14vmax -1vmax;
@@ -2935,41 +2956,24 @@ div#NewProductAll {
 }
 
 @media screen and (max-width: 1025px) {
-    .protitle01 {
-        font-size: 4.5em;
-        line-height: 2.7em;
-        background-position: 11vmax 1vmax;
-    }
     .wrapper {
         width: 100%;
     }
 
     .rightbtn {
-        left: 34%;
+        left: 18%;
     }
     .animate-group {
-        width: 60%;
-    }
-    #bank-area a img {
-        min-height: 235px;
-        max-height: 235px;
+        width: 28%;
     }
 }
 
-@media screen and (max-width: 800px) {
-    #bank-area a img {
-        min-height: 170px;
-        max-height: 170px;
-    }
-}
 
 @media screen and (max-width: 768px) {
     html {
-        background-size: 158%, 100%;
+        background-size: 190%, 100%;
     }
     .protitle01 {
-        font-size: 9vmin;
-        line-height: 24vmin;
         background-position: 0 0;
         background-size: 100%;
     }
@@ -2977,49 +2981,38 @@ div#NewProductAll {
         margin: 0 auto;
     }
     .animate-group {
-        width: 94%;
+        width: 60%;
+        margin: 7rem auto 20%;
     }
-    .animate-group h2 {
-        margin: 14vmin 6%;
+    .animate-group h4 {
+        margin: -10% auto 0;
+        width: 40%;
     }
-    #bank-area a img {
-        min-height: 160px;
-        max-height: 160px;
+    .rightbtn {
+        left: -8%;
     }
 }
 
 @media screen and (min-width: 2000px) {
-    .protitle01 {
-        line-height: 13vmin;
-        font-size: 5em;
-        background-position: 8vmax -1vmax;
-    }
     .rightbtn {
-        background-position: 0.5VMAX 2.7vmax;
+        background-position: 0.5VMAX 1vmax;
         background-size: 94%;
         bottom: 40%;
     }
     .rightbtn>.actbtn {
         margin: 1.5vmax auto;
     }
-    .rightbtn .actbtn a:last-child::after {
-        margin: 15px 0 0 45px;
+    #bank-area a{
+        width: 85%;
     }
-    .animate-group {
-        margin: 0 auto 18%;
-    }
-    .animate-group h2 {
-        margin: 8vmax 2%;
+    #bank-area .swiper-slide {
+        width: 33% !important;
     }
 }
 
 @media screen and (min-width: 2500px) {
-    .protitle01 {
-        background-position: 6.5vmax -1vmax;
-    }
-    .animate-group h2 {
-        margin: 9vmax 0;
-        width: 50%;
+    .animate-group {
+        margin:12rem auto 38%;
     }
 }
 
@@ -3106,7 +3099,6 @@ div#NewProductAll {
     }
     #kuai3header {
         width: 100%;
-        !important;
         margin: 0px auto;
         z-index: 9999;
         position: fixed;
@@ -3127,22 +3119,22 @@ div#NewProductAll {
         position: relative;
     }
     #bank-area {
-        margin: 0 auto -11%;
-        padding: 0 25px;
-        width: 87%;
+        margin: 0 auto 0;
+        padding: 0 20px;
+        width: 97%;
+    }
+    #bank-area a {
+        width: 85%;
     }
     #bank-area .swiper-slide {
-        width: 55% !important;
-    }
-    #bank-area a img {
-        min-height: 110px;
-        max-height: 110px;
+        width: 50% !important;
     }
     .animate-group {
-        margin: 0 auto -5%;
+        width: 55%;
+        margin: 5rem auto 25%;
     }
-    .animate-group h2 {
-        margin: 20VMIN 6%;
+    .animate-group h4 {
+        margin: -12% auto 0;
     }
     body {
         margin: 0px;
@@ -3647,16 +3639,31 @@ div#NewProductAll {
         line-height: 38vmin;
         height: 118px;
         clear: both;
-        font-size: 7vmin;
-        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210511_bar.png) left bottom no-repeat;
-        background-size: 70%;
-        background-position: 16vmin 10vmin;
+        font-size: 0;
         z-index: 20;
-        display: flex;
-        justify-content: center;
+        display: block;
+    }
+    .protitle01:nth-of-type(1) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_01.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(2) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_02.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(3) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_03.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(4) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_04.png) left bottom no-repeat;
+    }
+    .protitle01:nth-of-type(5) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/bar_05.png) left bottom no-repeat;
     }
     .protitle01 span {
         line-height: 25px;
+    }
+    .protitle01 {
+        background-size: 120% !important;
+        background-position: -9vmin 0 !important;
     }
     .protitle02 {
         position: relative;
@@ -6893,15 +6900,11 @@ screen\9 {
     .pro_wrapper1 ul li {
         width: 46.2%;
     }
-    #bank-area .swiper-slide {
-        width: 59% !important;
+    .animate-group {
+        margin: 4rem auto 25%;
     }
-    #bank-area a img {
-        min-height: 85px;
-        max-height: 85px;
-    }
-    #bank-area a {
-        margin: 0 0 0 -23px;
+    .wrapper {
+        overflow: hidden;
     }
 }
 
@@ -6924,11 +6927,19 @@ screen\9 {
     html {
         background-position: -38vmin 27vmin;
     }
-    #bank-area .swiper-slide {
-        width: 58.8% !important;
+}
+
+@keyframes zoom-in-up {
+    0% {
+        transform: scale(1);
     }
-    #bank-area a img {
-        min-height: 80px;
-        max-height: 80px;
+    50% {
+        transform: scale(1.5);
+    }
+    70% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1);
     }
 }
