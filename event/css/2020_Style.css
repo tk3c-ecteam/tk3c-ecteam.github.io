@@ -745,7 +745,6 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 	.list_F li .boxF_price strong {
 		width: 100%;
 		height: 90px;
-		text-align: left;
 	}
 	.list_F li .boxF_price strong em {
 		bottom: 45px;
