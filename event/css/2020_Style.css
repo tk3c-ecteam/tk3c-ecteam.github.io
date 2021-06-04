@@ -732,12 +732,12 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 .list_F storg { font-size: 14px; line-height: 18px; font-weight: bold;  height: 40px; overflow: hidden; width: 100%; color: #000; display: block;box-sizing: border-box; padding: 0 5px;}
 .list_F p{width: 100%;padding: 3px 0 3px 0; display:block;font-size: 13px; padding-top:5px; float:left;}
 .list_F .boxF_price{ display:block; text-align:right; width:100%; position:relative;box-sizing: border-box; padding: 0 3px 0 0;}
-.list_F li .boxF_price strong em{ display: block; font-size: 10px; position: absolute; bottom: 6px; right: 25%; color: #8d8d8d; font-weight: lighter; text-decoration: line-through; letter-spacing: 1px;}
-.list_F li .boxF_price strong {	font-size: 160%;display: block;	height: 60px;letter-spacing: -2px;text-align: right;line-height: 76px;	padding-right: 63px;padding-left: 29%;overflow: hidden;}
+.list_F li .boxF_price strong em{ display: block; font-size: 10px; position: absolute; bottom: 13px; right: 0; left: 0; color: #8d8d8d; font-weight: lighter; text-decoration: line-through; letter-spacing: 1px;}
+.list_F li .boxF_price strong {	font-size: 260%;display: block;	height: 60px;letter-spacing: -2px;text-align: left;line-height: 76px;	padding-right: 50px;padding-left: 0;overflow: hidden;}
 .list_F li .boxF_price strong i {font-size: 13px;letter-spacing: 0;	font-style: normal;}
-.list_F li .boxF_price strong:before {content: "搶購";display: block;	width: 47px;height: 40px;float: right;border-radius: 5px;color: white;font-size: 0.7em;text-align: center;	line-height: 40px;letter-spacing: 1px;position: absolute;bottom: 7px;right: 5px;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);	background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
+.list_F li .boxF_price strong:before {content: "搶購";display: block;	width: 47px;height: 40px;float: right;border-radius: 5px;color: white;font-size: 0.4em;text-align: center;	line-height: 40px;letter-spacing: 1px;position: absolute;bottom: 7px;right: 5px;background: linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -moz-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);	background: -webkit-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);}
 
-.list_F .boxF_price .iconF_pro{ display: block;  background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px; position: absolute;  z-index: 5; font-size: 16px;  box-sizing: border-box; color: #ff2400; line-height: 26px; bottom: 10px; text-align: left;  padding-left: 4px; background-size: 88%;}
+.list_F .boxF_price .iconF_pro{ display: block;  background: url(https://events.tk3c.com/events_net/events_net/image/icon_pro2.png) 0 0 no-repeat; width: 80px; height: 43px; position: absolute;  z-index: 5; font-size: 16px;  box-sizing: border-box; color: #ff2400; line-height: 26px; bottom: 18px; text-align: left;  padding-left: 4px; background-size: 88%;}
 .list_F .boxF_price .iconF_pro span{ font-size:28px;}
 
 /* 平板區 */
@@ -748,7 +748,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 		text-align: left;
 	}
 	.list_F li .boxF_price strong em {
-		bottom: 35px;
+		bottom: 45px;
 
 	}
 	.list_F .boxF_price .iconF_pro {display: none;}
@@ -758,6 +758,7 @@ background: -o-linear-gradient(90deg, #FF2D0A 35%, #FF5236 60%);
 	}
 	.list_F ul li {margin: 6px 0.7%;}
 	.list_F {margin-bottom: 25px;margin: 0 auto 0;display: grid;}
+	.list_F li .boxF_price strong {font-size: 190%;}
 }
 
 
