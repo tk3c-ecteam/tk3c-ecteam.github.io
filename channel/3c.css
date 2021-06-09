@@ -312,16 +312,17 @@ i {
     background: none;
     z-index: 99;
     margin: 0 auto 80px;
-    width: 90%;
 }
 
+#bank-area .swiper-slide {
+    width: 33% !important;
+}
 #bank-area a {
     width: 90%;
 }
 
-.slick-prev:before, .slick-next:before {
+#bank-area .swiper-button-prev, .swiper-button-next {
     color: #409e67;
-    font-size: 30px;
 }
 
 
@@ -3969,7 +3970,7 @@ strong i:after {
         margin: -5rem auto 0;
     }
     #bank-area {
-        width: 85%;
+        width: 90%;
         margin: 0 auto 50px;
     }
 }
@@ -4037,6 +4038,9 @@ strong i:after {
     }
     .copyR {
         margin-top: 16%;
+    }
+    #bank-area .swiper-slide {
+        width: 50% !important;
     }
 }
 
@@ -6277,7 +6281,13 @@ strong i:after {
         margin: -2rem auto 0;
     }
     #bank-area {
-        width: 78%;
+        padding: 0 25px;
+    }
+    #bank-area .swiper-button-prev, .swiper-button-next {
+        top: 35%;
+    }
+    #bank-area .swiper-button-prev:after, .swiper-button-next:after {
+        font-size: 30px;
     }
 }
 
