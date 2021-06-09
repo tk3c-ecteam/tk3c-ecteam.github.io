@@ -314,6 +314,7 @@ i {
 
 .slick-prev:before, .slick-next:before {
     color: #409e67;
+    font-size: 30px;
 }
 
 
@@ -1293,7 +1294,7 @@ li .box_price strong em {
 }
 
 .list02 ul li:hover {
-    box-shadow: 0px 0px 3px 3px #03a9f4;
+    box-shadow: 0px 0px 3px 3px #357104;
     background: #Fff;
     transform: translateY(0.2em);
 }
@@ -3997,7 +3998,15 @@ strong i:after {
         margin: 0 auto 0;
     }
 }
-
+@media screen and (max-width: 900px) {
+    .list02 ul li {
+        width: 22.5%;
+    }
+    .protitle {
+        height: 170PX;
+        line-height: 2.6em;
+    }
+}
 @media screen and (max-width: 768px) {
     .wrapper {
         width: 100%;
