@@ -312,10 +312,15 @@ i {
     margin: 0 auto 80px;
 }
 
+#bank-area a {
+    width: 90%;
+}
+
 .slick-prev:before, .slick-next:before {
     color: #409e67;
     font-size: 30px;
 }
+
 
 
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
