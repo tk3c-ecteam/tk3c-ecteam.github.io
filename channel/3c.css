@@ -6311,6 +6311,7 @@ strong i:after {
 @media screen and (max-width: 376px) {
     .protitle {
         height: 84px;
+        line-height: 17vmin;
     }
     .wrapper {
         margin: 0 auto -90vmin;
