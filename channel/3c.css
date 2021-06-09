@@ -312,12 +312,19 @@ i {
     background: none;
     z-index: 99;
     margin: 0 auto 0;
+    width: 90%;
 }
 
 #bank-area .swiper-slide {
     width: 33% !important;
 }
 
+#bank-area .swiper-button-prev {
+    left: -10px;
+}
+#bank-area .swiper-button-next {
+    right: -10px;
+}
 #bank-area .swiper-button-prev, .swiper-button-next {
     color: #409e67;
 }
