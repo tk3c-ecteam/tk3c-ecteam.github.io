@@ -316,7 +316,7 @@ i {
 }
 
 #bank-area .swiper-slide {
-    width: 33% !important;
+    width: 33.5% !important;
 }
 
 #bank-area .swiper-button-prev {
@@ -6292,6 +6292,12 @@ strong i:after {
     }
     #bank-area .swiper-button-prev:after, .swiper-button-next:after {
         font-size: 30px;
+    }
+    #bank-area .swiper-button-prev {
+        left: 10px;
+    }
+    #bank-area .swiper-button-next {
+        right: 10px;
     }
 }
 
