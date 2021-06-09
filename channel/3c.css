@@ -311,14 +311,11 @@ i {
     position: relative;
     background: none;
     z-index: 99;
-    margin: 0 auto 80px;
+    margin: 0 auto 0;
 }
 
 #bank-area .swiper-slide {
     width: 33% !important;
-}
-#bank-area a {
-    width: 90%;
 }
 
 #bank-area .swiper-button-prev, .swiper-button-next {
@@ -3971,7 +3968,7 @@ strong i:after {
     }
     #bank-area {
         width: 90%;
-        margin: 0 auto 50px;
+        margin: 0 auto 0;
     }
 }
 
@@ -4617,7 +4614,7 @@ strong i:after {
     .wrapper {
         display: block;
         width: 100%;
-        margin: 0 auto -90vmin;
+        margin: 0 auto -85vmin;
     }
     .wrapperMt50 {
         margin-top: 50px;
@@ -6303,7 +6300,7 @@ strong i:after {
         height: 84px;
     }
     .wrapper {
-        margin: 0 auto -95vmin;
+        margin: 0 auto -90vmin;
     }
 }
 
@@ -6326,8 +6323,8 @@ strong i:after {
     .wrapper {
         margin: 0 auto -105vmin;
     }
-    #bank-area {
-        width: 73%;
+    #bank-area .swiper-button-prev, .swiper-button-next {
+        top: 25%;
     }
 }
 
