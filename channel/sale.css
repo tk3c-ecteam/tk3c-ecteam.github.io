@@ -294,6 +294,7 @@ html{background-position:0vmax 7vmax;}
 .bg_color > .wrapper > div[id]{margin-top:-0.5%;}
 .rightbtn {
     left: 43%;
+    bottom: -45px;
 }
 }
 
