@@ -501,16 +501,13 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
         height: 80px;
     }
     .animate-group h3 ,
-    #bank-area h2 {
+    #bank-area h2,
+    .bank-title {
         width: 150%;
         margin: 0 -24% 0;
     }
     .animate-group h3 {
         margin: 1% -24% -9%;
-    }
-    #bank-area h2 {
-        width: 170%;
-        margin: 0 -36% 0;
     }
     .animate-group .product {
         left: 33%;
