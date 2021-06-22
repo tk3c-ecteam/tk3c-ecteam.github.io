@@ -294,7 +294,7 @@ body {overflow-x: hidden;}
 .wrapper{display:block;width:100%;}
 #gotop{display:none;position:fixed;cursor:pointer;z-index:9;width:15%;left:80%;bottom:45px;margin:0;}
 #gotop img{width:100%;float:right;display:block;}
-div.bg_color > div.wrapper > h2{display: block;width:100%;height: 205px;margin: 0 auto 0vmin;background-size: 120% !important;background-position: -9min 0;}
+div.bg_color > div.wrapper > h2{display: block;width:100%;height: 147px;margin: 0 auto 0vmin;background-size: 120% !important;background-position: -9vmin 0;}
 /*右側選單-PC*/
  .rightbtn{display:none;}
 /*主視覺*/
@@ -423,7 +423,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     font-size: 20px;
 }
 #bank-area .slick-prev {left: -25px;}
-#bank-area {margin: 0 auto 120px;}
+#bank-area {margin: 0 auto 190px;}
 }
 #titleheadm{display:none}
 @media screen and (max-width:576px){
@@ -434,7 +434,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 
     #pro-area {
         width: 90%;
-        margin: 5% auto 0;
+        margin: 3% auto 0;
     }
     #bank-area .slick-prev:before, 
     #bank-area .slick-next:before {
@@ -458,6 +458,9 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     #bank-area h2 {
         width: 170%;
         margin: 0 -36% 0;
+    }
+    .animate-group .product {
+        left: 33%;
     }
 }
 @media screen and (max-width:376px){
