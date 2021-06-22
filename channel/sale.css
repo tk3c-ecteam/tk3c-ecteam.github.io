@@ -20,7 +20,7 @@ em,i{font-style:normal;}
 /*.bg01{background:#ae72d4;}
 .bg02{background:#ffafc1;}
 */
-.bg_color {position: relative;z-index: 0;}
+.bg_color {position: relative;z-index: 0;overflow: hidden;}
 .bg_color > .wrapper > div[id]{background: linear-gradient(to right, #fb2a95,#fc6e57);}
 
 /*大突品的背景*/
@@ -33,9 +33,9 @@ em,i{font-style:normal;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microsoft JhengHei,"Apple LiGothic Medium";position: relative;z-index: -1;overflow: hidden;}
 .tab-container> ul.nav-tabtop > li {z-index: 10;}
-body .bg-left , .bg-right {position: absolute;top: 6%;width: 100%;height: 100%;z-index: -1;}
-body .bg-left{background: url(https://events.cdn-tkec.tw/events_net/events_net/seasonsale/images/20210624_bg-blue.png) repeat center;animation: move-right 3s linear;background-size: 100%;}
-body .bg-right{background: url(https://events.cdn-tkec.tw/events_net/events_net/seasonsale/images/20210624_bg-pink.png) repeat center;animation: move-left 5s linear;background-size: 100%;top: 8%;}
+body .bg-left , .bg-right {position: absolute;top: 2%;bottom:0;width: 100%;z-index: -1;display: block;}
+body .bg-left{background: url(https://events.cdn-tkec.tw/events_net/events_net/seasonsale/images/20210624_bg-blue.png) repeat center;animation: move-to-right-disappear 15s linear;background-size: 100%;}
+body .bg-right{background: url(https://events.cdn-tkec.tw/events_net/events_net/seasonsale/images/20210624_bg-pink.png) repeat center;animation: move-to-left-disappear 15s linear;background-size: 100%;top: -6%;}
 .wrapper{display:block;width:1144px;margin:0 auto;position:relative;}
 /*主視覺*/
 .title{height:626px;margin:0px auto 0 auto !important;position:relative;display: none;}
@@ -107,7 +107,7 @@ body .bg-right{background: url(https://events.cdn-tkec.tw/events_net/events_net/
     width: 25%;
     height: auto;
     position: fixed;
-    right: 5%;
+    right: 0;
     bottom: 10%;
     display: none;
     z-index: 55;
@@ -118,8 +118,9 @@ body .bg-right{background: url(https://events.cdn-tkec.tw/events_net/events_net/
     height: auto;
     display: block;
     position: absolute;
-    right: 0;
+    right: 16%;
     font-size: 1.2em;
+    top: -20%;
 }
 /*商品橫幅*/
 /*品分類*/
@@ -227,8 +228,8 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 .rightbtn .actbtn{width:160px;height:auto;display:block;position:relative;border-radius:0 0 10px 10px;padding-bottom:10px;margin-left:3px;margin-top:-50px;}
 .rightbtn .actbtn .ad-link {position: absolute;top: -37%;width: 130%;height: 190px;left: -15%;z-index: -1;font-size: 0;}
 .rightbtn .actbtn:before{content:'';position:absolute;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_ad.png) no-repeat;background-size: 100%;width: 130%;height: 190px;z-index:-1;top: -190px;left: -25px;}
-.rightbtn .actbtn a .link1{height:40px;margin:2% auto;line-height:43px;background: #fc923e;color:#000;text-decoration:none;box-sizing:border-box;overflow:hidden;text-align:center;border:none;font-size:15px;}
-.rightbtn .actbtn a:last-child::after{content:'';width:100%;height:98px;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_gotop.png) no-repeat 40px 15px;mix-blend-mode:screen;background-size: 54% auto;}
+.rightbtn .actbtn a .link1{height:40px;margin:2% auto;line-height:43px;background: #F1D3C3;color:#000;text-decoration:none;box-sizing:border-box;overflow:hidden;text-align:center;border:none;font-size:15px;}
+.rightbtn .actbtn a:last-child::after{content:'';width:100%;height:98px;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_gotop.png) no-repeat 37px 15px;mix-blend-mode:screen;background-size: 54% auto;}
 .rightbtn .actbtn a .link2{display:none;}
 .rightbtn .actbtn .top{display:block;width:134px;height:86px;background:url(../images/gotop_0311_.png) 0 0 no-repeat;}
 /*右側選單-PC-hover*/
@@ -430,7 +431,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     }
 
     #pro-area {
-        width: 100%;
+        width: 90%;
     }
     #bank-area .slick-prev:before, 
     #bank-area .slick-next:before {
@@ -438,15 +439,22 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     }
 
     #bank-area {
-        margin: 0 auto 80px;
+        margin: 0 auto 100px;
     }
     div.bg_color > div.wrapper > h2 {
-        height: 120px;
+        height: 110px;
     }
     .animate-group h3 ,
     #bank-area h2 {
         width: 150%;
         margin: 0 -24% 0;
+    }
+    .animate-group h3 {
+        margin: 1% -24% -9%;
+    }
+    #bank-area h2 {
+        width: 170%;
+        margin: 0 -36% 0;
     }
 }
 @media screen and (max-width:376px){
@@ -454,16 +462,17 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 html {background-position: -37vmin 25vmin;}
 .list_special ul li {margin: 5px 3.5px;}
 .title-group {margin: -4vmin 4vmin;}
+div.bg_color > div.wrapper > h2 {height: 100PX;}
 }
 @media screen and (max-width:360px){
-    .protitle {height: 110px !important;}
+    div.bg_color > div.wrapper > h2 {height: 96px;}
 }
 @media screen and (max-width:320px){.tbg01{height:220px;}
-.protitle{height: 100px !important;}
 div.bg_color > div.wrapper > h2 {height: 30px;}
 .list_special ul li {margin: 5px 3px;}
 .title-group {margin: -8vmin 4vmin;}
 .title{padding-top: 130px;}
+div.bg_color > div.wrapper > h2 {height: 84px;}
 }
 @media screen and (min-width:2500px){
 html{background-position:0vmax 4vmax;}
