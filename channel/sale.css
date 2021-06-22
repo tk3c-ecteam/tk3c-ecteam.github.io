@@ -227,9 +227,9 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 .rightbtn{position:fixed;width:100%;height:auto;margin:368px 0px 0px 577px;left:53%;z-index:100;bottom:100px;text-align:center;padding-top:8.5%;padding-left:20px;}
 .rightbtn .actbtn{width:160px;height:auto;display:block;position:relative;border-radius:0 0 10px 10px;padding-bottom:10px;margin-left:3px;margin-top:-50px;}
 .rightbtn .actbtn .ad-link {position: absolute;top: -37%;width: 130%;height: 190px;left: -15%;z-index: -1;font-size: 0;}
-.rightbtn .actbtn:before{content:'';position:absolute;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_ad.png) no-repeat;background-size: 100%;width: 130%;height: 190px;z-index:-1;top: -190px;left: -25px;}
+.rightbtn .actbtn:before{content:'';position:absolute;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_ad.png) no-repeat;background-size: 100%;width: 130%;height: 210px;z-index:0;top: -202px;left: -25px;}
 .rightbtn .actbtn a .link1{height:40px;margin:2% auto;line-height:43px;background: #F1D3C3;color:#000;text-decoration:none;box-sizing:border-box;overflow:hidden;text-align:center;border:none;font-size:15px;}
-.rightbtn .actbtn a:last-child::after{content:'';width:100%;height:98px;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_gotop.png) no-repeat 37px 15px;mix-blend-mode:screen;background-size: 54% auto;}
+.rightbtn .actbtn a:last-child::after{content:'';width:100%;height:98px;display:block;background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_gotop.png) no-repeat 45px 15px;mix-blend-mode:screen;background-size: 45% auto;}
 .rightbtn .actbtn a .link2{display:none;}
 .rightbtn .actbtn .top{display:block;width:134px;height:86px;background:url(../images/gotop_0311_.png) 0 0 no-repeat;}
 /*右側選單-PC-hover*/
@@ -246,6 +246,7 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 .bg_color{margin:-4% auto 0;}
 html{background-position:0vmax 6vmax;}
 .wrapper{margin:2vmax auto 0;}
+.rightbtn {left: 49%;}
 }
 @media screen and (max-width:1440px) {
 html{background-position:0vmax 7vmax;}
@@ -270,6 +271,7 @@ html{background-position:0vmax 7vmax;}
 .fb-fans {margin: 0 auto 0;}
 .rightbtn{left: 24%;}
 .copyR{margin-top: 20%;}
+body .bg-left, .bg-right {display: none;}
 }
 @media screen and (max-width:768px){
 html{background-position:-24vmin 13vmin;background-size: 150vmin;}
@@ -292,7 +294,7 @@ body {overflow-x: hidden;}
 .wrapper{display:block;width:100%;}
 #gotop{display:none;position:fixed;cursor:pointer;z-index:9;width:15%;left:80%;bottom:45px;margin:0;}
 #gotop img{width:100%;float:right;display:block;}
-div.bg_color > div.wrapper > h2{display: block;width:100%;height: 205px;margin: 0 auto 0vmin;background-size: 165% !important;background-position: -33vmin 0;}
+div.bg_color > div.wrapper > h2{display: block;width:100%;height: 205px;margin: 0 auto 0vmin;background-size: 120% !important;background-position: -9min 0;}
 /*右側選單-PC*/
  .rightbtn{display:none;}
 /*主視覺*/
@@ -432,6 +434,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 
     #pro-area {
         width: 90%;
+        margin: 5% auto 0;
     }
     #bank-area .slick-prev:before, 
     #bank-area .slick-next:before {
@@ -442,7 +445,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
         margin: 0 auto 100px;
     }
     div.bg_color > div.wrapper > h2 {
-        height: 110px;
+        height: 80px;
     }
     .animate-group h3 ,
     #bank-area h2 {
@@ -458,21 +461,21 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     }
 }
 @media screen and (max-width:376px){
-.div.bg_color > div.wrapper > h2{height:35px;}
+.div.bg_color > div.wrapper > h2{height:72px;}
 html {background-position: -37vmin 25vmin;}
 .list_special ul li {margin: 5px 3.5px;}
 .title-group {margin: -4vmin 4vmin;}
 div.bg_color > div.wrapper > h2 {height: 100PX;}
 }
 @media screen and (max-width:360px){
-    div.bg_color > div.wrapper > h2 {height: 96px;}
+    div.bg_color > div.wrapper > h2 {height: 69px;}
 }
 @media screen and (max-width:320px){.tbg01{height:220px;}
 div.bg_color > div.wrapper > h2 {height: 30px;}
 .list_special ul li {margin: 5px 3px;}
 .title-group {margin: -8vmin 4vmin;}
 .title{padding-top: 130px;}
-div.bg_color > div.wrapper > h2 {height: 84px;}
+div.bg_color > div.wrapper > h2 {height: 63px;}
 }
 @media screen and (min-width:2500px){
 html{background-position:0vmax 4vmax;}
