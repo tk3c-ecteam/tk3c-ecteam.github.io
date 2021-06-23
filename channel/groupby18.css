@@ -931,6 +931,9 @@ h2.protitle:first-child{}
         min-height: 120px;
         max-height: 120px;
     }
+    body:before {
+        height: 250px;
+    }
 }
 @media screen and (max-width: 361px)  {
     .list06 ul li {
@@ -946,6 +949,9 @@ h2.protitle:first-child{}
     #bank-area a img {
         min-height: 110px;
         max-height: 110px;
+    }
+    body:before {
+        height: 245px;
     }
 }
 @media screen and (max-width: 320px) {
@@ -972,6 +978,12 @@ h2.protitle:first-child{}
     }
     .wrapper {
         margin: -3rem auto 19%;
+    }
+    body:before {
+        height: 230px;
+    }
+    .copyR {
+        padding-bottom: 13vmin;
     }
 }
 
