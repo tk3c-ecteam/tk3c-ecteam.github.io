@@ -34,7 +34,7 @@ em,i{font-style:normal;}
 body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microsoft JhengHei,"Apple LiGothic Medium";position: relative;z-index: -1;overflow: hidden;}
 .tab-container> ul.nav-tabtop > li {z-index: 10;}
 body .bg-left , .bg-right {position: absolute;top: 2%;bottom:0;width: 100%;z-index: -1;display: block;}
-body .bg-left{background: url(https://events.cdn-tkec.tw/events_net/events_net/seasonsale/images/20210624_bg-blue.png) repeat center;animation: move-to-right-disappear 15s linear;background-size: 100%;}
+body .bg-left{background: url(https://events.cdn-tkec.tw/events_net/events_net/seasonsale/images/20210624_bg-blue.png) repeat center;animation: move-to-right-disappear 15s linear;background-size: 100%;top: -11%;}
 body .bg-right{background: url(https://events.cdn-tkec.tw/events_net/events_net/seasonsale/images/20210624_bg-pink.png) repeat center;animation: move-to-left-disappear 15s linear;background-size: 100%;top: -6%;}
 .wrapper{display:block;width:1144px;margin:0 auto;position:relative;}
 /*主視覺*/
