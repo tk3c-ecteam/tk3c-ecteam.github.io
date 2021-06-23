@@ -172,9 +172,8 @@ body .bg-right{background: url(https://events.cdn-tkec.tw/events_net/events_net/
 .protitle:nth-of-type(4) {background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_bar04.png) no-repeat;}
 .protitle:nth-of-type(5) {background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_bar05.png) no-repeat;}
 .protitle:nth-of-type(6) {background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_bar06.png) no-repeat;}
-.protitle:nth-of-type(7) {background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_bar07.png) no-repeat;}
-.protitle:nth-of-type(8) {background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_bar08.png) no-repeat;}
-.protitle:nth-of-type(9) {background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_bar09.png) no-repeat;}
+.protitle:nth-of-type(7) {background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_bar08.png) no-repeat;}
+.protitle:nth-of-type(8) {background: url(http://events.tk3c.com/events_net/events_net/seasonsale/images/20210624_bar09.png) no-repeat;}
 .protitle {background-size: 100% !important;}
 
 .protitle b{color: #006375;text-align:center;font-size: 0;}
