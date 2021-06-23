@@ -137,8 +137,8 @@ body .bg-right{background: url(https://events.cdn-tkec.tw/events_net/events_net/
     WIDTH: 100%;
     HEIGHT: AUTO;
     POSITION: ABSOLUTE;
-    TOP: 0;
-    LEFT: 31%;
+    TOP: -4%;
+    LEFT: 17%;
     Z-INDEX: -1;
     animation: move-to-left 3.4s linear;
 }
@@ -485,6 +485,10 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
         font-size: 30px;
     }
 .pro-container {width: 90%;}
+.animate-group .product{
+    top: -5%;
+    left: 6%;
+}
 }
 #titleheadm{display:none}
 @media screen and (max-width:576px){
@@ -516,9 +520,6 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     }
     .animate-group h3 {
         margin: 1% -24% -9%;
-    }
-    .animate-group .product {
-        left: 33%;
     }
 }
 @media screen and (max-width:376px){

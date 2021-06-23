@@ -4675,7 +4675,7 @@ strong i:after {
     }
     html {
         background-size: 161vmin;
-        background-position: -26vmin 22vmin, top;
+        background-position: -26vmin 23vmin, top;
     }
     form>div:nth-of-type(9) {
         margin-bottom: -75px;
@@ -6344,7 +6344,7 @@ strong i:after {
         margin-bottom: 20px;
     }
     .animate-group  {
-        width: 53%;
+        width: 44%;
         margin: 0 1rem 100px;
     }
     #bank-area {
@@ -6419,6 +6419,9 @@ strong i:after {
     }
     .specialbox a:nth-of-type(1) {
         top: 30px;
+    }
+    html {
+        background-position: -26vmin 29vmin, top;
     }
 }
 
