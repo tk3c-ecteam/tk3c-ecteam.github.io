@@ -488,6 +488,7 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 .animate-group .product{
     top: -5%;
     left: 6%;
+    width: 120%;
 }
 }
 #titleheadm{display:none}
