@@ -316,7 +316,8 @@ html{background-position:0vmax 7vmax;}
 .rightbtn{left: 24%;}
 .copyR{margin-top: 20%;}
 body .bg-left, .bg-right {display: none;}
-#bank-area,#pro-area{width: 90%;}
+#bank-area,#pro-area{width: 100%;}
+.pro-container {width: 95%;}
 }
 @media screen and (max-width:768px){
 html{background-position:-24vmin 13vmin;background-size: 150vmin;}
@@ -472,10 +473,19 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 .bank-container .swiper-slide {
     width: 50% !important;
 }
-.bank-container {width: 90%;padding: 0 5px;}
+.bank-container {width: 95%;padding: 0 9px;}
 .pro-container .swiper-slide {
     width: 100% !important;
 }
+.bank-container .swiper-button-next:after,
+    .bank-container .swiper-button-prev:after {
+        font-size: 30px;
+}
+.pro-container .swiper-button-next:after,
+    .pro-container .swiper-button-prev:after {
+        font-size: 30px;
+    }
+.pro-container {width: 90%;}
 }
 #titleheadm{display:none}
 @media screen and (max-width:576px){
@@ -487,7 +497,6 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     #pro-area {
         width: 100%;
         margin: 3% auto 0;
-        padding: 0 10px;
     }
     #bank-area .slick-prev:before, 
     #bank-area .slick-next:before {
@@ -504,20 +513,13 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     #bank-area h2,
     .bank-title {
         width: 150%;
-        margin: 0 -24% 0;
+        margin: 0 -24% -4%;
     }
     .animate-group h3 {
         margin: 1% -24% -9%;
     }
     .animate-group .product {
         left: 33%;
-    }
-    .bank-container {
-        width: 100%;
-    }
-    .bank-container .swiper-button-next:after,
-    .bank-container .swiper-button-prev:after {
-        font-size: 30px;
     }
 }
 @media screen and (max-width:376px){
