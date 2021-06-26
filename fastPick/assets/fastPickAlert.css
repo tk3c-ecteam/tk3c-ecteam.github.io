@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+#fastPickBox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #00000099;
+    top: 0;
+    z-index: 99;
+}
+
+#fastPickBox .pickContent {
+    position: relative;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 22%;
+    height: auto;
+    margin: 0 auto 30px;
+    transform: translateY(-50%);
+    background: #fff;
+    border: 5px solid #2e3e64;
+    overflow-y: auto;
+    padding: 0;
+    box-sizing: border-box;
+    z-index: 999;
+}
+
+#fastPickBox .formbox .colmn {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+#fastPickBox .pickContent h2,
+#fastPickBox .descrtionBox h2 {
+    text-align: center;
+    margin: 0 auto 0;
+    font-size: 2em;
+    background: #2e3e64;
+    padding: 5px;
+    font-weight: bold;
+    color: #ffffff;
+    border: none;
+    box-sizing: border-box;
+}
+
+#fastPickBox .formbox .colmn .comment {
+    color: red;
+}
+
+#fastPickBox .formbox .row {
+    padding: 10px;
+}
+
+#fastPickBox .descriton .space {
+    padding: 15px;
+}
+#fastPickBox .descrtionBox {
+    margin: 0 auto 0;
+}
+
+#fastPickBox .descriton {
+    width: 100%;
+    margin: 0 auto;
+}
+#fastPickBox .descriton p {
+    line-height: 1.5em;
+    padding: 3px 20px;
+}
+#goPick {
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    background: #2e3e64;
+    color: #ffffff;
+    margin: 10px auto 10px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#alertBox {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background: #00000099;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
+
+#alertBox .content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    width: 10%;
+    margin: 0 auto 0;
+}
+
+#alertBox .content .msg {
+    text-align: center;
+    padding: 15px;
+}
+
+#alertBox .alertFooter {
+    padding-bottom: 0.5rem;
+}
+
+#alertBox .alertSure {
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    background: #2e3e64;
+    color: #ffffff;
+    margin: 10px auto 10px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+/* 其他裝置尺寸 */
+@media screen and (max-width: 1600px) {
+    #fastPickBox .pickContent {
+        width: 40%;
+    }
+}
+@media screen and (max-width: 1440px) {
+    #fastPickBox .pickContent {
+        width: 50%;
+        top: 75%;
+    }
+    #alertBox .content {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    #fastPickBox .pickContent {
+        width: 55%;
+    }
+    #alertBox .content,
+    #alertBox .alertSure {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #fastPickBox .pickContent {
+        width: 90%;
+        top: 70%;
+        margin: 0 auto 25%;
+    }
+    #fastPickBox .formbox .row {
+        font-size: 1.3em;
+        padding: 10px 20px;
+    }
+    #fastPickBox .descriton p {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #fastPickBox .pickContent {
+        top: 12%;
+        margin: 0 auto 40%;
+        transform: translateY(0);
+    }
+    #fastPickBox .descriton p {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    #fastPickBox .pickContent {
+        margin: 0 auto 45%;
+    }
+}
+

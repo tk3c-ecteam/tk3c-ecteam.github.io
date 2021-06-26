@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+    
+        <title>
+        燦坤線上購物
+    </title><meta charset="utf-8">
+    <meta property="fb:app_id" content="607366676116914">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta property="og:image" content="http://www.tkec.com.tw/images/headimg.jpg?2">
+    
+    
+    <script src="https://www.tk3c.com/mobile/js/vendor.js?480" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js"></script>
+    <script src="https://www.tk3c.com/js/jquery-migrate-1.2.1.min.js?480"></script>
+    <script src="https://www.tk3c.com/js/jquery.blockUI.js?480"></script>
+    <script src="https://www.tk3c.com/js/blockUI_alert.js?480" type="text/javascript"></script>
+    <script src="https://www.tk3c.com/mobile/js/ie10-viewport-bug-workaround.js?480"></script>
+    <script src="https://www.tk3c.com/js/jquery.lazyload.min.js?480"></script>
+    <script src="https://www.tk3c.com/mobile/js/slideTop.js?480"></script>
+    <link href="https://www.tk3c.com/css/jquery.autocomplete.css?571
+    " rel="stylesheet" type="text/css">
+    <script src="https://www.tk3c.com/mobile/js/bootstrap.min.js?480"></script>
+    <link href="https://www.tk3c.com/mobile/css/bootstrap.min.css?571" rel="stylesheet">
+    <link href="https://www.tk3c.com/mobile/css/dashboard.css?571" rel="stylesheet">
+    <link href="https://www.tk3c.com/mobile/css/style.css?571" rel="stylesheet" type="text/css">
+    <link href="https://www.tk3c.com/mobile/css/footerbar.css?571" rel="stylesheet" type="text/css">
+    <link href="https://www.tk3c.com/css/aboMessageStyle.css?571" rel="stylesheet" type="text/css">
+    <link href="https://www.tk3c.com/mobile/css/2019_all.css?571" rel="stylesheet" type="text/css">
+
+    <!-- 快速取貨跳窗css -->
+    <link rel="stylesheet" type="text/css" href="./assets/fastPickAlert.css">
+
+    <meta http-equiv="origin-trial" content="AwT1b8oq50zre+sKn5NsGOAlmHkKIV1dYwqfiDFRF61tCS1l0Wg/jqJejtPhHcv0uVFTSeLP0QQS4bf1KjGMpgwAAACKeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ21hbmFnZXIuY29tOjQ0MyIsImZlYXR1cmUiOiJDb252ZXJzaW9uTWVhc3VyZW1lbnQiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
+</head>
+<body><div id="ctl00_PnIECheckCode">
+	
+    <script src="https://www.tk3c.com/mobile/Scripts/vendor/owl-carousel/owl.carousel.min.js?480"></script>
+ 
+</div>    
+ <link rel="stylesheet" type="text/css" href="https://www.tk3c.com/mobile/css/swiper.min.css?571">
+
+ <link rel="stylesheet" type="text/css" href="https://www.tk3c.com/mobile/css/newheader.css?571">
+
+ <script src="https://www.tk3c.com/js/jquery.autocomplete.js?480" type="text/javascript"></script>   
+ 
+ <script src="https://www.tk3c.com/mobile/js/slideTop.js?480" type="text/javascript"></script>   
+ <script src="https://www.tk3c.com/mobile/js/anime.min.js?480" type="text/javascript"></script>       
+ <script src="https://www.tk3c.com/mobile/js/headermain.js?480"></script>
+ <script src="https://www.tk3c.com/mobile/js/message.js?480"></script>
+ <script src="https://www.tk3c.com/mobile/js/2019_all.js?480"></script>
+<script src="https://www.tk3c.com/mobile/js/swiper.min.js"></script>
+
+<!-- 快速取貨跳窗js -->
+<script src="./assets/fast.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.5/js/lightslider.min.js"></script>
+ <style>
+/*浮動視窗*/
+.load_fixbox{background: rgba(0,0,0,0.6); width:100%; height:128%; position:fixed; z-index:999; margin-top: -28%;}
+.load_fixbox > .midbg{width:50%; height:auto; margin:35% auto;font-size: 13px;font-family: Arial, 微軟正黑體;  border-radius: 7px; background: #EFEFEF;}
+.load_fixbox > .midbg .fontbox{ position: relative; width: 90%; height: auto; margin: 3% auto; text-align:center; padding:15px; }
+.load_fixbox > .midbg .fontbox p{ color:#888;line-height:1.2em; margin:0px; display:block; text-align:left; box-sizing:border-box; padding:3%; text-align:justify;text-align:center; font-size: 1.2em; }
+.load_fixbox > .midbg .loading-spinner { @include position(absolute, 50% 0 0 50%); margin: -$size/2 0 0 -$size/2; margin-bottom: 3%;}
+@keyframes rotate-forever {
+0% {
+ -webkit-transform: rotate(0deg);
+ -moz-transform: rotate(0deg);
+ -ms-transform: rotate(0deg);
+ -o-transform: rotate(0deg);
+ transform: rotate(0deg);
+}
+100% {
+ -webkit-transform: rotate(360deg);
+ -moz-transform: rotate(360deg);
+ -ms-transform: rotate(360deg);
+ -o-transform: rotate(360deg);
+ transform: rotate(360deg);
+}
+}
+.load_fixbox > .midbg .loading-spinner {
+-webkit-animation-duration: 0.75s;
+-moz-animation-duration: 0.75s;
+animation-duration: 0.75s;
+-webkit-animation-iteration-count: infinite;
+-moz-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+-webkit-animation-name: rotate-forever;
+-moz-animation-name: rotate-forever;
+animation-name: rotate-forever;
+-webkit-animation-timing-function: linear;
+-moz-animation-timing-function: linear;
+animation-timing-function: linear;
+height: 30px;
+width: 30px;
+border: 7px solid #9a9a9a;
+border-right-color: transparent;
+border-radius: 50%;
+display: inline-block;
+}
+
+.bg-1804-red {
+ background: #f10d0d;
+ color: white;
+}
+
+.bg-1804-blu {
+ background: #5cd7ff;
+ color: black;
+}
+
+.bg-1804-ylw {
+ background: #fed700;
+ color: black;
+}
+
+.bg-1804-pur {
+ background: #ca9ffe;
+ color: black;
+}
+
+.bg-1804-pink {
+ background: #ffa8d5;
+ color: black;
+}
+
+/* video */
+i.playicon{ position: absolute; left: 36%; top: 20%;}
+i.playicon > img{  width: 100% !important; height: auto !important;    margin-left: 0 !important;}
+.category_content .colBox , .category_content .pro_img a , .bannerList .itemBox .col-box , #menu .category_content .prod .prod_content ul li , #menu .category_content .top_list .content ul li , .yui3-u , .trsptmoreC_Item , #menu .category_sub_menu .hot .content dd , .prod_content .topBox li a , .prod_content li , .kuai3door-R .probox , .kuai3door-L .probox , #menu .topright1609 .ad1609 .pic1609 { position: relative;}
+
+.category_content .colBox{ text-align: center;}
+.bannerList .itemBox .col-box > i.playicon , .bannerList .itemBox .col-box > i.playicon{width: 80px; }
+i.playicon , .itemNo1 > i.playicon , .prod_item1512 > a > i.playicon , .category_content .pro_img a > i.playicon , #menu .category_content .top_list .content ul li a > i.playicon , .prod_content .topBox li a > i.playicon ,.trsptmoreC_Item a > i.playicon , #menu .category_sub_menu .hot .content dd > a > i.playicon ，.yui3-u a > i.playicon , .probox i.playicon {width: 60px; margin: 0;}
+.itemNo1 > i.playicon ,  #menu .topright1609 .ad1609 .pic1609 > i.playicon{left: 21%;top: 25%; }
+.prod_item1512 > a > i.playicon{left: 35%; }
+.category_content .pro_img a > i.playicon{left: 35%; top:30%; }
+.bannerList .itemBox .col-box > i.playicon{left: 35%; }
+.bannerList .itemBox.col-w480 .col-box > i.playicon{left: 15%; top:40%; }
+#menu .category_content .top_list .content ul li a > i.playicon{left: 28%; top:18%;}
+.prod_content .topBox li a > i.playicon{left: 30%;top: 36%; }
+.prod_content .topBox li a{padding: 0; }
+#menu .category_sub_menu .hot .content dd > a > i.playicon{left: 25%; }
+.yui3-u a > i.playicon, .probox i.playicon{left: 30%;top: 22%;}
+.prod_item1512.colBox img{margin-left:0 !important;}
+.yui3-u a > i.playicon, .probox i.playicon {left: 25%;top: 17%;width: 50% !important;}
+
+i.playicon > img {
+ width: 90% !important;
+ height: auto !important;
+ margin-left: 0 !important;
+ opacity: 0.7;
+}
+</style>
+     <script>
+         function ADRecord(Kind, Block, ExtID, ItemID) {
+             $.ajax({
+                 url: "../Ashx/AD_Record.ashx",
+                 type: "POST",
+                 data: "Kind=" + Kind + "&Block=" + Block + "&ExtID=" + ExtID + "&ItemID=" + ItemID,
+                 async: false,
+                 cache: false
+             });
+         }   
+</script>
+ <script>
+         function ProcessWait2() {
+             document.getElementById("WaitTime2").style.display = "block";
+         }
+         function ProcessWaitHistory() {
+             document.getElementById("WaitTimeHistory").style.display = "block";
+         }
+ </script>
+
+ <input name="ctl00$Mst_hd_I" type="hidden" id="ctl00_Mst_hd_I" value="3346374">
+ <input name="ctl00$Mst_hd_T" type="hidden" id="ctl00_Mst_hd_T" value="FFkgDk2Gg4OK2AkuXB/iYXOhxa0/HWE8s3WN8PxW7HU=">
+ <input name="ctl00$Mst_hd_U" type="hidden" id="ctl00_Mst_hd_U" value="a0ffcc0d-63b7-4533-a21a-9e4c9a9ab4b0">
+ <!--不要移動此段位置 Google Tag Manager  (noscript) 不要移動此段位置-->
+ 
+
+ <!-- End Google Tag Manager (noscript) -->
+
+ 
+<script type="text/javascript">
+
+ 
+ //顯示倒數秒收
+ function showTime(t) {
+     t -= 1;
+     if (t == 0) {
+     //跳出視窗
+         ajaxMemMsg();       
+     }
+
+     //每秒執行一次,showTime()
+     setTimeout("showTime("+t+")", 1000);
+ }
+ function ajaxMemMsg() {
+     $.blockUI({
+         message: $('<iframe src="/Message/MemberMsg.aspx" scrolling="no" allowtransparency="yes" frameborder="0" border="0" cellspacing="0" id="plusframe" width="500" height="280" ></iframe>'),
+         css: {
+             top: '30%',
+             left: '30%',
+             border: 'none',
+             background: 'none'
+         }
+     }
+     );
+     return false;
+ }
+ function ajaxMemAg() {
+     $.unblockUI();
+     showTime(900);
+ }
+ function ajaxMemOut() {
+     $.unblockUI();
+     location.href = '/member/member_logout.aspx';
+ }
+ function showTimeOut(t) {
+     t -= 1;
+     if (t == 0) {
+         //直接登出
+         ajaxMemOut();
+     }
+
+     //每秒執行一次,showTime()
+     setTimeout("showTimeOut(" + t + ")", 1000);
+ }
+ function showTimeOutMob(t) {
+     t -= 1;
+     if (t == 0) {
+         //直接登出
+         location.href = '/member/member_logout.aspx';
+     }
+
+     //每秒執行一次,showTime()
+     setTimeout("showTimeOutMob(" + t + ")", 1000);
+ }
+</script>
+<script>showTimeOutMob(86400);</script>
+     <script type="text/javascript">
+$(document).ready(function(){
+if (0 <= ["/member/official_card_member_add_step3.aspx","/member/member_add_done_has_buycar.aspx"].indexOf(window.location.pathname)) fbq('track','CompleteRegistration');
+if (0 <= ["/shop/auth.aspx","/shop/Sinfo.aspx","/mobile/mob_auth.aspx","/mobile/mob_Sinfo.aspx"].indexOf(window.location.pathname)) fbq('track','InitiateCheckout');
+if (0 <= ["/Shop/Result.aspx","/Shop/Sresult.aspx","/mobile/mob_Result.aspx","/mobile/mob_Sresult.aspx","/Shop/CarResult.aspx"].indexOf(window.location.pathname)) {
+var fbPixelPars = {content_ids:[],content_type:'product',value:'0.00',currency:'TWD'};
+if ("undefined" != typeof _tkec.od.basket.amount) fbPixelPars.value = _tkec.od.basket.amount.toString();
+for (var basketProductsKey in _tkec.od.basket.products) fbPixelPars.content_ids.push(_tkec.od.basket.products[basketProductsKey].id);
+fbq('track','Purchase',fbPixelPars);
+}
+if (0 <= ["/pt.aspx","/mobile/mob_pt.aspx"].indexOf(window.location.pathname) && "undefined" != typeof _tkec.od && "undefined" != typeof _tkec.od.product && "undefined" != typeof _tkec.od.product.id) fbq('track','ViewContent',{content_ids:[_tkec.od.product.id],content_type:'product'});
+if (0 <= ["/shop/info.aspx", "/shop/scart.aspx", "/mobile/mob_info.aspx", "/mobile/mob_Scart.aspx"].indexOf(window.location.pathname) && "undefined" != typeof _tkec.od && "undefined" != typeof _tkec.od.product && "undefined" != typeof _tkec.od.product.id) fbq('track','AddToCart',{content_ids:[_tkec.od.product.id],content_type:'product'});
+});
+</script>
+<script>
+$(document).ready(function(){
+if ("undefined" != typeof _tkec.od && "undefined" != typeof _tkec.od.sitemap && "transaction" == _tkec.od.sitemap) $('head').append('<img src="https://www.tkec.com.tw/Ashx/ShopLog.ashx?url='+encodeURI(window.location.toString())+'&OrderNo='+_tkec.od.basket.orderno+'&s='+(1*new Date())+'" height="0" width="0" style="display:none;visibility:hidden">');
+});
+</script>
+<!-- Bing Ads UET -->
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"20101928"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+<!-- Bing Ads UET End-->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFQTW5B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<script>
+var vizLayer = {
+ type: 'other_page'
+};
+</script>
+
+
+
+
+ 
+
+ 
+<header id="ctl00_TopHead" class="tkecM_header tkecM_newMainHeader fixed-top"><!-- 選單列 -->
+ <div class="tkecM_header_nav">
+   <div class="tkecM_nav-container tkecM_container_l tkecM_newHeaderButtons"><!-- 漢堡選單按鈕 -->          
+       
+       <a href="mst/#" id="ctl00_HrefA1" class="tkecM_nav-menuBtn tkecM_newNavTrigger"><img src="images/cart_menu.png" alt=""></a><!-- tkec logo -->
+       <a href="/mobile/mob_index.aspx" id="ctl00_HrefA2" class="tkecM_nav-tkecLogo"></a><!-- 搜尋框 -->
+     <div id="searchBarInput" class="tkecM_nav-searchBox">
+       <input id="searchKeyword" type="text" placeholder="除濕機" class="tkecM_nav-search">  
+       <button class="tkecM_nav-searchBtn">搜尋</button>
+       <div class="tkecM_nav-searchIcon"><img src="images/search.png" alt=""></div>
+     </div><!-- 搜尋聯想 list -->
+    
+     <div class="tkecM_listResult">
+       <span id="SearchHtml"></span>        
+     </div><!-- 瀏覽紀錄 --><a href="#" class="tkecM_nav-messageCloseBtn tkecM_navMessage"><img src="images/history.png" alt=""></a>
+   </div>
+ </div><!-- 訊息列 -->
+ <div class="tkecM_header-messageCtl">
+   <div class="tkecM_messageCtl-container tkecM_container_l"><!-- 門市訊息 -->
+     <div class="tkecM_messageCtl-storeMessage">
+       <div class="tkecM_storeMessage-promptIcon"><img src="images/message.png" alt=""><span class="tkecM_storeMessage-count">9+</span></div>
+       <div class="tkecM_storeMessage-storeInfo"><span>附近門市：</span><span>燦坤內湖旗艦店</span></div>
+     </div><!-- 登入按鈕 --><a href="#" class="tkecM_messageCtl-loginBtn">登入/註冊<i class="fas fa-user"></i></a>
+   </div>
+ </div><!-- 瀏覽紀錄內容跳窗 -->
+ <div id="historyRecord" class="tkecM_popup tkecM_historyContent">
+   
+   <div class="tkecM_popup-container">
+       <div class="load_fixbox" style="display:none" id="WaitTimeHistory">
+   <div class="midbg">
+       <div class="fontbox">
+       <p>資料下載中</p>
+       <div class="loading-spinner"></div>
+     </div>
+</div>
+</div>
+     <div class="swiper-container tkecM_historyContent-nav swiper-container-horizontal swiper-container-android">
+       <div class="swiper-wrapper tkecM_historyContent-tabBox">
+         <div class="swiper-slide swiper-slide-active active" style="width: 137.333px;"><span id="historyBoxBtn_Js"></span></div>
+         <div class="swiper-slide swiper-slide-next" style="width: 137.333px;"><span id="TraceBoxBtn_Js"></span></div>
+         <div class="swiper-slide" id="PersonCss" style="width: 137.333px;"><span id="PersonBtn_Js"></span></div>
+         <div class="swiper-slide" style="width: 137.333px;"><span id="DownBtn_Js"></span></div>
+       </div>
+       <div class="swiper-button-next swiper-button-white"></div>
+       <div class="swiper-button-prev swiper-button-white swiper-button-disabled"></div>
+     </div>
+     <div class="swiper-container tkecM_historyContent-content swiper-container-horizontal swiper-container-android">
+       <div class="swiper-wrapper">
+         <div class="swiper-slide swiper-slide-active" style="width: 412px;">
+           <div id="tab-1" class="tkecM_tab-content tkecM_historyContent-Content">
+               <div id="historyBoxHtml_Js"></div>
+           </div>
+         </div>
+         <div class="swiper-slide swiper-slide-next" style="width: 412px;">
+           <div id="tab-2" class="tkecM_tab-content tkecM_trackContent-Content">
+             <div id="TraceBoxHtml_Js"></div>
+           </div>
+         </div>
+         <div class="swiper-slide" style="width: 412px;">
+           <div id="tab-3" class="tkecM_tab-content tkecM_historyContent-Content">
+               <div id="PersonHtml_Js"></div></div>
+         </div>
+         <div class="swiper-slide" style="width: 412px;">
+           <div id="tab-4" class="tkecM_tab-content tkecM_historyContent-Content">                  
+             <div id="DownHtml_Js"></div></div>
+         </div>
+       </div>
+     </div>                    
+   </div>
+ </div><!-- 登入內容跳窗 -->
+ <div id="memberCenter" class="tkecM_popup tkecM_loginContent">
+   <div class="tkecM_popup-container tkecM_loginContent-container"><!-- 使用者名稱 -->
+     <p class="memberName">親愛的<span id="username">qubtdjy</span>會員您好</p><!-- 登入後按鈕 -->
+     <div class="tkecM_loginContent-loginlist"><a href="/mobile/mob_order_index_new.aspx?parm=order" class="tkecM_loginlist-item"><i style="background:url(/mobile/images/mc1.png)"></i><span>訂單查詢</span></a><a href="/mobile/mob_maintain_memberdata.aspx" class="tkecM_loginlist-item"><i style="background:url(/mobile/images/mc2.png)"></i><span>資料維護</span></a><a href="javascript:void(0);" id="ctl00_PnCard" onclick="CardCheckJs();" class="tkecM_loginlist-item"><i style="background:url(http://www.tkec.com.tw/mobile/images/mc3.png)"></i><span>燦坤會員<br>開卡</span></a><a href="/mobile/mob_membercenter.aspx" class="tkecM_loginlist-item"><i style="background:url(/mobile/images/mc4.png)"></i><span>會員中心</span></a><a href="/mobile/mob_buygold.aspx" class="tkecM_loginlist-item"><i style="background:url(/mobile/images/mc5.png)"></i><span>購物金<br>查詢</span></a><a href="/mobile/mob_member_coupon.aspx" class="tkecM_loginlist-item"><i style="background:url(/mobile/images/mc6.png)"></i><span>折價券<br>查詢</span></a></div><a id="loginBtn" href="/mobile/mob_logout.aspx" class="tkecM_loginContent-logout">登出</a>
+   </div>
+ </div><!-- 搜尋內容跳窗 -->
+ <div id="searchBar" class="tkecM_popup tkecM_searchContent">
+   <div class="tkecM_popup-container tkecM_searchContent-container">
+     <div class="tkecM_searchContent-searchlist">
+       <div id="ctl00_hotSearch">
+         <div class="tkecM_searchlist-title">熱門搜尋</div>
+         <ul class="tkecM_searchlist-listBox">
+           <li><a href="https://www.tk3c.com/dictitleurl.aspx?q=fightcovid19&amp;cid=115038&amp;ec=idx-searchhot&amp;ec=keyword" class="tkecM_searchlist-link">防疫專區</a></li>
+<li><a href="http://www.tk3c.com/mobile/mob_search.aspx?q=%e5%90%b8%e5%a1%b5%e5%99%a8&amp;ec=keyword" class="tkecM_searchlist-link">吸塵器</a></li>
+<li><a href="http://www.tk3c.com/mobile/mob_search.aspx?q=%e5%be%ae%e6%b3%a2%e7%88%90&amp;ec=keyword" class="tkecM_searchlist-link">微波爐</a></li>
+<li><a href="http://www.tk3c.com/mobile/mob_search.aspx?q=%e6%b4%97%e8%a1%a3%e6%a9%9f&amp;ec=keyword" class="tkecM_searchlist-link">洗衣機</a></li>
+<li><a href="http://www.tk3c.com/mobile/mob_search.aspx?q=%e7%ad%86%e9%9b%bb&amp;ec=keyword" class="tkecM_searchlist-link">筆電</a></li>
+<li><a href="http://www.tk3c.com/mobile/mob_search.aspx?q=%e5%86%b0%e7%ae%b1&amp;ec=keyword" class="tkecM_searchlist-link">冰箱</a></li>
+<li><a href="http://www.tk3c.com/mobile/mob_search.aspx?q=%e9%9b%bb%e8%a6%96&amp;ec=keyword" class="tkecM_searchlist-link">電視</a></li>
+<li><a href="http://www.tk3c.com/mobile/mob_search.aspx?q=%e9%a2%a8%e6%89%87&amp;ec=keyword" class="tkecM_searchlist-link">風扇</a></li>
+<li><a href="http://www.tk3c.com/mobile/mob_search.aspx?q=%e5%86%b7%e6%b0%a3&amp;ec=keyword" class="tkecM_searchlist-link">冷氣</a></li>
+
+         </ul>
+       </div>
+     </div>
+     <div class="tkecM_searchContent-searchlist">
+       <div id="ctl00_historySearch">
+         <div class="tkecM_searchlist-title">近期搜尋紀錄</div>
+         <ul class="tkecM_searchlist-listBox">
+           
+         </ul>
+       </div>
+     </div>
+   </div>
+ </div><!-- 訊息內容跳窗 -->
+ <div class="tkecM_popup tkecM_storeMessageContent" id="messageCenter">
+   <div class="tkecM_popup-container tkecM_storeMessageContent-container">
+       
+<div class="load_fixbox" style="display:none" id="WaitTimeMessage">
+   <div class="midbg">
+       <div class="fontbox">
+       <p>資料下載中</p>
+       <div class="loading-spinner"></div>
+     </div>
+</div>
+</div>
+      <div id="Index_Position"></div>
+                 
+                 <div class="tkecM_storeMessageContent-messageBox">
+                     <div class="tkecM_storeMessageContent-title">
+                         <span>通知</span>
+                     </div>
+                     <span id="Tkec_Message"></span>
+                 </div>              
+   </div>
+ </div><!-- 全部訊息內容跳窗 -->    
+</header>
+<div class="tkecM_newOverlay"></div><!-- 分類選單 -->  
+   
+ <iframe height="0" width="0" style="display: none; visibility: hidden;" src="https://10406106.fls.doubleclick.net/activityi;src=10406106;type=invmedia;cat=allla0;ord=1424881018047;gtm=2od6n0;auiddc=330885425.1624379637;ps=1;~oref=https%3A%2F%2Fwww.tk3c.com%2Fmobile%2Fmob_Sinfo.aspx?"></iframe><div class="tkecM_newMainContent">
+     <div id="tkecM_originalContent">
+ 
+ <form name="aspnetForm" method="post" action="./mob_Sinfo.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="0cwA1Az1Fz8xDbThLPrDYqgnc7JI1FbfEJh2shimYFz0ZspSH57fh784jnXQsfWQJnRPUR7ikoH5w3QhAgl2QEt2cB9/MBgAO0Z8EfuvnGDRckPSUW45MqHpk1jpJZRZ4cTNZWxc/kpJrfwCzhhOJvwZ5W5uZ+l+RUx79/LXDKyaGVJwpX8dF1m7m/B1qBEUJtjxHQhu8qwDuSUV6ooEVdpcyt88VSnbQv+d4d38YHeaExZPWF8TZs3IW1fLrUAJNrfU1lyFkORt85I4FS97NVT5spb8hL68ohsaxrD4R+ni0WNzDqt1GuSnTZzJNJcIU8e772b1T44EBYKEDDnZcYPnVlXuuSuumdZ6RvXdcQ5S9y/+/l54bkxUjkuAVvN+B//rmH3byaTWzorXf99iCd9AFy1W8OMY0+v8m/IPAEqbiLR+8x2NY8UuUK9cAqliI2pRoLAhKeSalnopmmJqlBO/rocmbum6yPXz+JECfZhksHAX+LWb6Ge6KEW9L2JRhVkMkS99PLDfQ0jVhBwcdwqr/7uznLD6/TWChts40m3Ur524ITQlUq6EkCHjxqAgFkFRocsrwanaUrfQXDbKvTlFDDKy46IslER8717eMutwHPXvX34kmpes7kP3FOoYWSsQp0QXAVAk1j/PS2OSC9owl7MSHJuwjvCq6zFu/GEr/5tp/MdGxO0CRlsYCb4zmfL7PQJoLUqXn7ruAtpRERkf13OpGv6UR2CtxXQ8rFgToFr0K3s9R/dM3OlpgXvQIWBUYPvyA3CiGEUpeHtq0nwIduNpRyoETXZ0zJh7N6euiq9ksWH5qT0Ch6bHKnGuJprr7FBaouB2Mcilm/+WXtxfuignQkzBCAV+T4G/bSCyEfhmtRQUwv1uwVLbx1PhoJuNeAj/uY7zNeyBQcb90xLynPYEAtkFeCqOoUYKdGFS6hKb0MBXmVy6iuuFjFF5P3o1n66HPwv7ULl3YmmHIh/5UaYGdaCyTecGj52VJgVKMA2f9iWw90esk4+lmE2c/V1MmYizYohVVIA8otCaRqZsiomkOsTS/7vSq0b29RUkcivflMNnctkaWGA/f/xNQR4P9KTRuAwL1DElC1+LxKi/Ps7pHW6coLweBUwK74fu2IiiaoSFyj7Kn2NtZYMpQLlef7q83hh/syIe0rNb7+6rJQ9ofE8/HIS4w4kjf9Ln1GfAZx8gOerBpv36iaWLU7Oy/tIYZQ99rKeioZS9pZRBRxUddMrARU+Z1vP2MPQg/wuO6dyI9h5lvvlOQuW8yB9jCPV3vRuvBVAMAPyULwXQmdZW8jOiABamO0r3fl9IWVXTEF3uYrJgXD1qc0PHpKR10vnWKceRv5L2elnMmgmCjQ/XL842H42Utlnaw/UJpxbqffTFGFDRBZ1XkPVbkNQzqwyX1T963ZxmHUT7CgDfNaTPkauPBZFg8hBfKKFqzqDKPpSqw/7QBwZt0pbBhxWWmPsX49IKquj8bvgvJOjzdc7hB/T2ENW+P+4yR3tdjwTheDiUGm/YQc5x/LfqRrMrqMYjOUkjmIwHU0yEMvl30Za8W9otdJ4C+a68fynmKT2Jd96bK6I1wz/DHhuAK49Qi2XB1kXnPeJgc8ZTUuJG2CKuctL1GZJDIRFYV4Xote1pQ7EOJsjriaWJv2RMQ7+j6q0sYC1xathNEif622z9wh9ZDOWFy/OeA3w3Q96XmS1NpIDC5CInOnDI81bOIkS+v/RdZByTKzFCGGVAD5DP+yZoUXp6vW0wpSk7f0Z02o2CWqHXWOdP+Jh4q77XcvZAWs248yW7wYpL/Q2WmhtDxnXrlFCLAfgp7P1g16ox+pPYTQt9Ztq7r6OKcBfMmz1xqwIlOTyVCUQrVU5BFO0TuKvZ0Qh07Jt58RLgUIeo2Yqz0PU0ZfDk7xAAL6IX96gOIaVie9hNB/7I993XVOQAhvwlovBFfHIiNTTvdLywX2xuUe0jSvVIPiPFfdP99zzmyJB26O1dQtioxJU6U+RqyijGmtK51hqgNaWHtt5V+QuoKRvrtvtpD+UxIqjv2YhixgrNMGfREmghKNzpMOm755kFvGdsq4P5mv901mlNzcwL2ltvjPUo1LsbXc7jlRFxTb5/OfOuJavCpplgWjgXCIyJMnN3tE5DkdWmZYxILUGqJXML6Q4HkRUdJ7xsJAQGgBe7AyWrCYZ/fJ9fCK2QdTpffOrlgzfh3qmWpUPPFWaU24FgHB4q4UddGnv+uGgZkmRiiz1UoCXqvzVf+TWoVv6ufEr/8GuSWoqPiBq9X4CAuB5mhU2mIrlaAplvkNZbf/EiIEEiRvN8+JkB1/w5K3fg8PnpCkz5q/FOmlzwyTRfwKapzTbzI0KE1D/P8dDhx/VW8v4QNYQhWLMB0yGAr4Xlm5p/EZ34UsFk3QpVqhxtF5lv1/z7pHkUzO6/x9QmHp4zlHq3su7PQh/YdsuRQhmLRJv+sa5wXU/R1V0muaOhVBWjAbgPB7JFMI8UrOYLJ++0cfg4IvyTN3iYg5Sr7SUtiCx9lyWIhsftOF5uu9AbN1Ruw1BMDOKPe9HogNhjrXrOLvXdzRHrgKJearneWXRsN0fm1150pZ7rsd5QDltsI0+0Jr0rfjjG77FN5ZJ88igOrW8R8bWQdbVzs3H6kbTFzg4QGKczqmMmiiFP8ogz3Gju8pqqvT2hM1LLvOYdZH4OlFYQ5vC3+qzlafK2AemTp4Ja6zlVTp1k4dbC7YL+0lWFt3+utYzw5GLWVq5C0a9p6A8747BSN8l9D9pGmLlHY33OJ3kEeThWg7srPBp0YWDMcS6aquB+Mm4cGmZp7xqwoKzLYn42FTkKGFWAv5HYBLDrDJXWW5AjfO4C56eJdQoBZsAmgDFikvHCHdNI+5i/5HhG7lKpcvZdcuPwzcwJL1wuydHH35f3ZglvulkNNby7uIQmRG9sArwboN815czawcok1QXrGNVX6HQ/Mxs9AuN2frCY6FnjgP+gPQHzz9Gq5j7NIChFrZOG3OtGgNIplwlbuuvdCWyg1yjg1Lxj9bvs3gcTmDtsUrW2xuo/C9EuwLvNjlKaYCGTKbMhc7mg1GdxK2zcgCPHs4fsnnL1XNZ1+dX1FQKmFNdv5nrTb8fvavAnXkxSglyRTfPKNdN94we55D0FXN57BZFnepwiRXiT7ThLhtPkuoXT40T4xrZfUBI7UyNsFU3xcFTrqdaxjQgZlfGSZzpri7Se7XWQJUDGMQXdSxTGXuSUvcUjDLiBk8AE5Mnu7ID5yN85o5dBIAvOSMDb1jMTETy289cfa2hAZR/Iu+OCtDGQKWxvs28AYE1JDzehDiIoYAR+l/LSej9RFxJAll2dOyQs8us8YAk4moUqSLwdr9fIHJI/nlgN7aWhUNI4eRChTVmZXUXYl06B36e9jNrzXxWmKB4cypBev0uMpkpE9dsPiIpu8tpF9rcnhwtIWQTyVCec6uTzwTWUj0GYQMDaQQDbAq7e2M5XjF5ZSYRh6PLOKqG9zomWGatRl6iR3R4CprCkwXw1prJ4xElmiALunfyf6bZkI3Jnz4LHMikMaafPlKm2ExxZIZrqIX0SWhq4nE9q0xXhoKm8taOVicFASSe0M7Y9vpL56i8TS3Pq2Pdoy9J2j3IiXQZma31dTyBQ0+MaBJTIEzBq8qczp0u3CD6YSk2srAD5IoGLeNLs205YFBIOIyFJjspoOG9movOFf02Tht3kuCMHeCXltuXzyipwkMPx5wffnj+LMLCtcwm/uq7ln/xX4ZUMaZgHrSVcGRxoa3uXQNsnMt6WzS+EOnM0TDWUEXPcG58d/lz3xwGDCDaeBszfEAKj4cTIiX1L06+T3ClxpG/0zkiMGjJXJtRgwn28g80lvwB3SToL/noAuK/hJPZ6qMqg5Cx8KpiX6OhElNc6FCrD1D0g4+z3L58E4VAqp6to4QE/yY9AP3IrRymHB0Jtz2ahzbb7yQ2/AjwqKfqbd/6bZqQTe5Ga9757D5kZkGPRmAXcbPwZvmfTadHSZ6q9YpNxq1/qRJzVMednywDVGwPCL4Q+y7P91OREedvxvXjr/h99SV4c6d0l82HVmftYMDgYK9FsKHFiHf9zzNZvgTvYFYhtRnapiXiraoqiQfwNyXgD69bC/YRzMunWxnTjxUHzQCjcSCIG4ChHmYIDFyV//Lst0ekuNTINnlqVRu9iopkwznglVpkPUJle9F8EOREviytHH37zqSfRdVV1cG5EGsZ5Tiwb5BqrfJhz6l0+uH9CjGaCoAVYvYjnkaUM0GyZ9rgpu3iaDWzdo1YMiWHN+VdrphTvItpex1n1M+19tMbL1MK3mOiseApqf9k8dS7n8KwQjcvb0PcfwjhVZNveZx7FCqGlc2dcHRLy2ik/JraqVrXVGxJclNRKAHpBMnJD896efLlDH2joyUteME+VcXoBbNoWQj2KlkJJkTUFbIson5nEFr+RN90BRYNYq5VcHo3x/h4ZYhQkdMPmpF8I7mByQD7OuD5srHr6N6tubxHOrZB39ek6m0/sbGBr3qoBgxQzeAA59zzdYyR0/cy0TwYs+XwjrY8Lwpnq7b/tPI0yvtxmdG9nSGstXJ0Bo/i8WCUgcFNGxjTSosvOPOdXxrj29R6kFeCridZWHkA5493RzkfwXqDOC7vPr67eW53Cm+Wovl3TXKdDp1ObFMs3Q1xxmmlxzffLXNOgyCUj4y2SF65NqWV1HTjEY+MKTagjxPaWhhizy2d5ohhTi+EB6m282kbiQcv+MywSwTnVBuuwZj1BpbCJBzbbY2wICbSf3PRQvglcMw54UouKrmqwoszdrOfKJ3VfU0ChoeDdKlkEDuxiwwzwn/9k3oSrENCBPVyjsNR7OBAXlOh8joq87PosdCqq5xZDYRQNiCzCEVzzVQhgsFsiuVyPKHFQoINxqdqEJu50YSrB1SODLntdRsytYfx42HqXw94Pd84f46UBs21lyAsd4CTlEg0Xz4eIBO/7Z84KHTWqm1l0s87KBS/S9gO8nEGqGvZnJFDdPMBD2LTKym6PHFulkePGBZLY3y5GcqwTqSbsDEHCdlV7eSFsyW59wVgQJf8DzAtnDXBHkRs+TF08TfJsZcNmC6EgsAPuqMcASPsf/zixPUUwrkyXOmS1h9/naV23oBCK4yEdA0jzpstFVN+vu3VZ7qxW6C4rZBpzmTDpSdhB22GbopsyvFvyH6P4TE+tw22O0XdKSY/agmaKKO7i6S7FPPkQI9RrdMcCmBeEIwp1aB7JRtcJpLCplUapupKxAV9OFSWjQ/Mkultd1ErjW+N5if0M1pXdgFVGKlgCavnVuABG1Cobmf86hUWiRxJCWtHrpJtyqsQwuWyXr+HuK/vtXByXGChu92vNw2ZTxdjAzQmlCDahyA6JU8yeQ/8+KNhfGv/kWCxMj/fjX2QEflBEkRX+qciQgnDlTiiOStqEc0ait4UU9I7EUJrRlBucvfrgM/qZhbxH/PcjezUKW839fkqRqeuavzNA/UL6ryaLK5lEMj7HN03Et2O2Xd8W1f5ZwJCsZ3glh4EYsvDSFzjbG6joylZhsXEsSaYFGgiNfINTlM2+dggcqYf9M0fQawn61LrpZdCfo65CSKZL2OHeEMIO4zacJ7z2DqgltPGPTWsNpTARDheVQi4HLzf1+tDbwhJhwOCVciNSJriWZ5Ip4rOIY3N3cGoJ7VRsBY8AXPBop161bMBjydrtLtESKPORag3ayNqR0TjiD6ypdoHhyyB4z7zkiC+3B1tI5j3FMfe7gzqRgmqipd9D8jZxXDzCz2qO8ZMbAqnVN7Bsae/DRDmoqC89E3R02dfZhrK7Fq6+/+csTXUOJChm/elLMdcU63KPT2u5FMDBtZ09DqlFiiAsCOANPykKAGp3WKi98CHKYC2ZPnfzthpOadvZq7YvsEK8x/J6d8jYlnmCmMaWDdE86BkUydQQUjLGoZXTtLqjlfgyQXkXuuVGhgFP4GoqGMrEvocExWT64WcdVzGiF0B1Yl/ELnYm5/BjAbwSY41G8iY4VwsqtoM6BiThEr6L3y7ifUtRbly39fBHSMrHxEIFggh3Dt3tl3HPU5QzJWqx+Z5T0iL/JX0NNllDOEhm07xB5N0bUjajpXVK9gGNLG6iavAlN4r/QAidPATRXCJWliAcNJRAC/lmR1hl6px0/dzbEzEG7EbtI0sPX1x8CKIj0ST8HeuH/Ro3BfRro1h3rsrCLTxRiiNJDwa87Zi59HJXbmQ0tZLAHTOS8/oR34fdDIacU5R96MAeIC9WPOM8oyEEZFFqQYmfhAehKV9oYFBKcQC2TaTDjzaBO2LT2BgEuiaAohMX3orKX94k3VAjccSBVquLtPWqi7B5bRvwERqDXq6iOIm8weLPf5/pA/VanCENntdnv5kHtd/8q7D16Rbl0m7WuUuDXjWdT1pCxeq8lM+4XEkRFMG9mOfHOPhqvvxLcVKl/l8jrgt6Mg1Ugnmy2NpGVVdWrsMxy9Ivd601Bq5B2m8saLRQcyjmvxzCj2hxJ8Ua5yu39r+gR6ag9xkolo4xS54yJK1cycB6OTu1boff4IcgdBkHC2kY4oFzHBx0qpwGpIwj3DUTmUxeK+emvtra9DfL6mbRnZzUkGp4d4bYKPl4Zpq5CeFaeCrj5HEQM21I7JK65V4Ez85OwVtLUz3Aa7ILycIxcDU/aJ30PGtmmhMLGEoh5HxmVv6vry3VT7vX1M1T7yQUIw5pKX3Nh1OYmiUj42RSLNwaA//W9d99xTZpNRkhx3qKM2ExHK21jAyqlzvp3LAc5Bi8Xzxsd8tlC266KdudsCDwPP/P6obY/1wu5eJJ+ihZfPQdce4/9cxNPE3xCqQ/4kVmrrdub2JcbHDCJY8KZ8hbKksUI9JYHHp308WcPaYrksm9YL3l7+piOj7qLDoXExYfXH2NyealgLs3+iqPrW34+f0GgplkTHT2oLf+t8BJXvWB+ZjgN03DNRiJH72XmJS2gneTiWn4Oa5uQ+cSbW4fZRmA31cIOkHlxT84t9vqqeagonYZXArSLnBWsXTF1gDB6tzVpVZGmcl9S4fNEoLoGdVfIxNHR9h987euSSows9nBL2aGRw8gsjLGdOs2QSWJ9zA5AcvBVAHDn95MWwMesN14wdKJhA+Jf6oflXyc4YxifaWfxjT/mtFksudmK5Y+bjeru2L0+RLJJDMHxrA3up5hi8LQogFps1tK7Yx1pwqxzqdETOAbNu9xPL1KmzYEC8vvlJMbpz4o1g40Kq2onbRMuF9ZZet8Y1UuuJiG6LDPUH0hbUsOIuD8seTfK8xsu2z1XM6w/VgnCYURUXWSG8aoWsr3stvr9oWqTK1CopvyPetUyfRrYjYwBdHg1MWUZb5FcOXu9SHvLN/K4vZ/SV86LoZ+bfDFWBNd3ZdwARcQmAjpo56FfYDQU0dJytinbkxyWbu/HUGI6RrunH8scoelfbYVzUhL4PrgNkGNY/7xh4tpOhL3xKAkXtaaGCAfct9+58vEOX7yRm2kaDDVYKuxLNaaInnXSQD0TJF3/APrdsjpeSfqe67lEWzf097K0QbkWTLwo0GqGaw84DSH+bLh7IxY1YCzrPaKRVHed2P/BN6GRjFgY+NPY8pq2OVnHVFpRuzW8Jyd3E3JuIixyd2uDkTmzR5XkFUTUV+g/2sCfRqC3ABooAHStbiye7K2Sza9DouZdhQH5aW1s2OnTiZw8knJjbXepQj6wpzVLT0VdEYi4I4KvsE9whTf8Fokw4KPt8boFeRK6EyVWyqRvpW/JxM/fESku1NOb7A5KFPfxmRlvjEqjXHeMBHdofhcwimeepsMBv+DfWsvWFY6XsKGHbmSrIkgwWOKR1iU9kPexTpWag2BiD1Yfe+EcQudTsH8EIqSQbYgM/5xs+XHGXf2u1pOk6kVr5lQXQd1Bollmqa/senDVACk96cibp4rJYpIPNUd3I48eYd15SzPlG5lljlZ105pZgDraG5BuagKKlDJdjRhECLKP9fkjoORd7eiQThsNjk4ANHGrTPU9N2z4rCYpJB5CMlqzcAeGSn3G6HJKIFCCjImR1FIhCPb2HlBUHzDqLFFYVPhzY37gsV+B2zYWAlvxfXKMQnIPrl/Pdbtkadhr6Hq//d50CqqkpwHJwUOXDH+fZYQugqBAcsgdtyrEaLVTAgjwPsP+r7OETHXyvW1BSGZpSOYl42skV5hWo3s7EK3unOU4NDz02b2it3AZ1YDJUf//5oORNwIANccFFLhTsu5lz76qbHVaLPoLzc9+5HXiODAUVwqMhIQphpJWWgiYZ4b/bowWlExZrPCvTUi+GWrntUNPusC1J39XOBVfLtS04kzt1o9jbY6/WAyMe8CU3dLB5i+oc2SVa5VFtj0g9mBqx9bA999JhOuetCLWpu6jdDhYL30P6wYLH9gyk9V0e+49ihZ2vUsKqK/y/VGd/GEBW6AF6rAuAlBYJYcrNYOnYfDqkIAq6AyklUj/wopW/YzGfK++l+lkTK+wSNU2dpfIw6eFFRZbLjSDT2J+38+eJbwaOaLXYKowjGJI4detxFJQ6VvUqlga6Ohyi++P9Wamo1XK/HQyYrfgKg3uES26h6H5RSBLc/o0IoJ3ZtjGrz0wQUqjn3/JGBatI+uj5HubpxsRxkK6/H35iEOTCR+RF7eAGkwKAnBYzN91huPi9LokzziwTd95V99ayeed+ZOs3Xyku/0+8AYaHjDz87mrKzCRB6aREeSRvupAiQ9KBEo4rygA6WHo2Ooy6GcK+p2FwScTj8/H6a56dCkKPLgqqOJrYphV4hN5Wp7Ci9CSSWUCiQ4It/g36JYiMIZL3HRMOkuksCfLskdoxxEiNedzFGVoRKd+Vf0/9AEPLnn7UDZpCdTCxVE58/0o0eCS/kjLjdEwpmc3F66U4LFHPRHart2W12x0R7BzkRRe+hspyzOTN4foroeY+h6J+cvjujcErvp59FpPoYJEmREe1CQJmXoQYmF713iiQebNH6Q7+H5gl/g2kSWsiYx+Mnr5s/D9lCNpkk6e8x4zXaEnYkueFyG4XKeB8VWa1IvozSyZo4EJoQPZH29UkxcA/dtn9xEJYqZBefPy3Z69bFs7Lh/aW+HSr1re6hPM3S+Nk6SxGGGl0XAnrYR3ueYZlcquR/37XnAYEuum38SQrYgZXyO/ZYL664U2VD2o/I4OL8egad1+WAzyo2Yh40UzlOmcmqKp5jIdGNmFc7KUK0jaVYO3mqu8twb1PqDLcqpizBCGTLA8dFsY2vijB9yBaEcYxqvzXZluoct1Zkf2d6erAaMGy8V/Hkt8yx6mXJxGDLRkiu652kGU43XfUiiLEZSl8CjmL/gRQqaYxMKD9ntmm3KMIDYipaSBJPLx6pc1izAqMwG9qiAAlKjzLPuTASSbViGBbwaV/ba6eM9dK0kJ2DYtOQNmVNvIc5rBoFTH+GKobC9h3IKXyPtwxdgj3sfdQIAObaaT3oNABLzRbo67CQiyju5rqe92UONhx+hOnMXeDxLw9eTkPMGGBXe+B4VfmGfWBpGCZ0Mkep0BynjIb9C/m/X3QbkD4f2jki1kyAHWMQZYGsyXWNcGJXYzw8PiZb8SfDr/rYVDwxxihLNyo+5GOjofpmB29ulZFWNGiYresHqUXJgbBBLnwr+ubORfGykVS9L93ImIZoc7Vo3u0KnHJ17no04PNqK+InmQC7oARMtKvfxqERCj10KO3NaGXF18HBlRTClN/A7nzk99YzR63/C3x6oCSKVapEE80xC5vvulnD2vmIOMwAxComHNp9EjncTPjq8Q7ngLqrRlxFDNPClUbwb6J2OORkcg8/JGgsK0Gs7/V2vG5/AvKgyAvlc108QywU+BlDyn+asEvPg8C3NfRLTqSw/AgFI6g5uhVbChzzmpo/t+NLdFpl06ey6fM9t06LAnb0tX1vnWLxRD+5vQ+a1AcbFB/pRaMmc74Yg1/6X2f23Rw7BujeNpEmx9LYtrTKDLjaxjMa95n+KcgQlLOxV5Ysk4NZn2WQ1CrzxEOXgMQkHPaI4eO9ZTTdOO54E/cfGG9TUjCi7pcfo07PKQYIN83ZigtSOoa2G7F1ECLB7PbcuTLQ6PJIzkt8UBQmATG1dUdZPgwUEBFquzGGJywynMwUj2L3EtvrN8NS2gOShPs+AwTuN7NlGQbwQ+rISwbI+ib9NS7Iqh7lnyeUO/CMClhFdKKyJIun4Vq8u49sUTKCh5DX+oku5Az/MJjbigzSSlNZxt6nDPpHjIdmYpXqKUZOEfhjcZiGWRwuO6hBm9UIjiVaiekEnxEujckUP5JXuAXneipbPgze0aVo3MLKeekbDGGv4Ov+INQ+prEX/L1e2dMU2Mw5CJmSTObjF4hZZvk5BhpXD8yZSVmE5W8aW0sIHkxGq77aV16YnetS9rgkDYjuq8p2ZWyDl9zN8DXUSE/oZ+jx0HQeucS88wIYzwT5YwhPjzqrwNLVYGK+3OQM9KzkufJrhSfQ6LSflSH+4Wf0LUbN1lH6Untscehtffm2MhY/Acs4CBrD1URDkyTGdM93JW1H7UtMK9r+qbl6UF5WkBEt/aDWLsruOtfYj1mQWo6o9CVz9T6NTispXT7XdsikhMBRO2o94tkrMVhg1btKGZ7fZ+qp3R9GUj7o1dNq7hgabpdWmmP6/OEumLntOKmrP5p9VEAjFQsLEQD4aSJeUmeDYnMEJ6LOLfDXObfCXc6LdRyorpFEUIrKishQ3XAWlmT/8YmzU8d8HpEXuShiaFFT+jEDmUK0yokyMy0AszXpafIwewVCwPiSxiuYwYM4mw1UdaJXTYirfDh6Ze/5vEfvjneAaL871m6HkRLat5HD5IbOjr0JCoK3T13STcl/RcbsGVQ7sIAaRURX7cNd2T1+sFx0Q2nzhs7rajLOP0X6/PZXE5mupMX/DbXKZOpkDBEY0H1NgdpyHDuli7wgbCWrONSjIjMisTX5ZAxmbwVy4t+tPzK3qp8pAJBCIwuh2aNHplvyyAGNF+dBJbw2rp7bzACxJyWZruCgc9RF8fX0kmSUzbGsns8tx9t/RdL/uhuMy3Vp6GlqPkOGy2ueKMggLb37Zac5zQWH1E2HLpvjCx4i9IxsDntNhbF4sOcZOaHieZJIMeW6z2f+Wurb2/Gs2oAVScr/KWsoPWe40MmuCWlkFwOy/ZLJ1EZ6Dq3SSCziOFN6zzs5hYcaaX+PohLTKw1A3hCiHcVOt/bYnHRo5e+KJ13MMlDPUCDDUr4pljwcAuzgrOlTC70OgiVC/7canCSrsVPvG3uzPwDN1vX8ZonhvYMy2Ef6oYe9AEisy0UPtj//qEprQVBaHEoHTl8h0XXjBOT1eTq2EFrb+JU3Yt2UdJYUv3QDBMXMLSPRD/K8iGDmGKJdZ08/RyqDHsVOnbDHdpsG0Ca6/xpDfSkZfUNDXSeol62vgi50f2r0gAy2lm16XQSnpMusMPelB0GmvWr7st8w02ZOP1nZ9nCiVlDdIP/1qSDEZyu0VlRFOcAyW76Bobs9Kys4mDCIc16kn5+jYWx/NEPdTixh7hcw1FUA0wHEhk0XrhniwgxqzXuaM2F+fD6t1G8+49AY/X19fHnt9Qyjl8wIZoT6hWfLnGplXwd/DdYFZM+0xA2Z+5Ny6Z2P5rfTAsSTJKjaVadkXX9JhRBN5hFDquUAXL0Qvp96qnO8YoHd1KKoCo73d/ym5PBY6pn4E8q4JvHD4jBJCGQrpRKm6SyKVjsagovbFtoWDBRD8Ef4w6cFvvfAuYPYmXasJkmHpyq12dIaZb2Tk12o5B/I96rOnRcflfRROxDqpkrJJpej8IulPIdk9gZ5cOGvEBQxycaqm5v28MUWcbpUx5hfZDxtEuiwK/WehfgtGyuunwYNfrV5DeZT51Ni08xJS0hSOLs/IEsJhFxNO1bL6iuwsm7FVX3Dr8Rzh2FqCP5PfdjWOFLVON2E7kToEOw/UHKr5hhjYNqRWFz8tXrimkoQPieTX049NvOZOmnSEEunMJXbAoBQemyaOWRqHQXxqcHfKVbB6vVEadxYLg9sLDtL3wdwmmWjdQ88Jy72ALvXI0cRCvH45wDQ8y/VHzOAwpXG7rY02KAuSSp24d/Da0UaWhgFiiqeAkiLKUZzpIrfuCjEWE/st+0SKqbW4dc5JJN3LHtjJXOrRy1ootSGPxciuADD4BgV8JyE/Wp7UVEOvtlOT91NAN2yR2HEiqr/3u6D3qx/xj1vs93wQTBtU53MrQ0DImRNKWhf2XEbRZ4aFAAn8savy9KMzPQYg50apq15cDBLsAnnclPbnt6R9EFdpFiLbb7pggzHHWbVdC2kcZnAXlhM4lbJ+bGDjYJJ8uMYM63i4oQfSm70EnEzVFajm+BAj0pdedOnbjFNRZ5aY3CielXURzO51so2fWt+IuJ1+o/qMkOgJ8G3qMRfEFQ2j+54FCCf1CFulzami/z7skh2KKj+CeswuTwzuVHJe7LtC0xF2wyXd2oO2sikB2xKlsmR9MO3HNwsRuTgczmwhLaryIis4UiRtep1pOLugP8+JRv5hAVH8xjCCh0pP+h8PVT7eXBXW0oBhRdrxPzazusbyA2tjMZgFDjtzeqldhg/ZN7WIlhoR0gqzsj9eCr1Vzpet15xXIFPzi+A8xxMDdYsun2RU00BidbkLoDxIMi+QJmb5877Wt9Qh0ekBReVWnkuywnJYd0MeUs+8mXewou4pm+jpU94xFKJQk3n8Q2vmNq0Qa+l/EPp/wzyWJf12XdbkdbzOwcJB3tlW3RYk/jLgK1cjzr+xrCiu1jVb29r1s+kJONvQ+FL6Xk/JrGLKSjlMIbPc6xGO+UZ5Fhu+dIHcr94IBJqpqc6c6IexSO424B7LwKeFLf2u6tWqjcksYSbvALvR4xF3DWL2WX0jFJ0oEfX77zvds+UvpI1WUTrckEp3bZXMwoUG6308dRxDJa9/AtaBidfjJfLG8n0UkyeLrtRJ0sx10a4FWypZy3nTZz47S0G+R2O7IQSp8xIkJRfUESwXg8eWTzt78AdXaSDS81/M8dJbxoFmdxL50cRgI4VvZfqBJ7zHHJoIzim/byv1tzTUXIRamCXpaQfeLiB+t5VvjR3yA31ts9uXFAs2SoPmAjBeuG42TOj89B1GfeLsOernkc0VG62LRHEhlZCijnkhKPq9Uncrxtb9eYJagjdlMICXAgRwXMHMYuLme1D3PKcNfewZxxB6vOakwZ26WAg1hJ+GyV9NqkPYTIM7OGN493hNluSfWr281ZaJ1g0/sNGKBBDbs3DMO4YrskrcHuINMbDJTx0XXKy3KwY0tYc6+WNcAYca+n5oQSzOmrnAcF0DeLxDuhwyzKk4D6De1euKJfi2mY43URa3xRZqIJKzbpsgMNhd5xAaTbIIX7ivFYj1QCMzZosLGnn3Pz0tBBrhnOqPKZJhZIzwzNYFBNivNk2igCxqD8ybwGvaQkfoEymp1EHClmbzoHk1Iwx4trpZyZDvd1bbgTVfj9eaqM71D/WmWP+JIkVe6AuqBT6z/SplQYg3U3WBSvYs7GrJeM2gnYCkIZNT+1jZwkO6TEpXCqwIQRIuWcR0ypQzmISWm93uZFTXkSt1ei8KP94ZOXOCkFgyxDS9XSJVbhytGBk6XYZd1BtLu4D0n18ZAcI9RwQXtjm5RaWxbn8DvVBqs/OG0rQpqJTziSGSv6g7FzXw0kJcuF3qajR0kv9rVAtbxDePj7skq3m9MBaWz0oT+u0zX5xlTx5k0ZmTkbSf/xobNVKgEhMilpwUbL0G/+wuKCg7W/V/GtTyNlsd35lTDjSaOqOeowW51xwlLZ+POaH0cCs3pDUvdJxXga1kRlsLSL2IAKqf+VVL72GP49+I3kNkLV+ixf601cUCeTUme8o9pr4C0z7POCIxRhaNr88cq+G2iLv8zJpXvm9u/612BCgityaHSWR8krjw35dqLJAmvbBP1++kZkummNf5xzYzyLDTRLdM+L/uWXGUzKM94tbo3jTpyTVrN3hkgS5fkBiN1pAI/Qno42Cjwl+YzieultrIYTaXVk0mUMyNZc5d14rHe8K3n24EwimPLXgT5QS7xpKG6BMziE/1WfbEGF3o5OjkPigVAm+vPZF7snRn0Cbx32JkUa/4dSqg5yYAVYJnNhKhDNzQ3JVFmA3baKZM5Br5MKPsbJTju6XUI8DpheH1unHrGHasUnz5VMrN8T14PZ+ZXxY4ZMhxSyzr5vb4dOj5YdQK+0q3eYbGvDRfSrPDKyZ3FIZPUTiA8GonQUjx4NjO2CFzvagJFe1hJp5WqNJOgUeuAaa8PjnTI9MaMjPPqM8A/0KaC+4NyLzwmFIvcM1wLHMBR+FYEyxh7Or63CGLrG2JrM9am9XR0EcUB3sjeIwttT+QZPV0miNHPgArovLs6U+PIoVtaAzsutu9lL4Si64iUhTIL0rFc41lq2MqP4RiSbxw372A/RWz16miTrqFPGBPof+C8yxvtOWQhCv3zFFAOngNqqAWR7nRiWC/85YbiigmoYw8KsqzItSik1TPapQ2BgYR+W8X6TCK46CvtIjBfVykKxWPuNkQao860ejYQlSFK4jbRAqwcXZp3JZXn4XUGvJFsA5PLEy2fopQMXupj4rV7CQtoMgu6AM8s1wrGPZAAhO7F3ckxCEFLjbWfFUOyeYSwx2VXEYzPSeDt9ENR/PTB8ac/g+Q4l8qjkXUHqtzzlGR0bWtGqgBKdeYxcvIKoHMoFkiVCLpaQA16mKxJcjjdcPnwo3mF0ygbDHEzQ/Ybe2HtZEPmXKk4aNWo39SNvUSpNmBLSthv9ecyAfmSs2qLeljSaKz8ihBSUBYZWXFPqKdFVNJ0eKyczblmJyZ2RgBa8Fkngo9hrV3qfWnQDjZcjNc0rAlggv1uSt/iBiYJJgVWxuFK2zKdN/TeFdwYX0qe1x3bdGLnYo8kWDrxBrBdeL+y3xZV/lhWv1TnM26opn/Gbl8kW5elYqMaI/UreO4Oo1Z/7IzqTfcz6GQycsIuyqgiRtTYZp7B0jQitKdnCYZwDtDzjeDeBVZVNDmGN2/0nPYMQn7QS28GWJuigf1Gj7O2dM5RyXfwztVypeDTFcy5gUboOx7KEXXU/07lE7MIqTgOdxtVJSGPqreozJ1jJfjAUF/Flvxfb8VimnN6ra3mx5hP54hqM22RK29tjt6LQBxuVv9U2lJA4QSx1ka9PW9JgSPN7fEf85DNNA0G0XxCsXDXXvfXqYwSqmFRfHyhxoqbaEjV2w+n3P2kNMmWWSBxp3IfOumOpeE3bMwb8K+2k+peR0LNX5YZwHOuuN8g2o2bEjEujWZn41ijTj/ti1y+opoBiXSkMrHm89sF/3gt/jAn4rqxYcnCyoMqbai0UIbgPgRdMYMIaUB96fPvSYnk3JiwFHeb//gVkQ4qHHr/rc1SmPQnXiZDgLlO/p248kJQLgSM2BXSwmnZaGfV4sE+bHXu5kf5eS9mKjoYvFDz8BIDMwuF0vKIXFQGGyXBpbSI0rZLFyjl/ldgZquNiKEQSgvuXiDg6+mjH4jhbEK8M/yusrR/1NBzagvC16vZAFg6dGKLW+NgrTqDSwUr+bvlMEe4NnnUtHaNAWnpQntLJXWFj+YTCX//6hYKbVYyiaky5WAiOtcViueutfJNzhk5s/wOIWfKSrNQ3a0WbZX65RPYs38vsQHbcS/3E7/hAwGLE4Ym9nVGgyni5O/UPho2jc/6gM6sA7bna6Lmsj0kmI0keX1WY33S0xfjdFDhnklcLxW2FId10JecGdxSQT5xt50EBrLHuWZxHZ88M0WfgBYGW4onXvXrYiA7bvNn2Ugp5MI1T3rKjI3dN41oXhbxCUTVn5/KPb5WOnsg2iX0l0tUGMat4HOChk0W9z78tN5cH4+ym5Ghra22K/s+PT8m+r4MHOMhDcROhTGcmIY6CczJOSvOqLEWmRcyG2B9FptLA9/zwVJewm3/YMphI51q67a5C2FMkaREFhudirD+XPEFyxoqhd9k96AS1nD6w4VGVlAcWwlxPxUkmc9JKTkJtNpHeN5PJtwCkcWHPFB8/mEZBQsGXvxuu9hBZ6UvvxRF7N/JrHqIxFcVaqRpE+0ruMjQfgvcmz4a3kVT2J3c4DXF5bTKkPlzKAXV9iDHFDYYLzJFaQKkIFb02snft+nJl1CTFL6zJOufqFi7lbhzjDfrvY1UOvbQ5+ECGEFaneAlxTHxuPL0T+rQFBgv5pac9f5Nev7XBNpGAIdGrvVgUkBq/lhN46Ber8btojZfmNmsf+MEiI/0KwuIk0Kg6vEO90kMHDAYcE6FtyZd8hbTsyJL+zWkOLARCRKRC5uJby95ThhkCrWkJWrUwf6TkBn8T9VfnrHYMo5fp0MS1XTqce6GOcXdFRhh8ldXJ+7+qSwZ/m+ujNa8aaAL+MW2U8kSn2qGEJm8Zn5gIms5jJ63YRlm4OxTiUVv4KgTbNDjXcP5i08R0s3ATAJvMZdarfiL5PVYS7MLqkBe03h9PXnaznD//LvHA4LIw7ot20zTll8b4NVbk/1Kv65eiVma+pau307DKCif1VsPS/4fudGRV5jMjY7TzayFFUGaLdMTmMMhAdpMuZQyRBfUdhyi1NHAtUvPLXA648fE8eTxUK2g6+iJk06u1Pkm0fPjzZlQI8OhUkoTtVN3yC4vtwQRNV874KIEMNv19IX/GLEE5XsdByIaBnVrh1foxTQ2KP5RoD7XvIoTpFNX7wa24vkkt7dO30fianAG9lC9gcYQr70msht69oVz1rCShn3AQDnKOczAMXsUWnAdRpwJv5UrBl02FBgYzoQRMGTdJiT+PyFF3FSIT4sGsQBumOO9/Am1AqN+6tGqEb7tpRY/DyKyfebkn6PrFUOQFdNw5Sy3xygKwXnI3sHfOLLs3huMP5xbdGrkEI9+NGjoVZduap/PWvHextDqPX4Croz4bt/IQTkSNmUv+WEVrNTCmqmbbduu+9uv+g8sIf1sfLE1Mgss0OD6xpOPTZZOw8k1jPqLFZMUUtS/1l3vDxt4nL4P80pHUKIM4REuXKVBBxU9Jy+iYOkKdNZ7zR4wItcIACfkR29lcLekIrSKumLhMDI8XpR4Vu4oiRWfU04hxV087MaqndGQreg5GiXbSrHj/B+Q7puhbT89aq4wcySQUtZwosOZL2+gmNCg9uSTjIICv2gaPKdB+fVYCGt+QaBf4r2QHLHFvb96OmCB5vQNTv20UWN9JFRis4mayhdT4IZdHtEbKZmxImxWDgafhaf72r/Ht9BMwxhxLRTOEXRz693X0khUYBXub3OC4QAC4FH/Ol96NqX3R+9IHKj91tRoB04tcp372sFjECUtgNFadV+9sidfwT3wfoFWDBvKD/JyAuch5y0CVO9BfsHqsX0GL1jWCKZobT1dFUez9y8/LKXrxrIrWht4ouExZoCmYs0MVghI0kGkDvPciIpcPeakTbRIXJpi8m9dorOx0bx4q/g7UXrwExdglGvErwKXqeXlaLFqB1i5sycJVdwRigs0Qd1MSDl3zanQop/qk17ZeguCmO1oR8OGqZCpWEynl6akXbNBNeiBEUpAAZDPtXjSrIInvjH97l/OswZCmYOmgDMN5QMpqpt1x1IVZL+YnYt7XajHirj786lFK19XCoQb4jKUL6F1XkNM8nSXE9lDQVFW6gOpwoiJQYxyXtSe7OBqjH5qfDtwSuVELmDFUBvHu6CoBPtJvGv7ix2FtuO3gJk1cRsLAyGmHcShJdHJMZiFxOxrMShlpS45JKgp/9sT7+xoNti5ZHGNdlI4hneXgvCy2XzCKqXuVmW8uR1nIwarsXfFixGMkELJpCATxEf2d7HpQsB7dRY6XLysM580z43o7Yl/1deLlbmT+rLCGwAOT31dbfRQu0nWHIk0Mp4cZGefsndTFiYk4c3FUGJCVS39YJWXk6KGieo03rGrajX4TwTDYaQWu5VpuoGQiAWS4YXFHJjsxIR8ENQctbXh657rcz9zRuVUdCS0Q+fyeFqKEu+Te2uqyQZkAK4u2as963AL02LvRnQnLQW1/NlYRyyZacTP7EJDh/tNtx3D1s76UsAeQCDeI/EBhyCVQpsjlGY8WgOxE+F4VGzkJfDtTxQ+dFY5HwBcQRZ0izUlOYGiC2O+rqTi/rWcPmqisIOaBjD1D2fPy9FfDFxhQEirLuYHsMzRzQze5YYqmpkbL6mTx4hlsFrxZ+fwRnlgyK7MP6GFfnDpYHUha8owbX/4MoUj1l7En22YUU+LTHgYEu9g/Ke3JlPKNgPscjC3B1xnmXnk8TKv/36rFYoZ187L594JeluOq82+WfWKjzv43lGfwKyRaOE0sAEx0LjBNfqeCPYV+FA10jd8a9O5ImlVUA+Du65ox9FFfzh3Z13I+lMTuzqxioJOkbYSvbw3x4UXTY8BDngC/uZTl5O3snXkVlKoQht9mGgCxpdfqQVWkKQ+VCFm5Dgdx7+whG9nOL2S/14eYFW/lDVD1DxFV1JIoprtwqhL+tgE/EIWGwiC3Lc608m4F0PrCZeB2GmImc8fsXXfukYKCw8txmwwJT9H0uv9Q4fW25zc2ioxZVBMN85qKaAw5Z2yaciBgY/MYOAraBLd4wSQ3JG6M16D9QgcUalJevyVrueJMngOtxKs4R7rLvLMw26tCqVBTwCeWo3ctgwNWbz3JRc9hIMf4cz44DpY7Ow6QpwewL/yb5tq5PcgD6hWNRD+yhdUvEVn1Q0tejrvLCDltpaefK9TIVst8TletCRBpic7T6G6kp6nRsaH0LrUKC7AThn6UjbXQFJXq7f0Wq4DuAKyVEsiwjFVpBmKUM2eSg=">
+</div>
+
+
+<div>
+
+ <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="4DD40520">
+ <input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+</div>       
+     <div>
+
+         <script>
+             //破圖處理
+             function ImgError(source) {
+                 var s = source.src
+                 //source.src = "http://s.tkec.com.tw/images/nopic.jpg";
+                 if (s.indexOf("kuai3imagecdn.azureedge.net") != -1) {
+                     source.src = s.replace("kuai3imagecdn.azureedge.net", "www.tkec.com.tw");
+                 }
+                 else {
+                     source.src = "http://s.tkec.com.tw/images/nopic.jpg";
+                 }
+
+                 source.onerror = "";
+                 return true;
+             }
+             function ImgError2(source) {
+                 source.src = "http://s.tkec.com.tw/images/nopic.jpg";
+                 source.onerror = "";
+                 return true;
+             }
+         </script>
+         <script>
+             function ScriptGoldNT(id1, id2) {
+                 document.getElementById(id1).style.display = "inline-block";
+                 document.getElementById(id2).style.display = "none";
+             }
+         </script>
+         <script>
+             function ProcessWait() {
+                 $.blockUI({
+                     message: $('#divImg'),
+                     css: {
+                         top: '40%',
+                         left: '40%',
+                         border: 'none',
+                         background: 'none'
+                     }
+                 });
+             }
+         </script>
+         <div id="divImg" style="display: none;">
+             <img src="https://www.tk3c.com/images/icons/loading2.gif" alt="Progress" align="absmiddle">
+         </div>
+         <input type="hidden" name="ctl00$hfUrl" id="ctl00_hfUrl" value="http://www.tk3c.com/mobile/mob_Sinfo.aspx"> 
+           
+         
+ <!-- 購物車用 js -->
+ <script src="js/mob_cart.js?480"></script>
+ <style>
+     .lbtnFeedback {
+         color: blue;
+     }
+ </style>
+ <script>
+     function RaidoCheckInvoType(i) {
+         if (i == 0) {
+             $('#ctl00_ContentPlaceHolder1_iv_no').css("display", "block");
+
+       } else {
+           $('#ctl00_ContentPlaceHolder1_iv_no').css("display", "none");
+
+         }
+     }
+     function checkGetWhoS(sender) {
+         if (sender[0].children[0].children[0].checked) {
+             $('#ctl00_ContentPlaceHolder1_spOptlGetWho').hide();
+         }
+         else
+             $('#ctl00_ContentPlaceHolder1_spOptlGetWho').show();
+     }
+ </script>
+ <script>
+     function CartProcessWait() {
+         document.getElementById("CartWaitTime").style.display = "block";
+     }
+ </script>
+ <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptManager1', 'aspnetForm', ['tctl00$ContentPlaceHolder1$up_StoreShipment','','tctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$up_UCAddrZip5Code',''], ['ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$ddlCity','','ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$ddlTown',''], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+<div class="load_fixbox" style="display:none" id="CartWaitTime">
+   <div class="midbg">
+       <div class="fontbox">
+       <p>資料下載中</p>
+       <div class="loading-spinner"></div>
+     </div>
+</div>
+</div>
+ <div class="container-fluid">
+     <div class="row">
+         <table class="table">
+             <thead>
+                 <tr>
+                     <td height="35px" align="center" style="background-color: #1b3b5f; border: none; background-image: url(images/nexticon3.jpg); background-repeat: no-repeat; background-position: right; line-height: 35px; color: #FFF">
+                         <h6>確認商品資料</h6>
+                     </td>
+                     <td align="center" bgcolor="#1B3B5F" style="background-image: url(images/nexticon1.jpg); background-repeat: no-repeat; background-position: right; line-height: 35px; color: #fff">
+                         <h6>選擇取貨門市及訂購資料</h6>
+                     </td>
+                     <td align="center" bgcolor="#d2d2d2" style="line-height: 35px; color: #222">
+                         <h6>預約完成</h6>
+                     </td>
+                 </tr>
+             </thead>
+             <tbody>
+             </tbody>
+         </table>
+
+         <div id="ctl00_ContentPlaceHolder1_pnShowCart">
+ 
+             <h4 class="bg-blue">網路購物</h4>
+             <span id="ctl00_ContentPlaceHolder1_TKEC_Shopping_Cart_DL"><span>
+                             <div id="ctl00_ContentPlaceHolder1_TKEC_Shopping_Cart_DL_ctl00_panProduct">
+     
+                                 </div></span></span><table class="table table-bordered">
+                 <thead>
+                     <tr>
+                         <th bgcolor="#EFEFEF">商品</th>
+                         <th width="15%" bgcolor="#EFEFEF">單價</th>
+                         <th width="15%" bgcolor="#EFEFEF">數量</th>
+                         <th width="15%" bgcolor="#EFEFEF">小計</th>
+                     </tr>
+                 </thead>
+                 <tbody>
+
+                     <tr>
+                                     <td>
+                                         VAIO筆記型電腦-SE14古銅棕(i7-1165G7/XeGraphics/16GB/1TB)</td>
+                                     <td align="right">
+                                         39,900
+                                     </td>
+                                     <td align="center">1</td>
+                                     <td align="right" class="text-danger">
+                                         39,900</td>
+                                 </tr>
+                             
+ 
+                         
+
+                     
+                     <tr>
+                         <td colspan="3" align="right" bgcolor="#f6f6f6">訂單金額 ▸ NT$</td>
+                         <td align="right" bgcolor="#f6f6f6" class="text-danger"><big>39,900</big></td>
+                     </tr>
+                 </tbody>
+             </table>
+         
+</div>
+          
+             <h4 class="bg-blue">支付方式</h4>
+             <div style="background-color: #dfdfdf; padding: 5px; font-size: smaller;">
+                 <span id="ctl00_ContentPlaceHolder1_Label6">選擇付款方式</span></div>
+             <div class="e_invoice">
+                 
+                 <div class="checkbox" style="background-color: #efefef; padding: 5px">
+                     <label id="ctl00_ContentPlaceHolder1_lab_chk_Store">
+                         <input id="ctl00_ContentPlaceHolder1_chk_store" type="radio" name="ctl00$ContentPlaceHolder1$pay" value="1" checked="checked"><label for="ctl00_ContentPlaceHolder1_chk_store">門市付款</label>
+                         
+                     </label><br>
+                     <label id="ctl00_ContentPlaceHolder1_lab_chk_credit">
+                         <input id="ctl00_ContentPlaceHolder1_chk_credit" type="radio" name="ctl00$ContentPlaceHolder1$pay" value="2" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$chk_credit\',\'\')', 0)"><label for="ctl00_ContentPlaceHolder1_chk_credit">信用卡付款</label><br>
+                         <label style="font-size:85%; color:#f00;">*送100購物金</label>
+                     </label><br>
+                     <label id="ctl00_ContentPlaceHolder1_lab_chk_LinePay">
+                         <input id="ctl00_ContentPlaceHolder1_chk_LinePay" type="radio" name="ctl00$ContentPlaceHolder1$pay" value="3" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$chk_LinePay\',\'\')', 0)"><label for="ctl00_ContentPlaceHolder1_chk_LinePay">LINE Pay <span style="color:#999999;">(可用LINE Points折抵)</span> </label><br>
+                         <label style="font-size:85%; color: #f00;">*送100購物金</label>
+                     </label>
+                     <label id="ctl00_ContentPlaceHolder1_lab_chk_EasyCardPay">
+                         <input id="ctl00_ContentPlaceHolder1_chk_EasyCardPay" type="radio" name="ctl00$ContentPlaceHolder1$pay" value="4" onclick="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$chk_EasyCardPay\',\'\')', 0)"><label for="ctl00_ContentPlaceHolder1_chk_EasyCardPay">悠遊付</label><br>
+                         <label style="font-size:85%; color: #f00;">*送100購物金</label>
+                     </label>
+                 </div>
+             </div>
+             
+         <div class="col-lg-12">
+             
+             <div id="ctl00_ContentPlaceHolder1_up_StoreShipment">
+ 
+                     <h4 class="bg-blue">預約取貨門市</h4>
+                     <table class="table" style="margin-top: 20px">
+                         <thead>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <th colspan="2" bgcolor="#EFEFEF">取貨地區</th>
+                             </tr>
+                             <tr>
+                                 <td colspan="2">
+                                     <br>
+                                     <div class="row">
+                                         <div class="col-xs-4" style="padding-right: 0; padding-top: 5px">請選擇區域：</div>
+                                         <div class="col-xs-8" style="padding-left: 0">
+                                             <select name="ctl00$ContentPlaceHolder1$ddl_County" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddl_County\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddl_County" class="form-control">
+     <option value="">-----</option>
+     <option value="20">北市,基隆</option>
+     <option selected="selected" value="22">新北市</option>
+     <option value="30">桃竹苗區</option>
+     <option value="40">中彰投區</option>
+     <option value="50">雲嘉南區</option>
+     <option value="52">高屏區</option>
+     <option value="60">宜花東區</option>
+     <option value="98">金門地區</option>
+     <option value="99">澎湖地區</option>
+
+ </select>
+                                         </div>
+                                     </div>
+                                     <br>
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <th colspan="2" bgcolor="#EFEFEF">取貨門市</th>
+                             </tr>
+                             <tr>
+                                 <td colspan="2">
+                                     
+                                     <br>
+                                     <br>
+                                     
+                                     
+                                     <br>
+                                     
+                                     
+                                     <div id="ctl00_ContentPlaceHolder1_nonGoods">
+                                         <font color="black">門市取貨恕不進行店對店調貨作業</font>
+                                         <br>
+                                         <span style="color: red"><b>本區暫無可取貨之門市，恕無法提供門取付款服務！</b></span>
+                                         <br>
+                                     </div>
+                                     
+
+                                     <p><strong>注意事項：</strong></p>
+                                     <div id="ctl00_ContentPlaceHolder1_divNote_shop">
+                                         <ol style="margin-left: -20px;">
+                                             <li><b>選擇門市付款商品限定選取門市，於<span style="color: red">3日內(含假日)</span>進行取貨付款，恕不進行調貨服務若多次逾期未取，帳戶權益將受影響，若需變更請提前取消並填寫原因 <b></b></b></li><b><b>
+                                             <li><b>選擇線上付款(信用卡、LinePay、悠遊付)開放選擇所有門市進行取貨頁面所提示之庫存不足門市需較長備貨時間，備貨完成後通知取貨<b></b></b></li><b><b>
+                                             <li><b>福利品、APPLE部分商品恕無法進行線上付款</b></li>
+                                             <li><b>預購、特殊活動付款方式依商品頁面提示</b></li>
+                                         </b></b></b></b></ol><b><b>
+                                     </b></b></div><b><b>
+                                     
+                                     
+                                 </b></b></td>
+                             </tr>
+                             
+                             <tr>
+                                 <td colspan="2">
+                                     
+                                     <div id="ctl00_ContentPlaceHolder1_dateCheck2" class="col-xs-9" style="margin-top: 10px">
+                                         
+                                     </div>
+                                     
+                                     <div class="col-xs-9" style="margin-top: 10px">
+                                         
+                                     </div>
+                                     <div style="clear: both"></div>
+                                     <br>
+                                     <small>提醒您可於前往前電聯門市確認庫存，若欲變更取貨時段亦可先行電話連繫告知即可。 </small></td>
+                             </tr>
+                         </tbody>
+                     </table>
+                 
+</div>
+             
+
+             
+             <h4 class="bg-blue">
+                 預約人</h4>
+             <div class="form-horizontal">
+                 <div class="checkbox" style="background-color: #efefef; padding: 5px">
+                     <label>
+                         <input id="ctl00_ContentPlaceHolder1_chkUPMember" type="checkbox" name="ctl00$ContentPlaceHolder1$chkUPMember" checked="checked"><label for="ctl00_ContentPlaceHolder1_chkUPMember">同步更新會員資料</label>
+                     </label>
+                 </div>
+                 <br>
+                 <div class="form-group">
+                     <label class="col-sm-10 control-label">姓名：<input name="ctl00$ContentPlaceHolder1$name" type="text" value="關伊絜" maxlength="20" readonly="readonly" id="ctl00_ContentPlaceHolder1_name" style="border-width:0px;"></label>
+                 </div>
+                 
+                 <div class="form-group">
+                     <label for="inputtel" class="col-xs-3 control-label" style="padding-right: 0">
+                         聯絡市話：<p class="small">（可不填）</p>
+                     </label>
+                     <div class="col-xs-2" style="padding-left: 0">
+                         <input name="ctl00$ContentPlaceHolder1$txt_tel_zone" type="text" maxlength="3" id="ctl00_ContentPlaceHolder1_txt_tel_zone" class="form-control">
+                         
+                     </div>
+                     <div class="col-xs-4" style="padding-left: 0">
+                         <input name="ctl00$ContentPlaceHolder1$txt_tel_number" type="text" maxlength="8" id="ctl00_ContentPlaceHolder1_txt_tel_number" class="form-control">
+                         
+                     </div>
+                     <div class="col-xs-3" style="padding-left: 0">
+                         <span>#</span>
+                         <input name="ctl00$ContentPlaceHolder1$txt_tel_ext" type="text" maxlength="5" id="ctl00_ContentPlaceHolder1_txt_tel_ext" class="form-control" placeholder="分機" style="display:inline-block;width:80%">
+                         
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label for="inputmobile" class="col-xs-3 control-label" style="padding-right: 0">聯絡行動：</label>
+                     <div class="col-xs-9" style="padding-left: 0">
+                         <input name="ctl00$ContentPlaceHolder1$mobile" type="text" value="0910594274" maxlength="10" id="ctl00_ContentPlaceHolder1_mobile" class="form-control">
+                         
+                     </div>
+                     <div id="ctl00_ContentPlaceHolder1_divAddr">
+                         <label for="inputmobile" class="col-xs-3 control-label" style="padding-right: 0">連絡地址：</label>
+                         <span id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_up_UCAddrZip5Code">
+     
+     
+     <div class=" col-xs-4" style="padding-left: 0">
+         <select name="ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$ddlCity" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$ddlCity\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_ddlCity" class="form-control">
+ <option value="">請選擇</option>
+ <option value="台中市">台中市</option>
+ <option value="台北市">台北市</option>
+ <option selected="selected" value="新北市">新北市</option>
+ <option value="台東縣">台東縣</option>
+ <option value="台南市">台南市</option>
+ <option value="宜蘭縣">宜蘭縣</option>
+ <option value="花蓮縣">花蓮縣</option>
+ <option value="金門縣">金門縣</option>
+ <option value="南投縣">南投縣</option>
+ <option value="屏東縣">屏東縣</option>
+ <option value="苗栗縣">苗栗縣</option>
+ <option value="桃園市">桃園市</option>
+ <option value="高雄市">高雄市</option>
+ <option value="基隆市">基隆市</option>
+ <option value="連江縣">連江縣</option>
+ <option value="雲林縣">雲林縣</option>
+ <option value="新竹市">新竹市</option>
+ <option value="新竹縣">新竹縣</option>
+ <option value="嘉義市">嘉義市</option>
+ <option value="嘉義縣">嘉義縣</option>
+ <option value="彰化縣">彰化縣</option>
+ <option value="澎湖縣">澎湖縣</option>
+
+</select>
+     </div>
+     <div class="col-xs-5">
+         <select name="ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$ddlTown" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$ddlTown\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_ddlTown" class="form-control">
+ <option value="">請選擇</option>
+ <option value="八里區">八里區</option>
+ <option value="鶯歌區">鶯歌區</option>
+ <option value="三重區">三重區</option>
+ <option value="三峽區">三峽區</option>
+ <option value="土城區">土城區</option>
+ <option value="中和區">中和區</option>
+ <option value="五股區">五股區</option>
+ <option value="平溪區">平溪區</option>
+ <option value="永和區">永和區</option>
+ <option value="石門區">石門區</option>
+ <option value="石碇區">石碇區</option>
+ <option value="汐止區">汐止區</option>
+ <option value="坪林區">坪林區</option>
+ <option value="林口區">林口區</option>
+ <option selected="selected" value="板橋區">板橋區</option>
+ <option value="金山區">金山區</option>
+ <option value="泰山區">泰山區</option>
+ <option value="烏來區">烏來區</option>
+ <option value="貢寮區">貢寮區</option>
+ <option value="淡水區">淡水區</option>
+ <option value="深坑區">深坑區</option>
+ <option value="新店區">新店區</option>
+ <option value="新莊區">新莊區</option>
+ <option value="瑞芳區">瑞芳區</option>
+ <option value="萬里區">萬里區</option>
+ <option value="樹林區">樹林區</option>
+ <option value="雙溪區">雙溪區</option>
+ <option value="蘆洲區">蘆洲區</option>
+ <option value="三芝區">三芝區</option>
+
+</select>
+     </div>
+      <div class="col-xs-12" style="margin-top: 15px">
+      <select name="ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$ddlROAD" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$ddlROAD\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_ddlROAD" class="form-control">
+ <option value="">請選擇街道</option>
+ <option value="三民路１段">三民路１段</option>
+ <option value="三民路２段">三民路２段</option>
+ <option value="三民路２段正泰七巷">三民路２段正泰七巷</option>
+ <option value="三民路２段正泰二巷">三民路２段正泰二巷</option>
+ <option value="三民路２段正泰三巷">三民路２段正泰三巷</option>
+ <option value="三民路２段正泰五巷">三民路２段正泰五巷</option>
+ <option value="三民路２段正泰六巷">三民路２段正泰六巷</option>
+ <option value="三民路２段正泰四巷">三民路２段正泰四巷</option>
+ <option value="三民路２段正泰巷">三民路２段正泰巷</option>
+ <option value="三民路２段正隆巷">三民路２段正隆巷</option>
+ <option value="三民路２段居仁巷">三民路２段居仁巷</option>
+ <option value="大仁街">大仁街</option>
+ <option value="大同街">大同街</option>
+ <option value="大明街">大明街</option>
+ <option value="大東街">大東街</option>
+ <option value="大勇街">大勇街</option>
+ <option value="大智街">大智街</option>
+ <option value="大華街">大華街</option>
+ <option value="大華街居安巷">大華街居安巷</option>
+ <option value="大漢街">大漢街</option>
+ <option value="大豐街">大豐街</option>
+ <option value="大觀路１段">大觀路１段</option>
+ <option value="大觀路２段">大觀路２段</option>
+ <option value="大觀路２段力行一巷">大觀路２段力行一巷</option>
+ <option value="大觀路２段力行二巷">大觀路２段力行二巷</option>
+ <option value="大觀路２段力行三巷">大觀路２段力行三巷</option>
+ <option value="大觀路２段文和巷">大觀路２段文和巷</option>
+ <option value="大觀路３段">大觀路３段</option>
+ <option value="干城路">干城路</option>
+ <option value="中山路１段">中山路１段</option>
+ <option value="中山路２段">中山路２段</option>
+ <option value="中山路２段光榮巷">中山路２段光榮巷</option>
+ <option value="中正路">中正路</option>
+ <option value="中興路">中興路</option>
+ <option value="互助街">互助街</option>
+ <option value="五權街">五權街</option>
+ <option value="仁化街">仁化街</option>
+ <option value="仁愛路">仁愛路</option>
+ <option value="介壽街">介壽街</option>
+ <option value="公園街">公園街</option>
+ <option value="公館街">公館街</option>
+ <option value="太和街">太和街</option>
+ <option selected="selected" value="文化路１段">文化路１段</option>
+ <option value="文化路２段">文化路２段</option>
+ <option value="文昌街">文昌街</option>
+ <option value="文華街">文華街</option>
+ <option value="文新路">文新路</option>
+ <option value="文聖街">文聖街</option>
+ <option value="文德路">文德路</option>
+ <option value="北門街">北門街</option>
+ <option value="四川路１段">四川路１段</option>
+ <option value="四川路２段">四川路２段</option>
+ <option value="四川路２段橋頭">四川路２段橋頭</option>
+ <option value="四川路２段橋頭一巷">四川路２段橋頭一巷</option>
+ <option value="四維路">四維路</option>
+ <option value="正泰七巷">正泰七巷</option>
+ <option value="正泰二巷">正泰二巷</option>
+ <option value="正泰三巷">正泰三巷</option>
+ <option value="正泰五巷">正泰五巷</option>
+ <option value="正泰六巷">正泰六巷</option>
+ <option value="正泰四巷">正泰四巷</option>
+ <option value="正義街">正義街</option>
+ <option value="民生路１段">民生路１段</option>
+ <option value="民生路２段">民生路２段</option>
+ <option value="民生路３段">民生路３段</option>
+ <option value="民安街">民安街</option>
+ <option value="民有街">民有街</option>
+ <option value="民享街">民享街</option>
+ <option value="民治街">民治街</option>
+ <option value="民族路">民族路</option>
+ <option value="民權路">民權路</option>
+ <option value="永翠路">永翠路</option>
+ <option value="永豐街">永豐街</option>
+ <option value="田單街">田單街</option>
+ <option value="光正街">光正街</option>
+ <option value="光明街">光明街</option>
+ <option value="光武街">光武街</option>
+ <option value="光復街">光復街</option>
+ <option value="光華街">光華街</option>
+ <option value="光環路１段">光環路１段</option>
+ <option value="光環路二段">光環路二段</option>
+ <option value="合安一路">合安一路</option>
+ <option value="合宜一路">合宜一路</option>
+ <option value="合宜路">合宜路</option>
+ <option value="存德街">存德街</option>
+ <option value="成功路">成功路</option>
+ <option value="成都街">成都街</option>
+ <option value="江寧路３段">江寧路３段</option>
+ <option value="自由路">自由路</option>
+ <option value="自強新里">自強新里</option>
+ <option value="西門街">西門街</option>
+ <option value="吳鳳路">吳鳳路</option>
+ <option value="宏國路">宏國路</option>
+ <option value="沙崙街">沙崙街</option>
+ <option value="防汛路">防汛路</option>
+ <option value="和平路">和平路</option>
+ <option value="和平路台貿巷">和平路台貿巷</option>
+ <option value="和平路安樂巷">和平路安樂巷</option>
+ <option value="和安一路">和安一路</option>
+ <option value="幸福路">幸福路</option>
+ <option value="府中路">府中路</option>
+ <option value="府後街">府後街</option>
+ <option value="忠孝路">忠孝路</option>
+ <option value="忠孝路忠義巷">忠孝路忠義巷</option>
+ <option value="明德街">明德街</option>
+ <option value="東門街">東門街</option>
+ <option value="東興街">東興街</option>
+ <option value="林森街">林森街</option>
+ <option value="林園街">林園街</option>
+ <option value="板林路">板林路</option>
+ <option value="板新路">板新路</option>
+ <option value="松江街">松江街</option>
+ <option value="松柏街">松柏街</option>
+ <option value="金門街">金門街</option>
+ <option value="金華街">金華街</option>
+ <option value="長安街">長安街</option>
+ <option value="長江路１段">長江路１段</option>
+ <option value="長江路２段">長江路２段</option>
+ <option value="長江路３段">長江路３段</option>
+ <option value="雨農路">雨農路</option>
+ <option value="信義路">信義路</option>
+ <option value="南門街">南門街</option>
+ <option value="南雅西路１段">南雅西路１段</option>
+ <option value="南雅西路２段">南雅西路２段</option>
+ <option value="南雅東路">南雅東路</option>
+ <option value="南雅南路１段">南雅南路１段</option>
+ <option value="南雅南路２段">南雅南路２段</option>
+ <option value="南興路">南興路</option>
+ <option value="建國街">建國街</option>
+ <option value="後埔街">後埔街</option>
+ <option value="後菜園街">後菜園街</option>
+ <option value="英士路">英士路</option>
+ <option value="重慶路">重慶路</option>
+ <option value="倉後街">倉後街</option>
+ <option value="宮口街">宮口街</option>
+ <option value="校前街">校前街</option>
+ <option value="海山路">海山路</option>
+ <option value="站前路">站前路</option>
+ <option value="茶館街">茶館街</option>
+ <option value="區運路">區運路</option>
+ <option value="國光路">國光路</option>
+ <option value="國泰街">國泰街</option>
+ <option value="國慶路">國慶路</option>
+ <option value="莒光路">莒光路</option>
+ <option value="莊崑路">莊崑路</option>
+ <option value="莊敬路">莊敬路</option>
+ <option value="博愛街">博愛街</option>
+ <option value="富山街">富山街</option>
+ <option value="復興街">復興街</option>
+ <option value="景福路">景福路</option>
+ <option value="華江一路">華江一路</option>
+ <option value="華江三路">華江三路</option>
+ <option value="華東街">華東街</option>
+ <option value="華東路">華東路</option>
+ <option value="華福街">華福街</option>
+ <option value="華興街">華興街</option>
+ <option value="貴興路">貴興路</option>
+ <option value="陽明街">陽明街</option>
+ <option value="新民街">新民街</option>
+ <option value="新生街">新生街</option>
+ <option value="新府路">新府路</option>
+ <option value="新海路">新海路</option>
+ <option value="新站路">新站路</option>
+ <option value="新崑路">新崑路</option>
+ <option value="新興路">新興路</option>
+ <option value="溪北路">溪北路</option>
+ <option value="溪城路">溪城路</option>
+ <option value="溪崑一街">溪崑一街</option>
+ <option value="溪崑二街">溪崑二街</option>
+ <option value="溪頭街">溪頭街</option>
+ <option value="瑞安街">瑞安街</option>
+ <option value="萬安街">萬安街</option>
+ <option value="萬板路">萬板路</option>
+ <option value="稚暉街">稚暉街</option>
+ <option value="裕民街">裕民街</option>
+ <option value="僑中一街">僑中一街</option>
+ <option value="僑中二街">僑中二街</option>
+ <option value="僑中三街">僑中三街</option>
+ <option value="實踐路">實踐路</option>
+ <option value="漢生西路">漢生西路</option>
+ <option value="漢生東路">漢生東路</option>
+ <option value="滿平二街">滿平二街</option>
+ <option value="滿平街">滿平街</option>
+ <option value="福德街">福德街</option>
+ <option value="綠堤街">綠堤街</option>
+ <option value="翠華街">翠華街</option>
+ <option value="遠東路">遠東路</option>
+ <option value="銘傳街">銘傳街</option>
+ <option value="廣和街">廣和街</option>
+ <option value="廣權路">廣權路</option>
+ <option value="德興街">德興街</option>
+ <option value="樂群路">樂群路</option>
+ <option value="篤行路１段">篤行路１段</option>
+ <option value="篤行路２段">篤行路２段</option>
+ <option value="篤行路３段">篤行路３段</option>
+ <option value="篤行路３段玉平巷">篤行路３段玉平巷</option>
+ <option value="縣民大道１段">縣民大道１段</option>
+ <option value="縣民大道２段">縣民大道２段</option>
+ <option value="縣民大道３段">縣民大道３段</option>
+ <option value="館前西路">館前西路</option>
+ <option value="館前西路興義巷">館前西路興義巷</option>
+ <option value="館前東路">館前東路</option>
+ <option value="龍泉街">龍泉街</option>
+ <option value="龍興街">龍興街</option>
+ <option value="環河路">環河路</option>
+ <option value="環邊道路">環邊道路</option>
+ <option value="雙十路１段">雙十路１段</option>
+ <option value="雙十路２段">雙十路２段</option>
+ <option value="雙十路３段">雙十路３段</option>
+ <option value="懷仁街">懷仁街</option>
+ <option value="懷德街">懷德街</option>
+ <option value="觀光街">觀光街</option>
+ <option value="自行填入路名">自行填入路名</option>
+
+</select>
+      </div>        
+     <div class="col-xs-12" style="margin-top: 15px">
+         <input name="ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$txtAddr" type="text" value="141號11樓" maxlength="20" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$mob_UCAddrZipCode1$txtAddr\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_txtAddr" class="form-control">
+     </div>
+     <span id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY" style="color:Red;display:none;">縣市必填!!</span>
+     <span id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town" style="color:Red;display:none;">地區必填!!</span>
+     <span id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD" style="color:Red;display:none;">街道必填!!</span>
+     <span id="ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr" style="color:Red;display:none;">地址必填!!</span>
+     
+ </span>
+
+                     </div>
+                     <label for="inputmobile" class="col-sm-2 control-label" style="margin-top: 15px;">訂單留言：</label>
+                     <br>
+                     <div class="col-xs-12">
+                         <textarea name="ctl00$ContentPlaceHolder1$meno" rows="3" cols="20" id="ctl00_ContentPlaceHolder1_meno" class="form-control-ordernote"></textarea>
+                         <input type="hidden" name="ctl00$ContentPlaceHolder1$meno_TextBoxWatermarkExtender_ClientState" id="ctl00_ContentPlaceHolder1_meno_TextBoxWatermarkExtender_ClientState">
+                     </div>
+                 </div>
+             </div>
+             
+
+             
+             
+             
+             
+
+            
+         </div>
+
+         
+         <input type="submit" name="ctl00$ContentPlaceHolder1$btnCreditCard" value="快速付款" onclick="CartProcessWait();" id="ctl00_ContentPlaceHolder1_btnCreditCard" class="btn btn-primary btn-lg btn-block"><br>
+         
+                                         <input type="hidden" name="ctl00$ContentPlaceHolder1$TextBoxWatermarkExtender2_ClientState" id="ctl00_ContentPlaceHolder1_TextBoxWatermarkExtender2_ClientState">
+                             
+
+         
+         <div class="col-lg-12" style="margin: 20px 0; float: left;">
+             <div style="font-size: 85%; text-decoration: underline;">
+                 <a onclick="window.open('https://m.me/125143697558679?ref=j3FxdNhAvnJ&amp;ec=error_mob_scart');" id="ctl00_ContentPlaceHolder1_lbtnFeedback" class="lbtnFeedback" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$lbtnFeedback','')">😣不能結帳？問題回報✐</a>
+             </div>
+             <h6><small><strong>網購訂單注意事項:</strong><br>
+                 網站購物分為「宅配到貨」及「門市取貨」，訂單類型皆會顯示於完成訂購後的頁面。<br>
+                 
+                 ※ 宅配到貨：訂單成立起，預計2~5個工作天到貨，商品頁若有標示預計出貨日期，則依商品頁標示規範而定。<br>
+                 ※ 門市取貨：<span style="color: red">訂單成立日</span>起3日內(含假日)取貨完成，並請記得攜帶個人證件以利查核。<br>
+                 
+
+             </small></h6>
+         </div>
+
+     </div>
+     <br>
+ </div>
+
+
+ 
+ 
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenBuyGoldTotal" id="ctl00_ContentPlaceHolder1_HiddenBuyGoldTotal">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$hiddenMEMBERID" id="ctl00_ContentPlaceHolder1_hiddenMEMBERID">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$hiddenSID" id="ctl00_ContentPlaceHolder1_hiddenSID">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenOPENAREAPMK" id="ctl00_ContentPlaceHolder1_HiddenOPENAREAPMK">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenOpenAreaStatus" id="ctl00_ContentPlaceHolder1_HiddenOpenAreaStatus">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenOPENAREAnun" id="ctl00_ContentPlaceHolder1_HiddenOPENAREAnun">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$HiddenOPENAREAPRICE" id="ctl00_ContentPlaceHolder1_HiddenOPENAREAPRICE">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$hiddenPList" id="ctl00_ContentPlaceHolder1_hiddenPList">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$hiddenPList2" id="ctl00_ContentPlaceHolder1_hiddenPList2">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$hiddenUrlIndex" id="ctl00_ContentPlaceHolder1_hiddenUrlIndex">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$H_City" id="ctl00_ContentPlaceHolder1_H_City" value="新北市">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$H_eventStoreAddress" id="ctl00_ContentPlaceHolder1_H_eventStoreAddress">
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$H_isStoreLock" id="ctl00_ContentPlaceHolder1_H_isStoreLock" value="False">
+ 
+ 
+ <!--diy資料-->
+ <input type="hidden" name="ctl00$ContentPlaceHolder1$hd_diy" id="ctl00_ContentPlaceHolder1_hd_diy" value="0">
+         
+         <script src="../mobile/js/clipboard.min.js"></script>  
+         <script>
+
+             var clipboard = new Clipboard('.c_copy', {
+                 text: function () {
+                     //return document.querySelector('input[id=hfUrl]').value;
+                     return document.querySelector('input[id=ctl00_hfUrl]').value;
+
+                 }
+             });
+
+             var clipboard = new Clipboard('.events_copy', {
+                 text: function () {
+                     //return document.querySelector('input[id=hfUrl]').value;
+                     return "B0ffa58";
+
+                 }
+             });
+
+             clipboard.on('success', function (e) {
+                 alert('複製成功');
+                 e.clearSelection();
+
+             });
+
+             clipboard.on('error', function (e) {
+                 console.log(e);
+             });
+
+
+ </script>
+     </div>
+     <input name="ctl00$txtIsTester" type="text" id="ctl00_txtIsTester" style="display:none;">
+ 
+ <!-- 門市快速取貨彈出視窗 -->
+ <div id="fastPickBox">
+    <div class="pickContent">
+        <h2>快速取貨<br>指定快取門市</h2>
+        <div class="formbox">
+            <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(220)新埔店</div>
+                 <div class="colmn">新北市板橋區雨農路19號</div>
+            </div>
+            <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(231)新店中正店</div>
+                 <div class="colmn">新北市新店區中正路424號<span class="comment">(需較長備貨時間)</span></div>
+            </div>
+            <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(220)新埔店</div>
+                 <div class="colmn">新北市板橋區雨農路19號</div>
+             </div>
+             <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(231)新店中正店</div>
+                 <div class="colmn">新北市新店區中正路424號<span class="comment">(需較長備貨時間)</span></div>
+             </div>
+             <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(220)新埔店</div>
+                 <div class="colmn">新北市板橋區雨農路19號</div>
+             </div>
+             <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(241)三重重新店</div>
+                 <div class="colmn">新北市三重區重新路二段116、118號<span class="comment">(需較長備貨時間)</span></div>
+             </div>
+             <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(220)新埔店</div>
+                 <div class="colmn">新北市板橋區雨農路19號</div>
+            </div>
+            <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(231)新店中正店</div>
+                 <div class="colmn">新北市新店區中正路424號<span class="comment">(需較長備貨時間)</span></div>
+            </div>
+            <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(220)新埔店</div>
+                 <div class="colmn">新北市板橋區雨農路19號</div>
+             </div>
+             <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(231)新店中正店</div>
+                 <div class="colmn">新北市新店區中正路424號<span class="comment">(需較長備貨時間)</span></div>
+             </div>
+             <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(220)新埔店</div>
+                 <div class="colmn">新北市板橋區雨農路19號</div>
+             </div>
+             <div class="row">
+                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
+                 <div class="colmn">(114)台北西湖店</div>
+                 <div class="colmn">台北市西湖區內湖路一段323巷11樓1F.B1<span class="comment">(需較長備貨時間)</span></div>
+             </div>
+        </div>
+        <div class="descrtionBox">
+             <h2>什麼是燦坤速速GO?</h2>
+             <div class="descriton">
+                 <p>燦坤線上預定/門市低接觸快速取貨上線囉~</p>
+                 <p>全台指定14家速速GO門市，選擇線上付款到店取貨</p>
+                 <p>一通電話即可依約定時間、指定地點快速完成取貨</p>
+                 <em class="space"></em>
+                 <p>免下車、低接觸，便捷又安全</p>
+                 <p>減少停留時間，共同維護彼此健康</p>
+                 <p>您一定不能錯過的門市快速取貨服務</p>
+                 <p>(實際可快速取貨之門市以結帳頁面為準)</p>
+             </div>
+        </div>
+        <a id="goPick">確定</a>
+    </div>
+</div>
+
+ <!-- 彈出訊息視窗 -->
+ <div id="alertBox">
+    <div class="content">
+        <p class="msg">請選擇快取門市!</p>
+        <div class="alertFooter">
+             <a class="alertSure">確定</a>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY"), document.getElementById("ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town"), document.getElementById("ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD"), document.getElementById("ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY = document.all ? document.all["ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY"] : document.getElementById("ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY");
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY.controltovalidate = "ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_ddlCity";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY.focusOnError = "t";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY.errormessage = "縣市必填!!";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY.display = "Dynamic";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY.validationGroup = "AddrCheck";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_CITY.initialvalue = "";
+var ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town = document.all ? document.all["ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town"] : document.getElementById("ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town");
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town.controltovalidate = "ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_ddlTown";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town.focusOnError = "t";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town.errormessage = "地區必填!!";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town.display = "Dynamic";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town.validationGroup = "AddrCheck";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Town.initialvalue = "";
+var ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD = document.all ? document.all["ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD"] : document.getElementById("ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD");
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD.controltovalidate = "ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_ddlROAD";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD.focusOnError = "t";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD.errormessage = "街道必填!!";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD.display = "Dynamic";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD.validationGroup = "AddrCheck";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_ROAD.initialvalue = "";
+var ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr = document.all ? document.all["ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr"] : document.getElementById("ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr");
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr.controltovalidate = "ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_txtAddr";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr.focusOnError = "t";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr.errormessage = "地址必填!!";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr.display = "Dynamic";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr.validationGroup = "AddrCheck";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ContentPlaceHolder1_mob_UCAddrZipCode1_rfv_Addr.initialvalue = "";
+//]]>
+</script>
+</form>
+  
+     </div>
+     
+
+<div class="tkecM_footerNav">
+ <div class="tkecM_footerNav-container">      
+   <ul class="tkecM_footerNav-listMenu">
+     <li><a href="/mobile/mob_index.aspx" class="tkecM_listMenu-link"><img src="images/cart_home.png" alt=""><span>首頁</span></a></li>
+     <li><a href="#" class="tkecM_listMenu-link tkecM_nav-messageCloseBtn tkecM_footerMessageBtn"><img src="images/cart_vip.png" alt=""><span>專屬優惠</span></a></li>     
+       
+     <li><a href="inc/#" id="ctl00_mob_FooterNavUC1_MessageBtn" class="tkecM_listMenu-link tkecM_messageCtl-storeMessage" data-kind="0"><img src="images/message.png" alt=""><span>訊息 </span><i class="tkecM_carCount" id="messagecount" style="display: none;"></i></a>
+         
+     </li>
+     <li><a id="ctl00_mob_FooterNavUC1_HyCartLink" class="tkecM_listMenu-link" href="/mobile/mob_Scart.aspx"><img src="images/cart_car.png" alt=""><span>購物車</span><i class="tkecM_carCount">1+</i></a></li>
+     <li><a href="#" class="tkecM_listMenu-link tkecM_messageCtl-loginBtn"><img src="images/cart_user.png" alt=""><span>會員中心</span></a></li>        
+     
+   </ul>
+ </div>
+</div>
+
+ 
+ </div><nav class="tkecM_newNav">
+   <ul id="tkecM_newPrimaryNav" class="tkecM_newPrimaryNav is-fixed"></ul>
+</nav>              
+ <script>
+             try {
+                 var swiper = new Swiper('.searchSlide', {
+                     slidesPerView: 2,
+                     loopedSlides: 2,
+                     nextButton: '.swiper-button-next',
+                     prevButton: '.swiper-button-prev',
+                     loop: true,
+                 });
+             }
+             catch {                
+             }
+</script>
+
+ 
+    
+ <div class="fixbox pc_version_non" id="divMobileMsg" style="display: none; background: rgba(0,0,0,0.0); margin-bottom: 10px;">
+     <div class="alignbox" style="background: rgba(0,0,0,0.0); margin-bottom: 10px;">
+         <div class="midbox" style="background: rgba(0,0,0,0.0); margin-bottom: 10px;">
+             <div id="msgbox_m">
+                 <a class="close_btn" href="#" onclick="javascript:$('#divMobileMsg').hide();"></a>
+                 <div class="main">
+                     <div class="content" id="divMobileMsgContent">
+                     </div>
+                     <div class="btn_area">
+                         <a onclick="javascript:$('#divMobileMsg').hide();" href="#" id="divMobileMsgButton">確認</a>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>    
+ <script>MessageCount();</script>
+<script>
+ (function (i, s, o, g, r, a, m) {
+     i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+         (i[r].q = i[r].q || []).push(arguments)
+     }, i[r].l = 1 * new Date(); a = s.createElement(o),
+         m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+ })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+ ga('create', 'UA-22041504-48', 'auto');
+ ga('send', 'pageview');
+ function sendGaEvent(eventCategory, eventAction, eventLabel) {
+     ga('send', 'event', eventCategory, eventAction, eventLabel);
+ }
+</script>
+
+<!--LocalStorage-->
+<script src="https://www.tk3c.com/js/ptchecker.js?6"></script>
+</body>
+</html>
