@@ -12,14 +12,13 @@
 
 #fastPickBox .pickContent {
     position: relative;
-    top: 50%;
+    top: 20%;
     left: 0;
     bottom: 0;
     right: 0;
     width: 22%;
     height: auto;
     margin: 0 auto 30px;
-    transform: translateY(-50%);
     background: #fff;
     border: 5px solid #2e3e64;
     overflow-y: auto;
@@ -131,10 +130,10 @@
         width: 40%;
     }
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1441px) {
     #fastPickBox .pickContent {
         width: 50%;
-        top: 75%;
+        margin: 0 auto 50px;
     }
     #alertBox .content {
         width: 20%;
@@ -154,7 +153,6 @@
 @media screen and (max-width: 768px) {
     #fastPickBox .pickContent {
         width: 90%;
-        top: 70%;
         margin: 0 auto 25%;
     }
     #fastPickBox .formbox .row {
