@@ -650,8 +650,36 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptMan
                                      <br>
                                      <br>
                                      
-                                     
-                                     <br>
+                                     <span id="ctl00_ContentPlaceHolder1_lb_ddlTitle">請選擇門市：</span>
+                                     <select name="ctl00$ContentPlaceHolder1$ddl_AddSystemStore" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ContentPlaceHolder1$ddl_AddSystemStore\',\'\')', 0)" id="ctl00_ContentPlaceHolder1_ddl_AddSystemStore" class="form-control">
+                                        <option selected="selected" value="00">請選擇門市</option>
+                                        <option value="062">(220)板橋店  地址:新北市板橋區莊敬路34號</option>
+                                        <option value="518">(220)新板橋中山店  地址:新北市板橋區中山路一段51號</option>
+                                        <option value="087">(220)新埔店  地址:新北市板橋區雨農路19號</option>
+                                        <option value="382">(220)埔墘店  地址:新北市板橋區中山路二段361號B1-1F</option>
+                                        <option value="397">(220)板橋溪北店  地址:新北市板橋區溪北路118號1-2F與116號2F</option>
+                                        <option value="448">(222)深坑店  地址:新北市深坑區北深路三段305號1樓</option>
+                                        <option value="495">(231)大坪林店  地址:新北市新店區北新路3段198 200號</option>
+                                        <option value="355">(231)新店中興店  地址:新北市新店區中興路三段3號B1</option>
+                                        <option value="583">(234)永和竹林店  地址:新北市永和區竹林路167號</option>
+                                        <option value="475">(234)永和信義店  地址:新北市永和區信義路125號1-2F</option>
+                                        <option value="534">(234)新永和店  地址:新北市永和區中正路233.235號1-2樓</option>
+                                        <option value="341">(235)中和中山店  地址:新北市中和區中山路三段98號B1~2F</option>
+                                        <option value="076">(235)中和店  地址:新北市中和區中和路326號1.2樓</option>
+                                        <option value="016">(239)鶯歌店  地址:新北市鶯歌區中正一路115號B1.1樓</option>
+                                        <option value="322">(241)三重仁愛店  地址:新北市三重區仁愛街676.678號1-2F</option>
+                                        <option value="589">(241)三重重新店  地址:新北市三重區重新路二段116、118號</option>
+                                        <option value="588">(243)泰山明志店  地址:新北市泰山區明志路三段126號</option>
+                                        <option value="569">(243)泰林店  地址:新北市泰山區泰林路二段189、191號</option>
+                                        <option value="374">(244)林口文化店  地址:新北市林口區文化二路1段269號1樓、271號1樓、2樓</option>
+                                        <option value="454">(244)林口竹林店  地址:新北市林口區中正路332號1、2樓</option>
+                                        <option value="101">(247)蘆洲旗艦店  地址:新北市蘆洲區中山一路297號</option>
+                                        <option value="176">(247)三民店  地址:新北市蘆洲區三民路535號</option>
+                                        <option value="384">(249)八里店  地址:新北市八里區中山路二段522號1-2F</option>
+                                        <option value="117">(251)淡水店  地址:新北市淡水區大忠街89號1F</option>
+                                        <option value="536">(333)新長庚店  地址:桃園市龜山區文化三路383號1F</option>
+                            
+                                    </select>
                                      
                                      
                                      <div id="ctl00_ContentPlaceHolder1_nonGoods">
@@ -1133,69 +1161,6 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptMan
  <!-- 門市快速取貨彈出視窗 -->
  <div id="fastPickBox">
     <div class="pickContent">
-        <h2>快速取貨<br>指定快取門市</h2>
-        <div class="formbox">
-            <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(220)新埔店</div>
-                 <div class="colmn">新北市板橋區雨農路19號</div>
-            </div>
-            <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(231)新店中正店</div>
-                 <div class="colmn">新北市新店區中正路424號<span class="comment">(需較長備貨時間)</span></div>
-            </div>
-            <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(220)新埔店</div>
-                 <div class="colmn">新北市板橋區雨農路19號</div>
-             </div>
-             <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(231)新店中正店</div>
-                 <div class="colmn">新北市新店區中正路424號<span class="comment">(需較長備貨時間)</span></div>
-             </div>
-             <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(220)新埔店</div>
-                 <div class="colmn">新北市板橋區雨農路19號</div>
-             </div>
-             <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(241)三重重新店</div>
-                 <div class="colmn">新北市三重區重新路二段116、118號<span class="comment">(需較長備貨時間)</span></div>
-             </div>
-             <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(220)新埔店</div>
-                 <div class="colmn">新北市板橋區雨農路19號</div>
-            </div>
-            <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(231)新店中正店</div>
-                 <div class="colmn">新北市新店區中正路424號<span class="comment">(需較長備貨時間)</span></div>
-            </div>
-            <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(220)新埔店</div>
-                 <div class="colmn">新北市板橋區雨農路19號</div>
-             </div>
-             <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(231)新店中正店</div>
-                 <div class="colmn">新北市新店區中正路424號<span class="comment">(需較長備貨時間)</span></div>
-             </div>
-             <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(220)新埔店</div>
-                 <div class="colmn">新北市板橋區雨農路19號</div>
-             </div>
-             <div class="row">
-                 <div class="colmn"><label><input type="radio" name="pickcheck"></label></div>
-                 <div class="colmn">(114)台北西湖店</div>
-                 <div class="colmn">台北市西湖區內湖路一段323巷11樓1F.B1<span class="comment">(需較長備貨時間)</span></div>
-             </div>
-        </div>
         <div class="descrtionBox">
              <h2>什麼是燦坤速速GO?</h2>
              <div class="descriton">
@@ -1209,17 +1174,7 @@ Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ScriptMan
                  <p>(實際可快速取貨之門市以結帳頁面為準)</p>
              </div>
         </div>
-        <a id="goPick">確定</a>
-    </div>
-</div>
-
- <!-- 彈出訊息視窗 -->
- <div id="alertBox">
-    <div class="content">
-        <p class="msg">請選擇快取門市!</p>
-        <div class="alertFooter">
-             <a class="alertSure">確定</a>
-        </div>
+        <a id="goPick">我了解了</a>
     </div>
 </div>
 
