@@ -27,6 +27,7 @@
     box-sizing: border-box;
     z-index: 999;
     transform: translateY(-50%);
+    font-family: '微軟正黑體',sans-serif;
 }
 
 #fastPickBox .descrtionBox h2 {
