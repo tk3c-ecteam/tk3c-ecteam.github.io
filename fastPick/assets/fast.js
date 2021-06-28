@@ -18,11 +18,11 @@ $(function(){
     });
 
     //選擇門市，彈出訊息視窗(手機版select)
-    $('#ctl00_ContentPlaceHolder1_ddl_AddSystemStore option').on('click',function(){
-        if ($(this).val() != '') {
+    $('#ctl00_ContentPlaceHolder1_ddl_AddSystemStore').on('change',function(e){
+        e.preventDefault();
+        if ($(this).val() != 00) {
             $('#fastPickBox').fadeIn('fast');
         }
-
         //取得門市地址 select value值
         console.log($('#ctl00_ContentPlaceHolder1_ddl_AddSystemStore').val());
     });
