@@ -58,6 +58,11 @@
     line-height: 1.5em;
     padding: 3px 20px;
 }
+
+#fastPickBox .descriton .comment {
+    color:  red;
+}
+
 #goPick {
     width: 20%;
     height: 30px;
