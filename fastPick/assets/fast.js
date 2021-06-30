@@ -8,8 +8,7 @@ $(function(){
     });
 
     //選擇門市，彈出訊息視窗(手機版select)
-    $('#ctl00_ContentPlaceHolder1_ddl_AddSystemStore').on('change',function(e){
-        e.preventDefault();
+    $('#ctl00_ContentPlaceHolder1_ddl_AddSystemStore').on('change',function(){
         if ($(this).val() != 00) {
             $('#fastPickBox').fadeIn('fast');
         }
