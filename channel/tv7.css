@@ -74,10 +74,6 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"å¾®è»
     height: auto;
     margin: -4PX 3% 0;
 }
-.step-group a :nth-of-type(1) {
-    position: relative;
-    top: 15px;
-}
 .step-group a :hover {
     transform: translateY(-1em);
     transition: all 0.5s linear;
@@ -438,7 +434,7 @@ body {background-size: 185%;background-position:-46vmin 11vmin;}
 .step-title {font-size: 7vmin !important;height: 150px !important;line-height: 1.2em !important;}
 div:nth-of-type(6) {margin-top: 0;}
 .protitle, .step-title{line-height: 1.2em;}
-.step-group .product-box {width: 119%;margin-top: 0 -11%;}
+.step-group .product-box {width: 119%;margin: 0 -11%;}
 .bannerkok {
     background: url(../images/title_head_m-01.jpg) no-repeat;
     background-size: 100% auto;
