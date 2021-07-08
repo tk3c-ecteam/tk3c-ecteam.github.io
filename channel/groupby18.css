@@ -670,7 +670,7 @@ body {
 {.fix_btn{display:none;}
 .pc_version_non{display:none}
 /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â´ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®-PC*/
-.rightbtn{position:fixed;width: 220px;height: 105px;margin: 230px 0px 0px 581px;text-align:center;left: 49%;padding: 2% 0 0 0;background-size: 100%;z-index: 10;bottom: 61%;}
+.rightbtn{position:fixed;width: 220px;height: 105px;margin: 230px 0px 0px 581px;text-align:center;left: 52%;padding: 2% 0 0 0;background-size: 100%;z-index: 10;bottom: 61%;}
 .rightbtn:before {content: '';position: absolute;top: -71%;display: block;width: 100%;height: 285px;z-index: 1;background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/20210706_right_top.png) no-repeat top 0 left 20px;background-position: -3px 38px;background-size: 85%;}
 .rightbtn .actbtn{width:119px;height:auto;display:block;position:relative;}
 .rightbtn .actbtn a .link1{width:119px;height:87px;margin:0 auto;background:url(../images/pc_right.png) 0 0 no-repeat;}
