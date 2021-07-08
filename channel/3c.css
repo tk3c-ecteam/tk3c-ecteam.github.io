@@ -36,7 +36,7 @@ img {
 
 .tab-container> ul.nav-tabtop > li > a {position: relative;z-index: 50;}
 /*圖片超連結邊框消除*/
-
+.toggle-rightbn {display: none !important;}
 html {
     margin: 0;
     padding: 0;
@@ -505,8 +505,7 @@ body:before {
     bottom: 0;
     left: 0;
     right: 0;
-    offset-path: path('M122 569 C290 442 128 174 215 15');
-    animation: svg-animate 25s infinite linear;
+    animation: slide-slow-to-top 50s infinite linear;
     z-index: -1;
     background-size: 100%;
 }
