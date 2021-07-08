@@ -122,6 +122,7 @@ em,i{font-style:normal;}
     position: absolute;
     top: 6%;
     left: -1%;
+    width: 100%;
 }
 
 .stage #pro-area a {
@@ -905,7 +906,7 @@ body:before{animation: slide-slow-to-top 50s linear infinite;}
     width: 50%;
 }
 .stage #pro-area a {
-    width: 84%;
+    width: 85%;
 }
 
 .specialbox {
