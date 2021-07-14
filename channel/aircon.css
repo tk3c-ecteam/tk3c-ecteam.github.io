@@ -38,8 +38,8 @@ html {
     margin: 0;
     padding: 0;
     height: auto;
-    background: url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20210714_kv.png) top 105px center no-repeat,url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20210714_eventsitebg.jpg) repeat top 500px center;
-    background-size: 100%, 100%;
+    background: url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20210714_kv.png) top 105px center no-repeat,url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20210714_eventsitebg.jpg) repeat top center fixed;
+    background-size: 100%, cover;
     overflow-x: hidden;
 }
 
@@ -207,26 +207,18 @@ i {
     width: 33% !important;
 }
 
-.swiper-button-next {
-    display: none !important;
-}
-
-.swiper-button-prev {
-    left: 0 !important;
-    color: #65ca8f !important;
-}
-
-#bank-area .slick-prev {
+#bank-area .swiper-button-prev {
     background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210714_leftarrow.png) no-repeat;
-    left: -50px;
+    left: -45px;
 }
 
-#bank-area .slick-next {
+#bank-area .swiper-button-next {
     background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20210714_rightarrow.png) no-repeat;
+    right: -30px;
 }
 
-#bank-area .slick-prev,#bank-area .slick-next {background-size: 100%;width: 5%;height: 50px;}
-#bank-area .slick-prev:before,#bank-area .slick-next:before {
+#bank-area .swiper-button-prev,#bank-area .swiper-button-next {background-size: 100%;width: 5%;height: 50px;}
+#bank-area .swiper-button-prev:after,#bank-area .swiper-button-next:after {
     font-size: 0;
 }
 
@@ -2962,7 +2954,7 @@ div#NewProductAll {
 
 @media screen and (max-width: 768px) {
     html {
-        background-size: 190%, 100%;
+        background-size: 190%, cover;
     }
     .protitle01 {
         font-size: 3em;
@@ -3120,10 +3112,17 @@ div#NewProductAll {
     }
     #bank-area {
         margin: 0 auto 0;
-        width: 80%;
+        width: 75%;
     }
     #bank-area .swiper-slide {
         width: 50% !important;
+    }
+    #bank-area .swiper-button-prev {
+        left: -30PX;
+    }
+    #bank-area .swiper-button-prev,
+    #bank-area .swiper-button-next {
+        width: 10%;
     }
     .animate-group {
         width: 80%;
@@ -3640,9 +3639,9 @@ div#NewProductAll {
         text-align: center;
         background-size: contain;
         color: #ffffff;
-        margin: 0 auto -3%;
-        line-height: 34vmin;
-        height: 118px;
+        margin: 0 auto 2%;
+        line-height: 18vmin;
+        height: 58px;
         clear: both;
         font-size: 2em;
         z-index: 20;
@@ -6882,8 +6881,7 @@ screen\9 {
 
 @media screen and (max-width: 376px) {
     .protitle01 {
-        line-height: 36vmin;
-        margin: 0 auto -5%;
+        line-height: 20vmin;
     }
     .pro_wrapper1 ul li {
         width: 46.2%;
@@ -6898,9 +6896,6 @@ screen\9 {
 }
 
 @media screen and (max-width: 360px) {
-    .protitle01 {
-        margin: 0 auto -7%;
-    }
     .wrapper {
         margin: 17rem auto 0;
     }
@@ -6911,9 +6906,9 @@ screen\9 {
         width: 46%;
     }
     .protitle01 {
-        height: 105px;
         font-size: 1.5em;
-        line-height: 37vmin;
+        line-height: 23vmin;
+        margin: 0 auto 1%;
     }
     .rain-title {
         width: 57%;
