@@ -464,7 +464,7 @@ html {background-position: -27vmin 26vmin;}
 div.bg_color > div.wrapper > h2 {height: 100PX;}
 .protitle b {line-height:2.2em;}
 div.bg_color > div.wrapper > h2 {margin: 0 auto 1%;height: 55px;}
-.wrapper {margin: 0 auto -40vmin;}
+.wrapper {margin: 0 auto -30vmin;}
 }
 @media screen and (max-width:360px){
     .animate-group {margin: 6.2REM auto 8%;}
