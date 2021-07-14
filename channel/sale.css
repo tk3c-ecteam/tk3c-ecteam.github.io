@@ -93,6 +93,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     width: 11%;
     height: auto;
     display: block;
+    animation: fade-slow 0.8s linear;
 }
 /*商品橫幅*/
 /*品分類*/
