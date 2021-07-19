@@ -273,7 +273,7 @@ i {
 }
 
 .animate-group h2 {
-    width: 50%;
+    width: 56%;
     margin: 0 auto 0;
     animation: flipX  0.6s linear;
 }
@@ -290,7 +290,7 @@ i {
 
 .animate-group .proL {
     left: 24%;
-    top: 48px;
+    top: 18px;
     width: 18%;
     animation: slide-up 1.2s linear;
     opacity: 0;
@@ -298,7 +298,7 @@ i {
 
 .animate-group .proM {
     left: 40%;
-    top: -69px;
+    top: -100px;
     width: 18%;
     animation: slide-up 2.5s linear;
     opacity: 0;
@@ -306,7 +306,7 @@ i {
 
 .animate-group .proR {
     right: 25%;
-    top: 55px;
+    top: 27px;
     width: 21%;
     animation: slide-up 1.8s linear;
     opacity: 0;
@@ -723,7 +723,7 @@ form>div:nth-of-type(9) {
 }
 
 .protitle {
-    background-size: 103%;
+    background-size: 101%;
 }
 
 .pa00 {
@@ -4031,7 +4031,23 @@ strong i:after {
 
 @media screen and (max-width: 1800px) {
     .animate-group .products {
-        width: 75%;
+        width: 70%;
+    }
+    .animate-group {
+        width: 90%;
+        margin: 10rem auto 25%;
+    }
+    .animate-group .proM {
+        left: 42%;
+        top: -86px;
+    }
+    .animate-group .proR {
+        right: 19%;
+        top: 15px;
+    }
+    .animate-group .proL {
+        top: -2px;
+        left: 18%;
     }
 }
 
@@ -4051,11 +4067,14 @@ strong i:after {
 }
 @media screen and (max-width: 1600px) {
     .animate-group {
-        width: 93%;
-        margin: 6rem auto 16%;
+        width: 75%;
+        margin: 9rem auto 16%;
     }
     .rightbtn {
         left: 46%;
+    }
+    .animate-group .proM {
+        top: -61px;
     }
 }
 
@@ -4075,8 +4094,7 @@ strong i:after {
         width: 70%;
     }
     .animate-group {
-        width: 87%;
-        margin: 6rem auto 15%;
+        margin: 7rem auto 15%;
     }
 }
 
@@ -4086,7 +4104,7 @@ strong i:after {
         left: 35% !important;
     }
     .animate-group {
-        width: 75%;
+        width: 70%;
         margin: 6rem auto 13%;
     }
     .animate-group .proM {
@@ -4117,7 +4135,7 @@ strong i:after {
         margin: 0 auto 0;
     }
     .animate-group {
-        width: 65%;
+        width: 61%;
     }
     .animate-group .proM {
         top: -40px;
@@ -4154,7 +4172,7 @@ strong i:after {
         width: 50% !important;
     }
     .animate-group {
-        width: 70%;
+        width: 65%;
     }
     .rightbtn {
         left: -3% !important;
@@ -4172,7 +4190,7 @@ strong i:after {
         top: -35px;
     }
     .animate-group .proR {
-        right: 24%;
+        right: 20%;
         top: 11px;
     }
     .animate-group .proL {
@@ -6476,6 +6494,9 @@ strong i:after {
     .animate-group .proR {
         top: 15px;
     }
+    .animate-group .proM {
+        left: 41%;
+    }
     #bank-area .slick-prev,
     #bank-area .slick-next {
         background-size: 50%;
@@ -6549,22 +6570,26 @@ strong i:after {
         font-size: 1.5em;
         line-height: 37vmin;
     }
+    .animate-group .proM {
+        left: 42%;
+    }
 }
 
 @media screen and (min-width: 2500px) {
 
     .animate-group {
-        margin: 16rem auto 32%;
+        margin: 14rem auto 32%;
     }
     .animate-group .proL {
         left: 20%;
         top: 79px;
     }
     .animate-group .proR {
-        top: 88px;
+        top: 95px;
+        right: 21%;
     }
-    .animate-group .proR {
-        right: 22%;
+    .animate-group .proM {
+        top: -73px;
     }
 }
 
