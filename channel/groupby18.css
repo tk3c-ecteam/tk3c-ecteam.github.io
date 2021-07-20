@@ -680,13 +680,16 @@ body:after{content: '';display: block;background: url(https://events.tk3c.com/ev
     }
     .protitle {
         font-size: 3.5EM;
-        line-height: 7.5EM;
+        line-height: 7EM;
     }
     #bank-area .slick-prev {
         left: -30px;
     }
     #bank-area .slick-next {
         right: -30px;
+    }
+    .list06 .box_price strong {
+        font-size: 23px;
     }
 }
 @media screen and (max-width: 768px) {
