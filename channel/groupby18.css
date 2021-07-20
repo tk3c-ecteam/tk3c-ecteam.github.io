@@ -121,9 +121,9 @@ body {
 }
 
 body .manbgL,
-body .manbgR {position: absolute;display: block;z-index: -1;opacity: 0.3;}
-body .manbgL {left: 0;top: 5%;animation: move-right 30s linear alternate infinite;}
-body .manbgR{right: 0;top: 7%;animation: move-left 35s linear alternate infinite;}
+body .manbgR {position: absolute;display: block;z-index: -1;opacity: 0.4;}
+body .manbgL {left: 0;top: 5%;animation: slow-move-to-left 36s linear alternate infinite;}
+body .manbgR{right: 0;top: 7%;animation: slow-move-to-right 40s linear alternate infinite;}
 body .manbgL:nth-of-type(2) {top: 14%;}
 body .manbgR:nth-of-type(2){top: 16%;}
 body .manbgL:nth-of-type(3) {top: 24%;}
