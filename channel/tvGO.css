@@ -433,7 +433,7 @@ body {background-position: -7vmin 7vmin;}
 .banner-btns ul .ddef .btn-name h2{font-size:20px;line-height: 36px;}
 .banner-btns ul .ddef .btn-name p{font-size:12px}
 .banner-btns ul .ddef{/* width: 100%; */}
-.mobile-nuttons #btnHome{width: 120px;left: calc(50% - 56px);bottom: -5%}
+.mobile-nuttons #btnHome{width: 93px;left: calc(50% - 42px);bottom: -4%}
 }
 @media screen and (min-width:320px) and (max-width:750px){
 #kuai3header{width:100%!important;margin:0 auto;z-index:9999;position:fixed}
@@ -702,6 +702,7 @@ div:nth-of-type(6) {margin-top: 0;}
 .protitle{font-size: 7vmin;margin: 2% auto 2%;line-height: 20vmin;height: 75px;}
 .fix_btn>.sample-menu-style a {font-size: 12px;}
 .title-group {margin: 4.5rem auto 0;}
+.mobile-nuttons #btnHome {bottom: -5%;}
 }
 .swiper-container .picbox_pc{display:block;width:100%}
 .swiper-container .picbox_m{display:none}
@@ -764,6 +765,7 @@ div:nth-of-type(6) {margin-top: 0;}
     .title-group {margin: 3.5rem auto 0;}
     .mobile-nuttons #btnHome {bottom: -7%;}
     body:before {top: 6%;}
+    .mobile-nuttons #btnHome {width: 80PX;left: calc(50% - 35px);}
 }
 
 @media screen and (min-width: 2500px) {
