@@ -116,13 +116,13 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .event_note>ul li .why2{display:inline-block;width:calc(100% - 34px);vertical-align:top}
 .wow{animation-name:fadeInUp;animation-duration:1s}
 .banner{position:relative;overflow:hidden;background-image:url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/20210726_kv_bg.jpg);width:100%;background-position:50% 0;background-repeat:no-repeat;background-size:cover;z-index: -1;}
-.banner-bg{width:1144px;margin:0 auto 5%;position:relative;}
+.banner-bg{width:1144px;margin:0 auto 5%;position:relative;z-index: 99;}
 .banner img{max-width:100%}
 .banner .slogan{text-align:left;padding:0 0 0;}
 .banner .slogan h1{position:relative;display:inline-block;transform:translateX(-60px)}
 .banner .slogan span{width: 15%;height: auto;display: block;position: absolute;right: 0;top: -11%;}
 .banner .slogan h2 {width: 65%;margin: 3rem 2rem 0;}
-.banner .slogan h2:before{content: '';display: block;position: absolute;background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/20210726_light.png) no-repeat;width: 63%;height: 100%;background-size: 100%;animation: fade-slow 1.5s linear infinite alternate;left: 0;right: 0;top: -13%;z-index: 0;}
+.banner .slogan h2:before{content: '';display: block;position: absolute;background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/20210726_light.png) no-repeat;width: 28%;height: 100%;background-size: 100%;animation: fade-slow 1.5s linear infinite alternate;left: 30%;right: 0;top: 0;z-index: 0;}
 .banner .slogan .child{position: absolute;top: 16%;right: 0;width: 30%;z-index: -10;animation: rotate-short 2.5s linear alternate infinite;}
 .banner p{position:absolute;right:-300px;bottom:0}
 .bonus-area {margin: 4% auto -80px;}
@@ -286,7 +286,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
         background-position: 0 36vmax;
     }
 }
-@media screen and (max-width:1280px){.wrapper{width:100%}
+@media screen and (max-width:1280px){/*.wrapper{width:100%}*/
 .banner-bg{width:95%;/*margin: 0 auto 30px;*/}
 .banner{background-size:100%;}
 /*.banner .slogan{padding:4vmax 0 300px;}*/
