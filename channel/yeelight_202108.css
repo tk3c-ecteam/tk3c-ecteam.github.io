@@ -27,10 +27,10 @@ body:after{display:block;background-image:url(../images/banner/h1-2.png),url(../
 div:nth-of-type(3) {width: 100%;position: relative;}
 form>div:nth-child(6),div:nth-of-type(3):after{background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210726_bg.png) no-repeat top center fixed;content: '';display: block;position: absolute;top: 0;width: 100%;height: 100%;z-index: -1;background-size: 100%;background-position: 0 30vmax;}
 form>div:nth-child(6){width:100%}
-#gotop{display:none;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:46%;z-index:9;bottom:100px;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210527_stagetop.png) no-repeat;width: 100%;height: 40px;}
+#gotop{display:none;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:51.3%;z-index:9;bottom:100px;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210726_gotop.png) no-repeat;width: 100%;height: 40px;background-size: 3%;}
 #gotop img {display: none;}
 
-.list_F ul li {border: 3px solid #99009e;height: 430px;}
+.list_F ul li {border: 10px solid #000;height: 430px;}
 .list_F .itemF_img img {width: 100%;height: auto;}
 .title02{width:1177px;margin:0 auto;position:relative;overflow:hidden}
 .title02 .addlink{top:31px;left:930px;width:136px;height:95px;position:absolute;display:none}
@@ -66,9 +66,9 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .upbox a.btn_01:hover{background-image:url(../images/btn02.png)}
 .rightbtn{display: block;position:fixed;width:134px;height:auto;margin:368px 0 0 605px;left:50%;z-index:100;bottom:180px;text-align:center;border-radius:10px;}
 .rightbtn .actbtn{width:100%;height:auto;display:block;position:relative;background: #ffffff;box-sizing:border-box;border-radius:5px;border-top: none;}
-.rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210628_stage.png) no-repeat;width:150px;height: 120px;position:absolute;bottom: calc(100% + -17px);left:calc(50% - 68px);z-index:2;background-size: 100%;}
+.rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210726_right_top.png) no-repeat;width:150px;height: 89px;position:absolute;bottom: calc(100% + -9px);left:calc(50% - 77px);z-index:2;background-size: 100%;}
 .rightbtn .actbtn a.btn_01{width:100%;height:38px;margin:0 auto;line-height:38px;color: #000000;text-decoration:none;border-bottom: 1px solid;box-sizing:border-box;display:block;}
-.rightbtn .actbtn a.btn_01:hover{opacity:.8;transition:all .5s;-webkit-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;background: #000e0d;color:#fff;}
+.rightbtn .actbtn a.btn_01:hover{opacity:.8;transition:all .5s;-webkit-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;background: #f95210;color:#fff;}
 .rightbtn .actbtn a.btn_01:last-child{border-bottom:none}
 .rightbtn .actbtn a.btn_01:nth-child(1){height:auto}
 .rightbtn .toggle-rightbn {display: none;}
@@ -121,8 +121,8 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner .slogan{text-align:left;padding:0 0 0;}
 .banner .slogan h1{position:relative;display:inline-block;transform:translateX(-60px)}
 .banner .slogan span{width: 15%;height: auto;display: block;position: absolute;right: 0;top: -11%;}
-.banner .slogan h2 {width: 65%;margin: 3rem 2rem 0;position: relative;}
-.banner .slogan h2:before{content: '';display: block;position: absolute;background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/20210726_light.png) no-repeat;width: 100%;height: 100%;background-size: 100%;animation: fade-slow 1.5s linear infinite alternate;left: 0;right: 0;}
+.banner .slogan h2 {width: 65%;margin: 3rem 2rem 0;}
+.banner .slogan h2:before{content: '';display: block;position: absolute;background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/20210726_light.png) no-repeat;width: 63%;height: 100%;background-size: 100%;animation: fade-slow 1.5s linear infinite alternate;left: 0;right: 0;top: -13%;z-index: 0;}
 .banner .slogan .child{position: absolute;top: 16%;right: 0;width: 30%;z-index: -10;animation: rotate-short 2.5s linear alternate infinite;}
 .banner p{position:absolute;right:-300px;bottom:0}
 .bonus-area {margin: 4% auto -80px;}
@@ -136,9 +136,9 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .nav_btn{margin:1% auto 1%}
 .event_banner ul{display:flex;justify-content:center;flex-wrap:wrap;width:100%;height:auto;}
 .vdList ul{margin-top: 0;display: flex;flex-wrap: wrap;width: 85%;margin: 0 auto;}
-.vdList ul li{border-radius: 45px;width:49%;position:relative;overflow:hidden;margin:5px auto;}
+.vdList ul li{width:49%;position:relative;overflow:hidden;margin:5px auto;}
 .vdList ul li a{width: 100%;height: 100%;display: block;}
-.vdList ul li a:hover {transform: translateY(-1.5em);transition: all 0.45s linear;}
+.vdList ul li a:hover {transform: translateY(0.5em);transition: all 0.45s linear;}
 .vdList ul li .box{display:flex;flex-wrap:wrap;position:relative}
 .vdList ul li .box .left{width:450px;position:relative;z-index:4;margin:18px 8px 0 18px;overflow:hidden;padding-bottom: 20px;}
 .vdList ul li .box.noneP .left:before{display:none}
@@ -236,7 +236,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .list_F ul li:hover {box-shadow: 0px 0px 3px 3px #ffbd44 !important;}
 
 @media screen and (min-width:2000px) {
-    #gotop{left: 46.5%;}
+    #gotop{left: 51%;background-size: 2.5%;}
     #bank-area {
         background-size: 55%;
     }
@@ -254,7 +254,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     form>div:nth-child(6), div:nth-of-type(3):after {background-position: 0 33vmax;}
 }
 @media screen and (max-width:1600px) {
-    #gotop{left: 42.5%;}
+    #gotop{left: 49%;}
     #bank-area {
         background-size: 80%;
     }
@@ -299,7 +299,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .protitle {width: 100%;}
 .nav_btn ul li {width: 18%;}
 .rightbtn {left: 38%;}
-#gotop {left: 32%;}
+#gotop {left: 40.5%;}
 .banner .slogan h2 {width: 40%;margin: 3rem 15rem 0;}
 body:before {top: 40%;background-position: 0 33vmax;}
 .banner .slogan .child {
@@ -316,7 +316,7 @@ body:before {top: 40%;background-position: 0 33vmax;}
     .acbankbox .list2 ul li{width: 185px !important;}
     .vdList ul li a:hover {transform: translateY(0);transition: none;}
     .rightbtn {left: 26%;}
-    #gotop {left: 19%;}
+    #gotop {left: 29%;}
     .banner .slogan h2 {width: 38%;margin: 3rem 13rem 0;}
     body:before {top: 30%;background-position: 0 32vmax;}
     .banner .slogan span{top: -21%;}
@@ -343,7 +343,7 @@ body:before {top: 40%;background-position: 0 33vmax;}
     .acbankbox .list2 ul li{width: 170px !important;}
     .bonus-area {margin: 4% auto 70px;}
     .rightbtn {left: 2%;}
-    #gotop {left: -8%;}
+    #gotop {left: 7%;}
     .banner {background-position: -17vmin 0;background-size: 130%;}
     form>div:nth-child(6), div:nth-of-type(3):after{background-position: 0 45vmin;}
     .banner .slogan h2 {width: 50%;margin: 3rem 5rem 0;}
@@ -677,7 +677,8 @@ body{background-position: -20vmin 13vmin;}
         width: 40%;
     }
     #gotop {
-        left: 47%;
+        left: 50.9%;
+        background-size: 2.3%;
     }
     .banner-bg {margin: 0 auto 11%;}
     .banner .slogan h2 {margin: 5rem 0 0;}
