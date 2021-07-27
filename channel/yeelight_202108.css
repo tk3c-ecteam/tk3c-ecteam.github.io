@@ -364,7 +364,7 @@ body:before {top: 40%;background-position: 0 33vmax;}
 .vdList ul li .box:after{display:none}
 .vdList ul li .box .left:before{width:32%;height:25%;right:-10%;bottom:0}
 .vdList ul li .box .right .videoType{position:relative}
-.vdList ul li{border-top-left-radius: 25px;border-top-right-radius: 25px;border-bottom-left-radius: 0;border-bottom-right-radius: 0;background: #fdea71;}
+.vdList ul li{background: #fdea71;}
 .nav_btn ul li a:hover{transition: none;transform: translateY(0);}
 }
 @media screen and (max-width:640px){
@@ -387,6 +387,7 @@ body:before {top: 40%;background-position: 0 33vmax;}
 body:before {top: 25%;background-position: 0 49vmin;}
 .banner .slogan .child {width: 28%;right: 13%;top: 6%;}
 .banner .slogan span {top: -26%;width: 20%;}
+form>div:nth-child(6), div:nth-of-type(3):after{background-position: 0 54vmin;}
 }
 @media screen and (min-width:320px) and (max-width:750px){
 #kuai3header{width:100%!important;margin:0 auto;z-index:9999;position:fixed}
