@@ -23,9 +23,9 @@ html{margin:0;padding:0;height:100%}
 body{margin:0;padding:0;width:100%;height:100%;min-height: 100%;font-family:Century Gothic,"微軟正黑體";background: none;background-size: 100%;background-color: #fa465b;position: relative;}
 body:after{display:block;background-image:url(../images/banner/h1-2.png),url(../images/banner/h2-2.png),url(../images/banner/ha3-2.png);content:''}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top: 0;}
-.wrapper{display:block;width:1144px;margin:0 auto}
-div:nth-of-type(3) {width: 100%;position: relative;}
-form>div:nth-child(6),div:nth-of-type(3):after{background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210726_bg.png) no-repeat top center fixed;content: '';display: block;position: absolute;top: 0;width: 100%;height: 100%;z-index: -1;background-size: 100%;background-position: 0 30vmax;}
+.wrapper{display:block;width:1144px;margin:0 auto;position: relative;}
+div:nth-of-type(3) {width: 100%;}
+body:before{background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210726_bg.png) repeat top center fixed;content: '';display: block;position: absolute;top: 65%;width: 100%;height: 100%;background-size: 100%;background-position: 0 30vmax;}
 form>div:nth-child(6){width:100%}
 #gotop{display:none;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:51.3%;z-index:9;bottom:100px;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210726_gotop.png) no-repeat;width: 100%;height: 40px;background-size: 3%;}
 #gotop img {display: none;}
@@ -244,14 +244,17 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
         width: 50%;
     }
     body:before {
-        top: 45%;
-        background-position: 0 26vmax;
+        top: 66%;
+        background-position: 0 31vmax;
     }
     .banner .slogan h2 {margin: 7rem 0 0;}
     .banner .slogan .child {width: 35%;top: 15%;}
 }
+@media screen and (max-width:1900px) {
+    body:before {top: 53%;}
+}
 @media screen and (max-width:1800px) {
-    form>div:nth-child(6), div:nth-of-type(3):after {background-position: 0 33vmax;}
+    body:before {background-position: 0 32vmax;}
 }
 @media screen and (max-width:1600px) {
     #gotop{left: 49%;}
@@ -276,15 +279,24 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
         right: 12%;
         width: 25%;
     }
+    body:before {
+        top: 50%;
+        background-position: 0 34vmax;
+    }
+}
+@media screen and (max-width:1500px) {
+    body:before {
+        background-position: 0 36vmax;
+    }
 }
 @media screen and (max-width:1440px) {
     body {
         background-position: 0 2vmax;
     }
-    .banner .slogan span {top: -15%;}
-    form>div:nth-child(6), div:nth-of-type(3):after {
-        background-position: 0 36vmax;
+    body:before {
+        background-position: 0 38vmax;
     }
+    .banner .slogan span {top: -15%;}
 }
 @media screen and (max-width:1280px){/*.wrapper{width:100%}*/
 .banner-bg{width:95%;/*margin: 0 auto 30px;*/}
@@ -301,7 +313,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .rightbtn {left: 38%;}
 #gotop {left: 40.5%;}
 .banner .slogan h2 {width: 40%;margin: 3rem 15rem 0;}
-body:before {top: 40%;background-position: 0 33vmax;}
+body:before {top: 43%;background-position: 0 35vmax;}
 .banner .slogan .child {
     width: 21%;
     right: 16%;
@@ -318,13 +330,13 @@ body:before {top: 40%;background-position: 0 33vmax;}
     .rightbtn {left: 26%;}
     #gotop {left: 29%;}
     .banner .slogan h2 {width: 38%;margin: 3rem 13rem 0;}
-    body:before {top: 30%;background-position: 0 32vmax;}
+    body:before {top: 27%;background-position: 0 26vmax;}
     .banner .slogan span{top: -21%;}
     .banner .slogan .child {top: 0;}
 }
 @media screen and (max-width: 1024px) {
-    form>div:nth-child(6), div:nth-of-type(3):after {background-position: 0 24vmax;}
     .banner .slogan .child {top: 8%;}
+    .wrapper{width: 100%;}
 }
 @media screen and (max-width:980px){
 /*.banner .slogan{text-align:center;padding:41vmin 0 0;}*/
@@ -345,7 +357,7 @@ body:before {top: 40%;background-position: 0 33vmax;}
     .rightbtn {left: 2%;}
     #gotop {left: 7%;}
     .banner {background-position: -17vmin 0;background-size: 130%;}
-    form>div:nth-child(6), div:nth-of-type(3):after{background-position: 0 45vmin;}
+    body:before{background-position: 0 46vmin;top: 35%;}
     .banner .slogan h2 {width: 50%;margin: 3rem 5rem 0;}
     .banner .slogan .child {width: 28%;right: 10%;top: 6%;}
 }
@@ -387,7 +399,7 @@ body:before {top: 40%;background-position: 0 33vmax;}
 body:before {top: 25%;background-position: 0 49vmin;}
 .banner .slogan .child {width: 28%;right: 13%;top: 6%;}
 .banner .slogan span {top: -26%;width: 20%;}
-form>div:nth-child(6), div:nth-of-type(3):after{background-position: 0 54vmin;}
+body:before{background-position: 0 52vmin;top: 26%;}
 }
 @media screen and (min-width:320px) and (max-width:750px){
 #kuai3header{width:100%!important;margin:0 auto;z-index:9999;position:fixed}
@@ -604,12 +616,13 @@ body{margin:0;padding:0;width:100%;height:100%;background-position: -20vmin 11vm
 @media screen and (max-width: 376px) {
     .acbankbox .list2 ul li {width: 180px !important;}
     .list_F ul li{height: 340px;}
-    form>div:nth-child(6), div:nth-of-type(3):after{background-position: 0 54vmin;}
+    body:before{background-position: 0 55vmin;}
     .banner .slogan span {top: -29%;}
 }
 @media screen and (max-width: 360px) {
     .acbankbox .list2 ul li {width: 172px !important;}
     .bonus-area {margin: -12VMIN auto 30px -30PX;}
+    body:before {background-position: 0 56vmin;}
 }
 @media screen and (min-width:320px) and (max-width:750px){
     .swiper-container .picbox_pc{display:none}
@@ -662,6 +675,7 @@ body{margin:0;padding:0;width:100%;height:100%;background-position: -20vmin 11vm
 body{background-position: -20vmin 13vmin;}
 .banner .slogan h2 {margin: 1rem 1.5rem 0;}
 .banner .slogan span {width: 15%;top: -18%;}
+body:before{top: 32%;background-position: 0 55vmin;}
 }
 
 @media screen and (min-width: 751px) {
@@ -682,8 +696,9 @@ body{background-position: -20vmin 13vmin;}
         background-size: 2.3%;
     }
     .banner-bg {margin: 0 auto 11%;}
-    .banner .slogan h2 {margin: 5rem 0 0;}
+    .banner .slogan h2 {margin: 7rem -9rem 0;width: 75%;}
     .banner .slogan .child {width: 33%;top: 17%;}
     .banner .slogan span {top: -24%;}
-    .banner .slogan .child {top: 12%;width: 42%;}
+    .banner .slogan .child {top: 0;width: 42%;}
+    body:before{background-position: 0 29vmax;top: 70%;}
 }
