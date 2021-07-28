@@ -65,7 +65,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .upbox a.btn_01{display:block;height:103px;width:202px;font-size:160%;line-height:103px;color:#fff;font-weight:700;background-image:url(../images/btn01.png);background-repeat:no-repeat;background-position:50%}
 .upbox a.btn_01:hover{background-image:url(../images/btn02.png)}
 .rightbtn{display: block;position:fixed;width:134px;height:auto;margin:368px 0 0 605px;left:50%;z-index:100;bottom:180px;text-align:center;border-radius:10px;}
-.rightbtn .actbtn{width:100%;height:auto;display:block;position:relative;background: #ffffff;box-sizing:border-box;border-radius:5px;border: 10px solid #3f3a39;padding-bottom: 0;}
+.rightbtn .actbtn{width:100%;height:auto;display:block;position:relative;background: #ffffff;box-sizing:border-box;border-radius:5px;border: 6px solid #3f3a39;padding-bottom: 0;}
 .rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210726_right_top.png) no-repeat;width:150px;height: 89px;position:absolute;bottom: calc(100% + -3px);left:calc(50% - 77px);z-index:2;background-size: 100%;}
 .rightbtn .actbtn a.btn_01{width:100%;height:38px;margin:0 auto;line-height:38px;color: #000000;text-decoration:none;border-bottom: 2px solid #3f3a39;box-sizing:border-box;display:block;}
 .rightbtn .actbtn a.btn_01:hover{opacity:.8;transition:all .5s;-webkit-transition:all .5s;-ms-transition:all .5s;-moz-transition:all .5s;background: #f95210;color:#fff;transform: translateY(0);}
