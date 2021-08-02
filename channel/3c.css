@@ -315,7 +315,7 @@ i {
 #bank-area {
     position: relative;
     background: none;
-    z-index: 99;
+    z-index: 999;
     margin: 0 auto 0;
     width: 80%;
 }
@@ -399,11 +399,6 @@ i {
     display: block;
     left: 0;
     top: 0;
-}
-
-.rightbtn>.actbtn a.btn01:last-child {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 .rightbtn>.actbtn a.btn01 {
@@ -1316,7 +1311,7 @@ form>div:nth-of-type(9) {
     text-align: center;
     display: block;
     background-color: #f8dbd7;
-    border-radius: 10px;
+    border-radius: 0;
     margin-top: -40px;
 }
 
@@ -4227,7 +4222,7 @@ strong i:after {
         display: block;
         width: 119px;
         height: 40px;
-        background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210719_gototop.png) center top no-repeat;
+        background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210730_top.png) center top no-repeat;
         margin-top: 8px;
         margin-left: 4px;
         background-size: 35%;
