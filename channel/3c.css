@@ -282,7 +282,7 @@ i {
 
 .animate-group .man {
     left: 0;
-    top: 28%;
+    top: 22%;
     animation: move-to-right 1.5s ease-in;
     opacity: 0;
 }
@@ -293,7 +293,7 @@ i {
 
 .animate-group .gril {
     right: 0;
-    top: 28%;
+    top: 22%;
     animation: move-to-left 1.7s ease-in;
     opacity: 0;
 }
@@ -303,14 +303,14 @@ i {
 }
 
 .animate-group .cloud-left {
-    left: -35%;
-    top: 63%;
+    left: -33%;
+    top: 58%;
     animation: move-to-right 1s linear;
 }
 
 .animate-group .cloud-right {
     right: -34%;
-    top: 57%;
+    top: 53%;
     animation: move-to-left 1.2s linear;
 }
 
