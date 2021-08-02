@@ -459,7 +459,6 @@ body {
 body .scrollbgend {
     right: -1%;
     left: unset;
-    top: 10%;
 }
 
 .ballon {
@@ -4024,7 +4023,12 @@ strong i:after {
 }
 
 @media screen and (min-width: 2000px) {
-   
+    .list0 .list0:nth-of-type(odd):before {
+        left: -47% !important;
+    }
+    body .scrollbgend {
+        right: -2%;
+    }
 }
 @media screen and (max-width: 1600px) {
     .rightbtn {
@@ -4044,7 +4048,22 @@ strong i:after {
         width: 70%;
     }
     .animate-group {
-        width: 70%;
+        width: 80%;
+        margin: 0 auto -6%;
+    }
+    .animate-group .man {
+        width: 28%;
+        top: 22%;
+    }
+    .animate-group .gril {
+        width: 28%;
+        top: 26%;
+    }
+    .animate-group .cloud-left {
+        top: 57%;
+    }
+    .animate-group .cloud-right {
+        top: 46%;
     }
 }
 
@@ -4052,6 +4071,22 @@ strong i:after {
     .rightbtn {
         bottom: 30px;
         left: 35% !important;
+    }
+    .animate-group {
+        width: 70%;
+    }
+    .animate-group .cloud-left {
+        top: 53%;
+        width: 90%;
+    }
+    .animate-group .cloud-right {
+        width: 90%;
+        top: 44%;
+    }
+
+    .animate-group .gril {
+        top: 25%;
+        width: 30%;
     }
 }
 
@@ -4078,22 +4113,21 @@ strong i:after {
         margin: 0 auto 0;
     }
     .animate-group {
-        width: 61%;
         margin: 0 auto -24%;
     }
     .animate-group .man {
-        width: 30%;
+        width: 25%;
+        top: 15%;
     }
     .animate-group .gril {
-        width: 35%;
+        width: 30%;
+        top: 16%;
     }
     .animate-group .cloud-left {
-        top: 46%;
-        width: 90%;
+        top: 43%;
     }
     .animate-group .cloud-right {
-        top: 46%;
-        width: 90%;
+        top: 32%;
     }
     
 }
@@ -4125,7 +4159,7 @@ strong i:after {
     }
     .animate-group {
         width: 65%;
-        margin: 0 auto -115%;
+        margin: 0 auto -113%;
     }
     .rightbtn {
         left: -3% !important;
@@ -4146,19 +4180,25 @@ strong i:after {
     }
     .animate-group .man {
         top: 10%;
+        left: -8%;
+        width: 30%;
     }
     .animate-group .gril {
         top: 10%;
+        right: -10%;
+        width: 30%;
     }
     .animate-group .cloud-left {
         top: 26%;
+        width: 100%;
     }
     .animate-group .cloud-right {
         top: 23%;
+        width: 100%;
     }
     .list0 .list0:nth-of-type(odd):before {
-        top: -13%;
-        padding-bottom: 33%;
+        top: -13% !important;
+        padding-bottom: 33% !important;
     }
 }
 
@@ -6416,12 +6456,14 @@ strong i:after {
         width: 100%;
     }
     .animate-group .man {
-        left: -4%;
-        top: 13%;
+        left: -8%;
+        top: 10%;
+        width: 30%;
     }
     .animate-group .gril {
-        right: -9%;
-        top: 13%;
+        right: -10%;
+        top: 10%;
+        width: 35%;
     }
     #bank-area {
         padding: 0 25px;
@@ -6480,6 +6522,9 @@ strong i:after {
     }
     .animate-group {
         margin: 0 auto -130%;
+    }
+    .animate-group .cloud-right {
+        top: 21%;
     }
 }
 
@@ -6540,6 +6585,10 @@ strong i:after {
     }
     .animate-group .proM {
         top: -73px;
+    }
+    .list0 .list0:nth-of-type(odd):before {
+        width: 300% !important;
+        left: -62% !important;
     }
 }
 
