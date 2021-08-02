@@ -284,6 +284,7 @@ i {
     left: 0;
     top: 28%;
     animation: move-to-right 2s ease-in;
+    opacity: 0;
 }
 
 .animate-group .man img {
@@ -294,6 +295,7 @@ i {
     right: 0;
     top: 28%;
     animation: move-to-left 2.3s ease-in;
+    opacity: 0;
 }
 
 .animate-group .gril img {
@@ -303,13 +305,13 @@ i {
 .animate-group .cloud-left {
     left: -35%;
     top: 63%;
-    animation: move-to-right 1.2s ease-in;
+    animation: move-to-right 1.6s ease-in;
 }
 
 .animate-group .cloud-right {
     right: -34%;
     top: 57%;
-    animation: move-to-left 1.4s ease-in;;
+    animation: move-to-left 1.8s ease-in;;
 }
 
 #bank-area {
