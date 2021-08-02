@@ -283,7 +283,7 @@ i {
 .animate-group .man {
     left: 0;
     top: 28%;
-    animation: move-to-right 2s ease-in;
+    animation: move-to-right 1.5s ease-in;
     opacity: 0;
 }
 
@@ -294,7 +294,7 @@ i {
 .animate-group .gril {
     right: 0;
     top: 28%;
-    animation: move-to-left 2.3s ease-in;
+    animation: move-to-left 1.7s ease-in;
     opacity: 0;
 }
 
@@ -305,13 +305,13 @@ i {
 .animate-group .cloud-left {
     left: -35%;
     top: 63%;
-    animation: move-to-right 1.6s ease-in;
+    animation: move-to-right 1s linear;
 }
 
 .animate-group .cloud-right {
     right: -34%;
     top: 57%;
-    animation: move-to-left 1.8s ease-in;;
+    animation: move-to-left 1.2s linear;
 }
 
 #bank-area {
@@ -723,6 +723,10 @@ form>div:nth-of-type(9) {
 
 .protitle {
     background-size: 100%;
+}
+
+.protitle:nth-of-type(even) {
+    mix-blend-mode: multiply;
 }
 
 .pa00 {
@@ -4030,12 +4034,41 @@ strong i:after {
         right: -2%;
     }
 }
+@media screen and (max-width: 1800px) {
+    .animate-group {
+        width: 95%;
+    }
+    .animate-group .man {
+        top: 22%;
+    }
+    .animate-group .gril {
+        top: 22%;
+    }
+    .animate-group .cloud-left {
+        top: 55%;
+    }
+    .animate-group .cloud-right {
+        top: 47%;
+    }
+}
 @media screen and (max-width: 1600px) {
     .rightbtn {
         left: 46%;
     }
     .animate-group {
         width: 90%;
+    }
+    .animate-group .man {
+        width: 28%;
+    }
+    .animate-group .gril {
+        width: 30%;
+    }
+    .animate-group .cloud-left {
+        top: 48%;
+    }
+    .animate-group .cloud-right {
+        top: 40%;
     }
 }
 
@@ -4053,17 +4086,18 @@ strong i:after {
     }
     .animate-group .man {
         width: 28%;
-        top: 22%;
+        top: 18%;
     }
     .animate-group .gril {
         width: 28%;
-        top: 26%;
+        top: 19%;
     }
     .animate-group .cloud-left {
-        top: 57%;
+        top: 47%;
     }
     .animate-group .cloud-right {
-        top: 46%;
+        top: 33%;
+        right: -43%;
     }
 }
 
@@ -4074,18 +4108,27 @@ strong i:after {
     }
     .animate-group {
         width: 70%;
+        margin: 0 auto -20%;
+    }
+    .animate-group .man {
+        top: 16%;
+    }
+    .animate-group .gril {
+        top: 16%;
     }
     .animate-group .cloud-left {
-        top: 53%;
+        top: 41%;
         width: 90%;
+        left: -31%;
     }
     .animate-group .cloud-right {
         width: 90%;
-        top: 44%;
+        top: 34%;
+        right: -36%;
     }
 
     .animate-group .gril {
-        top: 25%;
+        top: 17%;
         width: 30%;
     }
 }
@@ -4113,21 +4156,22 @@ strong i:after {
         margin: 0 auto 0;
     }
     .animate-group {
-        margin: 0 auto -24%;
+        margin: 0 auto -31%;
     }
     .animate-group .man {
         width: 25%;
-        top: 15%;
+        top: 13%;
     }
     .animate-group .gril {
         width: 30%;
-        top: 16%;
+        top: 13%;
     }
     .animate-group .cloud-left {
-        top: 43%;
+        top: 33%;
     }
     .animate-group .cloud-right {
-        top: 32%;
+        top: 29%;
+        right: -27%;
     }
     
 }
@@ -4159,7 +4203,7 @@ strong i:after {
     }
     .animate-group {
         width: 65%;
-        margin: 0 auto -113%;
+        margin: 0 auto -65%;
     }
     .rightbtn {
         left: -3% !important;
@@ -4191,6 +4235,7 @@ strong i:after {
     .animate-group .cloud-left {
         top: 26%;
         width: 100%;
+        left: -37%;
     }
     .animate-group .cloud-right {
         top: 23%;
@@ -6448,6 +6493,7 @@ strong i:after {
     }
     .animate-group  {
         width: 85%;
+        margin: 0 auto -113%;
     }
     .animate-group h2 {
         width: 60%;
@@ -6526,6 +6572,9 @@ strong i:after {
     .animate-group .cloud-right {
         top: 21%;
     }
+    .animate-group .cloud-left {
+        top: 25%;
+    }
 }
 
 @media screen and (max-width: 361px) {
@@ -6533,7 +6582,19 @@ strong i:after {
         width: 47.7%;
     }
     .animate-group {
-        margin: 0 auto -135%;
+        margin: 0 auto -146%;
+    }
+    .animate-group .man {
+        top: 7%;
+    }
+    .animate-group .gril {
+        top: 7%;
+    }
+    .animate-group .cloud-left {
+        top: 20%;
+    }
+    .animate-group .cloud-right {
+        top: 18%;
     }
 }
 
@@ -6590,6 +6651,9 @@ strong i:after {
         width: 300% !important;
         left: -62% !important;
     }
+    body .scrollbgend {
+        right: -3%;
+    }
 }
 
 .list0 {
@@ -6611,6 +6675,7 @@ strong i:after {
     top: -19%;
     z-index: -1;
     padding-bottom: 28%;
+    mix-blend-mode: multiply;
 }
 
 /* 由左往右發漸漸亮文字 */
