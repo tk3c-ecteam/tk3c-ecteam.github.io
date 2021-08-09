@@ -21,7 +21,7 @@ html{margin:0;padding:0;height:100%;}
 .bg04{background:#006665}
 .bg05{background:#006665}
 .bg06{background:#006665}
-body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210809_kv.jpg)center top 45px no-repeat,url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210809_bg.png) repeat-y top -287px center;overflow-x: hidden;background-size: 100%;background-color:#d1d1d3;position: relative;}
+body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210809_kv.jpg)center top 45px no-repeat,url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210809_bg.png) repeat-y top -200px center;overflow-x: hidden;background-size: 100%;background-color:#d1d1d3;position: relative;}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:20px}
 .wrapper{display:block;width:1144px;margin:0 auto;margin-top: 0;}
 .toggle-rightbn {display: none !important;}
@@ -34,16 +34,17 @@ body .chair {
     animation: move-chair 1.5s linear;
 }
 .title-group {
-    margin: 0 auto 50%;
+    margin: 0 auto 0;
     text-align: center;
     width: 100%;
     position: relative;
+    height: 600px;
 }
 .title-group h2 {
     width: 50%;
     z-index: -1;
     position: absolute;
-    top: -480px;
+    top: 15%;
     right: 9%;
     animation: slide-down 1.2s linear;
 }
@@ -57,22 +58,23 @@ body .chair {
     display: block;
     position: absolute;
     right: 9%;
-    bottom: 200px;
+    bottom: 38%;
     animation: slide-down 1.5s linear;
 }
 
 .title-group .light {
     position: absolute;
     width: 25%;
-    bottom: 289px;
+    /* bottom: 289px; */
     right: 14%;
     z-index: -1;
+    TOP: 0;
 }
 .step-group {
     width: 100%;
     height: 66rem;
     position: relative;
-    margin: -5rem auto 0;
+    margin: -8rem auto 0;
     text-align: center;
     background: url(https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210809_board.png) no-repeat center;
     background-position: 0 0;
@@ -154,7 +156,7 @@ body .chair {
     position: relative;
     margin: 0 auto;
     z-index: 90;
-    top: 28px;
+    top: 0px;
 }
 
 #bank-area a {
@@ -178,7 +180,7 @@ body .chair {
 /*div:nth-of-type(3) {width: 100%;position: relative;}*/
 .tv-title{width: 49%;position: relative;MARGIN: -4VMAX 12VMAX;overflow: hidden;}
 /*form>div:nth-child(6){width:100%}*/
-#gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:54%;z-index:9;bottom:0;}
+#gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:54%;z-index:51;bottom:0;}
 #gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210630_stagetop.png)no-repeat;bottom: -6%;left: 47.5%;background-size: 100%;position: fixed;}
 #gotop img{display:none;}
 
@@ -283,10 +285,10 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 @media screen and (min-width: 2000px) {
     #gotop {bottom: 4%;}
     .rightbtn {bottom: 300px;}
-    .title-group {margin: 0 auto 55%;}
     .protitle{line-height:2.2em;}
     #bank-area {top: 55px;}
-    .title-group .light {bottom: 343px;}
+    .title-group{margin: 0 auto 3%;}
+    body .chair{top: 78%;}
 }
 .wow{animation-name:bounceIn;animation-duration:1s}
 .banner{position:relative;overflow:hidden;padding:50px 100px;}
@@ -405,38 +407,37 @@ img.n01.wow {
 #TopDiv1{position:relative;}
 @media screen and (max-width:1800px){
     .title-group {width: 90%;}
-    .title-group .light {bottom: 315px;}
 }
 @media screen and (max-width:1680px){
 .banner-wrapper .b_width{width:100%}
 .rightbtn {left: 44%;bottom: 100px;}
 #gotop {left: 41%;bottom: -13%;}
+.title-group{width: 85%;margin: 0 auto -8%;}
+body .chair{top: 41%;}
+#bank-area{width: 90%;}
+.step-group{width: 90%;}
+.title-group span{bottom: 44%;}
+.step-group .product-box:after{bottom: -15%;}
 }
 @media screen and (max-width:1600px){
    .title-group {
        width: 75%;
-       margin: 0 auto 40%;
    }
-   .title-group span {bottom: 159px;}
-   .title-group .light {bottom: 242px;}
-   .title-group h2 {top: -370px;}
-   #bank-area {width: 90%;}
-   .step-group{width: 90%;height: 55rem;}
+   .step-group{height: 55rem;}
    .step-group .product-box:after {bottom: -15%;}
-   body .chair {top: 31%;}
+   body .chair {top: 39%;}
 }
 @media screen and (max-width: 1440px) {
     .rightbtn {left: 40%;}
-    #gotop {left: 36.5%;}
-    .title-group {margin: 0 auto 36%;}
-    .title-group h2 {top: -340px;}
-    .title-group .light {bottom: 195px;}
-    .title-group span{bottom: 125px;}
+    #gotop {left: 36.5%;bottom: -17%;}
     #bank-area {width: 80%;}
-    .step-group{width: 80%;height: 55rem;}
+    .step-group{width: 80%;}
     .step-group .product-box:after {bottom: -25%;}
     .product-box a:not(:last-of-type):after {top: -12%;}
-    body .chair {top: 26%;}
+    body .chair {top: 42%;}
+    .title-group {width: 70%;margin: 0 auto -15%;}
+    .title-group h2{top: 9%;}
+    .title-group span{bottom: 57%;}
 }
 @media screen and (max-width:1280px){
 .protitle{width:100%;}
@@ -446,15 +447,15 @@ img.n01.wow {
 .banner-btns ul .ddef{align-items:center;justify-content: center;}
 .list_F ul li {height: 400px !important;}
 .rightbtn {left: 35%;}
-#gotop {left: 31%;}
-.title-group {margin: 0 auto 32%;width: 62%;}
-.title-group h2{top: -310px;}
-.title-group span {bottom: 132px;}
-.title-group .light {bottom: 185px;}
+#gotop {left: 31%;bottom: -25%;}
+.title-group {width: 62%;}
 #bank-area {width: 70%;}
 .step-group{width: 70%;height: 42rem;}
+.title-group span{bottom: 60%;}
 .step-group .product-box:after {bottom: -35%;}
 .product-box a:not(:last-of-type):after {height: 13rem;}
+#bank-area{top: -35px;}
+body .chair {top: 55%;}
 }
 @media screen and (min-width: 769px) and (max-width: 1100px){
 .wrapper {width: 100%;}
@@ -470,12 +471,13 @@ img.n01.wow {
     .protitle {line-height: 1.8em;}
     .rightbtn {left: 22%;}
     .step-group a {transition: none;transform: translateY(0);}
-    .title-group h2{top: -253px;margin: 0 auto 29%;}
-    .title-group span {bottom: 94px;}
-    .title-group .light {bottom: 165px;}
     .step-title {width: 100%;padding-top: 4%;}
     .step-group a {width: 20%;}
+    .step-group{margin: -5rem auto 0;}
     .step-group .product-box:after{bottom: -43%;}
+    .title-group h2{top: 15%;}
+    .title-group span{bottom: 32%;}
+    .title-group{height: 300px;margin: 0 auto 2%;}
     #bank-area {top: 0;}
     .product-box a:not(:last-of-type):after {height: 10rem;}
     .product-box:nth-of-type(1) a:nth-of-type(1):after {
@@ -500,10 +502,7 @@ img.n01.wow {
     .acbankbox {width: 100% !important;}
     .title span {width: 55%;left: 78%;top: 44%;}
     .wrapper .title {width: 58%;}
-    .title-group{width: 70%;margin: 0 auto 38%;}
-    .title-group h2 {width: 55%;right: 4%;top: -246px;}
-    .title-group span {width: 55%;right: 4%;bottom: 98px;}
-    .title-group .light {bottom: 158px;}
+    .title-group{width: 80%;}
     .step-group a {width: 25%;}
     .rightbtn {left: -2%;}
     .copyR {margin-top: 165px;}
@@ -562,7 +561,7 @@ body {background-position: -7vmin 7vmin;}
 .pc_version_non{display:block}
 body{margin:0;padding:0;width:100%;height:100%;}
 .copyR{padding-bottom:55px;margin-top:3%;font-size:80%}
-.wrapper{display:block;width:100%;overflow: hidden;margin-bottom: 0;margin-top: 5vmin;}
+.wrapper{display:block;width:100%;overflow: hidden;margin-bottom: 0;}
 #gotop{display:none;position:fixed;padding:0;cursor:pointer;z-index:999999;bottom:45px;margin:0;left:85%;}
 #gotop img{width:100%;display:none}
 .title02{width:100%;height:auto;position:relative;margin:0 auto;text-align:center;background:0 0;float:left;}
@@ -570,16 +569,17 @@ img.n01.wow {z-index: -1;position: relative;}
 body {background-size: 160%;background-position:-24vmin 11vmin;}
 .step-group span {width: 93%;top: -17%;left: -16%;}
 .step-group a{width: 20%;}
-.title-group h2{top: 7px;width: 68%;right: -15%;}
-.title-group span{bottom: -115px;right: -15%;width: 68%;}
-.title-group {margin: 0 auto 37%;}
+.title-group h2{top: 15%;width: 68%;right: -15%;}
+.title-group span{bottom: 35%;right: -15%;width: 68%;}
+.title-group .light{right: 0;}
+.title-group {height: 200px;width: 70%;margin: 0 auto -8%;}
 .step-group {height: 22rem;margin: 0rem auto 0;width: 95%;background-size: 100%;}
 div:nth-of-type(6) {margin-top: 0;}
 .protitle{line-height: 1.2em;}
 .step-group .product-box {width: 120%;margin: 0 -10% 8%;}
 .step-group .product-box:after {width: 75%;bottom: -100%;}
 .step-group .product-box:nth-of-type(2) a {width: 32%;}
-#bank-area {width: 80%;top: 45px;}
+#bank-area {width: 80%;top: 32px;}
 .step-title {padding-top: 2%;}
 body .chair {top: 26%;}
 .product-box a:not(:last-of-type):after {
@@ -826,9 +826,10 @@ body .chair {top: 26%;}
 @media screen and (max-width:376px){
 .protitle{margin: 2% auto -3%;line-height: 1.5em;height: 75px;}
 .fix_btn>.sample-menu-style a {font-size: 12px;}
-.title-group span {bottom: -100px;}
+.title-group {margin: 0 auto -14%;}
 .step-group .product-box:after {bottom: -112%;}
 .step-group {height: 19rem;}
+.product-box a:not(:last-of-type):after{height: 5rem;}
 }
 .swiper-container .picbox_pc{display:block;width:100%}
 .swiper-container .picbox_m{display:none}
@@ -882,8 +883,6 @@ body .chair {top: 26%;}
 @media screen and (max-width:360px){
     .protitle {margin: 2% auto -4%;}
     .mobile-nuttons #btnHome {bottom: -2%;}
-    .title-group h2 {top: 0;}
-    .title-group span {bottom: -90px;}
     .step-group .product-box:after {bottom: -120%;}
 }
 
@@ -891,10 +890,11 @@ body .chair {top: 26%;}
     .list_F ul li {width: 48%;}
     .protitle {line-height: 9vmin;margin: 2% auto -7%;}
     .mobile-nuttons #btnHome {bottom: -2.2%;}
-    .title-group span {bottom: -80px;}
-    .title-group {margin: 0 auto 30%;}
     .step-group {height: 17rem;}
     .step-group .product-box:after {bottom: -136%;}
+    .title-group span{bottom: 50%;}
+    .title-group h2{top: 10%;}
+    .title-group{margin: 0 auto -27%;}
 }
 
 @media screen and (min-width: 2500px) {
@@ -906,17 +906,18 @@ body .chair {top: 26%;}
         left: 48%;
     }
     .title-group h2 {
-        top: -627px;
         right: -7%;
+        width: 70%;
     }
     .title-group span {
         width: 70%;
-        bottom: 240px;
         right: -7%;
+        bottom: 19%;
     }
-    .title-group {margin: 0 auto 65%;}
-    body .chair {top: 72%;}
-    .title-group .light {bottom: 460px;}
+    .title-group {margin: 0 auto -17%;}
+    body .chair {top: 95%;}
+    .title-group .light{right: 0;}
+    #bank-area {top: 0;}
 }
 
 @keyframes rotate-flap {
