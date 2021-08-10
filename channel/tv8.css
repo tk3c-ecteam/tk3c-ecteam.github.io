@@ -21,16 +21,23 @@ html{margin:0;padding:0;height:100%;}
 .bg04{background:#006665}
 .bg05{background:#006665}
 .bg06{background:#006665}
-body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210809_kv.jpg)center top 45px no-repeat,url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210809_bg.png) repeat-y top -200px center;overflow-x: hidden;background-size: 100%;background-color:#d1d1d3;position: relative;}
+body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";
+    background-image: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210809_kv.jpg),url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210809_bg.png);
+    background-position: center top 45px,top -200px center;
+    background-repeat: no-repeat,repeat-y;
+    background-size: 100%,100%;
+   overflow-x: hidden;background-color:#d1d1d3;position: relative;
+}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:20px}
-.wrapper{display:block;width:1144px;margin:0 auto;margin-top: 0;}
+.wrapper{display:block;width:1144px;margin:0 auto;margin-top: 0;position: relative;}
 .toggle-rightbn {display: none !important;}
 /* 電視新樣式 */
 
-body .chair {
+.wrapper .chair {
     position: absolute;
-    width: 30%;
-    top: 54%;
+    width: 60%;
+    top: 24%;
+    left: -34%;
     animation: move-chair 1.5s linear;
 }
 .title-group {
@@ -128,7 +135,7 @@ body .chair {
     right: 64%;
     top: 0;
     background: url(https://events.cdn-tkec.tw/events_net/events_net/2020TVforever/images/20210809_dashed.png) no-repeat;
-    width: 4px;
+    width: 2px;
     height: 16rem;
     background-size: 100%;
 }
@@ -155,7 +162,7 @@ body .chair {
     height: auto;
     position: relative;
     margin: 0 auto;
-    z-index: 90;
+    z-index: 30;
     top: 0px;
 }
 
@@ -288,7 +295,9 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     .protitle{line-height:2.2em;}
     #bank-area {top: 55px;}
     .title-group{margin: 0 auto 3%;}
-    body .chair{top: 78%;}
+    .wrapper .chair{top: 31%;width: 60%;left: -46%};
+    .title-group h2 {width: 60%;right: 1%;}
+    .title-group span{width: 59%;right: 2%;bottom: 30%;}
 }
 .wow{animation-name:bounceIn;animation-duration:1s}
 .banner{position:relative;overflow:hidden;padding:50px 100px;}
@@ -413,7 +422,7 @@ img.n01.wow {
 .rightbtn {left: 44%;bottom: 100px;}
 #gotop {left: 41%;bottom: -13%;}
 .title-group{width: 85%;margin: 0 auto -8%;}
-body .chair{top: 41%;}
+.wrapper .chair{top: 20%;left: -31%;}
 #bank-area{width: 90%;}
 .step-group{width: 90%;}
 .title-group span{bottom: 44%;}
@@ -425,7 +434,7 @@ body .chair{top: 41%;}
    }
    .step-group{height: 55rem;}
    .step-group .product-box:after {bottom: -15%;}
-   body .chair {top: 39%;}
+   .wrapper .chair {top: 22%;width: 50%;left: -22%;}
 }
 @media screen and (max-width: 1440px) {
     .rightbtn {left: 40%;}
@@ -434,7 +443,7 @@ body .chair{top: 41%;}
     .step-group{width: 80%;}
     .step-group .product-box:after {bottom: -25%;}
     .product-box a:not(:last-of-type):after {top: -12%;}
-    body .chair {top: 42%;}
+    .wrapper .chair {top: 20%;width: 45%;left: -14%;}
     .title-group {width: 70%;margin: 0 auto -15%;}
     .title-group h2{top: 9%;}
     .title-group span{bottom: 57%;}
@@ -455,7 +464,7 @@ body .chair{top: 41%;}
 .step-group .product-box:after {bottom: -35%;}
 .product-box a:not(:last-of-type):after {height: 13rem;}
 #bank-area{top: -35px;}
-body .chair {top: 55%;}
+.wrapper .chair {top: 22%;width: 35%;left: -6%;}
 }
 @media screen and (min-width: 769px) and (max-width: 1100px){
 .wrapper {width: 100%;}
@@ -490,14 +499,14 @@ body .chair {top: 55%;}
         right: -7%;
         top: -1%;
     }
-    body .chair {top: 17%;}
+    .wrapper .chair {top: 15%;left: -2%;}
 }
 @media screen and (max-width:768px){
     .list_F ul li {height: 300px !important;}
     .list_M .list_special ul li {width: 32% !important;}
     .protitle {font-size: 4em;line-height: 1.5em;height: 120px;}
     .wrapper {width: 100% !important;}
-    body {background-size: 131% auto;}
+    body {background-size: 131% auto;background-position: center top 45px,top -65px center;}
     .list_M .hotpromain .hotpro_price2 span {font-size: 225% !important;}
     .acbankbox {width: 100% !important;}
     .title span {width: 55%;left: 78%;top: 44%;}
@@ -506,7 +515,7 @@ body .chair {top: 55%;}
     .step-group a {width: 25%;}
     .rightbtn {left: -2%;}
     .copyR {margin-top: 165px;}
-    body .chair {top: 28%;}
+    .wrapper .chair {top: 32%;}
     .step-group .product-box:after{bottom: -55%;}
     .step-title{padding-top: 3%;width: 90%;}
     .step-group {background-position: 0 2vmin;height: 30rem;margin: -2rem auto 0;}
@@ -566,22 +575,22 @@ body{margin:0;padding:0;width:100%;height:100%;}
 #gotop img{width:100%;display:none}
 .title02{width:100%;height:auto;position:relative;margin:0 auto;text-align:center;background:0 0;float:left;}
 img.n01.wow {z-index: -1;position: relative;}
-body {background-size: 160%;background-position:-24vmin 11vmin;}
+body {background-size: 160%;background-position: -24vmin 11vmin,-30vmin -1vmin;}
 .step-group span {width: 93%;top: -17%;left: -16%;}
-.step-group a{width: 20%;}
+.step-group a{width: 25%;}
 .title-group h2{top: 15%;width: 68%;right: -15%;}
 .title-group span{bottom: 35%;right: -15%;width: 68%;}
 .title-group .light{right: 0;}
 .title-group {height: 200px;width: 70%;margin: 0 auto -8%;}
-.step-group {height: 22rem;margin: 0rem auto 0;width: 95%;background-size: 100%;}
+.step-group {height: 23rem;margin: 0rem auto 0;width: 100%;background-size: 100%;}
 div:nth-of-type(6) {margin-top: 0;}
 .protitle{line-height: 1.2em;}
-.step-group .product-box {width: 120%;margin: 0 -10% 8%;}
-.step-group .product-box:after {width: 75%;bottom: -100%;}
-.step-group .product-box:nth-of-type(2) a {width: 32%;}
+.step-group .product-box {width: 100%;margin:-3% auto 8%;}
+.step-group .product-box:after {width: 95%;bottom: -88%;}
+.step-group .product-box:nth-of-type(2) a {width: 42%;}
 #bank-area {width: 80%;top: 32px;}
 .step-title {padding-top: 2%;}
-body .chair {top: 26%;}
+.wrapper .chair {top: 21%;width: 40%;}
 .product-box a:not(:last-of-type):after {
     width: 2px;
     height: 6rem;
@@ -827,8 +836,8 @@ body .chair {top: 26%;}
 .protitle{margin: 2% auto -3%;line-height: 1.5em;height: 75px;}
 .fix_btn>.sample-menu-style a {font-size: 12px;}
 .title-group {margin: 0 auto -14%;}
-.step-group .product-box:after {bottom: -112%;}
-.step-group {height: 19rem;}
+.step-group .product-box:after {bottom: -100%;}
+.step-group {height: 21rem;}
 .product-box a:not(:last-of-type):after{height: 5rem;}
 }
 .swiper-container .picbox_pc{display:block;width:100%}
@@ -883,15 +892,15 @@ body .chair {top: 26%;}
 @media screen and (max-width:360px){
     .protitle {margin: 2% auto -4%;}
     .mobile-nuttons #btnHome {bottom: -2%;}
-    .step-group .product-box:after {bottom: -120%;}
+    .step-group .product-box:after {bottom: -105%;}
 }
 
 @media screen and (max-width:320px){
     .list_F ul li {width: 48%;}
     .protitle {line-height: 9vmin;margin: 2% auto -7%;}
     .mobile-nuttons #btnHome {bottom: -2.2%;}
-    .step-group {height: 17rem;}
-    .step-group .product-box:after {bottom: -136%;}
+    .step-group {height: 18rem;}
+    .step-group .product-box:after {bottom: -121%;}
     .title-group span{bottom: 50%;}
     .title-group h2{top: 10%;}
     .title-group{margin: 0 auto -27%;}
@@ -914,10 +923,11 @@ body .chair {top: 26%;}
         right: -7%;
         bottom: 19%;
     }
-    .title-group {margin: 0 auto -17%;}
-    body .chair {top: 95%;}
+    .title-group {margin: 0 auto 17%;}
+    .wrapper .chair {top: 35%;width: 75%;left: -64%;}
     .title-group .light{right: 0;}
     #bank-area {top: 0;}
+    body {background-position: center top 45px,top -231px center;}
 }
 
 @keyframes rotate-flap {
