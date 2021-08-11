@@ -61,7 +61,12 @@ em,i{font-style:normal;}
     right: 21%;
     top: 10%;
     width: 22%;
-    animation: rubberBand 2.5s linear;
+    animation: slide-up 1s linear;
+    opacity: 0;
+}
+
+.animate-group .product img {
+    animation: upAndDown 1.2s linear alternate infinite;
 }
 
 .circle-box {
@@ -79,66 +84,33 @@ em,i{font-style:normal;}
     z-index: -1;
 }
 
-.circle-box .circle.rotateS {
-    animation: rotate-slow 0.8s linear infinite;
-    transform-origin: left top;
-}
-
 .circle-box .circle.rotateM {
     animation: rotate-contined 8s linear infinite;
-    transform-origin: center;
-}
-
-.circle-box .circle.rotateL {
-    animation: rotate-slow 1.5s linear infinite;
-    transform-origin: right top;
+    transform-origin: left bottom;
 }
 
 .circle-box .circle.rotateN {
-    animation: rotate-contined 4s linear infinite;
-    transform-origin: center;
+    animation: rotate-contined 10s linear infinite;
+    transform-origin: right bottom;
 }
-
 .circle-box .circle:nth-of-type(1) {
-    left: 0;
-    top: -8%;
+    left: -8%;
+    bottom: 15%;
 }
 
 .circle-box .circle:nth-of-type(2) {
-    left: 0;
-    bottom: 0;
-}
-
-.circle-box .circle:nth-of-type(3) {
-    right: -13%;
-    top: -3%;
-}
-
-.circle-box .circle:nth-of-type(4) {
-    right: 0;
-    bottom: 0;
+    right: -3%;
+    bottom: -4%;
 }
 #bank-area {
     width: 90%;
     height: auto;
 }
-#bank-area .slick-prev {
-    background: url(https://events.cdn-tkec.tw/events_net/events_net/groupbuy/images/20210720_arrowleft.png) no-repeat;
-    width: 3%;
-    height: 58px;
-    background-size: 100%;
-}
-
-#bank-area .slick-next {
-    background: url(https://events.cdn-tkec.tw/events_net/events_net/groupbuy/images/20210720_arrowright.png) no-repeat;
-    width: 3%;
-    height: 58px;
-    background-size: 100%;
-}
 
 #bank-area .slick-prev:before,
 #bank-area .slick-next:before {
-    font-size: 0;
+    font-size: 30px;
+    color: #d84005;
 }
 
 /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â·ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â´ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¹Ã…â€œÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â§ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¤ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âº*/
@@ -815,19 +787,18 @@ html {background-size: 100%;background-position: 0 23vmin;}
 }
 
 #bank-area .slick-prev {
-    left: -10px;
-    top: 70%;
+    left: -20px;
 }
 
 #bank-area .slick-next {
     right: -10px;
-    top: 70%;
 }
-body:before,
-body:after {
-    top: 95px;
-    height: 60px;
+
+#bank-area .slick-prev:before,
+#bank-area .slick-next:before {
+    font-size: 25px;
 }
+
 .copyR{padding-bottom: 16vmin;}
 #gotop{display:none;position:fixed;cursor:pointer;z-index:9;width:15%;left:80%;bottom:45px;margin:0;}
 #gotop img{width:100%;float:right;display:block;}
