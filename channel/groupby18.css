@@ -86,21 +86,19 @@ em,i{font-style:normal;}
 
 .circle-box .circle.rotateM {
     animation: rotate-contined 8s linear infinite;
-    transform-origin: left bottom;
 }
 
 .circle-box .circle.rotateN {
     animation: rotate-contined 10s linear infinite;
-    transform-origin: right bottom;
 }
 .circle-box .circle:nth-of-type(1) {
     left: -8%;
-    bottom: 15%;
+    bottom: 25%;
 }
 
 .circle-box .circle:nth-of-type(2) {
-    right: -3%;
-    bottom: -4%;
+    right: -10%;
+    bottom: -10%;
 }
 #bank-area {
     width: 90%;
