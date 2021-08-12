@@ -25,7 +25,7 @@
     <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
     <link href="https://events.tk3c.com/events_net/events_net/css/template/2020_Style.css" rel="stylesheet" type="text/css">
     <link href="https://events.tkec.com.tw/events_net/events_net/css/template/bank.css" rel="stylesheet" type="text/css">
-    <link href="https://events.tk3c.com/events_net/events_net/618return/css/mobile_nav.css" rel="stylesheet" type="text/css" />
+    <link href="https://events.tk3c.com/events_net/events_net/css/template/mobile_nav.css" rel="stylesheet" type="text/css" />
     <!-- 登入頁樣式 -->
     <link href="https://events.tk3c.com/events_net/events_net/618exportgo1c/css/alert.css" rel="stylesheet">
     <link href="https://events.tk3c.com/events_net/events_net/21mystery/css/missing.css" rel="stylesheet">
@@ -229,14 +229,10 @@
            <div class="rush">
             <div id="tickets">
                 <ul>
-                    <li @click="getTicket('c1','rush')"><img src="https://events.cdn-tkec.tw/events_net/events_net/21mystery/images/coupon1.png"></li>
-                    <li @click="getTicket('c2','rush')"><img src="https://events.cdn-tkec.tw/events_net/events_net/21mystery/images/coupon2.png"></li>
-                    <li @click="getTicket('c3','rush')"><img src="https://events.cdn-tkec.tw/events_net/events_net/21mystery/images/coupon3.png"></li>
-                    <li @click="getTicket('c4','rush')"><img src="https://events.cdn-tkec.tw/events_net/events_net/21mystery/images/coupon4.png"></li>
+                    <li v-for="(ticket,i) in tickets[0]" @click="getTicket(i,'rush')"><img :src="getImgUrl(ticket)"></li>
                 </ul>
             </div>
            </div>
-
        </section>
 
        <!-- 挺你應援券 -->
@@ -287,13 +283,14 @@
                 </div>
             </div>
 
-            <!-- 搶神券規則 -->
-            <div id="rush-rule" class="rule-group" v-if="isRushRule">
-                <h2><img src="https://events.tk3c.com/events_net/events_net/21mystery/images/ticket_title2.png"></h2>
+            <!-- 應援券規則 -->
+            <div id="cheer-rule" class="rule-group" v-if="isCheerRule">
+                <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
+                <h2><img src="https://events.tk3c.com/events_net/events_net/21mystery/images/ticket_title.png"></h2>
                 <div class="rule-text">
                     <p class="normal">折價券使用規則</p>
                     <p class="normal">再次恭喜您獲得限量折價券!</p>
-                    <p class="normal">本活動折價券使用期限為2021/08/13 00:00-2021/08/31 23:59，</p>
+                    <p class="normal">本活動折價券使用期限為<br>{{ ruleTime }}</p>
                     <p class="normal">請注意使用期限喔!</p>
 
                     <h3>Q: 什麼是挺你應援券？</h3>
@@ -318,13 +315,14 @@
                 </div>
             </div>
 
-         <!-- 應援券規則 -->
-         <div id="cheer-rule" class="rule-group" v-if="isCheerRule">
-            <h2><img src="https://events.tk3c.com/events_net/events_net/21mystery/images/ticket_title.png"></h2>
+         <!-- 搶神券規則 -->
+         <div id="rush-rule" class="rule-group" v-if="isRushRule">
+            <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
+            <h2><img src="https://events.tk3c.com/events_net/events_net/21mystery/images/ticket_title2.png"></h2>
             <div class="rule-text">
                 <p class="normal">折價券使用規則</p>
                 <p class="normal">再次恭喜您獲得限量折價券!</p>
-                <p class="normal">本活動折價券使用期限為2021/08/13 00:00-2021/08/31 23:59，</p>
+                <p class="normal">本活動折價券使用期限為<br>2021/08/13 00:00-2021/08/31 23:59，</p>
                 <p class="normal">請注意使用期限喔!</p>
 
                 <h3>Q: 什麼是燦坤線上購物折價券？</h3>
@@ -1051,7 +1049,6 @@
     <div class="copyR">本公司保有最後修改、變更、活動解釋及取消活動之權利，若有相關異動將會公告於網站，怒不另行通知。</div>
 
     <script type="text/javascript" src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
- 
     <script src="https://events.tk3c.com/events_net/events_net/21mystery/js/missing.js"></script>
 </body>
 </html>
