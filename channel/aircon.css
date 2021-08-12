@@ -957,8 +957,8 @@ i {
         -ms-transition: all 0.5s;
         -moz-transition: all 0.5s;
         transform: translateY(0.1em);
-        background-color: #57adaa;
-        color: #000;
+        background-color: #000;
+        color: #ffffff;
     }
     .rightbtn>a.btn02 {
         width: 134px;
