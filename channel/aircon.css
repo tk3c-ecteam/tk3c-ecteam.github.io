@@ -38,7 +38,7 @@ html {
     margin: 0;
     padding: 0;
     height: auto;
-    background: url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20210811/kv_bg.png) top 105px center no-repeat,url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20210811/bg.jpg) repeat-y top 44vmax center;
+    background: url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20210811/kv_bg.png) top 105px center no-repeat,url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20210811/bg.jpg) repeat-y top 41vmax center;
     background-size: 100%;
     overflow-x: hidden;
 }
@@ -238,10 +238,8 @@ i {
 
 .animate-group .product {
     width: 30%;
-    animation: go-to-left-fast 2.5s linear;
     position: absolute;
-    right: 0;
-    opacity: 0;
+    right: -14%;
 }
 /*3格動畫*/
 
@@ -913,7 +911,7 @@ i {
         background-size: 85%;
         padding: 133px 0 0 0;
         bottom: 63%;
-        background-position:2.5vmax 3vmax;
+        background-position:1.5vmax 3vmax;
     }
     .actbtn::after {
         content: "";
@@ -2892,6 +2890,7 @@ div#NewProductAll {
     }
     .animate-group .product {
         width: 25%;
+        right: -5%;
     }
 }
 
@@ -2904,6 +2903,7 @@ div#NewProductAll {
     }
     .animate-group .product {
         width: 22%;
+        right: 0;
     }
 }
 
