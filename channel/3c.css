@@ -40,18 +40,11 @@ img {
 html {
     margin: 0;
     padding: 0;
-    background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_01.jpg),
-    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_02.jpg),
-    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_03.jpg),
-    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_04.jpg),
-    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_05.jpg),
-    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_06.jpg),
-    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_07.jpg),
-    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_08.jpg);
+    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg_01.jpg) no-repeat top 100px center,
+    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210816/bg.jpg) repeat-y top 5vmax center;
     background-size: 100%;
-    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,repeat-y;
-    background-position: 0 5vmax,top,0 48vmax,top;
     overflow-x: hidden;
+    background-color: #2d0039;
 }
 
 .boxfly {
@@ -499,6 +492,7 @@ body {
     display: block;
     left: 3%;
     opacity: 0;
+    z-index: -1;
 }
 
 .right-text {
@@ -508,6 +502,7 @@ body {
     display: block;
     right: 2%;
     opacity: 0;
+    z-index: -1;
 }
 
 .wrapper {
@@ -4344,6 +4339,7 @@ strong i:after {
     .animate-group {
         width: 90%;
         height: 30rem;
+        margin: 8rem auto 2%;
     }
     .animate-group .runner {
         width: 80%;
@@ -4358,12 +4354,14 @@ strong i:after {
     .animate-group {
         width: 80%;
         height: 29rem;
+        margin: 9rem auto 2%;
     }
 }
 @media screen and (max-width: 1600px) {
     .animate-group {
         width: 77%;
         height: 27rem;
+        margin: 7rem auto 2%;
     }
     .rightbtn {
         left: 48%;
@@ -4400,6 +4398,7 @@ strong i:after {
     .animate-group {
         width: 70%;
         height: 22rem;
+        margin: 8rem auto 2%;
     }
     .left-text {
         left: 1%;
@@ -4424,6 +4423,7 @@ strong i:after {
     .animate-group {
         width:65%;
         height: 20rem;
+        margin: 8rem auto 2%;
     }
     .animate-group h2 {
         left: 6%;
@@ -4465,6 +4465,7 @@ strong i:after {
     .animate-group {
         width: 60%;
         height: 18rem;
+        margin: 6rem auto 2%;
     }
     .animate-group .runner {
         width: 75%;
@@ -6590,23 +6591,70 @@ strong i:after {
     }
 }
 
+@media screen and (min-width: 2300px) {
+
+    .animate-group {
+        margin: 7rem auto 5%;
+    }
+    html {
+        background-position: 0 -1vmax,top,0 48vmax,top;
+    }
+}
+
+@media screen and (min-width: 2400px) {
+
+    .animate-group {
+        margin: 8rem auto 5%;
+    }
+}
+
+
 @media screen and (min-width: 2500px) {
 
     .animate-group {
-        margin: 20rem auto 5%;
+        margin: 13rem auto 5%;
+    }
+    html {
+        background-position: 0 0vmax,top,0 48vmax,top;
     }
 }
 
 @media screen and (min-width: 2700px) {
 
     .animate-group {
-        margin: 21rem auto 5%;
+        margin: 10rem auto 5%;
     }
     html {
-        background-position: 0 3vmax,top,0 48vmax,top;
+        background-position: 0 -3vmax,top,0 48vmax,top;
     }
 }
 
+@media screen and (min-width: 2800px) {
+
+    .animate-group {
+        margin: 9rem auto 5%;
+    }
+    html {
+        background-position: 0 -5vmax,top,0 48vmax,top;
+    }
+}
+
+@media screen and (min-width: 2900px) {
+
+    .animate-group {
+        margin: 7rem auto 5%;
+    }
+    html {
+        background-position: 0 -7vmax,top,0 48vmax,top;
+    }
+}
+
+@media screen and (min-width: 3000px) {
+
+    html {
+        background-position: 0 -8vmax,top,0 48vmax,top;
+    }
+}
 
 .list0 {
     width: 100%;
