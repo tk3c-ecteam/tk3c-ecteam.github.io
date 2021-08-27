@@ -78,8 +78,8 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .fix_btn{display:none}
 .protitle{position:relative;width:1144px;text-align:center;height:150px;display:block;float:left;color:#ffffff;font-size:0;text-indent: -9999px;letter-spacing:1px;box-sizing:border-box;margin-top:35px;line-height:125px;padding:10px;text-shadow:0px 0px 10px #d63703;}
 .protitle:nth-of-type(1) {background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/202109/stair2.png) no-repeat;background-size: 100%;}
-.protitle:nth-of-type(2) {background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/202109/stair3.png) no-repeat;background-size: 100%;}
-.protitle:nth-of-type(3) {background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/202109/stair4.png) no-repeat;background-size: 100%;}
+.protitle:nth-of-type(2) {background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/202109/stair4.png) no-repeat;background-size: 100%;}
+.protitle:nth-of-type(3) {background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/202109/stair3.png) no-repeat;background-size: 100%;}
 .protitle2{position:relative;width:1144px;text-align:center;height:auto;display:block;overflow:hidden;float:left;color:#ae2123;font-size:300%;padding-top:10px;padding-bottom:6px;letter-spacing:1px;box-sizing:border-box;margin-top:15px;background:#d2d4d5;padding-bottom:10px;width:100%}
 .protitle2:after{content:'';position:absolute;left:18px;bottom:0;right:auto;height:2px;width:97%;background-color:#eee}
 .protitle .more{right:10px;bottom:10px;width:82px;height:66px;background:url(../images/more.png) no-repeat}
@@ -126,7 +126,9 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner p{position:absolute;right:-300px;bottom:0}
 .bonus-area {margin: 0 auto 0;width: 100%;display: flex;flex-wrap: wrap;align-items: stretch;justify-content: center;text-align: center;}
 .bonus-area a {width: 20%;height: auto;display: block;}
+.bonus-area a:nth-of-type(2) {pointer-events: none;}
 .bonus-area a:hover {transform: scale(0.9);transition: all 0.4s linear;}
+.bonus-area a:nth-of-type(2):hover {transform: scale(1);transition: none;}
 .nav_btn ul{display:flex;justify-content:center;flex-wrap:nowrap;width:100%;height:auto;}
 .nav_btn ul li {width: 13%;margin: 0 1%;}
 .nav_btn ul li a {width: 100%;height: 100%;display: block;}
@@ -275,7 +277,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     .acbankbox{width: 100% !important;}
     .acbankbox .list2 ul li{width: 185px !important;}
     .vdList ul li a:hover {transform: translateY(0);transition: none;}
-    bonus-area a:hover {transform: scale(1);transition: none;}
+    .bonus-area a:hover {transform: scale(1);transition: none;}
     .rightbtn {left: 26%;}
     #gotop {left: 19%;}
     .banner .slogan {padding:31vmin 0 0;}
