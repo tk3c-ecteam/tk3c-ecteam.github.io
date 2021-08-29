@@ -21,7 +21,7 @@ $(function(){
     `);
 
     let status = false;
-    $('.rightbtn .link1').on('click',function(){
+    $('.rightbtn .link1,.navibar_m_btn li a').end().on('click',function(){
         status = true;
         $('.bubble').remove();
     });
