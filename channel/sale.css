@@ -97,6 +97,20 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
     margin: 0 auto 2%;
     text-align: center;
 }
+.product-box .gifts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.product-box .gifts a {
+    width: 45%;
+    height: auto;
+    display: block;
+    margin:  0 9px 5px;
+}
 .product-box ul {
     display: flex;
     flex-wrap: wrap;
@@ -109,13 +123,17 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
     margin: 0 5px;
 }
 
+.product-box li:nth-of-type(9) {
+    width: 92%;
+}
+
 .product-box li a {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.product-box li a:hover {
+.product-box a:hover {
     transform: scale(0.95);
     transition: all 0.5s linear;
 }
@@ -293,7 +311,7 @@ body .bg-left, .bg-right {display: none;}
 .animate-group h2 {margin-left: 3rem;}
 .list_special .box_price strong {font-size: 23px;}
 .product-box {padding-top: 40%;}
-.product-box li a:hover {transform: scale(1); transition: none;}
+.product-box a:hover {transform: scale(1); transition: none;}
 html {
     background-position: top 70px center ,-21vmax -43vmax,top;
 }
