@@ -101,12 +101,10 @@ i {
     bottom: 0px;
 }
 
-#top {
-    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210902/top.png) no-repeat;
+#gotoTop {
     width: 3%;
     height: 60px;
     display: block;
-    background-size: 100%;
     position: fixed;
     right: 11%;
     bottom: 10%;
@@ -1574,7 +1572,7 @@ li .box_price strong em {
 }
 
 .list02 .box_price strong {
-    font-size: 28px;
+    font-size: 0; /*  28px */
     display: block;
     height: 60px;
     letter-spacing: -2px;
@@ -1599,7 +1597,7 @@ li .box_price strong em {
 }
 
 .list02 .box_price strong i {
-    font-size: 13px;
+    font-size: 0; /* 13px */
     letter-spacing: 0;
     font-style: normal;
 }
@@ -1607,7 +1605,7 @@ li .box_price strong em {
 .list02 .box_price strong:before {
     content: "搶購";
     display: block;
-    width: 53px;
+    width: 120px;
     height: 43px;
     float: right;
     border-radius: 13px;
@@ -1618,7 +1616,9 @@ li .box_price strong em {
     letter-spacing: 1px;
     position: absolute;
     bottom: 7px;
-    right: 5px;
+    right: 0; /* 5px */
+    left: 0;
+    margin: 0 auto;
     background: linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
     background: -moz-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
     background: -webkit-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
@@ -1627,7 +1627,7 @@ li .box_price strong em {
 
 .list02 li .box_price strong em {
     display: block;
-    font-size: 10px;
+    font-size: 0; /* 10px */
     position: absolute;
     bottom: 6px;
     right: 64px;
@@ -5439,6 +5439,7 @@ strong i:after {
     }
     .list02 storg {
         line-height: 44px;
+        display: none;
     }
     .list02 li .box_price {}
     .list02 li .box_price strong {
@@ -5449,9 +5450,11 @@ strong i:after {
         text-align: center;
         float: left;
         width: 100%;
+        font-size: 28px;
         line-height: 25px;
         overflow: visible;
         padding-left: 0;
+        color: #fff;
         /* margin:0 0 4px 0;*/
     }
     /*擊殺驚喜價-設定搶購鈕*/
@@ -5540,6 +5543,7 @@ strong i:after {
         font-size: 12px;
         padding: 0;
         line-height: 12px;
+        display: none;
     }
     /*熱銷排行榜icon*/
     .box_price3 .icon_box {
@@ -6605,8 +6609,8 @@ strong i:after {
         bottom: 29%;
         right: 15%;
     }
-    #top {
-        display: none;
+    #gotoTop {
+        display: none !important;
     }
 }
 
