@@ -358,11 +358,13 @@ i {
 .tabs.fixed {
     position: fixed;
     top: 0;
-    width: 60%;
+    width: 100%;
     height: auto;
     left: 0px;
     right: 0px;
     z-index: 999;
+    background: #ffe28f;
+    box-shadow: 5px 5px 6px 0px rgba(0,0,0,0.75);;
 }
 
 .tabs a {
@@ -370,6 +372,10 @@ i {
     height: auto;
     display: block;
     margin: 0 1%;
+}
+
+.tabs.fixed a {
+    width: 8%;
 }
 
 .tabs a:hover {
@@ -4451,9 +4457,6 @@ strong i:after {
     .rightbtn {
         left: 48%;
     }
-    .tabs.fixed {
-        width: 80%;
-    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -4483,6 +4486,9 @@ strong i:after {
     }
     .title-group .girl.sit {
         width: 18%;
+    }
+    .title-group .gathering {
+        width: 23%;
     }
 }
 
@@ -4533,6 +4539,10 @@ strong i:after {
     }
     .tabs.fixed {
         width: 100%;
+    }
+
+    .tabs.fixed a {
+        width: 12%;
     }
 }
 @media screen and (max-width: 900px) {
