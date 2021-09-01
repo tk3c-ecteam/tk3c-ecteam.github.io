@@ -34,6 +34,10 @@ img {
     overflow: hidden;
 }
 
+.fb-fans {
+    position: relative;
+    z-index: 100;
+}
 .tab-container> ul.nav-tabtop > li > a {position: relative;z-index: 50;}
 /*圖片超連結邊框消除*/
 .toggle-rightbn {display: none !important;}
@@ -375,7 +379,7 @@ i {
 }
 
 .tabs.fixed a {
-    width: 8%;
+    width: 6%;
 }
 
 .tabs a:hover {
@@ -4542,7 +4546,7 @@ strong i:after {
     }
 
     .tabs.fixed a {
-        width: 12%;
+        width: 8%;
     }
 }
 @media screen and (max-width: 900px) {
