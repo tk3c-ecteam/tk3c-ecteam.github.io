@@ -43,7 +43,7 @@ html {
     background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210902/kv.png),
     url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20210902/bg.png);
     background-size: 100%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat,repeat-y;
     overflow-x: hidden;
     background-color: #ffe28f;
     background-position: top 100px center,top 25vmax center;
@@ -343,6 +343,7 @@ i {
     text-align: center;
     justify-content: center;
     position: relative;
+    z-index: 50;
 }
 
 .tabs.fixed {
