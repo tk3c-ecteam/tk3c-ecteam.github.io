@@ -23,12 +23,12 @@ html{margin:0;padding:0;height:100%;}
 .bg06{background:#006665}
 body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";
     background-image: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210902/kv.jpg),url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210902/bg.jpg),url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210902/bg2.jpg);
-    background-position: center top 45px,top 47vmax center;
+    background-position: center top 45px,top 45vmax center;
     background-repeat: no-repeat,no-repeat,repeat-y;
     background-size: 100%;
    overflow-x: hidden;position: relative;
 }
-.copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:20px}
+.copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:-5%}
 .wrapper{display:block;width:1144px;margin:0 auto 8%;margin-top: 0;}
 .toggle-rightbn {display: none !important;}
 /* 電視新樣式 */
@@ -59,7 +59,8 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微�
     background-size: 100%;
     right: 4%;
     top: 11%;
-    animation: slide-down 3s linear infinite;
+    /*offset-path: path('M314 536 C488 524 263 171 346 61');*/
+    animation: leaf 8s infinite linear;
 }
 .title-group h2:after {
     content: '';
@@ -71,7 +72,8 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微�
     background-size: 100%;
     bottom: 77%;
     right: 22%;
-    animation: slide-down 5s linear infinite;
+   /* offset-path: path('M314 536 C488 524 263 171 346 61');*/
+    animation: leaf 10s infinite linear;
 }
 
 .title-group .subtitle {
@@ -101,11 +103,11 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微�
 
 .title-group .rabbit {
     POSITION: ABSOLUTE;
-    WIDTH: 40%;
+    WIDTH: 28%;
     BORDER: 0;
-    BOTTOM: -15%;
-    RIGHT: 8%;
-    animation: move-to-left 3s ease-in;
+    BOTTOM: -3%;
+    RIGHT: 19%;
+    animation:go-to-left-slow 10s ease-in;
 }
 .step-group {
     width: 100%;
@@ -317,8 +319,10 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     .rightbtn {bottom: 300px;left: 63%;}
     .protitle{line-height:2.2em;}
     .title-group{margin: 4REM auto 3%;}
-    body {background-position: center top 45px,top 40vmax center,bottom 5vmax center;}
+    body {background-position: center top 45px,top 47vmax center}
     .wrapper{margin: 0 auto 10%;}
+    .step-group {width: 120%;margin: 0 -5rem -6%;}
+    .bank-group {width: 120%; margin: 0 -5rem 0;}
 }
 .wow{animation-name:bounceIn;animation-duration:1s}
 .banner{position:relative;overflow:hidden;padding:50px 100px;}
@@ -563,7 +567,7 @@ body {background-position: -7vmin 7vmin;}
 .m_version_non{display:none}
 .pc_version_non{display:block}
 body{margin:0;padding:0;width:100%;height:100%;}
-.copyR{padding-bottom:55px;margin-top:3%;font-size:80%}
+.copyR{padding-bottom:55px;margin-top:-12%;font-size:80%}
 .wrapper{display:block;width:100%;overflow: hidden;margin-bottom: 5%;}
 #gotop{display:none;position:fixed;padding:0;cursor:pointer;z-index:999999;bottom:45px;margin:0;left:85%;}
 #gotop img{width:100%;display:none}
@@ -907,18 +911,43 @@ body {background-size: 160%,200%;background-position:-32vmin 11vmin,-58vmin 60vm
     .title-group {height: 11rem;margin: 0 auto 0;}
 }
 
+@media screen and (min-width: 2300px) {
+    body {background-position: center top 45px,top 46.7vmax center;}
+    .title-group {margin: 5rem auto 12%;}
+}
 @media screen and (min-width: 2500px) {
     .step-title {
         padding-top: 5%;
     }
     #gotop {
-        left: 69.5%;
+        left: 70%;
+        bottom: 5%;
     }
     .rightbtn {left: 68%;}
-    .title-group {margin: 8rem auto 13%;}
-    body {background-position: center top 45px,top 28vmax center;}
+    .title-group {margin: 8rem auto 8%;}
+    body {background-position: center top 45px,top 46.5vmax center;}
+    .step-group {width: 140%;margin: 0 -12rem -6%;}
+    .bank-group {width: 140%;margin: 0 -12REM 0;}
+    #bank-area button {height: 72px !important;}
+    #bank-area .slick-next {right: -90px;}
 }
 
+@media screen and (min-width: 2700px) {
+    .title-group {
+        margin: 12rem auto 8%;
+    }
+    .step-group {
+        width: 150%;
+        margin: 0 -15rem -6%;
+    }
+    .bank-group {width: 150%;margin: 0 -15REM 0;}
+    #gotop {left: 69.8%;}
+}
+
+@media screen and (min-width: 3000px) {
+    .title-group {margin: 16rem auto 28%;}
+    body {background-position: center top 45px,top 46.4vmax center;}
+}
 @keyframes rotate-flap {
     0% {
         opacity: 0;
@@ -962,4 +991,50 @@ body {background-size: 160%,200%;background-position:-32vmin 11vmin,-58vmin 60vm
       -webkit-filter: brightness(120%);
               filter: brightness(120%);
     }
+  }
+
+  @keyframes go-to-left-slow {
+    0% {
+      -webkit-transform: translateX(300%);
+              transform: translateX(300%);
+
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  }
+
+  @keyframes svg-move-top {
+    0% {
+      offset-distance: 0%;
+      top: -300%;
+    }
+    100% {
+      offset-distance: 100%;
+      top: 30%;
+    }
+  }
+
+  @keyframes leaf {
+      0% {
+          transform: rotate(-25deg) translate(0,-100%);
+          opacity: 0;
+      }
+
+      40% {
+          transform: rotate(20deg) translate(3%,12%);
+          opacity: 1;
+      }
+
+      70% {
+        transform: rotate(8deg) translate(3%,20%);
+        opacity: 0;
+      }
+
+      100% {
+        transform: rotate(8deg) translate(3%,20%);
+        opacity: 0;
+      }
+      
   }
