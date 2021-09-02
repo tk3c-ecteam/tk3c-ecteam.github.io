@@ -23,10 +23,10 @@ html{margin:0;padding:0;height:100%;}
 .bg06{background:#006665}
 body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";
     background-image: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210902/kv.jpg),url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210902/bg.jpg),url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/20210902/bg2.jpg);
-    background-position: center top 45px,top 45vmax center;
+    background-position: center top 45px,top 47vmax center;
     background-repeat: no-repeat,no-repeat,repeat-y;
     background-size: 100%;
-   overflow-x: hidden;position: relative;
+   overflow-x: hidden;
 }
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top:-5%}
 .wrapper{display:block;width:1144px;margin:0 auto 8%;margin-top: 0;}
@@ -59,7 +59,6 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微�
     background-size: 100%;
     right: 4%;
     top: 11%;
-    /*offset-path: path('M314 536 C488 524 263 171 346 61');*/
     animation: leaf 8s infinite linear;
 }
 .title-group h2:after {
@@ -72,7 +71,6 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微�
     background-size: 100%;
     bottom: 77%;
     right: 22%;
-   /* offset-path: path('M314 536 C488 524 263 171 346 61');*/
     animation: leaf 10s infinite linear;
 }
 
@@ -154,6 +152,10 @@ body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微�
     transition: all 0.5s linear;
 }
 
+.bank-group {
+    width: 100%;
+    margin: 0 auto 0;
+}
 .bank-group .bank-title {
     width: 85%;
     height: auto;
@@ -315,7 +317,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 }
 
 @media screen and (min-width: 2000px) {
-    #gotop {bottom: 7%;left: 65%;}
+    #gotop {bottom: 4%;left: 65%;}
     .rightbtn {bottom: 300px;left: 63%;}
     .protitle{line-height:2.2em;}
     .title-group{margin: 4REM auto 3%;}
@@ -444,8 +446,10 @@ img.n01.wow {
 .banner-wrapper .b_width{width:100%}
 .rightbtn {left: 52%;bottom: 100px;}
 #gotop {left: 54.5%;bottom: -13%;}
-.title-group{width: 95%;height: 37rem;margin: 0 auto -5%;}
+.title-group{width: 95%;height: 37rem;margin: 0 auto -3%;}
 #bank-area{width: 90%;}
+.step-group {width: 85%;}
+.bank-group {width: 85%;}
 }
 @media screen and (max-width:1600px){
    .title-group {
@@ -463,7 +467,6 @@ img.n01.wow {
     .rightbtn {left: 40%;}
     #gotop {left: 43.5%;bottom: -25%;}
     .title-group {width: 70%;height: 27rem;}
-    #bank-area {width: 65%;top: -5px;}
     .step-group .product-box {margin: 0 auto 5%;width: 85%;}
     .bank-group .bank-title {width: 70%;}
     #bank-area button {height: 40px !important;}
@@ -478,10 +481,10 @@ img.n01.wow {
 .rightbtn {left: 35%;}
 #gotop {left: 39%;}
 .title-group {width: 65%;height: 25rem;}
-#bank-area {width: 60%;}
 .step-group .product-box {width: 80%;}
 .bank-group .bank-title {width: 65%;margin: 0 auto -4%;}
 .step-title {margin: 0 auto -4%;}
+.bank-group {width: 80%;}
 }
 @media screen and (min-width: 769px) and (max-width: 1100px){
 .wrapper {width: 100%;}
@@ -499,6 +502,7 @@ img.n01.wow {
     .title-group {height: 22rem;margin: 0 auto -4%;}
     #gotop {bottom: -15%;left: 26%;}
     .product-box a:hover {transform: scale(1);transition: non;}
+    body {background-position: center top 45px,top 37vmax center;}
 }
 @media screen and (max-width:900px) {
     .title-group {
@@ -588,6 +592,7 @@ body {background-size: 160%,200%;background-position:-32vmin 11vmin,-58vmin 60vm
 #bank-area button {height: 31px !important;}
 #bank-area .slick-prev {left: -10px;}
 #bank-area .slick-next {right: -20px;}
+.bank-group {width: 95%;}
 .bannerkok {
     background: url(../images/title_head_m-01.jpg) no-repeat;
     background-size: 100% auto;
