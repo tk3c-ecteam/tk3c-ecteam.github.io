@@ -73,7 +73,7 @@ em,i{font-style:normal;}
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     text-align: center;
 }
 
@@ -704,8 +704,9 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
         margin:  47% !important;
     }
     .list06 {
-        margin-left: 8%;
+        margin-left: 0;
         margin-bottom: 15%;
+        width: 100%;
     }
     .list06 .proUrl {
         top: -78%;
