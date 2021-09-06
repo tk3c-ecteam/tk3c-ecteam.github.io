@@ -12,6 +12,7 @@ html{margin:0;padding:0;background-image: url(https://events.tk3c.com/events_net
     background-repeat: no-repeat;
     background-position: top 100px center,0 10vmax,top;
     background-color: #dad6d6;
+    background-attachment: scroll fixed;
 }
 .boxfly{position:absolute;left:-9999em;top:-9999em;}
 em,i{font-style:normal;}
@@ -706,7 +707,7 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
         right: 0;
         margin: 0 auto 0;
     }
-    .list06:nth-of-type(4) .proUrl {
+    .list06:nth-of-type(3) .proUrl {
         top: -62%;
     }
     .wrapper {
@@ -759,7 +760,7 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
     .list06 .proUrl {
         top: -33%;
     }
-    .list06:nth-of-type(4) .proUrl {
+    .list06:nth-of-type(3) .proUrl {
         top: -27%;
     }
     html {
@@ -824,6 +825,9 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
         margin: 0 auto;
         width: 80%;
     }
+    .list06:nth-of-type(3) .proUrl {
+        top: -34%;
+    }
     .wrapper {
         margin: 0 auto 25%;
     }
@@ -849,7 +853,7 @@ html {background-size: 180%;background-position: -41vmin 23vmin;}
 .product-box h2 {width: 62%;}
 .list06 .proUrl {top: -27%;}
 .list06:nth-of-type(1) .proUrl{top: -24%;}
-.list06:nth-of-type(4) .proUrl{top: -22%;}
+.list06:nth-of-type(3) .proUrl{top: -22%;}
 .product-box ul li{width: 48%;}
 .product-box ul li:nth-of-type(1) {width: 100%;}
 .product-box ul li:nth-of-type(3) {width: 50%;margin: 0 -6px 0 2px;}
@@ -1219,7 +1223,7 @@ h2.protitle:first-child{}
     .list06:nth-of-type(1) .proUrl {
         top: -22%;
     }
-    .list06:nth-of-type(4) .proUrl {
+    .list06:nth-of-type(3) .proUrl {
         top: -18%;
     }
 }
