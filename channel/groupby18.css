@@ -554,9 +554,6 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
     html {
         background-size: 172%;
     }
-    .copyR {
-        margin-top: 17%;
-    }
 }
 @media screen and (min-width:751px)
 {.fix_btn{display:none;}
@@ -656,12 +653,15 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
 @media screen and (max-width: 1700px) {
     .animate-group {width: 90%;height: 36rem;}
     #bank-area {width: 80%;}
+    .rightbtn {
+        left: 53%;
+    }
 }
 
 @media screen and (max-width: 1600px) {
     .rightbtn {
         margin: 158px 0px 0px 581px;
-        left: 43%;
+        left: 49%;
     }
     .animate-group {
         background-position: -17vmax 2vmax,top;
@@ -694,6 +694,23 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
         margin: 0 23rem 20%;
         padding-top: 12%;
     }
+    .list06 {
+        margin-left: 0;
+        margin-bottom: 15%;
+        width: 100%;
+    }
+    .list06 .proUrl {
+        top: -78%;
+        left: 0;
+        right: 0;
+        margin: 0 auto 0;
+    }
+    .list06:nth-of-type(4) .proUrl {
+        top: -62%;
+    }
+    .wrapper {
+        margin: 0 auto 15%;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -702,18 +719,6 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
     }
     .title {
         margin:  47% !important;
-    }
-    .list06 {
-        margin-left: 0;
-        margin-bottom: 15%;
-        width: 100%;
-    }
-    .list06 .proUrl {
-        top: -78%;
-        left: 25%;
-    }
-    .wrapper {
-        margin: 0 auto 15%;
     }
     .kv-title {
         width: 25%;
@@ -747,8 +752,14 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
         height: 34rem;
         background-position: -18vmax 2vmax,top;
     }
+    .list06 {
+        margin-top: -100px;
+    }
     .list06 .proUrl {
-        top: -29%;
+        top: -33%;
+    }
+    .list06:nth-of-type(4) .proUrl {
+        top: -27%;
     }
     html {
         background-position: top 100px center,-8vmax 10vmax,top;
@@ -830,17 +841,20 @@ body:before{content: '';display: block;background: url(https://events.tk3c.com/e
 #kuai3header .words .font{display:none !important;}
 .m_version_non{display:none;}
 body{margin:0px;padding:0;width:100%;height:auto;}
-.wrapper{display: block;width:100%;margin: 3rem auto 35%;}
+.wrapper{display: block;width:100%;margin: 3rem auto 0;}
 html {background-size: 180%;background-position: -41vmin 23vmin;}
 .title {margin: 27% !important;}
 .kv-title {width: 46%;margin: 0 5rem 20%;padding-top: 12%;}
 .product-box h2 {width: 62%;}
-.list06 .proUrl {top: -24%;}
+.list06 .proUrl {top: -27%;}
+.list06:nth-of-type(1) .proUrl{top: -24%;}
+.list06:nth-of-type(4) .proUrl{top: -22%;}
 .product-box ul li{width: 48%;}
 .product-box ul li:nth-of-type(1) {width: 100%;}
 .product-box ul li:nth-of-type(3) {width: 50%;}
-.list06 {margin-bottom: 40% !important;}
-.list06 ul {margin: 0 auto -11%;}
+.list06 {margin-bottom: 50% !important;}
+.list06:last-of-type {margin-bottom: 10% !important;}
+.list06 ul {margin: 0 auto 0;}
 /* 除舊禮  */
 .bank-container .swiper-slide {
     width: 50% !important;
@@ -914,7 +928,7 @@ html {background-size: 180%;background-position: -41vmin 23vmin;}
  /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹*/
  .protitle{width:100%;text-align:center;display:block;overflow:hidden;position:relative;margin:0 auto;padding-top: 0;height: 95px;font-size: 0;line-height: 3.3em;}
 
-.copyR {margin-top: 10%;}
+
 .pa00{background:url(../images/title_1_0A.jpg) 0 0 no-repeat;background-size:100%;width:100%;height:38px;}
 .pa01{background:url(../images/title_1_01_m.png) 0 0 no-repeat;background-size:100%;width:100%;height:64px;}
 .pa02{background:url(../images/title_1_02_m.jpg) 0 0 no-repeat;background-size:100%;}
@@ -1085,7 +1099,7 @@ html {background-size: 180%;background-position: -41vmin 23vmin;}
 .list05 h4{font-size:13px;font-weight:normal;float:none;}
 .list05 storg{height:38px;}
 /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂºÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹ ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â */
- .list06{padding:5px;margin-bottom: 15px;box-sizing:border-box;margin-top: -5px;}
+ .list06{padding:5px;margin-bottom: 15px;box-sizing:border-box;margin-top: 23%;}
 .list06 ul li{width:47%;position:relative;text-align:center;margin:5px 3px;background:#FFF;float:none;display: inline-block;box-sizing:border-box;transition:none;border:#186c39 solid 0}
 .list06 ul li .icon_want2{display:block;z-index:10;background:url(../images/icon_pro5_1.png) 0 0 no-repeat;width:63px;height:75px;position:absolute;top:27px;right:-12px;background-size:76%;}
 .list06 .item_img{width:98%;margin:1% 1% 10px 1%;background:#fff;position:relative;border-radius: 15px;}
@@ -1175,6 +1189,7 @@ h2.protitle:first-child{}
     .animate-group {
         height: 13rem;
     }
+    .list06 {margin-top: 15%;}
 }
 @media screen and (max-width: 320px) {
     .bank-container .swiper-button-prev {
@@ -1185,7 +1200,6 @@ h2.protitle:first-child{}
     }
     .copyR {
         padding-bottom: 13vmin;
-        margin-top: 16%;
     }
     .protitle {
         line-height: 106px;
@@ -1197,6 +1211,15 @@ h2.protitle:first-child{}
     .kv-title {
         margin: 0 4rem 20%;
         padding-top: 6%;
+    }
+    .list06 .proUrl {
+        top: -23%;
+    }
+    .list06:nth-of-type(1) .proUrl {
+        top: -22%;
+    }
+    .list06:nth-of-type(4) .proUrl {
+        top: -18%;
     }
 }
 
