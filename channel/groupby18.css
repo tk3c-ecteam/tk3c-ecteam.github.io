@@ -82,12 +82,13 @@ em,i{font-style:normal;}
 }
 
 .product-box ul li {
-    width: 23%;
+    width: 46%;
     margin: 0 1px;
 }
 
 .product-box ul li:nth-of-type(3) {
-    width: 24%;
+    width: 48.7%;
+    margin: 0 -10px;
 }
 
 .product-box a {
@@ -851,7 +852,7 @@ html {background-size: 180%;background-position: -41vmin 23vmin;}
 .list06:nth-of-type(4) .proUrl{top: -22%;}
 .product-box ul li{width: 48%;}
 .product-box ul li:nth-of-type(1) {width: 100%;}
-.product-box ul li:nth-of-type(3) {width: 50%;}
+.product-box ul li:nth-of-type(3) {width: 50%;margin: 0 -6px 0 2px;}
 .list06 {margin-bottom: 50% !important;}
 .list06:last-of-type {margin-bottom: 10% !important;}
 .list06 ul {margin: 0 auto 0;}
