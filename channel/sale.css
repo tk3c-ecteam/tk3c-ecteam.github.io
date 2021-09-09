@@ -133,12 +133,12 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 
 .cloud:nth-of-type(1) {
     left: 37%;
-    animation: slow-move2 8s linear infinite;
+    animation: slow-move2 15s linear infinite;
 }
 
 .cloud:nth-of-type(2) {
     right: 40%;
-    animation: slow-move2 10s linear infinite;
+    animation: slow-move2 22s linear infinite;
 }
 
 /*商品橫幅*/
