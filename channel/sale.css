@@ -50,7 +50,6 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 }
 .bank-container {
     position: relative;
-    width: 95%;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -71,49 +70,56 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     right: -3px;
 }
 
-
+#pro-area {
+    position: absolute;
+    width: 75%;
+    top: 12%;
+    right: 13%;
+    z-index: 60;
+}
 
 /* intel開學趣 */
 .animate-group {
     width: 100%;
     height: 600px;
     position: relative;
-    margin: 4rem auto 7%;
+    margin: 4rem auto -8%;
 }
 .animate-group h2 {
-    width: 58%;
+    width: 60%;
     text-align: center;
     margin: 0 auto;
     position:absolute;
-    top: 25%;
-    left: 10%;
+    top: 18%;
+    left: 6%;
     animation: rubberBand 0.7s linear;
+    z-index: 1;
 }
 
 .animate-group .products {
     position: absolute;
-    width: 35%;
-    height: 21rem;
+    width: 48%;
+    height: 28rem;
     background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210910/book.png) no-repeat;
     background-size: 100%;
-    right: 0;
-    top: 28%;
+    right: -3%;
+    top: 0;
     animation: upAndDown 1s linear infinite alternate;
 }
 
 .fence {
     position: absolute;
-    top: 4.5%;
-    z-index: 10;
+    top: 3%;
+    z-index: 0;
     width: 28%;
 }
 
 .fence:nth-of-type(1) {
-    left: 0;
+    left: -6%;
 }
 
 .fence:nth-of-type(2) {
-    right: 0;
+    right: -9%;
 }
 
 .cloud {
@@ -122,16 +128,17 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     width: 10%;
     height: auto;
     display: block;
+    z-index: -1;
 }
 
 .cloud:nth-of-type(1) {
-    left: 60%;
-    animation: slow-move2 2.5s linear infinite alternate;
+    left: 37%;
+    animation: slow-move2 8s linear infinite;
 }
 
 .cloud:nth-of-type(2) {
     right: 40%;
-    animation: slow-move2 3s linear infinite alternate-reverse;
+    animation: slow-move2 10s linear infinite;
 }
 
 /*商品橫幅*/
@@ -250,8 +257,7 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 html{background-position:0vmax 6vmax;}
 .rightbtn {left: 49%;}
 .wrapper {margin: 0 auto 3%;}
-.animate-group {width: 85%;}
-.fence {top: 4.2%;}
+.animate-group {width: 90%;margin: 4rem auto -14%;}
 }
 @media screen and (max-width:1440px) {
 html{background-position:0vmax 7vmax;}
@@ -260,17 +266,18 @@ html{background-position:0vmax 7vmax;}
     left: 43%;
     bottom: -45px;
 }
+.animate-group{width: 80%;}
 }
 
 @media screen and (max-width:1281px){
     .wrapper{margin:0 auto 0;}
     .rightbtn {left: 39%;}
-    .animate-group {width: 80%;margin: 2rem auto 0;}
-    #bank-area,#pro-area{width: 85%;}
+    .animate-group {width: 75%;}
+    #bank-area{width: 85%;}
     #bank-area {
         margin: 0 auto 40px;
     }
-    .fence {top: 4%;}
+    #pro-area {top: 8%;}
 }
 @media screen and (max-width:1024px){
 .wrapper{width:100%;margin: 0 auto -36vmin;}
@@ -278,15 +285,15 @@ html{background-position:0vmax 7vmax;}
 .title-group {width: 65%;}
 .bg_color {margin: 25% auto 0;}
 .rightbtn{left: 24%;}
-body .bg-left, .bg-right {display: none;}
-#bank-area,#pro-area{width: 100%;}
-.pro-container {width: 95%;}
 .copyR {margin-top: 0;}
 .list_special .box_price strong {font-size: 23px;}
 .wrapper {margin: 0 auto -25vmin;}
-.animate-group{margin: 2rem auto -13%;}
+.animate-group{margin: 3rem auto -21%;width: 60%;}
 .cloud:nth-of-type(2) {right: 37%;}
 .cloud:nth-of-type(1) {left: 28%;}
+.animate-group .products {height: 19rem;top: 4%;}
+#pro-area {top: 12%;}
+.fence{top: 2.8%;}
 }
 
 @media screen and (max-width:768px){
@@ -302,9 +309,9 @@ body .bg-left, .bg-right{top: 0;}
 .copyR {margin-top: 0;}
 .wrapper{margin: 0 auto -23vmin;}
 .protitle b {font-size: 1.8em;line-height: 3.5em;}
-.animate-group {width: 100%;}
+.animate-group {width: 100%;margin: 3rem auto -15%;}
 .animate-group h2 {left: 4%;}
-.animate-group .products {height: 14rem;right: 6%;}
+.animate-group .products {height: 20rem;right: 0;}
 .fence {
     width: 40%;
     top: 3.3%;
@@ -312,7 +319,7 @@ body .bg-left, .bg-right{top: 0;}
 }
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){
-html{font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size: 240vmin;background-position: -19vmin 23vmin;}
+html{font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size: 240vmin;background-position: -43vmin 23vmin;}
 body {overflow-x: hidden;}
 #kuai3header{width:100%;!important;margin:0px auto;z-index:9999;position:fixed;}
 #kuai3header .words{width:100% !important;}
@@ -329,11 +336,17 @@ div.bg_color > div.wrapper > h2{display: block;width:100%;height: 147px;margin: 
  .title{width:100%;height:auto;position:relative;margin:0px auto;text-align:center;background:none;padding-top:180px}
 .title img{width:100%;display:block;z-index:0;position:static;}
 .title .box_pc{display:block;background:#fff;border:10px solid white;width:100%;height:200px;z-index:10;position:static;top:-27px;right:67px;overflow:hidden;box-sizing:border-box;padding:11px;text-align:center;border-color:#b296ff;}
-/* 夏至多媒體展 */
-.animate-group{margin: 2rem auto 6%;}
+/* intel開學趣 */
+.animate-group{margin: 1rem auto 6%;}
 .animate-group h2{width: 90%;top: 21%;}
-.animate-group .products {width: 70%;height: 15rem;right: 15%;top: 54%;}
-.fence {width: 54%;top: 3.5%;}
+.animate-group .products {width: 75%;height: 17rem;right: 11%;top: 51%;}
+#pro-area {width: 78%;}
+#bank-area {width: 90%;}
+.bank-container .swiper-button-prev {left: -5px;}
+.bank-container .swiper-button-next {right: -6px;}
+.fence {width: 54%;top: 3.4%;}
+.fence:nth-of-type(1){left: -21%;}
+.fence:nth-of-type(2) {right: -21%;}
 .bank-container .swiper-button-prev, .bank-container .swiper-button-next {top: 55%;}
 .cloud {top: 0.6%;}
 /*主標品*/
@@ -451,7 +464,6 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
 .navibar_m_btn > .sample-menu-style li:hover{background:#f8f8f4;}
 .navibar_m_btn > .sample-menu-style a{text-decoration:none;color:#000;}
 .copyR{padding:5px 0 65px;margin-top: 0;}
-.fb-fans {margin: 0 auto 26%;}
 #bank-area .slick-prev:before, .slick-next:before {
     font-size: 20px;
 }
@@ -486,10 +498,6 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
         font-size: 20px;
     }
 
-    #pro-area {
-        width: 100%;
-        margin: 3% auto 0;
-    }
     #bank-area .slick-prev:before, 
     #bank-area .slick-next:before {
         font-size: 20px;
@@ -512,12 +520,12 @@ a.more2{width:76px;height:29px;top:0;right:6px;background:#f0e422;border-radius:
     }
 }
 @media screen and (max-width:376px){
-html {background-position: -27vmin 26vmin;}
 .list_special ul li {margin: 5px 3.5px;}
 .title-group {margin: -4vmin 4vmin;}
 div.bg_color > div.wrapper > h2 {height: 100PX;}
 .protitle b {line-height:4.7em;font-size: 1em;}
 div.bg_color > div.wrapper > h2 {margin: 0 auto -1%;}
+.animate-group{margin: 0 auto 6%;}
 }
 @media screen and (max-width:360px){
     .animate-group .products {height: 14rem;top: 50%;}
@@ -525,7 +533,7 @@ div.bg_color > div.wrapper > h2 {margin: 0 auto -1%;}
 @media screen and (max-width:320px){.tbg01{height:220px;}
 .list_special ul li {margin: 5px 3px;}
 .title{padding-top: 130px;}
-.animate-group {margin: 0 auto -31%;}
+.animate-group {margin: -2rem auto -21%;}
 .animate-group .products {top: 45%;}
 .fence{top: 3%;}
 .wrapper {margin: 0 auto -35vmin;}
@@ -568,8 +576,8 @@ html{background-position:0vmax 4vmax;}
               transform: translateX(0);
     }
     100% {
-      -webkit-transform: translateX(150%);
-              transform: translateX(150%);
+      -webkit-transform: translateX(800%);
+              transform: translateX(800%);
     }
   }
 
