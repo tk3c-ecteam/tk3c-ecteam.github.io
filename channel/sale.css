@@ -99,7 +99,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 .animate-group .products {
     position: absolute;
     width: 48%;
-    height: 28rem;
+    height: 29rem;
     background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/20210910/book.png) no-repeat;
     background-size: 100%;
     right: -3%;
@@ -137,7 +137,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 }
 
 .cloud:nth-of-type(2) {
-    right: 40%;
+    right: 20%;
     animation: slow-move2 22s linear infinite;
 }
 
@@ -576,8 +576,8 @@ html{background-position:0vmax 4vmax;}
               transform: translateX(0);
     }
     100% {
-      -webkit-transform: translateX(800%);
-              transform: translateX(800%);
+      -webkit-transform: translateX(600%);
+              transform: translateX(600%);
     }
   }
 
