@@ -2994,6 +2994,10 @@ div#NewProductAll {
         width: 75%;
         height: 23rem;
     }
+    .giftbox a:hover {
+        transform: scale(1);
+        transform: none;
+    }
 }
 
 
@@ -3189,6 +3193,9 @@ div#NewProductAll {
         height: 16rem;
         top: 61%;
         left: 18%;
+    }
+    .giftbox a {
+        width: 90%;
     }
     body {
         margin: 0px;
