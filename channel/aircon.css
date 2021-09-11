@@ -270,9 +270,9 @@ i {
 
 #pro-area {
     position: absolute;
-    width: 27%;
+    width: 35%;
     top: 8%;
-    right: 4%;
+    right: -3%;
 }
 
 .pro_wrapper1 .proUrl {
@@ -2942,6 +2942,10 @@ div#NewProductAll {
     }
     .animate-group .product {
         left: 32%;
+    }
+    #pro-area {
+        width: 25%;
+        right: 7%;
     }
 }
 
