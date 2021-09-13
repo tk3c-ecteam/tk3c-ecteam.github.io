@@ -271,13 +271,19 @@ i {
 #pro-area {
     position: absolute;
     width: 35%;
-    top: 8%;
+    top: 0;
     right: -3%;
 }
 
 .pro_wrapper1 .proUrl {
-    width: 48%;
+    width: 48.5%;
+    border: none;
+    background: none;
 }
+.pro_wrapper1 .proUrl:hover {
+    border: none;
+}
+
 /*3格動畫*/
 
 .gif {
