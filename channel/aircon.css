@@ -271,7 +271,7 @@ i {
 #pro-area {
     position: absolute;
     width: 35%;
-    top: 0;
+    top: 8%;
     right: -3%;
 }
 
@@ -979,12 +979,12 @@ i {
         margin: 2% 0 0 16%;
         padding-bottom: 36px;
         line-height: 36px;
-        color: #ffffff;
+        color: #000;
         text-decoration: none;
         box-sizing: border-box;
         display: block;
         border-bottom: none;
-        background-color: #b79a6f;
+        background-color: #ffffff;
     }
     .rightbtn>.actbtn a.imgbtn {
         height: 0;
@@ -3068,7 +3068,7 @@ div#NewProductAll {
 @media screen and (min-width:320px) and (max-width:750px) {
     html {
         background-size: 200%;
-        background-position: -36vmin 22vmin;
+        background-position: -70vmin 22vmin;
     }
 
     .navibar_m_btn > .bg1 {
@@ -3181,24 +3181,25 @@ div#NewProductAll {
         top: 55%;
     }
     .animate-group {
-        height: 28rem;
+        height: 17rem;
         margin: 4rem auto 0;
     }
     .animate-group h2 {
         width: 70%;
-        margin: -1.5rem 8rem 0;
+        margin: -1.5rem -2rem 0;
     }
     #pro-area {
-        width: 55%;
-        top: 56%;
+        right: 5%;
     }
     .pro_wrapper1 .proUrl {
         width: 96%;
     }
     .animate-group .product {
-        height: 16rem;
-        top: 61%;
-        left: 18%;
+        width: 11%;
+        height: 11rem;
+        top: 68%;
+        left: 11%;
+        background-size: 55%;
     }
     .giftbox a {
         width: 90%;
@@ -6961,14 +6962,19 @@ screen\9 {
         line-height: 15vmin;
         margin: 0 auto 1%;
     }
-    .rain-title {
-        width: 57%;
-    }
-    html {
-        background-position: -50vmin 29vmin;
-    }
     .animate-group {
         margin: -1.5rem 5rem 0;
+        height: 13rem;
+    }
+    .animate-group h2 {
+        width: 65%;
+        margin: 4rem -6rem 0;
+    }
+    .animate-group .product {
+        height: 5rem;
+        background-size: 55%;
+        top: 68%;
+        left: 14%;
     }
 }
 
