@@ -315,7 +315,7 @@
                 },
                 email: function(){
                     var isMail = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-                    if (isMail.test(this.email)) {
+                    if (!isMail.test(this.email)) {
                         this.emailError = true;
                         this.emailMsg = 'email格式錯誤';
                     } else {
