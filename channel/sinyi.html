@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信義房屋會員獨享</title>
+    <link href="https://events.tk3c.com/events_net/events_net/2108SAMSUNGGalaxy/css/animate.css" rel="stylesheet" type="text/css">
+
+    <!-- 此頁樣式 -->
+    <link href="https://events.tk3c.com/events_net/events_net/Sinyi_home/css/sinyi_vip.css" rel="stylesheet">
+
+    <!-- vuejs -->
+    <script src="https://www.tkec.com.tw/js/vue.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- 滾動效果 -->
+    <script src="https://events.tk3c.com/events_net/events_net/2108SAMSUNGGalaxy/js/wow.js"></script>
+    <script>
+		new WOW().init();
+	</script>
+
+    <!-- GA cookie -->
+    <script>
+        function getCookie(cookieName) {
+            var name = cookieName + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1);
+                if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+            }
+            return "";
+        }
+    
+        if (getCookie("tkecm") != null) var tkecm_cookie = getCookie("tkecm").split("&");
+    
+        for (var item in tkecm_cookie)
+            if (tkecm_cookie[item].split("=").length > 1) {
+                var arg = tkecm_cookie[item].split("=")
+                if (arg[0] == "ID" && arg[1] != undefined) {
+                    var user_id = tkecm_cookie[item].split("=")[1]
+                }
+            }
+    </script>
+
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-22041504-48', 'auto');
+        if (user_id != undefined) {
+            ga('set', 'userId', user_id);
+            ga('set', 'dimension2', user_id);
+        }
+        ga('send', 'pageview');
+    </script>
+    
+    <!-- Start of global snippet: Please do not remove Place this snippet between the <head> and </head> tags on every page of your site.-->
+    <!-- Global site tag (gtag.js) - Google Marketing Platform -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=DC-10406106"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'DC-10406106');
+    </script>
+    <!-- End of global snippet: Please do not remove -->
+    <!--Event snippet for All.Landing on : Please do not remove.Place this snippet on pages with events you’re tracking. Creation date: 10/29/2020-->
+    <script>
+    gtag('event', 'conversion', {
+        'allow_custom_scripts': true,
+        'send_to': 'DC-10406106/invmedia/allla0+standard'
+    });
+    </script>
+    <noscript>
+    <img src="https://ad.doubleclick.net/ddm/activity/src=10406106;type=invmedia;cat=allla0;dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=;npa=;gdpr=${GDPR};gdpr_consent=${GDPR_CONSENT_755};ord=1?" width="1" height="1" alt=""/>
+    </noscript>
+    <!-- End of event snippet: Please do not remove -->
+
+    <!-- Global site tag (gtag.js) - Google Ads: 494785326 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-494785326"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-494785326');
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '383360303018527');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=383360303018527&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '333989513612649'); // Insert your pixel ID here.
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display: none"
+            src="https://www.facebook.com/tr?id=333989513612649&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- DO NOT MODIFY -->
+    <!-- End Facebook Pixel Code -->
+    <!-- Facebook Pixel Code -->
+
+    <!-- End Facebook Pixel Code -->
+
+    <!-- GA Events -->
+    <script type="text/javascript">
+        function sendGaEvent(eventCategory, eventAction, eventLabel) {
+            ga('send', 'event', eventCategory, eventAction, eventLabel)
+        }
+    
+        function ProcessGaEvent(eventCategory, eventAction, eventLabel) {
+            var CookieEc = getCookie('ec');
+            if (CookieEc != "") {
+                eventCategory = CookieEc + '-' + eventCategory;
+            }
+            sendGaEvent(eventCategory, eventAction, eventLabel)
+        }
+    </script>
+    <!-- End GA Events -->
+    
+    
+    <script>
+        var _piq = _piq || [];
+        _piq.push(
+            ['setCustomVar', 'venue', 'ef-5d89d7d323920'],
+            ['setCustomVar', 'visitor_id', ''],
+            ['setCustomVar', 'label', ''],
+            ['trackPageView'],
+            ['trackPageClick']
+        );
+        (function (d, t, u, f, j) {
+            f = d.getElementsByTagName(t)[0];
+            j = d.createElement(t);
+            j.async = 1;
+            j.src = u;
+            f.parentNode.insertBefore(j, f);
+        })(document, 'script', 'https://s.pixanalytics.com/js/pi.min.js');
+    </script>  
+    
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TFQTW5B');</script>
+    <!-- End Google Tag Manager -->
+</head>
+<body>
+     <!--置頂TKEC-->
+     <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: "../../top/top.aspx?url=" + location.href,
+                type: "POST",
+                dataType: 'text',
+                success: function (msg) {
+                    $("#TkecTop").html(msg);
+                }
+            });
+        });
+    </script>
+    <div id="TkecTop" style="height:45px;"></div>
+
+    <div id="sinyi-container">
+        <div class="sinyi-content">
+            <p class="logo"><img :src="'images/vip/logo.png' | assetUrl"></p>
+            <p class="title"><img :src="'images/vip/title.png' | assetUrl"></p>
+            <!-- Q1 什麼是surpass VIP會員 -->
+            <section class="wow fadeInUp"><p><img :src="'images/vip/question1.png' | assetUrl"></p></section>
+            <!-- Q2 surpass VIP -->
+            <section class="wow fadeInUp"><p><img :src="'images/vip/question2.png' | assetUrl"></p></section>
+            <!-- Q3 surpass VIP  -->
+            <section class="wow fadeInUp"><p><img :src="'images/vip/question3.png' | assetUrl"></p></section>
+            <!-- Q4 surpass VIP  -->
+            <section class="wow fadeInUp"><p><img :src="'images/vip/question4.png' | assetUrl"></p></section>
+
+         </div>
+        <!-- vip貴賓申請 -->
+        <section class="form-area wow fadeInUp">
+            <div class="form-content">
+                <h2>歡迎閤下成為燦坤VIP會員</h2>
+                <h5>誠摯地邀請您盡享燦坤VIP專屬權益及燦坤尊榮服務。</h5>
+                <h5>請留意您申辦時所填寫的資料為審核時核對資料的依據，</h5>
+                <h5>請務必填寫正確且有效資料</h5>
+
+                <form>
+                    <ul>
+                        <li>
+                            <label type="name">姓名</label>
+                            <input type="text" id="namev" v-model="name" placeholder="不能超過10個字">
+                            <div class="message">{{ nameMsg }}</div>
+                        </li>
+                        <li>
+                            <label type="sex">性別</label>
+                            男<input type="radio" name="sexv" v-model="sex" value="0">
+                            女<input type="radio" name="sexv" v-model="sex" value="1">
+                            <div class="message">{{ sexMsg }}</div>
+                        </li>
+                        <li>
+                            <label type="phone">手機</label>
+                            <input type="text" name="phonev" id="phone11" v-model="phone" placeholder="09XXXXXXXX">
+                            <div class="message">{{ phoneMsg }}</div>
+                        </li>
+                        <li>
+                            <label type="birth">生日</label>
+                            <input type="text" name="birthv" id="birth" v-model="birth" placeholder="格式: 19700101">
+                            <div class="message">{{ birthMsg }}</div>
+                        </li>
+                        <li>
+                            <label type="email">E-mail</label>
+                            <input type="text" name="emailv" id="email" v-model="email" placeholder="必須有@符號">
+                            <div class="message">{{ emailMsg }}</div>
+                        </li>
+                        <li>
+                            <label type="address">地址</label>
+                            <input type="text" name="addressv" id="address" v-model="address">
+                            <div class="message">{{ addressMsg }}</div>
+                        </li>
+                    </ul>
+
+                    <div class="checkit"><input type="checkbox" name="checkit" v-model="checkit">
+                        <p class="checkText">本人已詳讀並同意
+                            <a href="https://www.tsannkuen.com/Home/Index?aspxerrorpath=%2Fnews_in.aspx#membercentre&0" target="_blank">「燦坤3C實體門市會員條款」</a>
+                            及<a href="http://www.tk3c.com.tw/secret.html" target="_blank">「個資保護暨隱私權聲明」</a></p></div>
+                    <a id="sure" @click="sendData"><img :src="'images/vip/btn.png' | assetUrl"></a>
+                </form>
+            </div>
+        </section>
+
+        <!-- 注意事項 -->
+        <section class="notice wow fadeInUp">
+            <p class="notice-text"><img :src="'images/vip/notice.png' | assetUrl"></p>
+        </section>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#sinyi-container',
+            data: {
+                name: '',
+                nameMsg: '',
+                sex: '', //男的值=0 ;女的值=1
+                sexMsg: '',
+                phone: '',
+                phoneMsg: '',
+                birth: '',
+                birthMsg: '',
+                email: '',
+                emailMsg: '',
+                address: '',
+                addressMsg: '',
+                checkit: ''
+            },
+            watch: {
+                name: function () {
+                    var isText = /^[a-zA-Z0-9]+$/;
+                    if (isText.test(this.name)) {
+                        this.nameMsg = '請勿包含特殊字元';
+                    }
+                    else if (this.name.length > 10) {
+                        this.nameMsg = '請勿超過10個字';
+                    } else {
+                        this.nameMsg = '';
+                    }
+                },
+                email: function(){
+                    var isMail = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
+                    if (!isMail.test(this.email)) {
+                        this.emailError = true;
+                        this.emailMsg = 'email格式錯誤';
+                    } else {
+                        this.emailMsg = '';
+                    }
+                },
+                phone: function(){
+                    if (this.phone.length !== 10) {
+                        this.phoneMsg = '手機號碼必須是10個數字';
+                    } else {
+                        this.phoneMsg = '';
+                    }
+                },
+            },
+            methods: {
+                sendData: function() {
+                    if (this.name == '') {
+                        this.nameMsg = '姓名不能空白!';
+                        return false;
+                    } else if (this.email == '') {
+                        this.emailMsg = 'email不能空白!';
+                        return false;
+                    } else if (this.phone == '') {
+                        this.phoneMsg = '手機號碼不能空白!';
+                        return false;
+                    } else if (this.sex == '') {
+                        this.sexMsg = '請勾選性別';
+                        return false;
+                    } else if (this.birth == '') {
+                        this.birthMsg = '生日不能空白!';
+                        return false;
+                    } else if (this.address == '') {
+                        this.addressMsg = '地址不能空白!';
+                        return false;
+                    } else if (this.checkit == '') {
+                        alert('請勾選同意!');
+                        return false;
+                    } else {
+                        alert('送出成功!');
+                    }
+                }
+            },
+            filters: {
+                assetUrl: function(value) {
+                    return 'https://events.tk3c.com/events_net/events_net/Sinyi_home/' + value;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
