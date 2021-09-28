@@ -4,7 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>信義房屋會員獨享</title>
+    <meta name="description" content="Surpass VIP會員權益說明及申請辦法，燦坤最高等級的實體門市會員，享Surpass VIP會員專屬 7大權益">
+    <link href="https://events.tk3c.com/events_net/events_net/Sinyi_home/images/vip/fbshare.jpg" rel="image_src" />
+
+    <!--FB meta-->
+    <meta property="fb:admins" content="" />
+    <meta property="fb:app_id" content="606825782724291" />
+    <meta property="og:site_name" content="燦坤線上購物" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="燦坤線上｜Surpass VIP會員權益說明及申請辦法" />
+    <meta property="og:description" content="Surpass VIP會員權益說明及申請辦法，燦坤最高等級的實體門市會員，享Surpass VIP會員專屬 7大權益" />
+    <meta property="og:image" content="https://events.tk3c.com/events_net/events_net/Sinyi_home/images/vip/fbshare.jpg" />
+    <meta property="og:url" content="https://events.tk3c.com/events_net/Sinyi_home/index.aspx" />
+
+    <title>燦坤線上｜Surpass VIP會員權益說明及申請辦法</title>
+
+    <!-- ANIMATE CSS 樣式 -->
     <link href="https://events.tk3c.com/events_net/events_net/2108SAMSUNGGalaxy/css/animate.css" rel="stylesheet" type="text/css">
 
     <!-- 此頁樣式 -->
@@ -222,33 +237,33 @@
                     <ul>
                         <li>
                             <label type="name">姓名</label>
-                            <input type="text" id="namev" v-model="name" placeholder="不能超過10個字">
+                            <input type="text" name="namev" v-model="name" placeholder="不能超過10個字">
                             <div class="message">{{ nameMsg }}</div>
                         </li>
                         <li>
                             <label type="sex">性別</label>
-                            男<input type="radio" name="sexv" v-model="sex" value="0">
-                            女<input type="radio" name="sexv" v-model="sex" value="1">
+                            男<input type="radio" v-model="sex" name="sexv" value="0">
+                            女<input type="radio" v-model="sex" name="sexv" value="1">
                             <div class="message">{{ sexMsg }}</div>
                         </li>
                         <li>
                             <label type="phone">手機</label>
-                            <input type="text" name="phonev" id="phone11" v-model="phone" placeholder="09XXXXXXXX">
+                            <input type="text" name="phonev" v-model="phone" placeholder="09XXXXXXXX">
                             <div class="message">{{ phoneMsg }}</div>
                         </li>
                         <li>
                             <label type="birth">生日</label>
-                            <input type="text" name="birthv" id="birth" v-model="birth" placeholder="格式: 19700101">
+                            <input type="text" name="birthv" v-model="birth" placeholder="格式: 19700101">
                             <div class="message">{{ birthMsg }}</div>
                         </li>
                         <li>
                             <label type="email">E-mail</label>
-                            <input type="text" name="emailv" id="email" v-model="email" placeholder="必須有@符號">
+                            <input type="text" name="emailv" v-model="email" placeholder="必須有@符號">
                             <div class="message">{{ emailMsg }}</div>
                         </li>
                         <li>
                             <label type="address">地址</label>
-                            <input type="text" name="addressv" id="address" v-model="address">
+                            <input type="text" name="addressv" v-model="address">
                             <div class="message">{{ addressMsg }}</div>
                         </li>
                     </ul>
@@ -300,7 +315,7 @@
                 },
                 email: function(){
                     var isMail = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
-                    if (!isMail.test(this.email)) {
+                    if (isMail.test(this.email)) {
                         this.emailError = true;
                         this.emailMsg = 'email格式錯誤';
                     } else {
