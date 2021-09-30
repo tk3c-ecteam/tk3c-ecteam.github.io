@@ -27,7 +27,7 @@ body:after{display:block;background-image:url(../images/banner/h1-2.png),url(../
 .wrapper{display:block;width:1144px;margin:0 auto}
 div:nth-of-type(3) {width: 100%;}
 form>div:nth-child(6){width:100%}
-#gotop{display:none;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:46.3%;z-index:9;bottom:100px;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/20210527_stagetop.png) no-repeat;width: 100%;height: 40px;}
+#gotop{display:none;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:51.4%;z-index:9;bottom:100px;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/202110/gotop.png) no-repeat;width: 100%;height: 40px;}
 #gotop img {display: none;}
 
 .list_F ul li {border: none;height: auto;}
@@ -119,9 +119,10 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner .slogan{text-align:left;padding:29vmax 0 0;}
 .banner .slogan h1{position:relative;display:inline-block;transform:translateX(-60px)}
 .banner p{position:absolute;right:-300px;bottom:0}
-.bonus-area {margin: 0 auto 0;width: 100%;display: flex;flex-wrap: wrap;align-items: baseline;justify-content: center;text-align: center;}
-.bonus-area a {width: 20%;height: auto;display: block;}
-.bonus-area a:nth-of-type(1) {width: 25%;}
+.bonus-area {margin: 0 auto 0;width: 90%;display: flex;flex-wrap: wrap;align-items: baseline;justify-content: center;text-align: center;}
+.bonus-area a {width: 22%;height: auto;display: block;}
+.bonus-area a:nth-of-type(3) {width: 25%;cursor: none;}
+.bonus-area a:nth-of-type(1) {width: 30%;}
 .bonus-area a:hover {transform: scale(0.9);transition: all 0.4s linear;}
 
 .ad {width: 60%;height: auto;margin: 0 auto;display: block;}
@@ -236,7 +237,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .list_F ul li:hover {box-shadow: 0px 0px 3px 3px #ffbd44 !important;}
 
 @media screen and (min-width:2000px) {
-    #gotop{left: 59%;}
+    #gotop{left: 63.2%;}
     #bank-area {
         background-size: 55%;
     }
@@ -248,7 +249,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     }
 }
 @media screen and (max-width:1600px) {
-    #gotop{left: 42.5%;}
+    #gotop{left: 48.8%;}
     #bank-area {
         background-size: 80%;
     }
@@ -264,7 +265,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
         left: 43%;
     }
     #gotop {
-        left: 37.8%;
+        left: 45%;
     }
 
     .wrapper h3 {width: 85%;margin: 0 auto;}
@@ -282,7 +283,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .vdList ul li .box .left:before{width:150px;height:110px;right:-60px;bottom:-10px}
 .protitle {width: 100%;}
 .rightbtn {left: 38%;}
-#gotop {left: 32%;}
+#gotop {left: 40%;}
 .wrapper h3 {width: 75%;}
 .vdList ul {width: 60%;}
 }
@@ -292,7 +293,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     .vdList ul li a:hover,.ad:hover {transform: translateY(0);transition: none;}
     .bonus-area a:hover {transform: scale(1);transition: none;}
     .rightbtn {left: 26%;}
-    #gotop {left: 19%;}
+    #gotop {left: 28%;}
     .banner .slogan {padding:31vmin 0 0;}
 }
 @media screen and (max-width:980px){
@@ -301,7 +302,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .vdList h3{font-size:40px}
 .protitle{margin-bottom: -3%;}
 .rightbtn {left: 19%;}
-    #gotop {left: 11%;}
+    #gotop {left: 22%;}
 }
 @media screen and (max-width: 768px) {
     .banner-bg {
@@ -316,11 +317,12 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     .protitle {height: 100px;margin-bottom: 0;font-size: 3em;line-height: 52px;}
     .acbankbox .list2 ul li{width: 170px !important;}
     .rightbtn {left: 2%;}
-    #gotop {left: -8%;}
+    #gotop {left: 5%;}
     .banner .slogan {padding:42vmin 0 0;}
     .bonus-area {width: 85%;}
     .bonus-area a {width: 28%;}
     .bonus-area a:nth-of-type(1){width: 36%;}
+    .bonus-area a:nth-of-type(3) {width: 31%;}
     .nav_btn ul li {width: 20%;}
     .wrapper h3 {width: 90%;}
     .banner {background-size: 125%;}
@@ -356,8 +358,10 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner p{width:130px;right:-30px;bottom:40px}
 .vdList ul li {width: 50%;background: none;}
 #bank-area {margin: 0 auto -15%;}
-.vdList ul {width: 90%;}
-.bonus-area a {width: 32%;}
+.vdList ul {width: 100%;}
+.bonus-area a {width: 100%;}
+.bonus-area a:nth-of-type(1) {width: 100%;}
+.bonus-area a:nth-of-type(3) {width: 100%;}
 .ad {width: 80%;}
 .wrapper h3{width: 100%;}
 }
@@ -645,6 +649,6 @@ body{margin:0;padding:0;width:100%;height:100%;}
         width: 40%;
     }
     #gotop {
-        left: 59.2%;
+        left: 63%;
     }
 }
