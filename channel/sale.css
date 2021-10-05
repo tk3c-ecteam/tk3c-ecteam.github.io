@@ -45,7 +45,7 @@ em,i{font-style:normal;}
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microsoft JhengHei,"Apple LiGothic Medium";position: relative;z-index: -1;overflow: hidden;}
 .tab-container> ul.nav-tabtop > li {z-index: 10;}
-.wrapper{display:block;width:1144px;margin:0 auto 0;position:relative;z-index: 10;}
+.wrapper{display:block;width:1144px;margin:0 auto 0;position:relative;z-index: 1;}
 /*主視覺*/
 .title{height:52rem;margin:0px auto 0 auto !important;position:relative;display: none;}
 .title .arrow{display:block;background:url(../images/title_2.png) 0 0 no-repeat;width:1142px;height:553px;}
@@ -134,7 +134,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 }
 
 .navbar.fixed li {
-    width: 5%;
+    width: 6%;
     margin: 1% 2% 1%;
 }
 
@@ -153,7 +153,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 
 .big-flower {
     position: absolute;
-    top: 3.5%;
+    top: 3%;
     width: 18%;
     height: auto;
     display: block;
@@ -175,7 +175,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
 }
 .bigR {
     right: -6%;
-    animation: rotate-contined 5s linear infinite;
+    animation: rotate-contined 8s linear infinite;
 }
 
 .leaf {
@@ -184,7 +184,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     height: auto;
     display: block;
     top: -20%;
-    animation: flyaway 13s linear infinite;
+    animation: flyaway 20s linear infinite;
 }
 /*商品橫幅*/
 /*品分類*/
