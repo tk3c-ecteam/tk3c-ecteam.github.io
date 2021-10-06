@@ -1603,14 +1603,14 @@ li .box_price strong em {
 }
 
 .list02 .box_price strong {
-    font-size: 0; /* 28px */
+    font-size: 28px; 
     display: block;
     height: 60px;
     letter-spacing: -2px;
     font-family: Arial, Helvetica, sans-serif;
     text-align: right;
     line-height: 76px;
-    padding-right: 23%;
+    padding-right: 15%;
     overflow: hidden;
 }
 
@@ -1622,13 +1622,12 @@ li .box_price strong em {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     line-height: 76px;
-    /* padding-right:56px;*/
     padding-left: 28%;
     overflow: hidden;
 }
 
 .list02 .box_price strong i {
-    font-size: 0; /* 13px */
+    font-size: 13px; 
     letter-spacing: 0;
     font-style: normal;
 }
@@ -1636,7 +1635,7 @@ li .box_price strong em {
 .list02 .box_price strong:before {
     content: "搶購";
     display: block;
-    width: 120px;
+    width: 53px;
     height: 43px;
     float: right;
     border-radius: 13px;
@@ -1647,9 +1646,7 @@ li .box_price strong em {
     letter-spacing: 1px;
     position: absolute;
     bottom: 7px;
-    right: 0; /* 5px */
-    left: 0;
-    margin: 0 auto;
+    right: 5px; 
     background: linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
     background: -moz-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
     background: -webkit-linear-gradient(90deg, #fb2300 35%, #fd907e 60%);
@@ -1658,7 +1655,7 @@ li .box_price strong em {
 
 .list02 li .box_price strong em {
     display: block;
-    font-size: 0; /* 10px */
+    font-size: 10px; 
     position: absolute;
     bottom: 6px;
     right: 64px;
@@ -4460,7 +4457,6 @@ strong i:after {
     .animate-group {
         width: 90%;
         height: 30rem;
-        margin: 8rem auto 2%;
     }
     .animate-group .runner {
         width: 80%;
@@ -4531,9 +4527,11 @@ strong i:after {
     }
     #proA-area {
         width: 24%;
+        margin: 0 9%;
     }
     #proB-area {
         width: 24%;
+        right: 8%;
     }
 }
 
@@ -5540,17 +5538,16 @@ strong i:after {
     .list02 li .box_price strong {
         position: static;
         margin-top: 0;
-        height: 4.5vh; /* 11vh */
+        height: 11vh;
         padding-right: 0;
         text-align: center;
         float: left;
         width: 100%;
         font-size: 28px;
-        line-height: 0; /* 25px */
+        line-height: 55px;
         overflow: hidden;
         padding-left: 0;
-        color: transparent;
-        /* margin:0 0 4px 0;*/
+         margin:0 0 4px 0;
     }
     /*擊殺驚喜價-設定搶購鈕*/
     .list02 li .box_price3 strong {
