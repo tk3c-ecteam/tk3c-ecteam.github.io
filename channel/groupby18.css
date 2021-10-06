@@ -134,7 +134,12 @@ em,i{font-style:normal;}
     bottom: 0;
 }
 
-#banner-area,
+#banner-area {
+    width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
 #bank-area {
     width: 100%;
     margin: 0 auto;
@@ -553,9 +558,6 @@ body {
     .splight {
         width: 45%;
     }
-    .animate-group {
-        width: 85%;
-    }
 }
 @media screen and (max-width: 1600px) {
     .rightbtn {
@@ -571,12 +573,6 @@ body {
     .splight {
         width: 44%;
         margin: -30% auto 15%;
-    }
-    .alertbox .go-more {
-        width: 20%;
-    }
-    #banner-area, #bank-area {
-        width: 80%;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -704,7 +700,6 @@ body {
 }
 
 @media screen and (max-width: 1700px) {
-    #bank-area {width: 80%;}
     .rightbtn {
         left: 53%;
     }
@@ -725,7 +720,6 @@ body {
     .animate-group {
         width: 85%;
     }
-    #bank-area {width: 75%;}
     .wrapper {
         margin: 0 auto 0;
     }
@@ -753,10 +747,13 @@ body {
         width: 35%;
     }
     .animate-group h2 {
-        top: 25%;
+        top: 15%;
     }
     .animate-group .super {
-        top: 38%;
+        top: 24%;
+    }
+    html {
+        background-position: top 98px center;
     }
 }
 
@@ -838,9 +835,6 @@ body {
     .animate-group {
         height: 26rem;
     }
-    #bank-area {
-        width: 80%;
-    }
     .title {
         margin: 68% !important;
     }
@@ -874,10 +868,7 @@ body {
         margin: 0 auto -28%;
     }
     #banner-area {
-        width: 80%;
-    }
-    #bank-area {
-        width: 90%;
+        width: 85%;
     }
 }
 
@@ -952,7 +943,7 @@ html {background-size: 230%;background-position:-72vmin 23vmin ;}
 }
 
 #bank-area {
-    width: 85%;
+    width: 95%;
 }
 
 #bank-area .slick-prev {
