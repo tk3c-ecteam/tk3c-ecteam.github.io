@@ -672,19 +672,20 @@ body {
     .kv-title {
         padding-top: 27%;
     }
+    .grass img {
+        width: 100%;
+    }
+    .animate-group h2 {
+        margin: 7rem 11rem -7%;
+    }
 }
 @media screen and (min-width: 2500px) {
+   .animate-group h2 {
+       margin: 17rem 11rem -6%;
+   }
    .animate-group {
-       background-size: 140%;
-       height: 45rem;
-       background-position: -11vmax 3vmax,top;
+       margin: 0 auto 20%;
    }
-   .animate-group .sub-title {
-       bottom: 21%;
-   }
-   .kv-title {
-    padding-top: 36%;
-}
 }
 
 @media screen and (max-width: 1700px) {
