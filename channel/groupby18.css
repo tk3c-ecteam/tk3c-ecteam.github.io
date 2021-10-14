@@ -71,7 +71,7 @@ em,i{font-style:normal;}
     mix-blend-mode: screen;
     animation: light-to-right 5s linear infinite;
     top: 2%;
-    left: 3%;
+    left: 0;
 }*/
 
 .animate-group .product {
@@ -79,6 +79,10 @@ em,i{font-style:normal;}
     margin: 0 12rem 0;
     animation: slide-up 0.85s linear;
     opacity: 0;
+}
+
+.animate-group .product img {
+    animation: upAndDown 1.2s linear infinite alternate;
 }
 
 
