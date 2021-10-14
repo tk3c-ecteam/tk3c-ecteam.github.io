@@ -1053,53 +1053,61 @@
         },
         methods: {
             closeAlert() {
-            //關閉視窗
-            this.isShow = false;
-            this.isAlert = false;
-            this.isWarn = false;
-            this.closeGame();
-            $("#alert-group").css('overflow-y','hidden');
-            $('body').css('overflow-y','auto');
-            window.scrollTo(0,0);
+                //關閉視窗
+                this.isShow = false;
+                this.isAlert = false;
+                this.isWarn = false;
+                this.closeGame();
+                $("#alert-group").css('overflow-y','hidden');
+                $('body').css('overflow-y','auto');
+                window.scrollTo(0,0);
             },
             closeGame() {
-            //關閉遊戲畫面
-            this.active = false;
+                //關閉遊戲畫面
+                this.active = false;
             },
             //彈跳視窗票券顯示圖
-            getRewardImg(reward) {
-            switch (reward) {
-                case 1:
-                this.rewardImg = this.$options.filters.siteUrl('images/alert200.png');
-                break;     
-                case 2:
-                this.rewardImg = this.$options.filters.siteUrl('images/alert500.png');
-                break;
-            }
+                getRewardImg(reward) {
+                switch (reward) {
+                    case 1:
+                    this.rewardImg = this.$options.filters.siteUrl('images/alert200.png');
+                    break;     
+                    case 2:
+                    this.rewardImg = this.$options.filters.siteUrl('images/alert500.png');
+                    break;
+                }
             },
             seeRule() {
-            //使用規則視窗
+                //使用規則視窗
 
-            let pos = event.target.offsetParent.offsetTop;
-            setTimeout(function(){
-                $("#alert-group").animate({'scrollTop': pos * 1.5},'swing');
-            },40);
-            $("#alert-group").css('overflow-y','scroll');
-            $('body').css('overflow-y','hidden');
+                let pos = event.target.offsetParent.offsetTop;
+                setTimeout(function(){
+                    $("#alert-group").animate({'scrollTop': pos * 1.5},'swing');
+                },40);
+                $("#alert-group").css('overflow-y','scroll');
+                $('body').css('overflow-y','hidden');
             },
             //點擊搶券動作
             getTicket(value) {
-            //紀錄點擊應援券次數
-            this.cheerCount++;
+                //紀錄點擊應援券次數
+                this.cheerCount++;
 
-            let copyText = '';
-            copyText = $('.discountCode').eq(value - 1);
-            copyText.select();
-            document.execCommand('copy');
+                let copyText = '';
+                copyText = $('.discountCode').eq(value - 1);
+                copyText.select();
+                document.execCommand('copy');
 
-            this.getRewardImg(value);
-            this.isAlert = true;
-            this.isRule = true;
+                this.getRewardImg(value);
+                this.isAlert = true;
+                this.isRule = true;
+
+                
+                //取消手機版點擊複製折扣碼鍵盤會談出的問題
+                setTimeout(() => {
+                    $('.special-box input').on('focus',function(){
+                        this.blur();
+                    });
+                }, 120);
             }
         }
         });
