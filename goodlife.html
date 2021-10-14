@@ -237,8 +237,8 @@
 
         <!-- 滿額贈區 -->
         <section class="gift-box">
-            <a><img :src="'images/gift1.png' | siteUrl"></a>
-            <a><img :src="'images/gift2.png' | siteUrl"></a>
+            <a href="http://www.tk3c.com/events/eventgift.aspx" target="_blank"><img :src="'images/gift1.png' | siteUrl"></a>
+            <a href="http://www.tk3c.com/events/eventgift.aspx" target="_blank"><img :src="'images/gift2.png' | siteUrl"></a>
         </section>
 
         <!-- 超群振心碼 -->
@@ -254,7 +254,8 @@
                   <img v-else-if="i === 1" :src="'images/button500.png' | siteUrl">
              </a>
               <!-- 查看可折商品 -->
-              <a><img :src="'images/button2.png' | siteUrl"></a>
+              <a v-if="i === 0" href="https://www.tk3c.com/dic1.aspx?cid=14719&aid=22770&ec=goodlife" target="_blank"><img :src="'images/button2.png' | siteUrl"></a>
+              <a v-if="i === 1" href="https://events.tk3c.com/events_net/202110funfang2/index.html?ec=goodlife" target="_blank"><img :src="'images/button2.png' | siteUrl"></a>
           </div>
         </section>
 
