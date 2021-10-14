@@ -1100,14 +1100,6 @@
                 this.getRewardImg(value);
                 this.isAlert = true;
                 this.isRule = true;
-
-                
-                //取消手機版點擊複製折扣碼鍵盤會談出的問題
-                setTimeout(() => {
-                    $('.special-box input').on('focus',function(){
-                        this.blur();
-                    });
-                }, 120);
             }
         }
         });
