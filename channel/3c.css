@@ -424,13 +424,14 @@ section a:hover {
 }
 
 .red-light:nth-of-type(1) {
-    left: 14%;
-    transform: rotate(290deg);
-    animation: rotate-slowly-left 2s linear infinite alternate;
+    left: 11%;
+    transform: rotate(100deg);
+    animation: rotate-slowly-left 1.5s linear infinite alternate;
 }
 .red-light:nth-of-type(2) {
     right: 12%;
-    animation: rotate-slowly-right 1.5s linear infinite alternate;
+    transform: rotate(180deg);
+    animation: rotate-slowly-right 1s linear infinite alternate;
 }
 
 #bank-area {
@@ -501,7 +502,7 @@ section a:hover {
     width: 250px;
     height: 270px;
     position: absolute;
-    top: -177px;
+    top: -168px;
     left: -18%;
     z-index: -1;
     background-size: 65%;
@@ -540,15 +541,15 @@ section a:hover {
 }
 
 .rightbtn>.actbtn a.btn01 {
-    width: 150px;
+    width: 160px;
     line-height: 40px;
     color: #ffffff;
     text-decoration: none;
     box-sizing: border-box;
     display: block;
     margin-bottom: 2px;
-    margin: 0 0 0 6%;
-    background-color: #06135d;
+    margin: 1% 0 0 6%;
+    background-color: #0092ff42;
     font-size: 15px;
 }
 
@@ -559,24 +560,24 @@ section a:hover {
     -moz-transition: all 0.5;
     color: #ffffff;
     font-weight: bold;
-    width: 150px;
+    width: 160px;
     margin: 0 0 0 6%;
     transform: translateY(0.01em);
-    background: red;
+    background: #d30217;
 }
 
 .rightbtn>a.btn02 {
-    width: 150px;
-    height: 60px;
-    line-height: 60px;
+    width: 160px;
+    height: 75px;
+    line-height: 75px;
     display: block;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    background-color: #06135d !important;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    background-color: #0092ff42 !important;
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/arr.png) top 10px center no-repeat;
     background-size: 25%;
     margin-left: 0.6%;
-    margin-top: 0;
+    margin-top: 2px;
     color: #FFFFFF;
 }
 
@@ -4556,6 +4557,10 @@ strong i:after {
     .special-group ul {
         padding-top: 21%;
     }
+    .red-light:nth-of-type(2) {
+        right: 15%;
+        top: -45px;
+    }
 }
 
 @media screen and (max-width: 1281px) {
@@ -4602,6 +4607,14 @@ strong i:after {
     section a:hover {
         transform: translateY(0);
         transition: none;
+    }
+    .red-light:nth-of-type(2) {
+        right: 16%;
+        top: -120px;
+    }
+    .red-light:nth-of-type(1) {
+        top: -35px;
+        left: 4%;
     }
 }
 @media screen and (max-width: 900px) {
@@ -4701,8 +4714,16 @@ strong i:after {
     .nitro-box .pc {
         display: none;
     }
+    .red-light:nth-of-type(1) {
+        top: -57px;
+        left: -10%;
+    }
+    .red-light:nth-of-type(2) {
+        right: 0;
+        top: -23px;
+    }
     .red-light {
-        display: none;
+        width: 50%;
     }
 }
 
@@ -6754,6 +6775,14 @@ strong i:after {
         width: 85%;
         margin-top: 5%;
     }
+    .red-light:nth-of-type(1) {
+        top: -57px;
+        left: -33%;
+    }
+    .red-light:nth-of-type(2) {
+        right: -12%;
+        top: -145px;
+    }
 }
 
 @media screen and (max-width: 1440px) and (min-width: 751px) {
@@ -6784,6 +6813,15 @@ strong i:after {
     }
     .list02 li .box_price strong {
         height: 15vh;
+    }
+    .red-light:nth-of-type(1) {
+        left: -46%;
+    }
+    .red-light:nth-of-type(2) {
+        right: -2%;
+    }
+    .animate-group {
+        height: 10rem;
     }
 }
 
@@ -6836,18 +6874,27 @@ strong i:after {
 
 @keyframes rotate-slowly-left {
     0% {
-        transform: rotate(290deg);
+        transform: rotate(100deg);
     }
     100% {
-        transform: rotate(280deg);
+        transform: rotate(120deg);
     }
 }
 
 @keyframes rotate-slowly-right {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(180deg);
     }
     100% {
-        transform: rotate(-20deg);
+        transform: rotate(160deg);
+    }
+}
+
+@keyframes bg-show {
+    from {
+        background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg.png);
+    }
+    to {
+        background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg1.png);
     }
 }
