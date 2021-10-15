@@ -11,7 +11,7 @@ html{margin:0;padding:0;background-image: url(https://events.tk3c.com/events_net
     overflow-x: hidden;
     background-repeat: no-repeat,repeat-y;
     background-position: top 25px center;
-    background-color: #e4dfca;
+    /*background-color: #e4dfca;*/
     background-size: 100%;
 }
 form {
@@ -51,11 +51,11 @@ em,i{font-style:normal;}
 }
 
 .animate-group h2 {
-    width: 90%;
+    width: 75%;
     height: auto;
     margin: 0 auto;
     text-align: center;
-    margin: 5rem 11rem -12%;
+    margin: 5rem 17rem -8%;
     animation: big-after-small 0.6s linear;
     overflow: hidden;
 }
@@ -75,8 +75,8 @@ em,i{font-style:normal;}
 }*/
 
 .animate-group .product {
-    width: 70%;
-    margin: 0 12rem 0;
+    width: 80%;
+    margin: 0 8rem 0;
     animation: slide-up 0.85s linear;
     opacity: 0;
 }
@@ -557,7 +557,8 @@ body {
         margin: 0 auto 0;
     }
     .animate-group h2 {
-        margin: 5rem 7rem -12%;
+        margin: 6rem 15rem -7%;
+        width: 70%;
     }
     .animate-group .product {
         margin: 0 7rem 0;
@@ -676,12 +677,13 @@ body {
         width: 100%;
     }
     .animate-group h2 {
-        margin: 7rem 11rem -7%;
+        margin: 7rem 20rem 3%;
+        width: 65%;
     }
 }
 @media screen and (min-width: 2500px) {
    .animate-group h2 {
-       margin: 17rem 11rem -6%;
+       margin: 14rem 18rem 3%;
    }
    .animate-group {
        margin: 0 auto 20%;
@@ -711,6 +713,9 @@ body {
     }
     .wrapper {
         margin: 0 auto 0;
+    }
+    .animate-group h2 {
+        margin: 5rem -13rem -9%;
     }
 }
 
@@ -785,7 +790,7 @@ body {
         font-size: 21px;
     }
     .animate-group {
-        width: 85%;
+        width: 70%;
         margin: 0 auto 21%;
     }
     .title {
@@ -808,10 +813,10 @@ body {
         background-position: -28vmin 0;
     }
     .animate-group h2 {
-        margin: 5rem 5rem -12%;
+        margin: 5rem 8rem -12%;
     }
     .animate-group .product {
-        margin: 0 0 0;
+        margin: 0 2rem 0;
         width: 85%;
     }
 }
@@ -882,8 +887,8 @@ html {background-size: 180%;background-position:-41vmin 0;}
     margin: 0 auto 30%;
 }
 .animate-group h2 {
-    margin: 4rem 3rem -12%;
-    width: 90%;
+    margin: 4rem 5rem -12%;
+    width: 75%;
 }
 .animate-group .product {
     margin: 0 2rem 0;
