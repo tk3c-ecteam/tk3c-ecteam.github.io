@@ -51,11 +51,11 @@ em,i{font-style:normal;}
 }
 
 .animate-group h2 {
-    width: 75%;
+    width: 70%;
     height: auto;
     margin: 0 auto;
     text-align: center;
-    margin: 5rem 17rem -8%;
+    margin: 5rem 19rem -8%;
     animation: big-after-small 0.6s linear;
     overflow: hidden;
 }
@@ -536,6 +536,9 @@ body {
     .animate-group {
         width: 80%;
     }
+    .animate-group h2 {
+        margin: 7rem 15rem -6%;
+    }
 }
 @media screen and (max-width: 1600px) {
     .rightbtn {
@@ -558,7 +561,6 @@ body {
     }
     .animate-group h2 {
         margin: 6rem 15rem -7%;
-        width: 70%;
     }
     .animate-group .product {
         margin: 0 7rem 0;
@@ -677,7 +679,7 @@ body {
         width: 100%;
     }
     .animate-group h2 {
-        margin: 7rem 20rem 3%;
+        margin: 12rem 20rem -5%;
         width: 65%;
     }
 }
@@ -715,7 +717,8 @@ body {
         margin: 0 auto 0;
     }
     .animate-group h2 {
-        margin: 5rem -13rem -9%;
+        margin: 5rem 16rem -9%;
+        width: 65%;
     }
 }
 
@@ -736,6 +739,9 @@ body {
     }
     .animate-group {
         width: 60%;
+    }
+    .animate-group h2 {
+        margin: 6rem 14rem -9%;
     }
 }
 
@@ -770,6 +776,9 @@ body {
     }
     .rightbtn {
         left: 20%;
+    }
+    .animate-group h2 {
+        margin: 7rem 12rem -9%;
     }
 }
 @media screen and (max-width: 768px) {
@@ -813,7 +822,7 @@ body {
         background-position: -28vmin 0;
     }
     .animate-group h2 {
-        margin: 5rem 8rem -12%;
+        margin: 5rem 8rem -8%;
     }
     .animate-group .product {
         margin: 0 2rem 0;
@@ -830,7 +839,7 @@ body {
 .m_version_non{display:none;}
 body{margin:0px;padding:0;width:100%;height:auto;}
 .wrapper{display: block;width:100%;margin: 3rem auto -30%;}
-html {background-size: 180%;background-position:-41vmin 0;}
+html {background-size: 180%;background-position:-41vmin 11vmin;}
 .title {margin: 27% !important;}
 .kv-title {width: 55%;}
 .splight{width: 56%;margin: -33% auto 13%;}
@@ -887,8 +896,8 @@ html {background-size: 180%;background-position:-41vmin 0;}
     margin: 0 auto 30%;
 }
 .animate-group h2 {
-    margin: 4rem 5rem -12%;
-    width: 75%;
+    margin: 4rem 7rem -8%;
+    width: 65%;
 }
 .animate-group .product {
     margin: 0 2rem 0;
@@ -1183,6 +1192,9 @@ h2.protitle:first-child{}
     .list06 ul li {
         margin: 5px 2px;
     }
+    .animate-group h2 {
+        margin: 4rem 6rem -8%;
+    }
 }
 @media screen and (max-width: 361px)  {
     .list06 {margin-top: 15%;}
@@ -1192,6 +1204,9 @@ h2.protitle:first-child{}
     }
     .protitle {
         margin: 0 auto -23%;
+    }
+    .animate-group h2 {
+        margin: 4rem 5rem -10%;
     }
 }
 @media screen and (max-width: 320px) {
@@ -1212,6 +1227,9 @@ h2.protitle:first-child{}
     }
     .protitle {
         margin: 0 auto -25%;
+    }
+    .animate-group h2 {
+        margin: 3.5rem 5rem -14%;
     }
 }
 
