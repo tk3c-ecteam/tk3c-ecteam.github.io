@@ -6742,7 +6742,7 @@ strong i:after {
     .animate-group {
         width: 85%;
         height: 13rem;
-        margin: 7rem auto 0;
+        margin: 5rem auto 0;
     }
     #bank-area {
         width: 100%;
@@ -6892,10 +6892,10 @@ strong i:after {
 @keyframes bg-show {
     from {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg.png);
-        background-position: 0 48vmax,top;
+        background-position: 0 50vmax,top;
     }
     to {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg1.png);
-        background-position: 0 48vmax,top;
+        background-position: 0 50vmax,top;
     }
 }
