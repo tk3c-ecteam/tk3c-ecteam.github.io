@@ -45,13 +45,14 @@ html {
     margin: 0;
     padding: 0;
     background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/kv.png),
+    url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg.png),
     url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/stbg.png);
     background-size: 100%;
-    background-repeat: no-repeat,no-repeat;
+    background-repeat: no-repeat,no-repeat,no-repeat;
     overflow-x: hidden;
     background-color: #0b0102;
-    background-position: top 105px center,0 -15vmax;
-    background-attachment: scroll,fixed;
+    background-position: top 105px center,0 0,0 5vmax;
+    background-attachment: scroll,scroll,fixed;
 }
 
 .boxfly {
@@ -6892,10 +6893,10 @@ strong i:after {
 @keyframes bg-show {
     from {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg.png);
-        background-position: 0 60vmax,top;
+        background-position: 0 50vmax,top;
     }
     to {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg1.png);
-        background-position: 0 60vmax,top;
+        background-position: 0 50vmax,top;
     }
 }
