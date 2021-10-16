@@ -6891,10 +6891,10 @@ strong i:after {
 @keyframes bg-show {
     from {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg.png);
-        background-position: 0 50vmax,top;
+        background-position: 0 46vmax,top;
     }
     to {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg1.png);
-        background-position: 0 50vmax,top;
+        background-position: 0 46vmax,top;
     }
 }
