@@ -5004,7 +5004,7 @@ strong i:after {
     }
     html {
         background-size: 200vmin;
-        background-position: -47vmin 15vmin, top,-50vmin 100vmin;
+        background-position: -47vmin 15vmin, top,-50vmin 50vmin;
     }
     form>div:nth-of-type(9) {
         margin-bottom: -75px;
