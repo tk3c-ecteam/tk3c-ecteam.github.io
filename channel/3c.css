@@ -51,7 +51,7 @@ html {
     background-repeat: no-repeat,no-repeat,no-repeat;
     overflow-x: hidden;
     background-color: #0b0102;
-    background-position: top 105px center,0 0,0 5vmax;
+    background-position: top 105px center,0 0,0 -5vmax;
     background-attachment: scroll,scroll,fixed;
 }
 
@@ -365,7 +365,6 @@ section a:hover {
     left: 0;
     right: 0;
     margin: 0 auto;
-    z-index: -1;
 }
 
 .special-group::before {
@@ -394,6 +393,8 @@ section a:hover {
 
 .predator-group ul {
     padding-top: 3%;
+    position: relative;
+    z-index: 10;
 }
 
 .special-group ul {
@@ -4541,8 +4542,9 @@ strong i:after {
         margin: 0 auto 0;
     }
     .animate-group {
-        width: 70%;
-        height: 30rem;
+        width: 60%;
+        height: 25rem;
+        margin: 8rem auto 0;
     }
     .rightbtn>a.btn02 {
         margin-left: 0.9%;
@@ -4570,10 +4572,6 @@ strong i:after {
     .title-group {
         width:65%;
         height: 21rem;
-    }
-    .animate-group {
-        width: 65%;
-        height: 30rem;
     }
 }
 
@@ -6893,10 +6891,10 @@ strong i:after {
 @keyframes bg-show {
     from {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg.png);
-        background-position: 0 50vmax,top;
+        background-position: 0 55vmax,top;
     }
     to {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg1.png);
-        background-position: 0 50vmax,top;
+        background-position: 0 55vmax,top;
     }
 }
