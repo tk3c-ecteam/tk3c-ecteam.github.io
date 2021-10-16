@@ -550,7 +550,7 @@ section a:hover {
     display: block;
     margin-bottom: 2px;
     margin: 1% 0 0 6%;
-    background-color: #0092ff42;
+    background-color: #0092ff75;
     font-size: 15px;
 }
 
@@ -6891,10 +6891,10 @@ strong i:after {
 @keyframes bg-show {
     from {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg.png);
-        background-position: 0 55vmax,top;
+        background-position: 0 50vmax,top;
     }
     to {
         background-image: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211018/bnbg1.png);
-        background-position: 0 55vmax,top;
+        background-position: 0 50vmax,top;
     }
 }
