@@ -430,6 +430,10 @@ section a:hover {
     cursor: pointer;
 }
 
+.bank {
+    width: 100%;
+}
+
 .predator-gift a:hover {
     transform: translateY(0);
     transition: none;
