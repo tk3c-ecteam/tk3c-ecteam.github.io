@@ -4702,9 +4702,6 @@ strong i:after {
     form>div:nth-of-type(9) {
         margin-top: 0;
     }
-    .copyR {
-        margin-top: 16%;
-    }
     .rightbtn {
         left: -3%;
         bottom: 255px;
@@ -6681,6 +6678,7 @@ strong i:after {
         font-size: 90%;
         padding: 1% 0;
         margin-bottom: 50px;
+        margin-top: 10%;
     }
     .list0>.list02 .ac_3csale {
         width: 100%;
