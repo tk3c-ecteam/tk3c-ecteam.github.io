@@ -723,8 +723,8 @@ img.n01.wow {
     .bg01:nth-of-type(1):before, .bg01:nth-of-type(2):before {top: -24.5%;}
     .left-area, .right-area {display: none;}
     .circle {display: none;}
-    .list_M{margin-bottom: 10%;}
-    .list_F {margin-bottom: 10%;}
+    .list_M{margin-bottom: 10% !important;}
+    .list_F {margin-bottom: 10% !important;}
     .newbox .price-link {height: 5rem;}
 }
 @media screen and (max-width:750px){
@@ -773,7 +773,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
 #gotop img{width:100%;display:none}
 .title02{width:100%;height:auto;position:relative;margin:0 auto;text-align:center;background:0 0;float:left;}
 img.n01.wow {z-index: -1;position: relative;}
-body {background-size: 135%;background-position:-32vmin 11vmin,-58vmin 60vmin;}
+body {background-size: 135%;background-position:-18vmin 11vmin}
 .title-group {width: 100%;height: 16rem;margin: 0 auto 6%;}
 .title-group h2 {right: 2%;}
 .title-group h2:before {right: 4%;top: -4%;}
