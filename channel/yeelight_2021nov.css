@@ -202,7 +202,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .banner .slogan h1{position:relative;display:inline-block;transform:translateX(-60px)}
 .banner p{position:absolute;right:-300px;bottom:0}
 .bonus-area {margin: 0 auto 5%;width: 100%;background:url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/2021NOV/event_bg.png) no-repeat center;background-size: 100%;background-position: 0 -134px;}
-.bonus-area ul {display: flex;flex-wrap: wrap;align-items: baseline;justify-content: center;text-align: center;width: 80%;margin: 0 auto;padding: 10px;}
+.bonus-area ul {display: flex;flex-wrap: wrap;align-items: center;justify-content: center;text-align: center;width: 80%;margin: 0 auto;padding: 10px;}
 .bonus-area ul li {width: 24%;height: auto;display: block;margin: 5px;}
 .bonus-area ul li:nth-of-type(3) {width: 29%;cursor: auto;}
 .bonus-area a {width: 100%;height: 100%;display: block;}
