@@ -13,7 +13,7 @@ html{margin:0;padding:0;height:100%}
 .fgray{color:#666}
 .fpur{color:#8232a4}
 .pc_version_non{display:none}
-.bg01{background:#2c1447;border-radius: 10px;}
+.bg01{background:none;border-radius: 10px;}
 .bg02{background:#006665}
 .bg03{background:#006665}
 .bg04{background:#006665}
@@ -24,7 +24,7 @@ html{margin:0;padding:0;height:100%}
 body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background-image: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/2021NOV/bg.png);background-repeat: repeat-y;background-size: 100%;background-position: center;background-color: #f4aa16;}
 body:after{display:block;background-image:url(../images/banner/h1-2.png),url(../images/banner/h2-2.png),url(../images/banner/ha3-2.png);content:''}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top: 0;}
-.wrapper{display:block;width:1144px;margin:0 auto}
+.wrapper{display:block;width:1144px;margin:0 auto;}
 div:nth-of-type(3) {width: 100%;}
 form>div:nth-child(6){width:100%}
 #gotop{display:none;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:51.4%;z-index:9;bottom:100px;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/202110/gotop.png) no-repeat;width: 100%;height: 40px;}
@@ -121,7 +121,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     position: absolute;
     background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/2021NOV/ptittle01.png) no-repeat center;
     width: 100%;
-    height: 100%;
+    height: 44rem;
     background-size: 100%;
     z-index: -1;
     top: 2%;
@@ -133,7 +133,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     position: absolute;
     background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/2021NOV/ptitle02.png) no-repeat center;
     width: 100%;
-    height: 100%;
+    height: 26rem;
     background-size: 100%;
     z-index: -1;
     top: 2%;
@@ -145,7 +145,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
     position: absolute;
     background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/2021NOV/ptitle03.png) no-repeat center;
     width: 100%;
-    height: 100%;
+    height: 56rem;
     background-size: 100%;
     z-index: -1;
     top: 2%;
@@ -722,7 +722,7 @@ body{margin:0;padding:0;width:100%;height:100%;}
     .event_banner ul{display:flex;justify-content:center;flex-wrap:wrap;width:95%;height:auto;margin:0 auto;}
     .event_banner ul li{width:33%;}
     .bg01{width:95%;margin:0 0 5% 2.5%;padding:2%;}
-    .protitle{width: 100%;display:block;height:55px;font-size:1.5em;margin-top: 1%;margin-bottom: -1%;line-height: 17px;}
+    .protitle{width: 100%;display:block;height:55px;font-size:2em;margin-top: 1%;margin-bottom: -1%;line-height: 17px;}
     .acbankbox {display: none !important;}
     #bank-area {background-size: 133%;}
     #bank-area a {width: 90%;}
