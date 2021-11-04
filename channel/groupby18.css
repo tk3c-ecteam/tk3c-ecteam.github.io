@@ -943,6 +943,7 @@ html {background-size: 150vmin;background-position:-21vmin 23vmin;}
 .alertbox .go-more {width: 60%;}
 #banner-area {
     margin: 0 auto 0;
+    position: relative;
 }
 /* 勇往家電城 會員特典家電  */
 .bank-container .swiper-button-next {
@@ -978,6 +979,11 @@ html {background-size: 150vmin;background-position:-21vmin 23vmin;}
 }
 .banner-container {
     padding-bottom: 7%;
+}
+
+.banner-container .swiper-button-prev,
+.banner-container .swiper-button-next {
+    display: none;
 }
 #product-area .product-container {
     width: 90%;

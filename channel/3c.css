@@ -430,6 +430,11 @@ section a:hover {
     background: #18b9da;
 }
 
+.banner-container .swiper-button-prev,
+.banner-container .swiper-button-next {
+    display: none;
+}
+
 #bank-area {
     width: 100%;
     height: auto;
