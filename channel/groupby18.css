@@ -187,6 +187,11 @@ section a:hover {
     background: #fff234;
 }
 
+.banner-container .swiper-button-prev,
+.banner-container .swiper-button-next {
+    display: none;
+}
+
 #bank-area {
     width: 100%;
     height: auto;
@@ -981,10 +986,6 @@ html {background-size: 150vmin;background-position:-21vmin 23vmin;}
     padding-bottom: 7%;
 }
 
-.banner-container .swiper-button-prev,
-.banner-container .swiper-button-next {
-    display: none;
-}
 #product-area .product-container {
     width: 90%;
 }
