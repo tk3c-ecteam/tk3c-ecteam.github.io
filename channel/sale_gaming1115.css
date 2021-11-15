@@ -389,7 +389,7 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
     }
 }
 @media screen and (max-width:768px){
-html{background-size: 165vmin;background-position: -31vmin 13vmin,top;}
+html{background-size: 165vmin;background-position: -31vmin 13vmin,0 83vmin;}
 .list_special ul li{width:32%;}
 .hotpromain{width:50%;}
 .hotpro_pic{width:150px;height:150px;}
@@ -415,7 +415,7 @@ body .bg-left, .bg-right{top: 0;}
 }
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){
-html{font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size: 180%;background-position: -39vmin 23VMIN;}
+html{font-family:Arial,Helvetica,sans-serif,"微軟正黑體";background-size: 180%;background-position: -39vmin 23VMIN,0 98vmin;}
 body {overflow-x: hidden;}
 #kuai3header{width:100% !important;margin:0px auto;z-index:9999;position:fixed;}
 #kuai3header .words{width:100% !important;}
@@ -619,7 +619,7 @@ div.bg_color > div.wrapper > h2 {margin: 0 auto -4%;}
 .game-link,
 .classic-link{height: 4rem;}
 .protitle{margin: 0 auto -4%;}
-html {background-position: -36VMIN 30VMIN;}
+html {background-position: -36VMIN 30VMIN,0 108vmin;}
 .special-box {
     margin: 14rem auto 0;
 }
