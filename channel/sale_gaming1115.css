@@ -10,9 +10,8 @@ html{margin:0;padding:0;height:100%;
     background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1115/kv_bg.jpg),
     url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1115/bg.jpg);
     overflow-x: hidden;background-size: 100%;background-color: #1d2122;
-    background-repeat: no-repeat;
-    background-position: 0 100px,0 -23vmax;
-    background-attachment: scroll,fixed;
+    background-repeat: no-repeat,repeat-y;
+    background-position: 0 100px,0 54vmax;
 }
 .boxfly{position:absolute;left:-9999em;top:-9999em;}
 em,i{font-style:normal;}
