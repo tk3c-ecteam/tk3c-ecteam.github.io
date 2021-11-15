@@ -145,11 +145,11 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1115/light.png) no-repeat;
     background-size: 100%;
     top: 35%;
-    left: -40%;
+    left: -58%;
     right: 0;
     margin: 0 auto;
-    mix-blend-mode: screen;
-    animation: light 0.5s linear infinite alternate;
+    mix-blend-mode: lighten;
+    animation: light 0.4s linear infinite alternate;
     z-index: -1;
 }
 
