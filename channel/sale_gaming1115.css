@@ -164,6 +164,19 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     transition: all 0.65s ease;
 }
 
+.spolight {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1115/light.png) no-repeat;
+    background-size: 100%;
+    top: 0.5%;
+    left: 16%;
+    mix-blend-mode: screen;
+    animation: light 0.5s linear infinite alternate;
+}
+
+
 /*商品橫幅*/
 /*品分類*/
 .bg_color{margin-top: 0;}
@@ -305,6 +318,10 @@ a.more2:hover{box-shadow:none;background:#FF0;color:#000;transform:translateY(0.
 }
 .animate-group {
     width: 72%;
+    margin: 2rem auto 5%;
+}
+.spolight {
+    top: 0.6%;
 }
 }
 
@@ -388,6 +405,9 @@ body .bg-left, .bg-right{top: 0;}
 }
 .product-box a {width: 50%;}
 .product-box a:nth-of-type(2) {width: 46%;}
+.spolight {
+    left: 0;
+}
 }
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 @media screen and (min-width:320px) and (max-width:750px){
