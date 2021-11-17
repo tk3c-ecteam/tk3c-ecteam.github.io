@@ -948,7 +948,19 @@ body {
     }
     .protitle {
         margin: 0 auto 0;
-        height: 315px;
+        height: 325px;
+    }
+    .protitle:nth-of-type(1) {
+        background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2021_1117/protitle01M.png) no-repeat center;
+    }
+    .protitle:nth-of-type(2) {
+        background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2021_1117/protitle02M.png) no-repeat center;
+    }
+    .protitle:nth-of-type(3) {
+        background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2021_1117/protitle03M.png) no-repeat center;
+    }
+    .protitle:nth-of-type(4) {
+        background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2021_1117/protitle04M.png) no-repeat center;
     }
     .list06 ul li {
         width: 32.5% !important;
@@ -1162,7 +1174,7 @@ html {background-size: 190%;background-position:-47vmin 11vmin;}
 .title .fb_box .fb_box_content p b{display:block;width:130px;height:130px;float:left;margin:5% 0 5% 5%;}
 /*end fb_box*/
  /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹*/
- .protitle{width:100%;text-align:center;display:block;overflow:hidden;position:relative;margin:0 auto -6%;padding-top: 0;height: auto;font-size: 2em;line-height: 3em;height: 290px;background-size: 170% !important;background-position: -66vmin 0 !important;}
+ .protitle{width:100%;text-align:center;display:block;overflow:hidden;position:relative;margin:0 auto -6%;padding-top: 0;height: auto;font-size: 2em;line-height: 3em;height: 182px;}
 
 
 .pa00{background:url(../images/title_1_0A.jpg) 0 0 no-repeat;background-size:100%;width:100%;height:38px;}
@@ -1406,6 +1418,21 @@ h2.protitle:first-child{}
     html {max-width:1440px;}
 }
 
+@media only screen and (device-width : 390px) and (device-height : 844px) and (-webkit-device-pixel-ratio : 3) {
+    .protitle {
+        margin: 0 auto -8%;
+    }
+    #banner-area:before {
+        top: -120%;
+    }
+    .event-group:before {
+        top: -36%;
+    }
+    .event-group ul li {
+        width: 48%;
+    }
+}
+
 @media screen and (max-width: 376px) {
     .navibar_m_btn > .sample-menu-style a {
         font-size: 12px;
@@ -1430,7 +1457,7 @@ h2.protitle:first-child{}
         margin: 0 auto 25%;
     }
     .protitle {
-        margin: 0 auto -12%;
+        margin: 0 auto -9%;
     }
     .event-group ul li {
         width: 48%;
@@ -1472,7 +1499,7 @@ h2.protitle:first-child{}
         height: 5rem;
     }
     .protitle {
-        margin: 0 auto -35%;
+        margin: 0 auto -20%;
     }
     .animate-group h2 {
         margin: 3.5rem 5rem -14%;
