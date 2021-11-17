@@ -10,7 +10,7 @@ html{margin:0;padding:0;background-image: url(https://events.tk3c.com/events_net
     url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2021_1117/bg.png);
     overflow-x: hidden;
     background-repeat: no-repeat,repeat-y;
-    background-position: top 25px center;
+    background-position: top 25px center,0 135px;
     /*background-color: #e4dfca;*/
     background-size: 100%;
 }
