@@ -901,6 +901,10 @@ body {
         filter: none;
         transition: none;
     }
+    .price-group a:hover {
+        transform: translateY(0);
+        transition: none;
+    }
 }
 @media screen and (max-width: 980px) {
     .list06 ul li {
@@ -1070,11 +1074,12 @@ html {background-size: 190%;background-position:-47vmin 11vmin;}
     display: none;
 }
 .event-group:before {
-    top: -31%;
+    top: -33%;
     background-size: 165%;
 }
 .event-group ul li {
-    width: 47%;
+    width: 49%;
+    margin: 2px;
 }
 #banner-area:before {
     top: -110%;
@@ -1427,6 +1432,9 @@ h2.protitle:first-child{}
     .protitle {
         margin: 0 auto -12%;
     }
+    .event-group ul li {
+        width: 48%;
+    }
 }
 @media screen and (max-width: 361px)  {
     .list06 {margin-top: 15%;}
@@ -1439,6 +1447,9 @@ h2.protitle:first-child{}
     }
     .animate-group h2 {
         margin: 4rem 5rem -10%;
+    }
+    .event-group:before {
+        top: -40%;
     }
 }
 @media screen and (max-width: 320px) {
@@ -1480,7 +1491,7 @@ h2.protitle:first-child{}
         width: 46%;
     }
     .event-group:before {
-        top: -43%;
+        top: -48%;
     }
 }
 
