@@ -1174,7 +1174,7 @@ html {background-size: 190%;background-position:-47vmin 11vmin;}
 .title .fb_box .fb_box_content p b{display:block;width:130px;height:130px;float:left;margin:5% 0 5% 5%;}
 /*end fb_box*/
  /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹*/
- .protitle{width:100%;text-align:center;display:block;overflow:hidden;position:relative;margin:0 auto -6%;padding-top: 0;height: auto;font-size: 2em;line-height: 3em;height: 182px;}
+ .protitle{width:100%;text-align:center;display:block;overflow:hidden;position:relative;margin:0 auto -6%;padding-top: 0;height: auto;font-size: 2em;line-height: 3em;height: 290px;background-size: 165% !important;background-position: -32.9vmin 0 !important;}
 
 
 .pa00{background:url(../images/title_1_0A.jpg) 0 0 no-repeat;background-size:100%;width:100%;height:38px;}
@@ -1420,7 +1420,7 @@ h2.protitle:first-child{}
 
 @media only screen and (device-width : 390px) and (device-height : 844px) and (-webkit-device-pixel-ratio : 3) {
     .protitle {
-        margin: 0 auto -8%;
+        margin: 0 auto -9%;
     }
     #banner-area:before {
         top: -120%;
@@ -1457,7 +1457,7 @@ h2.protitle:first-child{}
         margin: 0 auto 25%;
     }
     .protitle {
-        margin: 0 auto -9%;
+        height: 265px;
     }
     .event-group ul li {
         width: 48%;
@@ -1470,7 +1470,7 @@ h2.protitle:first-child{}
         padding-bottom: 18vmin;
     }
     .protitle {
-        margin: 0 auto -23%;
+        margin: 0 auto -20%;
     }
     .animate-group h2 {
         margin: 4rem 5rem -10%;
@@ -1499,7 +1499,7 @@ h2.protitle:first-child{}
         height: 5rem;
     }
     .protitle {
-        margin: 0 auto -20%;
+        margin: 0 auto -28%;
     }
     .animate-group h2 {
         margin: 3.5rem 5rem -14%;
