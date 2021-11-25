@@ -3167,6 +3167,15 @@ div#NewProductAll {
         top: 0;
         margin-top: 0;
     }
+    #bank-area {
+        width: 68%;
+    }
+    #bank-area:before {
+        height: 100%;
+    }
+    .protitle01 {
+        height: 120px;
+    }
 }
 
 @media screen and (min-width: 2000px) {
