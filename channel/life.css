@@ -3094,12 +3094,6 @@ div#NewProductAll {
         padding-bottom: 31%;
         margin: 10rem auto -4%;
     }
-    #bank-area {
-        width: 70%;
-    }
-    .bank-group .single {
-        width: 29%;
-    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -3131,10 +3125,24 @@ div#NewProductAll {
         left: 7%;
     }
     .animate-group {
-        width: 70%;
+        padding-bottom: 25%;
+        margin: 9rem auto -4%;
     }
-    .animate-group .titlebox {
-        margin: 0 -4rem;
+
+    .bank-group .single img {
+        top: 10px;
+    }
+
+    .bank-group:before {
+        padding-bottom: 4%;
+    }
+
+    #bank-area .swiper-slide img {
+        top: 12px;
+    }
+
+    .bank-group .single:before {
+        background-position: 0 15px;
     }
 }
 
@@ -3158,14 +3166,21 @@ div#NewProductAll {
         height: 50px;
     }
 
+    .bank-group .single {
+        width: 28%;
+    }
+    .bank-group .single:before {
+        background-size: 117%;
+        background-position: 0 0;
+    }
     .bank-group .single img {
         top: 0;
-        margin-top: 0;
+        margin-top: 20px;
     }
     
     #bank-area .swiper-slide img {
         top: 0;
-        margin-top: 0;
+        margin-top: 20px;
     }
     #bank-area {
         width: 68%;
@@ -3220,8 +3235,8 @@ div#NewProductAll {
 
 @media screen and (min-width:320px) and (max-width:750px) {
     html {
-        background-size: 180%;
-        background-position: -20vmin 22vmin,0 39vmin;
+        background-size: 170%;
+        background-position: -37vmin 22vmin,0 51vmin;
     }
 
     .navibar_m_btn > .bg1 {
@@ -3323,11 +3338,16 @@ div#NewProductAll {
         margin: 0 4px;
     }
     #bank-area:before {
-        background-size: 142%;
-        background-position: 0 2px;
+        background-size: 155%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
     #bank-area .swiper-slide {
         width: 50% !important;
+    }
+    #bank-area .swiper-slide img {
+        margin-top: 0;
+        top: 2px;
     }
     #bank-area .swiper-button-prev {
         left: -10PX;
@@ -3339,35 +3359,41 @@ div#NewProductAll {
     }
     .animate-group {
         width: 100%;
-        margin: 6rem auto 60%;
-        padding-bottom: 46%;
+        margin: 6rem auto -6%;
+        padding-bottom: 45%;
     }
     .animate-group h2 {
-        left: 27%;
-    }
-    .animate-group .subtitle {
-        left: 27%;
+        top: 0;
     }
     .animate-group .time {
         width: 22%;
-        left: 28%;
     }
     .animate-group .discount {
-        left: 28%;
+        width: 50%;
     }
     .animate-group h2:before {
         height: 30px;
     }
     #pro-area {
-        right: -38%;
-        left: 0;
-        width: 57%;
-        top: 106%;
-        margin: 0 auto;
+        right: 1%;
+        width: 45%;
+        top: -21%;
     }
 
+    .bank-group:before {
+        background-size: 107%;
+    }
     .bank-group .single {
         width: 38%;
+    }
+
+    .bank-group .single:before {
+        background-size: 107%;
+        background-position: 0 7px;
+    }
+
+    .bank-group .single img {
+        top: -5px;
     }
     
     body {
@@ -7120,16 +7146,25 @@ screen\9 {
         width: 46.3%;
     }
     .animate-group {
-        margin: 5.5rem auto 65%;
+        margin: 5.2rem auto -6%;
+    }
+
+    #pro-area {
+        top: -17%;
     }
 }
 
+@media screen and (max-width: 360px) {
+    .animate-group {
+        margin: 5rem auto -7%;
+    }
+}
 @media screen and (max-width: 320px) {
     .pro_wrapper1 ul li {
         width: 46%;
     }
-    .animate-group {
-        margin: 4rem auto 65%;
+    html {
+        background-position: -36vmin 29vmin,0 51vmin;
     }
 }
 
