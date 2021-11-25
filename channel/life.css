@@ -202,9 +202,10 @@ i {
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
 /* 銀行區 */
 #bank-area {
-    width: 66%;
+    width: 62.4%;
     height: auto;
     position: relative;
+    margin: 0 1%;
 }
 
 #bank-area:before {
@@ -213,7 +214,7 @@ i {
     position: absolute;
     background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211126/bank_bg.png) no-repeat;
     width: 100%;
-    height: 100%;
+    height: 253px;
     background-size: 100%;
     background-position: 0 0;
 
@@ -335,7 +336,7 @@ i {
     position: absolute;
     background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211126/bank_bg2.png) no-repeat center;
     width: 100%;
-    height: 100%;
+    height: 253px;
     background-size: 100%;
     background-position: 0 0;
     z-index: -1;
