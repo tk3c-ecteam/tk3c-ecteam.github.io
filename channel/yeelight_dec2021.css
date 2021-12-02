@@ -142,7 +142,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .nav_btn ul li a:hover{transform: translateY(-0.5em);transition: all 0.8s linear;}
 .event_banner li:last-child{width:100%;margin:2% auto 0;text-align:center;}
 .event_banner{margin-top: 2%;width: 1144px;margin: 3% auto 0;position: relative;}
-.nav_btn{margin:1% auto 8%}
+.nav_btn{margin:1% auto 5%}
 .event_banner ul{display:flex;justify-content:center;flex-wrap:wrap;width:100%;height:auto;}
 
 h3:before{
@@ -178,7 +178,7 @@ h3:before{
     height: 61rem;
     z-index: -1;
     background-size: 100%;
-    top: -46%;
+    top: -34%;
 }
 
 .vdList ul:nth-of-type(1) li {
@@ -226,15 +226,30 @@ h3:before{
     height: 55rem;
     z-index: -1;
     background-size: 100%;
-    top: -40%;
+    top: -42%;
 }
 
 .vdList ul:nth-of-type(4) li {
-    width: 27.5%;
-
+    width: 41%;
 }
 
-.vdList ul:nth-of-type(4) {
+.vdList ul:nth-of-type(5):before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: url(https://events.cdn-tkec.tw/events_net/events_net/Yeelight_event/images/2021dec/f5.png) no-repeat center;
+    width: 100%;
+    height: 55rem;
+    z-index: -1;
+    background-size: 100%;
+    top: -42%;
+}
+
+.vdList ul:nth-of-type(5) li {
+    width: 27%;
+}
+
+.vdList ul:nth-of-type(5) {
     margin-bottom: 5%;
 }
 
@@ -416,15 +431,17 @@ h3:before{
 .protitle{margin-bottom: -8%;line-height: 63px;}
 .rightbtn {left: 19%;}
     #gotop {left: 22%;}
-}
+
 
 .vdList ul:before {width: 120% !important;top: -36%;}
 .vdList ul:nth-of-type(1) li {width: 44%;margin: 30px 15px 20px;}
 .vdList ul:nth-of-type(2) li {width: 48%;}
 .vdList ul:nth-of-type(2):before{top: -44%;}
 .vdList ul:nth-of-type(3) li {width: 48%;}
-.vdList ul:nth-of-type(4) li {width: 32%;}
+.vdList ul:nth-of-type(4) li {width: 48%;}
+.vdList ul:nth-of-type(5) li {width: 32%;}
 .vdList ul {margin-bottom: 30%;}
+}
 @media screen and (max-width: 768px) {
     .banner-bg {
         margin: 0 auto -66px;
@@ -448,9 +465,8 @@ h3:before{
     .wrapper h3 {width: 90%;}
     .banner {background-size: 190%;}
     body {background-position: 0 0;}
-    .vdList ul:nth-of-type(4) li {width: 31%;}
     .vdList ul:nth-of-type(4):before {top: -45%;}
-    .vdList ul:nth-of-type(4) {margin-bottom: 5%;}
+    .vdList ul:nth-of-type(5) li {width: 31%;}
 }
 @media screen and (max-width:750px){.moset{display:block}
 .pcset{display:none}
@@ -495,7 +511,7 @@ body {
 .vdList ul:nth-of-type(2):before{top: -48%;}
 .vdList ul:nth-of-type(3) li {margin: 0 3px;}
 .vdList ul:nth-of-type(3):before {top: -31%;}
-.vdList ul:nth-of-type(4) li {margin: 0 2px;width: 32%;}
+.vdList ul:nth-of-type(5) li {margin: 0 2px;width: 32%;}
 }
 @media screen and (min-width:320px) and (max-width:750px){
 #kuai3header{width:100%!important;margin:0 auto;z-index:9999;position:fixed}
