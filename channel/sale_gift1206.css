@@ -7,11 +7,9 @@ a{text-decoration:none;cursor:pointer}
 img{border:0px;max-width: 100%;height: auto;}
 /*圖片超連結邊框消除*/
 html{margin:0;padding:0;height:100%;
-    background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1206/BG.png);
-    overflow-x: hidden;background-size: 100%;background-color: #FFFFFF;
-    background-repeat: repeat-y;
-    background-position: 0 350vmax;
+    overflow-x: hidden;background-size: 100%;background-color: #000;
 }
+.tab-container{position: relative;z-index: 5;}
 .boxfly{position:absolute;left:-9999em;top:-9999em;}
 em,i{font-style:normal;}
 .fred{color:#F00;font-weight:bold;}
@@ -26,17 +24,37 @@ em,i{font-style:normal;}
 .bg02{background:#ffafc1;}
 */
 .bg_color {position: relative;overflow: hidden;width: 100%;}
-.bg_color:before {content: '';display: block;position: absolute;
-    background: url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1206/light_03.png) repeat-y center;width: 200%; 
-    height: 200%;background-size: 100%;animation: light 1.3s linear infinite alternate;
-    top: -1%;
-    left: -10%;
-    right: 0;
-    margin: 0 auto;
-    background-position: 0 0;
-    z-index: -1;
-}
 .bg_color > .wrapper > div[id] {background: #000;}
+
+.bg_color:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1206/bg03.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    background-size: 100%;
+    padding-bottom: 105%;
+    top: 41%;
+    z-index: -10;
+    background-color: #ffffff;
+}
+.bg_color:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1206/bg02.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    background-size: 100%;
+    padding-bottom: 160%;
+    top: 61.5%;
+    z-index: -10;
+    background-color: #ffffff;
+    background-position: 0 -27px;
+}
 /*大突品的背景*/
 .bg03{background:#0b6bee;}
 .bg04{background:#bae8d2;}
@@ -96,10 +114,26 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1206/KV.png) no-repeat 0 100px;
     width: 100%;
     height: 0;
-    padding-bottom: 192%;
+    padding-bottom: 170%;
     background-size: 100%;
     top: -3%;
     z-index: -1;
+    background-color: #ffffff;
+}
+
+.main-wrap:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background:url(https://events.tk3c.com/events_net/events_net/seasonsale/images/2021_1206/bg02.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 0;
+    background-size: 100%;
+    padding-bottom: 166%;
+    top: 199.5%;
+    z-index: -10;
+    background-color: #ffffff;
 }
 
 #banner-area {
@@ -141,6 +175,7 @@ body{width:100%;font-family:Helvetica,Arial,sans-serif,"微軟正黑體",Microso
     width: 66%;
     margin: 0 auto;
     cursor: pointer;
+    animation: upAndDown 1.5s linear infinite alternate;
 }
 
 .navbar .mobile {
