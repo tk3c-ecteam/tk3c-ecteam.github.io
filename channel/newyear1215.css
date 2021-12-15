@@ -49,9 +49,10 @@ html {
     margin:0;padding:0;height:100%;
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/kv.png),
     url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/bg.png);
-    overflow-x: hidden;background-size: 100%;background-color: #ffe2c2;
-    background-repeat: no-repeat,repeat-y;
-    background-position: 0 100px,0 35vmax;
+    overflow-x: hidden;background-size: 100%;background-color: #1f0c53;
+    background-repeat: no-repeat,no-repeat;
+    background-position: 0 100px,bottom;
+    background-attachment: scroll,fixed;
 }
 
 .boxfly {
@@ -404,16 +405,16 @@ i {
 }
 
 .actbtn::before {
-    background: none;
+    background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/rightbtn.png) no-repeat center;
     content: "";
     display: block;
     width: 250px;
     height: 270px;
     position: absolute;
-    top: -168px;
+    top: -191px;
     left: -18%;
     z-index: -1;
-    background-size: 65%;
+    background-size: 75%;
 }
 
 .actbtn::after {
@@ -748,11 +749,12 @@ body {
     letter-spacing: 5px;
 }
 
-.protitle:nth-of-type(1) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-01.png) no-repeat center;background-size: 100%;}
-.protitle:nth-of-type(2) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-02.png) no-repeat center;background-size: 100%;}
-.protitle:nth-of-type(3) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-03.png) no-repeat center;background-size: 100%;}
-.protitle:nth-of-type(4) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-04.png) no-repeat center;background-size: 100%;}
-.protitle:nth-of-type(5) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-05.png) no-repeat center;background-size: 100%;}
+.protitle:nth-of-type(1) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-06.png) no-repeat center;background-size: 100%;}
+.protitle:nth-of-type(2) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-01.png) no-repeat center;background-size: 100%;}
+.protitle:nth-of-type(3) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-02.png) no-repeat center;background-size: 100%;}
+.protitle:nth-of-type(4) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-03.png) no-repeat center;background-size: 100%;}
+.protitle:nth-of-type(5) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-04.png) no-repeat center;background-size: 100%;}
+.protitle:nth-of-type(6) {background: url(http://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/floor-05.png) no-repeat center;background-size: 100%;}
 .protitle a {
     height: 100%;
     display: block;
@@ -1363,11 +1365,11 @@ body {
     border: 3px solid #ffffff;
 }
 
-.list0 .list0:nth-of-type(odd) .list02 {
+.list0 .list0:nth-of-type(even) .list02 {
     background-color: #a4f2ff;
 }
 
-.list0 .list0:nth-of-type(odd) .more {
+.list0 .list0:nth-of-type(even) .more {
     display: block;
     position: absolute;
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/more_blue.png) no-repeat center;
@@ -1377,11 +1379,11 @@ body {
     bottom: -6%;
     left: -8px;
 }
-.list0 .list0:nth-of-type(even) .list02 {
+.list0 .list0:nth-of-type(odd) .list02 {
     background-color: #9945ad;
 }
 
-.list0 .list0:nth-of-type(even) .more {
+.list0 .list0:nth-of-type(odd) .more {
     display: block;
     position: absolute;
     background: url(https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/20211216/more_purple.png) no-repeat center;
@@ -1394,6 +1396,10 @@ body {
 
 .list02:last-of-type {
     margin-bottom: 15%;
+}
+
+.special .more {
+    bottom:  -9% !important;
 }
 
 .list02 .detail {
@@ -1497,11 +1503,11 @@ li .box_price strong em {
     display: none;
 }
 
-.list0:nth-of-type(even) .pro {
+.list0 .list0:nth-of-type(odd) .pro {
     background-color: #ffa8a4;
 }
 
-.list0:nth-of-type(odd) .pro {
+.list0 .list0:nth-of-type(even) .pro {
     background-color: #00d0ff;
 }
 
@@ -4589,6 +4595,10 @@ strong i:after {
         bottom: -5%;
         left: -6px;
     }
+
+    .special .more {
+        bottom: -6% !important;
+    }
 }
 
 /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
@@ -6634,6 +6644,9 @@ strong i:after {
         width: 170%;
         top: -10%;
         left: -40%;
+    }
+    .special .more {
+        bottom: -3% !important;
     }
 }
 
