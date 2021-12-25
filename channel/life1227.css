@@ -537,7 +537,7 @@ section a:hover {
     right: 0;
     margin: 0 auto;
     mix-blend-mode: screen;
-    filter: brightness(250%);
+    filter: blur(10px) brightness(200%);
     bottom: -32%;
     background-size: 95%;
     z-index: -1;
