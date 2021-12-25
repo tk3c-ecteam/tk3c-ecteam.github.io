@@ -3386,7 +3386,7 @@ div#NewProductAll {
     .animate-group {
         padding-bottom: 46%;
         transform: scale(0.8);
-        margin: 8rem auto 0;
+        margin: 8rem auto -8%;
     }
 
     .products {
