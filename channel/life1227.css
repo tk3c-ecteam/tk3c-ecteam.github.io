@@ -3649,7 +3649,7 @@ div#NewProductAll {
     html {
         background-image: url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20211227/bgM.jpg), url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20211227/bg.jpg);
         background-size: 100%;
-        background-position: 0 0;
+        background-position: 0 0,0 80vmin;
     }
 
     .navibar_m_btn > .bg1 {
@@ -4413,13 +4413,53 @@ div#NewProductAll {
         font-size:0;
         z-index: 20;
         display: block;
-        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle01.png) no-repeat center;
-        background-size: 100%;
         font-family: 'Noto Serif TC',serif;
         font-weight: bold;
     }
+
+    .protitle01:nth-of-type(1) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle01.png) left bottom no-repeat;
+    }
+
+    .protitle01:nth-of-type(2) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle02.png) left bottom no-repeat;
+    }
+
     .protitle01:nth-of-type(3) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle03.png) left bottom no-repeat;
         width: 100%;
+    }
+
+    .protitle01:nth-of-type(4) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle04.png) left bottom no-repeat;
+    }
+
+    .protitle01:nth-of-type(5) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle05.png) left bottom no-repeat;
+    }
+
+    .protitle01:nth-of-type(6) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle06.png) left bottom no-repeat;
+    }
+
+    .protitle01:nth-of-type(7) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle07.png) left bottom no-repeat;
+    }
+
+    .protitle01:nth-of-type(8) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle08.png) left bottom no-repeat;
+    }
+
+    .protitle01:nth-of-type(9) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle09.png) left bottom no-repeat;
+    }
+
+    .protitle01:nth-of-type(10) {
+        background: url(https://events.cdn-tkec.tw/events_net/events_net/201708_thousand/images/20211227/protitle10.png) left bottom no-repeat;
+    }
+    
+    .protitle01 {
+        background-size: 100% !important;
     }
     .protitle02 {
         position: relative;
