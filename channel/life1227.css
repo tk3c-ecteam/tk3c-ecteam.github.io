@@ -380,11 +380,11 @@ section a:hover {
     display: block;
     position: absolute;
     background: url(https://events.tk3c.com/events_net/events_net/201708_thousand/images/20211227/circle_light.png) no-repeat center;
-    width: 30%;
-    height: 384px;
+    width: 27%;
+    height: 290px;
     z-index: -1;
     mix-blend-mode: screen;
-    bottom: 0;
+    bottom: 14%;
     background-size: 100% auto;
     animation: fade-slow 0.8s linear infinite alternate;
     background-color: #d39758;
@@ -3564,17 +3564,21 @@ div#NewProductAll {
         bottom: 15%;
     }
     .price-box li {
-        width: 50%;
-        margin: 30px 0;
+        width: 45%;
+        margin: 30px 16px;
     }
     .price-box li:before {
-        width: 50%;
+        width: 45%;
+        height: 310px;
+    }
+    .price-box a {
+        height: 90%;
     }
     .brand-box h2 {
         width: 30%;
     }
     .brand-box .brand-bg {
-        top: 32%;
+        top: 34%;
     }
     .brand-container {
         width: 90%;
@@ -3593,6 +3597,10 @@ div#NewProductAll {
     }
     .text-group .line {
         transform: scale(0.5);
+    }
+    .animate-group {
+        transform: scale(1);
+        margin: 6rem auto 0;
     }
 }
 
@@ -3780,7 +3788,7 @@ div#NewProductAll {
     }
 
     .animate-group {
-        margin: 7rem auto 105%;
+        margin: 4rem auto 115%;
         padding-bottom: 50%;
     }
     .animate-group .time {
@@ -3846,7 +3854,8 @@ div#NewProductAll {
     }
     .price-box li:before {
         width: 50%;
-        height: 200px;
+        height: 175px;
+        bottom: 10%;
     }
     .price-box a {
         width: 75%;
@@ -7657,14 +7666,18 @@ screen\9 {
         height: 160px;
     }
     .price-box li:before {
-        height: 180px;
+        height: 150px;
+        bottom: 6%;
+    }
+    .price a {
+        height: 100%;
+    }
+    .rank-box .rank-product {
+        height: 9.3rem;
     }
 }
 
 @media screen and (max-width: 360px) {
-    .animate-group {
-        margin: 5rem auto 105%;
-    }
     .rank-box .rank-product {
         height: 8.8rem;
     }
@@ -7686,7 +7699,8 @@ screen\9 {
         height: 140px;
     }
     .price-box li:before {
-        height: 155px;
+        height: 120px;
+        bottom: 12%;
     }
     .rank-box .rank-product {
         height: 7.8rem;
