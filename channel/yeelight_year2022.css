@@ -21,10 +21,10 @@ html{margin:0;padding:0;height:100%}
 .bg06{background:#006665}
 .list_F {padding: 2%;}
 .list_F h4{color: #c30404;background: #eed2c5;font-weight: bold;}
-body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background-image: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/2022_year/bg.jpg);background-repeat: repeat-y;background-position: center;background-color: #c70023;margin: 0 auto;max-width: 2000px;}
+body{margin:0;padding:0;width:100%;height:100%;font-family:Century Gothic,"微軟正黑體";background-image: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/2022_year/bg.jpg);background-repeat: repeat-y;background-position: center;background-color: #c70023;margin: 0 auto;}
 body:after{display:block;background-image:url(../images/banner/h1-2.png),url(../images/banner/h2-2.png),url(../images/banner/ha3-2.png);content:''}
 .copyR{background:#000;color:#fff;text-align:center;font-size:90%;padding:5px 0;width:100%;float:left;margin-top: 0;}
-.wrapper{display:block;width:1144px;margin:0 auto;}
+.wrapper{display:block;width:1144px;margin:0 auto;max-width: 2000px;}
 /*div:nth-of-type(3) {width: 100%;}*/
 form>div:nth-child(6){width:100%}
 #gotop{display:none !important;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;left:51.4%;z-index:9;bottom:100px;background: url(https://events.tk3c.com/events_net/events_net/Yeelight_event/images/202110/gotop.png) no-repeat;width: 100%;height: 40px;}
