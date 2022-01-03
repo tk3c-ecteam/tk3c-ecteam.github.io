@@ -331,7 +331,7 @@ section:hover {
 .tv-title{width: 49%;position: relative;MARGIN: -4VMAX 12VMAX;overflow: hidden;}
 /*form>div:nth-child(6){width:100%}*/
 #gotop{display:block;position:fixed;padding:10px 15px;cursor:pointer;margin:50px 0 0 620px;z-index:51;bottom:0;}
-#gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/2021_dec/top.png)no-repeat;bottom: -8%;left: 50%;background-size: 25%;position: fixed;}
+#gotop{content:"";display:block;width: 200px;height:200px;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/2021_dec/top.png)no-repeat;bottom: -8%;left: 60.5%;background-size: 25%;position: fixed;}
 #gotop img{display:none;}
 
 
@@ -367,7 +367,7 @@ a.event05:hover{background:url(../images/beef_02.png) no-repeat -795px 0}
 .fixing #btnBox03{background:0 0}
 .upbox a.btn_01{display:block;height:103px;width:202px;font-size:160%;line-height:103px;color:#fff;font-weight:700;background-image:url(../images/btn01.png);background-repeat:no-repeat;background-position:50%}
 .upbox a.btn_01:hover{background-image:url(../images/btn02.png)}
-.rightbtn{display:block;position:fixed;width: 180px;height:auto;margin:368px 0 0 605px;left:48%;z-index:100;bottom: 182px;text-align:center;}
+.rightbtn{display:block;position:fixed;width: 180px;height:auto;margin:368px 0 0 605px;left:58%;z-index:100;bottom: 182px;text-align:center;}
 .rightbtn .actbtn{width:100%;height:auto;display:block;position:relative;background: #ffffff;padding:.2% 0;box-sizing:border-box;padding-top:5px;color: black;}
 .rightbtn .actbtn:before{content:"";display:block;background: url(https://events.tk3c.com/events_net/events_net/2020TVforever/images/2022_year/sde.png) no-repeat;width: 210px;height: 167px;position:absolute;bottom: 245px;left: -2px;z-index: 0;filter:drop-shadow(0 4px 2px #6e6e6e);background-size: 87%;}
 .rightbtn .actbtn a.btn_01{width:100%;height:38px;margin:0 auto;line-height:38px;color: #1d1d1d;text-decoration:none;border-bottom: 1px solid #000;box-sizing:border-box;display:block;background-color: #ffffff;}
