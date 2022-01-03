@@ -682,8 +682,8 @@ img.n01.wow {
     .gift-box .fan{display: none;}
     .product-box {width: 90%;}
     .animate-group{height: 52rem;}
-    #pro-area .slick-prev{left: -40px;}
-    #pro-area .slick-prev:before, #pro-area .slick-next:before{font-size: 40px;}
+    #pro-area .slick-prev{left: -65px;}
+    #pro-area .slick-prev:before, #pro-area .slick-next:before{font-size: 60px;}
 }
 @media screen and (max-width:750px){
 .moset{display:block}
