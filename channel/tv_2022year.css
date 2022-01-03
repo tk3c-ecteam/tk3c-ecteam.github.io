@@ -210,6 +210,25 @@ section:hover {
     transform: translateY(5px);
     transition: all 0.7s linear;
 }
+
+.gifts li:nth-of-type(3) {
+    transform: scale(1.2);
+    margin-top: 2%;
+}
+
+#pro-area .slick-prev {
+    left: -50px;
+    top: 60%;
+}
+
+#pro-area .slick-prev:before ,
+#pro-area .slick-next:before{
+    font-size: 45px;
+}
+
+#pro-area .slick-next {
+    top: 60%;
+}
 .newbox {
     width: 100%;
     height: auto;
@@ -554,6 +573,7 @@ img.n01.wow {
 .step-group {width: 85%;}
 .bank-group {width: 85%;}
 .animate-group{height: 60rem;}
+.gifts li{width: 48%;}
 }
 @media screen and (max-width:1600px){
    #bank-area {width: 80%;}
@@ -662,6 +682,8 @@ img.n01.wow {
     .gift-box .fan{display: none;}
     .product-box {width: 90%;}
     .animate-group{height: 52rem;}
+    #pro-area .slick-prev{left: -40px;}
+    #pro-area .slick-prev:before, #pro-area .slick-next:before{font-size: 40px;}
 }
 @media screen and (max-width:750px){
 .moset{display:block}
@@ -747,7 +769,17 @@ body {background-position:-45vmin 0;background-size: 200%;background-repeat: rep
 .fire2 {top: 25%;right: 0;}
 .fire3 {left: 1%;top: 16%;}
 html{overflow: hidden;}
-
+#pro-area .slick-prev:before, #pro-area .slick-next:before{
+    font-size: 30px;
+    color: #037474;
+}
+#pro-area .slick-prev {
+    z-index: 10;
+    left: -10px;
+}
+#pro-area .slick-next {
+    right: 0;
+}
 .bannerkok {
     background: url(../images/title_head_m-01.jpg) no-repeat;
     background-size: 100% auto;
