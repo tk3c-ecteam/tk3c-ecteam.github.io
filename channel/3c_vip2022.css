@@ -297,7 +297,7 @@ i {
     top: 0;
     z-index: -1;
     background-position: 0 60px,top;
-    margin: 0 auto -11%;
+    margin: 0 auto -13%;
     max-width: 2000px;
 }
 .background2 {
@@ -4605,6 +4605,9 @@ strong i:after {
     }
     .event-box .title-e {
         margin: 0 auto 9%;
+    }
+    #product-area {
+        top: 13%;
     }
 }
 
