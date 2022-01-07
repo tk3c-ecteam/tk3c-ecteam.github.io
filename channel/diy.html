@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">    
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <link href="https://events.tkec.com.tw/events_net/events_net/pcdiy-gaming/images/fbshare.jpg" rel="image_src">
+    
+           <!--FB meta-->
+        <meta property="fb:admins" content="">
+        <meta property="fb:app_id" content="606825782724291">
+        <meta property="og:site_name" content="燦坤線上購物">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="燦坤線上｜DIY組裝電腦旗艦館">
+        <meta property="og:description" content="">
+         <meta property="og:image" content="https://events.tkec.com.tw/events_net/events_net/pcdiy-gaming/images/fbshare.jpg">
+        <meta property="og:url" content="https://events.tk3c.com/events_net/pcdiy-gaming/index.html">
+    
+        <title>燦坤線上｜DIY組裝電腦旗艦館 </title>
+          <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet" type="text/css">
+        <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+    <link href="https://events.tkec.com.tw/events_net/events_net/css/template/bank.css" rel="stylesheet" type="text/css">
+        <link href="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/css/pc_gaming_new.css" rel="stylesheet" type="text/css">    
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>       
+            
+                    
+            
+    <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+    <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+    <link href="https://events.tk3c.com/events_net/css/swiper.min.css?2 rel="stylesheet" type="text/css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    
+        <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+        <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+    
+    
+    <!--置頂TKEC-->
+    <script>
+        function ChkEvent(MainID) {
+            $.ajax({
+                url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+                type: "POST",
+                dataType: 'text',
+                data: {
+                    "url": encodeURI(document.location.toString())
+                },
+                success: function (msg) {
+                    if (msg == "0") {
+                        location.href = "http://www.tk3c.com";
+                    }
+                    if (msg == "1") {
+                        TopScript();
+                    }
+                }
+            });
+        }
+    
+        function TopScript() {
+            $.ajax({
+                url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+                type: "POST",
+                dataType: 'text',
+                success: function (msg) {
+                    $("#TkecTop").html(msg);
+                }
+            });
+        }    
+        var WebSiteName = "pcdiy-gaming";
+        $(document).ready(function () {
+            //M板下方選單右側動態載入
+            $('.fix_btn p a').each(function () {
+                var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+                $(this).attr('onclick', strjs);
+            });
+        });
+        $(document).ready(function () {
+            //延遲讀取
+            var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+                $('img[lazy="2"]').each(function () {
+                    var self = $(this);
+                    self.one("appear", function () {
+                        //alert("appeared");
+                        self.attr("src", self.attr("org"));
+                        self.removeAttr("lazy");
+                    });
+                    self.appear();
+    
+                    if (self.offset().top <= clientHitght) {
+                        self.trigger('appear');
+                    }
+                });
+        });
+    </script>
+        <!-- Swiper-->
+        <script>
+            $(document).ready(function () {
+       
+        var mySwiper = new Swiper('.swiper-container', {
+        loop:true,
+        autoplay: {
+            delay: 5000,
+            stopOnLastSlide: false,
+            disableOnInteraction: false,
+            reverseDirection: false
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        }
+        });
+            });
+    
+        </script>
+        <script>ChkEvent(1498)</script>
+    <!-- go top-->
+    <script type="text/javascript">
+    $(function(){
+        $("#gotop").click(function(){
+            jQuery("html,body").animate({
+                scrollTop:0
+            },1000);
+        });
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 300){
+                $('#gotop').fadeIn("fast");
+            } else {
+                $('#gotop').stop().fadeOut("fast");
+            }
+        });
+    });
+    </script>
+    <!--銀行區-->
+    <script>
+        $(document).ready(function () {
+            var Today = new Date();
+            var thisyear = Today.getFullYear();
+            var thismonth = '00';
+            if ((Today.getMonth() + 1) <= 9) {
+                thismonth = "0" + (Today.getMonth() + 1);
+            }
+            else {
+                thismonth = "" + (Today.getMonth() + 1);
+            }
+            var filename = thisyear + thismonth;
+            var url = "../events_net/banks/" + filename + "/acbank.html";        
+            $.ajax({
+                url: url,            
+                type: "GET",
+                dataType: 'text',
+                success: function (msg) {
+                    $("#TkecFooter").html(msg);
+                }
+            });
+        });
+    </script>
+        <script>
+            function GoLineAdd() {
+                $.ajax({
+                    url: '../ashx/event/lineadd.ashx',
+                    type: "POST",
+                    dataType: 'text',
+                    cache: false,
+                    success: function (msg) {
+                        if (msg == "1") {
+                            window.open("https://www.tk3c.com/member/event_lineadd.aspx");
+                        }
+                        else if( msg == "3") {
+                            $.ajax({
+                                url: '../ashx/flash/GetWebSite.ashx',
+                                type: "POST",
+                                data: {
+                                    "url": encodeURI(document.location.toString())
+                                },
+                                dataType: 'text',
+                                cache: false,
+                                success: function (msg) {
+                                    alert('尚未登入會員，請先登入會員');
+                                    location.href = "https://www.tk3c.com/member/member_login.aspx?done=" + msg;
+                                }
+                            });
+                        }
+                        else {
+                            alert(msg);
+                        }
+                    }
+                });
+            }
+        </script>
+    <!--選單固定效果-->
+    <script>
+        $(window).load(function () {
+            $.ajax({
+                url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+                type: "POST",           
+                dataType: 'script',
+                success: function () {                
+                    $("#btnBox03").sticky({ topSpacing: 0 });
+                }
+            });
+        });	
+    </script>
+    <!--選單ping住後更換底圖的效果 記得前面要有function-->	
+    <script type="text/javascript">
+    $(function(){
+    var top = $('#btnBox03').offset().top;
+        $(window).scroll(function () {
+            var y = $(this).scrollTop();
+            if (y >= top) {
+                $('body').addClass('fixing');
+            } else {
+                $('body').removeClass('fixing');
+            }
+        });	
+    });
+    </script>
+    <script type="text/javascript">
+     function myFunction(btn) {
+                if (btn == 'btn2') {
+                    document.getElementById("btn_02").className = "btn_02a";
+                }
+                else
+                {
+                    document.getElementById("btn_02").className = "btn_02";
+                }
+            }
+    </script>
+        
+        <script>
+             $.ajax({
+                url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+                type: "POST",           
+                dataType: 'script',
+                success: function () {                
+                    jQuery(function () {
+                        jQuery.scrollDepth(
+                            {
+                                pixelDepth: false,
+                                gtmOverride: true
+                            });
+                    });
+                }
+            });        
+        </script>
+    
+    <title>
+    
+    </title>
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"><script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/util.js"></script><script src="chrome-extension://jhffgcfmcckgmioipfnmbannkpncfipo/pagejs.js"></script>
+</head>
+<body class="">
+    
+        <form name="form1" method="post" action="./index.aspx?mainid=1498&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+    
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height:45px;">
+    
+    
+    
+        <form name="form1" method="post" action="./top.aspx?url=https%3a%2f%2fevents.tk3c.com%2fevents_net%2fpcdiy-gaming%2findex.html" id="form1">
+    <div>
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTE5OTQzODI4NTMPZBYCAgEPZBYCAgEPZBYCAgMPFgIeBFRleHQFpgE8YSBocmVmPSJodHRwczovL3d3dy50azNjLmNvbS9tZW1iZXIvbWVtYmVyX2xvZ2luLmFzcHg/ZG9uZT1XQXBJaDllU2xCekZLWndjeGlUWklRYUdtT1paZlovTnJzZWpTMENjcXplNDJLemIxVDhDN1FQVFJOd0srd2VJbzBRTGduOVJBcHo0S0RTcFhiaWtodz09Ij7mnIPlk6HnmbvlhaU8L2E+ZGRvBklYCcb6EFWitOitQsPRCiCnwA==">
+    </div>
+    
+    <div>
+    
+        <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6A345315">
+    </div>
+            <div id="PnTop">
+        
+                <script>
+                    var url = document.location.toString();
+                    var arrUrl = url.split("?");
+                    var fbhtml_url = arrUrl[0];
+                </script>
+    
+    
+    
+    
+                <!--活動頁上方灰bar st--->
+                <style>
+                    #kuai3header {
+                        width: 100%;
+                        box-sizing: border-box;
+                        z-index: 999;
+                        background: #494949;
+                        height: 45px;
+                        line-height: 45px;
+                    }
+    
+                        #kuai3header .words {
+                            margin: 0 auto;
+                            max-width: 1144px;
+                        }
+    
+                            #kuai3header .words h1.logo {
+                                background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+                                width: 219px;
+                                height: 35px;
+                                display: inline-block;
+                                text-indent: -9999px;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                float: left;
+                                margin: 5px 10px;
+                            }
+    
+                            #kuai3header .words ul.font {
+                                /*float: right;*/
+                                line-height: 45px;
+                                display: block;
+                                z-index: 99999;
+                                list-style: none;
+                                margin: 0;
+                                height: 45px;
+                                padding: 0;
+                                overflow: hidden;
+                                display :flex;
+                                justify-content :flex-end ;
+                            }
+    
+                                #kuai3header .words ul.font li {
+                                    width: auto;
+                                    margin: 0;
+                                    padding: 0;
+                                    height: 40px;
+                                    display: inline-block;
+                                    text-align: right;
+                                    overflow: hidden;
+                                    flex-shrink:0;
+                                }
+    
+                                    #kuai3header .words ul.font li > a {
+                                        color: #fff;
+                                        text-decoration: none;
+                                        font-size: 12px;
+                                        border-right: 1px solid #fff;
+                                        padding: 0 8px;
+                                        letter-spacing: 1px;
+                                        width: auto;
+                                    }
+    
+                    li.newsale a {
+                        color: #FDFF00 !important;
+                        line-height: 40px;
+                    }
+    
+                        li.newsale a > b {
+                            background: #FDFF00;
+                            color: #494949;
+                            border-radius: 5px;
+                            padding: 0 2%;
+                            font-size: 10px;
+                            margin-right: 5px;
+                        }
+    
+                        li.newsale a:after {
+                            content: "▶";
+                            margin-left: 5px;
+                            font-size: 80%;
+                        }
+    
+                    @media (max-width: 750px) {
+                        .TkecTop .menu {
+                            width: 100%;
+                            background: #494949;
+                            background: rgba(73, 73, 73, 0.95);
+                            float: none;
+                            overflow: hidden;
+                            z-index: 99999;
+                            max-height: 0;
+                            position: absolute;
+                            top: 44px;
+                            right: 0;
+                            left: 0;
+                            -webkit-transition: max-height 1s;
+                            -o-transition: max-height 1s;
+                            transition: max-height 1s;
+                        }
+    
+                            .TkecTop .menu li {
+                                float: none;
+                            }
+    
+                                .TkecTop .menu li:active {
+                                    background: rgba(120, 120, 120, 0.4);
+                                }
+    
+                            .TkecTop .menu a {
+                                height: 45px;
+                                border: 0;
+                                width: 100%;
+                                display: block;
+                            }
+                    }
+    
+                    .menu-show .menu {
+                        max-height: 480px;
+                    }
+    
+                    #showmenu {
+                        color: #FFF;
+                        position: absolute;
+                        top: 8px;
+                        right: 15px;
+                        font-size: 24px;
+                        cursor: pointer;
+                        display: none;
+                        width: 30px;
+                        height: 30px;
+                    }
+    
+                        #showmenu span {
+                            position: absolute;
+                            display: block;
+                            width: 20px;
+                            height: 2px;
+                            background: #fff;
+                            top: 50%;
+                            margin-top: -1px;
+                            left: 50%;
+                            margin-left: -10px;
+                            -webkit-transition: background 0.3s;
+                            -o-transition: background 0.3s;
+                            transition: background 0.3s;
+                        }
+    
+                            #showmenu span:before, #showmenu span:after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                background: inherit;
+                                width: 100%;
+                                height: 100%;
+                                -webkit-backface-visibility: hidden;
+                                backface-visibility: hidden;
+                                -webkit-transition: -webkit-transform 0.3s, background 0s;
+                                -webkit-transition: background 0s, -webkit-transform 0.3s;
+                                transition: background 0s, -webkit-transform 0.3s;
+                                -o-transition: transform 0.3s, background 0s;
+                                transition: transform 0.3s, background 0s;
+                                transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+                            }
+    
+                            #showmenu span:before {
+                                top: -6px;
+                            }
+    
+                            #showmenu span:after {
+                                bottom: -6px;
+                            }
+    
+    
+                    /*瀏覽區域的寬度小於750像素*/
+                    @media screen and (min-width: 320px) and (max-width: 750px) {
+                        #showmenu {
+                            display: block;
+                        }
+    
+                        #kuai3header .words ul.font li {
+                            width: 100%;
+                            display: block;
+                            text-align: left;
+                        }
+    
+                            #kuai3header .words ul.font li > a {
+                                border-right: 0px solid #fff;
+                                font-size: 90%;
+                            }
+    
+                        li.newsale a > b {
+                            padding: 0.5% 2%;
+                        }
+    
+                        #kuai3header .words .font {
+                            display: block !important;
+                        }
+    
+                        #kuai3header .words ul.font {
+                            height: auto;
+                        }
+                    }
+                </style>
+                <div id="kuai3header" class="TkecTop">
+                    <div class="words">
+                        <a href="https://www.tk3c.com/">
+                            <h1 class="logo">快3網路商城</h1>
+                        </a>
+                        <ul class="font menu">
+                            
+                            <li>
+                                <a href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0Ccqze42Kzb1T8C7QPTRNwK+weIo0QLgn9RApz4KDSpXbikhw==">會員登入</a></li>
+                            <li><a href="https://www.tk3c.com/member/member_center.aspx">會員中心</a></li>
+                            <li><a href="https://www.tk3c.com/service/serviceindex.aspx">客服中心</a></li>
+                            <li><a href="javascript:void(0);" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a></li>
+                        </ul>
+                        <div id="showmenu" class="menu-is-open"><span></span></div>
+                    </div>
+                </div>
+                <script>
+                    /*
+                    $(document).ready(function () {
+                        $('#showmenu').click(function (e) {
+                            e.preventDefault();
+                            $('body').toggleClass('menu-show');
+                            $(this).toggleClass('menu-is-open');
+                        });
+                    });
+                    */
+    
+                    function domReady(fn) {
+                        // If early
+                        document.addEventListener("DOMContentLoaded", fn);
+                        // If late
+                        if (document.readyState === "interactive" || document.readyState === "complete") {
+                            fn();
+                        }
+                    }
+    
+                    function regTopBarMenu() {
+                        document.getElementById('showmenu').addEventListener('click', function (e) {
+                            e.preventDefault();
+                            var body = document.querySelector('body');
+                            if (body.classList.contains('menu-show')) {
+                                body.classList.remove('menu-show');
+                            } else {
+                                body.classList.add('menu-show');
+                            }
+    
+                            var menuBtn = e.target;
+                            if (menuBtn.classList.contains('menu-is-open')) {
+                                menuBtn.classList.remove('menu-is-open');
+                            } else {
+                                menuBtn.classList.add('menu-is-open');
+                            }
+                        });
+                    }
+                    domReady(regTopBarMenu);
+                </script>
+            
+    </div>
+    
+            
+            
+    
+        </form>
+    
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: none; opacity: 1;"><img src="../events_net/pcdiy-gaming/images/scroll-top.png"></div>
+    <div class="fix_btn">
+        <!-- The dropdown menu begins -->
+        <div class="sample-menu-style dropdown-menu btn1">
+            <span tabindex="0" onclick="return true">商品列表</span>
+            <div tabindex="0" onclick="return true"></div>
+            <ul>
+                <li><a href="#pro2301" onclick="ProcessGaEvent('pcdiy-gaming','click','2301-熱銷排行榜');">熱銷排行榜</a></li>
+    <li><a href="#pro2302" onclick="ProcessGaEvent('pcdiy-gaming','click','2302-文書組裝平台');">文書組裝平台</a></li>
+    <li><a href="#pro2303" onclick="ProcessGaEvent('pcdiy-gaming','click','2303-效能組裝平台');">效能組裝平台</a></li>
+    <li><a href="#pro2304" onclick="ProcessGaEvent('pcdiy-gaming','click','2304-電競組裝平台');">電競組裝平台</a></li>
+    <li><a href="#pro2305" onclick="ProcessGaEvent('pcdiy-gaming','click','2305-零組件DIY區');">零組件DIY區</a></li>
+                
+            </ul>
+        </div>
+        <!-- End of the dropdown menu -->
+        <a href="javascript:void(0);" onclick="window.open('http://www.facebook.com/sharer/sharer.php?u=https://events.tk3c.com/events_net/pcdiy-gaming/index.html');return false;" class="btnbox btn3">FB分享</a> <a href="#" class="btnbox btn2 top">TOP</a>
+    
+    
+    
+    </div>
+    <div class="wrapper">
+    
+             
+                                 
+                        
+    
+                        
+                <div id="pc-gaming">
+      <div class="background"></div>
+      <div class="animate-group">
+        <h2><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/kvt.png"></h2>
+        <p class="product"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/pd.png"></p>
+      </div>
+
+      <section class="bank-box">
+        <a href="https://events.tk3c.com/events_net/events_net/banks/202201/web/bank-01.html?ec=pcdiy-gaming" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/2022vip01/bank01.png"></a>
+        <a href="https://events.tk3c.com/events_net/events_net/banks/202201/web/bank-03.html?ec=pcdiy-gaming" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/201710_nbchannel/images/2022vip01/bank02.png"></a>
+      </section>
+
+        <!-- 好康報報 -->
+        <section class="news-box">
+            <h3 class="title"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/b1.png"></h3>
+            <ul>
+                <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/g1.png"></a></li>
+            <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/g2.png"></a></li>
+            <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/g3.png"></a></li>
+            <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/g4.png"></a></li>
+            <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/g5.png"></a></li>
+            </ul>
+        </section>
+
+        <!-- 超強爆品 -->
+        <section class="special-group">
+            <h3 class="title"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/b2.png"></h3>
+            <ul>
+                <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/pd1.png"></a></li>
+            <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/pd2.png"></a></li>
+            <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/pd3.png"></a></li>
+                <li><a href="" target="_blank"><img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/pd4.png"></a></li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- 右側選單 -->
+    <aside class="aside-container">
+        <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+        <div class="aside-wrap">
+        <h3 class="aside-header">
+            <img src="https://events.tk3c.com/events_net/events_net/pcdiy-gaming/images/icon.png">
+        </h3>
+        <div class="aside-content">
+            <ul></ul>
+        </div>
+        <a href="#" class="go-top"></a>    </div>
+    </aside>
+    
+    <script type="text/javascript" src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+    <script type="text/javascript" src="./pc_gaming.js"></script>
+            
+        
+    </div>
+    <div class="itemBox m_version_non">
+        <div id="btnBox03-sticky-wrapper" class="sticky-wrapper" style="height: 2px;"><div id="btnBox03" style=""><div class="upbox">
+        <a href="#pro2301" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2301-熱銷排行榜')">熱銷排行榜</a>
+    <a href="#pro2302" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2302-文書組裝平台')">文書組裝平台</a>
+    <a href="#pro2303" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2303-效能組裝平台')">效能組裝平台</a>
+    <a href="#pro2304" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2304-電競組裝平台')">電競組裝平台</a>
+    <a href="#pro2305" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2305-零組件DIY區')">零組件DIY區</a>
+    
+        </div></div></div>
+    </div>
+    <div class="rightbtn" style="display: none;">
+        <div class="actbtn">
+        <a href="#pro2301" class="btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2301-熱銷排行榜')">熱銷排行榜</a>
+    <a href="#pro2302" class="btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2302-文書組裝平台')">文書組裝平台</a>
+    <a href="#pro2303" class="btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2303-效能組裝平台')">效能組裝平台</a>
+    <a href="#pro2304" class="btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2304-電競組裝平台')">電競組裝平台</a>
+    <a href="#pro2305" class="btn_01 p01" onclick="ProcessGaEvent('pcdiy-gaming','click','2305-零組件DIY區')">零組件DIY區</a>
+    
+        </div>
+    </div>
+    
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+       
+         
+        
+                <h2 class="protitle"><a name="pro2301" id="pro2301"></a>熱銷排行榜</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=219193&amp;ec=pcdiy-gaming" id="prod219193" name="prod219193"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202107/219193_M.jpg?t=20211223173243" border="0"></p>
+            <storg>PBA華碩平台[幻世海神]R5六核獨顯SSD電腦(R5-5600X/B550M/16G/RTX306...</storg>
+            <h4>送 NOD32防毒軟體(1裝置3年版)</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>85</span>折</p>
+            <strong class="txt_red fred"> <em>市價$39,999</em> <i>活動價$</i>33,999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=219762&amp;ec=pcdiy-gaming" id="prod219762" name="prod219762"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202108/219762_M.jpg?t=20210831134611" border="0"></p>
+            <storg>PBA華碩平台[鐵虎騎士]i9八核獨顯SSD電腦(i9-11900F/B560M/16G/GTX16...</storg>
+            <h4>雙重好禮加碼送!!!</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$34,299</em> <i>活動價$</i>34,299 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=221240&amp;ec=pcdiy-gaming" id="prod221240" name="prod221240"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202109/221240_M.jpg?t=20210922183206" border="0"></p>
+            <storg>華碩平台[光明戰神]i7八核Win10獨顯SSD電腦(i7-11700/B560M/16GB/GTX...</storg>
+            <h4>雙重好禮加碼送!!!</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$31,699</em> <i>活動價$</i>31,699 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=223544&amp;ec=pcdiy-gaming" id="prod223544" name="prod223544"><p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223544_M.jpg?t=20211214143210" border="0"></p>
+            <storg>華碩平台[狂月俠士]i5六核獨顯雙碟電腦(i5-10400/H510M/16G/GT1030/512...</storg>
+            <h4>雙重好禮加碼送!!!</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>93</span>折</p>
+            <strong class="txt_red fred"> <em>市價$18,199</em> <i>活動價$</i>16,899 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+                <h2 class="protitle"><a name="pro2302" id="pro2302"></a>文書組裝平台</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=218669&amp;ec=pcdiy-gaming" id="prod218669" name="prod218669"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202106/218669_M.jpg?t=20210617183250" border="0"></p>
+            <storg>Intel NUC平台[沙漠英雄]i7四核迷你電腦(i7-1165G7/16G/500G)...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$24,199</em> <i>活動價$</i>24,199 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=220070&amp;ec=pcdiy-gaming" id="prod220070" name="prod220070"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202108/220070_M.jpg?t=20210819143202" border="0"></p>
+            <storg>PBA華碩平台[天門武神]i3四核獨顯電腦(i3-10105F/B560M/8G/GT1030/25...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$15,999</em> <i>活動價$</i>15,999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=220507&amp;ec=pcdiy-gaming" id="prod220507" name="prod220507"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202109/220507_M.jpg?t=20210907143257" border="0"></p>
+            <storg>PBA華碩平台[虎雄戰士]i5六核雙碟效能電腦(i5-11400/B560M/16G/250G+1T...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$18,399</em> <i>活動價$</i>18,399 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=221235&amp;ec=pcdiy-gaming" id="prod221235" name="prod221235"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202109/221235_M.jpg?t=20210922183204" border="0"></p>
+            <storg>華碩平台[虎鷹戰士]i7八核效能SSD電腦(i7-11700/B560M/16G/500G+1T)...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$24,099</em> <i>活動價$</i>24,099 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=221679&amp;ec=pcdiy-gaming" id="prod221679" name="prod221679"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202110/221679_M.jpg?t=20211005183258" border="0"></p>
+            <storg>PBA華碩平台[蒼龍之月]i3四核效能電腦(i3-10100/H510M/8G/512G)...</storg>
+            <h4>高CP超值免萬元主機!</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$9,699</em> <i>活動價$</i>9,699 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=221714&amp;ec=pcdiy-gaming" id="prod221714" name="prod221714"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202110/221714_M.jpg?t=20211006143250" border="0"></p>
+            <storg>微星平台[狂星戰士]i3四核效能SSD電腦(i3-10100/H510M/8G/512G)...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$9,599</em> <i>活動價$</i>9,599 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=222246&amp;ec=pcdiy-gaming" id="prod222246" name="prod222246"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202110/222246_M.jpg?t=20211020183155" border="0"></p>
+            <storg>微星平台[天魔神兵]A8四核效能SSD電腦(A8-9600/A320M/8G/512G)...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$6,299</em> <i>活動價$</i>6,299 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=222535&amp;ec=pcdiy-gaming" id="prod222535" name="prod222535"><p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202111/222535_M.jpg?t=20211101183157" border="0"></p>
+            <storg>微星平台[仙劍武俠]i7八核效能SSD電腦(i7-11700/H510M/16G/512G)...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$17,999</em> <i>活動價$</i>17,999 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+                <h2 class="protitle"><a name="pro2303" id="pro2303"></a>效能組裝平台</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=220073&amp;ec=pcdiy-gaming" id="prod220073" name="prod220073"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202108/220073_M.jpg?t=20211223173547" border="0"></p>
+            <storg>PBA華碩平台[天門狂神]i3四核獨顯電腦(i3-10105F/B560M/16G/GTX1650/...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$21,299</em> <i>活動價$</i>21,299 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=219761&amp;ec=pcdiy-gaming" id="prod219761" name="prod219761"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202108/219761_M.jpg?t=20210806183302" border="0"></p>
+            <storg>PBA華碩平台[鐵虎壯士]i9八核獨顯SSD電腦(i9-11900F/B560M/16G/GTX10...</storg>
+            <h4>雙重好禮加碼送!!!</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$31,699</em> <i>活動價$</i>31,699 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=220647&amp;ec=pcdiy-gaming" id="prod220647" name="prod220647"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202109/220647_M.jpg?t=20210909143310" border="0"></p>
+            <storg>MSI微星平台[虎賁鬥士]i5六核獨顯SSD電腦(i5-10400F/B560/16G/GTX165...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$22,899</em> <i>活動價$</i>22,899 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=222695&amp;ec=pcdiy-gaming" id="prod222695" name="prod222695"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202111/222695_M.jpg?t=20211223173624" border="0"></p>
+            <storg>華碩平台[幻世翔神]R5六核獨顯SSD電腦(R5-5600X/B550M/16G/GTX1650/2...</storg>
+            <h4>送 NOD32防毒軟體(1裝置3年版)</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$26,999</em> <i>活動價$</i>26,999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=221240&amp;ec=pcdiy-gaming" id="prod221240" name="prod221240"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202109/221240_M.jpg?t=20210922183206" border="0"></p>
+            <storg>華碩平台[光明戰神]i7八核Win10獨顯SSD電腦(i7-11700/B560M/16GB/GTX...</storg>
+            <h4>雙重好禮加碼送!!!</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$31,699</em> <i>活動價$</i>31,699 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=222143&amp;ec=pcdiy-gaming" id="prod222143" name="prod222143"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202110/222143_M.jpg?t=20211018183138" border="0"></p>
+            <storg>華碩平台[波浪戰神]i5六核獨顯SSD電腦(i5-11400/H510M/16G/GT1030/51...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$15,999</em> <i>活動價$</i>15,999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=221235&amp;ec=pcdiy-gaming" id="prod221235" name="prod221235"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202109/221235_M.jpg?t=20210922183204" border="0"></p>
+            <storg>華碩平台[虎鷹戰士]i7八核效能SSD電腦(i7-11700/B560M/16G/500G+1T)...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$24,099</em> <i>活動價$</i>24,099 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=222248&amp;ec=pcdiy-gaming" id="prod222248" name="prod222248"><p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202110/222248_M.jpg?t=20211020183156" border="0"></p>
+            <storg>微星平台[天魔戰兵]R7八核效能SSD電腦(R7-5700G/A520M/8G/512G)...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$17,499</em> <i>活動價$</i>17,499 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+                <h2 class="protitle"><a name="pro2304" id="pro2304"></a>電競組裝平台</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=219193&amp;ec=pcdiy-gaming" id="prod219193" name="prod219193"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202107/219193_M.jpg?t=20211223173243" border="0"></p>
+            <storg>PBA華碩平台[幻世海神]R5六核獨顯SSD電腦(R5-5600X/B550M/16G/RTX306...</storg>
+            <h4>送 NOD32防毒軟體(1裝置3年版)</h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>85</span>折</p>
+            <strong class="txt_red fred"> <em>市價$39,999</em> <i>活動價$</i>33,999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=221088&amp;ec=pcdiy-gaming" id="prod221088" name="prod221088"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202109/221088_M.jpg?t=20210916143247" border="0"></p>
+            <storg>PBA華碩平台[飛天狂神]i5六核Win10獨顯SSD電腦(i5-10400/B560M/16G/R...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$34,890</em> <i>活動價$</i>34,890 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=221495&amp;ec=pcdiy-gaming" id="prod221495" name="prod221495"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202109/221495_M.jpg?t=20210929183252" border="0"></p>
+            <storg>華碩平台[虎霸金剛]i7八核獨顯SSD電腦(i7-11700/B560M/16G/RTX3060/5...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$38,599</em> <i>活動價$</i>38,599 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=223191&amp;ec=pcdiy-gaming" id="prod223191" name="prod223191"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202111/223191_M.jpg?t=20211130183134" border="0"></p>
+            <storg>華碩平台[狂星血熊]R7八核獨顯SSD電腦(R7-5800X/B550M/16G/RTX3060/2...</storg>
+            <h4>雙重好禮加碼送!!!</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$44,599</em> <i>活動價$</i>44,599 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=223379&amp;ec=pcdiy-gaming" id="prod223379" name="prod223379"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223379_M.jpg?t=20211207143145" border="0"></p>
+            <storg>華碩平台[虎嘯遊俠]i7十二核獨顯SSD電腦(i7-12700K/Z690/16G/RTX3060/...</storg>
+            <h4>三重好禮加碼送!!!</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$48,999</em> <i>活動價$</i>48,999 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=223380&amp;ec=pcdiy-gaming" id="prod223380" name="prod223380"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223380_M.jpg?t=20211207143145" border="0"></p>
+            <storg>華碩平台[虎帝遊俠]i9十六核獨顯SSD電腦(i9-12900K/Z690/32G/RTX3060/...</storg>
+            <h4>三重好禮加碼送!!!</h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$55,699</em> <i>活動價$</i>55,699 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=223683&amp;ec=pcdiy-gaming" id="prod223683" name="prod223683"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223683_M.jpg?t=20211216183116" border="0"></p>
+            <storg>華碩平台[邪星刀熊]R9十二核獨顯SSD電腦(R9-5900X/B550M/16G/GTX1650/...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$40,699</em> <i>活動價$</i>40,699 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=223742&amp;ec=pcdiy-gaming" id="prod223742" name="prod223742"><p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202112/223742_M.jpg?t=20211221143152" border="0"></p>
+            <storg>華碩平台[夜星刀虎]R9十六核獨顯SSD電腦(R9-5950X/X570/16G/GTX1650/5...</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$53,999</em> <i>活動價$</i>53,999 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+                <h2 class="protitle"><a name="pro2305" id="pro2305"></a>零組件DIY區</h2>
+                
+           
+                
+                        
+                        
+                        
+                        
+                        
+    <div class="list_F bg01">
+            <ul>
+                
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=168888&amp;ec=pcdiy-gaming" id="prod168888" name="prod168888"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201607/168888_M.jpg?t=20180117151855" border="0"></p>
+            <storg>光寶LITEON 8X 超薄型外接式燒錄器 黑</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>88</span>折</p>
+            <strong class="txt_red fred"> <em>市價$788</em> <i>活動價$</i>688 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=170562&amp;ec=pcdiy-gaming" id="prod170562" name="prod170562"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201610/170562_M.jpg?t=20180109165326" border="0"></p>
+            <storg>Tt曜越 PRO銅牌電源供應器</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$1,690</em> <i>活動價$</i>1,690 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=171611&amp;ec=pcdiy-gaming" id="prod171611" name="prod171611"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201611/171611_M.jpg?t=20201015174629" border="0"></p>
+            <storg>WD威騰 My Book 3.5吋 4TB 外接硬碟</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>86</span>折</p>
+            <strong class="txt_red fred"> <em>市價$3,499</em> <i>活動價$</i>2,990 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=177427&amp;ec=pcdiy-gaming" id="prod177427" name="prod177427"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201706/177427_M.jpg?t=20201016140456" border="0"></p>
+            <storg>SP廣穎 2.5吋 4TB 防水抗震外接硬碟</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>95</span>折</p>
+            <strong class="txt_red fred"> <em>市價$2,849</em> <i>活動價$</i>2,699 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=196031&amp;ec=pcdiy-gaming" id="prod196031" name="prod196031"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/201903/196031_M.jpg?t=20201019102646" border="0"></p>
+            <storg>SAMSUNG三星 970 EVO Plus M.2 500G 固態硬碟</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$2,629</em> <i>活動價$</i>2,629 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=205760&amp;ec=pcdiy-gaming" id="prod205760" name="prod205760"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202002/205760_M.jpg?t=20200205183015" border="0"></p>
+            <storg>Tt曜越 UX100 ARGB CPU散熱器</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$590</em> <i>活動價$</i>590 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214273&amp;ec=pcdiy-gaming" id="prod214273" name="prod214273"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214273_M.jpg?t=20201222223227" border="0"></p>
+            <storg>Micron Crucial 美光 So-Dimm DDR4 3200 16G</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$2,299</em> <i>活動價$</i>2,299 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=214285&amp;ec=pcdiy-gaming" id="prod214285" name="prod214285"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202012/214285_M.jpg?t=20201222223239" border="0"></p>
+            <storg>TOSHIBA東芝 Canvio Ready 4TB 2.5吋 行動硬碟</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>86</span>折</p>
+            <strong class="txt_red fred"> <em>市價$3,488</em> <i>活動價$</i>2,988 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=215145&amp;ec=pcdiy-gaming" id="prod215145" name="prod215145"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl08_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202101/215145_M.jpg?t=20210115183154" border="0"></p>
+            <storg>TT曜越 Smart BX1 550W 電源供應器</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$1,790</em> <i>活動價$</i>1,790 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=215813&amp;ec=pcdiy-gaming" id="prod215813" name="prod215813"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl09_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202102/215813_M.jpg?t=20210219131055" border="0"></p>
+            <storg>東芝TOSHIBA V10 2.5吋 1TB行動硬碟 紅</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>8</span>折</p>
+            <strong class="txt_red fred"> <em>市價$1,990</em> <i>活動價$</i>1,590 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=215816&amp;ec=pcdiy-gaming" id="prod215816" name="prod215816"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl10_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202102/215816_M.jpg?t=20210219131224" border="0"></p>
+            <storg>東芝TOSHIBA V10 2.5吋 2TB行動硬碟 白</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>74</span>折</p>
+            <strong class="txt_red fred"> <em>市價$2,990</em> <i>活動價$</i>2,190 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=216289&amp;ec=pcdiy-gaming" id="prod216289" name="prod216289"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl11_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202103/216289_M.jpg?t=20210309183233" border="0"></p>
+            <storg>廣穎 Long-Dimm DDR4-3200/8GB</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>95</span>折</p>
+            <strong class="txt_red fred"> <em>市價$849</em> <i>活動價$</i>799 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=217276&amp;ec=pcdiy-gaming" id="prod217276" name="prod217276"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl12_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202104/217276_M.jpg?t=20211215094933" border="0"></p>
+            <storg>廣穎 A58 SATA III 512GB  固態硬碟</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>95</span>折</p>
+            <strong class="txt_red fred"> <em>市價$1,479</em> <i>活動價$</i>1,399 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=217278&amp;ec=pcdiy-gaming" id="prod217278" name="prod217278"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl13_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202104/217278_M.jpg?t=20210420143204" border="0"></p>
+            <storg>廣穎 2.5吋 1TB 軍規防震行動硬碟(A60黑)</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>95</span>折</p>
+            <strong class="txt_red fred"> <em>市價$1,479</em> <i>活動價$</i>1,399 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=218033&amp;ec=pcdiy-gaming" id="prod218033" name="prod218033"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl14_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202105/218033_M.jpg?t=20210524143035" border="0"></p>
+            <storg>曜越TH120 ARGB主板連動一體式水冷散熱器</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            <p class="iconF_pro"><span>92</span>折</p>
+            <strong class="txt_red fred"> <em>市價$2,290</em> <i>活動價$</i>2,090 </strong> </div></a></li>
+                    
+                                <li><a href="http://www.tk3c.com/pt.aspx?pid=219389&amp;ec=pcdiy-gaming" id="prod219389" name="prod219389"><p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl15_Img" onerror="ImgError(this);" src="https://www.cdn-tkec.tw/image/product/202107/219389_M.jpg?t=20210722183317" border="0"></p>
+            <storg>Seagate 5TB One Touch HDD 行動硬碟-黑</storg>
+            <h4></h4>
+            <div class="boxF_price">
+            
+            <strong class="txt_red fred"> <em>市價$3,888</em> <i>活動價$</i>3,888 </strong> </div></a></li>
+                            
+    
+            </ul>
+        </div>
+                        
+                        
+                        
+            
+        <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->			  
+            
+            
+         <div id="TkecFooter"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+    
+    
+    <style>
+    @charset "utf-8";
+    *{margin: 0;padding: 0}
+    *:focus { outline: none; }/*黃框消除*/
+    *{-webkit-text-size-adjust:none;}/*字體尺寸限制解除*/
+    a{text-decoration:none;cursor: pointer}
+    img {border:0px; } /*圖片超連結邊框消除*/
+    .acbankbox  .fred{color:#F00; font-weight:bold;}
+    .acbankbox  .fgray{color: #666;}
+    .acbankbox .bgcolor{ background:#999;}
+    /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+    
+    @media screen and (min-width:751px) {
+    
+    
+    .acbankbox{ display:block; width:1144px; margin:0 auto; font-family: Century Gothic,"微軟正黑體"; overflow:hidden;}
+    /*銀行刷卡資料*/
+    .acbankbox .list2{width:100%;float: left;text-align: center; padding:16px;  position:relative; display:block;border-radius: 40px 40px 0 0;-moz-border-radius: 40px 40px 0 0;-webkit-border-radius: 40px 40px 0 0; box-sizing: border-box; }
+    .acbankbox .list2 u{ line-height:60px; background:#666; color:#FF0; text-align:center; font-weight:bold;border-radius: 40px;-moz-border-radius: 40px;-webkit-border-radius: 40px; display:block; font-size:40px; text-decoration:none; margin-bottom:10px; letter-spacing:1px;}
+    
+    .acbankbox .list2 ul li{height: 105px; width: 210px;text-align: center; float: left;margin: 6px;background:#FFF; border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px; list-style:none;}
+    .acbankbox .list2 .item_img{width: 100%; float:left; margin:10px auto 5px auto;}
+    .acbankbox .list2 .item_img img{width: 85%; }
+    .acbankbox .list2 p{width: 100%; display:block; float:left;}
+    .acbankbox .list2 .item_text05{ font-size:14px; margin-top:3px; text-align: center;}
+    .acbankbox .list2 .item_text05 em{ line-height:38px;font-size: 38px; font-style:normal; display:inline-block;}
+    .acbankbox .list2 .item_text05 em:before {content:"最高" ; width:16px;  display:inline-block; line-height:17px; margin-right:2px; color:#666; padding:1px; font-size: 15px; }
+    .acbankbox .box06{ display:none;}
+    
+    
+    }
+    /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+    
+    @media screen and (min-width: 320px) and (max-width: 750px){
+    .acbankbox{ display:block; width:100%; margin:0 auto; font-family: Century Gothic,"微軟正黑體";}
+    /*銀行刷卡資料*/
+    .acbankbox .list2{width:100%;float: left;text-align: center; position:relative; display:block; box-sizing:border-box; padding-bottom:1%;}
+    .acbankbox .list2 u{width:96%; line-height:60px; background:#666; color:#FF0; text-align:center; font-weight:bold; display:block; font-size:200%; text-decoration:none; margin-bottom:10px; margin:2% auto;border-radius: 40px;-moz-border-radius: 40px;-webkit-border-radius: 40px;}
+    
+    .acbankbox .list2 ul li{height: auto; width: 48%;text-align: center; float: left;margin:1%;background:#FFF; border-radius: 10px;-moz-border-radius: 10px;-webkit-border-radius: 10px; list-style:none;box-sizing:border-box; padding-bottom: 4%;}
+    .acbankbox .list2 .item_img{width: 100%; float:left; margin:10px auto 5px auto;}
+    .acbankbox .list2 .item_img img{width: 85%; }
+    .acbankbox .list2 p{width: 100%; display:block; float:left;}
+    .acbankbox .list2 .item_text05{ font-size:100%; margin-top:3px;}
+    .acbankbox .list2 .item_text05 em{ line-height:1em;font-size: 200%; font-style:normal; display:inline-block;}
+    .acbankbox .list2 .item_text05 em:before {content:"最高" ; width:16px;  display:inline-block; line-height:17px; margin-right:2px; color:#666; padding:1px;  font-size: 15px; }
+    .acbankbox .box06{}
+    }
+    
+    </style>
+    <div class="acbankbox">
+            <!--銀行區 st-->
+            <div class="list2 bgcolor">
+              <u>1月銀行 刷卡享好康</u>
+              <ul>
+                <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202201/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送$5250</em></p>
+                  </a></li>
+                  <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202201/images/sbank-03.jpg"></p>
+                  <p class="item_text05 fred"><em>送$4500</em></p>
+                  </a></li> 
+                <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202201/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$3000</em></p>
+                  </a></li>
+                
+    
+                <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202201/images/sbank-13.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2200</em></p>
+                  </a></li>
+                <li><a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img src="https://events.tkec.com.tw/events_net/events_net/banks/202201/images/sbank-04.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2100</em></p>
+                  </a></li>
+              </ul>
+            </div>
+            <!--銀行區 end-->
+    </div>
+    
+    </div>	
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+                  
+            
+    
+        </form>
+</body>
+</html>
