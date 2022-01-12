@@ -1,0 +1,110 @@
+@charset "utf-8";
+
+/* 上方選單案名稱 */
+/* 數位週邊 */
+.btn_05:after {
+    content: '\6578\4f4d\9031\908a';
+}
+
+/* 生活家電 */
+.btn_06:after {
+    content: '\751f\6d3b\5bb6\96fb';
+}
+
+/* 行動通訊 */
+.btn_07:after {
+    content: '\884c\52d5\901a\8a0a';
+}
+
+/* 大型家電 */
+.btn_08:after {
+    content: '\5927\578b\5bb6\96fb';
+}
+
+/* 驚天將價 */
+.btn_09:after {
+    content: '\9a5a\5929\964d\50f9';
+}
+
+/* 商品區標題 */
+/* 數位週邊 */
+.tbg05:after {
+    content: '\6578\4f4d\9031\908a';
+}
+
+/* 生活家電 */
+.tbg06:after {
+    content: '\751f\6d3b\5bb6\96fb';
+}
+
+/* 行動通訊 */
+.tbg007:after {
+    content: '\884c\52d5\901a\8a0a';
+}
+
+/* 大型家電 */
+.tbg08:after {
+    content: '\5927\578b\5bb6\96fb';
+}
+
+/* 驚天將價 */
+.tbg09:after {
+    content: '\9a5a\5929\964d\50f9';
+}
+
+.btn_07,
+.btn_08,
+.btn_09 {
+    display: block;
+    width: 186px;
+    line-height: 58px;
+    font-size: 1.5em;
+    color: #0079be;
+    border: 5px solid #000;
+    box-sizing: border-box;
+    background: #dff8ff;
+    box-shadow: 0 0 0 1px #0b7e9f;
+}
+
+.upbox a {
+    width: 170px;
+}
+
+.upbox a:hover {
+    color: #fff;
+    background: #d5003e;
+    border: #000 5px solid;
+    box-shadow: 0 0 0 1px #951449;
+}
+
+@media screen and (max-width: 750px) {
+    a.p05::before {
+        content: '\6578\4f4d\9031\908a';
+    }
+    a.p06::before {
+        content: '\751f\6d3b\5bb6\96fb';
+    }
+    a.p07::before {
+        content: '\884c\52d5\901a\8a0a';
+    }
+    a.p08::before {
+        content: '\5927\578b\5bb6\96fb';
+    }
+    a.p09::before {
+        content: '\9a5a\5929\964d\50f9';
+    }
+    .dropdown-menu a:before {
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #0000ff;
+    }
+}
+@media screen and (max-width: 1145px) {
+    .upbox a {
+        width: 150px;
+    }
+    
+}
