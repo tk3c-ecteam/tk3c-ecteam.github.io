@@ -66,7 +66,7 @@ section a:hover {
     box-shadow: 10px 5px 0px 0px rgba(255,255,255,0.75);
     border-top: 5px solid #ffffff;
     filter: blur(10px); */
-    z-index: 1;
+    z-index: -1;
 }
 
 .background5 {
@@ -76,7 +76,7 @@ section a:hover {
     position: absolute;
     left: -50%;
     top: 3%;
-    z-index: 1;
+    z-index: -1;
 }
 
 .background {
@@ -231,6 +231,7 @@ section a:hover {
     top: 13%;
     left: -6%;
     animation: rotate-small 1.8s linear infinite alternate;
+    z-index: 2;
 }
 
 .special-box .lantern_right {
@@ -238,6 +239,7 @@ section a:hover {
     right: -6%;
     top: 13%;
     animation: rotate-small 3s linear infinite alternate;
+    z-index: 2;
 }
 
 .special-box .item {
@@ -353,7 +355,6 @@ section a:hover {
     right: 0;
     margin: 0 auto;
     top: 39%;
-    background-size: 100% auto;
     z-index: 1;
 }
 
@@ -509,7 +510,7 @@ body {
     z-index: -1;
 }
 
-.wrapper{display:block;width:1144px;margin: 0 auto 0%;position: relative;}
+.wrapper{display:block;width:100%;margin: 0 auto 0%;position: relative;overflow: hidden;}
 /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¤ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â»ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¨ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Âº*/
 .title{height:auto;margin: 70% auto 0 auto !important;position:relative;z-index:13;top:10px;background-size:contain;display: none;}
 .title .arrow{display:block;background:url(../images/title_2.png) 0 0 no-repeat;width:1142px;height:553px;}
@@ -532,7 +533,7 @@ body {
 .title .btn_fb{display:block;background:url(../images/btn_fb.png) 0 0 no-repeat;width:149px;height:151px;position:absolute;right:150px;top:10px;z-index:13;}
 .title .btn_fb:hover{background:url(../images/btn_fb.png) 0 -151px no-repeat;width:149px;height:151px;}
 /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Å¡â€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â©ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â«ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦*/
-.protitle{position:relative;width: 45%;height: 215px;text-align:center;display:block;overflow:hidden;margin:0 auto 2%;color: #ffffff;font-size: 0;font-weight: bold;bottom: 0;line-height: 4.6em;text-indent: -9999px;z-index: 25;}
+.protitle{position:relative;width: 45%;height: 215px;text-align:center;display:block;overflow:hidden;margin:0 auto 2%;color: #ffffff;font-size: 0;font-weight: bold;bottom: 0;line-height: 4.6em;text-indent: -9999px;}
 .protitle:nth-of-type(1) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle01.png) no-repeat center;}
 .protitle:nth-of-type(2) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle06.png) no-repeat center;}
 .protitle:nth-of-type(3) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle07.png) no-repeat center;}
@@ -760,7 +761,7 @@ body {
 .progresstxt:before{left:0;}
 .progresstxt:after{right:0;}
 /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â°ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚ÂºÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â¾ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹ ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡Ãƒâ€šÃ‚Â¬ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¡ÃƒÆ’Ã¢â‚¬Â¦Ãƒâ€šÃ‚Â */
-.list06{width:100%;float:left;text-align:center;display:block;padding:10px 65px 10px;box-sizing:border-box;margin-top: 0;margin-bottom:15%;position: relative;z-index: 20;}
+.list06{width:1144px;float:unset;text-align:center;display:block;padding:10px 65px 10px;box-sizing:border-box;margin-top: 0;margin-bottom:15%;position: relative;margin: 0 auto 15%;}
 
 .list06:before {
     content: '';
@@ -787,6 +788,7 @@ body {
     background-size: 100% auto;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 .list06:after {
@@ -797,7 +799,7 @@ body {
     width: 100%;
     height: 269px;
     bottom: -19.2%;
-    z-index: -1;
+    z-index: 1;
     background-size: 100% auto;
     left: 0;
     right: 0;
@@ -937,6 +939,7 @@ body {
     .special-box ul:before {
         height: 84rem;
         top: 35%;
+        background-size: 100% auto;
     }
     .special-box:after {
         bottom: 4%;
@@ -960,6 +963,9 @@ body {
 @media screen and (max-width: 1600px) {
     .rightbtn {
         left: 42%;
+    }
+    .background2 {
+        padding-bottom: 206%;
     }
 }
 @media screen and (max-width: 1024px) {
@@ -990,7 +996,7 @@ body {
 {.fix_btn{display:none;}
 .pc_version_non{display:none}
 /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â³ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â´ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â©ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¸ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â€šÂ¬Ã…â€œÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®-PC*/
-.rightbtn{position:fixed;width: 180px;height: 105px;margin: 230px 0px 0px 581px;text-align:center;left: 59%;padding: 3% 0 0 0;background-size: 100%;z-index: 10;bottom: 61%;}
+.rightbtn{position:fixed;width: 180px;height: 105px;margin: 230px 0px 0px 581px;text-align:center;left: 59%;padding: 3% 0 0 0;background-size: 100%;z-index: 60;bottom: 61%;}
 .rightbtn:before {content: '';position: absolute;top: 0;display: block;width: 100%;height: 150px;z-index: -1;background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/rightbtn.png) no-repeat top 0 left 20px;background-position: 25px 50px;background-size: 84%;right: 15%;}
 .rightbtn .actbtn{width:119px;height:auto;display:block;position:relative;}
 .rightbtn .actbtn a .link1{width:119px;height:87px;margin:0 auto;background:url(../images/pc_right.png) 0 0 no-repeat;}
@@ -1238,10 +1244,10 @@ body {
 
 @media screen and (max-width: 1145px) {
     .special-box ul:before {
-        height: 59rem;
+        height: 60rem;
     }
-    .background2 {
-        padding-bottom: 189%;
+    .list06 {
+        width: 100%;
     }
 }
 @media screen and (max-width: 1024px) {
