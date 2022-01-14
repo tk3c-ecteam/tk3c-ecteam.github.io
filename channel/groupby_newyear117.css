@@ -60,7 +60,7 @@ section a:hover {
     height: 782px;
     background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/pro_bg.png) no-repeat center;
     position: absolute;
-    top: -3%;
+    top: -2%;
     left: -50%;
     /* background-color: #e1d1b1;
     box-shadow: 10px 5px 0px 0px rgba(255,255,255,0.75);
@@ -75,7 +75,7 @@ section a:hover {
     height: 100%;
     position: absolute;
     left: -50%;
-    top: 4%;
+    top: 3%;
     z-index: 1;
 }
 
@@ -116,6 +116,7 @@ section a:hover {
     top: 0;
     mix-blend-mode: lighten;
     z-index: 2;
+    background-position: 0 105px;
 }
 .background4 {
     background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/bg.jpg) repeat-y center;
@@ -535,9 +536,11 @@ body {
 .protitle:nth-of-type(1) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle01.png) no-repeat center;}
 .protitle:nth-of-type(2) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle06.png) no-repeat center;}
 .protitle:nth-of-type(3) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle07.png) no-repeat center;}
-.protitle:nth-of-type(4) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle04.png) no-repeat center;}
-.protitle:nth-of-type(5) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle05.png) no-repeat center;}
-.protitle:nth-of-type(6) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle03.png) no-repeat center;}
+.protitle:nth-of-type(4) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle03.png) no-repeat center;}
+.protitle:nth-of-type(5) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle08.png) no-repeat center;}
+.protitle:nth-of-type(6) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle05.png) no-repeat center;}
+.protitle:nth-of-type(7) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle02.png) no-repeat center;}
+.protitle:nth-of-type(8) {background: url(https://events.tk3c.com/events_net/events_net/groupbuy/images/2022_0117/protitle04.png) no-repeat center;}
 
 .protitle {background-size: 100% !important;}
 .pa00{background:url(../images/title_1_0A.jpg) 0 0 no-repeat;width:1144px;height:138px;}
