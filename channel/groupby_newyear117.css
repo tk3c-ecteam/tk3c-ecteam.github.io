@@ -15,7 +15,7 @@ html{margin:0;padding:0;
 
 form {
     position: relative;
-    z-index: 0;
+    z-index: 50;
 }
 .fb-fans{padding-top: 10%;}
 .boxfly{position:absolute;left:-9999em;top:-9999em;}
