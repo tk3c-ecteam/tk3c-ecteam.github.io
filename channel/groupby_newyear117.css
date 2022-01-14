@@ -91,6 +91,8 @@ section a:hover {
     background-size: 100% auto;
     max-width: 2000px;
     margin: 0 auto;
+    left: 0;
+    right: 0;
 }
 
 .background2 {
@@ -1102,6 +1104,7 @@ body {
     }
     .special-box ul:after {
         width: 48%;
+        background-size: 100% auto;
     }
     .special-box h2 {
         width: 90%;
@@ -1111,6 +1114,7 @@ body {
     }
     .special-box ul:before {
         height: 81rem;
+        background-size: 100% auto;
     }
     .special-box .price-bottom img {
         width: 100%;
@@ -1145,7 +1149,7 @@ body {
 
     .background2{
         padding-bottom: 158%;
-        width: 75;
+        width: 75%;
     }
     .special-box ul:before {
         height: 83rem;
@@ -1169,6 +1173,12 @@ body {
 @media screen and (min-width: 2400px) {
     .pro-bg {
         transform: scale(1.3,1);
+    }
+    .special-box ul:before {
+        height: 84rem;
+    }
+    .background2{
+        padding-bottom: 150%;
     }
 }
 @media screen and (min-width: 2500px) {
