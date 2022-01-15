@@ -1381,7 +1381,7 @@ body {
         bottom: -3%;
     }
     .background2 {
-        padding-bottom: 200%;
+        padding-bottom: 215%;
     }
     .list06:before {
         top: -12.35%;
@@ -1391,6 +1391,20 @@ body {
     }
     .special-box .line {
         height: 70rem;
+    }
+    .protitle {
+        margin: 0 auto 0;
+    }
+}
+@media screen and (max-width: 800px) and (min-width:700px) {
+    .list06:before {
+        top: -12%;
+    }
+    .special-box ul:before {
+        height: 58rem;
+    }
+    .list06 ul li {
+        width: 32.3% !important;
     }
 }
 @media screen and (max-width: 768px) {
@@ -1403,7 +1417,7 @@ body {
     }
     .protitle {
         margin: 0 auto 0;
-        height: 160px;
+        height: 195px;
     }
     .list06 ul li {
         width: 32.3% !important;
@@ -1444,14 +1458,14 @@ body {
         bottom: 4%;
     }
     .special-box:after {
-        bottom: -4%;
+        bottom: 4%;
         height: 5rem;
     }
     .background2 {
-        padding-bottom: 202%;
+        padding-bottom: 225%;
     }
     .list06:before {
-        top: -8.74%;
+        top: -13%;
     }
 }
 
@@ -1567,7 +1581,7 @@ body{margin:0px;padding:0;width:100%;height:auto;}
 /*end fb_box*/
  /*ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã¢â‚¬Å“ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚ÂÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€šÃ‚Â¦ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â§ÃƒÆ’Ã†â€™Ãƒâ€šÃ‚Â¥ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â®ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â¹*/
  .protitle{width:65%;text-align:center;display:block;overflow:hidden;position:relative;margin:0 auto 0%;padding-top: 0;height: auto;font-size: 0;line-height: 3em;height: 65px;background-size: 100% !important;}
- .list06:before{top: -8.2%;height: 18rem;}
+ .list06:before{top: -8.1%;height: 18rem;}
  .list06:after {
      bottom: -12.5%;
      height: 30rem;
@@ -1812,6 +1826,18 @@ h2.protitle:first-child{}
 }
 @media screen and (max-width: 1440px) and (min-width: 751px){
     html {max-width:1440px;}
+}
+
+@media screen and (max-width: 600px) and (min-width: 500px){
+    .special-box ul:before {
+        height: 43rem;
+    }
+    .list06:before {
+        top: -7%;
+    }
+    .protitle {
+        width: 45%;
+    }
 }
 
 @media screen and (max-width: 376px) {
