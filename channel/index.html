@@ -394,7 +394,7 @@
         var phone = $('#txtPhone').val();
         var type = $('#type :selected').val();
         var num = $('#number :selected').val();
-        var store = $('#store :selected').val();
+        var store = $('#txtStore').val();
         var assume = $('#txtAssume').val();
         var know = $('#RadioKnow:checked').val();
 
@@ -429,6 +429,8 @@
         });
       });
 
+
+      //Email驗證
       function isEmail(email) {
         var rule = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z]+$/;
         if (email.search(rule) !== -1) {
@@ -763,7 +765,7 @@
               <i id="lbEmail">＊請確實填寫，將寄發相關資訊給您</i><br>
               <h3 class="fontb">手機號碼<i id="IPhone">＊</i></h3>
               <input name="txtPhone" type="text" maxlength="10" id="txtPhone" class="box3" placeholder="0800100100"><br>
-              <h3 class="fontb">機型</h3>
+              <h3 class="fontb">機型<i id="Itype">＊</i></h3>
               <select name="types" id="type">
                 <option value="1">Galaxy Z Fold3/冷杉綠</option>
                 <option value="2">Galaxy Z Fold3/幻影黑</option>
@@ -774,18 +776,15 @@
                 <option value="7">Galaxy Z Flip3/日落紫</option>
                 <option value="8">Galaxy Z Flip3/幻影黑</option>
               </select><br>
-              <h3 class="fontb">數量</h3>
+              <h3 class="fontb">數量<i id="Inumber">＊</i></h3>
               <select name="number" id="number">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
               </select><br>
               <h3 class="fontb">取貨店</h3>
-              <select name="store" id="store">
-                <option value="1">內湖旗艦店(219)</option>
-                <option value="2">嘉義朴子店(222)</option>
-              </select><br>
-              <h3 class="fontb">擔當<i id="Iassume">＊</i></h3>
+              <input name="txtStore" type="text" maxlength="20" id="txtStore" class="box3" placeholder="內湖旗艦店"><br>
+              <h3 class="fontb">擔當</h3>
               <input name="txtAssume" type="text" maxlength="30" id="txtAssume" class="box3" placeholder="陳小明"><br>
           </h3>
 
