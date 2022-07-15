@@ -181,9 +181,19 @@
       <img class="special-bg" :src="'images/special_bg.png' | siteUrl">
       <ul>
         <li v-for="(card,i) in cards">
-          <a :class="[(today >= card.start && today < card.end) ? 'active': '']"><img
-              :src="'images/' + card.image | siteUrl" v-if="today >= card.start && today < card.end">
-            <img v-else :src="'images/' + card.image_off | siteUrl">
+          <!-- 尚未開放 -->
+          <a v-if="today < card.start">
+            <img :src="'images/' + card.image_off | siteUrl">
+          </a>
+
+          <!-- 可開搶 -->
+          <a v-else-if="today >= card.start && today < card.end"
+            :class="[today >= card.start && today < card.end ? 'active': '']">
+            <img :src="'images/' + card.image | siteUrl">
+          </a>
+
+          <a v-else class="off">
+            <img :src="'images/' + card.image | siteUrl">
           </a>
         </li>
       </ul>
