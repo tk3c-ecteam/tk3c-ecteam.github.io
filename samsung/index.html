@@ -743,7 +743,7 @@
               <h3>3.選擇規格</h3>
               <ul class="pd_style">
                 <li v-for="(stand,j) in tabs[isActive].standard">
-                  <input type="radio" name="dimensionspec" :id="'sp' + j" @change="changeImage(j)"
+                  <input type="radio" name="dimensionspec" :id="'sp' + j" @change="changeImage"
                     :value="tabs[isActive].colors[isColor].value[j]">
                   <label :for="'sp' + j"><span>
                       <p>封面螢幕：{{ stand.size }}</p>
