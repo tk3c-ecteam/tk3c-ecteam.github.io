@@ -26,7 +26,11 @@
   <link href="https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/style/main.css" rel="stylesheet">
   <script src="https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/js/main.js" type="text/javascript">
   </script>
-  <title>Galaxy Unpacked 預購</title>
+
+  <!-- 新增樣式 -->
+  <link href="./css/samsung_flip.css" rel="stylesheet">
+
+  <title>Samsung Galaxy Unpacked 預購</title>
   <script src="https://www.tk3c.com/js/vue.min.js" type="text/javascript"></script>
   <script src="https://events.tk3c.com/events_net/js/commonUtil.js" type="text/javascript"></script>
   <style id="x-style-default" type="text/css">
@@ -159,25 +163,6 @@
 
     .x-modal__btn+.x-modal__btn {
       margin-left: 10px
-    }
-
-    .text-center {
-      text-align: center
-    }
-
-    .align-center {
-      display: flex;
-      align-items: center
-    }
-
-    .flex-center {
-      display: flex;
-      align-items: center;
-      justify-content: center
-    }
-
-    [v-cloak] {
-      display: none;
     }
   </style>
   <script src="https://events.tk3c.com/events_net/js/eventUtil.js" type="text/javascript"></script>
@@ -372,11 +357,6 @@
   </script>
   <!--置頂TKEC-->
 
-  <style type="text/css">
-    [v-cloak] {
-      display: none;
-    }
-  </style>
   <div id="TkecTop" style="height: 45px;">
 
 
@@ -675,8 +655,8 @@
 
       <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="E3EC8CC1">
     </div>
-    <main id="app" class="container-fluid gx-0" v-cloak>
-      <div id="desktopMenu" class="leftMune wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+    <main id="app" class="container-fluid gx-0" v-cloak :class="{vip:vip}">
+      <div id="desktopMenu" class="leftMune wow fadeInUp">
         <ul>
           <li class="col-1"><a href="#identityVerifyNomal" target="_self" class="leftMenu_item passalready">
               <p class="leftMenu_item_wording">會員</p>
@@ -698,7 +678,7 @@
       </div>
 
       <!-- banner區 -->
-      <section id="topCarousel" class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      <section id="topCarousel" class="wow fadeInUp">
         <div id="carouselExampleIndicators" data-bs-ride="carousel" class="carousel slide">
           <div class="carousel-inner">
             <div class="carousel-item active"><img
@@ -709,7 +689,33 @@
           </div>
         </div>
       </section>
-      <section id="pdSelect" class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+
+      <!-- 黑卡會員驗證 -->
+      <section class="vip-area" v-if="isVip">
+        <div class="wrapper frombox">
+          <div class="big-titles">
+            <h2 class="area_title">Surpass黑卡會員登入驗證​<span>登入驗證享Surpass尊榮預購方案</span></h2>
+          </div>
+          <div class="formStyle">
+            <div class="formList">
+              <div class="tab">黑卡會員卡號</div>
+              <div class="tab_put"><input v-model="cardId" name="txtCardId" type="text" maxlength="30" id="txtCardId"
+                  class="box3"></div>
+            </div>
+            <div class="formList">
+              <div class="tab">手機</div>
+              <div class="tab_put"><input v-model="phone" name="txtPhone" type="text" maxlength="10" id="txtPhone"
+                  placeholder="0928123456" class="box3"><br></div>
+            </div>
+            <div class="formList button">
+              <a class="normal" @click="buy">一般會員​，繼續購買</a>
+              <a class="login" @click="validate">黑卡會員，立即驗證</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section v-if="isMember" id="pdSelect" class="wow fadeInUp">
         <header class="py-5">
           <h2 class="area_title">即刻選擇產品</h2> <i class="bi bi-chevron-compact-down d-block text-center"></i> <i
             class="bi bi-chevron-compact-down d-block text-center"></i>
@@ -746,8 +752,8 @@
                   <input type="radio" name="dimensionspec" :id="'sp' + j" @change="changeImage"
                     :value="tabs[isActive].colors[isColor].value[j]">
                   <label :for="'sp' + j"><span>
-                      <p>封面螢幕：{{ stand.size }}</p>
-                      <p>記憶體： {{  stand.capacity }}</p>
+                      <p>尺寸：{{ stand.size }}</p>
+                      <p v-if="stand.capacity != ''">記憶體： {{  stand.capacity }}</p>
                     </span> <span><b>{{ stand.price }}</b></span>
                   </label>
                 </li>
@@ -757,7 +763,7 @@
           </div>
         </article>
       </section>
-      <section id="gift" class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      <section id="gift" class="wow fadeInUp">
         <header class="py-5">
           <h2 class="area_title">燦坤獨家優惠</h2> <i class="bi bi-chevron-compact-down d-block text-center"></i> <i
             class="bi bi-chevron-compact-down d-block text-center"></i>
@@ -770,28 +776,15 @@
               alt="_mobile" class="d-block w-100 d-sm-none"></figure>
         </article>
       </section>
-      <section id="purchase" class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-        <header class="py-5">
-          <h2 class="area_title">登記預購禮</h2> <i class="bi bi-chevron-compact-down d-block text-center"></i> <i
-            class="bi bi-chevron-compact-down d-block text-center"></i>
-        </header>
-        <div style="height: 950px;"><iframe
-            src="https://events.tk3c.com/events_net/samsungs22s8login/index.aspx"></iframe></div>
-        <article class="container-sm px-4 p-md-5">
-          <ol>
-            <li>1. 凡於活動期間內 (2022/02/15 12:00 – 2022/02/28 23:59)至燦坤3C購買Galaxy S22系列旗艦手機、S8系列平板
-              ，上網登錄個人資料即可享有預購禮資格。若未於登錄截止時間內完成登錄，即視為自動放棄參加活動資格，不得要求登錄延期或參加活動，亦不得要求額外以其他方式獲得活動贈品。</li>
-            <li>2. 消費者保證所有填寫或提出之資料均為真實且正確，並且未冒用或盜用任何第三人之資料，如有疑慮或發現不符資格、資料造假、不實，台灣三星有權要求提供相關證明，以佐證其為消費者本人，否則台灣三星有權取消兌換資格。
-            </li>
-            <li>3. 燦坤3C與台灣三星電子公司保留此活動辦法之修改、變更之權利。如有未盡事宜，以燦坤公司公告為準。燦坤公司並保有解釋、修改或終止本活動之權利。</li>
-            <li>4. 蒐集消費者登錄資料之目的係作為確認身份，燦坤3C與台灣三星電子公司將依相關規定保護個人資料。</li>
-          </ol>
-        </article>
+
+      <section id="purchase" class="wow fadeInUp">
         <article class="container-sm px-4 p-md-5 text-center"><button type="button"><i
               class="bi bi-bag-check pe-3"></i>前往結帳
-          </button></article>
+          </button>
+        </article>
       </section>
-      <section id="rules" class="wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+
+      <section id="rules" class="wow fadeInUp">
         <header class="py-5">
           <h2 class="area_title">活動辦法</h2> <i class="bi bi-chevron-compact-down d-block text-center"></i> <i
             class="bi bi-chevron-compact-down d-block text-center"></i>
@@ -3004,21 +2997,21 @@
       el: '#app',
       data: {
         tabs: [{
-            "title": "S22",
+            "title": "Flip4",
             "colors": [{
-                "green": "極光綠",
+                "rossgold": "雲霧粉",
                 "value": ["224824-115promotion", "224828-115promotion"]
               },
               {
-                "rossgold": "雪霧粉",
+                "coldblue": "冰川藍",
                 "value": ["224825-115promotion", "224829-115promotion"]
               },
               {
-                "white": "皎月白",
+                "purple": "精靈紫",
                 "value": ["224826-115promotion", "224830-115promotion"]
               },
               {
-                "black": "星際黑",
+                "gray": "黑夜灰",
                 "value": ["224827-115promotion", "224831-115promotion"]
               }
             ],
@@ -3041,32 +3034,28 @@
             ]
           },
           {
-            "title": "S22+",
+            "title": "Fold4+",
             "colors": [{
-                "green": "極光綠",
+                "black": "幻影黑​",
                 "value": ["224832-115promotion", "224836-115promotion"]
               },
               {
-                "rossgold": "雪霧粉",
+                "gold": "迷霧金​",
                 "value": ["224833-115promotion", "224837-115promotion"]
               },
               {
-                "white": "皎月白",
+                "green": "雪松綠​",
                 "value": ["224834-115promotion", "224838-115promotion"]
-              },
-              {
-                "black": "星際黑",
-                "value": ["224835-115promotion", "224839-115promotion"]
               }
             ],
             "standard": [{
                 "size": "6.6吋",
-                "capacity": "8G/128G",
+                "capacity": "12G/256G",
                 "price": "NT$29,900"
               },
               {
                 "size": "6.6吋",
-                "capacity": "8G/256G",
+                "capacity": "12G/512G",
                 "price": "NT$31,900"
               }
             ],
@@ -3074,78 +3063,46 @@
               "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224832-115promotion.jpg",
               "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224833-115promotion.jpg",
               "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224834-115promotion.jpg",
-              "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224835-115promotion.jpg"
             ],
           },
           {
-            "title": "S22Ultra",
+            "title": "Watch5 Pro",
             "colors": [{
-                "green": "極光綠",
-                "value": ["224840-115promotion", "224844-115promotion"]
-              }, {
-                "wine": "夜幕紅",
-                "value": ["224841-115promotion", "224845-115promotion"]
-              },
-              {
-                "white": "皎月白",
-                "value": ["224842-115promotion", "224846-115promotion"]
-              },
-              {
-                "black": "星際黑",
-                "value": ["224843-115promotion", "224847-115promotion"]
-              }
-            ],
+              "black": "鈦炫黑",
+              "value": ["224840-115promotion", "224844-115promotion"]
+            }, {
+              "gray": "鈦晶灰",
+              "value": ["224841-115promotion", "224845-115promotion"]
+            }],
             "standard": [{
-                "size": "6.8吋",
-                "capacity": "12G/256G",
-                "price": "NT$38,900"
-              },
-              {
-                "size": "6.8吋",
-                "capacity": "12G/512G",
-                "price": "NT$41,900",
-              }
-            ],
+              "size": "45mm",
+              "capacity": "",
+              "price": "NT$24,900"
+            }],
             "image": [
               "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224840-115promotion.jpg",
               "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224841-115promotion.jpg",
-              "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224842-115promotion.jpg",
-              "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224843-115promotion.jpg"
             ]
           },
           {
-            "title": "s8+ WIFI",
+            "title": "Watch5 Pro LTE",
             "colors": [{
-                "rossgold": "粉霧金",
+                "black": "鈦炫黑",
                 "value": ["224821-115promotion"]
               },
               {
-                "black": "黑耀灰",
+                "gray": "鈦晶灰",
                 "value": ["224822-115promotion"]
               }
             ],
             "standard": [{
-              "size": "12.4吋",
-              "capacity": "8G/128G",
-              "price": "NT$30,490",
+              "size": "45mm",
+              "capacity": "",
+              "price": "NT$24,900"
             }],
             "image": [
               "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224821-115promotion.jpg",
               "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224822-115promotion.jpg"
-            ]
-          },
-          {
-            "title": "s8+ Ultra WIFI",
-            "colors": [{
-              "black": "星際黑",
-              "value": ["224823-115promotion"]
-            }],
-            "standard": [{
-              "size": "14.6吋",
-              "capacity": "12G/256G"
-            }],
-            "image": [
-              "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/224823-115promotion.jpg"
             ]
           }
 
@@ -3154,7 +3111,12 @@
         isTab: false,
         isColor: 0,
         types: [],
-        isStandard: 0
+        isStandard: 0,
+        isMember: false,
+        cardId: '',
+        phone: '',
+        isVip: true,
+        vip: false
       },
       mounted() {
         $('input[id=sp0]').prop("checked", true);
@@ -3164,6 +3126,7 @@
       },
       methods: {
         change(index) {
+          //選擇機型頁籤切換
           $('input[id=sp0]').prop("checked", true);
           this.isActive = index;
           this.isTab = true;
@@ -3171,13 +3134,43 @@
           this.isStandard = 0;
         },
         choiceColor(index) {
+          //選擇顏色切換
           this.isColor = index;
         },
         changeImage() {
+          //更換每個不同機型的圖片
           $('#pdSelect .left-top img').attr('src',
             "https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/" + event.target
             ._value +
             ".jpg");
+        },
+        isNumber(value) {
+          if (!isNaN(value)) {
+            return true;
+          } else {
+            return false;
+          }
+        },
+        validate() {
+          //驗證黑卡會員資料
+
+          if (this.cardId == '' || this.phone == '') {
+            alert('資料不能空白!');
+            return false;
+          }
+          if (this.isNumber(this.cardId) === false || this.isNumber(this.phone) === false) {
+            alert('只能是數字!');
+            return false;
+          } else {
+            alert('驗證成功!');
+            this.isVip = false;
+            this.isMember = true;
+            this.vip = true;
+          }
+        },
+        buy() {
+          this.isVip = false;
+          this.isMember = true;
         }
       },
     })
