@@ -79,6 +79,28 @@
   background: #e7bd42;
 }
 
+#purchase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+#purchase #rule {
+  width: auto;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  margin: 0 1%;
+}
+#purchase label {
+  width: auto;
+  font-size: 20px;
+}
+
 @media screen and (min-width: 768px) {
   #app .pd_Package .part_01 ul.pd_style_Select > * {
     width: 23%;
@@ -105,6 +127,12 @@
     margin: 0 0 0 -4%;
   }
 }
+@media screen and (min-width: 769px) and (max-width: 800px) {
+  #pdSelect .pd_Package .part_02 .right-bottom ul.pd_style li input:checked ~ label {
+    width: 108%;
+    margin: 0 0 0 -4%;
+  }
+}
 @media screen and (max-width: 768px) {
   #app .pd_Package .part_01 ul.pd_style_Select li b {
     line-height: 2em;
@@ -114,14 +142,48 @@
   .formStyle .formList.button a {
     font-size: 20px;
   }
+
+  #pdSelect .pd_Package .part_02 .right-bottom ul.pd_style li input:checked ~ label {
+    width: 104%;
+    margin: 0 0 0 -2%;
+  }
+
+  #purchase article {
+    padding-top: 6%;
+  }
 }
 @media screen and (max-width: 576px) {
   .formStyle .formList.button a {
     font-size: 15px;
   }
+
+  #purchase article {
+    padding-top: 8%;
+  }
+  #purchase label {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 376px) {
+  #purchase #rule {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  #purchase label {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 360px) {
   .formStyle .formList.button a {
     font-size: 13px;
+  }
+}
+@media screen and (max-width: 320px) {
+  #purchase #rule {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  #purchase label {
+    font-size: 14px;
   }
 }

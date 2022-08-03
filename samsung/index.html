@@ -708,7 +708,7 @@
                   placeholder="0928123456" class="box3"><br></div>
             </div>
             <div class="formList button">
-              <a class="normal" @click="buy">一般會員​，繼續購買</a>
+              <a class="normal" @click="normal">一般會員​，繼續購買</a>
               <a class="login" @click="validate">黑卡會員，立即驗證</a>
             </div>
           </div>
@@ -763,23 +763,34 @@
           </div>
         </article>
       </section>
-      <section id="gift" class="wow fadeInUp">
+      <section id="gift" class="wow fadeInUp" v-if="isOpen">
         <header class="py-5">
           <h2 class="area_title">燦坤獨家優惠</h2> <i class="bi bi-chevron-compact-down d-block text-center"></i> <i
             class="bi bi-chevron-compact-down d-block text-center"></i>
         </header>
+
         <article class="container-sm px-4 p-md-5">
-          <figure><img
+          <!-- vip 會員優惠-->
+          <figure v-if="vip"><img
+              src="https://events.tk3c.com/events_net/events_net/202012tk3cWaterfrontcafe/images/202012tk3cWaterfrontcafebanner.jpg"
+              alt="_desktop" class="d-block w-100 d-none d-sm-block"> <img
+              src="https://events.tk3c.com/events_net/events_net/202012tk3cWaterfrontcafe/images/202012tk3cWaterfrontcafebanner.jpg"
+              alt="_mobile" class="d-block w-100 d-sm-none"></figure>
+          <!-- 一般會員優惠 -->
+          <figure v-else><img
               src="https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/2202SamsungGiftPC.jpg"
               alt="_desktop" class="d-block w-100 d-none d-sm-block"> <img
               src="https://events.tk3c.com/events_net/events_net/samsungs22s8preorder/images/2202SamsungGiftM.jpg"
               alt="_mobile" class="d-block w-100 d-sm-none"></figure>
+
         </article>
       </section>
 
-      <section id="purchase" class="wow fadeInUp">
-        <article class="container-sm px-4 p-md-5 text-center"><button type="button"><i
-              class="bi bi-bag-check pe-3"></i>前往結帳
+      <section id="purchase" class="wow fadeInUp" v-if="isOpen">
+        <article class="container-sm px-4 p-md-5 text-center">
+          <input value="1" name="radio1" type="checkbox" id="rule" v-model="rule">
+          <label for="rule">我已經詳細閱讀並同意遵循本活動辦法</label><br>
+          <button type="button" @click="buy"><i class="bi bi-bag-check pe-3"></i>前往結帳
           </button>
         </article>
       </section>
@@ -3116,7 +3127,9 @@
         cardId: '',
         phone: '',
         isVip: true,
-        vip: false
+        vip: false,
+        isOpen: false,
+        rule: ''
       },
       mounted() {
         $('input[id=sp0]').prop("checked", true);
@@ -3166,11 +3179,21 @@
             this.isVip = false;
             this.isMember = true;
             this.vip = true;
+            this.isOpen = true;
           }
         },
-        buy() {
+        normal() {
+          //一般會員
           this.isVip = false;
           this.isMember = true;
+          this.isOpen = true;
+        },
+        buy() {
+          //點擊付款按鈕(this.rule = true => 有勾選 同意)
+          if (this.rule == '') {
+            alert('請詳閱以下活動辦法!');
+            return false;
+          }
         }
       },
     })
