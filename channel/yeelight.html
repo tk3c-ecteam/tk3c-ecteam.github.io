@@ -532,6 +532,15 @@
         </div>
         <!--/////////////////////////////////////  主視覺  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
         <script type="text/javascript" src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+        <script>
+            $(function () {
+                for (let i = 0; i < $('.bg01').length; i++) {
+                    if (i == 0) $('.bg01').eq(i).addClass('num-4');
+                    if (i == 1) $('.bg01').eq(i).addClass('num-2');
+                    if (i == 2 || i == 3) $('.bg01').eq(i).addClass('num-6');
+                }
+            });
+        </script>
 
         </div>
         <div class="itemBox m_version_non">
