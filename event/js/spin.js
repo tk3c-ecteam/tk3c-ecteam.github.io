@@ -7,6 +7,7 @@ const app = new Vue({
     //轉盤轉到的獎勵
     rewardList: ["spin9", "spin100", "spinCom2000", "spin300",
       "spin500", "spin1000", "spin1500", "spin2000", "spinM100", "spinMM500"],
+    rate: [12, 8, 3, 5, 15, 6, 4, 20, 27],
     isShow: false,
     isAlert: false,
     isWarn: false,
@@ -59,7 +60,19 @@ const app = new Vue({
       //轉盤旋轉
       this.roll = true;
       const { angle, rewardList } = this;
-      this.angle = angle - angle % 360 + 8 * 360 + (360 / rewardList.length * data);
+      var total = eval(this.rate.join("+"));
+      var randomList = [];
+
+      for (let i = 0; i < this.randomList.length; i++) {
+        for (let j = 0; j < this.rate.length; j++) {
+          randomList.push(i);
+        }
+      }
+
+      var randNumber = Math.floor(Math.random() * total);
+      var newRand = rewardList[randomList[randNumber]];
+      console.log(newRand);
+      this.angle = angle - angle % 360 + 8 * 360 + (360 / newRand);
       setTimeout(() => {
         this.roll = false;
         this.reward = this.rewardList[data];
