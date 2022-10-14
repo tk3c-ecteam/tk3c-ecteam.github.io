@@ -59,14 +59,12 @@ const app = new Vue({
     rotate(data) {
       //轉盤旋轉
       this.roll = true;
-      const { angle, rewardList } = this;
-      var total = eval(this.rate.join("+"));
+      const { angle, rewardList, rate } = this;
+      var total = eval(rate.join("+"));
       var randomList = [];
-      let randLength = this.randomList;
-      let rateLength = this.rate;
 
-      for (let i = 0; i < randLength.length; i++) {
-        for (let j = 0; j < rateLength.length; j++) {
+      for (let i = 0; i < rewardList.length; i++) {
+        for (let j = 0; j < rate.length; j++) {
           randomList.push(i);
         }
       }
@@ -77,7 +75,7 @@ const app = new Vue({
       this.angle = angle - angle % 360 + 8 * 360 + (360 / newRand);
       setTimeout(() => {
         this.roll = false;
-        this.reward = this.rewardList[data];
+        this.reward = newRand;
         this.rewardImg = this.getMsgImg('images/' + this.reward + '.png');
         this.isAlert = true;
       }, 4000);
