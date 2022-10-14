@@ -63,19 +63,19 @@ const app = new Vue({
       var total = eval(rate.join("+"));
       var randomList = [];
 
-      for (let i = 0; i < rewardList.length; i++) {
-        for (let j = 0; j < rate.length; j++) {
-          randomList.push(i);
-        }
-      }
+      /* for (let i = 0; i < rewardList.length; i++) {
+         for (let j = 0; j < rate.length; j++) {
+           randomList.push(i);
+         }
+       }*/
 
       var randNumber = Math.floor(Math.random() * total);
       var newRand = rewardList[randomList[randNumber]];
-      console.log(newRand);
-      this.angle = angle - angle % 360 + 8 * 360 + (360 / newRand);
+
+      this.angle = angle - angle % 360 + 8 * 360 + (360 / this.rewardList.length * data);
       setTimeout(() => {
         this.roll = false;
-        this.reward = newRand;
+        this.reward = this.rewardList[data];
         this.rewardImg = this.getMsgImg('images/' + this.reward + '.png');
         this.isAlert = true;
       }, 4000);
