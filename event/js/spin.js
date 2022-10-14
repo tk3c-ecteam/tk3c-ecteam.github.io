@@ -62,9 +62,11 @@ const app = new Vue({
       const { angle, rewardList } = this;
       var total = eval(this.rate.join("+"));
       var randomList = [];
+      let randLength = this.randomList;
+      let rateLength = this.rate;
 
-      for (let i = 0; i < this.randomList.length; i++) {
-        for (let j = 0; j < this.rate.length; j++) {
+      for (let i = 0; i < randLength.length; i++) {
+        for (let j = 0; j < rateLength.length; j++) {
           randomList.push(i);
         }
       }
