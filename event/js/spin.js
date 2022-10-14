@@ -7,7 +7,7 @@ const app = new Vue({
     //轉盤轉到的獎勵
     rewardList: ["spin9", "spin100", "spinCom2000", "spin300",
       "spin500", "spin1000", "spin1500", "spin2000", "spinM100", "spinMM500"],
-    rate: [12, 8, 3, 5, 15, 6, 4, 20, 27],
+    rate: [8, 6, 7, 1, 19, 8, 4, 8, 9, 30],
     isShow: false,
     isAlert: false,
     isWarn: false,
@@ -54,29 +54,30 @@ const app = new Vue({
       this.count++;
 
       const data = Math.floor(Math.random() * this.rewardList.length);
-      this.rotate(data);
+      this.rotate();
     },
-    rotate(data) {
+    rotate() {
       //轉盤旋轉
       this.roll = true;
       const { angle, rewardList, rate } = this;
       var total = eval(rate.join("+"));
       var randomList = [];
 
-      /* for (let i = 0; i < rewardList.length; i++) {
-         for (let j = 0; j < rate.length; j++) {
-           randomList.push(i);
-         }
-       }*/
+      for (let i = 0; i < rewardList.length; i++) {
+        for (let j = 0; j < rate.length; j++) {
+          randomList.push(i);
+        }
+      }
+
 
       var randNumber = Math.floor(Math.random() * total);
       var newRand = rewardList[randomList[randNumber]];
 
-      this.angle = angle - angle % 360 + 8 * 360 + (360 / this.rewardList.length * data);
+      this.angle = angle - angle % 360 + 8 * 360 + (360 / rewardList.length * randNumber);
       setTimeout(() => {
         this.roll = false;
-        this.reward = this.rewardList[data];
-        this.rewardImg = this.getMsgImg('images/' + this.reward + '.png');
+        //this.reward = rewardList[data];
+        this.rewardImg = this.getMsgImg('images/' + newRand + '.png');
         this.isAlert = true;
       }, 4000);
     },
