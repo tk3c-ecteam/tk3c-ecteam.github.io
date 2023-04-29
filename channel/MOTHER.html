@@ -686,8 +686,9 @@
           <h2 class="title"><img :src="'bar_d.png' | siteUrl" /></h2>
           <ul>
             <li v-for="(sale,i) in sales">
-              <a :href="sale.url">
+              <a @click="alertD(i)">
                 <img :src="sale.image | siteUrl">
+                <input type="text" class="code discountCodeD" readonly="readonly" :value="i.code" />
               </a>
             </li>
           </ul>
