@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="媽咪開心券，領券最高現折498">
+  <link href="https://events.tk3c.com/events_net/events_net/kings_discount/images/fbshare.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="媽咪開心券 | 燦坤線上">
+  <meta property="og:description" content="媽咪開心券，領券最高現折498">
+  <meta property="og:image" content="https://events.tk3c.com/events_net/events_net/kings_discount/images/fbshare.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/kings_discount/index.html">
+
+  <title>媽咪開心券 | 燦坤線上</title>
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/kings_discount/css/discount.css" rel="stylesheet"
+    type="text/css">
+
+
+  <script src="https://www.tk3c.com/js/vue.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <link href="https://events.tk3c.com/events_net/css/swiper.min.css?2" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "kings_discount";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+  <!-- Swiper-->
+  <script>
+    $(document).ready(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          reverseDirection: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        }
+      });
+    });
+  </script>
+  <script>
+    ChkEvent(1841)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+  <script>
+    function GoLineAdd() {
+      $.ajax({
+        url: '../ashx/event/lineadd.ashx',
+        type: "POST",
+        dataType: 'text',
+        cache: false,
+        success: function (msg) {
+          if (msg == "1") {
+            window.open("https://www.tk3c.com/member/event_lineadd.aspx");
+          } else if (msg == "3") {
+            $.ajax({
+              url: '../ashx/flash/GetWebSite.ashx',
+              type: "POST",
+              data: {
+                "url": encodeURI(document.location.toString())
+              },
+              dataType: 'text',
+              cache: false,
+              success: function (msg) {
+                alert('尚未登入會員，請先登入會員');
+                location.href = "https://www.tk3c.com/member/member_login.aspx?done=" + msg;
+              }
+            });
+          } else {
+            alert(msg);
+          }
+        }
+      });
+    }
+  </script>
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+  <script>
+    $.ajax({
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+      type: "POST",
+      dataType: 'script',
+      success: function () {
+        jQuery(function () {
+          jQuery.scrollDepth({
+            pixelDepth: false,
+            gtmOverride: true
+          });
+        });
+      }
+    });
+  </script>
+
+
+</head>
+
+<body class="fixing">
+
+
+
+
+
+
+
+  <script>
+    var newpage = 1;
+
+    function ScriptAddBtn() {
+      document.getElementById("RTTop_ctl00_leftbtn").style.display = "block";
+      document.getElementById("RTTop_ctl00_rightbtn").style.display = "block";
+      newpage += 1;
+      for (i = 1; i <= maxpage; i++) {
+        document.getElementById("TopDiv" + i).style.display = "none";
+      }
+      document.getElementById("TopDiv" + newpage).style.display = "block";
+      if (newpage == maxpage) {
+        document.getElementById("RTTop_ctl00_rightbtn").style.display = "none";
+      }
+    }
+
+    function ScriptDelBtn() {
+      document.getElementById("RTTop_ctl00_leftbtn").style.display = "block";
+      document.getElementById("RTTop_ctl00_rightbtn").style.display = "block";
+      newpage -= 1;
+      for (i = 1; i <= maxpage; i++) {
+        document.getElementById("TopDiv" + i).style.display = "none";
+      }
+      document.getElementById("TopDiv" + newpage).style.display = "block";
+      if (newpage == 1) {
+        document.getElementById("RTTop_ctl00_leftbtn").style.display = "none";
+      }
+    }
+  </script>
+  <form name="form1" method="post" action="./index.aspx?mainid=1841&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">28</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0CcqzfhjwD1EiC5P9WrrIIbejDwA91Eq0lWP3TX3HS17MBgqRu78I7/y1nL">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx">客服中心</a></li>
+              <li><a href="javascript:void(0);"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')">
+      <img src="https://events.tk3c.com/events_net/events_net/kings_discount/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+
+    </div>
+    <div class="wrapper">
+
+
+      <div id="discount-container" v-cloak>
+        <div class="background mother">
+          <h2 class="title"><img :src="'title.png' | siteUrl" /></h2>
+
+        </div>
+
+        <div class="background2">
+          <span class="light left"><img
+              src="https://events.tk3c.com/events_net/events_net/icewash2209/images/light_left.png"></span>
+          <span class="light right"><img
+              src="https://events.tk3c.com/events_net/events_net/icewash2209/images/light_right.png"></span>
+        </div>
+
+        <!-- 熱銷筆電大牌 -->
+        <section class="special-box mother">
+          <h2 class="title"><img :src="'bar_a.png' | siteUrl" /></h2>
+
+          <h5><a @click="alertA"><img :src="'a1_1.png' | siteUrl" /></a>
+            <input type="text" class="code discountCodeA" readonly="readonly" :value="spCode" />
+          </h5>
+
+          <div class="special">
+            <ul>
+              <li v-for="(sp,i) in specials">
+                <img :src=" sp.image | siteUrl" />
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- 熱銷商品現折專區 -->
+        <section class="pro-box">
+          <h2 class="title"><img :src="'bar_b.png' | siteUrl" /></h2>
+          <ul>
+            <li v-for="(pro,p) in products" :class="[pro.class ? pro.class : '']" class="new">
+              <a @click="alertB(p)">
+                <img :src=" pro.image | siteUrl">
+              </a>
+              <input type="text" class="code discountCodeB" readonly="readonly" :value="pro.code" />
+            </li>
+          </ul>
+        </section>
+
+
+        <!-- 品牌現折專區 -->
+        <section class="brand-box mother">
+          <h2 class="title"><img :src="'bar_c.png' | siteUrl" /></h2>
+          <div class="area">
+            <ul class="brand">
+              <li v-for="brand in brands">
+                <img :src="brand.image | siteUrl">
+              </li>
+            </ul>
+
+            <div class="discount">
+              <a v-for="(dis,d) in discounts" @click="alertC(d)">
+                <img :src="dis.image | siteUrl">
+                <input type="text" class="code discountCodeC" readonly="readonly" :value="dis.code" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- 品類現折區 -->
+        <section class="sale-box">
+          <h2 class="title"><img :src="'bar_d.png' | siteUrl" /></h2>
+          <ul>
+            <li v-for="(sale,i) in sales">
+              <a :href="sale.url">
+                <img :src="sale.image | siteUrl">
+              </a>
+            </li>
+          </ul>
+
+          <div class="sale">
+            <a href="https://www.tk3c.com/dic1.aspx?cid=120686&aid=23466&ec=kings_discount" target="_blank"><img
+                :src="'images/bar_e.png' | siteUrlMix"></a>
+            <a href="https://events.tk3c.com/events_net/vipcoupon/index.aspx?ec=kings_discount" target="_blank"><img
+                :src="'images/bar_f.png' | siteUrlMix"></a>
+          </div>
+        </section>
+
+
+      </div>
+
+
+      <script src="https://events.tk3c.com/events_net/events_net/js/common.js" type="text/javascript"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/kings_discount/js/discount_mother.js"></script>
+
+
+
+    </div>
+    <div class="itemBox m_version_non">
+      <div id="btnBox03">
+        <div class="upbox">
+
+        </div>
+      </div>
+    </div>
+    <div class="rightbtn" style="display: none;"><span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+      <div class="actbtn">
+
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+
+
+      <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+      <div id="TkecFooter">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+
+
+        <style>
+          @charset "utf-8";
+
+          * {
+            margin: 0;
+            padding: 0
+          }
+
+          *:focus {
+            outline: none;
+          }
+
+          /*黃框消除*/
+
+          * {
+            -webkit-text-size-adjust: none;
+          }
+
+          /*字體尺寸限制解除*/
+
+          a {
+            text-decoration: none;
+            cursor: pointer
+          }
+
+          img {
+            border: 0px;
+          }
+
+          /*圖片超連結邊框消除*/
+
+          .acbankbox .fred {
+            color: #F00;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .acbankbox .fgray {
+            color: #666;
+          }
+
+          .acbankbox .bgcolor {
+            background: #999;
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width:751px) {
+            .acbankbox {
+              display: block;
+              width: 1144px;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+              overflow: hidden;
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              padding: 16px;
+              position: relative;
+              display: block;
+              border-radius: 40px 40px 0 0;
+              -moz-border-radius: 40px 40px 0 0;
+              -webkit-border-radius: 40px 40px 0 0;
+              box-sizing: border-box;
+            }
+
+            .acbankbox .list2 u {
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+              display: block;
+              font-size: 40px;
+              text-decoration: none;
+              margin-bottom: 10px;
+              letter-spacing: 1px;
+            }
+
+            .acbankbox .list2 ul li {
+              width: 210px;
+              text-align: center;
+              float: left;
+              margin: 6px;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 82%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 13px;
+              margin-top: 0px;
+              text-align: center;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 38px;
+              font-size: 38px;
+              font-style: normal;
+              display: block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {
+              display: none;
+            }
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            .acbankbox {
+              display: block;
+              width: 100%;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              position: relative;
+              display: block;
+              box-sizing: border-box;
+              padding-bottom: 1%;
+            }
+
+            .acbankbox .list2 u {
+              width: 96%;
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              display: block;
+              font-size: 200%;
+              text-decoration: none;
+              margin-bottom: 10px;
+              margin: 2% auto;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+            }
+
+            .acbankbox .list2 ul li {
+              height: auto;
+              width: 48%;
+              text-align: center;
+              float: left;
+              margin: 1%;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+              box-sizing: border-box;
+              padding-bottom: 4%;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 85%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 100%;
+              margin-top: 0px;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 1em;
+              font-size: 200%;
+              font-style: normal;
+              display: inline-block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {}
+          }
+        </style>
+        <div class="acbankbox">
+          <!--銀行區 st-->
+          <div class="list2 bgcolor">
+            <u>4月銀行 刷卡享好康</u>
+            <ul>
+
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-05.jpg"></p>
+                  <p class="item_text05 fred"><em>送$5200</em>刷卡金</p>
+                </a>
+              </li>
+
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-03.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2500</em>刷卡金</p>
+                </a>
+              </li>
+
+
+
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-04.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2500</em>刷卡金</p>
+                </a>
+              </li>
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送2400</em>燦坤K幣</p>
+                </a>
+              </li>
+
+
+
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2000</em>刷卡金</p>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <!--銀行區 end-->
+        </div>
+      </div>
+
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
