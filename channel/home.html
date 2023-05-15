@@ -578,22 +578,6 @@
         </p>
 
 
-        <!-- 頁籤商品區 -->
-        <section class="tab-group">
-          <h2 class="title">
-            <img src="https://events.tk3c.com/events_net/events_net/health2021/images/2305/a_title.png">
-          </h2>
-
-          <ul class="tabs">
-            <li v-for="(tab,t) in tabs" :class="[status == t ? 'active' : '']">
-              <a @click="changeTab(t)"><img :src="tab.image | siteUrl"></a>
-            </li>
-          </ul>
-
-          <div class="tab-content" v-for="(tab,i) in tabs"></div>
-        </section>
-
-
         <!-- 住宅空間 -->
         <section class="space-box">
           <h2 class="title">
@@ -623,6 +607,21 @@
               </a>
             </div>
           </div>
+        </section>
+
+        <!-- 頁籤商品區 -->
+        <section class="tab-group">
+          <h2 class="title">
+            <img src="https://events.tk3c.com/events_net/events_net/health2021/images/2305/a_title.png">
+          </h2>
+
+          <ul class="tabs">
+            <li v-for="(tab,t) in tabs" :class="[status == t ? 'active' : '']">
+              <a @click="changeTab(t)"><img :src="tab.image | siteUrl"></a>
+            </li>
+          </ul>
+
+          <div class="tab-content" v-for="(tab,i) in tabs"></div>
         </section>
       </div>
 
