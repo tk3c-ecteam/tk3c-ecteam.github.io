@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="618超前預熱，登記抽10萬購物金">
+  <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="618超前預熱 | 燦坤線上">
+  <meta property="og:description" content="618超前預熱，登記抽10萬購物金">
+  <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/preview618/index.html">
+
+  <title>618超前預熱 | 燦坤線上</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/preview6182023/css/preview618.css" rel="stylesheet"
+    type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+  <script src="https://www.tk3c.com/js/vue.min.js"></script>
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "health2021";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+  <script>
+    ChkEvent(1528)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+</head>
+
+<body>
+
+
+  <form name="form1" method="post" action="./index.aspx?mainid=1528&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">27</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0CcqzeybdcI2viFW2bvFe9FtVLItgBHgWGLkcrMQNel65EVog==">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx">客服中心</a></li>
+              <li><a href="javascript:void(0);"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-- 618超前預熱 -->
+    <div id="preview618">
+      <div class="background">
+        <span class="logo"><img
+            src="https://events.tk3c.com/events_net/events_net/top_samsung_celebration/images/logo.png" /></span>
+        <h2 class="title animate__animated animate__bounceInLeft">
+          <img src="https://events.tk3c.com/events_net/events_net/preview6182023/images/title.png" />
+        </h2>
+        <h5 class="subtitle animate__animated animate__fadeInRightBig">
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/subtitle.png" />
+        </h5>
+      </div>
+
+
+      <!-- 天天登入 -->
+      <section class="login-box">
+        <img class="login-bg"
+          src="https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/price_bg.png" />
+
+
+        <div class="buttons">
+          <a class="login">
+            <img src="https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/login.png" />
+          </a>
+          <a class="alert">
+            <img src="https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/rule.png" />
+          </a>
+        </div>
+      </section>
+
+
+      <!-- 登記抽 -->
+      <section class="price-box">
+        <img class="price-bg"
+          src=" https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/member_bg.png" />
+
+        <a class="login" href="https://www.tk3c.com/edm/tkapp_update3.html" target="_blank">
+          <img src=" https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/btn1.png" />
+        </a>
+        <a class="alert">
+          <img src=" https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/btn2.png" />
+        </a>
+
+      </section>
+
+
+      <!-- 品牌活動 -->
+      <section class="event-box">
+        <h2 class="title">
+          <img src=" https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/event_title.png" />
+        </h2>
+      </section>
+
+      <!-- 預熱商品(撈取系統) -->
+      <section class="hot-box">
+        <h2 class="title">
+          <a href="" target="_blank">
+            <img src=" https://events.cdn-tkec.tw/events_net/events_net/preview6182023/images/hot_title.png" />
+          </a>
+        </h2>
+
+        <div class="products">
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=223811-staff_discount&amp;ec=intelForStaff"
+                  id="prod223811-staff_discount" name="prod223811-staff_discount">
+                  <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202112/223811_M.jpg?t=20230511193432" border="0"></p>
+                  <storg>專屬｜羅技 Logitech M650 多工靜音無線滑鼠 石墨灰...</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>78</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$1,090</em> <i>活動價$</i>849 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=223812-staff_discount&amp;ec=intelForStaff"
+                  id="prod223812-staff_discount" name="prod223812-staff_discount">
+                  <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202112/223812_M.jpg?t=20230511193340" border="0"></p>
+                  <storg>專屬｜羅技 Logitech M650 多工靜音無線滑鼠 珍珠白...</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>78</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$1,090</em> <i>活動價$</i>849 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=223813-staff_discount&amp;ec=intelForStaff"
+                  id="prod223813-staff_discount" name="prod223813-staff_discount">
+                  <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202112/223813_M.jpg?t=20230511193213" border="0"></p>
+                  <storg>專屬｜羅技 Logitech M650 多工靜音無線滑鼠 玫瑰粉...</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>78</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$1,090</em> <i>活動價$</i>849 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=223944-staff_discount&amp;ec=intelForStaff"
+                  id="prod223944-staff_discount" name="prod223944-staff_discount">
+                  <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202112/223944_M.jpg?t=20230511192907" border="0"></p>
+                  <storg>專屬｜羅技 Logitech Combo Touch 鍵盤保護殼 附觸控式軌跡...</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>79</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$5,990</em> <i>活動價$</i>4,690 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=233085-staff_discount&amp;ec=intelForStaff"
+                  id="prod233085-staff_discount" name="prod233085-staff_discount">
+                  <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202209/233085_M.jpg?t=20230515201551" border="0"></p>
+                  <storg>iPhone 14 Pro 256GB-深紫色</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>93</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$38,400</em> <i>活動價$</i>35,712 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=234875-staff_discount&amp;ec=intelForStaff"
+                  id="prod234875-staff_discount" name="prod234875-staff_discount">
+                  <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202210/234875_M.jpg?t=20230515201629" border="0"></p>
+                  <storg>iPad Pro 11吋 Wi-Fi 128G-太空灰</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$27,900</em> <i>活動價$</i>25,668 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=234876-staff_discount&amp;ec=intelForStaff"
+                  id="prod234876-staff_discount" name="prod234876-staff_discount">
+                  <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202210/234876_M.jpg?t=20230515201708" border="0"></p>
+                  <storg>iPad Pro 11吋 Wi-Fi 128G-銀</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$27,900</em> <i>活動價$</i>25,668 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=235031-staff_discount&amp;ec=intelForStaff"
+                  id="prod235031-staff_discount" name="prod235031-staff_discount">
+                  <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202210/235031_M.jpg?t=20230512112638" border="0"></p>
+                  <storg>微軟 Microsoft Surface Pro9 13" (i5-1235U...</storg>
+                  <h4>送M365個人版</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>96</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$42,888</em> <i>活動價$</i>40,888 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 銀行 -->
+      <section class="bank-box"></section>
+
+      <!-- 回到最上層 -->
+      <div class="custom-top">
+        <p></p>
+      </div>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@5.4.5/js/swiper.min.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+      <!-- 手機版選單 JS -->
+      <script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/preview6182023/js/preview.js"></script>
+
+
+    </div>
+
+
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+</body>
+
+</html>
