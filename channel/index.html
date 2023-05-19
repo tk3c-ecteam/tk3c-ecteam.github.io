@@ -834,23 +834,20 @@
         </div>
       </section>
 
-      <!-- 以下8個樓層 撈取商品 -->
-      <section class="products-group" v-for="(floor,f) in floors">
-
+      <!-- 以下8個樓層 撈取商品(除了前3層以外其他樓層都有影片)
+        影片還沒剪好先隨便放幾個代替
+       -->
+      <section class="products-group">
+        <!-- 樓層標題 -->
         <h2 class="protitle">
-          {{ '樓層' + (f + 1) }}
-          <img :src="'images/' + floor.image | siteUrl">
-          <a :id="'pro'+ (f + 1)" :href="floor.url"></a>
-
-          <div class="youtube" v-if="f != 0 && f != 1 && f != 2">
-            <iframe :src="'https://www.youtube.com/embed/' + floor.youtube" frameborder="0" allowfullscreen></iframe>
-          </div>
+          樓層1
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/23618expert/images/bar.png">
+          <a id="pro1" href=""></a>
         </h2>
 
-        <!-- 樓層區 -->
+        <!-- 樓層商品 -->
         <div class="list_F bg01">
           <ul>
-
             <li><a href="http://www.tk3c.com/pt.aspx?pid=196957-staff_discount&amp;ec=23618expert"
                 id="prod196957-staff_discount" name="prod196957-staff_discount">
                 <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
@@ -858,23 +855,21 @@
                 <storg>Twinbird 美型蒸氣掛燙機(白)</storg>
                 <h4 class="empty"></h4>
                 <div class="boxF_price">
-                  <p class="iconF_pro"><span>61</span>折</p>
-                  <strong class="txt_red fred"> <em>市價$2,280</em> <i>活動價$</i>1,390 </strong>
+                  <p class="iconF_pro"><span>61</span>折</p> <strong class="txt_red fred"><em>市價$2,280</em>
+                    <i>活動價$</i>1,390 </strong>
                 </div>
               </a></li>
-
             <li><a href="http://www.tk3c.com/pt.aspx?pid=223453-staff_discount&amp;ec=23618expert"
                 id="prod223453-staff_discount" name="prod223453-staff_discount">
                 <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
                     src="https://www.cdn-tkec.tw/image/product/202112/223453_M.jpg?t=20230515201345" border="0"></p>
-                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定...</storg>
+                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定......</storg>
                 <h4 class="empty"></h4>
                 <div class="boxF_price">
-                  <p class="iconF_pro"><span>89</span>折</p>
-                  <strong class="txt_red fred"> <em>市價$33,800</em> <i>活動價$</i>29,999 </strong>
+                  <p class="iconF_pro"><span>89</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>29,999 </strong>
                 </div>
               </a></li>
-
             <li><a href="http://www.tk3c.com/pt.aspx?pid=230078-staff_discount&amp;ec=23618expert"
                 id="prod230078-staff_discount" name="prod230078-staff_discount">
                 <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
@@ -882,11 +877,10 @@
                 <storg>韓國InBody 家用型便攜式體脂計</storg>
                 <h4 class="empty"></h4>
                 <div class="boxF_price">
-                  <p class="iconF_pro"><span>67</span>折</p>
-                  <strong class="txt_red fred"> <em>市價$14,500</em> <i>活動價$</i>9,590 </strong>
+                  <p class="iconF_pro"><span>67</span>折</p> <strong class="txt_red fred"><em>市價$14,500</em>
+                    <i>活動價$</i>9,590 </strong>
                 </div>
               </a></li>
-
             <li><a href="http://www.tk3c.com/pt.aspx?pid=233446-staff_discount&amp;ec=23618expert"
                 id="prod233446-staff_discount" name="prod233446-staff_discount">
                 <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
@@ -894,11 +888,10 @@
                 <storg>國際 Panasonic奈米水離子吹風機</storg>
                 <h4>送 順髮氣墊梳組</h4>
                 <div class="boxF_price">
-                  <p class="iconF_pro"><span>86</span>折</p>
-                  <strong class="txt_red fred"> <em>市價$5,690</em> <i>活動價$</i>4,850 </strong>
+                  <p class="iconF_pro"><span>86</span>折</p> <strong class="txt_red fred"><em>市價$5,690</em>
+                    <i>活動價$</i>4,850 </strong>
                 </div>
               </a></li>
-
             <li><a href="http://www.tk3c.com/pt.aspx?pid=234070-staff_discount&amp;ec=23618expert"
                 id="prod234070-staff_discount" name="prod234070-staff_discount">
                 <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
@@ -906,35 +899,32 @@
                 <storg>LAURASTAR IZZI Plus高壓蒸汽消毒機-深灰</storg>
                 <h4 class="empty"></h4>
                 <div class="boxF_price">
-                  <p class="iconF_pro"><span>92</span>折</p>
-                  <strong class="txt_red fred"> <em>市價$33,800</em> <i>活動價$</i>30,800 </strong>
+                  <p class="iconF_pro"><span>92</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>30,800 </strong>
                 </div>
               </a></li>
-
             <li><a href="http://www.tk3c.com/pt.aspx?pid=236015-staff_discount&amp;ec=23618expert"
                 id="prod236015-staff_discount" name="prod236015-staff_discount">
                 <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
                     src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230512095248" border="0"></p>
-                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機...</storg>
-                <h4>送 吹風機收納包+送 順髮氣墊梳組...</h4>
+                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機......</storg>
+                <h4>送 吹風機收納包+送 順髮氣墊梳組......</h4>
                 <div class="boxF_price">
-                  <p class="iconF_pro"><span>9</span>折</p>
-                  <strong class="txt_red fred"> <em>市價$10,900</em> <i>活動價$</i>9,790 </strong>
+                  <p class="iconF_pro"><span>9</span>折</p> <strong class="txt_red fred"><em>市價$10,900</em>
+                    <i>活動價$</i>9,790 </strong>
                 </div>
               </a></li>
-
             <li><a href="http://www.tk3c.com/pt.aspx?pid=236220-staff_discount&amp;ec=23618expert"
                 id="prod236220-staff_discount" name="prod236220-staff_discount">
                 <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
                     src="https://www.cdn-tkec.tw/image/product/202212/236220_M.jpg?t=20230512095441" border="0"></p>
-                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)...</storg>
+                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)......</storg>
                 <h4>送 鑽石刷頭四入組</h4>
                 <div class="boxF_price">
-                  <p class="iconF_pro"><span>96</span>折</p>
-                  <strong class="txt_red fred"> <em>市價$7,290</em> <i>活動價$</i>6,950 </strong>
+                  <p class="iconF_pro"><span>96</span>折</p> <strong class="txt_red fred"><em>市價$7,290</em>
+                    <i>活動價$</i>6,950 </strong>
                 </div>
               </a></li>
-
             <li><a href="http://www.tk3c.com/pt.aspx?pid=237801-staff_discount&amp;ec=23618expert"
                 id="prod237801-staff_discount" name="prod237801-staff_discount">
                 <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
@@ -942,12 +932,722 @@
                 <storg>OMRON藍牙體脂計(白)</storg>
                 <h4 class="empty"></h4>
                 <div class="boxF_price">
-                  <p class="iconF_pro"><span>62</span>折</p>
-                  <strong class="txt_red fred"> <em>市價$3,880</em> <i>活動價$</i>2,380 </strong>
+                  <p class="iconF_pro"><span>62</span>折</p> <strong class="txt_red fred"><em>市價$3,880</em>
+                    <i>活動價$</i>2,380 </strong>
                 </div>
               </a></li>
+          </ul>
+        </div>
+      </section>
 
+      <section class="products-group">
+        <h2 class="protitle">
+          樓層2
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/23618expert/images/bar.png">
+          <a id="pro2" href=""></a>
+        </h2>
+        <div class="list_F bg01">
+          <ul>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=196957-staff_discount&amp;ec=23618expert"
+                id="prod196957-staff_discount" name="prod196957-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/201904/196957_M.jpg?t=20230517103107" border="0"></p>
+                <storg>Twinbird 美型蒸氣掛燙機(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>61</span>折</p> <strong class="txt_red fred"><em>市價$2,280</em>
+                    <i>活動價$</i>1,390 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=223453-staff_discount&amp;ec=23618expert"
+                id="prod223453-staff_discount" name="prod223453-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202112/223453_M.jpg?t=20230515201345" border="0"></p>
+                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定......</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>89</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>29,999 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=230078-staff_discount&amp;ec=23618expert"
+                id="prod230078-staff_discount" name="prod230078-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202206/230078_M.jpg?t=20230512161148" border="0"></p>
+                <storg>韓國InBody 家用型便攜式體脂計</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>67</span>折</p> <strong class="txt_red fred"><em>市價$14,500</em>
+                    <i>活動價$</i>9,590 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=233446-staff_discount&amp;ec=23618expert"
+                id="prod233446-staff_discount" name="prod233446-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20230512095411" border="0"></p>
+                <storg>國際 Panasonic奈米水離子吹風機</storg>
+                <h4>送 順髮氣墊梳組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>86</span>折</p> <strong class="txt_red fred"><em>市價$5,690</em>
+                    <i>活動價$</i>4,850 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=234070-staff_discount&amp;ec=23618expert"
+                id="prod234070-staff_discount" name="prod234070-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/234070_M.jpg?t=20230515201304" border="0"></p>
+                <storg>LAURASTAR IZZI Plus高壓蒸汽消毒機-深灰</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>92</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>30,800 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236015-staff_discount&amp;ec=23618expert"
+                id="prod236015-staff_discount" name="prod236015-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230512095248" border="0"></p>
+                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機......</storg>
+                <h4>送 吹風機收納包+送 順髮氣墊梳組......</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>9</span>折</p> <strong class="txt_red fred"><em>市價$10,900</em>
+                    <i>活動價$</i>9,790 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236220-staff_discount&amp;ec=23618expert"
+                id="prod236220-staff_discount" name="prod236220-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236220_M.jpg?t=20230512095441" border="0"></p>
+                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)......</storg>
+                <h4>送 鑽石刷頭四入組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>96</span>折</p> <strong class="txt_red fred"><em>市價$7,290</em>
+                    <i>活動價$</i>6,950 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=237801-staff_discount&amp;ec=23618expert"
+                id="prod237801-staff_discount" name="prod237801-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202303/237801_M.jpg?t=20230512095546" border="0"></p>
+                <storg>OMRON藍牙體脂計(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>62</span>折</p> <strong class="txt_red fred"><em>市價$3,880</em>
+                    <i>活動價$</i>2,380 </strong>
+                </div>
+              </a></li>
+          </ul>
+        </div>
+      </section>
 
+      <section class="products-group">
+        <h2 class="protitle">
+          樓層3
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/23618expert/images/bar.png">
+          <a id="pro3" href=""></a>
+        </h2>
+        <div class="list_F bg01">
+          <ul>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=196957-staff_discount&amp;ec=23618expert"
+                id="prod196957-staff_discount" name="prod196957-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/201904/196957_M.jpg?t=20230517103107" border="0"></p>
+                <storg>Twinbird 美型蒸氣掛燙機(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>61</span>折</p> <strong class="txt_red fred"><em>市價$2,280</em>
+                    <i>活動價$</i>1,390 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=223453-staff_discount&amp;ec=23618expert"
+                id="prod223453-staff_discount" name="prod223453-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202112/223453_M.jpg?t=20230515201345" border="0"></p>
+                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定......</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>89</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>29,999 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=230078-staff_discount&amp;ec=23618expert"
+                id="prod230078-staff_discount" name="prod230078-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202206/230078_M.jpg?t=20230512161148" border="0"></p>
+                <storg>韓國InBody 家用型便攜式體脂計</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>67</span>折</p> <strong class="txt_red fred"><em>市價$14,500</em>
+                    <i>活動價$</i>9,590 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=233446-staff_discount&amp;ec=23618expert"
+                id="prod233446-staff_discount" name="prod233446-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20230512095411" border="0"></p>
+                <storg>國際 Panasonic奈米水離子吹風機</storg>
+                <h4>送 順髮氣墊梳組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>86</span>折</p> <strong class="txt_red fred"><em>市價$5,690</em>
+                    <i>活動價$</i>4,850 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=234070-staff_discount&amp;ec=23618expert"
+                id="prod234070-staff_discount" name="prod234070-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/234070_M.jpg?t=20230515201304" border="0"></p>
+                <storg>LAURASTAR IZZI Plus高壓蒸汽消毒機-深灰</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>92</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>30,800 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236015-staff_discount&amp;ec=23618expert"
+                id="prod236015-staff_discount" name="prod236015-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230512095248" border="0"></p>
+                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機......</storg>
+                <h4>送 吹風機收納包+送 順髮氣墊梳組......</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>9</span>折</p> <strong class="txt_red fred"><em>市價$10,900</em>
+                    <i>活動價$</i>9,790 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236220-staff_discount&amp;ec=23618expert"
+                id="prod236220-staff_discount" name="prod236220-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236220_M.jpg?t=20230512095441" border="0"></p>
+                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)......</storg>
+                <h4>送 鑽石刷頭四入組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>96</span>折</p> <strong class="txt_red fred"><em>市價$7,290</em>
+                    <i>活動價$</i>6,950 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=237801-staff_discount&amp;ec=23618expert"
+                id="prod237801-staff_discount" name="prod237801-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202303/237801_M.jpg?t=20230512095546" border="0"></p>
+                <storg>OMRON藍牙體脂計(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>62</span>折</p> <strong class="txt_red fred"><em>市價$3,880</em>
+                    <i>活動價$</i>2,380 </strong>
+                </div>
+              </a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="products-group">
+        <h2 class="protitle">
+          樓層4
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/23618expert/images/bar01.png">
+          <a id="pro4" href=""></a>
+
+          <!--  影片 -->
+          <div class="youtube"><iframe src="https://www.youtube.com/embed/FhVi-K4ynfI" frameborder="0"
+              allowfullscreen="allowfullscreen"></iframe></div>
+        </h2>
+        <div class="list_F bg01">
+          <ul>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=196957-staff_discount&amp;ec=23618expert"
+                id="prod196957-staff_discount" name="prod196957-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/201904/196957_M.jpg?t=20230517103107" border="0"></p>
+                <storg>Twinbird 美型蒸氣掛燙機(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>61</span>折</p> <strong class="txt_red fred"><em>市價$2,280</em>
+                    <i>活動價$</i>1,390 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=223453-staff_discount&amp;ec=23618expert"
+                id="prod223453-staff_discount" name="prod223453-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202112/223453_M.jpg?t=20230515201345" border="0"></p>
+                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定......</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>89</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>29,999 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=230078-staff_discount&amp;ec=23618expert"
+                id="prod230078-staff_discount" name="prod230078-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202206/230078_M.jpg?t=20230512161148" border="0"></p>
+                <storg>韓國InBody 家用型便攜式體脂計</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>67</span>折</p> <strong class="txt_red fred"><em>市價$14,500</em>
+                    <i>活動價$</i>9,590 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=233446-staff_discount&amp;ec=23618expert"
+                id="prod233446-staff_discount" name="prod233446-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20230512095411" border="0"></p>
+                <storg>國際 Panasonic奈米水離子吹風機</storg>
+                <h4>送 順髮氣墊梳組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>86</span>折</p> <strong class="txt_red fred"><em>市價$5,690</em>
+                    <i>活動價$</i>4,850 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=234070-staff_discount&amp;ec=23618expert"
+                id="prod234070-staff_discount" name="prod234070-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/234070_M.jpg?t=20230515201304" border="0"></p>
+                <storg>LAURASTAR IZZI Plus高壓蒸汽消毒機-深灰</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>92</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>30,800 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236015-staff_discount&amp;ec=23618expert"
+                id="prod236015-staff_discount" name="prod236015-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230512095248" border="0"></p>
+                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機......</storg>
+                <h4>送 吹風機收納包+送 順髮氣墊梳組......</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>9</span>折</p> <strong class="txt_red fred"><em>市價$10,900</em>
+                    <i>活動價$</i>9,790 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236220-staff_discount&amp;ec=23618expert"
+                id="prod236220-staff_discount" name="prod236220-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236220_M.jpg?t=20230512095441" border="0"></p>
+                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)......</storg>
+                <h4>送 鑽石刷頭四入組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>96</span>折</p> <strong class="txt_red fred"><em>市價$7,290</em>
+                    <i>活動價$</i>6,950 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=237801-staff_discount&amp;ec=23618expert"
+                id="prod237801-staff_discount" name="prod237801-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202303/237801_M.jpg?t=20230512095546" border="0"></p>
+                <storg>OMRON藍牙體脂計(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>62</span>折</p> <strong class="txt_red fred"><em>市價$3,880</em>
+                    <i>活動價$</i>2,380 </strong>
+                </div>
+              </a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="products-group">
+        <h2 class="protitle">
+          樓層5
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/23618expert/images/bar02.png">
+          <a id="pro5" href=""></a>
+          <div class="youtube"><iframe src="https://www.youtube.com/embed/Ptoi5xpszqM" frameborder="0"
+              allowfullscreen="allowfullscreen"></iframe></div>
+        </h2>
+        <div class="list_F bg01">
+          <ul>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=196957-staff_discount&amp;ec=23618expert"
+                id="prod196957-staff_discount" name="prod196957-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/201904/196957_M.jpg?t=20230517103107" border="0"></p>
+                <storg>Twinbird 美型蒸氣掛燙機(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>61</span>折</p> <strong class="txt_red fred"><em>市價$2,280</em>
+                    <i>活動價$</i>1,390 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=223453-staff_discount&amp;ec=23618expert"
+                id="prod223453-staff_discount" name="prod223453-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202112/223453_M.jpg?t=20230515201345" border="0"></p>
+                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定......</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>89</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>29,999 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=230078-staff_discount&amp;ec=23618expert"
+                id="prod230078-staff_discount" name="prod230078-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202206/230078_M.jpg?t=20230512161148" border="0"></p>
+                <storg>韓國InBody 家用型便攜式體脂計</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>67</span>折</p> <strong class="txt_red fred"><em>市價$14,500</em>
+                    <i>活動價$</i>9,590 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=233446-staff_discount&amp;ec=23618expert"
+                id="prod233446-staff_discount" name="prod233446-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20230512095411" border="0"></p>
+                <storg>國際 Panasonic奈米水離子吹風機</storg>
+                <h4>送 順髮氣墊梳組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>86</span>折</p> <strong class="txt_red fred"><em>市價$5,690</em>
+                    <i>活動價$</i>4,850 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=234070-staff_discount&amp;ec=23618expert"
+                id="prod234070-staff_discount" name="prod234070-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/234070_M.jpg?t=20230515201304" border="0"></p>
+                <storg>LAURASTAR IZZI Plus高壓蒸汽消毒機-深灰</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>92</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>30,800 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236015-staff_discount&amp;ec=23618expert"
+                id="prod236015-staff_discount" name="prod236015-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230512095248" border="0"></p>
+                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機......</storg>
+                <h4>送 吹風機收納包+送 順髮氣墊梳組......</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>9</span>折</p> <strong class="txt_red fred"><em>市價$10,900</em>
+                    <i>活動價$</i>9,790 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236220-staff_discount&amp;ec=23618expert"
+                id="prod236220-staff_discount" name="prod236220-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236220_M.jpg?t=20230512095441" border="0"></p>
+                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)......</storg>
+                <h4>送 鑽石刷頭四入組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>96</span>折</p> <strong class="txt_red fred"><em>市價$7,290</em>
+                    <i>活動價$</i>6,950 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=237801-staff_discount&amp;ec=23618expert"
+                id="prod237801-staff_discount" name="prod237801-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202303/237801_M.jpg?t=20230512095546" border="0"></p>
+                <storg>OMRON藍牙體脂計(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>62</span>折</p> <strong class="txt_red fred"><em>市價$3,880</em>
+                    <i>活動價$</i>2,380 </strong>
+                </div>
+              </a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="products-group">
+        <h2 class="protitle">
+          樓層6
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/23618expert/images/bar03.png">
+          <a id="pro6" href=""></a>
+          <div class="youtube"><iframe src="https://www.youtube.com/embed/evg0aZv1m0M" frameborder="0"
+              allowfullscreen="allowfullscreen"></iframe></div>
+        </h2>
+        <div class="list_F bg01">
+          <ul>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=196957-staff_discount&amp;ec=23618expert"
+                id="prod196957-staff_discount" name="prod196957-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/201904/196957_M.jpg?t=20230517103107" border="0"></p>
+                <storg>Twinbird 美型蒸氣掛燙機(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>61</span>折</p> <strong class="txt_red fred"><em>市價$2,280</em>
+                    <i>活動價$</i>1,390 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=223453-staff_discount&amp;ec=23618expert"
+                id="prod223453-staff_discount" name="prod223453-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202112/223453_M.jpg?t=20230515201345" border="0"></p>
+                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定......</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>89</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>29,999 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=230078-staff_discount&amp;ec=23618expert"
+                id="prod230078-staff_discount" name="prod230078-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202206/230078_M.jpg?t=20230512161148" border="0"></p>
+                <storg>韓國InBody 家用型便攜式體脂計</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>67</span>折</p> <strong class="txt_red fred"><em>市價$14,500</em>
+                    <i>活動價$</i>9,590 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=233446-staff_discount&amp;ec=23618expert"
+                id="prod233446-staff_discount" name="prod233446-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20230512095411" border="0"></p>
+                <storg>國際 Panasonic奈米水離子吹風機</storg>
+                <h4>送 順髮氣墊梳組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>86</span>折</p> <strong class="txt_red fred"><em>市價$5,690</em>
+                    <i>活動價$</i>4,850 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=234070-staff_discount&amp;ec=23618expert"
+                id="prod234070-staff_discount" name="prod234070-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/234070_M.jpg?t=20230515201304" border="0"></p>
+                <storg>LAURASTAR IZZI Plus高壓蒸汽消毒機-深灰</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>92</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>30,800 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236015-staff_discount&amp;ec=23618expert"
+                id="prod236015-staff_discount" name="prod236015-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230512095248" border="0"></p>
+                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機......</storg>
+                <h4>送 吹風機收納包+送 順髮氣墊梳組......</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>9</span>折</p> <strong class="txt_red fred"><em>市價$10,900</em>
+                    <i>活動價$</i>9,790 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236220-staff_discount&amp;ec=23618expert"
+                id="prod236220-staff_discount" name="prod236220-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236220_M.jpg?t=20230512095441" border="0"></p>
+                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)......</storg>
+                <h4>送 鑽石刷頭四入組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>96</span>折</p> <strong class="txt_red fred"><em>市價$7,290</em>
+                    <i>活動價$</i>6,950 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=237801-staff_discount&amp;ec=23618expert"
+                id="prod237801-staff_discount" name="prod237801-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202303/237801_M.jpg?t=20230512095546" border="0"></p>
+                <storg>OMRON藍牙體脂計(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>62</span>折</p> <strong class="txt_red fred"><em>市價$3,880</em>
+                    <i>活動價$</i>2,380 </strong>
+                </div>
+              </a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="products-group">
+        <h2 class="protitle">
+          樓層7
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/23618expert/images/bar04.png">
+          <a id="pro7" href=""></a>
+          <div class="youtube"><iframe src="https://www.youtube.com/embed/GH5S6V6pQCU" frameborder="0"
+              allowfullscreen="allowfullscreen"></iframe></div>
+        </h2>
+        <div class="list_F bg01">
+          <ul>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=196957-staff_discount&amp;ec=23618expert"
+                id="prod196957-staff_discount" name="prod196957-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/201904/196957_M.jpg?t=20230517103107" border="0"></p>
+                <storg>Twinbird 美型蒸氣掛燙機(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>61</span>折</p> <strong class="txt_red fred"><em>市價$2,280</em>
+                    <i>活動價$</i>1,390 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=223453-staff_discount&amp;ec=23618expert"
+                id="prod223453-staff_discount" name="prod223453-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202112/223453_M.jpg?t=20230515201345" border="0"></p>
+                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定......</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>89</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>29,999 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=230078-staff_discount&amp;ec=23618expert"
+                id="prod230078-staff_discount" name="prod230078-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202206/230078_M.jpg?t=20230512161148" border="0"></p>
+                <storg>韓國InBody 家用型便攜式體脂計</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>67</span>折</p> <strong class="txt_red fred"><em>市價$14,500</em>
+                    <i>活動價$</i>9,590 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=233446-staff_discount&amp;ec=23618expert"
+                id="prod233446-staff_discount" name="prod233446-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20230512095411" border="0"></p>
+                <storg>國際 Panasonic奈米水離子吹風機</storg>
+                <h4>送 順髮氣墊梳組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>86</span>折</p> <strong class="txt_red fred"><em>市價$5,690</em>
+                    <i>活動價$</i>4,850 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=234070-staff_discount&amp;ec=23618expert"
+                id="prod234070-staff_discount" name="prod234070-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/234070_M.jpg?t=20230515201304" border="0"></p>
+                <storg>LAURASTAR IZZI Plus高壓蒸汽消毒機-深灰</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>92</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>30,800 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236015-staff_discount&amp;ec=23618expert"
+                id="prod236015-staff_discount" name="prod236015-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230512095248" border="0"></p>
+                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機......</storg>
+                <h4>送 吹風機收納包+送 順髮氣墊梳組......</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>9</span>折</p> <strong class="txt_red fred"><em>市價$10,900</em>
+                    <i>活動價$</i>9,790 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236220-staff_discount&amp;ec=23618expert"
+                id="prod236220-staff_discount" name="prod236220-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236220_M.jpg?t=20230512095441" border="0"></p>
+                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)......</storg>
+                <h4>送 鑽石刷頭四入組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>96</span>折</p> <strong class="txt_red fred"><em>市價$7,290</em>
+                    <i>活動價$</i>6,950 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=237801-staff_discount&amp;ec=23618expert"
+                id="prod237801-staff_discount" name="prod237801-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202303/237801_M.jpg?t=20230512095546" border="0"></p>
+                <storg>OMRON藍牙體脂計(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>62</span>折</p> <strong class="txt_red fred"><em>市價$3,880</em>
+                    <i>活動價$</i>2,380 </strong>
+                </div>
+              </a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="products-group">
+        <h2 class="protitle">
+          樓層8
+          <img src="https://events.cdn-tkec.tw/events_net/events_net/23618expert/images/bar05.png">
+          <a id="pro8" href=""></a>
+          <div class="youtube"><iframe src="https://www.youtube.com/embed/GwL7Xn7EVqk" frameborder="0"
+              allowfullscreen="allowfullscreen"></iframe></div>
+        </h2>
+        <div class="list_F bg01">
+          <ul>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=196957-staff_discount&amp;ec=23618expert"
+                id="prod196957-staff_discount" name="prod196957-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/201904/196957_M.jpg?t=20230517103107" border="0"></p>
+                <storg>Twinbird 美型蒸氣掛燙機(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>61</span>折</p> <strong class="txt_red fred"><em>市價$2,280</em>
+                    <i>活動價$</i>1,390 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=223453-staff_discount&amp;ec=23618expert"
+                id="prod223453-staff_discount" name="prod223453-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202112/223453_M.jpg?t=20230515201345" border="0"></p>
+                <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-金色限定......</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>89</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>29,999 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=230078-staff_discount&amp;ec=23618expert"
+                id="prod230078-staff_discount" name="prod230078-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202206/230078_M.jpg?t=20230512161148" border="0"></p>
+                <storg>韓國InBody 家用型便攜式體脂計</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>67</span>折</p> <strong class="txt_red fred"><em>市價$14,500</em>
+                    <i>活動價$</i>9,590 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=233446-staff_discount&amp;ec=23618expert"
+                id="prod233446-staff_discount" name="prod233446-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20230512095411" border="0"></p>
+                <storg>國際 Panasonic奈米水離子吹風機</storg>
+                <h4>送 順髮氣墊梳組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>86</span>折</p> <strong class="txt_red fred"><em>市價$5,690</em>
+                    <i>活動價$</i>4,850 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=234070-staff_discount&amp;ec=23618expert"
+                id="prod234070-staff_discount" name="prod234070-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202209/234070_M.jpg?t=20230515201304" border="0"></p>
+                <storg>LAURASTAR IZZI Plus高壓蒸汽消毒機-深灰</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>92</span>折</p> <strong class="txt_red fred"><em>市價$33,800</em>
+                    <i>活動價$</i>30,800 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236015-staff_discount&amp;ec=23618expert"
+                id="prod236015-staff_discount" name="prod236015-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230512095248" border="0"></p>
+                <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機......</storg>
+                <h4>送 吹風機收納包+送 順髮氣墊梳組......</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>9</span>折</p> <strong class="txt_red fred"><em>市價$10,900</em>
+                    <i>活動價$</i>9,790 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=236220-staff_discount&amp;ec=23618expert"
+                id="prod236220-staff_discount" name="prod236220-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202212/236220_M.jpg?t=20230512095441" border="0"></p>
+                <storg>飛利浦 PHILIPS 鑽石靚白音波震動牙刷(黑鑽)......</storg>
+                <h4>送 鑽石刷頭四入組</h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>96</span>折</p> <strong class="txt_red fred"><em>市價$7,290</em>
+                    <i>活動價$</i>6,950 </strong>
+                </div>
+              </a></li>
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=237801-staff_discount&amp;ec=23618expert"
+                id="prod237801-staff_discount" name="prod237801-staff_discount">
+                <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                    src="https://www.cdn-tkec.tw/image/product/202303/237801_M.jpg?t=20230512095546" border="0"></p>
+                <storg>OMRON藍牙體脂計(白)</storg>
+                <h4 class="empty"></h4>
+                <div class="boxF_price">
+                  <p class="iconF_pro"><span>62</span>折</p> <strong class="txt_red fred"><em>市價$3,880</em>
+                    <i>活動價$</i>2,380 </strong>
+                </div>
+              </a></li>
           </ul>
         </div>
       </section>
