@@ -620,7 +620,7 @@
 
       <!-- 右側選單 -->
 
-      <aside class="aside-container" style="display: none;">
+      <aside class="aside-container">
         <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
         <div class="aside-wrap">
           <h3 class="aside-header"></h3>
@@ -639,14 +639,6 @@
       <script>
         $(function () {
           scrollUp($('.item'));
-
-          $(window).on('scroll', function () {
-            if ($(this).scrollTop() > $('.background').offset().top) {
-              $('.background2').addClass('fixed');
-            } else {
-              $('.background2').removeClass('fixed');
-            }
-          });
         });
       </script>
     </div>
