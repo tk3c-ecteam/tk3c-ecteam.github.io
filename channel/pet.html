@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="寵物用品,餵食器,飲水機,貓砂機,寵物攝影機,除臭">
+  <meta name="description" content="燦坤毛孩寵愛生活館開張啦！超殺寵物用品都在這裡，趕快來逛逛~為毛小孩打造樂活空間！">
+  <link href="https://events.tk3c.com/events_net/events_net/pet_product/images/fbshare.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="燦坤線上｜毛孩寵愛生活館">
+  <meta property="og:description" content="燦坤毛孩寵愛生活館開張啦！超殺寵物用品都在這裡，趕快來逛逛~為毛小孩打造樂活空間！">
+  <meta property="og:image" content="https://events.tk3c.com/events_net/events_net/pet_product/images/fbshare.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/pet_product/index.html">
+
+  <title>燦坤線上｜毛孩寵愛生活館</title>
+
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css">
+
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/pet_product/css/pet2307.css" rel="stylesheet"
+    type="text/css">
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <link href="https://events.tk3c.com/events_net/css/swiper.min.css?2" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "pet_product";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+  <!-- Swiper-->
+  <script>
+    $(document).ready(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          reverseDirection: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        }
+      });
+    });
+  </script>
+  <script>
+    ChkEvent(1740)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+  <script>
+    $.ajax({
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+      type: "POST",
+      dataType: 'script',
+      success: function () {
+        jQuery(function () {
+          jQuery.scrollDepth({
+            pixelDepth: false,
+            gtmOverride: true
+          });
+        });
+      }
+    });
+  </script>
+
+
+</head>
+
+<body>
+
+
+
+  <form name="form1" method="post" action="./index.aspx?mainid=1740&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">26</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0CcqzcrvQEzTLF8TrqxNWcGqaBBVoVbHMFfIag3Wm9lKMtvvA==">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx">客服中心</a></li>
+              <li><a href="javascript:void(0);"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: none; opacity: 0.151894;">
+      <img src="../events_net/pet_product/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+          <li><a href="#pro3500" onclick="ProcessGaEvent('pet_product','click','3500-好評熱銷排行榜');">好評熱銷排行榜</a></li>
+          <li><a href="#pro3494" onclick="ProcessGaEvent('pet_product','click','3494-寵物餵食器');">寵物餵食器</a></li>
+          <li><a href="#pro3495" onclick="ProcessGaEvent('pet_product','click','3495-貓砂機/尿布墊');">貓砂機/尿布墊</a></li>
+          <li><a href="#pro3496" onclick="ProcessGaEvent('pet_product','click','3496-寵物攝影機');">寵物攝影機</a></li>
+          <li><a href="#pro3497" onclick="ProcessGaEvent('pet_product','click','3497-寵物床窩/玩具');">寵物床窩/玩具</a></li>
+          <li><a href="#pro3498" onclick="ProcessGaEvent('pet_product','click','3498-驅蟲除臭');">驅蟲除臭</a></li>
+          <li><a href="#pro3499" onclick="ProcessGaEvent('pet_product','click','3499-環境清潔/清淨機');">環境清潔/清淨機</a></li>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="1"><span class="icon"><i class="fa-solid fa-shop"></i>精選商品</span></li>
+            <li data-id="2"><span class="icon"><i class="fa-solid fa-people-arrows"></i>關注社群</span></li>
+          </ul>
+        </div>
+        <div class="box-area type">
+          <ul></ul>
+        </div>
+        <div class="box-area social">
+          <ul>
+            <li><a href="https://reurl.cc/QbZ149?ec=pet_product" target="_blank"><i class="fa-brands fa-meta"></i></a>
+            </li>
+            <li><a href="https://reurl.cc/7pMZVl?ec=pet_product" target="_blank"><i class="fa-brands fa-line"></i></a>
+            </li>
+            <li><a href="https://reurl.cc/3Ye8kX?ec=pet_product" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile isShow"></a>
+
+    </div>
+    <div class="wrapper">
+
+
+
+
+      <div id="pet-container">
+        <div class="background">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/pet_product/images/2307/title.png">
+          </h2>
+          <p class="pet"><img src="https://events.tk3c.com/events_net/events_net/pet_product/images/2307/pet.png"></p>
+          <p class="product"><img src="https://events.tk3c.com/events_net/events_net/pet_product/images/2307/pd.png">
+          </p>
+        </div>
+
+        <p class="item"><img src="https://events.tk3c.com/events_net/events_net/pet_product/images/de.png" alt=""></p>
+
+        <section class="gift-box hide">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/pet_product/images/2307/win.png"
+              alt="">
+          </h2>
+        </section>
+
+        <section class="rank-box" id="pro3500">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/pet_product/images/2307/win2.png"
+              alt=""></h2>
+          <div class="ranks"></div>
+        </section>
+      </div>
+
+
+      <!-- 右側選單 -->
+
+      <aside class="aside-container">
+        <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+        <div class="aside-wrap">
+          <h3 class="aside-header"><img src="https://events.tk3c.com/events_net/events_net/pet_product/images/icon.png"
+              alt=""></h3>
+          <div class="aside-content">
+            <ul></ul>
+          </div>
+          <a href="#" class="go-top">GO TOP</a>
+        </div>
+      </aside>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@5.4.5/js/swiper.min.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/js/common.js" type="text/javascript"></script>
+      <!-- 手機版選單 JS -->
+      <script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/pet_product/js/pet.js"></script>
+
+    </div>
+    <div class="itemBox m_version_non">
+      <div id="btnBox03">
+        <div class="upbox">
+          <a href="#pro3500" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('pet_product','click','3500-好評熱銷排行榜')">好評熱銷排行榜</a>
+          <a href="#pro3494" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('pet_product','click','3494-寵物餵食器')">寵物餵食器</a>
+          <a href="#pro3495" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('pet_product','click','3495-貓砂機/尿布墊')">貓砂機/尿布墊</a>
+          <a href="#pro3496" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('pet_product','click','3496-寵物攝影機')">寵物攝影機</a>
+          <a href="#pro3497" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('pet_product','click','3497-寵物床窩/玩具')">寵物床窩/玩具</a>
+          <a href="#pro3498" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('pet_product','click','3498-驅蟲除臭')">驅蟲除臭</a>
+          <a href="#pro3499" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('pet_product','click','3499-環境清潔/清淨機')">環境清潔/清淨機</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="rightbtn" style="display: none;"><span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+      <div class="actbtn">
+        <a href="#pro3500" class="btn_01 p01" onclick="ProcessGaEvent('pet_product','click','3500-好評熱銷排行榜')">好評熱銷排行榜</a>
+        <a href="#pro3494" class="btn_01 p01" onclick="ProcessGaEvent('pet_product','click','3494-寵物餵食器')">寵物餵食器</a>
+        <a href="#pro3495" class="btn_01 p01" onclick="ProcessGaEvent('pet_product','click','3495-貓砂機/尿布墊')">貓砂機/尿布墊</a>
+        <a href="#pro3496" class="btn_01 p01" onclick="ProcessGaEvent('pet_product','click','3496-寵物攝影機')">寵物攝影機</a>
+        <a href="#pro3497" class="btn_01 p01" onclick="ProcessGaEvent('pet_product','click','3497-寵物床窩/玩具')">寵物床窩/玩具</a>
+        <a href="#pro3498" class="btn_01 p01" onclick="ProcessGaEvent('pet_product','click','3498-驅蟲除臭')">驅蟲除臭</a>
+        <a href="#pro3499" class="btn_01 p01"
+          onclick="ProcessGaEvent('pet_product','click','3499-環境清潔/清淨機')">環境清潔/清淨機</a>
+
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro3494" id="pro3494"></a>寵物餵食器</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228029&amp;ec=pet_product" id="prod228029" name="prod228029">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202204/228029_M.jpg?t=20220426183008" border="0"></p>
+              <storg>Petwant 甜甜圈六餐餵食器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>61</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,490</em> <i>活動價$</i>899 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225604&amp;ec=pet_product" id="prod225604" name="prod225604">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225604_M.jpg?t=20220627133811" border="0"></p>
+              <storg>PETONEER NutriSpin定時多餐餵食器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,990</em> <i>活動價$</i>1,880 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225601&amp;ec=pet_product" id="prod225601" name="prod225601">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225601_M.jpg?t=20220408163855" border="0"></p>
+              <storg>PETONEER飲水機Mini Plus(Wi-Fi版)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,880</em> <i>活動價$</i>1,680 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=223506&amp;ec=pet_product" id="prod223506" name="prod223506">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/223506_M.jpg?t=20220627133041" border="0"></p>
+              <storg>PETONEER寵物智能可視餵食器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>92</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,480</em> <i>活動價$</i>4,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225602&amp;ec=pet_product" id="prod225602" name="prod225602">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225602_M.jpg?t=20220627132854" border="0"></p>
+              <storg>PETONEER Mini智能寵物飲水機Pro</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,190</em> <i>活動價$</i>1,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=223505&amp;ec=pet_product" id="prod223505" name="prod223505">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/223505_M.jpg?t=20220627132952" border="0"></p>
+              <storg>PETONEER寵物飲水機殺菌版</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,980</em> <i>活動價$</i>4,380 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231163&amp;ec=pet_product" id="prod231163" name="prod231163">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/231163_M.jpg?t=20221010172943" border="0"></p>
+              <storg>長江 可遠端高清寵物自動餵食器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,480</em> <i>活動價$</i>2,480 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225603&amp;ec=pet_product" id="prod225603" name="prod225603">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225603_M.jpg?t=20220408163903" border="0"></p>
+              <storg>PETONEER迷你寵物餵食器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,790</em> <i>活動價$</i>2,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=230673&amp;ec=pet_product" id="prod230673" name="prod230673">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl08_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/230673_M.jpg?t=20220719104225" border="0"></p>
+              <storg>小米 Xiaomi 智慧寵物餵食器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,295</em> <i>活動價$</i>2,295 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=230672&amp;ec=pet_product" id="prod230672" name="prod230672">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl09_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/230672_M.jpg?t=20220719104550" border="0"></p>
+              <storg>小米 Xiaomi 智慧寵物飲水機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,295</em> <i>活動價$</i>1,295 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239421&amp;ec=pet_product" id="prod239421" name="prod239421">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl10_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239421_M.jpg?t=20230516183035" border="0"></p>
+              <storg>JS 六餐式寵物餵食機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,490</em> <i>活動價$</i>1,490 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3495" id="pro3495"></a>貓砂機/尿布墊</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228945&amp;ec=pet_product" id="prod228945" name="prod228945">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228945_M.jpg?t=20220608153751" border="0"></p>
+              <storg>HAKE AI抗菌自動貓砂機-莫蘭迪綠</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,800</em> <i>活動價$</i>9,199 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239409&amp;ec=pet_product" id="prod239409" name="prod239409">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239409_M.jpg?t=20230515183022" border="0"></p>
+              <storg>Goldmie 寵物血糖機+耗材套組</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>62</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,080</em> <i>活動價$</i>1,880 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239412&amp;ec=pet_product" id="prod239412" name="prod239412">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239412_M.jpg?t=20230515183023" border="0"></p>
+              <storg>毛怪樂園 金三萬花生殼貓砂-藍風鈴</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,320</em> <i>活動價$</i>1,760 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239410&amp;ec=pet_product" id="prod239410" name="prod239410">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239410_M.jpg?t=20230515183022" border="0"></p>
+              <storg>Goldmie 寵物血糖耗材5入組</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>93</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,250</em> <i>活動價$</i>3,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228947&amp;ec=pet_product" id="prod228947" name="prod228947">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228947_M.jpg?t=20220608153853" border="0"></p>
+              <storg>HAKE AI抗菌自動貓砂機-寶寶藍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,800</em> <i>活動價$</i>9,199 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228944&amp;ec=pet_product" id="prod228944" name="prod228944">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228944_M.jpg?t=20220608153716" border="0"></p>
+              <storg>HAKE AI抗菌自動貓砂機-深空灰</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,800</em> <i>活動價$</i>9,199 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228946&amp;ec=pet_product" id="prod228946" name="prod228946">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228946_M.jpg?t=20220608153816" border="0"></p>
+              <storg>HAKE AI抗菌自動貓砂機-蜜桃粉</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,800</em> <i>活動價$</i>9,199 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239411&amp;ec=pet_product" id="prod239411" name="prod239411">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239411_M.jpg?t=20230515183022" border="0"></p>
+              <storg>毛怪樂園 金三萬花生殼貓砂-原味</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,320</em> <i>活動價$</i>1,760 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3496" id="pro3496"></a>寵物攝影機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=203965&amp;ec=pet_product" id="prod203965" name="prod203965">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201911/203965_M.jpg?t=20230418171752" border="0"></p>
+              <storg>TP-LINK 旋轉式家庭安全防護 Wi-Fi 攝影機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,279</em> <i>活動價$</i>849 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225606&amp;ec=pet_product" id="prod225606" name="prod225606">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225606_M.jpg?t=20220510092728" border="0"></p>
+              <storg>PETONEER 寵物攝像頭</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,790</em> <i>活動價$</i>1,590 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3497" id="pro3497"></a>寵物床窩/玩具</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225607&amp;ec=pet_product" id="prod225607" name="prod225607">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225607_M.jpg?t=20220408163905" border="0"></p>
+              <storg>Petoneer Smart Dot 智能紅光逗貓玩具</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,590</em> <i>活動價$</i>1,390 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=216300&amp;ec=pet_product" id="prod216300" name="prod216300">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202103/216300_M.jpg?t=20210504145653" border="0"></p>
+              <storg>康森 西川涼感機+水循環涼墊(中小型犬適用)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$4,905</em> <i>活動價$</i>4,905 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3498" id="pro3498"></a>驅蟲除臭</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=223507&amp;ec=pet_product" id="prod223507" name="prod223507">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/223507_M.jpg?t=20211210143149" border="0"></p>
+              <storg>PETONEER智能滅菌除臭器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,490</em> <i>活動價$</i>1,280 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225605&amp;ec=pet_product" id="prod225605" name="prod225605">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225605_M.jpg?t=20220408163913" border="0"></p>
+              <storg>PETONEER智能滅菌除臭器Pro</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,690</em> <i>活動價$</i>1,590 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3499" id="pro3499"></a>環境清潔/清淨機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=210123&amp;ec=pet_product" id="prod210123" name="prod210123">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/210123_M.jpg?t=20220501003452" border="0"></p>
+              <storg>LG 360度單層空氣清淨機 寵物功能版</storg>
+              <h4>登錄送寵物版濾網！</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$26,800</em> <i>活動價$</i>21,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=156627&amp;ec=pet_product" id="prod156627" name="prod156627">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201506/156627_M.jpg?t=20220429173340" border="0"></p>
+              <storg>美國Honeywell 4-8坪 True HEPA清淨機</storg>
+              <h4>抵禦外來病毒首選</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>3,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=210124&amp;ec=pet_product" id="prod210124" name="prod210124">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/210124_M.jpg?t=20230619103007" border="0"></p>
+              <storg>LG 360度雙層空氣清淨機(寵物功能版)</storg>
+              <h4>登錄送寵物版濾網！</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$38,800</em> <i>活動價$</i>32,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=202592&amp;ec=pet_product" id="prod202592" name="prod202592">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201909/202592_M.jpg?t=20221130154616" border="0"></p>
+              <storg>奇美CHIMEI 6-10坪空氣清淨機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,388</em> <i>活動價$</i>4,988 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=221263&amp;ec=pet_product" id="prod221263" name="prod221263">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/221263_M.jpg?t=20220906172326" border="0"></p>
+              <storg>CHIMEI 6-10坪智能淨化空氣清淨機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>4,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=221262&amp;ec=pet_product" id="prod221262" name="prod221262">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/221262_M.jpg?t=20220622111555" border="0"></p>
+              <storg>CHIMEI 3-6坪 360度空氣清淨機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,488</em> <i>活動價$</i>2,188 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+      <div id="TkecFooter">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+
+
+        <style>
+          @charset "utf-8";
+
+          * {
+            margin: 0;
+            padding: 0
+          }
+
+          *:focus {
+            outline: none;
+          }
+
+          /*黃框消除*/
+
+          * {
+            -webkit-text-size-adjust: none;
+          }
+
+          /*字體尺寸限制解除*/
+
+          a {
+            text-decoration: none;
+            cursor: pointer
+          }
+
+          img {
+            border: 0px;
+          }
+
+          /*圖片超連結邊框消除*/
+
+          .acbankbox .fred {
+            color: #F00;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .acbankbox .fgray {
+            color: #666;
+          }
+
+          .acbankbox .bgcolor {
+            background: #999;
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width:751px) {
+            .acbankbox {
+              display: block;
+              width: 1144px;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+              overflow: hidden;
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              padding: 16px;
+              position: relative;
+              display: block;
+              border-radius: 40px 40px 0 0;
+              -moz-border-radius: 40px 40px 0 0;
+              -webkit-border-radius: 40px 40px 0 0;
+              box-sizing: border-box;
+            }
+
+            .acbankbox .list2 u {
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+              display: block;
+              font-size: 40px;
+              text-decoration: none;
+              margin-bottom: 10px;
+              letter-spacing: 1px;
+            }
+
+            .acbankbox .list2 ul li {
+              width: 210px;
+              text-align: center;
+              float: left;
+              margin: 6px;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 82%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 13px;
+              margin-top: 0px;
+              text-align: center;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 38px;
+              font-size: 38px;
+              font-style: normal;
+              display: block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {
+              display: none;
+            }
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            .acbankbox {
+              display: block;
+              width: 100%;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              position: relative;
+              display: block;
+              box-sizing: border-box;
+              padding-bottom: 1%;
+            }
+
+            .acbankbox .list2 u {
+              width: 96%;
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              display: block;
+              font-size: 200%;
+              text-decoration: none;
+              margin-bottom: 10px;
+              margin: 2% auto;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+            }
+
+            .acbankbox .list2 ul li {
+              height: auto;
+              width: 48%;
+              text-align: center;
+              float: left;
+              margin: 1%;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+              box-sizing: border-box;
+              padding-bottom: 4%;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 85%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 100%;
+              margin-top: 0px;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 1em;
+              font-size: 200%;
+              font-style: normal;
+              display: inline-block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {}
+          }
+        </style>
+        <div class="acbankbox">
+          <!--銀行區 st-->
+          <div class="list2 bgcolor">
+            <u>6月銀行 刷卡享好康</u>
+            <ul>
+
+              <!--永豐-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-05.jpg"></p>
+                  <p class="item_text05 fred"><em>送$5200</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--星展-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-03.jpg"></p>
+                  <p class="item_text05 fred"><em>送$3000</em>刷卡金</p>
+                </a>
+              </li>
+
+
+              <!--第一-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-04.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2500</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--燦坤-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送2400</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--台新-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202212/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2000</em>刷卡金</p>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+          <!--銀行區 end-->
+        </div>
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+</body>
+
+</html>
