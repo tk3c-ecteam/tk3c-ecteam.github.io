@@ -1,0 +1,1782 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description"
+    content="電冰箱、洗衣機、乾衣機、冷凍櫃、洗碗機，一級節能補助，政府補助最高享7000元！各大品牌空調活動好禮多選一送給你!Panasonic國際牌、HITACHI日立、TECO東元、SAMSUNG三星、Whirlpool惠而浦、SANLUX台灣三洋、LG樂金、SHARP夏普、TOSHIBA 東芝，更多便宜優惠價格就在燦坤線上購物">
+  <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="冰洗活動頁 | 燦坤線上">
+  <meta property="og:description"
+    content="電冰箱、洗衣機、乾衣機、冷凍櫃、洗碗機，一級節能補助，政府補助最高享7000元！各大品牌空調活動好禮多選一送給你!Panasonic國際牌、HITACHI日立、TECO東元、SAMSUNG三星、Whirlpool惠而浦、SANLUX台灣三洋、LG樂金、SHARP夏普、TOSHIBA 東芝，更多便宜優惠價格就在燦坤線上購物">
+  <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/icewash2209/index.html">
+
+  <title>冰洗活動頁 | 燦坤線上</title>
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/icewash2209/css/icewash2308.css" rel="stylesheet"
+    type="text/css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.9/dist/sweetalert2.all.min.js"></script>
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <link href="https://events.tk3c.com/events_net/css/swiper.min.css?2" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "icewash2209";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+  <!-- Swiper-->
+  <script>
+    $(document).ready(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          reverseDirection: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        }
+      });
+    });
+  </script>
+  <script>
+    ChkEvent(1759)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+  <script>
+    $.ajax({
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+      type: "POST",
+      dataType: 'script',
+      success: function () {
+        jQuery(function () {
+          jQuery.scrollDepth({
+            pixelDepth: false,
+            gtmOverride: true
+          });
+        });
+      }
+    });
+  </script>
+
+
+</head>
+
+<body>
+
+  <form name="form1" method="post" action="./index.aspx?mainid=1759&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/?ec=icewash2209">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">28</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0Ccqzf/I3SYc+WweqdsuJmLloDrQ3UH+QwnwdygMOAWYS7vsg==&amp;ec=icewash2209">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx?ec=icewash2209">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx?ec=icewash2209">客服中心</a></li>
+              <li><a href="javascript:void(0);?ec=icewash2209"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: block; opacity: 1;">
+      <img src="../events_net/icewash2209/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+          <li><a href="#pro4423" onclick="ProcessGaEvent('icewash2209','click','4423-熱銷推薦');">熱銷推薦</a></li>
+          <li><a href="#pro3647" onclick="ProcessGaEvent('icewash2209','click','3647-冰箱');">冰箱</a></li>
+          <li><a href="#pro3648" onclick="ProcessGaEvent('icewash2209','click','3648-洗衣機');">洗衣機</a></li>
+          <li><a href="#pro3649" onclick="ProcessGaEvent('icewash2209','click','3649-乾衣機');">乾衣機</a></li>
+          <li><a href="#pro3650" onclick="ProcessGaEvent('icewash2209','click','3650-冷凍櫃');">冷凍櫃</a></li>
+          <li><a href="#pro3651" onclick="ProcessGaEvent('icewash2209','click','3651-洗碗機');">洗碗機</a></li>
+          <li><a href="#pro4852" onclick="ProcessGaEvent('icewash2209','click','4852-空調');">空調</a></li>
+          <li><a href="#pro4853" onclick="ProcessGaEvent('icewash2209','click','4853-移動式冷氣');">移動式冷氣</a></li>
+          <li><a href="#activity2718" onclick="ProcessGaEvent('icewash2209','click','2718-其他');">其他</a></li>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="1"><span class="icon"><i class="fa-solid fa-shop"></i>精選商品</span></li>
+            <li data-id="2"><span class="icon"><i class="fa-solid fa-people-arrows"></i>關注社群</span></li>
+          </ul>
+        </div>
+        <div class="box-area type">
+          <ul> </ul>
+        </div>
+        <div class="box-area social">
+          <ul>
+            <li><a href="https://reurl.cc/QbZ149?ec=icewash2209" target="_blank"><i class="fa-brands fa-meta"></i></a>
+            </li>
+            <li><a href="https://reurl.cc/7pMZVl?ec=icewash2209" target="_blank"><i class="fa-brands fa-line"></i></a>
+            </li>
+            <li><a href="https://reurl.cc/3Ye8kX?ec=icewash2209" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile isShow"></a>
+
+    </div>
+    <div class="wrapper">
+
+
+
+
+      <div id="icewash-container">
+        <div class="background">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/title.png">
+          </h2>
+          <p class="product"></p>
+          <p class="floor"><img src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/floor.png">
+          </p>
+          <p class="plate"></p>
+          <p class="lantern left"><img
+              src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/lantern_l.png"></p>
+          <p class="lantern right"><img
+              src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/lantern_r.png"></p>
+        </div>
+
+        <p class="item"><img src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/item.png"></p>
+        <div class="background2"></div>
+        <div class="background3"></div>
+
+        <section class="sale-box">
+          <img class="sale-bg" src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/a_bg.png">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/a01.png">
+          </h2>
+          <ul>
+            <li class="alert1"><a><img
+                  src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2307/sale01.png"></a></li>
+            <li class="alert2"><a><img
+                  src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2307/sale02.png"></a></li>
+            <li class="long">
+              <a href="https://events.tk3c.com/events_net/greenpoint.tk3c/index.html?ec=icewash2209" target="_blank"
+                class="info">
+                <img src="https://events.tk3c.com/events_net/events_net/202304vip2C/images/turtle.jpg" class="pc">
+                <img src="https://events.tk3c.com/events_net/events_net/202304vip2C/images/turtleM.jpg" class="mobile">
+              </a>
+            </li>
+            <li class="alert3 long"><a><img
+                  src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/a05.png"></a>
+            </li>
+          </ul>
+
+        </section>
+
+        <section class="gift-box">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/bar_b.png">
+          </h2>
+          <img class="gift-bg" src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/sale_bg.png">
+
+          <ul>
+            <li><a href="https://www.tk3c.com/dic2.aspx?cid=12504&aid=22579&hid=121521" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/b01.png"></a></li>
+            <li><a href="https://www.tk3c.com/dic1.aspx?cid=12504&aid=7101" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/b02.png"></a></li>
+          </ul>
+        </section>
+
+        <section class="brand-box">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/bar_c.png">
+          </h2>
+        </section>
+
+        <section class="event-box">
+        </section>
+
+        <section class="pro-box" id="pro">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/bar_d.png">
+          </h2>
+          <div class="products"></div>
+        </section>
+
+
+      </div>
+
+      <!-- 右側選單 -->
+
+      <aside class="aside-container">
+        <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+        <div class="aside-wrap">
+          <h3 class="aside-header"></h3>
+          <div class="aside-content">
+            <ul></ul>
+          </div>
+        </div>
+        <a href="#" class="go-top">GO TOP</a>
+      </aside>
+
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@5.4.5/js/swiper.min.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/js/common.js" type="text/javascript"></script>
+      <!-- 手機版選單 JS -->
+      <script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/icewash2209/js/icewash2308.js"></script>
+
+    </div>
+    <div class="itemBox m_version_non">
+      <div id="btnBox03">
+        <div class="upbox">
+          <a href="#pro4423" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('icewash2209','click','4423-熱銷推薦')">熱銷推薦</a>
+          <a href="#pro3647" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('icewash2209','click','3647-冰箱')">冰箱</a>
+          <a href="#pro3648" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('icewash2209','click','3648-洗衣機')">洗衣機</a>
+          <a href="#pro3649" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('icewash2209','click','3649-乾衣機')">乾衣機</a>
+          <a href="#pro3650" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('icewash2209','click','3650-冷凍櫃')">冷凍櫃</a>
+          <a href="#pro3651" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('icewash2209','click','3651-洗碗機')">洗碗機</a>
+          <a href="#pro4852" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('icewash2209','click','4852-空調')">空調</a>
+          <a href="#pro4853" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('icewash2209','click','4853-移動式冷氣')">移動式冷氣</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="rightbtn" style="display: none;"><span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+      <div class="actbtn">
+        <a href="#pro4423" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','4423-熱銷推薦')">熱銷推薦</a>
+        <a href="#pro3647" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','3647-冰箱')">冰箱</a>
+        <a href="#pro3648" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','3648-洗衣機')">洗衣機</a>
+        <a href="#pro3649" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','3649-乾衣機')">乾衣機</a>
+        <a href="#pro3650" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','3650-冷凍櫃')">冷凍櫃</a>
+        <a href="#pro3651" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','3651-洗碗機')">洗碗機</a>
+        <a href="#pro4852" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','4852-空調')">空調</a>
+        <a href="#pro4853" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','4853-移動式冷氣')">移動式冷氣</a>
+        <a href="#activity2718" class="btn_01 p01" onclick="ProcessGaEvent('icewash2209','click','2718-其他')">其他</a>
+
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro3647" id="pro3647"></a>冰箱</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=177504&amp;ec=icewash2209" id="prod177504" name="prod177504">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201706/177504_M.jpg?t=20221010172438" border="0"></p>
+              <storg>三星SAMSUNG 258公升 極簡雙門變頻冰箱</storg>
+              <h4>領券再折$588↘↘</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>74</span>折</p>
+                <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219902&amp;ec=icewash2209" id="prod219902" name="prod219902">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202108/219902_M.jpg?t=20230321093036" border="0"></p>
+              <storg>享最高補助$3500元 | 東元 101公升雙門冰箱...</storg>
+              <h4>CP值最高</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,490</em> <i>活動價$</i>7,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=183965&amp;ec=icewash2209" id="prod183965" name="prod183965">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201801/183965_M.jpg?t=20230220134413" border="0"></p>
+              <storg>享最高補助$3500元 | 東元TECO 99公升 單門小鮮綠冰箱(白色)...</storg>
+              <h4>租屋族最佳選擇</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,690</em> <i>活動價$</i>5,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=216902&amp;ec=icewash2209" id="prod216902" name="prod216902">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202103/216902_M.jpg?t=20230522092533" border="0"></p>
+              <storg>Panasonic 422公升雙門變頻冰箱</storg>
+              <h4>免費標準安裝定位+送 14件餐具組</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$24,500</em> <i>活動價$</i>22,050 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=214582&amp;ec=icewash2209" id="prod214582" name="prod214582">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202101/214582_M.jpg?t=20210406113402" border="0"></p>
+              <storg>聲寶 140公升雙門定頻冰箱</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$11,990</em> <i>活動價$</i>11,900 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=211982&amp;ec=icewash2209" id="prod211982" name="prod211982">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202009/211982_M.jpg?t=20210329095409" border="0"></p>
+              <storg>Panasonic 500公升玻璃三門變頻冰箱</storg>
+              <h4>免費標準安裝定位+送 14件餐具組+送1000元商品卡...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$44,800</em> <i>活動價$</i>40,320 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=204112&amp;ec=icewash2209" id="prod204112" name="prod204112">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201911/204112_M.jpg?t=20210326165955" border="0"></p>
+              <storg>聲寶 95公升單門冰箱</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,190</em> <i>活動價$</i>5,880 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=216901&amp;ec=icewash2209" id="prod216901" name="prod216901">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202103/216901_M.jpg?t=20230515110825" border="0"></p>
+              <storg>Panasonic 422公升雙門變頻冰箱</storg>
+              <h4>免費標準安裝定位+送 14件餐具組</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$24,500</em> <i>活動價$</i>22,050 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3648" id="pro3648"></a>洗衣機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=220776&amp;ec=icewash2209" id="prod220776" name="prod220776">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/220776_M.jpg?t=20220912115506" border="0"></p>
+              <storg>國際牌 Panasonic 17公斤Nanoe Ag變頻洗衣機...</storg>
+              <h4>免費標準安裝定位+送 保潔墊+送 洗衣液體皂...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$25,900</em> <i>活動價$</i>21,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=180306&amp;ec=icewash2209" id="prod180306" name="prod180306">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201709/180306_M.jpg?t=20230424085730" border="0"></p>
+              <storg>國際牌Panasonic 9公斤 洗衣機</storg>
+              <h4>全方位立體水流</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$9,900</em> <i>活動價$</i>8,910 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=207211&amp;ec=icewash2209" id="prod207211" name="prod207211">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202004/207211_M.jpg?t=20210723102631" border="0"></p>
+              <storg>惠而浦Whirlpool 12公斤 G-flex直立式洗衣機...</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$11,400</em> <i>活動價$</i>8,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=197746&amp;ec=icewash2209" id="prod197746" name="prod197746">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201905/197746_M.jpg?t=20230426135456" border="0"></p>
+              <storg>國際牌Panasonic 12公斤 洗脫烘滾筒洗衣機</storg>
+              <h4>免費標準安裝定位+送抗菌保潔墊</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>92</span>折</p>
+                <strong class="txt_red fred"> <em>市價$24,900</em> <i>活動價$</i>22,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=207210&amp;ec=icewash2209" id="prod207210" name="prod207210">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202004/207210_M.jpg?t=20220621172907" border="0"></p>
+              <storg>惠而浦Whirlpool 16公斤 DD直驅變頻直立洗衣機...</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>78</span>折</p>
+                <strong class="txt_red fred"> <em>市價$20,000</em> <i>活動價$</i>15,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=199534&amp;ec=icewash2209" id="prod199534" name="prod199534">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201906/199534_M.jpg?t=20220517143007" border="0"></p>
+              <storg>東元 12公斤洗脫烘滾筒洗衣機</storg>
+              <h4>領券再折$588↘↘</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$26,900</em> <i>活動價$</i>17,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=202470&amp;ec=icewash2209" id="prod202470" name="prod202470">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201909/202470_M.jpg?t=20221212170208" border="0"></p>
+              <storg>東元TECO 10公斤 變頻洗衣機</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,900</em> <i>活動價$</i>10,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229701&amp;ec=icewash2209" id="prod229701" name="prod229701">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229701_M.jpg?t=20230703142347" border="0"></p>
+              <storg>Panasonic 15公斤大海龍洗衣機</storg>
+              <h4>免費標準安裝定位+送 分類砧板4件組...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>92</span>折</p>
+                <strong class="txt_red fred"> <em>市價$16,900</em> <i>活動價$</i>15,548 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3649" id="pro3649"></a>乾衣機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=196830&amp;ec=icewash2209" id="prod196830" name="prod196830">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201904/196830_M.jpg?t=20210810154739" border="0"></p>
+              <storg>國際牌Panasonic 7公斤 乾衣機</storg>
+              <h4>乾衣機銷售No.1</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>92</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,590</em> <i>活動價$</i>7,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=223927&amp;ec=icewash2209" id="prod223927" name="prod223927">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/223927_M.jpg?t=20230630161342" border="0"></p>
+              <storg>林內日本瓦斯乾衣機9KG RDT-90-TR-W桶裝</storg>
+              <h4>日本原裝進口</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$38,000</em> <i>活動價$</i>38,000 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236446&amp;ec=icewash2209" id="prod236446" name="prod236446">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202301/236446_M.jpg?t=20230107183012" border="0"></p>
+              <storg>MIELE 9公斤乾衣機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>96</span>折</p>
+                <strong class="txt_red fred"> <em>市價$126,000</em> <i>活動價$</i>119,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239125&amp;ec=icewash2209" id="prod239125" name="prod239125">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239125_M.jpg?t=20230531113628" border="0"></p>
+              <storg>CHIMEI 7公斤乾衣機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$11,200</em> <i>活動價$</i>9,200 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=209345&amp;ec=icewash2209" id="prod209345" name="prod209345">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/209345_M.jpg?t=20210810161759" border="0"></p>
+              <storg>LG 9公斤免曬衣乾衣機</storg>
+              <h4>熱泵式低溫除溼乾衣</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$39,900</em> <i>活動價$</i>32,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=196831&amp;ec=icewash2209" id="prod196831" name="prod196831">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201904/196831_M.jpg?t=20210810154724" border="0"></p>
+              <storg>國際牌Panasonic 7公斤 乾衣機</storg>
+              <h4>免費標準安裝定位+送 烘焙廚具4件組...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$9,590</em> <i>活動價$</i>9,590 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=214037&amp;ec=icewash2209" id="prod214037" name="prod214037">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202012/214037_M.jpg?t=20210810161715" border="0"></p>
+              <storg>LG 16公斤免曬衣乾衣機</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>96</span>折</p>
+                <strong class="txt_red fred"> <em>市價$49,900</em> <i>活動價$</i>47,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240520&amp;ec=icewash2209" id="prod240520" name="prod240520">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240520_M.jpg?t=20230616102839" border="0"></p>
+              <storg>三星SAMSUNG BESPOKE 17公斤蒸本事瓦斯型乾衣機...</storg>
+              <h4>回函送 1,500元禮券+可微波保鮮盒組...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$52,900</em> <i>活動價$</i>46,700 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3650" id="pro3650"></a>冷凍櫃</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=204215&amp;ec=icewash2209" id="prod204215" name="prod204215">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201912/204215_M.jpg?t=20210406132752" border="0"></p>
+              <storg>國際牌Panasonic 170公升 直立式冷凍櫃</storg>
+              <h4>CP值最高 自動除霜 數位5段溫控顯示面板...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$15,490</em> <i>活動價$</i>13,941 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239962&amp;ec=icewash2209" id="prod239962" name="prod239962">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239962_M.jpg?t=20230731101734" border="0"></p>
+              <storg>Panasonic 325公升下冷凍雙門變頻冰箱</storg>
+              <h4>免費標準安裝定位+送 砧板4件組+送 1000元商品卡...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$26,900</em> <i>活動價$</i>24,210 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=204521&amp;ec=icewash2209" id="prod204521" name="prod204521">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201912/204521_M.jpg?t=20210406132734" border="0"></p>
+              <storg>國際牌Panasonic 242公升 直立式冷凍櫃</storg>
+              <h4>無霜冷凍櫃</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$21,590</em> <i>活動價$</i>19,431 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233882&amp;ec=icewash2209" id="prod233882" name="prod233882">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233882_M.jpg?t=20230306145333" border="0"></p>
+              <storg>Panasonic 380公升直立式變頻冷凍櫃</storg>
+              <h4>免費標準安裝定位+送 烘焙廚具4件組...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$25,900</em> <i>活動價$</i>23,310 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=189693&amp;ec=icewash2209" id="prod189693" name="prod189693">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201808/189693_M.jpg?t=20210406111932" border="0"></p>
+              <storg>歌林 155公升臥式冷凍櫃</storg>
+              <h4>免費標準安裝定位+送免費標準安裝...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,990</em> <i>活動價$</i>6,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=215280&amp;ec=icewash2209" id="prod215280" name="prod215280">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202101/215280_M.jpg?t=20210329163127" border="0"></p>
+              <storg>台灣三洋 208公升臥式直冷式冷凍櫃</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$11,000</em> <i>活動價$</i>11,000 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=204109&amp;ec=icewash2209" id="prod204109" name="prod204109">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201911/204109_M.jpg?t=20210701165237" border="0"></p>
+              <storg>聲寶SAMPO 170公升 直立式冷凍櫃</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$14,490</em> <i>活動價$</i>11,590 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=211003&amp;ec=icewash2209" id="prod211003" name="prod211003">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202009/211003_M.jpg?t=20221111113029" border="0"></p>
+              <storg>MITSUBISHI 144公升直立式冷凍櫃</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>93</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,900</em> <i>活動價$</i>11,900 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro3651" id="pro3651"></a>洗碗機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225747&amp;ec=icewash2209" id="prod225747" name="prod225747">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225747_M.jpg?t=20220309135909" border="0"></p>
+              <storg>MIELE 半崁式洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$98,000</em> <i>活動價$</i>98,000 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225736&amp;ec=icewash2209" id="prod225736" name="prod225736">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225736_M.jpg?t=20220309135921" border="0"></p>
+              <storg>MIELE 半崁式洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$74,500</em> <i>活動價$</i>74,500 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=227341&amp;ec=icewash2209" id="prod227341" name="prod227341">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202204/227341_M.jpg?t=20230224095840" border="0"></p>
+              <storg>MIELE 洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>94</span>折</p>
+                <strong class="txt_red fred"> <em>市價$72,500</em> <i>活動價$</i>68,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229402&amp;ec=icewash2209" id="prod229402" name="prod229402">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229402_M.jpg?t=20230109113922" border="0"></p>
+              <storg>Bosch 9人份獨立式洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>77</span>折</p>
+                <strong class="txt_red fred"> <em>市價$37,900</em> <i>活動價$</i>28,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229401&amp;ec=icewash2209" id="prod229401" name="prod229401">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229401_M.jpg?t=20230109113901" border="0"></p>
+              <storg>Bosch 12人份獨立式洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$39,900</em> <i>活動價$</i>35,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225573&amp;ec=icewash2209" id="prod225573" name="prod225573">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225573_M.jpg?t=20220309135933" border="0"></p>
+              <storg>MIELE 全嵌式洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$78,500</em> <i>活動價$</i>78,500 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229400&amp;ec=icewash2209" id="prod229400" name="prod229400">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229400_M.jpg?t=20230109113833" border="0"></p>
+              <storg>Bosch 13人份獨立式洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$49,800</em> <i>活動價$</i>44,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=230294&amp;ec=icewash2209" id="prod230294" name="prod230294">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/230294_M.jpg?t=20230109114003" border="0"></p>
+              <storg>BOSCH 14人份沸石獨立式洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$85,000</em> <i>活動價$</i>76,900 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro4852" id="pro4852"></a>空調</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225365&amp;ec=icewash2209" id="prod225365" name="prod225365">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225365_M.jpg?t=20230619142156" border="0"></p>
+              <storg>限時下殺｜Panasonic 窗型定頻空調</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$21,000</em> <i>活動價$</i>13,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225386&amp;ec=icewash2209" id="prod225386" name="prod225386">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225386_M.jpg?t=20221214142923" border="0"></p>
+              <storg>國際 Panasonic 窗型變頻冷暖空調</storg>
+              <h4>領券再折$599↘↘</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$23,900</em> <i>活動價$</i>20,599 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225364&amp;ec=icewash2209" id="prod225364" name="prod225364">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225364_M.jpg?t=20230619142231" border="0"></p>
+              <storg>限時下殺｜Panasonic 窗型定頻空調</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$17,400</em> <i>活動價$</i>11,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238438&amp;ec=icewash2209" id="prod238438" name="prod238438">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/238438_M.jpg?t=20230619102755" border="0"></p>
+              <storg>TECO一對一變頻單冷空調</storg>
+              <h4>送 醫療級空氣清淨濾網</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$22,490</em> <i>活動價$</i>17,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236773&amp;ec=icewash2209" id="prod236773" name="prod236773">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202301/236773_M.jpg?t=20230711101333" border="0"></p>
+              <storg>TECO精品一對一變頻冷暖空調</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$22,900</em> <i>活動價$</i>19,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=215492&amp;ec=icewash2209" id="prod215492" name="prod215492">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202101/215492_M.jpg?t=20230703142459" border="0"></p>
+              <storg>國際牌Panasonic 一對一變頻單冷空調</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$22,500</em> <i>活動價$</i>18,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=206229&amp;ec=icewash2209" id="prod206229" name="prod206229">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202003/206229_M.jpg?t=20230417114236" border="0"></p>
+              <storg>聲寶SAMPO 1對1變頻單冷空調</storg>
+              <h4>強力省電靜音防霉</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$23,900</em> <i>活動價$</i>17,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228387&amp;ec=icewash2209" id="prod228387" name="prod228387">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228387_M.jpg?t=20230628112849" border="0"></p>
+              <storg>SONGEN松井 9000BTU多功能冷暖型移動式冷氣...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>市價$9,900</em> <i>活動價$</i>7,490 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro4853" id="pro4853"></a>移動式冷氣</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=175195&amp;ec=icewash2209" id="prod175195" name="prod175195">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201703/175195_M.jpg?t=20210415154136" border="0"></p>
+              <storg>ZANWA晶華 冷專 清淨除溼 移動式空調/冷氣機(9000BTU)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$10,990</em> <i>活動價$</i>8,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=175345&amp;ec=icewash2209" id="prod175345" name="prod175345">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201703/175345_M.jpg?t=20210305174746" border="0"></p>
+              <storg>威技 R32 移動式空調</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>市價$20,900</em> <i>活動價$</i>15,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=176731&amp;ec=icewash2209" id="prod176731" name="prod176731">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201705/176731_M.jpg?t=20230525171209" border="0"></p>
+              <storg>ZANWA晶華 冷暖清淨除溼移動式冷氣</storg>
+              <h4>六機ㄧ體 夏急冷-冬立暖-雨除濕-日清淨過濾...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,800</em> <i>活動價$</i>8,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=196576&amp;ec=icewash2209" id="prod196576" name="prod196576">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201903/196576_M.jpg?t=20230512135401" border="0"></p>
+              <storg>安晴Anqueen移動式冷氣</storg>
+              <h4>免施工安裝!走到哪涼到哪~</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>72</span>折</p>
+                <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=197693&amp;ec=icewash2209" id="prod197693" name="prod197693">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201905/197693_M.jpg?t=20230525171442" border="0"></p>
+              <storg>ZANWA晶華 10000BTU多功能冷暖型移動式冷氣...</storg>
+              <h4>全機1年保固，壓縮機3年保固</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>64</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,600</em> <i>活動價$</i>8,700 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=197694&amp;ec=icewash2209" id="prod197694" name="prod197694">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201905/197694_M.jpg?t=20230525171430" border="0"></p>
+              <storg>ZANWA晶華10000BTU冷暖移動式冷氣(含14吋立扇)...</storg>
+              <h4>搶先購 移動式冷氣+14吋立扇 早買早享受...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,800</em> <i>活動價$</i>9,480 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=207807&amp;ec=icewash2209" id="prod207807" name="prod207807">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202005/207807_M.jpg?t=20230419165002" border="0"></p>
+              <storg>北極雪CRESTON 移動式空調(10000BTU)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$11,900</em> <i>活動價$</i>9,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=207996&amp;ec=icewash2209" id="prod207996" name="prod207996">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202005/207996_M.jpg?t=20230525171503" border="0"></p>
+              <storg>SONGEN松井10000BTU移動式冷氣機</storg>
+              <h4>全機1年保固，壓縮機3年保固</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,800</em> <i>活動價$</i>10,070 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+      <div class="type-box" id="type">
+        <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/icewash2209/images/2308/bar_e.png">
+        </h2>
+      </div>
+
+
+
+
+      <div id="TkecFooter">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+
+
+        <style>
+          @charset "utf-8";
+
+          * {
+            margin: 0;
+            padding: 0
+          }
+
+          *:focus {
+            outline: none;
+          }
+
+          /*黃框消除*/
+
+          * {
+            -webkit-text-size-adjust: none;
+          }
+
+          /*字體尺寸限制解除*/
+
+          a {
+            text-decoration: none;
+            cursor: pointer
+          }
+
+          img {
+            border: 0px;
+          }
+
+          /*圖片超連結邊框消除*/
+
+          .acbankbox .fred {
+            color: #F00;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .acbankbox .fgray {
+            color: #666;
+          }
+
+          .acbankbox .bgcolor {
+            background: #999;
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width:751px) {
+            .acbankbox {
+              display: block;
+              width: 1144px;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+              overflow: hidden;
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              padding: 16px;
+              position: relative;
+              display: block;
+              border-radius: 40px 40px 0 0;
+              -moz-border-radius: 40px 40px 0 0;
+              -webkit-border-radius: 40px 40px 0 0;
+              box-sizing: border-box;
+            }
+
+            .acbankbox .list2 u {
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+              display: block;
+              font-size: 40px;
+              text-decoration: none;
+              margin-bottom: 10px;
+              letter-spacing: 1px;
+            }
+
+            .acbankbox .list2 ul li {
+              width: 210px;
+              text-align: center;
+              float: left;
+              margin: 6px;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 82%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 13px;
+              margin-top: 0px;
+              text-align: center;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 38px;
+              font-size: 38px;
+              font-style: normal;
+              display: block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {
+              display: none;
+            }
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            .acbankbox {
+              display: block;
+              width: 100%;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              position: relative;
+              display: block;
+              box-sizing: border-box;
+              padding-bottom: 1%;
+            }
+
+            .acbankbox .list2 u {
+              width: 96%;
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              display: block;
+              font-size: 200%;
+              text-decoration: none;
+              margin-bottom: 10px;
+              margin: 2% auto;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+            }
+
+            .acbankbox .list2 ul li {
+              height: auto;
+              width: 48%;
+              text-align: center;
+              float: left;
+              margin: 1%;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+              box-sizing: border-box;
+              padding-bottom: 4%;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 85%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 100%;
+              margin-top: 0px;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 1em;
+              font-size: 200%;
+              font-style: normal;
+              display: inline-block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            /* .acbankbox .box06 {} */
+          }
+        </style>
+        <div class="acbankbox">
+          <!--銀行區 st-->
+          <div class="list2 bgcolor">
+            <u>8月銀行 刷卡享好康</u>
+            <ul>
+
+              <!--永豐-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-05.jpg"></p>
+                  <p class="item_text05 fred"><em>送$7500</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--星展-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-03.jpg"></p>
+                  <p class="item_text05 fred"><em>送6%</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--燦坤-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送2100</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--台新-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2000</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--悠遊付-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-16.jpg"></p>
+                  <p class="item_text05 fred">單筆滿額<em>送6%</em></p>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+          <!--銀行區 end-->
+        </div>
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+
+</body>
+
+</html>
