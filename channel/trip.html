@@ -1,0 +1,1826 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
+  <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="大旅行家｜燦坤線上">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/summer_outdoor/index.html">
+
+  <title>大旅行家｜燦坤線上</title>
+
+  <!-- swiper css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <!-- 本頁樣式 -->
+  <link href="https://events.tk3c.com/events_net/events_net/summer_outdoor/css/outdoor_sm2.css" rel="stylesheet"
+    type="text/css">
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <link href="https://events.tk3c.com/events_net/css/swiper.min.css?2" rel="stylesheet" type="text/css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "summer_outdoor";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+  <!-- Swiper-->
+  <script>
+    $(document).ready(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          reverseDirection: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        }
+      });
+    });
+  </script>
+  <script>
+    ChkEvent(1941)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+  <script>
+    $.ajax({
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+      type: "POST",
+      dataType: 'script',
+      success: function () {
+        jQuery(function () {
+          jQuery.scrollDepth({
+            pixelDepth: false,
+            gtmOverride: true
+          });
+        });
+      }
+    });
+  </script>
+
+
+</head>
+
+<body>
+
+
+  <form name="form1" method="post" action="./index.aspx?mainid=1941&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/?ec=summer_outdoor">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">28</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0CcqzdoApCGiZFfY6E5w9APGYMRYGINh7Ee92/vsnlZuafhiw==&amp;ec=summer_outdoor">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx?ec=summer_outdoor">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx?ec=summer_outdoor">客服中心</a></li>
+              <li><a href="javascript:void(0);?ec=summer_outdoor"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: block;">
+      <img src="../events_net/summer_outdoor/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+          <li><a href="#pro4990" onclick="ProcessGaEvent('summer_outdoor','click','4990-出遊必備 一次購足');">出遊必備 一次購足</a></li>
+          <li><a href="#pro4991" onclick="ProcessGaEvent('summer_outdoor','click','4991-精彩回憶全收藏');">精彩回憶全收藏</a></li>
+          <li><a href="#pro4992" onclick="ProcessGaEvent('summer_outdoor','click','4992-悶熱/蚊蟲Out');">悶熱/蚊蟲Out</a></li>
+          <li><a href="#pro4993" onclick="ProcessGaEvent('summer_outdoor','click','4993-電力滿點全程High');">電力滿點全程High</a>
+          </li>
+          <li><a href="#pro4994" onclick="ProcessGaEvent('summer_outdoor','click','4994-野營享樂趣 ');">野營享樂趣 </a></li>
+          <li><a href="#pro4995" onclick="ProcessGaEvent('summer_outdoor','click','4995-行動狂歡音樂祭');">行動狂歡音樂祭</a></li>
+          <li><a href="#pro5007" onclick="ProcessGaEvent('summer_outdoor','click','5007-裝備帶齊不求人');">裝備帶齊不求人</a></li>
+          <li><a href="#pro5008" onclick="ProcessGaEvent('summer_outdoor','click','5008-行車安全大補貼');">行車安全大補貼</a></li>
+          <li><a href="#activity2777" onclick="ProcessGaEvent('summer_outdoor','click','2777-其他區域');">其他區域</a></li>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="1"><span class="icon"><i class="fa-solid fa-shop"></i>熱銷分類</span></li>
+            <li data-id="2"><span class="icon"><i class="fa-solid fa-people-arrows"></i>關注社群</span></li>
+          </ul>
+        </div>
+        <div class="box-area type">
+          <ul>
+            <li class="main new"><a
+                href="https://events.tk3c.com/events_net/kings_discount/index.html?ec=summer_outdoor"
+                target="_blank">銀行優惠</a></li>
+          </ul>
+        </div>
+
+        <div class="box-area social">
+          <ul>
+
+            <li><a href="https://reurl.cc/7pMZVl?ec=summer_outdoor" target="_blank"><i
+                  class="fa-brands fa-line"></i></a></li>
+            <li><a href="https://reurl.cc/3Ye8kX?ec=summer_outdoor" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile isShow"></a>
+
+    </div>
+    <div class="wrapper">
+
+
+
+
+      <div id="summer-container">
+        <div class="background">
+          <h2 class="title"><img
+              src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/title.png">
+          </h2>
+          <p class="product"><img
+              src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/pd.png"></p>
+          <p class="plate animate__animated animate__fadeInUp"><img
+              src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/plane.png">
+          </p>
+        </div>
+
+        <p class="cloud"><img
+            src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/cloudbl.png"></p>
+        <p class="item"><img src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/item.png"></p>
+
+
+        <!-- 優惠 -->
+        <section class="special-box">
+          <h2 class="title"> <img
+              src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/t1.png"></h2>
+          <ul>
+            <li class="long"><a href="https://events.tk3c.com/events_net/5is649ulife/index.html"> <img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/sp1.png" /></a></li>
+            <li><a href="https://events.tk3c.com/events_net/5is86s7bobee/index.html"> <img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/sp2.png" /></a></li>
+            <li><a href="https://www.tk3c.com/edm/tkapp_update2.html"> <img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/sp3.png" /></a></li>
+            <li><a href="https://events.tk3c.com/events_net/2023Valentine/index.html"> <img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/sp4.png" /></a></li>
+            <li><a href="https://www.tk3c.com/edm/tkapp_update2.html"> <img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/sp5.png" /></a></li>
+            <li>
+              <a href="https://www.tk3c.com/dic2.aspx?cid=111126&aid=22584&hid=121565" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/p1.png"></a>
+            </li>
+
+            <li> <a href="https://www.tk3c.com/dic2.aspx?cid=111383&aid=6462&hid=112134" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/p2.png"></a></li>
+            <li>
+              <a href="https://www.tk3c.com/pt.aspx?pid=235763" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/p3.png"></a>
+            </li>
+
+            <li> <a href="https://www.tk3c.com/pt.aspx?pid=221823" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/p4.png"></a></li>
+            <li class="long"> <a href="https://www.tk3c.com/events/eventgift.aspx" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/p5.png"></a></li>
+
+          </ul>
+        </section>
+
+
+
+
+        <section class="pro-box">
+          <h2 class="title"> <img
+              src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/t2.png"></h2>
+
+          <div class="product"></div>
+        </section>
+
+        <!-- 活動 -->
+        <section class="event-box">
+          <h2 class="title"> <img
+              src="https://events.tk3c.com/events_net/events_net/summer_outdoor/images/after/t3.png"></h2>
+          <div class="content">
+            <div class="banner1"></div>
+            <div class="banner2"></div>
+          </div>
+        </section>
+
+
+      </div>
+
+
+      <!-- 右側選單 -->
+      <aside class="aside-container">
+        <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+        <div class="aside-wrap">
+          <h3 class="aside-header"></h3>
+          <div class="aside-content">
+            <ul>
+              <li class="main new"><a
+                  href="https://events.tk3c.com/events_net/kings_discount/index.html?ec=summer_outdoor"
+                  target="_blank">銀行優惠</a></li>
+            </ul>
+          </div>
+          <a href="#" class="go-top">GO TOP</a>
+        </div>
+      </aside>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@5.4.5/js/swiper.min.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+      <!-- 手機版選單 JS -->
+      <script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/summer_outdoor/js/outdoor_sm2.js"></script>
+
+    </div>
+    <div class="itemBox m_version_non">
+      <div id="btnBox03">
+        <div class="upbox">
+          <a href="#pro4990" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('summer_outdoor','click','4990-出遊必備 一次購足')">出遊必備 一次購足</a>
+          <a href="#pro4991" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('summer_outdoor','click','4991-精彩回憶全收藏')">精彩回憶全收藏</a>
+          <a href="#pro4992" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('summer_outdoor','click','4992-悶熱/蚊蟲Out')">悶熱/蚊蟲Out</a>
+          <a href="#pro4993" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('summer_outdoor','click','4993-電力滿點全程High')">電力滿點全程High</a>
+          <a href="#pro4994" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('summer_outdoor','click','4994-野營享樂趣 ')">野營享樂趣 </a>
+          <a href="#pro4995" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('summer_outdoor','click','4995-行動狂歡音樂祭')">行動狂歡音樂祭</a>
+          <a href="#pro5007" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('summer_outdoor','click','5007-裝備帶齊不求人')">裝備帶齊不求人</a>
+          <a href="#pro5008" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('summer_outdoor','click','5008-行車安全大補貼')">行車安全大補貼</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="rightbtn" style="display: none;"><span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+      <div class="actbtn">
+        <a href="#pro4990" class="btn_01 p01" onclick="ProcessGaEvent('summer_outdoor','click','4990-出遊必備 一次購足')">出遊必備
+          一次購足</a>
+        <a href="#pro4991" class="btn_01 p01"
+          onclick="ProcessGaEvent('summer_outdoor','click','4991-精彩回憶全收藏')">精彩回憶全收藏</a>
+        <a href="#pro4992" class="btn_01 p01"
+          onclick="ProcessGaEvent('summer_outdoor','click','4992-悶熱/蚊蟲Out')">悶熱/蚊蟲Out</a>
+        <a href="#pro4993" class="btn_01 p01"
+          onclick="ProcessGaEvent('summer_outdoor','click','4993-電力滿點全程High')">電力滿點全程High</a>
+        <a href="#pro4994" class="btn_01 p01" onclick="ProcessGaEvent('summer_outdoor','click','4994-野營享樂趣 ')">野營享樂趣
+        </a>
+        <a href="#pro4995" class="btn_01 p01"
+          onclick="ProcessGaEvent('summer_outdoor','click','4995-行動狂歡音樂祭')">行動狂歡音樂祭</a>
+        <a href="#pro5007" class="btn_01 p01"
+          onclick="ProcessGaEvent('summer_outdoor','click','5007-裝備帶齊不求人')">裝備帶齊不求人</a>
+        <a href="#pro5008" class="btn_01 p01"
+          onclick="ProcessGaEvent('summer_outdoor','click','5008-行車安全大補貼')">行車安全大補貼</a>
+        <a href="#activity2777" class="btn_01 p01"
+          onclick="ProcessGaEvent('summer_outdoor','click','2777-其他區域')">其他區域</a>
+
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro4991" id="pro4991"></a>精彩回憶全收藏</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=209600&amp;ec=summer_outdoor" id="prod209600" name="prod209600">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/209600_M.jpg?t=20211115093007" border="0"></p>
+              <storg>小米便攜相片印表機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,635</em> <i>活動價$</i>1,635 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=235309&amp;ec=summer_outdoor" id="prod235309" name="prod235309">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202211/235309_M.jpg?t=20221117183008" border="0"></p>
+              <storg>GoPro HERO11 Black 續航旅拍組</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$20,920</em> <i>活動價$</i>16,982 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=235842&amp;ec=summer_outdoor" id="prod235842" name="prod235842">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202212/235842_M.jpg?t=20221208113350" border="0"></p>
+              <storg>DJI MINI 3空拍機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$13,800</em> <i>活動價$</i>13,800 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240746&amp;ec=summer_outdoor" id="prod240746" name="prod240746">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240746_M.jpg?t=20230705100641" border="0"></p>
+              <storg>DJI OSMO MOBILE 6 手持雲台-淺銀灰</storg>
+              <h4>絕美淺銀灰新上市！</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$4,190</em> <i>活動價$</i>4,190 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=213931&amp;ec=summer_outdoor" id="prod213931" name="prod213931">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202012/213931_M.jpg?t=20201207183121" border="0"></p>
+              <storg>DJI Pocket 2 增廣鏡</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,440</em> <i>活動價$</i>1,440 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233670&amp;ec=summer_outdoor" id="prod233670" name="prod233670">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233670_M.jpg?t=20220920183007" border="0"></p>
+              <storg>DJI MINI 3 PRO雙向充電管家</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,270</em> <i>活動價$</i>1,270 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233496&amp;ec=summer_outdoor" id="prod233496" name="prod233496">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233496_M.jpg?t=20220914170013" border="0"></p>
+              <storg>DJI OSMO ACTION 3耐寒長續航電池</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$690</em> <i>活動價$</i>690 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241197-241199&amp;ec=summer_outdoor" id="prod241197-241199"
+              name="prod241197-241199">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/241197-241199_M.jpg?t=20230726103130" border="0">
+              </p>
+              <storg>DJI AIR 3空拍機-套裝版(DJI RC2) + Care Refres...</storg>
+              <h4>【12零利率】獨家送防水藍牙喇叭 + 20W快充頭！...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$49,380</em> <i>活動價$</i>49,380 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232255&amp;ec=summer_outdoor" id="prod232255" name="prod232255">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl08_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232255_M.jpg?t=20230711160142" border="0"></p>
+              <storg>DJI AVATA進階套裝空拍機/無人機/穿越機(GOGGLES 2)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>93</span>折</p>
+                <strong class="txt_red fred"> <em>市價$40,880</em> <i>活動價$</i>37,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228416&amp;ec=summer_outdoor" id="prod228416" name="prod228416">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl09_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228416_M.jpg?t=20230619102341" border="0"></p>
+              <storg>DJI MINI 3 PRO空拍機 帶屏組</storg>
+              <h4>加碼記憶卡+快充頭！</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$26,690</em> <i>活動價$</i>26,690 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239150&amp;ec=summer_outdoor" id="prod239150" name="prod239150">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl10_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239150_M.jpg?t=20230508094914" border="0"></p>
+              <storg>GoPro HERO11 Black 超強續航潛水組</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$21,450</em> <i>活動價$</i>17,603 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233493&amp;ec=summer_outdoor" id="prod233493" name="prod233493">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl11_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233493_M.jpg?t=20220914170034" border="0"></p>
+              <storg>DJI OSMO ACTION 3運動攝影機-全能套裝</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$15,350</em> <i>活動價$</i>15,350 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro4992" id="pro4992"></a>悶熱/蚊蟲Out</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=193739&amp;ec=summer_outdoor" id="prod193739" name="prod193739">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201812/193739_M.jpg?t=20211029115920" border="0"></p>
+              <storg>奇美CHIMEI 光觸媒智能渦流捕蚊燈</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>74</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,488</em> <i>活動價$</i>1,088 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=224672&amp;ec=summer_outdoor" id="prod224672" name="prod224672">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202201/224672_M.jpg?t=20220310173102" border="0"></p>
+              <storg>聲寶12吋機械式桌扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,188</em> <i>活動價$</i>890 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=210051&amp;ec=summer_outdoor" id="prod210051" name="prod210051">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/210051_M.jpg?t=20211015091918" border="0"></p>
+              <storg>ZANWA晶華 走路有風隨行涼風扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$760</em> <i>活動價$</i>690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=226415&amp;ec=summer_outdoor" id="prod226415" name="prod226415">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/226415_M.jpg?t=20220426114805" border="0"></p>
+              <storg>勳風 9吋USB充電式桌夾扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$750</em> <i>活動價$</i>599 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237454&amp;ec=summer_outdoor" id="prod237454" name="prod237454">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237454_M.jpg?t=20230220183012" border="0"></p>
+              <storg>勳風 電池式三層大網面捕蚊拍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$189</em> <i>活動價$</i>129 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=230438&amp;ec=summer_outdoor" id="prod230438" name="prod230438">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/230438_M.jpg?t=20220707143007" border="0"></p>
+              <storg>東元 電池式電蚊拍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>6</span>折</p>
+                <strong class="txt_red fred"> <em>市價$269</em> <i>活動價$</i>159 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225217&amp;ec=summer_outdoor" id="prod225217" name="prod225217">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225217_M.jpg?t=20220217143026" border="0"></p>
+              <storg>東元廣角吸入式捕蚊燈</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>78</span>折</p>
+                <strong class="txt_red fred"> <em>市價$590</em> <i>活動價$</i>459 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237311&amp;ec=summer_outdoor" id="prod237311" name="prod237311">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237311_M.jpg?t=20230216183015" border="0"></p>
+              <storg>KINYO USB夾/立式充電小風扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$599</em> <i>活動價$</i>499 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro4993" id="pro4993"></a>電力滿點全程High</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234217&amp;ec=summer_outdoor" id="prod234217" name="prod234217">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234217_M.jpg?t=20221011161319" border="0"></p>
+              <storg>Xiaomi行動電源10000 33W口袋版 Pro 白</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$875</em> <i>活動價$</i>875 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234216&amp;ec=summer_outdoor" id="prod234216" name="prod234216">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234216_M.jpg?t=20221011161414" border="0"></p>
+              <storg>Xiaomi 行動電源10000 33W口袋版Pro 藍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$875</em> <i>活動價$</i>875 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229971&amp;ec=summer_outdoor" id="prod229971" name="prod229971">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229971_M.jpg?t=20230512144823" border="0"></p>
+              <storg>SP 20000mAh QC3.0+PD 快充行動電源-QS55</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,099</em> <i>活動價$</i>799 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229972&amp;ec=summer_outdoor" id="prod229972" name="prod229972">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229972_M.jpg?t=20220902165819" border="0"></p>
+              <storg>SP 10000mAh QC3.0+PD 快充行動電源-QP55</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$829</em> <i>活動價$</i>599 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205777&amp;ec=summer_outdoor" id="prod205777" name="prod205777">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202002/205777_M.jpg?t=20200410102748" border="0"></p>
+              <storg>20000 小米行動電源 3 快充版 (白)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$645</em> <i>活動價$</i>645 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234215&amp;ec=summer_outdoor" id="prod234215" name="prod234215">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234215_M.jpg?t=20221011161458" border="0"></p>
+              <storg>Xiaomi 無線行動電源 10000</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$685</em> <i>活動價$</i>685 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205989&amp;ec=summer_outdoor" id="prod205989" name="prod205989">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202002/205989_M.jpg?t=20230719193817" border="0"></p>
+              <storg>廣穎SP 10000mAh快充行動電源 銀</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>71</span>折</p>
+                <strong class="txt_red fred"> <em>市價$639</em> <i>活動價$</i>449 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234573&amp;ec=summer_outdoor" id="prod234573" name="prod234573">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234573_M.jpg?t=20221017183013" border="0"></p>
+              <storg>SP 10000mAh QC3.0+PD 快充行動電源C10QC白...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>66</span>折</p>
+                <strong class="txt_red fred"> <em>市價$759</em> <i>活動價$</i>499 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro4994" id="pro4994"></a>野營享樂趣 </h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=203237&amp;ec=summer_outdoor" id="prod203237" name="prod203237">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201910/203237_M.jpg?t=20210928172212" border="0"></p>
+              <storg>松井SONGEN 冷暖兩用電子行動冰箱/保溫箱</storg>
+              <h4>電子式小冰箱</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,480</em> <i>活動價$</i>2,980 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234799&amp;ec=summer_outdoor" id="prod234799" name="prod234799">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234799_M.jpg?t=20221019143014" border="0"></p>
+              <storg>Gohome 摺疊收納箱(含防水內袋)-35L</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$980</em> <i>活動價$</i>980 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229822&amp;ec=summer_outdoor" id="prod229822" name="prod229822">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229822_M.jpg?t=20220720171535" border="0"></p>
+              <storg>ROOMMI x Haoo 實木蛋捲桌</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,200</em> <i>活動價$</i>3,200 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=210482&amp;ec=summer_outdoor" id="prod210482" name="prod210482">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202008/210482_M.jpg?t=20200814143007" border="0"></p>
+              <storg>日象 10公升電子式恆溫電茶桶</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>4,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236695&amp;ec=summer_outdoor" id="prod236695" name="prod236695">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202301/236695_M.jpg?t=20230111183040" border="0"></p>
+              <storg>小米有品 HOTO 小猴充氣沙發-綠色</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,490</em> <i>活動價$</i>2,490 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229821&amp;ec=summer_outdoor" id="prod229821" name="prod229821">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229821_M.jpg?t=20220623143007" border="0"></p>
+              <storg>ROOMMI 實木克米特椅 露營椅戶外家用折疊椅...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,580</em> <i>活動價$</i>2,580 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=222855&amp;ec=summer_outdoor" id="prod222855" name="prod222855">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202111/222855_M.jpg?t=20211115183137" border="0"></p>
+              <storg>HaoO-不銹鋼折疊燒烤架</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$628</em> <i>活動價$</i>628 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=235466&amp;ec=summer_outdoor" id="prod235466" name="prod235466">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202211/235466_M.jpg?t=20230428102115" border="0"></p>
+              <storg>DOMETIC HUB多功能充氣帳豪華組合</storg>
+              <h4>DOMETIC HUB多功能充氣帳豪華組合...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$66,900</em> <i>活動價$</i>66,900 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro4995" id="pro4995"></a>行動狂歡音樂祭</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234647&amp;ec=summer_outdoor" id="prod234647" name="prod234647">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234647_M.jpg?t=20230301133130" border="0"></p>
+              <storg>BOSE QuietComfort 藍牙真無線消噪耳塞 黑</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$9,500</em> <i>活動價$</i>8,250 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225981&amp;ec=summer_outdoor" id="prod225981" name="prod225981">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225981_M.jpg?t=20220309183005" border="0"></p>
+              <storg>BOSE 藍牙揚聲器-黑</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$5,900</em> <i>活動價$</i>5,900 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=220544&amp;ec=summer_outdoor" id="prod220544" name="prod220544">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/220544_M.jpg?t=20210907183238" border="0"></p>
+              <storg>Soundcore Mini 3 藍牙喇叭</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,290</em> <i>活動價$</i>1,290 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=217732&amp;ec=summer_outdoor" id="prod217732" name="prod217732">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202105/217732_M.jpg?t=20220912115555" border="0"></p>
+              <storg>HAMMER 多功能防水藍牙喇叭</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$799</em> <i>活動價$</i>799 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219748&amp;ec=summer_outdoor" id="prod219748" name="prod219748">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202108/219748_M.jpg?t=20230412105017" border="0"></p>
+              <storg>索尼SONY 藍牙喇叭-灰褐</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,890</em> <i>活動價$</i>1,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=809037&amp;ec=summer_outdoor" id="prod809037" name="prod809037">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/809037_M.jpg?t=20230320114427" border="0"></p>
+              <storg>(展示品)OVO 真2.1聲道藍牙揚聲器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>45</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,980</em> <i>活動價$</i>2,680 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=230644&amp;ec=summer_outdoor" id="prod230644" name="prod230644">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/230644_M.jpg?t=20220714183011" border="0"></p>
+              <storg>XBOOM 360 全景聲藍牙音響</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,900</em> <i>活動價$</i>11,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=217690&amp;ec=summer_outdoor" id="prod217690" name="prod217690">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202105/217690_M.jpg?t=20220504165420" border="0"></p>
+              <storg>國際牌Panasonic 藍牙微型劇院</storg>
+              <h4>2.1聲道320W震撼音效</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$11,990</em> <i>活動價$</i>8,990 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5007" id="pro5007"></a>裝備帶齊不求人</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=227165&amp;ec=summer_outdoor" id="prod227165" name="prod227165">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202204/227165_M.jpg?t=20220401183005" border="0"></p>
+              <storg>TECO 4切3座3孔高溫斷電QC+PD延長線-1.8M</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$899</em> <i>活動價$</i>799 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=207660&amp;ec=summer_outdoor" id="prod207660" name="prod207660">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202004/207660_M.jpg?t=20200424183005" border="0"></p>
+              <storg>KINYO 多合一萬國轉接頭</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$899</em> <i>活動價$</i>649 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231566&amp;ec=summer_outdoor" id="prod231566" name="prod231566">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231566_M.jpg?t=20230512145325" border="0"></p>
+              <storg>大通 6切5座3孔 30W快充PD延長線-1.8M</storg>
+              <h4>送硅藻土杯墊</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,149</em> <i>活動價$</i>999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=193855&amp;ec=summer_outdoor" id="prod193855" name="prod193855">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201812/193855_M.jpg?t=20181220070052" border="0"></p>
+              <storg>群加PowerSync 防雷擊6開6插滑蓋防塵延長線4.5M(黑)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>62</span>折</p>
+                <strong class="txt_red fred"> <em>市價$999</em> <i>活動價$</i>619 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=235650&amp;ec=summer_outdoor" id="prod235650" name="prod235650">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202211/235650_M.jpg?t=20221128183007" border="0"></p>
+              <storg>KINYO 1切8座3孔三向出線延長線-1.8M</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$599</em> <i>活動價$</i>499 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=207661&amp;ec=summer_outdoor" id="prod207661" name="prod207661">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202004/207661_M.jpg?t=20200424183005" border="0"></p>
+              <storg>KINYO 旅行萬用轉換接頭</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$129</em> <i>活動價$</i>129 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=198186&amp;ec=summer_outdoor" id="prod198186" name="prod198186">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201905/198186_M.jpg?t=20190513193005" border="0"></p>
+              <storg>KINYO 1切6座3孔1.8M延長線</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$299</em> <i>活動價$</i>239 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=131658&amp;ec=summer_outdoor" id="prod131658" name="prod131658">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201211/131658_M.jpg?t=20191018113606" border="0"></p>
+              <storg>群加PowerSync 防雷6開6插延長線2.7M</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$699</em> <i>活動價$</i>519 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5008" id="pro5008"></a>行車安全大補貼</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232806&amp;ec=summer_outdoor" id="prod232806" name="prod232806">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/232806_M.jpg?t=20230419174200" border="0"></p>
+              <storg>PAPAGO WayGo!770 7吋智慧型導航機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>3,480 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=212272&amp;ec=summer_outdoor" id="prod212272" name="prod212272">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202010/212272_M.jpg?t=20210223154354" border="0"></p>
+              <storg>Mio MiVue C550 GPS 大光圈行車記錄器</storg>
+              <h4>內附16G 記憶卡!!</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,990</em> <i>活動價$</i>2,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205392-210474-224321&amp;ec=summer_outdoor"
+              id="prod205392-210474-224321" name="prod205392-210474-224321">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202001/205392-210474-224321_M.jpg?t=20220627095903"
+                  border="0"></p>
+              <storg>未來實驗室 空氣清淨機 N7+N7S+N7D</storg>
+              <h4>大全配N7+N7S+N7D</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,399</em> <i>活動價$</i>2,399 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239612&amp;ec=summer_outdoor" id="prod239612" name="prod239612">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239612_M.jpg?t=20230519143026" border="0"></p>
+              <storg>PAPAGO WayGo!790 Plus 7吋聲控行車導航</storg>
+              <h4>送32G記憶卡！</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,490</em> <i>活動價$</i>4,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240949&amp;ec=summer_outdoor" id="prod240949" name="prod240949">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240949_M.jpg?t=20230714173437" border="0"></p>
+              <storg>Garmin Drive 53 車用衛星導航</storg>
+              <h4>指路超簡單 去哪都方便!</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>4,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237263&amp;ec=summer_outdoor" id="prod237263" name="prod237263">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237263_M.jpg?t=20230215223011" border="0"></p>
+              <storg>PAPAGO FX770 全方位測速後視鏡行車紀錄器</storg>
+              <h4>送32G記憶卡！</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,490</em> <i>活動價$</i>2,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=220669&amp;ec=summer_outdoor" id="prod220669" name="prod220669">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/220669_M.jpg?t=20210909183251" border="0"></p>
+              <storg>快譯通 Abee C12 高畫質行車記錄器</storg>
+              <h4>內附32G 記憶卡!!</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,990</em> <i>活動價$</i>1,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205392-224321&amp;ec=summer_outdoor" id="prod205392-224321"
+              name="prod205392-224321">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202001/205392-224321_M.jpg?t=20220518135611" border="0">
+              </p>
+              <storg>未來實驗室 空氣清淨機 N7+N7D</storg>
+              <h4>空氣清淨超值組</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,599</em> <i>活動價$</i>1,599 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+      <section class="icon-group"></section>
+
+
+      <div id="TkecFooter">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+
+
+        <style>
+          @charset "utf-8";
+
+          * {
+            margin: 0;
+            padding: 0
+          }
+
+          *:focus {
+            outline: none;
+          }
+
+          /*黃框消除*/
+
+          * {
+            -webkit-text-size-adjust: none;
+          }
+
+          /*字體尺寸限制解除*/
+
+          a {
+            text-decoration: none;
+            cursor: pointer
+          }
+
+          img {
+            border: 0px;
+          }
+
+          /*圖片超連結邊框消除*/
+
+          .acbankbox .fred {
+            color: #F00;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .acbankbox .fgray {
+            color: #666;
+          }
+
+          .acbankbox .bgcolor {
+            background: #999;
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width:751px) {
+            .acbankbox {
+              display: block;
+              width: 1144px;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+              overflow: hidden;
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              padding: 16px;
+              position: relative;
+              display: block;
+              border-radius: 40px 40px 0 0;
+              -moz-border-radius: 40px 40px 0 0;
+              -webkit-border-radius: 40px 40px 0 0;
+              box-sizing: border-box;
+            }
+
+            .acbankbox .list2 u {
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+              display: block;
+              font-size: 40px;
+              text-decoration: none;
+              margin-bottom: 10px;
+              letter-spacing: 1px;
+            }
+
+            .acbankbox .list2 ul li {
+              width: 210px;
+              text-align: center;
+              float: left;
+              margin: 6px;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 82%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 13px;
+              margin-top: 0px;
+              text-align: center;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 38px;
+              font-size: 38px;
+              font-style: normal;
+              display: block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {
+              display: none;
+            }
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            .acbankbox {
+              display: block;
+              width: 100%;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              position: relative;
+              display: block;
+              box-sizing: border-box;
+              padding-bottom: 1%;
+            }
+
+            .acbankbox .list2 u {
+              width: 96%;
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              display: block;
+              font-size: 200%;
+              text-decoration: none;
+              margin-bottom: 10px;
+              margin: 2% auto;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+            }
+
+            .acbankbox .list2 ul li {
+              height: auto;
+              width: 48%;
+              text-align: center;
+              float: left;
+              margin: 1%;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+              box-sizing: border-box;
+              padding-bottom: 4%;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 85%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 100%;
+              margin-top: 0px;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 1em;
+              font-size: 200%;
+              font-style: normal;
+              display: inline-block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            /* .acbankbox .box06 {} */
+          }
+        </style>
+        <div class="acbankbox">
+          <!--銀行區 st-->
+          <div class="list2 bgcolor">
+            <u>8月銀行 刷卡享好康</u>
+            <ul>
+
+              <!--永豐-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-05.jpg"></p>
+                  <p class="item_text05 fred"><em>送$7500</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--星展-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-03.jpg"></p>
+                  <p class="item_text05 fred"><em>送6%</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--燦坤-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送2100</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--台新-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2000</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--悠遊付-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-16.jpg"></p>
+                  <p class="item_text05 fred">單筆滿額<em>送6%</em></p>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+          <!--銀行區 end-->
+        </div>
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+
+
+
+
+
+</body>
+
+</html>
