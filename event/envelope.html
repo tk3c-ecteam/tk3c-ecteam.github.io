@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>抽紅包</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
+    integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+  <link href="./css/envlope.css" rel="stylesheet">
+  <script src="https://www.tk3c.com/js/vue.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <!-- 紅包雨 -->
+  <canvas id="particle_canvas"></canvas>
+
+  <div id="app">
+    <h2>搶紅包遊戲</h2>
+    <!-- 搶紅包遊戲 -->
+    <section class="envel-content" :class="{active:active}">
+      <ul>
+        <li v-for="(x,index) in rewardList">
+          <a @click="choice"><img :src="'images/red.png' | siteUrl"></a>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 領取折價券視窗 -->
+    <div id="alert-group" class="alert-style" v-if="isAlert">
+      <div class="alert-content">
+        <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
+        <div class="inner-group">
+          <p class="light"><img :src="'images/light.png' | siteUrl"></p>
+          <img v-if="reward == 0" class="noRewardimg" :src="rewardImg">
+          <img v-else class="rewardimg" :src="rewardImg">
+        </div>
+        <div class="bottom-footer">
+          <a class="sure-get" @click="closeAlert"><img :src="'images/bt_ok.png' | siteUrl"></a>
+          <a class="check-list" href="http://www.tk3c.com/member/member_coupon.aspx" target="_blank"><img
+              :src="'images/bt_query.png' | siteUrl"></a>
+          <a class="detail" @click.prevent="seeRule"><img :src="'images/bt_Instructions.png' | siteUrl"></a>
+        </div>
+      </div>
+
+      <div id="pay-rule" class="rule-group" v-if="isRule">
+        <h2><img :src="'images/pay_rule.png' | siteUrl"></h2>
+        <div class="rule-text">
+          <h3>Q: 百萬紅包送的購物金使用期限?</h3>
+          <p>A: 使用期限為領取後的14天(含領取當日)</p>
+          <h3>Q: 什麼是燦坤線上購物金?</h3>
+          <p>A: 燦坤線上購物金為燦坤線上購物會員獨享，可於燦坤線上購物結帳指定商品時折抵，一點等於一元。</p>
+          <h3>Q: 怎麼使用購物金?</h3>
+          <p>A: 結帳時可在購物車勾選[我要使用購物金]，折抵的金額以會員帳戶購物金餘額與該商品可抵購物金上限取低者為折抵上限。</p>
+          <b>使用範例:</b>
+          <p class="normal">A 商品網路價2500可折購物金1%，若米小鴨有購物金1000元，<br>
+            則可以用2475元的價格購買A商品，並且剩下購物金975元。</p>
+          <p class="normal">B 商品網路價37800可折購物金3%，若米小鴨有購物金5000元，<br>
+            則可以用36666元的價格購買B商品，購物金餘額3866元。</p>
+          <h3>Q: 購物金能跟折價券同時使用嗎?</h3>
+          <p>A: 一個商品可使用一種折扣方式。您可選擇用折價券或是購物金折抵，兩者僅可擇一使用。</p>
+          <h3>Q: 購物金能夠折抵運費嗎?</h3>
+          <p>A: 購物金不可用於折底運費。</p>
+
+          <div class="copyright">*本公司保有最終修改、變更、活動解釋即取消活動之權利，若有相關異動將會公告於網站，恕不另行通知。</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 紅包雨 -->
+  <script src="https://events.tk3c.com/events_net/events_net/618exportgo1c/js/snow.js"></script>
+  <script src="./js/envelope.js"></script>
+</body>
+
+</html>
