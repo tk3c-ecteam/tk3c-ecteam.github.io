@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { "name": "50元購物金", "image": "reward6.png" },
         { "name": "銘謝惠顧", "image": "reward7.png" },
       ],
-      rate: [15, 22, 27, 6, 2, 2, 26],
+      rate: [15, 22, 27, 6, 2, 2, 26],//機率
       isRed: false,//整個搶紅包區塊 id:red-group
       reward: '',
       timing: 5,//5秒內下紅包雨
@@ -57,10 +57,10 @@ document.addEventListener("DOMContentLoaded", function () {
         //搶紅包隨機購物金
         var num = this.randomList();
 
-        if (num.image != undefined && num.image != '') {
+        console.log(num);
+        if (num != '') {
           this.reward = num.image;
           this.rewardImg = this.getMsgImg('images/game/' + this.reward);
-          console.log(this.rewardImg);
         }
         setTimeout(() => {
           this.active = false;
@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
           }).then(function (result) {
             $('body').css('overflow-y', 'auto');
             if (result.isDenied) {
+              //活動詳情
               Swal.fire({
                 width: 1000,
                 title: "<p style='margin-bottom:5px';>活動詳情</p>",
@@ -104,9 +105,6 @@ document.addEventListener("DOMContentLoaded", function () {
           this.isRed = false;
         }, 300);
 
-        /*setTimeout(() => {
-          e.target.src = this.getMsgImg('images/game/red.png');
-        }, 1500);*/
       },
       goRain() {
         //紅包雨

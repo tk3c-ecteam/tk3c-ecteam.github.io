@@ -1,0 +1,2960 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <script>
+    var szDataNow1 = new Date(Date.now());
+  </script>
+
+  <script>
+    //破圖處理
+    function ImgError(source) {
+      console.warn(source.src);
+      var s = source.src
+      if (s.indexOf("www.cdn-tkec.tw") != -1) {
+        source.src = s.replace("www.cdn-tkec.tw", "www.tk3c.com");
+      } else {
+        source.src = "https://www.cdn-tkec.tw/images/nopic.jpg";
+      }
+
+      source.onerror = "";
+      return true;
+    }
+  </script>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="fb:app_id" content="607366676116914">
+  <title>
+    燦坤線上購物
+  </title>
+  <meta property="og:image" content="https://www.tkec.com.tw/images/headimg.jpg?2">
+  <link href="https://www.tk3c.com/mobile/css/popupslide.css?575" rel="stylesheet" type="text/css">
+  <link href="https://www.tk3c.com/mobile/css/newstyle.css?575" rel="stylesheet" type="text/css">
+  <link href="https://www.tk3c.com/mobile/css/message_all.css?575" rel="stylesheet" type="text/css">
+  <link href="https://www.tk3c.com/mobile/css/20180830windows.css?575" rel="stylesheet" type="text/css">
+  <link href="https://www.tk3c.com/mobile/css/newstyle.css?575" rel="stylesheet" type="text/css">
+  <link href="https://www.tk3c.com/mobile/css/swiper.min.css?575" rel="stylesheet" type="text/css">
+  <link href="https://www.tk3c.com/mobile/css/2019_all.css?575" rel="stylesheet" type="text/css">
+
+  <!-- 彈出廣告css -->
+  <link href="https://www.tk3c.com/mobile/css/alertAd.css" rel="stylesheet" type="text/css">
+
+  <!-- 搶紅包樣式 -->
+  <link href="./css/red.css" rel="stylesheet">
+
+  <script src="https://www.tk3c.com/mobile/js/vendor.js?479"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://www.tk3c.com/mobile/js/anime.min.js?479"></script>
+  <script src="https://www.tk3c.com/mobile/js/lazysizes.min.js?479"></script>
+  <script src="https://www.tk3c.com/mobile/js/contentmain.js?479"></script>
+  <script src="https://www.tk3c.com/mobile/js/headermain.js?479"></script>
+  <script src="https://www.tk3c.com/mobile/js/message.js?479"></script>
+  <script src="https://www.tk3c.com/mobile/js/2019_all.js?479"></script>
+
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWPVf19P1tbVYqii7xj4w7uI3Md0J0p30"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.24/gmaps.min.js"></script>
+
+  <!-- Swiper JS Vue -->
+  <script src="https://www.tk3c.com/mobile/js/swiper.min.js?479"></script>
+  <script src="https://www.tk3c.com/js/vue-awesome-swiper.js?479"></script>
+  <script src="https://www.tk3c.com/js/vue-countdown.js?479"></script>
+
+  <!-- 紅包雨效果 -->
+  <script type="text/javascript" src="./js/red_effect.js"></script>
+
+  <!-- sweetalert彈出視窗 -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- 搶紅包 -->
+  <script type="text/javascript" src="./js/envelope.js"></script>
+
+  <style>
+    /*浮動視窗*/
+    .load_fixbox {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 128%;
+      position: fixed;
+      z-index: 999;
+      margin-top: -28%;
+      top: 0;
+      left: 0;
+    }
+
+    .load_fixbox>.midbg {
+      width: 50%;
+      height: auto;
+      margin: 35% auto;
+      font-size: 13px;
+      font-family: Arial, 微軟正黑體;
+      border-radius: 7px;
+      background: #EFEFEF;
+    }
+
+    .load_fixbox>.midbg .fontbox {
+      position: relative;
+      width: 90%;
+      height: auto;
+      margin: 3% auto;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .load_fixbox>.midbg .fontbox p {
+      color: #888;
+      line-height: 1.2em;
+      margin: 0px;
+      display: block;
+      text-align: left;
+      box-sizing: border-box;
+      padding: 3%;
+      text-align: justify;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    .load_fixbox>.midbg .loading-spinner {
+      @include position(absolute, 50% 0 0 50%);
+      margin: -$size/2 0 0 -$size/2;
+      margin-bottom: 3%;
+    }
+
+    @keyframes rotate-forever {
+      0% {
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+      }
+    }
+
+    .load_fixbox>.midbg .loading-spinner {
+      -webkit-animation-duration: 0.75s;
+      -moz-animation-duration: 0.75s;
+      animation-duration: 0.75s;
+      -webkit-animation-iteration-count: infinite;
+      -moz-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: rotate-forever;
+      -moz-animation-name: rotate-forever;
+      animation-name: rotate-forever;
+      -webkit-animation-timing-function: linear;
+      -moz-animation-timing-function: linear;
+      animation-timing-function: linear;
+      height: 30px;
+      width: 30px;
+      border: 7px solid #9a9a9a;
+      border-right-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 47.2%;
+      padding: 28%;
+      height: 0;
+      overflow: hidden;
+      border-left: 2px solid #e5e5e5;
+      border-right: 2px solid #e5e5e5;
+    }
+
+    .promotion1 {
+      color: #e5004f;
+      height: 23px;
+      overflow: hidden;
+    }
+
+    .video-container iframe,
+    .video-container object,
+    .video-container embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .timebgbox {
+      padding-left: 5px;
+    }
+
+    .timebg {
+      color: #fff !important;
+      background: #333;
+      width: 50px;
+      padding: 5px;
+      border-radius: 3px;
+      margin: auto 4px;
+    }
+
+    /* video */
+    i.playicon {
+      position: absolute;
+      left: 36%;
+      top: 20%;
+    }
+
+    i.playicon>img {
+      width: 100% !important;
+      height: auto !important;
+      margin-left: 0 !important;
+    }
+
+    .category_content .colBox,
+    .category_content .pro_img a,
+    .bannerList .itemBox .col-box,
+    #menu .category_content .prod .prod_content ul li,
+    #menu .category_content .top_list .content ul li,
+    .yui3-u,
+    .trsptmoreC_Item,
+    #menu .category_sub_menu .hot .content dd,
+    .prod_content .topBox li a,
+    .prod_content li,
+    .kuai3door-R .probox,
+    .kuai3door-L .probox,
+    #menu .topright1609 .ad1609 .pic1609 {
+      position: relative;
+    }
+
+    .category_content .colBox {
+      text-align: center;
+    }
+
+    .bannerList .itemBox .col-box>i.playicon,
+    .bannerList .itemBox .col-box>i.playicon {
+      width: 80px;
+    }
+
+    i.playicon,
+    .itemNo1>i.playicon,
+    .prod_item1512>a>i.playicon,
+    .category_content .pro_img a>i.playicon,
+    #menu .category_content .top_list .content ul li a>i.playicon,
+    .prod_content .topBox li a>i.playicon,
+    .trsptmoreC_Item a>i.playicon,
+    #menu .category_sub_menu .hot .content dd>a>i.playicon ，.yui3-u a>i.playicon,
+    .probox i.playicon {
+      width: 60px;
+      margin: 0;
+    }
+
+    .itemNo1>i.playicon,
+    #menu .topright1609 .ad1609 .pic1609>i.playicon {
+      left: 21%;
+      top: 25%;
+    }
+
+    .prod_item1512>a>i.playicon {
+      left: 35%;
+    }
+
+    .category_content .pro_img a>i.playicon {
+      left: 35%;
+      top: 30%;
+    }
+
+    .bannerList .itemBox .col-box>i.playicon {
+      left: 35%;
+    }
+
+    .bannerList .itemBox.col-w480 .col-box>i.playicon {
+      left: 15%;
+      top: 40%;
+    }
+
+    #menu .category_content .top_list .content ul li a>i.playicon {
+      left: 28%;
+      top: 18%;
+    }
+
+    .prod_content .topBox li a>i.playicon {
+      left: 30%;
+      top: 36%;
+    }
+
+    .prod_content .topBox li a {
+      padding: 0;
+    }
+
+    #menu .category_sub_menu .hot .content dd>a>i.playicon {
+      left: 25%;
+    }
+
+    .yui3-u a>i.playicon,
+    .probox i.playicon {
+      left: 30%;
+      top: 22%;
+    }
+
+    .prod_item1512.colBox img {
+      margin-left: 0 !important;
+    }
+
+    .yui3-u a>i.playicon,
+    .probox i.playicon {
+      left: 25%;
+      top: 17%;
+      width: 50% !important;
+    }
+
+    i.playicon>img {
+      width: 90% !important;
+      height: auto !important;
+      margin-left: 0 !important;
+      opacity: 0.7;
+    }
+
+    .EJcardbox {
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-top: 5px solid #e5e5e5;
+      border-bottom: 5px solid #e5e5e5;
+      padding: 2px 0px 2px 0px;
+    }
+
+
+    .EJcardbox-headerbox {
+      margin: 0 .625rem;
+      padding-bottom: 10px;
+      padding-left: 6px;
+    }
+
+
+    .EJcardbox-title {
+      color: #d0011b;
+      width: 60%;
+      float: left;
+    }
+
+    .EJcardbox-title span {
+      overflow: hidden;
+      display: inline-block;
+      text-overflow: ellipsis;
+      display: block;
+      white-space: nowrap;
+      border-left: 5px solid #e5004f;
+      padding-left: 10px;
+    }
+
+
+    .EJhcardbox-more {
+      color: rgba(0, 0, 0, .54);
+      float: right;
+      font-size: 12px;
+      padding-top: 2px;
+    }
+
+    .more-icon {
+      overflow: hidden;
+      width: .625rem;
+    }
+
+    svg path,
+    svg rect {
+      fill: #868e96;
+    }
+
+    .EJcardbannerbox {
+      padding-top: 16px;
+      padding-bottom: 0;
+      line-height: normal;
+      border-top: 0.2px solid #e5e5e5;
+    }
+
+    .EJcardbannerbox img {
+      border-radius: 5px;
+    }
+
+    .banner_left {
+      width: 46%;
+      float: left;
+      margin-left: 3%;
+    }
+
+    .banner_right {
+      float: right;
+      width: 46%;
+      margin-right: 3%;
+    }
+
+    .Ejcardprodbox {
+
+      padding-top: 4px;
+
+    }
+
+    .EJcord-prod {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 33.33333%;
+      flex: 0 0 33.33333%;
+      max-width: 27%;
+      float: left;
+      margin-left: 5.5%;
+      position: relative;
+    }
+
+    .Store-prod {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+      max-width: 81%;
+      float: left;
+      margin-left: 9.5%;
+      position: relative;
+    }
+
+    .clearflot {
+      clear: both;
+    }
+
+    .top-iconbox {
+      position: absolute;
+      background: #fcd511;
+      right: 0;
+    }
+
+    .top-iconinfo {
+      white-space: normal;
+      color: #ee4d2d;
+      text-align: center;
+      font-weight: 700;
+      font-size: 10px;
+      width: 100%;
+    }
+
+    .top-iconinfo-num {
+      white-space: normal;
+      color: #ee4d2d;
+      text-align: center;
+      font-weight: 700;
+      font-size: 14px;
+      width: 100%;
+    }
+
+    .top-iconbox:after {
+      content: "";
+      top: 28px;
+      height: 0;
+      left: 0px;
+      border-style: solid;
+      position: absolute;
+      border-width: 8px;
+      border-color: transparent #fcd510;
+      width: 100%;
+    }
+
+    .EJ-LogoTitle-box {
+      border-top: 4px solid #e5e5e5;
+      padding: 8px 0 3px 0;
+    }
+
+    .EJ-LogoTitle {
+      color: #dc3545 !important;
+      border-left: 5px solid #e5004f;
+      padding-left: 8px;
+      margin-top: 10px;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .EJLogocontent {
+      width: 100%;
+      border-bottom: 4px solid #e5e5e5;
+    }
+
+    .EJLogocontent li {
+      float: left;
+      width: 25%;
+      border: 1px solid #eee;
+    }
+
+    .EJLogocontent img {
+      margin: 0 auto;
+      display: block;
+    }
+
+    .EJLogoTitle {
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      width: 88%;
+      text-align: center;
+      white-space: nowrap;
+      margin: 0 auto;
+      padding-bottom: 8px;
+    }
+
+    .EJcard-price {
+      color: red;
+      text-align: center;
+      display: block;
+    }
+
+    span.EJcard-prodtitle {
+      text-align: center;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      display: inline-block;
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    .EJLogocontent ul {
+      margin: 0 auto;
+    }
+  </style>
+
+
+
+
+
+
+  <!-- 輪播 -->
+  <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <!-- 輪播 -->
+
+  <link href="https://www.tk3c.com/mobile/css/new_mob_index.css?575" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+
+  <input name="ctl00_Mst_hd_I" type="hidden" id="ctl00_Mst_hd_I">
+  <input name="ctl00_Mst_hd_T" type="hidden" id="ctl00_Mst_hd_T">
+  <input name="ctl00_Mst_hd_U" type="hidden" id="ctl00_Mst_hd_U">
+  <input name="already_login" type="hidden" id="already_login" value="False">
+  <input name="member_email" type="hidden" id="member_email">
+  <input name="favkey" type="hidden" id="favkey">
+  <input name="favzone" type="hidden" id="favzone" value="N">
+  <input name="favarea" type="hidden" id="favarea">
+  <input name="favstore" type="hidden" id="favstore">
+  <div class="load_fixbox" style="display:none" id="WaitTime">
+    <div class="midbg">
+      <div class="fontbox">
+        <p>資料下載中</p>
+        <div class="loading-spinner"></div>
+      </div>
+    </div>
+  </div>
+
+  <form name="form1" method="post" action="./mob_index.aspx" id="form1">
+    <div>
+      <input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+      <input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+      <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+        value="/wEPDwUKLTMyMjY1NDExMg9kFgQCAQ9kFgICBw9kFgJmDxYCHgRUZXh0BZICPHNjcmlwdCB0eXBlPSJ0ZXh0L2phdmFzY3JpcHQiPg0KaWYgKCJ1bmRlZmluZWQiID09IHR5cGVvZiBfdGtlYyB8fCAhX3RrZWMpIHZhciBfdGtlYyA9IHt9Ow0KX3RrZWMub2QgPSBfdGtlYy5vZCB8fCB7fTsNCl90a2VjLm9kID0gew0KIHNpdGVtYXA6ICJpbmRleCIsDQogdmlld3R5cGU6ICJtb2JpbGUiLA0KIGhhc2hpZDogew0KIGlkMTogIiIsDQogaWQyOiAiIg0KfSwNCmRldmljZWlkOiAiY3p3MDF1ZmNwcjV1MXF0amtkdGdhaDJnMjAyMzA4MTciDQp9DQo8L3NjcmlwdD4NCmQCFQ9kFggCBA9kFggCBw8WAh8ABVY8aW5wdXQgaWQ9InNlYXJjaEtleXdvcmQiIHR5cGU9InRleHQiIHBsYWNlaG9sZGVyPSLlhrfmsKMiIGNsYXNzPSJ0a2VjTV9uYXYtc2VhcmNoIiAvPmQCCQ8WAh4HVmlzaWJsZWhkAgsPFgIfAAX9DjxzcGFuIGNsYXNzPSJzd2lwZXItc2xpZGUiPjxhIGhyZWY9Imh0dHBzOi8vd3d3LnRrM2MuY29tL2RpY3RpdGxldXJsLmFzcHg/Y2lkPTExMTI0JmVjPWlkeC1zZWFyY2hob3QtbSIgb25jbGljaz0ic2VuZEdhRXZlbnQoJ03niYjpppbpoIFf5pCc5bCLJywnY2xpY2snLCfmkJzlsItf54ax6ZaA6Zec6Y215a2XX+ethumbuycpIj7nrYbpm7s8L2E+PC9zcGFuPjxzcGFuIGNsYXNzPSJzd2lwZXItc2xpZGUiPjxhIGhyZWY9Imh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvT25saW5lX0RNQ2F0YWxvZy9pbmRleC5hc3B4P2VjPWlkeC1zZWFyY2hob3QtbSIgb25jbGljaz0ic2VuZEdhRXZlbnQoJ03niYjpppbpoIFf5pCc5bCLJywnY2xpY2snLCfmkJzlsItf54ax6ZaA6Zec6Y215a2XX+e3muS4iuWei+mMhCcpIj7nt5rkuIrlnovpjIQ8L2E+PC9zcGFuPjxzcGFuIGNsYXNzPSJzd2lwZXItc2xpZGUiPjxhIGhyZWY9Imh0dHBzOi8vd3d3LnRrM2MuY29tL2RpY3RpdGxldXJsLmFzcHg/Y2lkPTExMDU4JmVjPWlkeC1zZWFyY2hob3QtbSIgb25jbGljaz0ic2VuZEdhRXZlbnQoJ03niYjpppbpoIFf5pCc5bCLJywnY2xpY2snLCfmkJzlsItf54ax6ZaA6Zec6Y215a2XX+miqOaJhycpIj7poqjmiYc8L2E+PC9zcGFuPjxzcGFuIGNsYXNzPSJzd2lwZXItc2xpZGUiPjxhIGhyZWY9Imh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvaWNld2FzaDIyMDkvaW5kZXguaHRtbD9lYz1pZHgtc2VhcmNoaG90LW0iIG9uY2xpY2s9InNlbmRHYUV2ZW50KCdN54mI6aaW6aCBX+aQnOWwiycsJ2NsaWNrJywn5pCc5bCLX+eGsemWgOmXnOmNteWtl1/lhrDnrrEnKSI+5Yaw566xPC9hPjwvc3Bhbj48c3BhbiBjbGFzcz0ic3dpcGVyLXNsaWRlIj48YSBocmVmPSJodHRwczovL2V2ZW50cy50azNjLmNvbS9ldmVudHNfbmV0LzIwMjBUVmZvcmV2ZXIvaW5kZXguaHRtbD9lYz1pZHgtc2VhcmNoaG90LW0iIG9uY2xpY2s9InNlbmRHYUV2ZW50KCdN54mI6aaW6aCBX+aQnOWwiycsJ2NsaWNrJywn5pCc5bCLX+eGsemWgOmXnOmNteWtl1/pm7voppYnKSI+6Zu76KaWPC9hPjwvc3Bhbj48c3BhbiBjbGFzcz0ic3dpcGVyLXNsaWRlIj48YSBocmVmPSJodHRwczovL3d3dy50azNjLmNvbS9ldmVudHMvZXZlbnRnaWZ0LmFzcHg/ZWM9aWR4LXNlYXJjaGhvdC1tIiBvbmNsaWNrPSJzZW5kR2FFdmVudCgnTeeJiOmmlumggV/mkJzlsIsnLCdjbGljaycsJ+aQnOWwi1/nhrHploDpl5zpjbXlrZdf55m76YyE6YCB5aW956auJykiPueZu+mMhOmAgeWlveemrjwvYT48L3NwYW4+PHNwYW4gY2xhc3M9InN3aXBlci1zbGlkZSI+PGEgaHJlZj0iL21vYmlsZS9tb2Jfc2VhcmNoLmFzcHg/cT1BaXJQb2RzJmVjPWlkeC1zZWFyY2hob3QtbSIgb25jbGljaz0ic2VuZEdhRXZlbnQoJ03niYjpppbpoIFf5pCc5bCLJywnY2xpY2snLCfmkJzlsItf54ax6ZaA6Zec6Y215a2XX0FpclBvZHMnKSI+QWlyUG9kczwvYT48L3NwYW4+PHNwYW4gY2xhc3M9InN3aXBlci1zbGlkZSI+PGEgaHJlZj0iaHR0cHM6Ly9ldmVudHMudGszYy5jb20vZXZlbnRzX25ldC9jcm93bmNvZmZlZS9pbmRleC5odG1sP2VjPWlkeC1zZWFyY2hob3QtbSIgb25jbGljaz0ic2VuZEdhRXZlbnQoJ03niYjpppbpoIFf5pCc5bCLJywnY2xpY2snLCfmkJzlsItf54ax6ZaA6Zec6Y215a2XX+WSluWVoeiyt+S4gOmAgeS4gCcpIj7lkpbllaHosrfkuIDpgIHkuIA8L2E+PC9zcGFuPjxzcGFuIGNsYXNzPSJzd2lwZXItc2xpZGUiPjxhIGhyZWY9Ii9tb2JpbGUvbW9iX3NlYXJjaC5hc3B4P3E9JWU1JTg2JWI3JWU2JWIwJWEzJmVjPWlkeC1zZWFyY2hob3QtbSIgb25jbGljaz0ic2VuZEdhRXZlbnQoJ03niYjpppbpoIFf5pCc5bCLJywnY2xpY2snLCfmkJzlsItf54ax6ZaA6Zec6Y215a2XX+WGt+awoycpIj7lhrfmsKM8L2E+PC9zcGFuPmQCDw9kFgICAQ8WAh8ABbUJPGxpPjxhIGhyZWY9Imh0dHBzOi8vd3d3LnRrM2MuY29tL2RpY3RpdGxldXJsLmFzcHg/Y2lkPTExMTI0JmVjPWlkeC1zZWFyY2hob3QtbSIgY2xhc3M9InRrZWNNX3NlYXJjaGxpc3QtbGluayI+562G6Zu7PC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iaHR0cHM6Ly9ldmVudHMudGszYy5jb20vZXZlbnRzX25ldC9PbmxpbmVfRE1DYXRhbG9nL2luZGV4LmFzcHg/ZWM9aWR4LXNlYXJjaGhvdC1tIiBjbGFzcz0idGtlY01fc2VhcmNobGlzdC1saW5rIj7nt5rkuIrlnovpjIQ8L2E+PC9saT4NCjxsaT48YSBocmVmPSJodHRwczovL3d3dy50azNjLmNvbS9kaWN0aXRsZXVybC5hc3B4P2NpZD0xMTA1OCZlYz1pZHgtc2VhcmNoaG90LW0iIGNsYXNzPSJ0a2VjTV9zZWFyY2hsaXN0LWxpbmsiPumiqOaJhzwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Imh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvaWNld2FzaDIyMDkvaW5kZXguaHRtbD9lYz1pZHgtc2VhcmNoaG90LW0iIGNsYXNzPSJ0a2VjTV9zZWFyY2hsaXN0LWxpbmsiPuWGsOeusTwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Imh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvMjAyMFRWZm9yZXZlci9pbmRleC5odG1sP2VjPWlkeC1zZWFyY2hob3QtbSIgY2xhc3M9InRrZWNNX3NlYXJjaGxpc3QtbGluayI+6Zu76KaWPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iaHR0cHM6Ly93d3cudGszYy5jb20vZXZlbnRzL2V2ZW50Z2lmdC5hc3B4P2VjPWlkeC1zZWFyY2hob3QtbSIgY2xhc3M9InRrZWNNX3NlYXJjaGxpc3QtbGluayI+55m76YyE6YCB5aW956auPC9hPjwvbGk+DQo8bGk+PGEgaHJlZj0iL21vYmlsZS9tb2Jfc2VhcmNoLmFzcHg/cT1BaXJQb2RzJmVjPWlkeC1zZWFyY2hob3QtbSIgY2xhc3M9InRrZWNNX3NlYXJjaGxpc3QtbGluayI+QWlyUG9kczwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Imh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvY3Jvd25jb2ZmZWUvaW5kZXguaHRtbD9lYz1pZHgtc2VhcmNoaG90LW0iIGNsYXNzPSJ0a2VjTV9zZWFyY2hsaXN0LWxpbmsiPuWSluWVoeiyt+S4gOmAgeS4gDwvYT48L2xpPg0KPGxpPjxhIGhyZWY9Ii9tb2JpbGUvbW9iX3NlYXJjaC5hc3B4P3E9JWU1JTg2JWI3JWU2JWIwJWEzJmVjPWlkeC1zZWFyY2hob3QtbSIgY2xhc3M9InRrZWNNX3NlYXJjaGxpc3QtbGluayI+5Ya35rCjPC9hPjwvbGk+DQpkAgYPZBYGAgEPFgIeCWRhdGEta2luZAUBMWQCAw8WAh8BaGQCBQ8PZBYCHgdvbmNsaWNrBUBqYXZhc2NyaXB0OmFsZXJ0KCfos7znianou4rkuK3mspLmnInllYblk4HvvIzlv6vljrvpgJvpgJvlkKchJyk7FgICAQ8WAh8AZWQCBw9kFgICAQ9kFgICAQ8PZBYCHgVTdHlsZQULY29sb3I6IzAwRjtkAggPDxYCHgtOYXZpZ2F0ZVVybAUiaHR0cDovL3d3dy50azNjLmNvbS90a2VjX2FwcHMuYXNweGRkZF6p0Yy/r+svWH0gLY0p5LnwzyZf">
+    </div>
+
+    <script type="text/javascript">
+      //<![CDATA[
+      var theForm = document.forms['form1'];
+      if (!theForm) {
+        theForm = document.form1;
+      }
+
+      function __doPostBack(eventTarget, eventArgument) {
+        if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+          theForm.__EVENTTARGET.value = eventTarget;
+          theForm.__EVENTARGUMENT.value = eventArgument;
+          theForm.submit();
+        }
+      }
+      //]]>
+    </script>
+
+
+    <div>
+
+      <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5A359355">
+    </div>
+
+
+
+    <script type="text/javascript">
+      //顯示倒數秒收
+      function showTime(t) {
+        t -= 1;
+        if (t == 0) {
+          //跳出視窗
+          ajaxMemMsg();
+        }
+
+        //每秒執行一次,showTime()
+        setTimeout("showTime(" + t + ")", 1000);
+      }
+
+      function ajaxMemMsg() {
+        $.blockUI({
+          message: $(
+            '<iframe src="/Message/MemberMsg.aspx" scrolling="no" allowtransparency="yes" frameborder="0" border="0" cellspacing="0" id="plusframe" width="500" height="280" ></iframe>'
+          ),
+          css: {
+            top: '30%',
+            left: '30%',
+            border: 'none',
+            background: 'none'
+          }
+        });
+        return false;
+      }
+
+      function ajaxMemAg() {
+        $.unblockUI();
+        showTime(900);
+      }
+
+      function ajaxMemOut() {
+        $.unblockUI();
+        location.href = '/member/member_logout.aspx';
+      }
+
+      function showTimeOut(t) {
+        t -= 1;
+        if (t == 0) {
+          //直接登出
+          ajaxMemOut();
+        }
+
+        //每秒執行一次,showTime()
+        setTimeout("showTimeOut(" + t + ")", 1000);
+      }
+
+      function showTimeOutMob(t) {
+        t -= 1;
+        if (t == 0) {
+          //直接登出
+          location.href = '/member/member_logout.aspx';
+        }
+
+        //每秒執行一次,showTime()
+        setTimeout("showTimeOutMob(" + t + ")", 1000);
+      }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+    <header id="TopHead" class="tkecM_header tkecM_newMainHeader">
+      <!-- 選單列 -->
+
+      <div class="tkecM_header_nav">
+        <div class="tkecM_nav-container tkecM_container_l tkecM_newHeaderButtons">
+          <!-- 漢堡選單按鈕 -->
+          <!--<a href="javascript:void(0)" id="HrefA3" onclick="history.back()" class="tkecM_nav-backBtn">上一頁</a>-->
+          <a href="#" class="tkecM_nav-menuBtn map-marker"><span class="fa fa-2x fa-map-marker-alt"></span><br><span
+              id="ShowStoreName">最愛門市</span></a> <!--  store button  -->
+          <a href="#" id="HrefA1" class="tkecM_nav-menuBtn tkecM_newNavTrigger"><img src="images/cart_menu.png"
+              alt=""></a><!-- tkec logo -->
+          <a href="/mobile/mob_index.aspx" id="HrefA2" class="tkecM_nav-tkecLogo"></a><!-- 搜尋框 -->
+          <div id="searchBarInput" class="tkecM_nav-searchBox">
+            <input id="searchKeyword" type="text" placeholder="冷氣" class="tkecM_nav-search">
+            <button class="tkecM_nav-searchBtn">搜尋</button>
+            <div class="tkecM_nav-searchIcon"><img src="images/search.png?1" alt=""></div>
+          </div><!-- 搜尋聯想 list -->
+
+          <div class="tkecM_listResult" style="display:none">
+            <span id="SearchHtml"></span>
+          </div><!-- 瀏覽紀錄 --><a href="#" class="tkecM_nav-messageCloseBtn tkecM_navMessage"><img
+              src="images/history.png" alt=""></a>
+        </div>
+
+        <div
+          class="swiper-container swiper-container-horizontal hot-keyword swiper-container-free-mode swiper-container-android">
+          <div class="swiper-wrapper">
+            <span class="swiper-slide swiper-slide-active"><a
+                href="https://www.tk3c.com/dictitleurl.aspx?cid=11124&amp;ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_筆電')">筆電</a></span><span
+              class="swiper-slide swiper-slide-next"><a
+                href="https://events.tk3c.com/events_net/Online_DMCatalog/index.aspx?ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_線上型錄')">線上型錄</a></span><span class="swiper-slide"><a
+                href="https://www.tk3c.com/dictitleurl.aspx?cid=11058&amp;ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_風扇')">風扇</a></span><span class="swiper-slide"><a
+                href="https://events.tk3c.com/events_net/icewash2209/index.html?ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_冰箱')">冰箱</a></span><span class="swiper-slide"><a
+                href="https://events.tk3c.com/events_net/2020TVforever/index.html?ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_電視')">電視</a></span><span class="swiper-slide"><a
+                href="https://www.tk3c.com/events/eventgift.aspx?ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_登錄送好禮')">登錄送好禮</a></span><span class="swiper-slide"><a
+                href="/mobile/mob_search.aspx?q=AirPods&amp;ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_AirPods')">AirPods</a></span><span
+              class="swiper-slide"><a
+                href="https://events.tk3c.com/events_net/crowncoffee/index.html?ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_咖啡買一送一')">咖啡買一送一</a></span><span
+              class="swiper-slide"><a href="/mobile/mob_search.aspx?q=%e5%86%b7%e6%b0%a3&amp;ec=idx-searchhot-m"
+                onclick="sendGaEvent('M版首頁_搜尋','click','搜尋_熱門關鍵字_冷氣')">冷氣</a></span>
+          </div>
+
+        </div><!-- key words slider -->
+      </div><!-- 訊息列 -->
+
+      <div class="tkecM_header-messageCtl">
+        <div class="tkecM_messageCtl-container tkecM_container_l">
+          <!-- 門市訊息 -->
+          <div class="tkecM_messageCtl-storeMessage">
+            <div class="tkecM_storeMessage-promptIcon"><img src="images/message.png" alt=""><span
+                class="tkecM_storeMessage-count">9+</span></div>
+            <div class="tkecM_storeMessage-storeInfo"><span>附近門市：</span><span>燦坤內湖旗艦店</span></div>
+          </div><!-- 登入按鈕 --><a href="#" class="tkecM_messageCtl-loginBtn">登入/註冊<i class="fas fa-user"></i></a>
+        </div>
+      </div><!-- 瀏覽紀錄內容跳窗 -->
+      <div id="historyRecord" class="tkecM_popup tkecM_historyContent is-visible-right1">
+
+        <div class="tkecM_popup-container">
+          <div class="swiper-container tkecM_historyContent-nav swiper-container-horizontal swiper-container-android">
+            <div class="swiper-wrapper tkecM_historyContent-tabBox">
+              <div class="swiper-slide active swiper-slide-active" style="width: 137px;"><span
+                  id="historyBoxBtn_Js"></span></div>
+              <div class="swiper-slide swiper-slide-next" style="width: 137px;"><span id="TraceBoxBtn_Js"></span></div>
+              <div class="swiper-slide" id="PersonCss" style="width: 137px;"><span id="PersonBtn_Js"></span></div>
+              <div class="swiper-slide" style="width: 137px;"><span id="DownBtn_Js"></span></div>
+            </div>
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+          </div>
+          <div
+            class="swiper-container tkecM_historyContent-content swiper-container-horizontal swiper-container-android">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide swiper-slide-active" style="width: 411px;">
+                <div id="tab-1" class="tkecM_tab-content tkecM_historyContent-Content">
+                  <div id="historyBoxHtml_Js"></div>
+                </div>
+              </div>
+              <div class="swiper-slide swiper-slide-next" style="width: 411px;">
+                <div id="tab-2" class="tkecM_tab-content tkecM_trackContent-Content">
+                  <div id="TraceBoxHtml_Js"></div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="width: 411px;">
+                <div id="tab-3" class="tkecM_tab-content tkecM_historyContent-Content">
+                  <div id="PersonHtml_Js"></div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="width: 411px;">
+                <div id="tab-4" class="tkecM_tab-content tkecM_historyContent-Content">
+                  <div id="DownHtml_Js"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="load_fixbox" style="display:none" id="WaitTimeHistory">
+            <div class="midbg">
+              <div class="fontbox">
+                <p>資料下載中</p>
+                <div class="loading-spinner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div><!-- 登入內容跳窗 -->
+      <div id="memberCenter" class="tkecM_popup tkecM_loginContent">
+        <div class="tkecM_popup-container tkecM_loginContent-container">
+          <!-- 使用者名稱 -->
+          <p class="memberName" style="display: none;">親愛的<span id="username">a******</span>會員您好</p><!-- 登入後按鈕 -->
+          <div class="tkecM_loginContent-loginlist"><a href="/mobile/mob_order_index_new.aspx?parm=order"
+              class="tkecM_loginlist-item"><i style="background:url(/mobile/images/mc1.png)"></i><span>訂單查詢</span></a><a
+              href="/mobile/mob_serviceqs.aspx" class="tkecM_loginlist-item"><i
+                style="background:url(/mobile/images/mc2.png)"></i><span>問題詢問</span></a><a href="javascript:void(0);"
+              id="PnCard" onclick="CardCheckJs();" class="tkecM_loginlist-item"><i
+                style="background:url(https://www.tkec.com.tw/mobile/images/mc3.png)"></i><span>燦坤會員<br>開卡/綁卡</span></a><a
+              href="/mobile/mob_membercenter.aspx" class="tkecM_loginlist-item"><i
+                style="background:url(/mobile/images/mc4.png)"></i><span>會員中心</span></a><a
+              href="/mobile/mob_buygold.aspx" class="tkecM_loginlist-item"><i
+                style="background:url(/mobile/images/mc5.png)"></i><span>購物金<br>查詢</span></a><a
+              href="/mobile/mob_member_coupon.aspx" class="tkecM_loginlist-item"><i
+                style="background:url(/mobile/images/mc6.png)"></i><span>折價卷<br>查詢</span></a></div><a id="loginBtn"
+            href="javascript:void();" class="tkecM_loginContent-logout memberLoginBtn">登入/加入會員</a>
+        </div>
+      </div><!-- 搜尋內容跳窗 -->
+      <div id="searchBar" class="tkecM_popup tkecM_searchContent">
+        <div class="tkecM_popup-container tkecM_searchContent-container">
+          <div class="tkecM_searchContent-searchlist">
+            <div id="hotSearch">
+              <div class="tkecM_searchlist-title">熱門搜尋</div>
+              <ul class="tkecM_searchlist-listBox">
+                <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=11124&amp;ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">筆電</a></li>
+                <li><a href="https://events.tk3c.com/events_net/Online_DMCatalog/index.aspx?ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">線上型錄</a></li>
+                <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=11058&amp;ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">風扇</a></li>
+                <li><a href="https://events.tk3c.com/events_net/icewash2209/index.html?ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">冰箱</a></li>
+                <li><a href="https://events.tk3c.com/events_net/2020TVforever/index.html?ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">電視</a></li>
+                <li><a href="https://www.tk3c.com/events/eventgift.aspx?ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">登錄送好禮</a></li>
+                <li><a href="/mobile/mob_search.aspx?q=AirPods&amp;ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">AirPods</a></li>
+                <li><a href="https://events.tk3c.com/events_net/crowncoffee/index.html?ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">咖啡買一送一</a></li>
+                <li><a href="/mobile/mob_search.aspx?q=%e5%86%b7%e6%b0%a3&amp;ec=idx-searchhot-m"
+                    class="tkecM_searchlist-link">冷氣</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="tkecM_searchContent-searchlist">
+            <div id="historySearch">
+              <div class="tkecM_searchlist-title">近期搜尋紀錄</div>
+              <ul class="tkecM_searchlist-listBox">
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div><!-- 訊息內容跳窗 -->
+      <div class="tkecM_popup tkecM_storeMessageContent" id="messageCenter">
+        <div class="tkecM_popup-container tkecM_storeMessageContent-container">
+
+          <div class="load_fixbox" style="display:none" id="WaitTimeMessage">
+            <div class="midbg">
+              <div class="fontbox">
+                <p>資料下載中</p>
+                <div class="loading-spinner"></div>
+              </div>
+            </div>
+          </div>
+          <div id="Index_Position"></div>
+
+          <div class="tkecM_storeMessageContent-messageBox">
+            <div class="tkecM_storeMessageContent-title">
+              <span>通知</span>
+            </div>
+            <span id="Tkec_Message"></span>
+          </div>
+        </div>
+      </div><!-- 全部訊息內容跳窗 -->
+      <!--最愛門市選單 START by Felix-->
+      <div id="StorePopup" class="tkecM_popup keywordpop">
+        <div class="tkecM_popup-container">
+          <div id="storelist" class="store-list"><select class="select-css">
+              <option value="">請選擇區域</option>
+              <option value="20">北市,基隆</option>
+              <option value="22">新北市</option>
+              <option value="30">桃竹苗區</option>
+              <option value="40">中彰投區</option>
+              <option value="50">雲嘉南區</option>
+              <option value="52">高屏區</option>
+              <option value="60">宜花東區</option>
+              <option value="98">金門地區</option>
+              <option value="99">澎湖地區</option>
+            </select> <select class="select-css">
+              <option value="">請選擇門市</option>
+            </select>
+            <div id="LoginShowPanel1" class="favorite-check" style="display: none;"><input type="checkbox"
+                id="chkSaveFav" checked="checked"><span
+                onclick="javascript:chkSaveFav.checked=!chkSaveFav.checked">設為我的最愛門市</span></div> <input type="button"
+              id="btnSetFavStore" value="確定" class="store-button">
+            <div id="LoginShowPanel2" style="display: none;"><input type="button" id="btnLoadFavStore" value="使用我的最愛門市"
+                class="store-button store-favorite"></div>
+          </div>
+        </div>
+      </div>
+      <!--最愛門市選單  END  by Felix-->
+
+    </header>
+    <div class="tkecM_newOverlay"></div><!-- 分類選單 -->
+    <div class="tkecM_newMainContent">
+      <div id="tkecM_originalContent">
+
+
+
+        <section>
+          <div class="swiper-container bannerPic swiper-container-horizontal swiper-container-android">
+
+            <div style="background-size: 16px 44px; width: 60px;" class="swiper-button-next banner-button-white"></div>
+            <div style="background-size: 16px 44px; width: 60px;" class="swiper-button-prev banner-button-white"></div>
+          </div>
+        </section>
+
+        <section style="z-index: 1;">
+          <div class="swiper-container slidePic swiper-container-horizontal swiper-container-android">
+            <div id="slideBlock" class="swiper-wrapper"
+              style="transform: translate3d(-6165px, 0px, 0px); transition-duration: 0ms;">
+              <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                data-swiper-slide-index="14" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/airConditionerLAB/index.html?ec=idx_b15"
+                  title="8/1-8/24 熱浪來襲 清涼一夏" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B15_8/1-8/24 熱浪來襲 清涼一夏')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308171601205273.jpg"
+                    alt="8/1-8/24 熱浪來襲 清涼一夏" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide swiper-slide-duplicate-next" data-swiper-slide-index="0" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/IGDForSummer/index.html?ec=idx_b1"
+                  title="0816-0822 Intel Gamer Days第二週(MSI)" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B1_0816-0822 Intel Gamer Days第二週(MSI)')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308151706225243.jpg"
+                    alt="0816-0822 Intel Gamer Days第二週(MSI)" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="1" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/5is86s7bobee/index.html?ec=idx_b2" title="0809-0831 3C保庇節"
+                  class="d-block" onclick="sendGaEvent('M版首頁_大B','click','大B_B2_0809-0831 3C保庇節')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308071925422715.jpg"
+                    alt="0809-0831 3C保庇節" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="2" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/2023Valentine/index.html?ec=idx_b3" title="0809-0824七夕價給你"
+                  class="d-block" onclick="sendGaEvent('M版首頁_大B','click','大B_B3_0809-0824七夕價給你')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308091100071076.jpg"
+                    alt="0809-0824七夕價給你" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="3" style="width: 411px;"><a
+                  href="https://www.tk3c.com/dic2.aspx?cid=71323&amp;aid=16942&amp;hid=121716&amp;ec=idx_b4"
+                  title="0816-0820 三菱除濕機領券再FUN價" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B4_0816-0820 三菱除濕機領券再FUN價')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308161648412017.jpg"
+                    alt="0816-0820 三菱除濕機領券再FUN價" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="4" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/screen2308/index.html?ec=idx_b5" title="0811-0930 亮亮螢幕節"
+                  class="d-block" onclick="sendGaEvent('M版首頁_大B','click','大B_B5_0811-0930 亮亮螢幕節')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308101722035584.jpg"
+                    alt="0811-0930 亮亮螢幕節" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="5" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/valentineForGirl/index.html?ec=idx_b6"
+                  title="0809-0824她最想要的禮物" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B6_0809-0824她最想要的禮物')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308091100519989.jpg"
+                    alt="0809-0824她最想要的禮物" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="6" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/valentineForBoy/index.html?ec=idx_b7"
+                  title="0809-0824他最想要的禮物" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B7_0809-0824他最想要的禮物')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308091101300932.jpg"
+                    alt="0809-0824他最想要的禮物" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="7" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/freshman_third/index.html?ec=idx_b8"
+                  title="0801-0831 人生新階段 三部曲：放榜狂賀 裝備新潮計畫" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B8_0801-0831 人生新階段 三部曲：放榜狂賀 裝備新潮計畫')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2307311558124817.jpg"
+                    alt="0801-0831 人生新階段 三部曲：放榜狂賀 裝備新潮計畫" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="8" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/freshman_house/index.html?ec=idx_b9"
+                  title="8/1-8/24 人生新階段 新鮮人租屋全攻略" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B9_8/1-8/24 人生新階段 新鮮人租屋全攻略')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308011426015753.jpg"
+                    alt="8/1-8/24 人生新階段 新鮮人租屋全攻略" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="9" style="width: 411px;"><a
+                  href="https://www.tk3c.com/dic2.aspx?cid=111723&amp;aid=22982&amp;hid=121718&amp;ec=idx_b10"
+                  title="0817-0824 irobot x blueair七夕加碼" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B10_0817-0824 irobot x blueair七夕加碼')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308171724597864.jpg"
+                    alt="0817-0824 irobot x blueair七夕加碼" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="10" style="width: 411px;"><a
+                  href="https://www.tk3c.com/dictitleurl.aspx?cid=119275&amp;ec=idx_b11" title="0815夜殺" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B11_0815夜殺')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308160926534272.jpg" alt="0815夜殺"
+                    class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="11" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/icewash2209/index.html?ec=idx_b12" title="8/16-8/31月月冰洗節-聲寶"
+                  class="d-block" onclick="sendGaEvent('M版首頁_大B','click','大B_B12_8/16-8/31月月冰洗節-聲寶')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308151707291360.jpg"
+                    alt="8/16-8/31月月冰洗節-聲寶" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide" data-swiper-slide-index="12" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/tk3cgroup/index.html?ec=idx_b13" title="0728-0814燦坤揪團購"
+                  class="d-block" onclick="sendGaEvent('M版首頁_大B','click','大B_B13_0728-0814燦坤揪團購')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308160927374961.jpg"
+                    alt="0728-0814燦坤揪團購" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="13" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/foodOnly/index.html?ec=idx_b14" title="舌尖上的美味"
+                  class="d-block" onclick="sendGaEvent('M版首頁_大B','click','大B_B14_舌尖上的美味')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308121231132537.jpg" alt="舌尖上的美味"
+                    class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="14" style="width: 411px;"><a
+                  href="https://events.tk3c.com/events_net/airConditionerLAB/index.html?ec=idx_b15"
+                  title="8/1-8/24 熱浪來襲 清涼一夏" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B15_8/1-8/24 熱浪來襲 清涼一夏')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308171601205273.jpg"
+                    alt="8/1-8/24 熱浪來襲 清涼一夏" class="d-block w-100" onerror="ImgError(this);"></a></div>
+              <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-swiper-slide-index="0"
+                style="width: 411px;"><a href="https://events.tk3c.com/events_net/IGDForSummer/index.html?ec=idx_b1"
+                  title="0816-0822 Intel Gamer Days第二週(MSI)" class="d-block"
+                  onclick="sendGaEvent('M版首頁_大B','click','大B_B1_0816-0822 Intel Gamer Days第二週(MSI)')"><img
+                    src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308151706225243.jpg"
+                    alt="0816-0822 Intel Gamer Days第二週(MSI)" class="d-block w-100" onerror="ImgError(this);"></a></div>
+            </div>
+            <div style="background-size: 16px 44px; width: 60px;" class="swiper-button-next swiper-button-white"></div>
+            <div style="background-size: 16px 44px; width: 60px;" class="swiper-button-prev swiper-button-white"></div>
+          </div>
+        </section>
+
+        <!--上方8個button-->
+        <section id="category-parent" style="position: relative; padding-bottom: 20px; padding-top: 209px;">
+          <div class="dee-category">
+            <section id="splide_assortBtn"
+              class="splide splide--slide splide--ltr splide--draggable is-active is-overflow is-initialized"
+              aria-label="Splide Basic HTML Example" style="background-color: #fff" aria-roledescription="carousel">
+              <div class="splide__track splide__track--slide splide__track--ltr splide__track--draggable"
+                id="splide_assortBtn-track" style="padding-left: 0px; padding-right: 0px;" aria-live="polite"
+                aria-atomic="true">
+                <ul id="assortBtn_ul" class="splide__list" role="presentation" style="transform: translateX(0px);">
+                  <li class="splide__slide is-active is-visible" id="splide_assortBtn-slide01" role="tabpanel"
+                    aria-roledescription="slide" aria-label="1 of 2" style="margin-right: 1.25rem; width: 100%;">
+                    <div id="assortBtn" class="row no-gutters">
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://events.tk3c.com/events_net/kings_discount/index.html?ec=nav_kings_discount"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_會員領券現折')">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2303291727329128.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">會員領券<br>現折</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://events.tk3c.com/events_net/tk3cgroup/index.html?ec=nav_tk3cgroup"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_燦坤揪團購')">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2306191729048757.gif"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">燦坤揪團<br>購</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://events.tk3c.com/events_net/vipcoupon/index.aspx?ec=nav_vipcoupon"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_本月折扣輸碼現折')">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2306281139428351.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">本月折扣<br>輸碼現折</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://www.tk3c.com/edm/tkapp_update2.html?ec=nav_edm" class="d-block text-center f-14"
+                          target="_blank" onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_會員綁卡活動')">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2306281201287094.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">會員綁卡<br>活動</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 8px"><a
+                          href="https://events.tk3c.com/events_net/airConditionerLAB/index.html?ec=nav_airConditionerLAB"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_空調今天買明天裝')">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2303291727459941.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">空調今天<br>買明天裝</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 8px"><a
+                          href="https://www.tk3c.com/dic1.aspx?cid=11058&amp;aid=4675&amp;ec=nav_www.tk3c.com"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_沁涼風扇專區')">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2304141210256351.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">沁涼風扇<br>專區</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 8px"><a
+                          href="https://events.tk3c.com/events_net/green_subsidy/index.html?ec=nav_green_subsidy"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_週末綠點十倍送')">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2304141939450564.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">週末綠點<br>十倍送</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://events.tk3c.com/events_net/2017_nightcoupon/index.aspx?ec=nav_2017_nightcoupon"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_夜間快殺十點開搶')">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2303291728217791.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">夜間快殺<br>十點開搶</div>
+                        </a></div>
+                    </div>
+                  </li>
+                  <li class="splide__slide is-next" id="splide_assortBtn-slide02" role="tabpanel"
+                    aria-roledescription="slide" aria-label="2 of 2" style="margin-right: 1.25rem; width: 100%;"
+                    aria-hidden="true">
+                    <div id="assortBtn" class="row no-gutters">
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://events.tk3c.com/events_net/PLAYGAMES/index.html?ec=nav_PLAYGAMES"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_電玩遊戲世界')" tabindex="-1">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2303291727244115.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">電玩遊戲<br>世界</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://events.tk3c.com/events_net/outdoor/index.html?ec=nav_outdoor"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_週末出遊去')" tabindex="-1">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2305191609199648.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">週末出遊<br>去</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://www.tk3c.com/product/201205benefits/index.aspx?ec=nav_201205benefits"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_線上福利出清')" tabindex="-1">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2303291726470762.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">線上福利<br>出清</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://www.tk3c.com/dic1.aspx?cid=11124&amp;aid=22124&amp;ec=nav_www.tk3c.com"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_筆電特仕改裝機')" tabindex="-1">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2306281147351456.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">筆電特仕<br>改裝機</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 8px"><a
+                          href="https://www.tk3c.com/dic1.aspx?cid=116541&amp;aid=22837&amp;ec=nav_www.tk3c.com"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_毛孩寵愛專區')" tabindex="-1">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2306281145535302.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">毛孩寵愛<br>專區</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 8px"><a
+                          href="https://events.tk3c.com/events_net/icewash2209/index.html?ec=nav_icewash2209"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_拒絕吃電怪獸')" tabindex="-1">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2307261320238478.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">拒絕吃電<br>怪獸</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 8px"><a
+                          href="https://events.tk3c.com/events_net/health2021/index.html?ec=nav_health2021"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_新婚成家自由配')" tabindex="-1">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2306291139430205.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">新婚成家<br>自由配</div>
+                        </a></div>
+                      <div class="col-3 pl-2 pr-2" style="margin-bottom: 5px"><a
+                          href="https://events.tk3c.com/events_net/light_equipment/index.html?ec=nav_light_equipment"
+                          class="d-block text-center f-14" target="_blank"
+                          onclick="sendGaEvent('M版首頁_首頁頻道','click','首頁頻道_光之盛典')" tabindex="-1">
+                          <div><img src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2306191754461918.png"
+                              alt="" style="width: 70%; margin-bottom: 5px;" onerror="ImgError(this);"></div>
+                          <div class="text-dark">光之盛典</div>
+                        </a></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <ul class="splide__pagination splide__pagination--ltr" role="tablist" aria-label="Select a slide to show">
+                <li role="presentation"><button class="splide__pagination__page is-active" type="button" role="tab"
+                    aria-controls="splide_assortBtn-slide01" aria-label="Go to slide 1" aria-selected="true"></button>
+                </li>
+                <li role="presentation"><button class="splide__pagination__page" type="button" role="tab"
+                    aria-controls="splide_assortBtn-slide02" aria-label="Go to slide 2" tabindex="-1"></button></li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <!--新增最愛門市排行榜 START by Felix-->
+        <section id="StoreRank">
+          <div class="EJcardbox">
+            <div class="EJcardbox-headerbox">
+              <div class="EJcardbox-title"><span class="icon-target">門市排行榜</span></div>
+              <ul>
+                <li></li>
+              </ul>
+              <div class="clearflot"></div>
+            </div>
+            <div class="EJcardbannerbox">
+              <div class="full-width-banner" style="display: none;"><a href="#?ec=card0_north_banner"
+                  target="_blank"><img></a></div>
+              <div class="banner_left">
+                <ul>
+                  <li><a href="https://events.tk3c.com/events_net/summer_outdoor/index.html?ec=card0_north_left"
+                      target="_blank"><img src="/img/img_homepage/HomePage3_1_1_20230811183540658.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="banner_right">
+                <ul>
+                  <li><a href="https://events.tk3c.com/events_net/2020TVforever/index.html?ec=card0_north_right"
+                      target="_blank"><img src="/img/img_homepage/HomePage3_1_2_20230811192152070.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="clearflot"></div>
+            </div>
+            <div class="Ejcardprodbox">
+              <div class="swiper-container swiper-container-horizontal product-swipe swiper-container-android">
+                <div class="swiper-container swiper-wrapper swiper-container-horizontal swiper-container-android">
+                  <div class="swiper-wrapper"
+                    style="transform: translate3d(-259.333px, 0px, 0px); transition-duration: 0ms;">
+                    <div class="swiper-slide" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>1</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=233047&amp;ec=card0_north_goods1" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202209/233047_M.jpg">
+                              <span class="EJcard-prodtitle">AirPods Pro 2nd</span> <span
+                                class="EJcard-price">$6850</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-prev" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>2</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=236015&amp;ec=card0_north_goods2" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202212/236015_M.jpg">
+                              <span class="EJcard-prodtitle">國際 Panasonic nanocare 高滲透奈米水離子吹風機</span> <span
+                                class="EJcard-price">$9580</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>3</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=228746&amp;ec=card0_north_goods3" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202205/228746_M.jpg">
+                              <span class="EJcard-prodtitle">戴森 Dyson V10 Fluffy Extra 專案原廠整新機</span> <span
+                                class="EJcard-price">$9999</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>4</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=205982&amp;ec=card0_north_goods4" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202002/205982_M.jpg">
+                              <span class="EJcard-prodtitle">飛利浦Philips 4D立體彈性貼面水洗三刀頭電鬍刀</span> <span
+                                class="EJcard-price">$1988</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>5</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=223317&amp;ec=card0_north_goods5" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202112/223317_M.jpg">
+                              <span class="EJcard-prodtitle">JVC 50型4K HDR護眼顯示器</span> <span
+                                class="EJcard-price">$8999</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>6</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=139926&amp;ec=card0_north_goods6" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/201309/139926_M.jpg">
+                              <span class="EJcard-prodtitle">國際牌Panasonic 無袋式 HEPA級吸塵器</span> <span
+                                class="EJcard-price">$3990</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>7</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=228584&amp;ec=card0_north_goods7" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202205/228584_M.jpg">
+                              <span class="EJcard-prodtitle">宏碁 ACER Nitro 5 電競筆記型電腦 15.6"
+                                (i7-12700H/16GB/512GB/RTX3050-4G/W11)</span> <span
+                                class="EJcard-price">$29900</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>8</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=238187&amp;ec=card0_north_goods8" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202303/238187_M.jpg">
+                              <span class="EJcard-prodtitle">石頭掃地機器人 S8 Pro Ultra</span> <span
+                                class="EJcard-price">$39999</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>9</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=238438&amp;ec=card0_north_goods9" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202303/238438_M.jpg">
+                              <span class="EJcard-prodtitle">TECO一對一變頻單冷空調</span> <span
+                                class="EJcard-price">$17900</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="swiper-slide" style="width: 129.667px;">
+                      <div class="Store-prod">
+                        <div class="top-iconbox">
+                          <div class="top-iconinfo"><span class="fa fa-crown"></span></div>
+                          <div class="top-iconinfo-num"><span>10</span></div>
+                        </div>
+                        <ul>
+                          <li><a href="/pt.aspx?pid=241331&amp;ec=card0_north_goods10" target="_blank"
+                              class="d-block"><img src="https://www.cdn-tkec.tw//image/product/202307/241331_M.jpg">
+                              <span class="EJcard-prodtitle">PS5 Marvel s Spider-Man 2 同捆組</span> <span
+                                class="EJcard-price">$20780</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="clearflot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--新增最愛門市排行榜  END  by Felix-->
+
+        <!-- 今日最強檔 -->
+        <section id="today">
+          <div class="EJcardbox" style="background-color: rgb(252, 213, 16);">
+            <div class="EJcardbox-headerbox-todayhot">
+              <div class="EJcardbox-title"><span class="icon-fire">今日最強檔</span></div>
+              <ul>
+                <li><span class="timebgbox"><span counting="true"><span class="timebg">05</span>:
+                      <span class="timebg">54</span>:
+                      <span class="timebg">16</span></span></span></li>
+              </ul>
+            </div>
+            <div class="clearflot"></div>
+            <div class="box-container">
+              <section id="splide1" aria-label="Splide Basic HTML Example"
+                class="splide splide--slide splide--ltr splide--draggable is-active is-overflow is-initialized"
+                style="background-color: rgb(255, 255, 255);" aria-roledescription="carousel">
+                <div class="splide__track splide__track--slide splide__track--ltr splide__track--draggable"
+                  id="splide1-track" style="padding-left: 0px; padding-right: 0px;" aria-live="polite"
+                  aria-atomic="true">
+                  <ul class="splide__list" id="splide1-list" role="presentation" style="transform: translateX(0px);">
+                    <li class="splide__slide is-active is-visible" id="splide1-slide01" role="group"
+                      aria-roledescription="slide" aria-label="1 of 6" style="margin-right: 1.25rem; width: 35%;">
+                      <div class="top-iconbox-discount">
+                        <div class="top-iconinfo">91折</div>
+                      </div>
+                      <ul>
+                        <li><a href="/pt.aspx?pid=205984&amp;ec=idx-top1-m" target="_blank" class="d-block"><img
+                              src="https://www.cdn-tkec.tw//image/product/202002/205984_M.jpg">
+                            <div class="today-hot-product-info">
+                              <div class="EJcard-price">★滿3000現折200★</div> <span class="EJcard-prodtitle">飛利浦Philips
+                                5D立體彈性貼面水洗三刀頭電鬍刀</span>
+                              <p
+                                style="display: flex; flex-flow: row; justify-content: flex-end; align-items: flex-end;">
+                                <span class="text-through">$3290</span> <span class="price">$2990</span></p>
+                            </div>
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li class="splide__slide is-visible is-next" id="splide1-slide02" role="group"
+                      aria-roledescription="slide" aria-label="2 of 6" style="margin-right: 1.25rem; width: 35%;">
+                      <div class="top-iconbox-discount">
+                        <div class="top-iconinfo">83折</div>
+                      </div>
+                      <ul>
+                        <li><a href="/pt.aspx?pid=236914&amp;ec=idx-top1-m" target="_blank" class="d-block"><img
+                              src="https://www.cdn-tkec.tw//image/product/202301/236914_M.jpg">
+                            <div class="today-hot-product-info">
+                              <div class="EJcard-price">超殺強檔 限時搶購</div> <span class="EJcard-prodtitle">SAMSUNG Galaxy
+                                S23Ultra 5G 12G/512G 墨竹綠</span>
+                              <p
+                                style="display: flex; flex-flow: row; justify-content: flex-end; align-items: flex-end;">
+                                <span class="text-through">$44900</span> <span class="price">$37000</span></p>
+                            </div>
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li class="splide__slide" id="splide1-slide03" role="group" aria-roledescription="slide"
+                      aria-label="3 of 6" style="margin-right: 1.25rem; width: 35%;" aria-hidden="true">
+                      <div class="top-iconbox-discount">
+                        <div class="top-iconinfo">75折</div>
+                      </div>
+                      <ul>
+                        <li><a href="/pt.aspx?pid=236155&amp;ec=idx-top1-m" target="_blank" class="d-block"
+                            tabindex="-1"><img src="https://www.cdn-tkec.tw//image/product/202212/236155_M.jpg">
+                            <div class="today-hot-product-info">
+                              <div class="EJcard-price">登錄送★專用清潔劑</div> <span class="EJcard-prodtitle">HOBOT
+                                雷姬環保壓縮掃拖地機器人</span>
+                              <p
+                                style="display: flex; flex-flow: row; justify-content: flex-end; align-items: flex-end;">
+                                <span class="text-through">$19800</span> <span class="price">$14800</span></p>
+                            </div>
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li class="splide__slide" id="splide1-slide04" role="group" aria-roledescription="slide"
+                      aria-label="4 of 6" style="margin-right: 1.25rem; width: 35%;" aria-hidden="true">
+                      <div class="top-iconbox-discount">
+                        <div class="top-iconinfo">9折</div>
+                      </div>
+                      <ul>
+                        <li><a href="/pt.aspx?pid=232485&amp;ec=idx-top1-m" target="_blank" class="d-block"
+                            tabindex="-1"><img src="https://www.cdn-tkec.tw//image/product/202208/232485_M.jpg">
+                            <div class="today-hot-product-info">
+                              <div class="EJcard-price">加碼送濾心</div> <span class="EJcard-prodtitle">RICHMORE 抗敏 HEPA
+                                負離子空氣清淨機</span>
+                              <p
+                                style="display: flex; flex-flow: row; justify-content: flex-end; align-items: flex-end;">
+                                <span class="text-through">$1980</span> <span class="price">$1780</span></p>
+                            </div>
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li class="splide__slide" id="splide1-slide05" role="group" aria-roledescription="slide"
+                      aria-label="5 of 6" style="margin-right: 1.25rem; width: 35%;" aria-hidden="true">
+                      <!---->
+                      <ul>
+                        <li><a href="/pt.aspx?pid=241348-x2&amp;ec=idx-top1-m" target="_blank" class="d-block"
+                            tabindex="-1"><img src="https://www.cdn-tkec.tw//image/product/202307/241348_M.jpg">
+                            <div class="today-hot-product-info">
+                              <div class="EJcard-price">第二件任選藍色或粉色!</div> <span class="EJcard-prodtitle">雙入組優惠| MIPOW
+                                米菲兔真無線耳機LED Ligh-藍</span>
+                              <p
+                                style="display: flex; flex-flow: row; justify-content: flex-end; align-items: flex-end;">
+                                <span class="text-through">$1980</span> <span class="price">$1980</span></p>
+                            </div>
+                          </a></li>
+                      </ul>
+                    </li>
+                    <li class="splide__slide" id="splide1-slide06" role="group" aria-roledescription="slide"
+                      aria-label="6 of 6" style="margin-right: 1.25rem; width: 35%;" aria-hidden="true">
+                      <div class="top-iconbox-discount">
+                        <div class="top-iconinfo">65折</div>
+                      </div>
+                      <ul>
+                        <li><a href="/pt.aspx?pid=229095&amp;ec=idx-top1-m" target="_blank" class="d-block"
+                            tabindex="-1"><img src="https://www.cdn-tkec.tw//image/product/202205/229095_M.jpg">
+                            <div class="today-hot-product-info">
+                              <div class="EJcard-price">★週週抽國際航線機票+Acer好禮★</div> <span class="EJcard-prodtitle">宏碁 ACER
+                                Nitro 5 電競筆記型電腦 15.6" (i5-12500H/8GB/512GB/RTX3050-4G/W11)</span>
+                              <p
+                                style="display: flex; flex-flow: row; justify-content: flex-end; align-items: flex-end;">
+                                <span class="text-through">$38900</span> <span class="price">$24900</span></p>
+                            </div>
+                          </a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+            <div class="clearflot"></div>
+          </div>
+        </section>
+        <!-- New -->
+        <section id="Banner">
+          <div class="EJcardbox">
+            <div class="EJcardbox-headerbox">
+              <div class="EJcardbox-title"><span class="icon-bell">電腦/資訊週邊</span></div>
+              <ul>
+                <li><a href="https://events.tk3c.com/events_net/201710_nbchannel/index.aspx?ec=card1_more"
+                    target="_blank" onclick="sendGaEvent('M版首頁_卡片區_1-電腦/資訊週邊','click','卡片區_1_看更多')"
+                    class="EJhcardbox-more">更多
+                    <svg enable-background="New 0 0 11 11" viewBox="0 0 11 11" class="more-icon">
+                      <path stroke="none"
+                        d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z">
+                      </path>
+                    </svg></a></li>
+              </ul>
+              <div class="clearflot"></div>
+            </div>
+            <div class="EJcardbannerbox">
+              <div class="banner_left">
+                <ul>
+                  <li><a href="https://www.tk3c.com/dic2.aspx?cid=116832&amp;aid=22901&amp;hid=116852&amp;ec=card1_left"
+                      target="_blank" onclick="sendGaEvent('M版首頁_卡片區_1-電腦/資訊週邊','click','卡片區_1_活動Banner_左')"><img
+                        src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308151748390168.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="banner_right">
+                <ul>
+                  <li><a href="https://events.tk3c.com/events_net/valentinePlayGame/index.html?ec=card1_right"
+                      target="_blank" onclick="sendGaEvent('M版首頁_卡片區_1-電腦/資訊週邊','click','卡片區_1_活動Banner_右')"><img
+                        src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308171719584377.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="clearflot"></div>
+            </div>
+            <div class="Ejcardprodbox">
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">1</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=229687&amp;ec=card1_goods1" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_1-電腦/資訊週邊','click','卡片區_1_商品_左_229687華碩 ASUS VivoBook 15 筆記型電腦 15.6&quot; (i5-1235U/8GB/512GB/UHD/W11)午夜藍')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/202206/229687_M.jpg?t=20230512145808"> <span
+                          class="EJcard-prodtitle">文書熱銷冠軍</span> <span class="EJcard-price">$18999</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">2</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=241024-q-115promotion&amp;ec=card1_goods2" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_1-電腦/資訊週邊','click','卡片區_1_商品_中_241024-q-115promotionSAMSUNG Galaxy Tab S9 Ultra WIFI 12G/256G 鍵盤套裝組 米霧白')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/202307/241024-q-115promotion_M.jpg?t=20230807134411">
+                        <span class="EJcard-prodtitle">超夯預購中</span> <span class="EJcard-price">$45490</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">3</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=236908&amp;ec=card1_goods3" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_1-電腦/資訊週邊','click','卡片區_1_商品_右_236908SAMSUNG Galaxy S23Ultra 5G 12G/256G 深林黑')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/202301/236908_M.jpg?t=20230329193542"> <span
+                          class="EJcard-prodtitle">現省$7,900</span> <span class="EJcard-price">$33000</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearflot"></div>
+            </div>
+          </div>
+          <div class="EJcardbox">
+            <div class="EJcardbox-headerbox">
+              <div class="EJcardbox-title"><span class="icon-bell">生活家電/影音</span></div>
+              <ul>
+                <li><a href="http://www.tk3c.com/dictitleurl.aspx?cid=71323&amp;ec=card2_more" target="_blank"
+                    onclick="sendGaEvent('M版首頁_卡片區_2-生活家電/影音','click','卡片區_2_看更多')" class="EJhcardbox-more">更多
+                    <svg enable-background="New 0 0 11 11" viewBox="0 0 11 11" class="more-icon">
+                      <path stroke="none"
+                        d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z">
+                      </path>
+                    </svg></a></li>
+              </ul>
+              <div class="clearflot"></div>
+            </div>
+            <div class="EJcardbannerbox">
+              <div class="banner_left">
+                <ul>
+                  <li><a href="https://www.tk3c.com/dic2.aspx?cid=12504&amp;aid=22579&amp;hid=121383&amp;ec=card2_left"
+                      target="_blank" onclick="sendGaEvent('M版首頁_卡片區_2-生活家電/影音','click','卡片區_2_活動Banner_左')"><img
+                        src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2307201740454284.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="banner_right">
+                <ul>
+                  <li><a href="https://www.tk3c.com/dic2.aspx?cid=12504&amp;aid=22579&amp;hid=121247&amp;ec=card2_right"
+                      target="_blank" onclick="sendGaEvent('M版首頁_卡片區_2-生活家電/影音','click','卡片區_2_活動Banner_右')"><img
+                        src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308151751037149.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="clearflot"></div>
+            </div>
+            <div class="Ejcardprodbox">
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">1</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=140129&amp;ec=card2_goods1" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_2-生活家電/影音','click','卡片區_2_商品_左_140129國際牌Panasonic 10公斤 大海龍洗衣機')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/201310/140129_M.jpg?t=20221010172509"> <span
+                          class="EJcard-prodtitle">★激推強品★</span> <span class="EJcard-price">$9500</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">2</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=235942&amp;ec=card2_goods2" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_2-生活家電/影音','click','卡片區_2_商品_中_235942戴森Dyson SV18 Digital Slim Fluffy 無線吸塵器 銀灰')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/202212/235942_M.jpg?t=20230522100431"> <span
+                          class="EJcard-prodtitle">限時下殺</span> <span class="EJcard-price">$14900</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">3</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=225364&amp;ec=card2_goods3" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_2-生活家電/影音','click','卡片區_2_商品_右_225364限時下殺｜Panasonic 窗型定頻空調')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/202202/225364_M.jpg?t=20230619142231"> <span
+                          class="EJcard-prodtitle">限時降價中</span> <span class="EJcard-price">$11900</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearflot"></div>
+            </div>
+          </div>
+          <div class="EJcardbox">
+            <div class="EJcardbox-headerbox">
+              <div class="EJcardbox-title"><span class="icon-bell">本月主打</span></div>
+              <ul>
+                <li><a href="?ec=card3_more" target="_blank"
+                    onclick="sendGaEvent('M版首頁_卡片區_3-本月主打','click','卡片區_3_看更多')" class="EJhcardbox-more">更多
+                    <svg enable-background="New 0 0 11 11" viewBox="0 0 11 11" class="more-icon">
+                      <path stroke="none"
+                        d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z">
+                      </path>
+                    </svg></a></li>
+              </ul>
+              <div class="clearflot"></div>
+            </div>
+            <div class="EJcardbannerbox">
+              <div class="banner_left">
+                <ul>
+                  <li><a href="https://www.tk3c.com/pt.aspx?&amp;pid=240526&amp;ec=card3_left" target="_blank"
+                      onclick="sendGaEvent('M版首頁_卡片區_3-本月主打','click','卡片區_3_活動Banner_左')"><img
+                        src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308101700575710.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="banner_right">
+                <ul>
+                  <li><a href="https://www.tk3c.com/dic1.aspx?cid=111723&amp;aid=22639&amp;ec=card3_right"
+                      target="_blank" onclick="sendGaEvent('M版首頁_卡片區_3-本月主打','click','卡片區_3_活動Banner_右')"><img
+                        src="https://www.cdn-tkec.tw/image/UserFiles/img/Prod/Image_2308151754451234.jpg"></a></li>
+                </ul>
+              </div>
+              <div class="clearflot"></div>
+            </div>
+            <div class="Ejcardprodbox">
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">1</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=238187&amp;ec=card3_goods1" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_3-本月主打','click','卡片區_3_商品_左_238187券後$37999｜石頭掃地機器人 S8 Pro Ultra')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/202303/238187_M.jpg?t=20230810085157"> <span
+                          class="EJcard-prodtitle">秒殺商品</span> <span class="EJcard-price">$39999</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">2</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=233662&amp;ec=card3_goods2" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_3-本月主打','click','卡片區_3_商品_中_233662DJI OSMO MOBILE SE 手持雲台')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/202209/233662_M.jpg?t=20230412104916"> <span
+                          class="EJcard-prodtitle">挑戰最低價</span> <span class="EJcard-price">$2790</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="hide-scrollbar _1pJEM4">
+                <div class="EJcord-prod">
+                  <div class="top-iconbox">
+                    <div class="top-iconinfo">Top</div>
+                    <div class="top-iconinfo-num">3</div>
+                  </div>
+                  <ul>
+                    <li><a href="mob_pt.aspx?pid=233446&amp;ec=card3_goods3" target="_blank"
+                        onclick="sendGaEvent('M版首頁_卡片區_3-本月主打','click','卡片區_3_商品_右_233446國際 Panasonic奈米水離子吹風機')"
+                        class="d-block"><img
+                          src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20230308171021"> <span
+                          class="EJcard-prodtitle">美髮神器</span> <span class="EJcard-price">$4688</span></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="clearflot"></div>
+            </div>
+          </div>
+        </section>
+
+        <!--新增精選品牌(新) 2019-10-05 by Felix-->
+        <!--  Brand  -->
+        <section id="Brand">
+          <div class="EJ-LogoTitle-box">
+            <div class="EJcardbox-headerbox">
+              <div class="EJcardbox-title"><span class="icon-star">精選品牌</span></div>
+              <ul></ul>
+              <div class="clearflot"></div>
+            </div>
+            <div class="EJLogocontent">
+              <div class="swiper-container brand">
+                <div class="swiper-container swiper-wrapper swiper-container-horizontal swiper-container-android">
+                  <div class="swiper-wrapper"
+                    style="transform: translate3d(-411px, 0px, 0px); transition-duration: 0ms;">
+                    <div class="swiper-slide swiper-slide-prev" style="width: 411px;">
+                      <ul>
+                        <li><a href="https://events.tk3c.com/events_net/tk3cacershop/index.aspx?ec=flagship1#Banner"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_2_20220301102551118.jpg"></div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/tk3casusshop/index.aspx?ec=flagship2"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_3_20220301102551118.jpg"></div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/tk3csamsungshop/index.aspx?ec=flagship3"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_6_20220301102551118.jpg"></div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/appleshop/index.aspx?ec=flagship4"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_9_20220301102551118.jpg"></div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/intelshop/index.aspx?ec=flagship5"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_13_20220707164251208.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/tk3cpanasonicshop/index.aspx?ec=flagship6"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_11_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" style="width: 411px;">
+                      <ul>
+                        <li><a href="https://events.tk3c.com/events_net/tk3cmicrosoft/index.aspx?ec=flagship7"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_7_20220301102551118.jpg"></div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/logitechshop/index.aspx?ec=flagship8"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_5_20220301102551118.jpg"></div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/hp_pavilion/index.html?ec=flagship9"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_13_20230601091532729.png">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/Razer/index.html?ec=flagship10" target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_12_20230601140255572.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/tk3clgshop/index.aspx?ec=flagship11"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_4_20220301102551118.jpg"></div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/dyson/index.html?ec=flagship12" target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_13_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" style="width: 411px;">
+                      <ul>
+                        <li><a href="https://events.tk3c.com/events_net/NS/index.html?ec=flagship13" target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_14_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                        <li><a
+                            href="http://www.tk3c.com/dic2.aspx?cid=11312&amp;aid=4708&amp;hid=40805&amp;ec=flagship14"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_12_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/tk3cphilipsshop/index.aspx?ec=flagship15"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_15_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://www.tkec.com.tw/dic1.aspx?cid=111723&amp;aid=22639&amp;ec=flagship16"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_16_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="http://www.tkec.com.tw/dic1.aspx?cid=111723&amp;aid=22494&amp;ec=flagship17"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_19_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/tk3cashharpshop/index.aspx?ec=flagship18"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_21_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide" style="width: 411px;">
+                      <ul>
+                        <li><a href="https://events.tk3c.com/events_net/2019MI/index.aspx?ec=flagship19"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_10_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/tk3cdjishop/index.aspx?ec=flagship20"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_20_20220301102551118.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/crowncoffee/index.html?ec=flagship21"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_22_20230321105726672.png">
+                            </div>
+                          </a></li>
+                        <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=119222&amp;ec=flagship22"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_30_20220301130434042.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/epson/index.html?ec=flagship23" target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_28_20230626152440834.jpg">
+                            </div>
+                          </a></li>
+                        <li><a href="https://events.tk3c.com/events_net/roborock_event/index.html?ec=flagship24"
+                            target="_blank">
+                            <div class="img-container"><img
+                                src="https://www.cdn-tkec.tw//img/img_homepage/HomePage7_8_20220301102551118.jpg"></div>
+                          </a></li>
+                      </ul>
+                    </div>
+                    <div class="clearflot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--新增熱門分類(新) 2019-10-05 by Felix-->
+
+        <!--  hot  -->
+        <section id="hotClass">
+          <div class="EJcardbox">
+            <div class="EJcardbox-headerbox">
+              <div class="EJcardbox-title"><span class="icon-fire">熱門分類</span></div>
+              <ul>
+                <li></li>
+              </ul>
+              <div class="clearflot"></div>
+            </div>
+            <div id="hotProduct2" class="row no-gutters text-center hot-area">
+              <div class="col-3" style="margin-bottom: 15px;"><a
+                  href="https://www.tk3c.com/dictitleurl.aspx?cid=14719&amp;ec=cid1" class="d-block"
+                  style="padding: 0px 15px;"><img
+                    src="https://www.cdn-tkec.tw//img/img_homepage/HomePage22_1_20220331095151417.jpg"> <span
+                    class="f-12 mt-auto mb-1">鍵盤滑鼠</span></a></div>
+              <div class="col-3" style="margin-bottom: 15px;"><a
+                  href="http://www.tk3c.com/dictitleurl.aspx?cid=11312&amp;ec=cid2" class="d-block"
+                  style="padding: 0px 15px;"><img
+                    src="https://www.cdn-tkec.tw//img/img_homepage/HomePage22_2_20200414092206587.jpg"> <span
+                    class="f-12 mt-auto mb-1">電視</span></a></div>
+              <div class="col-3" style="margin-bottom: 15px;"><a
+                  href="http://www.tk3c.com/dic1.aspx?cid=83198&amp;aid=18620&amp;ec=cid3" class="d-block"
+                  style="padding: 0px 15px;"><img
+                    src="https://www.cdn-tkec.tw//img/img_homepage/HomePage22_3_20200414092206587.jpg"> <span
+                    class="f-12 mt-auto mb-1">洗衣/乾衣機</span></a></div>
+              <div class="col-3" style="margin-bottom: 15px;"><a
+                  href="http://www.tk3c.com/dictitleurl.aspx?cid=11124&amp;ec=cid4" class="d-block"
+                  style="padding: 0px 15px;"><img
+                    src="https://www.cdn-tkec.tw//img/img_homepage/HomePage22_4_20200414092206587.jpg"> <span
+                    class="f-12 mt-auto mb-1">筆記型電腦</span></a></div>
+              <div class="col-3" style="margin-bottom: 15px;"><a
+                  href="https://www.tk3c.com/dictitleurl.aspx?cid=83186&amp;ec=cid5" class="d-block"
+                  style="padding: 0px 15px;"><img
+                    src="https://www.cdn-tkec.tw//img/img_homepage/HomePage22_5_20230321140349440.jpg"> <span
+                    class="f-12 mt-auto mb-1">廚房小家電</span></a></div>
+              <div class="col-3" style="margin-bottom: 15px;"><a
+                  href="https://www.tk3c.com/dictitleurl.aspx?cid=44823&amp;ec=cid6" class="d-block"
+                  style="padding: 0px 15px;"><img
+                    src="https://www.cdn-tkec.tw//img/img_homepage/HomePage22_6_20220331095151417.jpg"> <span
+                    class="f-12 mt-auto mb-1">螢幕</span></a></div>
+              <div class="col-3" style="margin-bottom: 15px;"><a
+                  href="http://www.tkec.com.tw/dictitleurl.aspx?cid=11225&amp;ec=cid7" class="d-block"
+                  style="padding: 0px 15px;"><img
+                    src="https://www.cdn-tkec.tw//img/img_homepage/HomePage22_7_20200414092206587.jpg"> <span
+                    class="f-12 mt-auto mb-1">空調</span></a></div>
+              <div class="col-3" style="margin-bottom: 15px;"><a
+                  href="http://www.tk3c.com/dictitleurl.aspx?cid=629&amp;ec=cid8" class="d-block"
+                  style="padding: 0px 15px;"><img
+                    src="https://www.cdn-tkec.tw//img/img_homepage/HomePage22_8_20200414092206587.jpg"> <span
+                    class="f-12 mt-auto mb-1">遊戲</span></a></div>
+            </div>
+          </div>
+        </section>
+
+        <!--移除紅條 2019-10-05 by Felix-->
+        <section id="scrollCheck"></section>
+        <section class="slider-block">
+          <div class="swiper-container slideTabNav swiper-container-horizontal swiper-container-android">
+            <div id="slideTabData" class="swiper-wrapper" style="transition-duration: 0ms;">
+              <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active active" data-num="0"
+                data-code="class_all_m" data-swiper-slide-index="0">
+                <h3>全部商品</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-num="1"
+                data-code="class_NB_m" data-swiper-slide-index="1">
+                <h3>Apple/筆電</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="2" data-code="class_PC_m"
+                data-swiper-slide-index="2">
+                <h3>電腦/螢幕</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="3" data-code="class_Lap_m"
+                data-swiper-slide-index="3">
+                <h3>大家電</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="4" data-code="class_tv_m"
+                data-swiper-slide-index="4">
+                <h3>影音娛樂</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="5" data-code="class_phone_m"
+                data-swiper-slide-index="5">
+                <h3>行動生活</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-num="6" data-code="class_sap_m"
+                data-swiper-slide-index="6">
+                <h3>小家電</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-active active" data-num="0" data-code="class_all_m"
+                data-swiper-slide-index="0">
+                <h3>全部商品</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-next" data-num="1" data-code="class_NB_m"
+                data-swiper-slide-index="1">
+                <h3>Apple/筆電</h3>
+              </div>
+              <div class="swiper-slide" data-num="2" data-code="class_PC_m" data-swiper-slide-index="2">
+                <h3>電腦/螢幕</h3>
+              </div>
+              <div class="swiper-slide" data-num="3" data-code="class_Lap_m" data-swiper-slide-index="3">
+                <h3>大家電</h3>
+              </div>
+              <div class="swiper-slide" data-num="4" data-code="class_tv_m" data-swiper-slide-index="4">
+                <h3>影音娛樂</h3>
+              </div>
+              <div class="swiper-slide" data-num="5" data-code="class_phone_m" data-swiper-slide-index="5">
+                <h3>行動生活</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate-prev" data-num="6" data-code="class_sap_m"
+                data-swiper-slide-index="6">
+                <h3>小家電</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active active" data-num="0"
+                data-code="class_all_m" data-swiper-slide-index="0">
+                <h3>全部商品</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-num="1"
+                data-code="class_NB_m" data-swiper-slide-index="1">
+                <h3>Apple/筆電</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="2" data-code="class_PC_m"
+                data-swiper-slide-index="2">
+                <h3>電腦/螢幕</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="3" data-code="class_Lap_m"
+                data-swiper-slide-index="3">
+                <h3>大家電</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="4" data-code="class_tv_m"
+                data-swiper-slide-index="4">
+                <h3>影音娛樂</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="5" data-code="class_phone_m"
+                data-swiper-slide-index="5">
+                <h3>行動生活</h3>
+              </div>
+              <div class="swiper-slide swiper-slide-duplicate" data-num="6" data-code="class_sap_m"
+                data-swiper-slide-index="6">
+                <h3>小家電</h3>
+              </div>
+            </div>
+            <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div>
+          </div>
+        </section>
+        <section>
+          <div class="tabContent swiper-container">
+            <div class="slideTabContentData swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="row no-gutters itemList1">
+                  <div class="titleBox">
+                    <div class="EJcardbox" style="height:100%;border-bottom: 1px solid #e5e5e5;">
+                      <div class="EJcardbox-headerbox">
+                        <div class="EJcardbox-title" style="padding-bottom:10px; "><span class="icon-gem">專屬優惠</span>
+                        </div>
+                        <ul>
+                          <li><a class="EJhcardbox-more" style="color: rgba(0,0,0,.54)"
+                              href="/mobile/mob_login.aspx?ec=idx_goods1morelogin_m">登入看更多 <svg
+                                enable-background="New 0 0 11 11" viewBox="0 0 11 11" class="more-icon">
+                                <path stroke="none"
+                                  d="m2.5 11c .1 0 .2 0 .3-.1l6-5c .1-.1.2-.3.2-.4s-.1-.3-.2-.4l-6-5c-.2-.2-.5-.1-.7.1s-.1.5.1.7l5.5 4.6-5.5 4.6c-.2.2-.2.5-.1.7.1.1.3.2.4.2z">
+                                </path>
+                              </svg></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><a class="col-6 d-block" href="/mobile/mob_pt.aspx?pid=238187-238186&amp;ec=idx_goodsyoulike_m">
+                    <div class="d-flex flex-column p-3">
+                      <div class="picBox"><img src="images/55-012.jpg" class="lazyload"
+                          data-src="https://www.cdn-tkec.tw/image/product/202303/238187-238186_M.jpg?t=20230810085118"
+                          onerror="ImgError(this);"></div>
+                      <h3 class="title"><i class="bg-1804-pink">現賺好禮</i>券後$40999｜石頭掃地機器人 S8 Pro Ultra + 專用自動上下水套件</h3><i
+                        class="promotion">領券再折$2000↘↘</i><span class="money">$ 42999</span>
+                    </div>
+                  </a><a class="col-6 d-block" href="/mobile/mob_pt.aspx?pid=240919&amp;ec=idx_goodsyoulike_m">
+                    <div class="d-flex flex-column p-3">
+                      <div class="picBox"><img src="images/55-012.jpg" class="lazyload"
+                          data-src="https://www.cdn-tkec.tw/image/product/202307/240919_M.jpg?t=20230801161615"
+                          onerror="ImgError(this);"></div>
+                      <h3 class="title">石頭掃地機器人 Q7 Max</h3><i class="promotion">獨家送★好禮多選一</i><span class="money">$
+                        9999</span>
+                    </div>
+                  </a><a class="col-6 d-block" href="/mobile/mob_pt.aspx?pid=238188&amp;ec=idx_goodsyoulike_m">
+                    <div class="d-flex flex-column p-3">
+                      <div class="picBox"><img src="images/55-012.jpg" class="lazyload"
+                          data-src="https://www.cdn-tkec.tw/image/product/202303/238188_M.jpg?t=20230810085143"
+                          onerror="ImgError(this);"></div>
+                      <h3 class="title"><i class="bg-1804-pink">現賺好禮</i>券後$21999｜石頭掃地機器人 S8+</h3><i
+                        class="promotion">領券再折$2000↘↘</i><span class="money">$ 23999</span>
+                    </div>
+                  </a><a class="col-6 d-block" href="/mobile/mob_pt.aspx?pid=229088&amp;ec=idx_goodsyoulike_m">
+                    <div class="d-flex flex-column p-3">
+                      <div class="picBox"><img src="images/55-012.jpg" class="lazyload"
+                          data-src="https://www.cdn-tkec.tw/image/product/202205/229088_M.jpg?t=20230703161248"
+                          onerror="ImgError(this);"></div>
+                      <h3 class="title"><i class="bg-1804-pink">現賺好禮</i>石頭掃地機器人 S7 MaxV Ultra</h3><i
+                        class="promotion">送豪華耗材禮盒+獨家送★好禮多選一</i><span class="money">$ 35888</span>
+                    </div>
+                  </a><a class="col-6 d-block" href="/mobile/mob_pt.aspx?pid=206229&amp;ec=idx_goodsyoulike_m">
+                    <div class="d-flex flex-column p-3">
+                      <div class="picBox"><img src="images/55-012.jpg" class="lazyload"
+                          data-src="https://www.cdn-tkec.tw/image/product/202003/206229_M.jpg?t=20230417114236"
+                          onerror="ImgError(this);"></div>
+                      <h3 class="title"><i class="bg-1804-pink">現賺好禮</i>聲寶SAMPO 1對1變頻單冷空調</h3><i
+                        class="promotion">強力省電靜音防霉</i><span class="money">$ 17900</span>
+                    </div><i class="playicon"><img
+                        src="https://events.tkec.com.tw/events_net/events_net/test/videoplay.png"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <nav class="tkecM_newNav">
+      <ul id="tkecM_newPrimaryNav" class="tkecM_newPrimaryNav is-fixed"></ul>
+    </nav>
+
+
+    <!-- M版彈出廣告 -->
+    <!---->
+
+
+
+
+    <div class="tkecM_footerNav">
+      <div class="tkecM_footerNav-container">
+        <ul class="tkecM_footerNav-listMenu">
+          <li><a href="/mobile/mob_index.aspx" class="tkecM_listMenu-link"><img src="images/cart_home.png"
+                alt=""><span>首頁</span></a></li>
+          <li><a href="#" class="tkecM_listMenu-link tkecM_nav-messageCloseBtn tkecM_footerMessageBtn"><img
+                src="images/cart_vip.png" alt=""><span>專屬優惠</span></a></li>
+
+          <li><a href="inc/#" id="mob_FooterNavUC1_MessageBtn" class="tkecM_listMenu-link tkecM_messageCtl-storeMessage"
+              data-kind="1"><img src="images/message.png" alt=""><span>訊息 </span><i class="tkecM_carCount"
+                id="messagecount" style="display: none;"></i></a>
+
+          </li>
+          <li><a id="mob_FooterNavUC1_HyCartLink" class="tkecM_listMenu-link"
+              onclick="javascript:alert('購物車中沒有商品，快去逛逛吧!');"><img src="images/cart_car.png" alt=""><span>購物車</span></a>
+          </li>
+          <li><a href="#" class="tkecM_listMenu-link tkecM_messageCtl-loginBtn"><img src="images/cart_user.png"
+                alt=""><span>會員中心</span></a></li>
+
+        </ul>
+      </div>
+    </div>
+
+    <!--  8/17新增紅包雨遊戲 -->
+    <!-- 紅包雨 -->
+    <section id="red-group" v-if="isRed">
+      <canvas id="particle_canvas" v-if="isEffect"></canvas>
+      <div class="envel-content" :class="{active:active}">
+        <ul>
+          <li v-for="i in 6">
+            <a @click="choice"><img :src="'images/game/red.png' | siteUrl"></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+
+    <script defer="" src="https://www.tk3c.com/js/web_components/tk-footer.js?20221227001" type="module"></script>
+
+    <footer class="footer text-center" style="background-color:#cecece; padding:2px">
+      <div id="mob_footer_Pn">
+
+        <h4 class="f-16" style="z-index:2; position:relative">切換至
+          <a id="mob_footer_LbtnEdit" href="javascript:__doPostBack('mob_footer$LbtnEdit','')"
+            style="color:#00F;">電腦版</a>
+        </h4>
+
+      </div>
+    </footer>
+    <tk-footer></tk-footer>
+
+    <div id="totop"></div>
+    <div style="width: 100%; left: 0px;display:none" class="footerBar">
+      <div class="contentBox">
+        <a id="HyFooterLink" href="http://www.tk3c.com/tkec_apps.aspx"><img id="FooterImg" src="images/m420.png"
+            style="border-width:0px;"></a>
+        <span style="display: block;" class="closeBox"></span></div>
+    </div>
+
+
+
+    <div class="fixbox pc_version_non" id="divShowMesBoxPerson" style="display:none;">
+      <div class="alignbox">
+        <div class="midbox">
+          <div class="mesboxclose" onclick="$('#divShowMesBoxPerson').hide();">
+            <a href="javascript:void(0)">
+              <img src="images/window_close.png">
+            </a>
+          </div>
+
+
+          <div class="swiper-container swiper-container-horizontal swiper-container-autoheight swiper-container-android"
+            id="popupContent" style="display:none;"></div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="fixbox pc_version_non" id="divShowPosition" style="display: none;">
+      <div class="alignbox">
+        <div class="midbox">
+          <div class="mesboxclose" onclick="$('#divShowPosition').hide();">
+            <a href="javascript:void(0)">
+              <img src="images/window_close.png">
+            </a>
+          </div>
+          <div class="swiper-slide2 swiper-slide-active" data-swiper-slide-index="0">
+            <div class="btnBox">
+              <div class="icon-locate-img"><img src="images/icon-locate-img.png"></div>
+              <storg class="locate-remind">定位目前位置，逛最近門市的優惠商品</storg>
+              <div class="tkecM_messageLocation-button2">
+                <a href="javascript:void(0)" onclick="IndexPositionLoad(2)"><i>定位目前位置</i></a>
+              </div>
+
+              <div class="tkecM_messageItemBox-button2">
+                <a href="http://events.tkec.com.tw/events_net/vipsale/index.aspx?ec=person_mess#pro01"><i>去看線上優惠</i></a>
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div id="blackBk" class="blackBk"></div>
+
+    <script>
+      window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        $('#blackBk')[0].style.display = "block";
+        $('#divAddHomeScreen')[0].style.display = "block";
+
+        $('#CancelAddHomeScreen').click(function () {
+          $('#blackBk')[0].style.display = "none";
+          $('#divAddHomeScreen')[0].style.display = "none";
+        });
+
+        $('#AgreeAddHomeScreen').click(function () {
+          $('#blackBk')[0].style.display = "none";
+          $('#divAddHomeScreen')[0].style.display = "none";
+          deferredPrompt.prompt();
+          deferredPrompt = null;
+        });
+        return false;
+      });
+      if ($('#TopHead')[0].className.indexOf("tkecM_headerAPP ") >= 0) {
+        $('#searchKeyword').attr('style', 'width : 230px');
+      }
+    </script>
+
+
+
+    <script type="text/javascript">
+      //M版全幅廣告
+      var Alertadbox = new Vue({
+        el: '#alertadbox',
+        data: {
+          isAlert: false,
+          count: 5,
+          ImageUrl: '',
+          ImageAdd: 'http://www.tk3c.com/img/img_homepage/',
+          URL: '',
+          refpage: false,
+        },
+        created: function () {
+          this.GetMobileImage();
+          this.CheckWebReferrer();
+        },
+        mounted: function () {
+          this.isAlert = false;
+          if (this.refpage == true) {
+            setTimeout(() => {
+              this.isAlert = true;
+              this.countdown();
+            }, 1000);
+          }
+
+          document.addEventListener('click', e => {
+            this.isAlert = false;
+          });
+        },
+        methods: {
+          closeAlert: function () {
+            //關閉廣告
+            this.isAlert = false;
+          },
+          countdown() {
+            //倒數並自動移除廣告
+            var countDown = setInterval(() => {
+              this.count--;
+              if (this.count < 0) this.count = 0;
+              if (this.count === 0) {
+                this.isAlert = false;
+                clearInterval(countDown);
+              }
+            }, 1500);
+          },
+          GetMobileImage: function () {
+            let self = this;
+            $.ajax({
+              url: "/ashx/mobile/GetAlertAD.ashx", //自後端讀取圖片
+              type: "POST",
+              dataType: "json",
+              success: function (data) {
+                //alert(data);
+                self.ImageUrl = self.ImageAdd + data.Data[0].HD_IMG;
+                self.URL = data.Data[0].HD_URL;
+              },
+              complete: function () {
+                //self.getStoreName();
+              }
+            });
+          },
+          CheckWebReferrer: function () {
+            let self = this;
+            var webpagestring = location.protocol + "//" + location.hostname + "/mobile";
+            var refstring = document.referrer;
+            if (refstring.includes(webpagestring))
+              self.refpage = false;
+            else
+              self.refpage = true;
+          }
+        }
+      });
+
+
+      //註冊全域指令，用於判斷圖片是否能成功載入
+      Vue.directive('real-img', async function (el, binding) { //指令名稱：real-img, 使用則為 v-real-img
+        let defaultImg = "https://www.cdn-tkec.tw/images/nopic.jpg"; //預設圖片
+        let newLoadImg = binding.value; //欲載入的新圖片
+
+        if (newLoadImg) {
+          let exist = await imageIsExist(newLoadImg); //await : 等待判斷結果回傳
+          if (exist) {
+            el.setAttribute('src', newLoadImg);
+          } else {
+            el.setAttribute('src', defaultImg);
+          }
+        }
+      })
+
+      //檢測圖片是否存在
+      let imageIsExist = function (url) {
+        return new Promise((resolve) => {
+          var img = new Image();
+          img.onload = function () {
+            if (this.complete == true) {
+              resolve(true);
+              img = null;
+            }
+          }
+          img.onerror = function () {
+            resolve(false);
+            img = null;
+          }
+          img.src = url;
+        })
+      }
+
+      //未登入則隱藏相關欄位
+      function noLoginHide() {
+        this.document.getElementById("LoginShowPanel1").style.display = "none";
+        this.document.getElementById("LoginShowPanel2").style.display = "none";
+        return "";
+      }
+      Vue.use(VueAwesomeSwiper);
+      Vue.component(VueCountdown.name, VueCountdown);
+
+      //最愛門市
+      var storelist = new Vue({
+        el: '#storelist',
+        data: {
+          //------------------------------------------
+          sel_area: '', //區域選單值
+          sel_store: '', //門市選單值
+          area_lists: { //區域列表
+            '20': {
+              value: "20",
+              name: "北市,基隆",
+              data: ""
+            },
+            '22': {
+              value: "22",
+              name: "新北市",
+              data: ""
+            },
+            '30': {
+              value: "30",
+              name: "桃竹苗區",
+              data: ""
+            },
+            '40': {
+              value: "40",
+              name: "中彰投區",
+              data: ""
+            },
+            '50': {
+              value: "50",
+              name: "雲嘉南區",
+              data: ""
+            },
+            '52': {
+              value: "52",
+              name: "高屏區",
+              data: ""
+            },
+            '60': {
+              value: "60",
+              name: "宜花東區",
+              data: ""
+            },
+            '98': {
+              value: "98",
+              name: "金門地區",
+              data: ""
+            },
+            '99': {
+              value: "99",
+              name: "澎湖地區",
+              data: ""
+            }
+          },
+          store_list: '', //門市列表
+          store_name: '', //區域名稱
+          area_name: '最愛門市', //門市名稱
+          virtual_zone: document.getElementById("favzone").value, //虛擬區代號
+          userlogin: document.getElementById("already_login").value,
+          favkey: document.getElementById("favkey").value,
+          favarea: document.getElementById("favarea").value,
+          favstore: document.getElementById("favstore").value,
+          favzone: document.getElementById("favzone").value
+          //------------------------------------------
+        },
+        created() {
+          this.GetData();
+        },
+        methods: {
+          GetData() {
+            var self = this;
+            self.virtual_zone = self.favzone;
+            if (self.userlogin == "True") {
+              self.virtual_zone = self.favzone;
+              self.LoadMyFavStore();
+            } else {
+              noLoginHide();
+            }
+          },
+          onAreaChange: function () {
+            // reset!
+            if (this.sel_area === "") {
+              this.area_name = ''; //最愛區域
+              this.store_list = '';
+            }
+            this.sel_store = '';
+            this.store_name = '最愛門市'; //最愛門市
+          },
+          GetStoreList: function (value) {
+            let self = this;
+            self.getStoreName();
+            this.area_name = this.area_lists[this.sel_area].name;
+            if (self.area_lists[value].data === "") //該區門市列表未曾讀取過
+              $.ajax({
+                url: "/api/indexpage/storelist?area=" + value, //自後端讀取門市列表
+                type: "POST",
+                dataType: "json",
+                //async: false,
+                success: function (data) {
+                  self.store_list = data;
+                  self.area_lists[value].data = data; //自後端取得門市列表後，儲存於前端
+                },
+                complete: function () {
+                  self.getStoreName();
+                }
+              });
+            else //該區門市列表已經讀取過，由前端直接取出即可
+            {
+              self.store_list = self.area_lists[value].data;
+              self.getStoreName();
+            }
+          },
+          getStoreName: function () {
+            let self = this;
+            self.store_name = '最愛門市';
+            for (var i = 0; i < self.store_list.length; i++) {
+              if (self.sel_store === self.store_list[i].Stroe_ID) {
+                self.store_name = self.store_list[i].STORE_Name;
+                if (self.virtual_zone !== self.store_list[i].virtual_Zone) {
+                  self.virtual_zone = self.store_list[i].virtual_Zone;
+                  self.$emit('MyFavZone', self.store_list[i].virtual_Zone); //變更門市排行區塊資料
+                }
+              }
+            }
+            document.getElementById("ShowStoreName").innerText = self.store_name;
+          },
+          //儲存最愛門市
+          SetMyFavStore: function () {
+            let self = this;
+            self.getStoreName();
+            if (self.userlogin == "True") //有登入
+            {
+              if (document.getElementById("chkSaveFav").checked) //勾選「設為最愛門市」CheckBox
+              {
+                if (this.sel_store == "") {
+                  sendGaEvent('M版首頁_設定最愛門市', 'click', '設定最愛門市_未加入最愛門市');
+                  alert("未設定最愛門市");
+                } else {
+                  $.ajax({
+                    url: "/api/indexpage/SetFavStore?favkey=" + self.favkey + "&FavStore=" + this
+                      .sel_store, //自後端讀取門市列表
+                    type: "POST",
+                    dataType: "text",
+                    //async: false,
+                    complete: function (data, textStatus) {
+                      if (textStatus == "success" && data.responseText.substring(1, data.responseText
+                          .length - 1) == "ok") {
+                        sendGaEvent('M版首頁_設定最愛門市', 'click', '設定最愛門市_有加入最愛門市');
+                        alert("最愛門市設定成功");
+                        self.favzone = self.virtual_zone;
+                        self.favarea = self.sel_area;
+                        self.favstore = self.sel_store;
+                      } else {
+                        sendGaEvent('M版首頁_設定最愛門市', 'click', '設定最愛門市_未加入最愛門市');
+                        alert("最愛門市設定失敗，請嘗試由會員資料中設定");
+                      }
+                    }
+                  });
+                }
+              }
+            } else {
+              sendGaEvent('M版首頁_設定最愛門市', 'click', '設定最愛門市_未加入最愛門市');
+            }
+          },
+          //使用我的最愛門市
+          LoadMyFavStore: function () {
+            if (this.userlogin == "True") //是否有登入
+            {
+              var myFavArea = this.favarea;
+              var myFavStore = this.favstore;
+
+              //重設區域值會執行GetStoreList，該程序執行完成之後，就會執行getStoreName，所以門市代號早於區域設定較合理
+
+              //門市不同
+              if (myFavStore !== this.sel_store) {
+                this.sel_store = myFavStore;
+                let self = this;
+                self.getStoreName();
+              }
+
+              //區域不同reload StoreList
+              if (myFavArea !== this.sel_area) {
+                this.sel_area = myFavArea;
+                this.GetStoreList(myFavArea);
+              }
+            }
+          }
+        }
+      });
+
+      //卡片
+      var Banner = new Vue({
+        el: '#Banner',
+        data: {
+          BannerData: [{
+            "title": "Loading~"
+          }],
+          DicPath: ["左", "中", "右"],
+        },
+        created() {
+          this.GetData();
+        },
+        methods: {
+          GetData() {
+            var self = this;
+            var MemberDataApiURL = '/api/Index/GetMobileBanner';
+            var dataArray = {};
+            var xhr = new XMLHttpRequest();
+            xhr.open('post', MemberDataApiURL);
+            xhr.setRequestHeader("Content-type", "application/json");
+            xhr.send(JSON.stringify(dataArray));
+            xhr.onload = function () {
+              var feeback = JSON.parse(xhr.responseText);
+              self.BannerData = feeback;
+            }
+          },
+          GetGaOnclickFunction(title, N, eventAction, eventLabel) {
+            var eventCategory = 'M版首頁_卡片區_' + (N + 1).toString() + '-' + title;
+            var eventLabel2 = '卡片區_' + (N + 1).toString() + '_' + eventLabel;
+            var method = "sendGaEvent('" + eventCategory + "','" + eventAction + "','" + eventLabel2 + "')";
+            return method;
+          },
+          GetGaOnclickFunctionForProduct(title, N, eventAction, ProductID, ProductItemIndex, ProductName) {
+            var eventCategory = 'M版首頁_卡片區_' + (N + 1).toString() + '-' + title;
+            var eventLabel = '卡片區_' + (N + 1).toString() + '_商品_' + this.DicPath[ProductItemIndex] + "_" +
+              ProductID + ProductName;
+            var method = "sendGaEvent('" + eventCategory + "','" + eventAction + "','" + eventLabel + "')";
+            return method;
+          },
+          AddEcCode(Link, N, type, ProductIndex) {
+            if (Link == undefined) {
+              return "";
+            }
+            var ec = 'ec=card' + (N + 1).toString() + "_" + type;
+            if (type == 'goods') {
+              ec += (ProductIndex + 1).toString();
+            }
+            return Link.indexOf("?") >= 0 ? Link + '&' + ec : Link + '?' + ec;
+          }
+        }
+      });
+
+      //門市排行
+      var StoreRank = new Vue({
+        el: '#StoreRank',
+        data: {
+          eventboxList: [],
+          storeBoardList: null,
+          productList: [],
+          swiperOption: {
+            autoHeight: false,
+            direction: 'horizontal',
+            autoplay: 5000,
+            speed: 500,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            autoplayDisableOnInteraction: false,
+            slidesPerView: 3,
+            slidesPerGroup: 2,
+          },
+          swiperCount: 0,
+          AStyle: "display:none;",
+          AHref: "#",
+          ASrc: "",
+          BStyle: "",
+          B1Href: "#",
+          B1Src: "",
+          B2Href: "#",
+          B2Src: "",
+          virtual_zone: document.getElementById("favzone").value, //虛擬區代號
+        },
+        created() {
+          this.GetData(document.getElementById("favzone").value);
+          this.GetBannerData(document.getElementById("favzone").value);
+        },
+        mounted: function () {
+          storelist.$on('MyFavZone', (data) => {
+            this.virtual_zone = data;
+            console.log('Change StoreRank to ' + this.virtual_zone);
+            this.GetData(data);
+            this.GetBannerData(data);
+          })
+        },
+        methods: {
+          GetData: function (val) {
+            let self = this;
+            $.ajax({
+              url: "/api/indexpage/eventbox?area=" + val,
+              type: "POST",
+              dataType: "json",
+              success: function (data) {
+                console.log('StoreRank : ' + val);
+                self.eventboxList = data; //完整eventbox
+                self.storeBoardList = self.eventboxList.find(function (item, index, array) {
+                  return item.title === "門市排行";
+                }); // 只取「門市排行」
+                self.productList = self.storeBoardList.product; //「只取product」資料
+                self.swiperCount = Math.ceil((self.productList.length / 3)); //每頁3筆
+              }
+            });
+          },
+          GetBannerData: function (val) {
+            let self = this;
+            $.ajax({
+              url: "/api/indexpage/storeboardbanner?area=" + val,
+              type: "POST",
+              dataType: "json",
+              success: function (data) {
+                var detailData = data;
+                console.log('StoreRankBanner : ' + val);
+                if (detailData.length > 0) {
+                  if (detailData[0].HD_ShortTitle == 'A') {
+                    console.log("Banner Style : A");
+                    self.AStyle = "";
+                    self.BStyle = "display:none;";
+                    self.ASrc = detailData[0].HD_Img;
+                    self.AHref = detailData[0].HD_URL;
+                  } else {
+                    console.log("Banner Style : B");
+                    self.AStyle = "display:none;";
+                    self.BStyle = "";
+                    self.B1Src = detailData[0].HD_Img;
+                    self.B1Href = detailData[0].HD_URL;
+                    self.B2Src = detailData[1].HD_Img;
+                    self.B2Href = detailData[1].HD_URL;
+                  }
+                }
+              }
+            });
+          },
+          GetProdbox: function (data, swiper_idx) {
+            let datacountemp = (swiper_idx - 1) * 3 //每頁3筆
+            let result = data.filter(function (item, index) {
+              if (datacountemp <= index & index < swiper_idx * 3) return item; //每次回傳3筆
+            });
+            return result;
+          },
+          StoreGa: function (orderNo, index, productName) {
+
+            let zone
+            switch (this.virtual_zone) {
+              case 'N':
+                zone = "北";
+                break;
+              case 'C':
+                zone = "中";
+                break;
+              case 'S':
+                zone = "南";
+                break;
+            }
+
+            sendGaEvent('M版首頁_門市排行榜', 'click', '門市排行榜_' + zone + '_商品_' + index + '_' + orderNo + productName);
+          },
+          StoreImgGa: function (typeName) {
+            let zone
+            switch (this.virtual_zone) {
+              case 'N':
+                zone = "北";
+                break;
+              case 'C':
+                zone = "中";
+                break;
+              case 'S':
+                zone = "南";
+                break;
+            }
+
+            sendGaEvent('M版首頁_門市排行榜', 'click', '門市排行榜_' + zone + '_活動Banner_' + typeName);
+          },
+
+          StoreGetUrl: function (href, index) {
+
+            let zone;
+            switch (this.virtual_zone) {
+              case 'N':
+                zone = "north";
+                break;
+              case 'C':
+                zone = "central";
+                break;
+              case 'S':
+                zone = "Southern";
+                break;
+            }
+            let url;
+            if (href.indexOf('?') > -1) {
+              url = href + "&ec=card0_" + zone + "_goods" + index;
+            } else {
+              url = href + "?ec=card0_" + zone + "_goods" + index;
+            }
+            return url;
+          },
+          StoreImgGetUrl: function (href, typeName) {
+            let zone;
+            switch (this.virtual_zone) {
+              case 'N':
+                zone = "north";
+                break;
+              case 'C':
+                zone = "central";
+                break;
+              case 'S':
+                zone = "Southern";
+                break;
+            }
+
+            let url;
+            if (href.indexOf('?') > -1) {
+              url = href + "&ec=card0_" + zone + "_" + typeName;
+            } else {
+              url = href + "?ec=card0_" + zone + "_" + typeName;
+            }
+            return url;
+          },
+        }
+      });
+
+      //精選品牌
+      var Brand = new Vue({
+        el: '#Brand',
+        data: {
+          prodbox_sw_pt: [],
+          swiperOption: {
+            autoHeight: false,
+            direction: 'horizontal',
+            autoplay: 5000,
+            speed: 500,
+            autoplayDisableOnInteraction: false,
+          },
+          swiperCount: 0
+        },
+        created() {
+          this.GetData();
+        },
+        methods: {
+          GetData: function () {
+            let self = this;
+            $.ajax({
+              url: "/api/indexpage/AiprodboxSwiperM",
+              type: "POST",
+              dataType: "json",
+              success: function (data) {
+                self.prodbox_sw_pt = data;
+                self.swiperCount = Math.ceil((data.length / 6))
+              }
+            });
+          },
+          GetProdbox: function (data, swiper_idx) {
+            let datacountemp = (swiper_idx - 1) * 6
+            let result = data.filter(function (item, index) {
+              if (datacountemp <= index & index < swiper_idx * 6) return item;
+            });
+            return result;
+          },
+          BrandGa: function (name, index) {
+            sendGaEvent('M版首頁_精選品牌', 'click', '精選品牌_' + index + '-' + name);
+          },
+          BrandGetUrl: function (href, index) {
+            let url
+            //錨點問題解決
+            if (href == "") href = "#";
+            var myURL = new URL(href);
+            if (href.indexOf('?') > -1) {
+              url = href.replace(myURL.hash, '') + "&ec=flagship" + index + myURL.hash;
+            } else {
+              url = href.replace(myURL.hash, '') + "?ec=flagship" + index + myURL.hash;
+            }
+
+            return url;
+          },
+
+        }
+      });
+      //熱門分類
+      var hotClass = new Vue({
+        el: '#hotClass',
+        data: {
+          ClassBox: []
+        },
+        created() {
+          this.GetData();
+        },
+        methods: {
+          GetData() {
+            let self = this;
+            $.ajax({
+              url: "/api/indexpage/ClassboxSwiperM",
+              type: "POST",
+              dataType: "json",
+              success: function (data) {
+                self.ClassBox = data;
+              }
+            });
+          },
+          hotClassGa: function (className) {
+            sendGaEvent('M版首頁_熱門分類', 'click', '熱門分類_' + className);
+
+
+          },
+          hotClassUrl: function (href, index) {
+            let url
+            //錨點問題解決
+            if (href == "") href = "#";
+            var myURL = new URL(href);
+            if (href.indexOf('?') > -1) {
+              url = href.replace(myURL.hash, '') + "&ec=cid" + index + myURL.hash;
+            } else {
+              url = href.replace(myURL.hash, '') + "?ec=cid" + index + myURL.hash;
+            }
+
+            console.log(url);
+            return url;
+          },
+
+
+        }
+      });
+      //今日最強檔
+      var now = new Date();
+      var newDate = new Date(now.getFullYear(), now.getFullYear(), now.getDate() + 1);
+      var today = new Vue({
+        el: '#today',
+        data: {
+
+          TodayHot: [],
+          counting: true,
+          time: newDate - now,
+        },
+        created() {
+          this.GetData();
+        },
+        methods: {
+          GetData() {
+            let self = this;
+            $.ajax({
+              url: "/api/indexpage/TodayHot",
+              type: "POST",
+              dataType: "json",
+              success: function (data) {
+                self.TodayHot = data;
+                self.$nextTick(function () {
+                  var splide1 = new Splide("#splide1", {
+                    arrows: false,
+                    pagination: false,
+                    gap: "1.25rem",
+                    fixedWidth: "35%",
+                  }).mount();
+                })
+              }
+            });
+          },
+          todayGa: function (orderNo, productName) {
+            sendGaEvent('M版首頁_今日最強檔', 'click', '今日最強檔_' + orderNo + productName);
+          },
+          todayGetUrl: function (href) {
+            let url = href + "&ec=idx-top1-m";
+            return url;
+          },
+          Chktime: function (number) {
+            var result = number.toString();
+
+            if (result.length < 2)
+              result = "0" + result.toString();
+
+            return result;
+          },
+        }
+      });
+    </script>
+
+    <!--新增 2019-10-05 by Felix-->
+    <script type="text/javascript">
+      //<![CDATA[
+      StorePositionAshx('', '', '');
+      MessageCount();
+      MessageCount(); //]]>
+    </script>
+    <link href="https://www.tk3c.com/mobile/css/all.min.css?575" rel="stylesheet" type="text/css">
+    <link href="https://www.tk3c.com/mobile/css/dee-ad.css?575" rel="stylesheet" type="text/css">
+    <script src="https://www.tk3c.com/mobile/js/dee-ad.js?479"></script>
+
+
+  </form>
+
+</body>
+
+</html>
