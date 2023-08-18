@@ -69,7 +69,7 @@ if (window.innerWidth < 1024) {
 				//speed: [55, 250],
 				swing: [0.5, 2],
 				amplitude: [30, 80],
-				alpha: [0.4, 1],
+				alpha: [0.6, 1],
 				images: [
 					"./images/game/gold.png", //正式路徑: https://www.tk3c.com/images/game/gold.png
 					"./images/game/red.png",//正式路徑: https://www.tk3c.com/images/game/red.png
@@ -97,7 +97,7 @@ if (window.innerWidth < 1024) {
 				//speed: [55, 250],
 				swing: [0.5, 5],
 				amplitude: [60, 80],
-				alpha: [0.4, 1],
+				alpha: [0.6, 1],
 				images: [
 					"./images/game/gold.png", //正式路徑: https://www.tk3c.com/images/game/gold.png
 					"./images/game/red.png",//正式路徑: https://www.tk3c.com/images/game/red.png

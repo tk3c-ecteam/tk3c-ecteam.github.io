@@ -68,12 +68,15 @@ document.addEventListener("DOMContentLoaded", function () {
           Swal.fire({
             imageUrl: this.rewardImg,
             showCloseButton: true,
+            closeButtonHtml: "<a><img src='" + this.getMsgImg('images/game/close.png') + "'></a>",
             showDenyButton: true,
             background: 'transparent',
+            backdrop: 'rgb(0 0 0 / 75%)',
+            allowOutsideClick: false,
             position: 'center',
             returnFocus: false,
             confirmButtonText: '確定',
-            confirmButtonColor: '#000',
+            confirmButtonColor: '#0eb3e1',
             denyButtonText: "活動詳情",
             denyButtonColor: "red"
           }).then(function (result) {
@@ -114,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $('body').css('overflow-y', 'hidden');
         setTimeout(() => {
           this.isEffect = true;
-        }, 5);
+        }, 8);
 
         var countdown = setInterval(() => {
           this.timing--;
