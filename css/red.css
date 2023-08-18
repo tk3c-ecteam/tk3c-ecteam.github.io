@@ -72,8 +72,16 @@ img {
   }
 }
 @media screen and (max-width: 576px) {
+  #red-group .envel-content {
+    width: 75%;
+  }
   #red-group .envel-content li {
     width: 50%;
     margin: 0 -3% 2%;
+  }
+}
+@media screen and (max-width: 320px) {
+  #red-group .envel-content {
+    margin: 10% auto;
   }
 }
