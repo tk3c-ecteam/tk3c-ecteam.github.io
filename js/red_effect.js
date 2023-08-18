@@ -63,7 +63,7 @@ if (window.innerWidth < 1024) {
 			//var options = {};
 			var options = {
 				amount: 20,
-				size: [15, 40],
+				size: [30, 60],
 				rotation: [10, 0],
 				speed: [50, 200],
 				//speed: [55, 250],
@@ -91,7 +91,7 @@ if (window.innerWidth < 1024) {
 			//var options = {};
 			var options = {
 				amount: 50,
-				size: [15, 50],
+				size: [30, 80],
 				rotation: [1, 10],
 				speed: [60, 150],
 				//speed: [55, 250],
