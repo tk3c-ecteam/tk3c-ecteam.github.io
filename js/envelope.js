@@ -115,9 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //紅包雨
         this.isRed = true;
         $('body').css('overflow-y', 'hidden');
-        setTimeout(() => {
-          this.isEffect = true;
-        }, 12);
+        this.isEffect = true;
 
         var countdown = setInterval(() => {
           this.timing--;
