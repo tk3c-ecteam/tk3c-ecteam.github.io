@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
         $('body').css('overflow-y', 'hidden');
         setTimeout(() => {
           this.isEffect = true;
-        }, 2);
+        }, 12);
 
         var countdown = setInterval(() => {
           this.timing--;
