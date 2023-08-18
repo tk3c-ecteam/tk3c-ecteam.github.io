@@ -65,7 +65,7 @@ if (window.innerWidth < 1024) {
 				amount: 20,
 				size: [15, 40],
 				rotation: [10, 0],
-				speed: [50, 300],
+				speed: [50, 200],
 				//speed: [55, 250],
 				swing: [0.5, 2],
 				amplitude: [30, 80],
