@@ -10,8 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
         { "name": "50元燦坤k幣", "image": "reward5.png" },
         { "name": "50元購物金", "image": "reward6.png" },
         { "name": "銘謝惠顧", "image": "reward7.png" },
+        { "name": "銘謝惠顧", "image": "reward7.png" },
+        { "name": "銘謝惠顧", "image": "reward7.png" },
+        { "name": "10元燦坤k幣", "image": "reward3.png" },
       ],
-      rate: [15, 22, 27, 6, 2, 2, 26],//機率
+      rate: [15, 22, 27, 6, 2, 2, 20, 3, 1, 2],//機率
       isRed: false,//整個搶紅包區塊 id:red-group
       reward: '',
       timing: 5,//5秒內下紅包雨
@@ -57,11 +60,9 @@ document.addEventListener("DOMContentLoaded", function () {
         //搶紅包隨機購物金
         var num = this.randomList();
 
-        console.log(num);
-        if (num != '') {
-          this.reward = num.image;
-          this.rewardImg = this.getMsgImg('images/game/' + this.reward);
-        }
+
+        this.reward = num.image;
+        this.rewardImg = this.getMsgImg('images/game/' + this.reward);
         setTimeout(() => {
           this.active = false;
           Swal.fire({
@@ -103,6 +104,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
           });
           this.isRed = false;
+
         }, 300);
 
       },
