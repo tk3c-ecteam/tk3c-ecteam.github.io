@@ -1,0 +1,2498 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="【今夏瘋電競】指定筆電送好禮再抽大獎！人氣品牌電競筆電，Acer宏碁、ASUS華碩、LENOVO聯想、MSI微星、HP惠普，燦坤推薦熱銷商品，便宜優惠折扣好價格，全台燦坤實體守護。">
+  <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="今夏瘋電競 好評延長 | 燦坤線上">
+  <meta property="og:description"
+    content="【今夏瘋電競】指定筆電送好禮再抽大獎！人氣品牌電競筆電，Acer宏碁、ASUS華碩、LENOVO聯想、MSI微星、HP惠普，燦坤推薦熱銷商品，便宜優惠折扣好價格，全台燦坤實體守護。">
+  <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/live3cEP/index.html">
+
+  <title>今夏瘋電競 好評延長 | 燦坤線上</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/live3cEP/css/summer3c.css" rel="stylesheet" type="text/css">
+
+
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <script src=https://events.tk3c.com/events_net/js/imgjs.js"> </script> <script type="text/javascript"
+    src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "live3cEP";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+  <!-- Swiper-->
+  <script>
+    $(document).ready(function () {
+      var mySwiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          stopOnLastSlide: false,
+          disableOnInteraction: false,
+          reverseDirection: false
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true
+        }
+      });
+    });
+  </script>
+  <script>
+    ChkEvent(1976)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+  <script>
+    $.ajax({
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+      type: "POST",
+      dataType: 'script',
+      success: function () {
+        jQuery(function () {
+          jQuery.scrollDepth({
+            pixelDepth: false,
+            gtmOverride: true
+          });
+        });
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+
+
+  <form name="form1" method="post" action="./index.aspx?mainid=1976&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/?ec=live3cEP">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">28</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0CcqzdIJt5kw1aL0gD+oK0GmKit52NPhuUaaJI=&amp;ec=live3cEP">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx?ec=live3cEP">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx?ec=live3cEP">客服中心</a></li>
+              <li><a href="javascript:void(0);?ec=live3cEP"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')">
+      <img src="../events_net/live3cEP/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+          <li><a href="#pro5288" onclick="ProcessGaEvent('live3cEP','click','5288-筆電');">筆電</a></li>
+          <li><a href="#pro5301" onclick="ProcessGaEvent('live3cEP','click','5301-螢幕');">螢幕</a></li>
+          <li><a href="#pro5303" onclick="ProcessGaEvent('live3cEP','click','5303-電玩遊戲');">電玩遊戲</a></li>
+          <li><a href="#pro5302" onclick="ProcessGaEvent('live3cEP','click','5302-電腦桌機');">電腦桌機</a></li>
+          <li><a href="#pro5304" onclick="ProcessGaEvent('live3cEP','click','5304-鍵鼠周邊');">鍵鼠周邊</a></li>
+          <li><a href="#pro5305" onclick="ProcessGaEvent('live3cEP','click','5305-印表機');">印表機</a></li>
+          <li><a href="#pro5335" onclick="ProcessGaEvent('live3cEP','click','5335-網通/儲存卡碟');">網通/儲存卡碟</a></li>
+          <li><a href="#pro5319" onclick="ProcessGaEvent('live3cEP','click','5319-車用配件');">車用配件</a></li>
+          <li><a href="#pro5320" onclick="ProcessGaEvent('live3cEP','click','5320-通訊產品');">通訊產品</a></li>
+          <li><a href="#pro5321" onclick="ProcessGaEvent('live3cEP','click','5321-影音/空調');">影音/空調</a></li>
+          <li><a href="#pro5322" onclick="ProcessGaEvent('live3cEP','click','5322-冰箱/洗衣機');">冰箱/洗衣機</a></li>
+          <li><a href="#pro5323" onclick="ProcessGaEvent('live3cEP','click','5323-生活小家電');">生活小家電</a></li>
+          <li><a href="#pro5324" onclick="ProcessGaEvent('live3cEP','click','5324-廚房電器');">廚房電器</a></li>
+          <li><a href="#pro5325" onclick="ProcessGaEvent('live3cEP','click','5325-生活周邊配件');">生活周邊配件</a></li>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="1">熱銷分類</li>
+            <li data-id="2">關注社群</li>
+          </ul>
+        </div>
+        <div class="box-area type">
+          <ul>
+
+          </ul>
+        </div>
+
+        <div class="box-area social">
+          <ul>
+            <li><a href="https://reurl.cc/QbZ149?ec=live3cEP" target="_blank"><i class="fa-brands fa-meta"></i></a></li>
+            <li><a href="https://reurl.cc/7pMZVl?ec=live3cEP" target="_blank"><i class="fa-brands fa-line"></i></a></li>
+            <li><a href="https://reurl.cc/3Ye8kX?ec=live3cEP" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile"></a>
+
+    </div>
+    <div class="wrapper">
+
+
+
+
+      <div id="ep3c-container">
+        <div class="background">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/live3cEP/images/0906/title.png">
+          </h2>
+          <p class="product animate__animated animate__bounceInRight">
+            <img src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/product.png">
+          </p>
+        </div>
+
+
+        <section class="special-box">
+          <h2 class="title"><img src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/F1.png">
+          </h2>
+
+          <ul>
+            <li><a href="" target="_blank"><img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/C1.png"></a></li>
+            <li><a href="https://www.tk3c.com/dic1.aspx?cid=121808&aid=23612" target="_blank"><img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/C2.gif"></a></li>
+            <li class="flip long">
+            </li>
+            <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=11124" target="_blank"><img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/C4.png"></a></li>
+            <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=117913" target="_blank"><img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/C5.png"></a></li>
+            <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=11124" target="_blank"><img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/C6.png"></a></li>
+            <li><a href="https://www.tk3c.com/dictitleurl.aspx?cid=79023" target="_blank"><img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/C7.png"></a></li>
+          </ul>
+        </section>
+
+
+        <!-- 全站 -->
+        <section class="all-box">
+          <h2 class="title"><img src="https://events.cdn-tkec.tw/events_net/events_net/live3cEP/images/0906/F2.png">
+          </h2>
+
+          <ul>
+            <li class="slide"></li>
+            <li class="slide2"></li>
+            <li class="long"><a href="https://www.facebook.com/TDdd331?ec=live3cEP"> <img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/23_99shopping/images/sp07b.png"></a></li>
+          </ul>
+        </section>
+
+        <!-- 活動 -->
+        <section class="event-box">
+          <div class="content">
+            <div class="banner1"></div>
+            <div class="banner2"></div>
+          </div>
+        </section>
+
+      </div>
+
+
+      <!-- 右側選單 -->
+      <aside class="aside-container">
+        <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+        <div class="aside-wrap">
+          <h3 class="aside-header"></h3>
+          <div class="aside-content">
+            <ul>
+
+            </ul>
+          </div>
+          <a href="#" class="go-top">GO TOP</a>
+        </div>
+      </aside>
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@5.4.5/js/swiper.min.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+
+      <!-- 手機版選單 JS -->
+      <script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/live3cEP/js/summer3c.js"></script>
+
+    </div>
+    <div class="itemBox m_version_non">
+      <div id="btnBox03">
+        <div class="upbox">
+          <a href="#pro5288" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5288-筆電')">筆電</a>
+          <a href="#pro5301" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5301-螢幕')">螢幕</a>
+          <a href="#pro5303" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5303-電玩遊戲')">電玩遊戲</a>
+          <a href="#pro5302" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5302-電腦桌機')">電腦桌機</a>
+          <a href="#pro5304" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5304-鍵鼠周邊')">鍵鼠周邊</a>
+          <a href="#pro5305" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5305-印表機')">印表機</a>
+          <a href="#pro5335" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5335-網通/儲存卡碟')">網通/儲存卡碟</a>
+          <a href="#pro5319" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5319-車用配件')">車用配件</a>
+          <a href="#pro5320" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5320-通訊產品')">通訊產品</a>
+          <a href="#pro5321" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5321-影音/空調')">影音/空調</a>
+          <a href="#pro5322" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5322-冰箱/洗衣機')">冰箱/洗衣機</a>
+          <a href="#pro5323" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5323-生活小家電')">生活小家電</a>
+          <a href="#pro5324" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5324-廚房電器')">廚房電器</a>
+          <a href="#pro5325" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('live3cEP','click','5325-生活周邊配件')">生活周邊配件</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="rightbtn" style="display: none;"><span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+      <div class="actbtn">
+        <a href="#pro5288" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5288-筆電')">筆電</a>
+        <a href="#pro5301" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5301-螢幕')">螢幕</a>
+        <a href="#pro5303" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5303-電玩遊戲')">電玩遊戲</a>
+        <a href="#pro5302" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5302-電腦桌機')">電腦桌機</a>
+        <a href="#pro5304" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5304-鍵鼠周邊')">鍵鼠周邊</a>
+        <a href="#pro5305" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5305-印表機')">印表機</a>
+        <a href="#pro5335" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5335-網通/儲存卡碟')">網通/儲存卡碟</a>
+        <a href="#pro5319" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5319-車用配件')">車用配件</a>
+        <a href="#pro5320" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5320-通訊產品')">通訊產品</a>
+        <a href="#pro5321" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5321-影音/空調')">影音/空調</a>
+        <a href="#pro5322" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5322-冰箱/洗衣機')">冰箱/洗衣機</a>
+        <a href="#pro5323" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5323-生活小家電')">生活小家電</a>
+        <a href="#pro5324" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5324-廚房電器')">廚房電器</a>
+        <a href="#pro5325" class="btn_01 p01" onclick="ProcessGaEvent('live3cEP','click','5325-生活周邊配件')">生活周邊配件</a>
+
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+
+
+      <h2 class="protitle"><a name="pro5288" id="pro5288"></a>筆電</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228584&amp;ec=live3cEP" id="prod228584" name="prod228584">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228584_M.jpg?t=20220629104606" border="0"></p>
+              <storg>宏碁 ACER Nitro 5 電競筆記型電腦 15.6" (i7-12700...</storg>
+              <h4>登錄送Nitro遊戲把手★再抽大阪雙人機票/三星外接硬碟...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>7</span>折</p>
+                <strong class="txt_red fred"> <em>市價$42,900</em> <i>活動價$</i>29,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229687&amp;ec=live3cEP" id="prod229687" name="prod229687">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229687_M.jpg?t=20230512145808" border="0"></p>
+              <storg>華碩 ASUS VivoBook 15 筆記型電腦 15.6" (i5-123...</storg>
+              <h4>登錄抽★Vivibook限定版+大阪機票+環球影城雙人遊...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>77</span>折</p>
+                <strong class="txt_red fred"> <em>市價$24,900</em> <i>活動價$</i>18,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238322&amp;ec=live3cEP" id="prod238322" name="prod238322">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/238322_M.jpg?t=20230814091852" border="0"></p>
+              <storg>宏碁 ACER TravelMate 翻轉觸控筆記型電腦 11.6" (N60...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>47</span>折</p>
+                <strong class="txt_red fred"> <em>市價$16,900</em> <i>活動價$</i>7,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239003&amp;ec=live3cEP" id="prod239003" name="prod239003">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202304/239003_M.jpg?t=20230823135135" border="0"></p>
+              <storg>微星 MSI Thin GF63 電競筆記型電腦 15.6" (i7-1265...</storg>
+              <h4>領券再折$499↘↘↘</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$41,900</em> <i>活動價$</i>35,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229095&amp;ec=live3cEP" id="prod229095" name="prod229095">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/229095_M.jpg?t=20221031103739" border="0"></p>
+              <storg>宏碁 ACER Nitro 5 電競筆記型電腦 15.6" (i5-12500...</storg>
+              <h4>登錄送Nitro遊戲把手★再抽大阪雙人機票/三星外接硬碟...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>65</span>折</p>
+                <strong class="txt_red fred"> <em>市價$38,900</em> <i>活動價$</i>24,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238921&amp;ec=live3cEP" id="prod238921" name="prod238921">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202304/238921_M.jpg?t=20230621115505" border="0"></p>
+              <storg>宏碁 ACER Nitro 電競筆記型電腦 15.6" (i5-12500H/...</storg>
+              <h4>登錄送Nitro遊戲把手★再抽大阪雙人機票/三星外接硬碟...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$38,900</em> <i>活動價$</i>28,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239798&amp;ec=live3cEP" id="prod239798" name="prod239798">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239798_M.jpg?t=20230608162644" border="0"></p>
+              <storg>微星 MSI Sword 電競筆電 15.6" (i5-12450H/8GB*...</storg>
+              <h4>領券再折$499↘↘↘</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>81</span>折</p>
+                <strong class="txt_red fred"> <em>市價$35,900</em> <i>活動價$</i>28,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239002&amp;ec=live3cEP" id="prod239002" name="prod239002">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202304/239002_M.jpg?t=20230502151252" border="0"></p>
+              <storg>微星 MSI Thin GF63 電競筆記型電腦 15.6" (i5-1245...</storg>
+              <h4>領券再折$499↘↘↘</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$31,900</em> <i>活動價$</i>19,999 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5301" id="pro5301"></a>螢幕</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234494&amp;ec=live3cEP" id="prod234494" name="prod234494">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234494_M.jpg?t=20221116095128" border="0"></p>
+              <storg>宏碁 ACER 28型 Nitro IPS 4K HDR 液晶顯示器...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,999</em> <i>活動價$</i>6,688 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=185344&amp;ec=live3cEP" id="prod185344" name="prod185344">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201803/185344_M.jpg?t=20230302110151" border="0"></p>
+              <storg>華碩ASUS 24型 IPS液晶顯示器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>61</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,599</em> <i>活動價$</i>2,788 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233611&amp;ec=live3cEP" id="prod233611" name="prod233611">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233611_M.jpg?t=20230724151455" border="0"></p>
+              <storg>三星 SAMSUNG Odyssey G5 2K 27型曲面電競顯示器...</storg>
+              <h4>★登錄抽PS5主機★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,990</em> <i>活動價$</i>6,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237659&amp;ec=live3cEP" id="prod237659" name="prod237659">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237659_M.jpg?t=20230406102117" border="0"></p>
+              <storg>ACER 24型 100Hz VA液晶顯示器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>68</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>2,688 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225925&amp;ec=live3cEP" id="prod225925" name="prod225925">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225925_M.jpg?t=20220531132437" border="0"></p>
+              <storg>微星 MSI PRO MP242P 24型IPS護眼專業螢幕</storg>
+              <h4>送MSI螢幕燈</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,390</em> <i>活動價$</i>3,188 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239959&amp;ec=live3cEP" id="prod239959" name="prod239959">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239959_M.jpg?t=20230526183033" border="0"></p>
+              <storg>微星 MSI 27型2K高刷新電競螢幕</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,990</em> <i>活動價$</i>5,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234814&amp;ec=live3cEP" id="prod234814" name="prod234814">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234814_M.jpg?t=20221230103440" border="0"></p>
+              <storg>宏碁 ACER AOPEN 165hz 32型 電競曲面液晶顯示器...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>72</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,990</em> <i>活動價$</i>4,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239581&amp;ec=live3cEP" id="prod239581" name="prod239581">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239581_M.jpg?t=20230613164144" border="0"></p>
+              <storg>宏碁 Acer 27型 低反射 2K HDR 液晶顯示器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,999</em> <i>活動價$</i>7,488 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5303" id="pro5303"></a>電玩遊戲</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241331&amp;ec=live3cEP" id="prod241331" name="prod241331">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/241331_M.jpg?t=20230727170025" border="0"></p>
+              <storg>PS5 Marvel s Spider-Man 2 同捆組</storg>
+              <h4>全新上市｜限量預購中！</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$20,780</em> <i>活動價$</i>20,780 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238422&amp;ec=live3cEP" id="prod238422" name="prod238422">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/238422_M.jpg?t=20230417113403" border="0"></p>
+              <storg>Switch 薩爾達 王國之淚 OLED主機</storg>
+              <h4>◇◇◇現貨發售中◇◇◇</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$10,700</em> <i>活動價$</i>10,700 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239059&amp;ec=live3cEP" id="prod239059" name="prod239059">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202304/239059_M.jpg?t=20230428173919" border="0"></p>
+              <storg>PS5 FINAL FANTASY XVI 同捆組</storg>
+              <h4>★新品上市★現貨熱銷中!</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$19,380</em> <i>活動價$</i>19,380 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=235264&amp;ec=live3cEP" id="prod235264" name="prod235264">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202211/235264_M.jpg?t=20221115132236" border="0"></p>
+              <storg>PlayStation VR2</storg>
+              <h4>買就送PSN點數500元!</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$18,880</em> <i>活動價$</i>18,880 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234207&amp;ec=live3cEP" id="prod234207" name="prod234207">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234207_M.jpg?t=20221004183008" border="0"></p>
+              <storg>Switch 朱紫版 OLED主機</storg>
+              <h4>◇◇◇現貨發售中◇◇◇</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$10,700</em> <i>活動價$</i>10,700 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239586&amp;ec=live3cEP" id="prod239586" name="prod239586">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239586_M.jpg?t=20230522094643" border="0"></p>
+              <storg>ASUS ROG ALLY Z1 Extreme 掌上機-白</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$23,999</em> <i>活動價$</i>23,999 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241430&amp;ec=live3cEP" id="prod241430" name="prod241430">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/241430_M.jpg?t=20230801183152" border="0"></p>
+              <storg>XBOX Series S主機 黑</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$10,580</em> <i>活動價$</i>10,580 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239586-combo&amp;ec=live3cEP" id="prod239586-combo"
+              name="prod239586-combo">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239586_M.jpg?t=20230823172012" border="0"></p>
+              <storg>ASUS ROG ALLY Z1 Extreme 掌上機-白+收納保護包+電競...</storg>
+              <h4>加購ASUS ROG Cetra True Wireless...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$27,088</em> <i>活動價$</i>27,088 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5302" id="pro5302"></a>電腦桌機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237253&amp;ec=live3cEP" id="prod237253" name="prod237253">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237253_M.jpg?t=20230621153256" border="0"></p>
+              <storg>宏碁 Acer 24型 AIO 觸控液晶電腦 (i5-1240P/8GB*2/...</storg>
+              <h4>登錄抽★星宇航空大阪雙人機票/三星外接硬碟...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$33,900</em> <i>活動價$</i>29,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236740&amp;ec=live3cEP" id="prod236740" name="prod236740">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202301/236740_M.jpg?t=20230621152636" border="0"></p>
+              <storg>宏碁 ACER Aspire XC 桌上型主機 (N5105/8GB/512G...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$11,900</em> <i>活動價$</i>9,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231149&amp;ec=live3cEP" id="prod231149" name="prod231149">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/231149_M.jpg?t=20230621152242" border="0"></p>
+              <storg>宏碁 ACER Aspire TC-1750 桌上型主機 (i3-12100/...</storg>
+              <h4>登錄抽★星宇航空大阪雙人機票/三星外接硬碟...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$16,900</em> <i>活動價$</i>13,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237661&amp;ec=live3cEP" id="prod237661" name="prod237661">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237661_M.jpg?t=20230621173149" border="0"></p>
+              <storg>宏碁 ACER 桌上型主機 (i5-13400/8G/512G SSD/400...</storg>
+              <h4>登錄抽★星宇航空大阪雙人機票/三星外接硬碟...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$24,900</em> <i>活動價$</i>19,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=227668&amp;ec=live3cEP" id="prod227668" name="prod227668">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202204/227668_M.jpg?t=20220610135845" border="0"></p>
+              <storg>宏碁 ACER Aspire TC 1750 桌上型主機 (i5-12400/...</storg>
+              <h4>登錄抽★星宇航空大阪雙人機票/三星外接硬碟...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>81</span>折</p>
+                <strong class="txt_red fred"> <em>市價$20,900</em> <i>活動價$</i>16,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240598&amp;ec=live3cEP" id="prod240598" name="prod240598">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240598_M.jpg?t=20230801165529" border="0"></p>
+              <storg>華碩 ASUS S501ME 桌上型電腦 (i5-13400/8GB/512G...</storg>
+              <h4>登錄送★1000電子福利即享券</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>96</span>折</p>
+                <strong class="txt_red fred"> <em>市價$20,990</em> <i>活動價$</i>19,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232992&amp;ec=live3cEP" id="prod232992" name="prod232992">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/232992_M.jpg?t=20221013130338" border="0"></p>
+              <storg>宏碁 ACER Aspire XC-1760 桌上型主機 (i5-12400F...</storg>
+              <h4>登錄抽★星宇航空大阪雙人機票/三星外接硬碟...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>72</span>折</p>
+                <strong class="txt_red fred"> <em>市價$24,900</em> <i>活動價$</i>17,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239858&amp;ec=live3cEP" id="prod239858" name="prod239858">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239858_M.jpg?t=20230524183019" border="0"></p>
+              <storg>微星 MSI 桌上型主機 (i3-13100/8GB/512GB/UHD/W1...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>15,900 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5304" id="pro5304"></a>鍵鼠周邊</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=200555-200553&amp;ec=live3cEP" id="prod200555-200553"
+              name="prod200555-200553">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201907/200555-200553_M.jpg?t=20220331232821" border="0">
+              </p>
+              <storg>羅技 Logitech 鍵鼠組｜ K580超薄跨平台藍牙鍵盤 + Pebble...</storg>
+              <h4>羅技 Logitech Pebble M350 鵝卵石無線滑...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,989</em> <i>活動價$</i>1,790 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234852&amp;ec=live3cEP" id="prod234852" name="prod234852">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234852_M.jpg?t=20221024132112" border="0"></p>
+              <storg>羅技 Logitech G304 LIGHTSPEED 無線電競滑鼠 黑...</storg>
+              <h4>送羅技小鼠墊</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,090</em> <i>活動價$</i>888 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=221835&amp;ec=live3cEP" id="prod221835" name="prod221835">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202110/221835_M.jpg?t=20220103153247" border="0"></p>
+              <storg>羅技 Logitech POP MOUSE無線藍牙滑鼠 夢幻紫...</storg>
+              <h4>贈限量個性滑鼠墊</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$990</em> <i>活動價$</i>870 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=200554-200551&amp;ec=live3cEP" id="prod200554-200551"
+              name="prod200554-200551">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201907/200554-200551_M.jpg?t=20220331233155" border="0">
+              </p>
+              <storg>羅技 Logitech 鍵鼠組｜ K580超薄跨平台藍牙鍵盤 + Pebble...</storg>
+              <h4>9折↘加碼小鼠墊</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,989</em> <i>活動價$</i>1,790 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239602&amp;ec=live3cEP" id="prod239602" name="prod239602">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239602_M.jpg?t=20230518183025" border="0"></p>
+              <storg>INTOPIC 2.4GHz飛碟無線光學滑鼠-鐵灰</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$299</em> <i>活動價$</i>299 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=184081&amp;ec=live3cEP" id="prod184081" name="prod184081">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201802/184081_M.jpg?t=20180205140047" border="0"></p>
+              <storg>E-books M45 四鍵式超靜音光學滑鼠 黑</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$299</em> <i>活動價$</i>269 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232448&amp;ec=live3cEP" id="prod232448" name="prod232448">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232448_M.jpg?t=20230116105223" border="0"></p>
+              <storg>羅技 Logitech MX Master 3S無線滑鼠-黑</storg>
+              <h4>送羅技小鼠墊</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,290</em> <i>活動價$</i>3,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=190294&amp;ec=live3cEP" id="prod190294" name="prod190294">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201808/190294_M.jpg?t=20180822160011" border="0"></p>
+              <storg>INTOPIC USB標準鍵盤</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$249</em> <i>活動價$</i>249 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5305" id="pro5305"></a>印表機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=152015&amp;ec=live3cEP" id="prod152015" name="prod152015">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201501/152015_M.jpg?t=20180118114735" border="0"></p>
+              <storg>Brother DCP-1610W無線雷射複合機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,290</em> <i>活動價$</i>4,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=235738&amp;ec=live3cEP" id="prod235738" name="prod235738">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202211/235738_M.jpg?t=20221130143020" border="0"></p>
+              <storg>愛普生 EPSON L3550 三合一Wi-Fi 連續供墨複合機...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,990</em> <i>活動價$</i>4,988 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=218475&amp;ec=live3cEP" id="prod218475" name="prod218475">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202106/218475_M.jpg?t=20230703142438" border="0"></p>
+              <storg>愛普生EPSON L121 單功能連續供墨印表機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,290</em> <i>活動價$</i>2,688 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=139979&amp;ec=live3cEP" id="prod139979" name="prod139979">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201309/139979_M.jpg?t=20150324171154" border="0"></p>
+              <storg>Brother MFC-1815 黑白雷射傳真複合機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,390</em> <i>活動價$</i>5,290 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219413&amp;ec=live3cEP" id="prod219413" name="prod219413">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202107/219413_M.jpg?t=20220902110423" border="0"></p>
+              <storg>愛普生 EPSON L3216 高速三合一 連續供墨複合機...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>4,288 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=235740&amp;ec=live3cEP" id="prod235740" name="prod235740">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202211/235740_M.jpg?t=20221130143020" border="0"></p>
+              <storg>EPSON L5590 連續供墨複合機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>94</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,990</em> <i>活動價$</i>7,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219401&amp;ec=live3cEP" id="prod219401" name="prod219401">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202107/219401_M.jpg?t=20220902104521" border="0"></p>
+              <storg>愛普生 EPSON L3210 高速三合一 連續供墨複合機...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>4,288 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=173198&amp;ec=live3cEP" id="prod173198" name="prod173198">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201701/173198_M.jpg?t=20230130140126" border="0"></p>
+              <storg>佳能 Canon PIXMA MG3077 無線彩色 影印.掃瞄.列印.相片 ...</storg>
+              <h4>雙匣四色墨水系統</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,990</em> <i>活動價$</i>1,590 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5335" id="pro5335"></a>網通/儲存卡碟</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225632&amp;ec=live3cEP" id="prod225632" name="prod225632">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225632_M.jpg?t=20220301183009" border="0"></p>
+              <storg>廣穎 A66 2.5吋 5TB 軍規行動硬碟-黃</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>96</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,988</em> <i>活動價$</i>3,799 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=217417&amp;ec=live3cEP" id="prod217417" name="prod217417">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202104/217417_M.jpg?t=20210422143205" border="0"></p>
+              <storg>SanDisk Ultra Luxe Type-C 1TB雙用隨身碟</storg>
+              <h4>旋轉式設計 可隨身攜帶</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,019</em> <i>活動價$</i>2,699 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239010&amp;ec=live3cEP" id="prod239010" name="prod239010">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202304/239010_M.jpg?t=20230425223009" border="0"></p>
+              <storg>廣穎 MicroSD U3 A2 1TB記憶卡-含轉卡</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,249</em> <i>活動價$</i>1,699 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231336&amp;ec=live3cEP" id="prod231336" name="prod231336">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231336_M.jpg?t=20220801183005" border="0"></p>
+              <storg>TP-LINK Archer AX53 Wi-Fi 6雙頻路由器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,699</em> <i>活動價$</i>1,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=206628&amp;ec=live3cEP" id="prod206628" name="prod206628">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202003/206628_M.jpg?t=20230420171155" border="0"></p>
+              <storg>TP-LINK Deco X20 Mesh 網狀路由器系統</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,499</em> <i>活動價$</i>5,299 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225627&amp;ec=live3cEP" id="prod225627" name="prod225627">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225627_M.jpg?t=20220301183010" border="0"></p>
+              <storg>廣穎 SP A66 2.5吋 4TB 軍規行動硬碟-黑</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>96</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,249</em> <i>活動價$</i>3,088 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238456&amp;ec=live3cEP" id="prod238456" name="prod238456">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/238456_M.jpg?t=20230331223018" border="0"></p>
+              <storg>TP-LINK Deco X50-5G LTE完整家庭WiFi系統</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>77</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,999</em> <i>活動價$</i>9,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=192753&amp;ec=live3cEP" id="prod192753" name="prod192753">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201811/192753_M.jpg?t=20181109070119" border="0"></p>
+              <storg>WD威騰 3.5吋 14TB Ultrastar DC HC530企業硬碟...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,188</em> <i>活動價$</i>11,480 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5319" id="pro5319"></a>車用配件</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237263&amp;ec=live3cEP" id="prod237263" name="prod237263">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237263_M.jpg?t=20230215223011" border="0"></p>
+              <storg>PAPAGO FX770 全方位測速後視鏡行車紀錄器</storg>
+              <h4>贈 SanDisk 32G記憶卡!</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,490</em> <i>活動價$</i>2,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241241&amp;ec=live3cEP" id="prod241241" name="prod241241">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/241241_M.jpg?t=20230808143742" border="0"></p>
+              <storg>Xiaomi 電動打氣機 2</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$995</em> <i>活動價$</i>995 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239321&amp;ec=live3cEP" id="prod239321" name="prod239321">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239321_M.jpg?t=20230510183026" border="0"></p>
+              <storg>Mio MiVue 815 六合一 GPS WIFI行車記錄器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,988</em> <i>活動價$</i>3,988 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239612&amp;ec=live3cEP" id="prod239612" name="prod239612">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239612_M.jpg?t=20230519143026" border="0"></p>
+              <storg>PAPAGO WayGo!790 Plus 7吋聲控行車導航</storg>
+              <h4>贈 SanDisk 32G記憶卡!</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,490</em> <i>活動價$</i>4,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=220669&amp;ec=live3cEP" id="prod220669" name="prod220669">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/220669_M.jpg?t=20210909183251" border="0"></p>
+              <storg>快譯通 Abee C12 高畫質行車記錄器</storg>
+              <h4>內附16G卡</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,990</em> <i>活動價$</i>1,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239418&amp;ec=live3cEP" id="prod239418" name="prod239418">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239418_M.jpg?t=20230515223025" border="0"></p>
+              <storg>PAPAGO G11 全方位GPS測速 行車紀錄器</storg>
+              <h4>贈 SanDisk 32G記憶卡!</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,490</em> <i>活動價$</i>3,490 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239142&amp;ec=live3cEP" id="prod239142" name="prod239142">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239142_M.jpg?t=20230506183035" border="0"></p>
+              <storg>PAPAGO WayGo!660 5吋智慧型導航機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,880</em> <i>活動價$</i>2,880 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240781&amp;ec=live3cEP" id="prod240781" name="prod240781">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240781_M.jpg?t=20230706143031" border="0"></p>
+              <storg>MIO MiVue C565 星光級 GPS行車記錄器</storg>
+              <h4>新品上市 !</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,988</em> <i>活動價$</i>2,988 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5320" id="pro5320"></a>通訊產品</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237936&amp;ec=live3cEP" id="prod237936" name="prod237936">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/237936_M.jpg?t=20230424150348" border="0"></p>
+              <storg>聯想 Lenovo Tab M10 Plus TB128FU平板電腦...</storg>
+              <h4>★領券再折$200★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>74</span>折</p>
+                <strong class="txt_red fred"> <em>市價$9,490</em> <i>活動價$</i>6,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=235935&amp;ec=live3cEP" id="prod235935" name="prod235935">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202212/235935_M.jpg?t=20230619103140" border="0"></p>
+              <storg>聯想 Lenovo Tab M10 3rd Gen 平板電腦</storg>
+              <h4>★領券再折$100★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>65</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,490</em> <i>活動價$</i>5,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237744&amp;ec=live3cEP" id="prod237744" name="prod237744">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/237744_M.jpg?t=20230303223010" border="0"></p>
+              <storg>聯想 Lenovo Tab P11 2nd Gen TB350FU平板電腦...</storg>
+              <h4>★領券再折$200★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$11,990</em> <i>活動價$</i>9,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225362&amp;ec=live3cEP" id="prod225362" name="prod225362">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225362_M.jpg?t=20230329110731" border="0"></p>
+              <storg>聯想 Lenovo Yoga 11 平板電腦 11" (G90T/4GB/12...</storg>
+              <h4>★領券再折$200★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>65</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,990</em> <i>活動價$</i>8,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237744-x&amp;ec=live3cEP" id="prod237744-x" name="prod237744-x">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/237744_M.jpg?t=20230817112913" border="0"></p>
+              <storg>【單機組】聯想 Lenovo Tab P11 2nd Gen TB350FU平...</storg>
+              <h4>送64G記憶卡</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$11,990</em> <i>活動價$</i>8,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241973&amp;ec=live3cEP" id="prod241973" name="prod241973">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/241973_M.jpg?t=20230823151713" border="0"></p>
+              <storg>Redmi Pad SE 薰衣紫 8G/128G</storg>
+              <h4>預購登錄送磁吸雙面保護殼*1(不挑色)...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$6,999</em> <i>活動價$</i>6,999 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241974&amp;ec=live3cEP" id="prod241974" name="prod241974">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/241974_M.jpg?t=20230823151636" border="0"></p>
+              <storg>Redmi Pad SE 石墨灰 8G/128G</storg>
+              <h4>預購登錄送磁吸雙面保護殼*1(不挑色)...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$6,999</em> <i>活動價$</i>6,999 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=808683&amp;ec=live3cEP" id="prod808683" name="prod808683">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/808683_M.jpg?t=20230801094814" border="0"></p>
+              <storg>福利品-LENOVO Yoga11 平板</storg>
+              <h4>★領券再折$200★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$13,990</em> <i>活動價$</i>7,990 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5321" id="pro5321"></a>影音/空調</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=808755&amp;ec=live3cEP" id="prod808755" name="prod808755">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/808755_M.jpg?t=20230509174657" border="0"></p>
+              <storg>(展示品)國際 Panasonic 43型4K六原色智慧聯網顯示器...</storg>
+              <h4>送免費標準安裝</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>68</span>折</p>
+                <strong class="txt_red fred"> <em>市價$20,490</em> <i>活動價$</i>13,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=224474&amp;ec=live3cEP" id="prod224474" name="prod224474">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202201/224474_M.jpg?t=20220118183046" border="0"></p>
+              <storg>視壯Strong 42-75吋 固定式電視壁掛架</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>93</span>折</p>
+                <strong class="txt_red fred"> <em>市價$649</em> <i>活動價$</i>599 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=808823&amp;ec=live3cEP" id="prod808823" name="prod808823">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202204/808823_M.jpg?t=20230509173807" border="0"></p>
+              <storg>(展示品)索尼 SONY 55型 4K智慧連網顯示器</storg>
+              <h4>送免費標準安裝</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>市價$27,900</em> <i>活動價$</i>21,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237912&amp;ec=live3cEP" id="prod237912" name="prod237912">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/237912_M.jpg?t=20230421161753" border="0"></p>
+              <storg>台灣三洋R32窗型變頻冷暖空調(右吹)</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$30,990</em> <i>活動價$</i>25,542 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=808868&amp;ec=live3cEP" id="prod808868" name="prod808868">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202204/808868_M.jpg?t=20230509173307" border="0"></p>
+              <storg>(展示品)三星 SAMSUNG 55型4K QLED 智慧連網電視...</storg>
+              <h4>送免費標準安裝</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>53</span>折</p>
+                <strong class="txt_red fred"> <em>市價$54,900</em> <i>活動價$</i>28,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=221283&amp;ec=live3cEP" id="prod221283" name="prod221283">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/221283_M.jpg?t=20230406113640" border="0"></p>
+              <storg>BenQ 32型 Android 11護眼液晶顯示器</storg>
+              <h4>送標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>71</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,490</em> <i>活動價$</i>5,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=807933&amp;ec=live3cEP" id="prod807933" name="prod807933">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202105/807933_M.jpg?t=20230424145342" border="0"></p>
+              <storg>(展示品) JVC 43型4K Google認證語音聯網顯示器...</storg>
+              <h4>送標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>44</span>折</p>
+                <strong class="txt_red fred"> <em>市價$14,999</em> <i>活動價$</i>6,588 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219065&amp;ec=live3cEP" id="prod219065" name="prod219065">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202107/219065_M.jpg?t=20220720171613" border="0"></p>
+              <storg>JJPRO 家佳寶 5-8坪 R410A 14000Btu 頂級旗艦WiFi多...</storg>
+              <h4>一機多用，遠端操控</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>51</span>折</p>
+                <strong class="txt_red fred"> <em>市價$22,800</em> <i>活動價$</i>11,412 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5322" id="pro5322"></a>冰箱/洗衣機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=199534&amp;ec=live3cEP" id="prod199534" name="prod199534">
+              <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201906/199534_M.jpg?t=20220517143007" border="0"></p>
+              <storg>東元 12公斤洗脫烘滾筒洗衣機</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$26,900</em> <i>活動價$</i>17,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233879&amp;ec=live3cEP" id="prod233879" name="prod233879">
+              <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233879_M.jpg?t=20230821122340" border="0"></p>
+              <storg>Panasonic 498公升雙門鋼板冰箱</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>93</span>折</p>
+                <strong class="txt_red fred"> <em>市價$27,590</em> <i>活動價$</i>25,383 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240447&amp;ec=live3cEP" id="prod240447" name="prod240447">
+              <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240447_M.jpg?t=20230614223019" border="0"></p>
+              <storg>禾聯 HFZ-B27B1FV 272L 變頻風冷直立式冷凍櫃...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$21,490</em> <i>活動價$</i>19,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=220554&amp;ec=live3cEP" id="prod220554" name="prod220554">
+              <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/220554_M.jpg?t=20211117144139" border="0"></p>
+              <storg>Panasonic 550公升日製六門變頻玻璃冰箱</storg>
+              <h4>★最高省$12,000元★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$74,900</em> <i>活動價$</i>64,500 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233866&amp;ec=live3cEP" id="prod233866" name="prod233866">
+              <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233866_M.jpg?t=20221014105232" border="0"></p>
+              <storg>Panasonic 500公升三門變頻冰箱</storg>
+              <h4>免費標準安裝定位</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>92</span>折</p>
+                <strong class="txt_red fred"> <em>市價$39,800</em> <i>活動價$</i>36,616 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=218059&amp;ec=live3cEP" id="prod218059" name="prod218059">
+              <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202105/218059_M.jpg?t=20220209101343" border="0"></p>
+              <storg>日立 HITACHI 527公升平面式無邊框鋼板六門冰箱...</storg>
+              <h4>登錄送 虛擬商品券$2000</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>92</span>折</p>
+                <strong class="txt_red fred"> <em>市價$62,400</em> <i>活動價$</i>57,408 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232003&amp;ec=live3cEP" id="prod232003" name="prod232003">
+              <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232003_M.jpg?t=20230109114100" border="0"></p>
+              <storg>Panasonic 650公升日製六門變頻玻璃冰箱</storg>
+              <h4>★最高省$12,000元★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$98,900</em> <i>活動價$</i>85,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=227951&amp;ec=live3cEP" id="prod227951" name="prod227951">
+              <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202204/227951_M.jpg?t=20220628165335" border="0"></p>
+              <storg>TOSHIBA 366公升玻璃三門變頻冰箱</storg>
+              <h4>登錄送 東芝厚釜電子鍋</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$46,900</em> <i>活動價$</i>36,900 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5323" id="pro5323"></a>生活小家電</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236015&amp;ec=live3cEP" id="prod236015" name="prod236015">
+              <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202212/236015_M.jpg?t=20230306171918" border="0"></p>
+              <storg>國際 Panasonic nanocare 高滲透奈米水離子吹風機...</storg>
+              <h4>送 化妝包兩入組+送 吹風機收納包+送 順髮氣墊梳組...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$10,900</em> <i>活動價$</i>9,280 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225520&amp;ec=live3cEP" id="prod225520" name="prod225520">
+              <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225520_M.jpg?t=20230417113712" border="0"></p>
+              <storg>MAGIC 大視界LED護眼檯燈</storg>
+              <h4>★領券再折$100★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,690</em> <i>活動價$</i>2,690 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=139926&amp;ec=live3cEP" id="prod139926" name="prod139926">
+              <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201309/139926_M.jpg?t=20230213114917" border="0"></p>
+              <storg>國際牌Panasonic 無袋式 HEPA級吸塵器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>3,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233936&amp;ec=live3cEP" id="prod233936" name="prod233936">
+              <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233936_M.jpg?t=20220928183015" border="0"></p>
+              <storg>德國百靈Mini電動刮鬍刀(黃色)</storg>
+              <h4>送 百靈玻璃隨行杯</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,488</em> <i>活動價$</i>1,985 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231430&amp;ec=live3cEP" id="prod231430" name="prod231430">
+              <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231430_M.jpg?t=20230223160325" border="0"></p>
+              <storg>輝葉WULA超有力小沙發按摩椅</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>48</span>折</p>
+                <strong class="txt_red fred"> <em>市價$52,800</em> <i>活動價$</i>24,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=156627&amp;ec=live3cEP" id="prod156627" name="prod156627">
+              <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201506/156627_M.jpg?t=20220429173340" border="0"></p>
+              <storg>美國Honeywell 4-8坪 True HEPA清淨機</storg>
+              <h4>登錄送 APP-1 活性碳濾網</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>3,990 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5324" id="pro5324"></a>廚房電器</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232339&amp;ec=live3cEP" id="prod232339" name="prod232339">
+              <p class="itemF_img"><img id="RTProd_ctl12_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232339_M.jpg?t=20230215173758" border="0"></p>
+              <storg>Panasonic 25L機械式微波爐</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,590</em> <i>活動價$</i>2,980 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225859&amp;ec=live3cEP" id="prod225859" name="prod225859">
+              <p class="itemF_img"><img id="RTProd_ctl12_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225859_M.jpg?t=20220307143004" border="0"></p>
+              <storg>晶工牌10.5L光控全自動溫熱開飲機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>92</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,990</em> <i>活動價$</i>5,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=230671&amp;ec=live3cEP" id="prod230671" name="prod230671">
+              <p class="itemF_img"><img id="RTProd_ctl12_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/230671_M.jpg?t=20220719102355" border="0"></p>
+              <storg>小米 Xiaomi 智慧破壁調理機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,695</em> <i>活動價$</i>1,695 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=203990&amp;ec=live3cEP" id="prod203990" name="prod203990">
+              <p class="itemF_img"><img id="RTProd_ctl12_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201911/203990_M.jpg?t=20210201113629" border="0"></p>
+              <storg>國際牌Panasonic 4人份 IH電子鍋</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,490</em> <i>活動價$</i>4,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=213416&amp;ec=live3cEP" id="prod213416" name="prod213416">
+              <p class="itemF_img"><img id="RTProd_ctl12_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202011/213416_M.jpg?t=20221130180602" border="0"></p>
+              <storg>東元IH變頻靜音薄型感溫電磁爐</storg>
+              <h4>配備感溫探頭，溫控精準且穩定。</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>72</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,490</em> <i>活動價$</i>1,780 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228495&amp;ec=live3cEP" id="prod228495" name="prod228495">
+              <p class="itemF_img"><img id="RTProd_ctl12_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228495_M.jpg?t=20220715150047" border="0"></p>
+              <storg>Panasonic 32L平面式電烤箱</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>3,120 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=175806&amp;ec=live3cEP" id="prod175806" name="prod175806">
+              <p class="itemF_img"><img id="RTProd_ctl12_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201704/175806_M.jpg?t=20210208102147" border="0"></p>
+              <storg>晶工牌 11.5L 光控冰溫熱開飲機</storg>
+              <h4>雙重安全保護裝置</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,790</em> <i>活動價$</i>5,980 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=177702&amp;ec=live3cEP" id="prod177702" name="prod177702">
+              <p class="itemF_img"><img id="RTProd_ctl12_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201706/177702_M.jpg?t=20230828101748" border="0"></p>
+              <storg>元山 12.9L 蒸汽式溫熱開飲機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>78</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>3,888 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <h2 class="protitle"><a name="pro5325" id="pro5325"></a>生活周邊配件</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=000349&amp;ec=live3cEP" id="prod000349" name="prod000349">
+              <p class="itemF_img"><img id="RTProd_ctl13_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200611/000349_M.jpg?t=20221010172703" border="0"></p>
+              <storg>EUPA義大利式咖啡機</storg>
+              <h4>咖啡入門熱賣品</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,590</em> <i>活動價$</i>1,088 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=000834&amp;ec=live3cEP" id="prod000834" name="prod000834">
+              <p class="itemF_img"><img id="RTProd_ctl13_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200704/000834_M.jpg?t=20180123172251" border="0"></p>
+              <storg>元山 烘碗機</storg>
+              <h4>底座、碗籃可分離</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,590</em> <i>活動價$</i>1,388 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=002767&amp;ec=live3cEP" id="prod002767" name="prod002767">
+              <p class="itemF_img"><img id="RTProd_ctl13_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200611/002767_M.jpg?t=20131209114632" border="0"></p>
+              <storg>勁量鹼性電池2號2入</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>市價$145</em> <i>活動價$</i>110 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=002772&amp;ec=live3cEP" id="prod002772" name="prod002772">
+              <p class="itemF_img"><img id="RTProd_ctl13_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200611/002772_M.jpg?t=20131209114632" border="0"></p>
+              <storg>勁量鹼性電池9V1入</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$140</em> <i>活動價$</i>140 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=002786&amp;ec=live3cEP" id="prod002786" name="prod002786">
+              <p class="itemF_img"><img id="RTProd_ctl13_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200611/002786_M.jpg?t=20131209114632" border="0"></p>
+              <storg>勁量鹼性電池3號4入</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$140</em> <i>活動價$</i>140 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=002805&amp;ec=live3cEP" id="prod002805" name="prod002805">
+              <p class="itemF_img"><img id="RTProd_ctl13_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200611/002805_M.jpg?t=20131209114632" border="0"></p>
+              <storg>勁量鹼性電池12V1入(A23)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$75</em> <i>活動價$</i>59 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=002841&amp;ec=live3cEP" id="prod002841" name="prod002841">
+              <p class="itemF_img"><img id="RTProd_ctl13_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200611/002841_M.jpg?t=20131209114632" border="0"></p>
+              <storg>永備黑金鋼電池3號4入</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>74</span>折</p>
+                <strong class="txt_red fred"> <em>市價$80</em> <i>活動價$</i>59 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=002842&amp;ec=live3cEP" id="prod002842" name="prod002842">
+              <p class="itemF_img"><img id="RTProd_ctl13_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200611/002842_M.jpg?t=20220315134442" border="0"></p>
+              <storg>永備黑金鋼電池4號4入</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>74</span>折</p>
+                <strong class="txt_red fred"> <em>市價$80</em> <i>活動價$</i>59 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+      <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+      <div id="TkecFooter">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+
+
+        <style>
+          @charset "utf-8";
+
+          * {
+            margin: 0;
+            padding: 0
+          }
+
+          *:focus {
+            outline: none;
+          }
+
+          /*黃框消除*/
+
+          * {
+            -webkit-text-size-adjust: none;
+          }
+
+          /*字體尺寸限制解除*/
+
+          a {
+            text-decoration: none;
+            cursor: pointer
+          }
+
+          img {
+            border: 0px;
+          }
+
+          /*圖片超連結邊框消除*/
+
+          .acbankbox .fred {
+            color: #F00;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .acbankbox .fgray {
+            color: #666;
+          }
+
+          .acbankbox .bgcolor {
+            background: #999;
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width:751px) {
+            .acbankbox {
+              display: block;
+              width: 1144px;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+              overflow: hidden;
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              padding: 16px;
+              position: relative;
+              display: block;
+              border-radius: 40px 40px 0 0;
+              -moz-border-radius: 40px 40px 0 0;
+              -webkit-border-radius: 40px 40px 0 0;
+              box-sizing: border-box;
+            }
+
+            .acbankbox .list2 u {
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+              display: block;
+              font-size: 40px;
+              text-decoration: none;
+              margin-bottom: 10px;
+              letter-spacing: 1px;
+            }
+
+            .acbankbox .list2 ul li {
+              width: 210px;
+              text-align: center;
+              float: left;
+              margin: 6px;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 82%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 13px;
+              margin-top: 0px;
+              text-align: center;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 38px;
+              font-size: 38px;
+              font-style: normal;
+              display: block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {
+              display: none;
+            }
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            .acbankbox {
+              display: block;
+              width: 100%;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              position: relative;
+              display: block;
+              box-sizing: border-box;
+              padding-bottom: 1%;
+            }
+
+            .acbankbox .list2 u {
+              width: 96%;
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              display: block;
+              font-size: 200%;
+              text-decoration: none;
+              margin-bottom: 10px;
+              margin: 2% auto;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+            }
+
+            .acbankbox .list2 ul li {
+              height: auto;
+              width: 48%;
+              text-align: center;
+              float: left;
+              margin: 1%;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+              box-sizing: border-box;
+              padding-bottom: 4%;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 85%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 100%;
+              margin-top: 0px;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 1em;
+              font-size: 200%;
+              font-style: normal;
+              display: inline-block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            /* .acbankbox .box06 {} */
+          }
+        </style>
+        <div class="acbankbox">
+          <!--銀行區 st-->
+          <div class="list2 bgcolor">
+            <u>9月銀行 刷卡享好康</u>
+            <ul>
+
+              <!--永豐-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-05.jpg"></p>
+                  <p class="item_text05 fred"><em>送$7500</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--星展-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-03.jpg"></p>
+                  <p class="item_text05 fred"><em>送6%</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--燦坤-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送2100</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--台新-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2000</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--悠遊付-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-16.jpg"></p>
+                  <p class="item_text05 fred">單筆滿額<em>送6%</em></p>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+          <!--銀行區 end-->
+        </div>
+      </div>
+
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+
+</body>
+
+</html>
