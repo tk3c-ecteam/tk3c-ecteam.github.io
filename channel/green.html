@@ -1,0 +1,2669 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="電冰箱、洗衣機、空調冷氣、除濕機、風扇，一級節能補助，政府補助最高享7000元！環保集點來燦坤，周末點數10倍送，最高回饋2000">
+  <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="環保集點 | 燦坤線上">
+  <meta property="og:description" content="電冰箱、洗衣機、空調冷氣、除濕機、風扇，一級節能補助，政府補助最高享7000元！環保集點來燦坤，周末點數10倍送，最高回饋2000">
+  <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/green_subsidy/index.html">
+
+  <title>環保集點 | 燦坤線上</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/green_subsidy/css/green.css" rel="stylesheet"
+    type="text/css">
+
+
+
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+
+
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "green_subsidy";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    ChkEvent(1845)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+  <script>
+    $.ajax({
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+      type: "POST",
+      dataType: 'script',
+      success: function () {
+        jQuery(function () {
+          jQuery.scrollDepth({
+            pixelDepth: false,
+            gtmOverride: true
+          });
+        });
+      }
+    });
+  </script>
+
+
+</head>
+
+<body>
+
+  <form name="form1" method="post" action="./index.aspx?mainid=1845&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/?ec=green_subsidy">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">27</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0Ccqzf8TUP7BdxIiRzdXw4wrYz06cCDnrPqYGnD8tqtJTjVjw==&amp;ec=green_subsidy">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx?ec=green_subsidy">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx?ec=green_subsidy">客服中心</a></li>
+              <li><a href="javascript:void(0);?ec=green_subsidy"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: none; opacity: 0.2478;">
+      <img src="../events_net/green_subsidy/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+          <li><a href="#pro4850" onclick="ProcessGaEvent('green_subsidy','click','4850-綠點新鮮貨');">綠點新鮮貨</a></li>
+          <li><a href="#pro4344" onclick="ProcessGaEvent('green_subsidy','click','4344-環保集點-季節家電');">環保集點-季節家電</a></li>
+          <li><a href="#pro4345" onclick="ProcessGaEvent('green_subsidy','click','4345-環保集點-空調');">環保集點-空調</a></li>
+          <li><a href="#pro4346" onclick="ProcessGaEvent('green_subsidy','click','4346-環保集點-冰箱');">環保集點-冰箱</a></li>
+          <li><a href="#pro4347" onclick="ProcessGaEvent('green_subsidy','click','4347-環保集點-洗衣機');">環保集點-洗衣機</a></li>
+          <li><a href="#pro4390" onclick="ProcessGaEvent('green_subsidy','click','4390-環保集點-辦公用品');">環保集點-辦公用品</a></li>
+          <li><a href="#pro4348" onclick="ProcessGaEvent('green_subsidy','click','4348-1級節能 冰箱');">1級節能 冰箱</a></li>
+          <li><a href="#pro4349" onclick="ProcessGaEvent('green_subsidy','click','4349-金級省水 洗衣機');">金級省水 洗衣機</a></li>
+          <li><a href="#pro4350" onclick="ProcessGaEvent('green_subsidy','click','4350-1級節能 分離式空調');">1級節能 分離式空調</a>
+          </li>
+          <li><a href="#pro4352" onclick="ProcessGaEvent('green_subsidy','click','4352-1級節能 窗型空調');">1級節能 窗型空調</a></li>
+          <li><a href="#pro4353" onclick="ProcessGaEvent('green_subsidy','click','4353-1級節能 除濕機');">1級節能 除濕機</a></li>
+          <li><a href="#pro4369" onclick="ProcessGaEvent('green_subsidy','click','4369-節能涼風扇');">節能涼風扇</a></li>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="1"><span class="icon"><i class="fa-solid fa-shop"></i>熱銷分類</span></li>
+            <li data-id="2"><span class="icon"><i class="fa-solid fa-people-arrows"></i>關注社群</span></li>
+          </ul>
+        </div>
+        <div class="box-area type">
+          <ul>
+
+          </ul>
+        </div>
+
+        <div class="box-area social">
+          <ul>
+            <li><a href="https://reurl.cc/QbZ149?ec=green_subsidy" target="_blank"><i class="fa-brands fa-meta"></i></a>
+            </li>
+            <li><a href="https://reurl.cc/7pMZVl?ec=green_subsidy" target="_blank"><i class="fa-brands fa-line"></i></a>
+            </li>
+            <li><a href="https://reurl.cc/3Ye8kX?ec=green_subsidy" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile"></a>
+
+    </div>
+    <div class="wrapper">
+
+      <div id="green-container">
+        <div class="background">
+          <h2 class="title old"><img
+              src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/title.png" />
+          </h2>
+          <h2 class="title new hide"><img
+              src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/star/title.png" />
+          </h2>
+        </div>
+
+        <!-- 每日下殺 -->
+        <section class="pro-box hide">
+          <h2 class="title"><img
+              src="https://events.tk3c.com/events_net/events_net/green_subsidy/images/star/s_title.png" /></h2>
+
+          <div class="products">
+            <div class="tab"></div>
+            <div class="tab-content"></div>
+          </div>
+        </section>
+
+        <!-- 人氣精選 -->
+        <section class="special-group2 hide" id="special2">
+          <h2 class="title"><img
+              src="https://events.tk3c.com/events_net/events_net/green_subsidy/images/famous_title.png" /></h2>
+          <div class="special"></div>
+        </section>
+
+        <!--<section class="special-group3" id="special3">
+            <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/green_subsidy/images/green23081920.jpg" /></h2>
+           <div class="special"></div>
+        </section>-->
+
+
+        <!-- 綠點新鮮貨 -->
+        <section class="special-group scroll" id="special">
+          <h2 class="title"><img src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/S0.png" />
+          </h2>
+          <div class="special"></div>
+        </section>
+
+
+
+        <!-- 綠點 -->
+        <section class="green-box scroll" id="green">
+          <h2 class="title"><img
+              src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/green_title.png" /></h2>
+          <div class="green">
+            <div class="tab-content"></div>
+            <a class="more" target="_blank">
+              <img src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/more.png" />
+            </a>
+          </div>
+        </section>
+
+        <!-- 政府補助 -->
+        <section class="sub-box" id="sub">
+          <img class="sub-bg" src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/sub_bg.png" />
+          </h2>
+          <ul>
+            <li class="alert1"> <a href="" target="_blank"> <img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/a05_1.png" /></a></li>
+            <li class="alert2"> <a href="" target="_blank"> <img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/a05_2.png" /></a></li>
+            <li class="long"> <a href="https://events.tk3c.com/events_net/greenpoint.tk3c/index.html?ec=green_subsidy"
+                target="_blank"> <img
+                  src="https://events.cdn-tkec.tw/events_net/events_net/green_subsidy/images/turtle.png" /></a></li>
+          </ul>
+
+          <a class="alert3" href="" target="_blank">
+            <img src="https://events.tk3c.com/events_net/events_net/green_subsidy/images/taipei_more.png">
+          </a>
+        </section>
+
+        <!-- 右側選單 -->
+        <aside class="aside-container">
+          <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+          <div class="aside-wrap">
+            <h3 class="aside-header"></h3>
+            <div class="aside-content">
+              <ul></ul>
+            </div>
+            <a href="#" class="go-top">GO TOP</a>
+          </div>
+        </aside>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@5.4.5/js/swiper.min.js"></script>
+        <script src="https://events.tkec.com.tw/events_net/events_net/js/common.js"></script>
+        <!-- 手機版選單 JS -->
+        <script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+        <script src="https://events.tk3c.com/events_net/events_net/green_subsidy/js/green_star.js"></script>
+
+
+
+        <div class="itemBox m_version_non">
+          <div id="btnBox03">
+            <div class="upbox">
+              <a href="#pro4850" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4850-綠點新鮮貨')">綠點新鮮貨</a>
+              <a href="#pro4344" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4344-環保集點-季節家電')">環保集點-季節家電</a>
+              <a href="#pro4345" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4345-環保集點-空調')">環保集點-空調</a>
+              <a href="#pro4346" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4346-環保集點-冰箱')">環保集點-冰箱</a>
+              <a href="#pro4347" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4347-環保集點-洗衣機')">環保集點-洗衣機</a>
+              <a href="#pro4348" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4348-1級節能 冰箱')">1級節能 冰箱</a>
+              <a href="#pro4349" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4349-金級省水 洗衣機')">金級省水 洗衣機</a>
+              <a href="#pro4350" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4350-1級節能 分離式空調')">1級節能 分離式空調</a>
+              <a href="#pro4352" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4352-1級節能 窗型空調')">1級節能 窗型空調</a>
+              <a href="#pro4353" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4353-1級節能 除濕機')">1級節能 除濕機</a>
+              <a href="#pro4369" class="navi_bar btn_01 p01"
+                onclick="ProcessGaEvent('green_subsidy','click','4369-節能涼風扇')">節能涼風扇</a>
+
+            </div>
+          </div>
+        </div>
+        <div class="rightbtn" style="display: none;"><span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+          <div class="actbtn">
+            <a href="#pro4850" class="btn_01 p01"
+              onclick="ProcessGaEvent('green_subsidy','click','4850-綠點新鮮貨')">綠點新鮮貨</a>
+            <a href="#pro4390" class="btn_01 p01"
+              onclick="ProcessGaEvent('green_subsidy','click','4390-環保集點-辦公用品')">環保集點-辦公用品</a>
+            <a href="#pro4348" class="btn_01 p01" onclick="ProcessGaEvent('green_subsidy','click','4348-1級節能 冰箱')">1級節能
+              冰箱</a>
+            <a href="#pro4349" class="btn_01 p01" onclick="ProcessGaEvent('green_subsidy','click','4349-金級省水 洗衣機')">金級省水
+              洗衣機</a>
+            <a href="#pro4350" class="btn_01 p01"
+              onclick="ProcessGaEvent('green_subsidy','click','4350-1級節能 分離式空調')">1級節能
+              分離式空調</a>
+            <a href="#pro4352" class="btn_01 p01"
+              onclick="ProcessGaEvent('green_subsidy','click','4352-1級節能 窗型空調')">1級節能
+              窗型空調</a>
+            <a href="#pro4353" class="btn_01 p01" onclick="ProcessGaEvent('green_subsidy','click','4353-1級節能 除濕機')">1級節能
+              除濕機</a>
+            <a href="#pro4369" class="btn_01 p01"
+              onclick="ProcessGaEvent('green_subsidy','click','4369-節能涼風扇')">節能涼風扇</a>
+
+          </div>
+        </div>
+        <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+        <div class="wrapper">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <h2 class="protitle"><a name="pro5401" id="pro5401"></a>9/13</h2>
+          <div id="RTProd_ctl02_ProdUc31_SuperDiv" class="list_M bg01">
+            <div class="hotpro_wrapper">
+
+              <div id="RTProd_ctl02_ProdUc31_RtProdTop_ctl00_PnCss" class="hotproboxL">
+                <a id="prod209872" name="prod209872"></a>
+                <div class="hotpro_pro">
+                  <div class="hotpro_pic">
+                    <p class="icon_number">還剩<span>20</span>組</p><img id="RTProd_ctl02_ProdUc31_RtProdTop_ctl00_Img"
+                      onerror="ImgError(this);"
+                      org="https://www.cdn-tkec.tw/image/product/202007/209872_M.jpg?t=20230308171528"
+                      src="https://www.cdn-tkec.tw/image/product/202007/209872_M.jpg?t=20230308171528" border="0">
+                  </div>
+                  <div class="hotpromain">
+                    <div class="hotpro_sale"></div>
+                    <div class="hotpro_name">惠普HP Deskjet 2332 亮彩事務機</div>
+                    <div class="hotpro_info"><span>・
+                        列印/掃描/影印<br></span>
+                      <span>・
+                        列印速度(黑/彩)：20ppm / 16ppm<br></span>
+                      <span>・
+                        適用 67號墨水<br></span>
+                    </div>
+                    <div class="hotpro_price1 fred">$1,490</div>
+                    <div class="hotpro_price2">活動價$<span>990</span></div>
+                    <a href="http://www.tk3c.com/pt.aspx?pid=209872&amp;ec=HP2309">
+                      <div class="buybtn">前往購買</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="RTProd_ctl02_ProdUc31_RtProdTop_ctl01_PnCss" class="hotproboxR">
+                <a id="prod222096" name="prod222096"></a>
+                <div class="hotpro_pro">
+                  <div class="hotpro_pic">
+                    <p class="icon_number">還剩<span>54</span>組</p><img id="RTProd_ctl02_ProdUc31_RtProdTop_ctl01_Img"
+                      onerror="ImgError(this);"
+                      org="https://www.cdn-tkec.tw/image/product/202110/222096_M.jpg?t=20230412144537"
+                      src="https://www.cdn-tkec.tw/image/product/202110/222096_M.jpg?t=20230412144537" border="0">
+                  </div>
+                  <div class="hotpromain">
+                    <div class="hotpro_sale"></div>
+                    <div class="hotpro_name">惠普 HP LaserJet M111w 黑白雷射印表機</div>
+                    <div class="hotpro_info"><span>・
+                        列印/無線<br></span>
+                      <span>・
+                        無線列印功能Apple AirPrint HP Smart App<br></span>
+                      <span>・
+                        LCD燈號顯示及按鍵式操作<br></span>
+                      <span>・
+                        列印速度20ppm<br></span>
+                      <span>・
+                        HP 150A (975pgs) 黑色 LaserJet 碳粉匣<br></span>
+                    </div>
+                    <div class="hotpro_price1 fred">$3,990</div>
+                    <div class="hotpro_price2">活動價$<span>2,990</span></div>
+                    <a href="http://www.tk3c.com/pt.aspx?pid=222096&amp;ec=HP2309">
+                      <div class="buybtn">前往購買</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="list_special">
+              <ul>
+
+
+
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="protitle"><a name="pro5401" id="pro5401"></a>9/14</h2>
+          <div id="RTProd_ctl02_ProdUc31_SuperDiv" class="list_M bg01">
+            <div class="hotpro_wrapper">
+
+              <div id="RTProd_ctl02_ProdUc31_RtProdTop_ctl00_PnCss" class="hotproboxL">
+                <a id="prod209872" name="prod209872"></a>
+                <div class="hotpro_pro">
+                  <div class="hotpro_pic">
+                    <p class="icon_number">還剩<span>20</span>組</p><img id="RTProd_ctl02_ProdUc31_RtProdTop_ctl00_Img"
+                      onerror="ImgError(this);"
+                      org="https://www.cdn-tkec.tw/image/product/202007/209872_M.jpg?t=20230308171528"
+                      src="https://www.cdn-tkec.tw/image/product/202007/209872_M.jpg?t=20230308171528" border="0">
+                  </div>
+                  <div class="hotpromain">
+                    <div class="hotpro_sale"></div>
+                    <div class="hotpro_name">惠普HP Deskjet 2332 亮彩事務機</div>
+                    <div class="hotpro_info"><span>・
+                        列印/掃描/影印<br></span>
+                      <span>・
+                        列印速度(黑/彩)：20ppm / 16ppm<br></span>
+                      <span>・
+                        適用 67號墨水<br></span>
+                    </div>
+                    <div class="hotpro_price1 fred">$1,490</div>
+                    <div class="hotpro_price2">活動價$<span>990</span></div>
+                    <a href="http://www.tk3c.com/pt.aspx?pid=209872&amp;ec=HP2309">
+                      <div class="buybtn">前往購買</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="RTProd_ctl02_ProdUc31_RtProdTop_ctl01_PnCss" class="hotproboxR">
+                <a id="prod222096" name="prod222096"></a>
+                <div class="hotpro_pro">
+                  <div class="hotpro_pic">
+                    <p class="icon_number">還剩<span>54</span>組</p><img id="RTProd_ctl02_ProdUc31_RtProdTop_ctl01_Img"
+                      onerror="ImgError(this);"
+                      org="https://www.cdn-tkec.tw/image/product/202110/222096_M.jpg?t=20230412144537"
+                      src="https://www.cdn-tkec.tw/image/product/202110/222096_M.jpg?t=20230412144537" border="0">
+                  </div>
+                  <div class="hotpromain">
+                    <div class="hotpro_sale"></div>
+                    <div class="hotpro_name">惠普 HP LaserJet M111w 黑白雷射印表機</div>
+                    <div class="hotpro_info"><span>・
+                        列印/無線<br></span>
+                      <span>・
+                        無線列印功能Apple AirPrint HP Smart App<br></span>
+                      <span>・
+                        LCD燈號顯示及按鍵式操作<br></span>
+                      <span>・
+                        列印速度20ppm<br></span>
+                      <span>・
+                        HP 150A (975pgs) 黑色 LaserJet 碳粉匣<br></span>
+                    </div>
+                    <div class="hotpro_price1 fred">$3,990</div>
+                    <div class="hotpro_price2">活動價$<span>2,990</span></div>
+                    <a href="http://www.tk3c.com/pt.aspx?pid=222096&amp;ec=HP2309">
+                      <div class="buybtn">前往購買</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="list_special">
+              <ul>
+
+
+
+              </ul>
+            </div>
+          </div>
+
+          <h2 class="protitle"><a name="pro5401" id="pro5401"></a>9/15</h2>
+          <div id="RTProd_ctl02_ProdUc31_SuperDiv" class="list_M bg01">
+            <div class="hotpro_wrapper">
+
+              <div id="RTProd_ctl02_ProdUc31_RtProdTop_ctl00_PnCss" class="hotproboxL">
+                <a id="prod209872" name="prod209872"></a>
+                <div class="hotpro_pro">
+                  <div class="hotpro_pic">
+                    <p class="icon_number">還剩<span>20</span>組</p><img id="RTProd_ctl02_ProdUc31_RtProdTop_ctl00_Img"
+                      onerror="ImgError(this);"
+                      org="https://www.cdn-tkec.tw/image/product/202007/209872_M.jpg?t=20230308171528"
+                      src="https://www.cdn-tkec.tw/image/product/202007/209872_M.jpg?t=20230308171528" border="0">
+                  </div>
+                  <div class="hotpromain">
+                    <div class="hotpro_sale"></div>
+                    <div class="hotpro_name">惠普HP Deskjet 2332 亮彩事務機</div>
+                    <div class="hotpro_info"><span>・
+                        列印/掃描/影印<br></span>
+                      <span>・
+                        列印速度(黑/彩)：20ppm / 16ppm<br></span>
+                      <span>・
+                        適用 67號墨水<br></span>
+                    </div>
+                    <div class="hotpro_price1 fred">$1,490</div>
+                    <div class="hotpro_price2">活動價$<span>990</span></div>
+                    <a href="http://www.tk3c.com/pt.aspx?pid=209872&amp;ec=HP2309">
+                      <div class="buybtn">前往購買</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div id="RTProd_ctl02_ProdUc31_RtProdTop_ctl01_PnCss" class="hotproboxR">
+                <a id="prod222096" name="prod222096"></a>
+                <div class="hotpro_pro">
+                  <div class="hotpro_pic">
+                    <p class="icon_number">還剩<span>54</span>組</p><img id="RTProd_ctl02_ProdUc31_RtProdTop_ctl01_Img"
+                      onerror="ImgError(this);"
+                      org="https://www.cdn-tkec.tw/image/product/202110/222096_M.jpg?t=20230412144537"
+                      src="https://www.cdn-tkec.tw/image/product/202110/222096_M.jpg?t=20230412144537" border="0">
+                  </div>
+                  <div class="hotpromain">
+                    <div class="hotpro_sale"></div>
+                    <div class="hotpro_name">惠普 HP LaserJet M111w 黑白雷射印表機</div>
+                    <div class="hotpro_info"><span>・
+                        列印/無線<br></span>
+                      <span>・
+                        無線列印功能Apple AirPrint HP Smart App<br></span>
+                      <span>・
+                        LCD燈號顯示及按鍵式操作<br></span>
+                      <span>・
+                        列印速度20ppm<br></span>
+                      <span>・
+                        HP 150A (975pgs) 黑色 LaserJet 碳粉匣<br></span>
+                    </div>
+                    <div class="hotpro_price1 fred">$3,990</div>
+                    <div class="hotpro_price2">活動價$<span>2,990</span></div>
+                    <a href="http://www.tk3c.com/pt.aspx?pid=222096&amp;ec=HP2309">
+                      <div class="buybtn">前往購買</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="list_special">
+              <ul>
+
+
+
+              </ul>
+            </div>
+          </div>
+
+
+          <h2 class="protitle"><a name="pro4348" id="pro4348"></a>綠點新鮮貨</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=177504&amp;ec=green_subsidy" id="prod177504"
+                  name="prod177504">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201706/177504_M.jpg?t=20221010172438" border="0"></p>
+                  <storg>三星SAMSUNG 258公升 極簡雙門變頻冰箱</storg>
+                  <h4>濾淨除臭技術　Easy Slide滑動式層架...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>74</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=181121&amp;ec=green_subsidy" id="prod181121"
+                  name="prod181121">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201710/181121_M.jpg?t=20210810115424" border="0"></p>
+                  <storg>LG 525公升鏡面上下門變頻冰箱</storg>
+                  <h4>直驅變頻壓縮機</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$34,900</em> <i>活動價$</i>29,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=218060&amp;ec=green_subsidy" id="prod218060"
+                  name="prod218060">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202105/218060_M.jpg?t=20210721150827" border="0"></p>
+                  <storg>日立 HITACHI 527公升平面式無邊框鋼板六門冰箱...</storg>
+                  <h4>登錄送 虛擬商品券$2000</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$62,400</em> <i>活動價$</i>57,408 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183965&amp;ec=green_subsidy" id="prod183965"
+                  name="prod183965">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183965_M.jpg?t=20230220134413" border="0"></p>
+                  <storg>享最高補助$3500元 | 東元TECO 99公升 單門小鮮綠冰箱(白色)...</storg>
+                  <h4>★領券再折$100★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$6,690</em> <i>活動價$</i>5,990 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212496&amp;ec=green_subsidy" id="prod212496"
+                  name="prod212496">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212496_M.jpg?t=20220517142235" border="0"></p>
+                  <storg>日立HITACHI 230公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,400</em> <i>活動價$</i>16,928 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=178319&amp;ec=green_subsidy" id="prod178319"
+                  name="prod178319">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201707/178319_M.jpg?t=20210705095217" border="0"></p>
+                  <storg>LG 525公升上下門變頻冰箱</storg>
+                  <h4>0度低溫保鮮室</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$32,490</em> <i>活動價$</i>27,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=219500&amp;ec=green_subsidy" id="prod219500"
+                  name="prod219500">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202107/219500_M.jpg?t=20210911165226" border="0"></p>
+                  <storg>HITACHI 313公升雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$28,400</em> <i>活動價$</i>26,128 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212286&amp;ec=green_subsidy" id="prod212286"
+                  name="prod212286">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212286_M.jpg?t=20210723133539" border="0"></p>
+                  <storg>HITACHI 313公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$26,400</em> <i>活動價$</i>24,288 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+          <h2 class="protitle"><a name="pro4348" id="pro4348"></a>環保集點-季節家電</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=177504&amp;ec=green_subsidy" id="prod177504"
+                  name="prod177504">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201706/177504_M.jpg?t=20221010172438" border="0"></p>
+                  <storg>三星SAMSUNG 258公升 極簡雙門變頻冰箱</storg>
+                  <h4>濾淨除臭技術　Easy Slide滑動式層架...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>74</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=181121&amp;ec=green_subsidy" id="prod181121"
+                  name="prod181121">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201710/181121_M.jpg?t=20210810115424" border="0"></p>
+                  <storg>LG 525公升鏡面上下門變頻冰箱</storg>
+                  <h4>直驅變頻壓縮機</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$34,900</em> <i>活動價$</i>29,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=218060&amp;ec=green_subsidy" id="prod218060"
+                  name="prod218060">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202105/218060_M.jpg?t=20210721150827" border="0"></p>
+                  <storg>日立 HITACHI 527公升平面式無邊框鋼板六門冰箱...</storg>
+                  <h4>登錄送 虛擬商品券$2000</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$62,400</em> <i>活動價$</i>57,408 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183965&amp;ec=green_subsidy" id="prod183965"
+                  name="prod183965">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183965_M.jpg?t=20230220134413" border="0"></p>
+                  <storg>享最高補助$3500元 | 東元TECO 99公升 單門小鮮綠冰箱(白色)...</storg>
+                  <h4>★領券再折$100★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$6,690</em> <i>活動價$</i>5,990 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212496&amp;ec=green_subsidy" id="prod212496"
+                  name="prod212496">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212496_M.jpg?t=20220517142235" border="0"></p>
+                  <storg>日立HITACHI 230公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,400</em> <i>活動價$</i>16,928 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=178319&amp;ec=green_subsidy" id="prod178319"
+                  name="prod178319">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201707/178319_M.jpg?t=20210705095217" border="0"></p>
+                  <storg>LG 525公升上下門變頻冰箱</storg>
+                  <h4>0度低溫保鮮室</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$32,490</em> <i>活動價$</i>27,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=219500&amp;ec=green_subsidy" id="prod219500"
+                  name="prod219500">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202107/219500_M.jpg?t=20210911165226" border="0"></p>
+                  <storg>HITACHI 313公升雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$28,400</em> <i>活動價$</i>26,128 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212286&amp;ec=green_subsidy" id="prod212286"
+                  name="prod212286">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212286_M.jpg?t=20210723133539" border="0"></p>
+                  <storg>HITACHI 313公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$26,400</em> <i>活動價$</i>24,288 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+          <h2 class="protitle"><a name="pro4348" id="pro4348"></a>環保集點-空調</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=177504&amp;ec=green_subsidy" id="prod177504"
+                  name="prod177504">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201706/177504_M.jpg?t=20221010172438" border="0"></p>
+                  <storg>三星SAMSUNG 258公升 極簡雙門變頻冰箱</storg>
+                  <h4>濾淨除臭技術　Easy Slide滑動式層架...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>74</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=181121&amp;ec=green_subsidy" id="prod181121"
+                  name="prod181121">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201710/181121_M.jpg?t=20210810115424" border="0"></p>
+                  <storg>LG 525公升鏡面上下門變頻冰箱</storg>
+                  <h4>直驅變頻壓縮機</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$34,900</em> <i>活動價$</i>29,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=218060&amp;ec=green_subsidy" id="prod218060"
+                  name="prod218060">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202105/218060_M.jpg?t=20210721150827" border="0"></p>
+                  <storg>日立 HITACHI 527公升平面式無邊框鋼板六門冰箱...</storg>
+                  <h4>登錄送 虛擬商品券$2000</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$62,400</em> <i>活動價$</i>57,408 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183965&amp;ec=green_subsidy" id="prod183965"
+                  name="prod183965">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183965_M.jpg?t=20230220134413" border="0"></p>
+                  <storg>享最高補助$3500元 | 東元TECO 99公升 單門小鮮綠冰箱(白色)...</storg>
+                  <h4>★領券再折$100★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$6,690</em> <i>活動價$</i>5,990 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212496&amp;ec=green_subsidy" id="prod212496"
+                  name="prod212496">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212496_M.jpg?t=20220517142235" border="0"></p>
+                  <storg>日立HITACHI 230公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,400</em> <i>活動價$</i>16,928 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=178319&amp;ec=green_subsidy" id="prod178319"
+                  name="prod178319">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201707/178319_M.jpg?t=20210705095217" border="0"></p>
+                  <storg>LG 525公升上下門變頻冰箱</storg>
+                  <h4>0度低溫保鮮室</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$32,490</em> <i>活動價$</i>27,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=219500&amp;ec=green_subsidy" id="prod219500"
+                  name="prod219500">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202107/219500_M.jpg?t=20210911165226" border="0"></p>
+                  <storg>HITACHI 313公升雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$28,400</em> <i>活動價$</i>26,128 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212286&amp;ec=green_subsidy" id="prod212286"
+                  name="prod212286">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212286_M.jpg?t=20210723133539" border="0"></p>
+                  <storg>HITACHI 313公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$26,400</em> <i>活動價$</i>24,288 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+          <h2 class="protitle"><a name="pro4348" id="pro4348"></a>環保集點-冰箱</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=177504&amp;ec=green_subsidy" id="prod177504"
+                  name="prod177504">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201706/177504_M.jpg?t=20221010172438" border="0"></p>
+                  <storg>三星SAMSUNG 258公升 極簡雙門變頻冰箱</storg>
+                  <h4>濾淨除臭技術　Easy Slide滑動式層架...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>74</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=181121&amp;ec=green_subsidy" id="prod181121"
+                  name="prod181121">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201710/181121_M.jpg?t=20210810115424" border="0"></p>
+                  <storg>LG 525公升鏡面上下門變頻冰箱</storg>
+                  <h4>直驅變頻壓縮機</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$34,900</em> <i>活動價$</i>29,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=218060&amp;ec=green_subsidy" id="prod218060"
+                  name="prod218060">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202105/218060_M.jpg?t=20210721150827" border="0"></p>
+                  <storg>日立 HITACHI 527公升平面式無邊框鋼板六門冰箱...</storg>
+                  <h4>登錄送 虛擬商品券$2000</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$62,400</em> <i>活動價$</i>57,408 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183965&amp;ec=green_subsidy" id="prod183965"
+                  name="prod183965">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183965_M.jpg?t=20230220134413" border="0"></p>
+                  <storg>享最高補助$3500元 | 東元TECO 99公升 單門小鮮綠冰箱(白色)...</storg>
+                  <h4>★領券再折$100★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$6,690</em> <i>活動價$</i>5,990 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212496&amp;ec=green_subsidy" id="prod212496"
+                  name="prod212496">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212496_M.jpg?t=20220517142235" border="0"></p>
+                  <storg>日立HITACHI 230公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,400</em> <i>活動價$</i>16,928 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=178319&amp;ec=green_subsidy" id="prod178319"
+                  name="prod178319">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201707/178319_M.jpg?t=20210705095217" border="0"></p>
+                  <storg>LG 525公升上下門變頻冰箱</storg>
+                  <h4>0度低溫保鮮室</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$32,490</em> <i>活動價$</i>27,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=219500&amp;ec=green_subsidy" id="prod219500"
+                  name="prod219500">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202107/219500_M.jpg?t=20210911165226" border="0"></p>
+                  <storg>HITACHI 313公升雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$28,400</em> <i>活動價$</i>26,128 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212286&amp;ec=green_subsidy" id="prod212286"
+                  name="prod212286">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212286_M.jpg?t=20210723133539" border="0"></p>
+                  <storg>HITACHI 313公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$26,400</em> <i>活動價$</i>24,288 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+          <h2 class="protitle"><a name="pro4348" id="pro4348"></a>環保集點-洗衣機</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=177504&amp;ec=green_subsidy" id="prod177504"
+                  name="prod177504">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201706/177504_M.jpg?t=20221010172438" border="0"></p>
+                  <storg>三星SAMSUNG 258公升 極簡雙門變頻冰箱</storg>
+                  <h4>濾淨除臭技術　Easy Slide滑動式層架...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>74</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=181121&amp;ec=green_subsidy" id="prod181121"
+                  name="prod181121">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201710/181121_M.jpg?t=20210810115424" border="0"></p>
+                  <storg>LG 525公升鏡面上下門變頻冰箱</storg>
+                  <h4>直驅變頻壓縮機</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$34,900</em> <i>活動價$</i>29,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=218060&amp;ec=green_subsidy" id="prod218060"
+                  name="prod218060">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202105/218060_M.jpg?t=20210721150827" border="0"></p>
+                  <storg>日立 HITACHI 527公升平面式無邊框鋼板六門冰箱...</storg>
+                  <h4>登錄送 虛擬商品券$2000</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$62,400</em> <i>活動價$</i>57,408 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183965&amp;ec=green_subsidy" id="prod183965"
+                  name="prod183965">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183965_M.jpg?t=20230220134413" border="0"></p>
+                  <storg>享最高補助$3500元 | 東元TECO 99公升 單門小鮮綠冰箱(白色)...</storg>
+                  <h4>★領券再折$100★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$6,690</em> <i>活動價$</i>5,990 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212496&amp;ec=green_subsidy" id="prod212496"
+                  name="prod212496">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212496_M.jpg?t=20220517142235" border="0"></p>
+                  <storg>日立HITACHI 230公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,400</em> <i>活動價$</i>16,928 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=178319&amp;ec=green_subsidy" id="prod178319"
+                  name="prod178319">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201707/178319_M.jpg?t=20210705095217" border="0"></p>
+                  <storg>LG 525公升上下門變頻冰箱</storg>
+                  <h4>0度低溫保鮮室</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$32,490</em> <i>活動價$</i>27,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=219500&amp;ec=green_subsidy" id="prod219500"
+                  name="prod219500">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202107/219500_M.jpg?t=20210911165226" border="0"></p>
+                  <storg>HITACHI 313公升雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$28,400</em> <i>活動價$</i>26,128 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212286&amp;ec=green_subsidy" id="prod212286"
+                  name="prod212286">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212286_M.jpg?t=20210723133539" border="0"></p>
+                  <storg>HITACHI 313公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$26,400</em> <i>活動價$</i>24,288 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+          <h2 class="protitle"><a name="pro4348" id="pro4348"></a>環保集點-辦公用品</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=177504&amp;ec=green_subsidy" id="prod177504"
+                  name="prod177504">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201706/177504_M.jpg?t=20221010172438" border="0"></p>
+                  <storg>三星SAMSUNG 258公升 極簡雙門變頻冰箱</storg>
+                  <h4>濾淨除臭技術　Easy Slide滑動式層架...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>74</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=181121&amp;ec=green_subsidy" id="prod181121"
+                  name="prod181121">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201710/181121_M.jpg?t=20210810115424" border="0"></p>
+                  <storg>LG 525公升鏡面上下門變頻冰箱</storg>
+                  <h4>直驅變頻壓縮機</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$34,900</em> <i>活動價$</i>29,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=218060&amp;ec=green_subsidy" id="prod218060"
+                  name="prod218060">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202105/218060_M.jpg?t=20210721150827" border="0"></p>
+                  <storg>日立 HITACHI 527公升平面式無邊框鋼板六門冰箱...</storg>
+                  <h4>登錄送 虛擬商品券$2000</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$62,400</em> <i>活動價$</i>57,408 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183965&amp;ec=green_subsidy" id="prod183965"
+                  name="prod183965">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183965_M.jpg?t=20230220134413" border="0"></p>
+                  <storg>享最高補助$3500元 | 東元TECO 99公升 單門小鮮綠冰箱(白色)...</storg>
+                  <h4>★領券再折$100★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$6,690</em> <i>活動價$</i>5,990 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212496&amp;ec=green_subsidy" id="prod212496"
+                  name="prod212496">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212496_M.jpg?t=20220517142235" border="0"></p>
+                  <storg>日立HITACHI 230公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,400</em> <i>活動價$</i>16,928 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=178319&amp;ec=green_subsidy" id="prod178319"
+                  name="prod178319">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201707/178319_M.jpg?t=20210705095217" border="0"></p>
+                  <storg>LG 525公升上下門變頻冰箱</storg>
+                  <h4>0度低溫保鮮室</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$32,490</em> <i>活動價$</i>27,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=219500&amp;ec=green_subsidy" id="prod219500"
+                  name="prod219500">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202107/219500_M.jpg?t=20210911165226" border="0"></p>
+                  <storg>HITACHI 313公升雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$28,400</em> <i>活動價$</i>26,128 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212286&amp;ec=green_subsidy" id="prod212286"
+                  name="prod212286">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212286_M.jpg?t=20210723133539" border="0"></p>
+                  <storg>HITACHI 313公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$26,400</em> <i>活動價$</i>24,288 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+
+          <h2 class="protitle"><a name="pro4348" id="pro4348"></a>1級節能 冰箱</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=177504&amp;ec=green_subsidy" id="prod177504"
+                  name="prod177504">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201706/177504_M.jpg?t=20221010172438" border="0"></p>
+                  <storg>三星SAMSUNG 258公升 極簡雙門變頻冰箱</storg>
+                  <h4>濾淨除臭技術　Easy Slide滑動式層架...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>74</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>13,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=181121&amp;ec=green_subsidy" id="prod181121"
+                  name="prod181121">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201710/181121_M.jpg?t=20210810115424" border="0"></p>
+                  <storg>LG 525公升鏡面上下門變頻冰箱</storg>
+                  <h4>直驅變頻壓縮機</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$34,900</em> <i>活動價$</i>29,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=218060&amp;ec=green_subsidy" id="prod218060"
+                  name="prod218060">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202105/218060_M.jpg?t=20210721150827" border="0"></p>
+                  <storg>日立 HITACHI 527公升平面式無邊框鋼板六門冰箱...</storg>
+                  <h4>登錄送 虛擬商品券$2000</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$62,400</em> <i>活動價$</i>57,408 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183965&amp;ec=green_subsidy" id="prod183965"
+                  name="prod183965">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183965_M.jpg?t=20230220134413" border="0"></p>
+                  <storg>享最高補助$3500元 | 東元TECO 99公升 單門小鮮綠冰箱(白色)...</storg>
+                  <h4>★領券再折$100★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$6,690</em> <i>活動價$</i>5,990 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212496&amp;ec=green_subsidy" id="prod212496"
+                  name="prod212496">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212496_M.jpg?t=20220517142235" border="0"></p>
+                  <storg>日立HITACHI 230公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,400</em> <i>活動價$</i>16,928 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=178319&amp;ec=green_subsidy" id="prod178319"
+                  name="prod178319">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201707/178319_M.jpg?t=20210705095217" border="0"></p>
+                  <storg>LG 525公升上下門變頻冰箱</storg>
+                  <h4>0度低溫保鮮室</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$32,490</em> <i>活動價$</i>27,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=219500&amp;ec=green_subsidy" id="prod219500"
+                  name="prod219500">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202107/219500_M.jpg?t=20210911165226" border="0"></p>
+                  <storg>HITACHI 313公升雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$28,400</em> <i>活動價$</i>26,128 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212286&amp;ec=green_subsidy" id="prod212286"
+                  name="prod212286">
+                  <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212286_M.jpg?t=20210723133539" border="0"></p>
+                  <storg>HITACHI 313公升雙風扇雙門變頻冰箱</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$26,400</em> <i>活動價$</i>24,288 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+
+
+
+          <h2 class="protitle"><a name="pro4349" id="pro4349"></a>金級省水 洗衣機</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=202470&amp;ec=green_subsidy" id="prod202470"
+                  name="prod202470">
+                  <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201909/202470_M.jpg?t=20221212170208" border="0"></p>
+                  <storg>東元TECO 10公斤 變頻洗衣機</storg>
+                  <h4>★領券再折$200★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>85</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$12,900</em> <i>活動價$</i>10,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=200026&amp;ec=green_subsidy" id="prod200026"
+                  name="prod200026">
+                  <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201907/200026_M.jpg?t=20220808131107" border="0"></p>
+                  <storg>LG 17公斤6-MOTION DDD變頻洗衣機</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>89</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$25,900</em> <i>活動價$</i>22,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=229700&amp;ec=green_subsidy" id="prod229700"
+                  name="prod229700">
+                  <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202206/229700_M.jpg?t=20230329162752" border="0"></p>
+                  <storg>Panasonic 14公斤大海龍洗衣機</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$15,900</em> <i>活動價$</i>14,310 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=198526&amp;ec=green_subsidy" id="prod198526"
+                  name="prod198526">
+                  <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201905/198526_M.jpg?t=20220429172403" border="0"></p>
+                  <storg>LG 17公斤蒸善美DD直驅變頻洗衣機</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>93</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$27,900</em> <i>活動價$</i>25,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=199534&amp;ec=green_subsidy" id="prod199534"
+                  name="prod199534">
+                  <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201906/199534_M.jpg?t=20220517143007" border="0"></p>
+                  <storg>東元 12公斤洗脫烘滾筒洗衣機</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>67</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$26,900</em> <i>活動價$</i>17,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=206844&amp;ec=green_subsidy" id="prod206844"
+                  name="prod206844">
+                  <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202003/206844_M.jpg?t=20210804172520" border="0"></p>
+                  <storg>LG 15公斤蒸氣洗脫烘滾筒洗衣機</storg>
+                  <h4>蒸氣殺菌 去除99.9%過敏原</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>86</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$43,900</em> <i>活動價$</i>37,710 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=218535&amp;ec=green_subsidy" id="prod218535"
+                  name="prod218535">
+                  <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202106/218535_M.jpg?t=20220420182024" border="0"></p>
+                  <storg>聲寶 17公斤單槽變頻洗衣機</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>85</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$18,900</em> <i>活動價$</i>15,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=234079&amp;ec=green_subsidy" id="prod234079"
+                  name="prod234079">
+                  <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202209/234079_M.jpg?t=20230329162832" border="0"></p>
+                  <storg>國際 Panasonic 19公斤洗脫滾筒洗衣機</storg>
+                  <h4>★最新降價★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$37,900</em> <i>活動價$</i>34,110 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+
+
+
+          <h2 class="protitle"><a name="pro4350" id="pro4350"></a>1級節能 分離式空調</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=226168&amp;ec=green_subsidy" id="prod226168"
+                  name="prod226168">
+                  <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202203/226168_M.jpg?t=20220510113311" border="0"></p>
+                  <storg>禾聯 HERAN R32 一對一變頻單冷空調</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$35,400</em> <i>活動價$</i>32,400 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=226870&amp;ec=green_subsidy" id="prod226870"
+                  name="prod226870">
+                  <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202203/226870_M.jpg?t=20220722140811" border="0"></p>
+                  <storg>國際 Panasonic ECONAVI+nanoe1對1變頻冷暖空調...</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$86,300</em> <i>活動價$</i>77,670 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=236934&amp;ec=green_subsidy" id="prod236934"
+                  name="prod236934">
+                  <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202301/236934_M.jpg?t=20230214131712" border="0"></p>
+                  <storg>Panasonic ECONAVI+nanoeX1對1變頻單冷空調...</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$85,500</em> <i>活動價$</i>78,660 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183905&amp;ec=green_subsidy" id="prod183905"
+                  name="prod183905">
+                  <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183905_M.jpg?t=20210225164650" border="0"></p>
+                  <storg>Panasonic ECONAVI+nanoe1對1變頻冷暖空調</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>89</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$41,200</em> <i>活動價$</i>36,500 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=226188&amp;ec=green_subsidy" id="prod226188"
+                  name="prod226188">
+                  <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202203/226188_M.jpg?t=20220510113642" border="0"></p>
+                  <storg>禾聯 HERAN R32 一對一變頻冷暖空調</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$79,900</em> <i>活動價$</i>71,910 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=195076&amp;ec=green_subsidy" id="prod195076"
+                  name="prod195076">
+                  <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201902/195076_M.jpg?t=20210225171819" border="0"></p>
+                  <storg>國際牌Panasonic ECONAVI+nanoeX 1對1變頻冷暖空調...</storg>
+                  <h4>ECONAVI 智慧節能科技(人體+日照)雙感應...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>85</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$32,900</em> <i>活動價$</i>27,965 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=238214&amp;ec=green_subsidy" id="prod238214"
+                  name="prod238214">
+                  <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202303/238214_M.jpg?t=20230421100902" border="0"></p>
+                  <storg>Panasonic 1對1變頻單冷空調</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$80,400</em> <i>活動價$</i>72,360 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=236927&amp;ec=green_subsidy" id="prod236927"
+                  name="prod236927">
+                  <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202301/236927_M.jpg?t=20230214132002" border="0"></p>
+                  <storg>Panasonic ECONAVI+nanoeX1對1變頻單冷空調...</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$35,700</em> <i>活動價$</i>32,130 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+
+
+
+          <h2 class="protitle"><a name="pro4352" id="pro4352"></a>1級節能 窗型空調</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=216178&amp;ec=green_subsidy" id="prod216178"
+                  name="prod216178">
+                  <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202103/216178_M.jpg?t=20210305143214" border="0"></p>
+                  <storg>TECO窗型變頻單冷空調</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>83</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$22,900</em> <i>活動價$</i>18,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=196721&amp;ec=green_subsidy" id="prod196721"
+                  name="prod196721">
+                  <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201903/196721_M.jpg?t=20210621165327" border="0"></p>
+                  <storg>日立HITACHI 窗型變頻雙吹單冷空調</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$38,800</em> <i>活動價$</i>34,920 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=200208&amp;ec=green_subsidy" id="prod200208"
+                  name="prod200208">
+                  <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201907/200208_M.jpg?t=20210316134721" border="0"></p>
+                  <storg>HERAN R32 窗型變頻單冷空調</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>91</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$60,900</em> <i>活動價$</i>54,900 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=216179&amp;ec=green_subsidy" id="prod216179"
+                  name="prod216179">
+                  <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202103/216179_M.jpg?t=20210305143214" border="0"></p>
+                  <storg>TECO窗型變頻單冷空調</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>91</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$24,900</em> <i>活動價$</i>22,490 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=196722&amp;ec=green_subsidy" id="prod196722"
+                  name="prod196722">
+                  <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201903/196722_M.jpg?t=20210621163839" border="0"></p>
+                  <storg>日立窗型變頻雙吹單冷空調</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$42,990</em> <i>活動價$</i>38,691 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=196121&amp;ec=green_subsidy" id="prod196121"
+                  name="prod196121">
+                  <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201903/196121_M.jpg?t=20210309134220" border="0"></p>
+                  <storg>(福利品)聲寶窗型變頻單冷空調(左吹)</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>68</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$38,400</em> <i>活動價$</i>26,112 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=216182&amp;ec=green_subsidy" id="prod216182"
+                  name="prod216182">
+                  <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202103/216182_M.jpg?t=20210727143514" border="0"></p>
+                  <storg>TECO窗型變頻冷暖空調</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>89</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$34,490</em> <i>活動價$</i>30,400 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=208552&amp;ec=green_subsidy" id="prod208552"
+                  name="prod208552">
+                  <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202006/208552_M.jpg?t=20210311132450" border="0"></p>
+                  <storg>禾聯HERAN R32 窗型變頻單冷空調</storg>
+                  <h4>免費標準安裝定位</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>92</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$22,900</em> <i>活動價$</i>20,900 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+
+
+
+          <h2 class="protitle"><a name="pro4353" id="pro4353"></a>1級節能 除濕機</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=233953&amp;ec=green_subsidy" id="prod233953"
+                  name="prod233953">
+                  <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202209/233953_M.jpg?t=20230904112020" border="0"></p>
+                  <storg>國際 Panasonic 16L變頻除濕機</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>88</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$19,590</em> <i>活動價$</i>17,239 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=180193&amp;ec=green_subsidy" id="prod180193"
+                  name="prod180193">
+                  <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201709/180193_M.jpg?t=20230515100617" border="0"></p>
+                  <storg>國際牌Panasonic 6L 除濕機</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$5,790</em> <i>活動價$</i>5,200 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=180195&amp;ec=green_subsidy" id="prod180195"
+                  name="prod180195">
+                  <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201709/180195_M.jpg?t=20230719094440" border="0"></p>
+                  <storg>國際牌Panasonic 6L 除濕機</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$7,790</em> <i>活動價$</i>7,000 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212883&amp;ec=green_subsidy" id="prod212883"
+                  name="prod212883">
+                  <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212883_M.jpg?t=20220429171047" border="0"></p>
+                  <storg>SHARP 8L清淨除濕機</storg>
+                  <h4>★領券再折$200★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>79</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$8,990</em> <i>活動價$</i>7,080 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=221953&amp;ec=green_subsidy" id="prod221953"
+                  name="prod221953">
+                  <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202110/221953_M.jpg?t=20230908142141" border="0"></p>
+                  <storg>聲寶6公升除濕機</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>93</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$5,090</em> <i>活動價$</i>4,690 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=183350&amp;ec=green_subsidy" id="prod183350"
+                  name="prod183350">
+                  <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201801/183350_M.jpg?t=20230208090056" border="0"></p>
+                  <storg>東元TECO 6L 除濕機</storg>
+                  <h4>★領券再折$100★</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>89</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$5,290</em> <i>活動價$</i>4,680 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=217065&amp;ec=green_subsidy" id="prod217065"
+                  name="prod217065">
+                  <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202104/217065_M.jpg?t=20221019141609" border="0"></p>
+                  <storg>威技6L清淨除濕機</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>7</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$5,590</em> <i>活動價$</i>3,890 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=212543&amp;ec=green_subsidy" id="prod212543"
+                  name="prod212543">
+                  <p class="itemF_img"><img id="RTProd_ctl10_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202010/212543_M.jpg?t=20211103112540" border="0"></p>
+                  <storg>國際牌Panasonic 10L清淨除濕機</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>9</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$14,390</em> <i>活動價$</i>12,950 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+
+
+
+          <h2 class="protitle"><a name="pro4369" id="pro4369"></a>節能涼風扇</h2>
+
+
+
+
+
+
+
+          <div class="list_F bg01">
+            <ul>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=215395&amp;ec=green_subsidy" id="prod215395"
+                  name="prod215395">
+                  <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202101/215395_M.jpg?t=20230821122434" border="0"></p>
+                  <storg>(福利品) 聲寶14吋微電腦遙控DC立扇</storg>
+                  <h4>DC直流，低耗電量、省能源，可預約開機...</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>65</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$1,988</em> <i>活動價$</i>1,288 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=223758&amp;ec=green_subsidy" id="prod223758"
+                  name="prod223758">
+                  <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202112/223758_M.jpg?t=20220412143326" border="0"></p>
+                  <storg>CHIMEI 16吋DC馬達ECO遙控擺頭立扇</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>74</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$3,388</em> <i>活動價$</i>2,488 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=164957&amp;ec=green_subsidy" id="prod164957"
+                  name="prod164957">
+                  <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/201603/164957_M.jpg?t=20230904112133" border="0"></p>
+                  <storg>國際牌Panasonic 14吋經典型DC直流風扇</storg>
+                  <h4>ECO溫度感知</h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>81</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$3,090</em> <i>活動價$</i>2,490 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=225841&amp;ec=green_subsidy" id="prod225841"
+                  name="prod225841">
+                  <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202203/225841_M.jpg?t=20220420113409" border="0"></p>
+                  <storg>國際 Panasonic 16吋經典型DC直流風扇</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>81</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$3,390</em> <i>活動價$</i>2,719 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=223757&amp;ec=green_subsidy" id="prod223757"
+                  name="prod223757">
+                  <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202112/223757_M.jpg?t=20230308173058" border="0"></p>
+                  <storg>CHIMEI 16吋DC馬達ECO微電腦立扇</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>69</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$2,888</em> <i>活動價$</i>1,988 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=223755&amp;ec=green_subsidy" id="prod223755"
+                  name="prod223755">
+                  <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202112/223755_M.jpg?t=20230713150917" border="0"></p>
+                  <storg>CHIMEI 14吋DC馬達ECO微電腦立扇</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>67</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$2,688</em> <i>活動價$</i>1,788 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=223756&amp;ec=green_subsidy" id="prod223756"
+                  name="prod223756">
+                  <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202112/223756_M.jpg?t=20220412143503" border="0"></p>
+                  <storg>CHIMEI 14吋DC馬達ECO遙控擺頭立扇</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>72</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$3,188</em> <i>活動價$</i>2,288 </strong>
+                  </div>
+                </a></li>
+
+              <li><a href="http://www.tk3c.com/pt.aspx?pid=236864&amp;ec=green_subsidy" id="prod236864"
+                  name="prod236864">
+                  <p class="itemF_img"><img id="RTProd_ctl11_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                      src="https://www.cdn-tkec.tw/image/product/202301/236864_M.jpg?t=20230118183007" border="0"></p>
+                  <storg>聲寶16吋微電腦遙控DC節能立扇</storg>
+                  <h4 class="empty"></h4>
+                  <div class="boxF_price">
+                    <p class="iconF_pro"><span>61</span>折</p>
+                    <strong class="txt_red fred"> <em>市價$2,988</em> <i>活動價$</i>1,799 </strong>
+                  </div>
+                </a></li>
+
+
+            </ul>
+          </div>
+
+
+
+
+          <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+          <div id="TkecFooter">
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+            <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+
+
+            <style>
+              @charset "utf-8";
+
+              * {
+                margin: 0;
+                padding: 0
+              }
+
+              *:focus {
+                outline: none;
+              }
+
+              /*黃框消除*/
+
+              * {
+                -webkit-text-size-adjust: none;
+              }
+
+              /*字體尺寸限制解除*/
+
+              a {
+                text-decoration: none;
+                cursor: pointer
+              }
+
+              img {
+                border: 0px;
+              }
+
+              /*圖片超連結邊框消除*/
+
+              .acbankbox .fred {
+                color: #F00;
+                font-weight: bold;
+                margin-bottom: 10px;
+              }
+
+              .acbankbox .fgray {
+                color: #666;
+              }
+
+              .acbankbox .bgcolor {
+                background: #999;
+              }
+
+              /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+              @media screen and (min-width:751px) {
+                .acbankbox {
+                  display: block;
+                  width: 1144px;
+                  margin: 0 auto;
+                  font-family: Century Gothic, "微軟正黑體";
+                  overflow: hidden;
+                }
+
+                /*銀行刷卡資料*/
+                .acbankbox .list2 {
+                  width: 100%;
+                  float: left;
+                  text-align: center;
+                  padding: 16px;
+                  position: relative;
+                  display: block;
+                  border-radius: 40px 40px 0 0;
+                  -moz-border-radius: 40px 40px 0 0;
+                  -webkit-border-radius: 40px 40px 0 0;
+                  box-sizing: border-box;
+                }
+
+                .acbankbox .list2 u {
+                  line-height: 60px;
+                  background: #666;
+                  color: #FF0;
+                  text-align: center;
+                  font-weight: bold;
+                  border-radius: 40px;
+                  -moz-border-radius: 40px;
+                  -webkit-border-radius: 40px;
+                  display: block;
+                  font-size: 40px;
+                  text-decoration: none;
+                  margin-bottom: 10px;
+                  letter-spacing: 1px;
+                }
+
+                .acbankbox .list2 ul li {
+                  width: 210px;
+                  text-align: center;
+                  float: left;
+                  margin: 6px;
+                  background: #FFF;
+                  border-radius: 10px;
+                  -moz-border-radius: 10px;
+                  -webkit-border-radius: 10px;
+                  list-style: none;
+                }
+
+                .acbankbox .list2 .item_img {
+                  width: 100%;
+                  float: left;
+                  margin: 10px auto 5px auto;
+                }
+
+                .acbankbox .list2 .item_img img {
+                  width: 82%;
+                }
+
+                .acbankbox .list2 p {
+                  width: 100%;
+                  display: block;
+                  float: left;
+                }
+
+                .acbankbox .list2 .item_text05 {
+                  font-size: 13px;
+                  margin-top: 0px;
+                  text-align: center;
+                }
+
+                .acbankbox .list2 .item_text05 em {
+                  line-height: 38px;
+                  font-size: 38px;
+                  font-style: normal;
+                  display: block;
+                }
+
+                .acbankbox .list2 .item_text05 em:before {
+                  content: "最高";
+                  width: 16px;
+                  display: inline-block;
+                  line-height: 17px;
+                  margin-right: 2px;
+                  color: #666;
+                  padding: 1px;
+                  font-size: 15px;
+                }
+
+                .acbankbox .box06 {
+                  display: none;
+                }
+              }
+
+              /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+              @media screen and (min-width: 320px) and (max-width: 750px) {
+                .acbankbox {
+                  display: block;
+                  width: 100%;
+                  margin: 0 auto;
+                  font-family: Century Gothic, "微軟正黑體";
+                }
+
+                /*銀行刷卡資料*/
+                .acbankbox .list2 {
+                  width: 100%;
+                  float: left;
+                  text-align: center;
+                  position: relative;
+                  display: block;
+                  box-sizing: border-box;
+                  padding-bottom: 1%;
+                }
+
+                .acbankbox .list2 u {
+                  width: 96%;
+                  line-height: 60px;
+                  background: #666;
+                  color: #FF0;
+                  text-align: center;
+                  font-weight: bold;
+                  display: block;
+                  font-size: 200%;
+                  text-decoration: none;
+                  margin-bottom: 10px;
+                  margin: 2% auto;
+                  border-radius: 40px;
+                  -moz-border-radius: 40px;
+                  -webkit-border-radius: 40px;
+                }
+
+                .acbankbox .list2 ul li {
+                  height: auto;
+                  width: 48%;
+                  text-align: center;
+                  float: left;
+                  margin: 1%;
+                  background: #FFF;
+                  border-radius: 10px;
+                  -moz-border-radius: 10px;
+                  -webkit-border-radius: 10px;
+                  list-style: none;
+                  box-sizing: border-box;
+                  padding-bottom: 4%;
+                }
+
+                .acbankbox .list2 .item_img {
+                  width: 100%;
+                  float: left;
+                  margin: 10px auto 5px auto;
+                }
+
+                .acbankbox .list2 .item_img img {
+                  width: 85%;
+                }
+
+                .acbankbox .list2 p {
+                  width: 100%;
+                  display: block;
+                  float: left;
+                }
+
+                .acbankbox .list2 .item_text05 {
+                  font-size: 100%;
+                  margin-top: 0px;
+                }
+
+                .acbankbox .list2 .item_text05 em {
+                  line-height: 1em;
+                  font-size: 200%;
+                  font-style: normal;
+                  display: inline-block;
+                }
+
+                .acbankbox .list2 .item_text05 em:before {
+                  content: "最高";
+                  width: 16px;
+                  display: inline-block;
+                  line-height: 17px;
+                  margin-right: 2px;
+                  color: #666;
+                  padding: 1px;
+                  font-size: 15px;
+                }
+
+                /* .acbankbox .box06 {} */
+              }
+            </style>
+            <div class="acbankbox">
+              <!--銀行區 st-->
+              <div class="list2 bgcolor">
+                <u>9月銀行 刷卡享好康</u>
+                <ul>
+
+                  <!--永豐-->
+                  <li>
+                    <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                      <p class="item_img"><img
+                          src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-05.jpg"></p>
+                      <p class="item_text05 fred"><em>送$7500</em>刷卡金</p>
+                    </a>
+                  </li>
+
+                  <!--星展-->
+                  <li>
+                    <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                      <p class="item_img"><img
+                          src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-03.jpg"></p>
+                      <p class="item_text05 fred"><em>送6%</em>燦坤K幣</p>
+                    </a>
+                  </li>
+
+                  <!--燦坤-->
+                  <li>
+                    <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                      <p class="item_img"><img
+                          src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-01.jpg"></p>
+                      <p class="item_text05 fred"><em>送2100</em>燦坤K幣</p>
+                    </a>
+                  </li>
+
+                  <!--台新-->
+                  <li>
+                    <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                      <p class="item_img"><img
+                          src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-02.jpg"></p>
+                      <p class="item_text05 fred"><em>送$2000</em>刷卡金</p>
+                    </a>
+                  </li>
+
+                  <!--悠遊付-->
+                  <li>
+                    <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                      <p class="item_img"><img
+                          src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-16.jpg"></p>
+                      <p class="item_text05 fred">單筆滿額<em>送6%</em></p>
+                    </a>
+                  </li>
+
+
+                </ul>
+              </div>
+              <!--銀行區 end-->
+            </div>
+          </div>
+        </div>
+        <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+        <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+
+
+
+
+      </div>
+  </form>
+
+</body>
+
+</html>
