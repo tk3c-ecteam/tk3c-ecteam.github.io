@@ -2137,12 +2137,10 @@
     <!--  8/17新增紅包雨遊戲 -->
     <!-- 紅包雨 -->
     <section id="red-group" v-if="isRed">
-      <canvas id="particle_canvas" v-if="isEffect"></canvas>
+      <canvas id="particle_canvas" v-show="isEffect"></canvas>
       <div class="envel-content" :class="{active:active}">
         <ul>
-          <li v-for="i in 6">
-            <a @click="choice"><img :src="'images/game/card.png' | siteUrl"></a>
-          </li>
+          <a @click="choice"><img :src="'images/game/card.png' | siteUrl"></a>
         </ul>
       </div>
     </section>

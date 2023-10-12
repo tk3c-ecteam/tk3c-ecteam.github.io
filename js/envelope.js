@@ -20,13 +20,16 @@ document.addEventListener("DOMContentLoaded", function () {
       timing: 5,//5秒內下紅包雨
       active: false,//搶紅包區塊開關
       count: 0,//計算點擊紅包次數
-      rewardImg: '',//抽到獎金圖
-      isEffect: false,//紅包雨效果,
+      rewardImg: '',//抽到獎金圖,
+      isEffect: true,//顯示紅包雨
       today: new Date()
     },
     mounted() {
+      this.isRed = true;//搶紅包區塊
 
-      this.goRain();//下紅包雨
+      setTimeout(() => {
+        this.goRain();//下紅包雨
+      }, 20);
     },
     filters: {
       siteUrl: function (value) {
@@ -65,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
         this.rewardImg = this.getMsgImg('images/game/' + this.reward);
         setTimeout(() => {
           this.active = false;
+
+          //sweetalert2 彈跳視窗
           Swal.fire({
             imageUrl: this.rewardImg,
             showCloseButton: true,
@@ -112,19 +117,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       },
       goRain() {
-        //紅包雨
-        this.isRed = true;
-        $('body').css('overflow-y', 'hidden');
-        this.isEffect = true;
-
-        var countdown = setInterval(() => {
+        //紅包雨落下時間
+        var countDown = window.setInterval(() => {
           this.timing--;
+          if (this.timing < 0) this.timing = 0;
           if (this.timing === 0) {
+            window.clearInterval(countDown);
+
             this.isEffect = false;
             this.active = true;
-            this.timing = 6;
-            clearInterval(countdown);
           }
+
         }, 1000);
       }
     }
