@@ -62,10 +62,10 @@ if (window.innerWidth < 1024) {
 		function () {
 			//var options = {};
 			var options = {
-				amount: 20,
-				size: [30, 60],
+				amount: 40,
+				size: [50, 70],
 				rotation: [10, 0],
-				speed: [50, 200],
+				speed: [90, 300],
 				//speed: [55, 250],
 				swing: [0.5, 2],
 				amplitude: [30, 80],
@@ -90,10 +90,10 @@ if (window.innerWidth < 1024) {
 		function () {
 			//var options = {};
 			var options = {
-				amount: 50,
+				amount: 80,
 				size: [30, 80],
 				rotation: [1, 10],
-				speed: [60, 150],
+				speed: [100, 300],
 				//speed: [55, 250],
 				swing: [0.5, 5],
 				amplitude: [60, 80],
