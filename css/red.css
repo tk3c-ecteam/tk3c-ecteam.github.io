@@ -54,6 +54,16 @@
   width: 100%;
   max-width: 100%;
 }
+#red-group .close {
+  width: 5%;
+  height: auto;
+  display: block;
+  position: absolute;
+  right: 30%;
+  top: 10%;
+  z-index: 20;
+  cursor: pointer;
+}
 
 .swal2-container img {
   width: 100%;
@@ -83,6 +93,13 @@
   #red-group .envel-content li {
     width: 50%;
     margin: 0 -3% 2%;
+  }
+  #red-group .close {
+    width: 18%;
+    right: 3%;
+    top: 25%;
+    cursor: auto;
+    opacity: 1;
   }
 }
 @media screen and (max-width: 320px) {

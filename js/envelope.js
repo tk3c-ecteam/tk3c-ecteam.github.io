@@ -129,6 +129,10 @@ document.addEventListener("DOMContentLoaded", function () {
           }
 
         }, 1000);
+      },
+      //關閉搶紅包區域
+      closeAlert() {
+        this.isRed = false;
       }
     }
   });
