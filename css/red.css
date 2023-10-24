@@ -59,7 +59,7 @@
   height: auto;
   display: block;
   position: absolute;
-  right: 30%;
+  right: 10%;
   top: 10%;
   z-index: 20;
   cursor: pointer;
@@ -101,7 +101,7 @@
   #red-group .close {
     width: 18%;
     right: 3%;
-    top: 25%;
+    top: 20%;
     cursor: auto;
     opacity: 1;
   }
