@@ -69,6 +69,10 @@
   width: 100%;
   max-width: 100%;
 }
+.swal2-container .swal2-close {
+  width: 15%;
+  height: auto;
+}
 
 #particle_canvas {
   width: 100%;
