@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="這個雙11太狠了，雙11來下廚">
+  <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="雙11來下廚｜燦坤線上">
+  <meta property="og:description" content="這個雙11太狠了，雙11來下廚">
+  <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/foodOnly/index.html">
+
+  <title>雙11來下廚｜燦坤線上</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@5.4.5/css/swiper.min.css">
+
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/foodOnly/css/double11_cook.css" rel="stylesheet"
+    type="text/css">
+
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "foodOnly";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    ChkEvent(1965)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+  <script>
+    $.ajax({
+      url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery-scrolldepth/1.0.0/jquery.scrolldepth.min.js',
+      type: "POST",
+      dataType: 'script',
+      success: function () {
+        jQuery(function () {
+          jQuery.scrollDepth({
+            pixelDepth: false,
+            gtmOverride: true
+          });
+        });
+      }
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <form name="form1" method="post" action="./index.aspx?mainid=1965&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <form name="form1" method="post"
+        action="./top.aspx?url=https%3a%2f%2fevents.tk3c.com%2fevents_net%2ffoodOnly%2findex.html%3fec%3didx-b9"
+        id="form1">
+        <div>
+          <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+            value="/wEPDwUJMzMwOTY5MjMzD2QWAgIBD2QWBAIBD2QWAgIBDxYCHgRUZXh0Ba4BPGEgaHJlZj0iaHR0cHM6Ly93d3cudGszYy5jb20vbWVtYmVyL21lbWJlcl9sb2dpbi5hc3B4P2RvbmU9V0FwSWg5ZVNsQnpGS1p3Y3hpVFpJUWFHbU9aWmZaL05yc2VqUzBDY3F6ZG5HUTlPano1S1UxM29PN0xYTDNGb2hwUUlzRklMWkhZTlhBazFHZzQyeTJyQ25MVW1vdjZTIj7mnIPlk6HnmbvlhaU8L2E+ZAIDD2QWGAIBDxYEHglpbm5lcmh0bWwFDW91dGxldCDnibnos6MeBGhyZWYFNmh0dHBzOi8vd3d3LnRrM2MuY29tL3Byb2R1Y3QvMjAxMjA1YmVuZWZpdHMvaW5kZXguYXNweGQCAw8WBB8BBQzmnIDmlrDpmY3lg7kfAgU9aHR0cHM6Ly9ldmVudHMudGszYy5jb20vZXZlbnRzX25ldC8yMDE3Q29tbW9kaXRpZXMvaW5kZXguYXNweGQCBQ8WBB8BBQ/lpJzplpPmmJ/lhYnlg7kfAgU+aHR0cHM6Ly9ldmVudHMudGszYy5jb20vZXZlbnRzX25ldC8yMDE3X25pZ2h0Y291cG9uL2luZGV4LmFzcHhkAgcPFgQfAQUP54em5Z2k5o+q5ZyY6LO8HwIFN2h0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvdGszY2dyb3VwL2luZGV4Lmh0bWxkAgkPFgQfAQUP5pyD5ZOh5oqY5YO55Yi4HwIFN2h0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvdmlwY291cG9uL2luZGV4LmFzcHhkAgsPFgQfAQUP5ZOB54mM5oqY5YO55Yi4HwIFPGh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQva2luZ3NfZGlzY291bnQvaW5kZXguaHRtbGQCDw9kFgJmDxYEHwEFDW91dGxldCDnibnos6MfAgU2aHR0cHM6Ly93d3cudGszYy5jb20vcHJvZHVjdC8yMDEyMDViZW5lZml0cy9pbmRleC5hc3B4ZAIRD2QWAmYPFgQfAQUM5pyA5paw6ZmN5YO5HwIFPWh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQvMjAxN0NvbW1vZGl0aWVzL2luZGV4LmFzcHhkAhMPZBYCZg8WBB8BBQ/lpJzplpPmmJ/lhYnlg7kfAgU+aHR0cHM6Ly9ldmVudHMudGszYy5jb20vZXZlbnRzX25ldC8yMDE3X25pZ2h0Y291cG9uL2luZGV4LmFzcHhkAhUPZBYCZg8WBB8BBQ/nh6blnaTmj6rlnJjos7wfAgU3aHR0cHM6Ly9ldmVudHMudGszYy5jb20vZXZlbnRzX25ldC90azNjZ3JvdXAvaW5kZXguaHRtbGQCFw9kFgJmDxYEHwEFD+acg+WToeaKmOWDueWIuB8CBTdodHRwczovL2V2ZW50cy50azNjLmNvbS9ldmVudHNfbmV0L3ZpcGNvdXBvbi9pbmRleC5hc3B4ZAIZD2QWAmYPFgQfAQUP5ZOB54mM5oqY5YO55Yi4HwIFPGh0dHBzOi8vZXZlbnRzLnRrM2MuY29tL2V2ZW50c19uZXQva2luZ3NfZGlzY291bnQvaW5kZXguaHRtbGRk04kabz3muXnkrMkLlvtYdOLPui0=">
+        </div>
+
+        <div>
+
+          <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6A345315">
+        </div>
+        <div id="PnTop">
+
+          <script>
+            var url = document.location.toString();
+            var arrUrl = url.split("?");
+            var fbhtml_url = arrUrl[0];
+          </script>
+
+
+
+
+          <!--活動頁上方灰bar st--->
+          <style>
+            #TopNum {
+              display: none;
+            }
+
+            #kuai3header {
+              width: 100%;
+              box-sizing: border-box;
+              z-index: 999;
+              background: #494949;
+              height: 45px;
+              line-height: 45px;
+            }
+
+            #kuai3header .words {
+              margin: 0 auto;
+              max-width: 1144px;
+            }
+
+            #kuai3header .words h1.logo {
+              background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+              width: 219px;
+              height: 35px;
+              display: inline-block;
+              text-indent: -9999px;
+              white-space: nowrap;
+              overflow: hidden;
+              float: left;
+              margin: 5px 10px;
+            }
+
+            #kuai3header .words ul.font {
+              /*float: right;*/
+              line-height: 45px;
+              display: block;
+              z-index: 99999;
+              list-style: none;
+              margin: 0;
+              height: 45px;
+              padding: 0;
+              overflow: hidden;
+              display: flex;
+              justify-content: flex-end;
+            }
+
+            #kuai3header .words ul.font li {
+              width: auto;
+              margin: 0;
+              padding: 0;
+              height: 40px;
+              display: inline-block;
+              text-align: right;
+              overflow: hidden;
+              flex-shrink: 0;
+            }
+
+            #kuai3header .words ul.font li>a {
+              color: #fff;
+              text-decoration: none;
+              font-size: 12px;
+              border-right: 1px solid #fff;
+              padding: 0 8px;
+              letter-spacing: 1px;
+              width: auto;
+            }
+
+            li.newsale a {
+              color: #FDFF00 !important;
+              line-height: 40px;
+            }
+
+            li.newsale a>b {
+              background: #FDFF00;
+              color: #494949;
+              border-radius: 5px;
+              padding: 0 2%;
+              font-size: 10px;
+              margin-right: 5px;
+            }
+
+            li.newsale a:after {
+              content: "▶";
+              margin-left: 5px;
+              font-size: 80%;
+            }
+
+            @media (max-width: 750px) {
+              .TkecTop .menu {
+                width: 100%;
+                background: #494949;
+                background: rgba(73, 73, 73, 0.95);
+                float: none;
+                overflow: hidden;
+                z-index: 99999;
+                max-height: 0;
+                position: absolute;
+                top: 44px;
+                right: 0;
+                left: 0;
+                -webkit-transition: max-height 1s;
+                -o-transition: max-height 1s;
+                transition: max-height 1s;
+              }
+
+              .TkecTop .menu li {
+                float: none;
+              }
+
+              .TkecTop .menu li:active {
+                background: rgba(120, 120, 120, 0.4);
+              }
+
+              .TkecTop .menu a {
+                height: 45px;
+                border: 0;
+                width: 100%;
+                display: block;
+              }
+            }
+
+            .menu-show .menu {
+              max-height: 480px;
+            }
+
+            #showmenu {
+              color: #FFF;
+              position: absolute;
+              top: 8px;
+              right: 15px;
+              font-size: 24px;
+              cursor: pointer;
+              display: none;
+              width: 30px;
+              height: 30px;
+            }
+
+            #showmenu span {
+              position: absolute;
+              display: block;
+              width: 20px;
+              height: 2px;
+              background: #fff;
+              top: 50%;
+              margin-top: -1px;
+              left: 50%;
+              margin-left: -10px;
+              -webkit-transition: background 0.3s;
+              -o-transition: background 0.3s;
+              transition: background 0.3s;
+            }
+
+            #showmenu span:before,
+            #showmenu span:after {
+              content: '';
+              position: absolute;
+              left: 0;
+              background: inherit;
+              width: 100%;
+              height: 100%;
+              -webkit-backface-visibility: hidden;
+              backface-visibility: hidden;
+              -webkit-transition: -webkit-transform 0.3s, background 0s;
+              -webkit-transition: background 0s, -webkit-transform 0.3s;
+              transition: background 0s, -webkit-transform 0.3s;
+              -o-transition: transform 0.3s, background 0s;
+              transition: transform 0.3s, background 0s;
+              transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+            }
+
+            #showmenu span:before {
+              top: -6px;
+            }
+
+            #showmenu span:after {
+              bottom: -6px;
+            }
+
+
+            /*瀏覽區域的寬度小於750像素*/
+            @media screen and (min-width: 320px) and (max-width: 750px) {
+              #showmenu {
+                display: block;
+              }
+
+              #kuai3header .words ul.font li {
+                width: 100%;
+                display: block;
+                text-align: left;
+              }
+
+              #kuai3header .words ul.font li>a {
+                border-right: 0px solid #fff;
+                font-size: 90%;
+              }
+
+              li.newsale a>b {
+                padding: 0.5% 2%;
+              }
+
+              #kuai3header .words .font {
+                display: block !important;
+              }
+
+              #kuai3header .words ul.font {
+                height: auto;
+              }
+            }
+          </style>
+          <div id="kuai3header" class="TkecTop">
+            <div class="words">
+              <a href="https://www.tk3c.com/?ec=foodOnly">
+                <h1 class="logo">燦坤線上購物</h1>
+              </a>
+              <span id="TopNum">28</span>
+              <ul class="font menu">
+
+                <li>
+                  <a
+                    href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0CcqzdnGQ9Ojz5KU13oO7LXL3FohpQIsFILZHYNXAk1Gg42y2rCnLUmov6S&amp;ec=foodOnly">會員登入</a>
+                </li>
+                <li><a href="https://www.tk3c.com/member/member_center.aspx?ec=foodOnly">會員中心</a></li>
+                <li><a href="https://www.tk3c.com/service/serviceindex.aspx?ec=foodOnly">客服中心</a></li>
+                <li><a href="javascript:void(0);?ec=foodOnly"
+                    onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+                </li>
+              </ul>
+              <div id="showmenu" class="menu-is-open"><span></span></div>
+            </div>
+          </div>
+          <script>
+            /*
+            $(document).ready(function () {
+                $('#showmenu').click(function (e) {
+                    e.preventDefault();
+                    $('body').toggleClass('menu-show');
+                    $(this).toggleClass('menu-is-open');
+                });
+            });
+            */
+
+            function domReady(fn) {
+              // If early
+              document.addEventListener("DOMContentLoaded", fn);
+              // If late
+              if (document.readyState === "interactive" || document.readyState === "complete") {
+                fn();
+              }
+            }
+
+            function regTopBarMenu() {
+              document.getElementById('showmenu').addEventListener('click', function (e) {
+                e.preventDefault();
+                var body = document.querySelector('body');
+                if (body.classList.contains('menu-show')) {
+                  body.classList.remove('menu-show');
+                } else {
+                  body.classList.add('menu-show');
+                }
+
+                var menuBtn = e.target;
+                if (menuBtn.classList.contains('menu-is-open')) {
+                  menuBtn.classList.remove('menu-is-open');
+                } else {
+                  menuBtn.classList.add('menu-is-open');
+                }
+              });
+            }
+            domReady(regTopBarMenu);
+          </script>
+
+        </div>
+
+
+
+
+      </form>
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: block;">
+      <img src="../events_net/foodOnly/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="1">熱銷分類</li>
+            <li data-id="2">熱門活動</li>
+            <li data-id="3">關注社群</li>
+          </ul>
+        </div>
+        <div class="box-area type">
+          <ul>
+          </ul>
+        </div>
+
+        <div class="box-area event">
+          <ul>
+
+          </ul>
+        </div>
+
+        <div class="box-area social">
+          <ul>
+            <li><a href="https://reurl.cc/QbZ149" target="_blank"><i class="fa-brands fa-meta"></i></a></li>
+            <li><a href="https://reurl.cc/7pMZVl" target="_blank"><i class="fa-brands fa-line"></i></a></li>
+            <li><a href="https://reurl.cc/3Ye8kX" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile"></a>
+
+    </div>
+    <div class="wrapper">
+
+
+
+
+      <div id="food-container">
+        <div class="background">
+          <span class="logo">
+            <img src="https://events.tk3c.com/events_net/events_net/double11_2023/images/logo.png">
+          </span>
+          <h2 class="title">
+            <img src="https://events.tk3c.com/events_net/events_net/foodOnly/images/2311/title.png">
+          </h2>
+        </div>
+
+        <div class="background2"></div>
+        <p class="people animate__animated animate__fadeInDown"> <img
+            src="https://events.tk3c.com/events_net/events_net/foodOnly/images/2311/people.png" /></p>
+
+
+        <section class="gift-box">
+          <ul>
+            <li class="long"><a href="https://events.tk3c.com/events_net/vipcoupon/index.aspx" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/foodOnly/images/2311/sp00.png"></a></li>
+            <li class="slide"></li>
+          </ul>
+        </section>
+
+      </div>
+
+
+      <!-- 左側選單 -->
+      <aside class="aside-container left">
+        <span class="collaspe"><i class="fas fa-chevron-left"></i></span>
+        <div class="aside-wrap">
+          <h3 class="aside-header"></h3>
+          <div class="aside-content">
+            <ul>
+
+            </ul>
+          </div>
+          <a href="#" class="go-top">GO TOP</a>
+        </div>
+      </aside>
+
+      <!-- 右側選單 -->
+      <aside class="aside-container">
+        <span class="arrow hide"><i class="fas fa-chevron-left"></i>熱銷分類</span>
+        <div class="aside-wrap">
+          <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+          <h3 class="aside-header"></h3>
+          <div class="aside-content">
+            <ul>
+
+            </ul>
+          </div>
+          <a href="#" class="go-top">GO TOP</a>
+        </div>
+      </aside>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@5.4.5/js/swiper.min.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+
+      <!-- 手機版選單 JS -->
+      <script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/foodOnly/js/double11_cook.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/double11_2023/js/aside.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/double11_2023/js/all_event.js"></script>
+
+    </div>
+    <div class="itemBox m_version_non">
+      <div id="btnBox03">
+        <div class="upbox">
+          <a href="#pro5174" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5174-微波爐')">微波爐</a>
+          <a href="#pro5175" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5175-烤箱')">烤箱</a>
+          <a href="#pro5541" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5541-電子鍋')">電子鍋</a>
+          <a href="#pro5542" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5542-電鍋')">電鍋</a>
+          <a href="#pro5543" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5543-萬用鍋')">萬用鍋</a>
+          <a href="#pro5176" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5176-廚具')">廚具</a>
+          <a href="#pro5545" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('foodOnly','click','5545-咖啡、冰飲')">咖啡、冰飲</a>
+          <a href="#pro5546" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5546-洗碗機')">洗碗機</a>
+          <a href="#pro5177" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('foodOnly','click','5177-展示出清')">展示出清</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="rightbtn" style="display: none;"><span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+      <div class="actbtn">
+        <a href="#pro5174" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5174-微波爐')">微波爐</a>
+        <a href="#pro5175" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5175-烤箱')">烤箱</a>
+        <a href="#pro5541" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5541-電子鍋')">電子鍋</a>
+        <a href="#pro5542" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5542-電鍋')">電鍋</a>
+        <a href="#pro5543" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5543-萬用鍋')">萬用鍋</a>
+        <a href="#pro5176" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5176-廚具')">廚具</a>
+        <a href="#pro5545" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5545-咖啡、冰飲')">咖啡、冰飲</a>
+        <a href="#pro5546" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5546-洗碗機')">洗碗機</a>
+        <a href="#pro5177" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','5177-展示出清')">展示出清</a>
+        <a href="#activity2881" class="btn_01 p01" onclick="ProcessGaEvent('foodOnly','click','2881-活動')">活動</a>
+
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+
+
+      <h2 class="protitle"><a name="pro5174" id="pro5174"></a>微波爐</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241967&amp;ec=foodOnly" id="prod241967" name="prod241967">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/241967_M.jpg?t=20231005134418" border="0"></p>
+              <storg>限量現折$1000元 | 象印 STAN.26L烘烤微波爐...</storg>
+              <h4>★限量領券再折$1000★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$22,990</em> <i>活動價$</i>22,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232338&amp;ec=foodOnly" id="prod232338" name="prod232338">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232338_M.jpg?t=20230329163138" border="0"></p>
+              <storg>Panasonic 25L微電腦微波爐</storg>
+              <h4>★最新降價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>3,590 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=226559&amp;ec=foodOnly" id="prod226559" name="prod226559">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/226559_M.jpg?t=20230915095203" border="0"></p>
+              <storg>聲寶天廚25L機械平台式微波爐</storg>
+              <h4>★最新降價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>68</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,290</em> <i>活動價$</i>2,890 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=193258&amp;ec=foodOnly" id="prod193258" name="prod193258">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201811/193258_M.jpg?t=20230329163019" border="0"></p>
+              <storg>國際牌Panasonic 32L 變頻微波爐</storg>
+              <h4>★領券再折$500★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,790</em> <i>活動價$</i>5,500 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=203519&amp;ec=foodOnly" id="prod203519" name="prod203519">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201910/203519_M.jpg?t=20230130140449" border="0"></p>
+              <storg>國際牌Panasonic 20L 微電腦微波爐</storg>
+              <h4>★領券再折$300★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,490</em> <i>活動價$</i>3,315 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=155289&amp;ec=foodOnly" id="prod155289" name="prod155289">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201506/155289_M.jpg?t=20230512145109" border="0"></p>
+              <storg>國際牌Panasonic 27L 變頻燒烤微波爐</storg>
+              <h4>★領券再折$980★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,390</em> <i>活動價$</i>7,970 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=141716&amp;ec=foodOnly" id="prod141716" name="prod141716">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201311/141716_M.jpg?t=20210113111318" border="0"></p>
+              <storg>國際牌Panasonic 23公升變頻烘燒烤微波爐</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$9,490</em> <i>活動價$</i>7,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=211451&amp;ec=foodOnly" id="prod211451" name="prod211451">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202009/211451_M.jpg?t=20221114102423" border="0"></p>
+              <storg>國際牌Panasonic 30L蒸烘烤微波爐</storg>
+              <h4>★最新降價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$32,900</em> <i>活動價$</i>29,610 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5175" id="pro5175"></a>烤箱</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228495&amp;ec=foodOnly" id="prod228495" name="prod228495">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228495_M.jpg?t=20220715150047" border="0"></p>
+              <storg>Panasonic 32L平面式電烤箱</storg>
+              <h4>送 矽膠隔熱手套組</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>3,120 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233946&amp;ec=foodOnly" id="prod233946" name="prod233946">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233946_M.jpg?t=20230302112249" border="0"></p>
+              <storg>聲寶20L電烤箱</storg>
+              <h4>居家必備調理神器</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,988</em> <i>活動價$</i>1,588 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=206349&amp;ec=foodOnly" id="prod206349" name="prod206349">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202003/206349_M.jpg?t=20210820135833" border="0"></p>
+              <storg>國際牌Panasonic 9L 遠近紅外線智能烤箱</storg>
+              <h4>★領券再折$400★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>96</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>4,741 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=223392&amp;ec=foodOnly" id="prod223392" name="prod223392">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/223392_M.jpg?t=20230310093017" border="0"></p>
+              <storg>惠而浦 32L不鏽鋼雙溫控旋風烤箱</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,000</em> <i>活動價$</i>2,680 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=210472&amp;ec=foodOnly" id="prod210472" name="prod210472">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202008/210472_M.jpg?t=20230619102945" border="0"></p>
+              <storg>東元TECO 20L 電烤箱</storg>
+              <h4>新規防爆玻璃，使用更安心</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,780</em> <i>活動價$</i>1,480 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239097&amp;ec=foodOnly" id="prod239097" name="prod239097">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239097_M.jpg?t=20230504183025" border="0"></p>
+              <storg>IRIS 14L氣炸烤箱 黑色</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,399</em> <i>活動價$</i>2,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=212817&amp;ec=foodOnly" id="prod212817" name="prod212817">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202010/212817_M.jpg?t=20210820165731" border="0"></p>
+              <storg>聲寶20L微電腦多功能氣炸烤箱</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,490</em> <i>活動價$</i>4,590 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=230603&amp;ec=foodOnly" id="prod230603" name="prod230603">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/230603_M.jpg?t=20230615132736" border="0"></p>
+              <storg>東元32L液脹式雙溫控旋風電烤箱</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,980</em> <i>活動價$</i>2,280 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5541" id="pro5541"></a>電子鍋</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241958&amp;ec=foodOnly" id="prod241958" name="prod241958">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/241958_M.jpg?t=20230816183019" border="0"></p>
+              <storg>象印10人份IH電子鍋</storg>
+              <h4>★領券再折$300★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$10,990</em> <i>活動價$</i>10,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=121005&amp;ec=foodOnly" id="prod121005" name="prod121005">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201111/121005_M.jpg?t=20210220161808" border="0"></p>
+              <storg>國際牌Panasonic 10人份 微電腦電子鍋</storg>
+              <h4>微電腦多樣化烹調行程</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,390</em> <i>活動價$</i>1,790 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241957&amp;ec=foodOnly" id="prod241957" name="prod241957">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/241957_M.jpg?t=20230816183019" border="0"></p>
+              <storg>象印6人份IH電子鍋</storg>
+              <h4>★領券再折$300★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$9,990</em> <i>活動價$</i>9,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=198824&amp;ec=foodOnly" id="prod198824" name="prod198824">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201905/198824_M.jpg?t=20210129163832" border="0"></p>
+              <storg>國際牌Panasonic 10人份 機械式電子鍋</storg>
+              <h4>★領券再折$200★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,190</em> <i>活動價$</i>2,080 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=222252&amp;ec=foodOnly" id="prod222252" name="prod222252">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202110/222252_M.jpg?t=20230725155652" border="0"></p>
+              <storg>聲寶10人份微電腦電子鍋</storg>
+              <h4>八種烹煮模式</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,788</em> <i>活動價$</i>2,288 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240918&amp;ec=foodOnly" id="prod240918" name="prod240918">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240918_M.jpg?t=20230920085941" border="0"></p>
+              <storg>象印分離式鐵板燒烤組</storg>
+              <h4>★領券再折$500★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>3,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=196517&amp;ec=foodOnly" id="prod196517" name="prod196517">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201903/196517_M.jpg?t=20210113105942" border="0"></p>
+              <storg>國際牌Panasonic 10人份 日本製微電腦電子鍋...</storg>
+              <h4>★領券再折$500★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,590</em> <i>活動價$</i>4,360 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=141324&amp;ec=foodOnly" id="prod141324" name="prod141324">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201311/141324_M.jpg?t=20210126160941" border="0"></p>
+              <storg>象印ZOJIRUSHI 6人份 微電腦電子鍋</storg>
+              <h4>★領券再折$100★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,590</em> <i>活動價$</i>4,041 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5542" id="pro5542"></a>電鍋</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=188158&amp;ec=foodOnly" id="prod188158" name="prod188158">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201806/188158_M.jpg?t=20220901100905" border="0"></p>
+              <storg>大同TATUNG 10人份 304不鏽鋼內鍋電鍋-蘋果綠...</storg>
+              <h4>獨家限量款 採用SUS304不鏽鋼外鍋蓋及內鍋...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,090</em> <i>活動價$</i>2,750 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234553&amp;ec=foodOnly" id="prod234553" name="prod234553">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202210/234553_M.jpg?t=20230411115042" border="0"></p>
+              <storg>大同10人份不鏽鋼電鍋(寶石紅)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,390</em> <i>活動價$</i>3,890 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237434&amp;ec=foodOnly" id="prod237434" name="prod237434">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237434_M.jpg?t=20230323103234" border="0"></p>
+              <storg>大同6人份不鏽鋼電鍋(迪士尼)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>4,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=198823&amp;ec=foodOnly" id="prod198823" name="prod198823">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201905/198823_M.jpg?t=20230920103020" border="0"></p>
+              <storg>大同TATUNG 11人份 全304不鏽鋼電鍋</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,490</em> <i>活動價$</i>4,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=221206&amp;ec=foodOnly" id="prod221206" name="prod221206">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202109/221206_M.jpg?t=20211013131901" border="0"></p>
+              <storg>大同20人份304不鏽鋼內鍋電鍋(綠色)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>94</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,590</em> <i>活動價$</i>4,290 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232490&amp;ec=foodOnly" id="prod232490" name="prod232490">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232490_M.jpg?t=20220916141716" border="0"></p>
+              <storg>大同11人份不鏽鋼電鍋(松綠石)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,990</em> <i>活動價$</i>4,290 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=170322&amp;ec=foodOnly" id="prod170322" name="prod170322">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201609/170322_M.jpg?t=20210119175131" border="0"></p>
+              <storg>大家源 10人份 不鏽鋼電鍋</storg>
+              <h4>機械式溫控開關，堅固耐用</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,890</em> <i>活動價$</i>1,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=242100&amp;ec=foodOnly" id="prod242100" name="prod242100">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/242100_M.jpg?t=20230828092239" border="0"></p>
+              <storg>大同6人份304不鏽鋼電鍋(紅色)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,790</em> <i>活動價$</i>2,650 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5543" id="pro5543"></a>萬用鍋</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219963&amp;ec=foodOnly" id="prod219963" name="prod219963">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202108/219963_M.jpg?t=20230130140104" border="0"></p>
+              <storg>Tefal 法國特福鮮呼吸智能舒肥萬用鍋-銀</storg>
+              <h4>送 特福鮮呼吸萬用鍋配件-不鏽鋼球釜內鍋...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>72</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,980</em> <i>活動價$</i>4,980 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240814&amp;ec=foodOnly" id="prod240814" name="prod240814">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240814_M.jpg?t=20230706183030" border="0"></p>
+              <storg>THOMSON TM-SAP02 微電腦舒肥陶瓷萬用鍋</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,690</em> <i>活動價$</i>2,690 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238536&amp;ec=foodOnly" id="prod238536" name="prod238536">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202304/238536_M.jpg?t=20230822115210" border="0"></p>
+              <storg>Cuisinart美膳雅5.6L多功能料理電子萬用鍋</storg>
+              <h4>送 單柄煎鍋</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$4,980</em> <i>活動價$</i>4,980 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225686&amp;ec=foodOnly" id="prod225686" name="prod225686">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225686_M.jpg?t=20230206145738" border="0"></p>
+              <storg>Tefal 法國特福鮮呼吸智能舒肥萬用鍋-白</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$6,980</em> <i>活動價$</i>6,980 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240816&amp;ec=foodOnly" id="prod240816" name="prod240816">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240816_M.jpg?t=20230706183030" border="0"></p>
+              <storg>THOMSON TM-SAP01P白 舒肥萬用美型壓力鍋</storg>
+              <h4>10月主打星</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,990</em> <i>活動價$</i>3,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240815&amp;ec=foodOnly" id="prod240815" name="prod240815">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240815_M.jpg?t=20230706183030" border="0"></p>
+              <storg>THOMSON TM-SAP01P紫 舒肥萬用美型壓力鍋</storg>
+              <h4>10月主打星</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,990</em> <i>活動價$</i>3,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232604&amp;ec=foodOnly" id="prod232604" name="prod232604">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/232604_M.jpg?t=20230809091830" border="0"></p>
+              <storg>RICHMORE x TwinChef 雙廚折疊爐(雙盤)- 綠色...</storg>
+              <h4>一台擁有不挑鍋黑晶爐與替換式電烤盤，可以同時烹調多樣料理，雙...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$4,780</em> <i>活動價$</i>4,780 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232598&amp;ec=foodOnly" id="prod232598" name="prod232598">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/232598_M.jpg?t=20230809091736" border="0"></p>
+              <storg>RICHMORE 舒肥萬用鍋-質感白</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,580</em> <i>活動價$</i>2,580 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5176" id="pro5176"></a>廚具</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232337&amp;ec=foodOnly" id="prod232337" name="prod232337">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232337_M.jpg?t=20230531155025" border="0"></p>
+              <storg>法國特福爵士不沾鍋4件組</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>38</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,670</em> <i>活動價$</i>999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=243542&amp;ec=foodOnly" id="prod243542" name="prod243542">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/243542_M.jpg?t=20230930103009" border="0"></p>
+              <storg>IRIS 馬卡龍陶瓷塗層IH不沾鍋6件組 粉紅</storg>
+              <h4>IRIS居家慶~最低43折UP</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,199</em> <i>活動價$</i>1,799 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=243549&amp;ec=foodOnly" id="prod243549" name="prod243549">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/243549_M.jpg?t=20230930103008" border="0"></p>
+              <storg>IRIS 馬卡龍陶瓷塗層IH不沾鍋9件組 藍</storg>
+              <h4>IRIS居家慶~最低43折UP</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>62</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,749</em> <i>活動價$</i>1,699 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=243543&amp;ec=foodOnly" id="prod243543" name="prod243543">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/243543_M.jpg?t=20230930103009" border="0"></p>
+              <storg>IRIS 露歐頓IH無水不沾鍋3件組 白</storg>
+              <h4>IRIS居家慶~最低43折UP</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,089</em> <i>活動價$</i>1,699 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=243556&amp;ec=foodOnly" id="prod243556" name="prod243556">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/243556_M.jpg?t=20230930103006" border="0"></p>
+              <storg>IRIS 露歐頓IH無水不沾鍋10件組 白</storg>
+              <h4>IRIS居家慶~最低43折UP</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>44</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,179</em> <i>活動價$</i>1,799 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=243546&amp;ec=foodOnly" id="prod243546" name="prod243546">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/243546_M.jpg?t=20230930103007" border="0"></p>
+              <storg>IRIS 馬卡龍陶瓷塗層IH不沾鍋13件組 灰</storg>
+              <h4>IRIS居家慶~最低43折UP</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,849</em> <i>活動價$</i>2,199 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=215242&amp;ec=foodOnly" id="prod215242" name="prod215242">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202101/215242_M.jpg?t=20210120183208" border="0"></p>
+              <storg>特福Tefal左岸雅廚系列28CM不沾平底鍋</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,480</em> <i>活動價$</i>2,480 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=209410&amp;ec=foodOnly" id="prod209410" name="prod209410">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/209410_M.jpg?t=20200706223010" border="0"></p>
+              <storg>MIYAWO IH陶土湯鍋 1.7L-紅花紋</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>3,990 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5545" id="pro5545"></a>咖啡、冰飲</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=coffee-20&amp;ec=foodOnly" id="prodcoffee-20"
+              name="prodcoffee-20">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/coffee-20_M.jpg?t=20221116152359" border="0"></p>
+              <storg>金鑛精品咖啡-經典深焙咖啡豆</storg>
+              <h4>獨家★買一送一</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$439</em> <i>活動價$</i>439 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=coffee-21&amp;ec=foodOnly" id="prodcoffee-21"
+              name="prodcoffee-21">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/coffee-21_M.jpg?t=20230707134921" border="0"></p>
+              <storg>金鑛精品濾掛式咖啡-耶加雪菲(8入)</storg>
+              <h4>獨家★買一送一</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$280</em> <i>活動價$</i>280 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239952&amp;ec=foodOnly" id="prod239952" name="prod239952">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239952_M.jpg?t=20231011092030" border="0"></p>
+              <storg>ARTISAN奧堤森2.5L製冰機/方塊冰</storg>
+              <h4>約20分鐘製24顆方形冰</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,990</em> <i>活動價$</i>5,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=183578&amp;ec=foodOnly" id="prod183578" name="prod183578">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201801/183578_M.jpg?t=20180117191111" border="0"></p>
+              <storg>SodaStream Jet 氣泡水機(白)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>59</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,400</em> <i>活動價$</i>1,980 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=803969&amp;ec=foodOnly" id="prod803969" name="prod803969">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201803/803969_M.jpg?t=20230508112754" border="0"></p>
+              <storg>(展示品)SodaStream Spirit 氣泡水機(紅)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,500</em> <i>活動價$</i>2,590 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=807135&amp;ec=foodOnly" id="prod807135" name="prod807135">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202008/807135_M.jpg?t=20230508112653" border="0"></p>
+              <storg>(展示品)SodaStream Spirit 氣泡水機(珊瑚橘)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,500</em> <i>活動價$</i>2,590 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=196992&amp;ec=foodOnly" id="prod196992" name="prod196992">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201904/196992_M.jpg?t=20190801165441" border="0"></p>
+              <storg>法國BubbleSoda 全自動氣泡水機超值組</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>77</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,780</em> <i>活動價$</i>3,680 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239950&amp;ec=foodOnly" id="prod239950" name="prod239950">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239950_M.jpg?t=20230531152411" border="0"></p>
+              <storg>ARTISAN奧堤森2.5L數位全自動冰淇淋機</storg>
+              <h4>容量2.5公升304不鏽鋼內桶</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$15,990</em> <i>活動價$</i>15,990 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5546" id="pro5546"></a>洗碗機</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=242246&amp;ec=foodOnly" id="prod242246" name="prod242246">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/242246_M.jpg?t=20230923103408" border="0"></p>
+              <storg>國際Panasonic 嵌入式自動洗碗機</storg>
+              <h4>★獨家送好禮多選一★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$42,900</em> <i>活動價$</i>40,755 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=242247&amp;ec=foodOnly" id="prod242247" name="prod242247">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/242247_M.jpg?t=20231018154721" border="0"></p>
+              <storg>國際Panasonic 嵌入式自動洗碗機門板</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,000</em> <i>活動價$</i>2,850 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231142&amp;ec=foodOnly" id="prod231142" name="prod231142">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202207/231142_M.jpg?t=20230224140859" border="0"></p>
+              <storg>MIELE 洗碗機</storg>
+              <h4>★獨家送好禮多選一★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$62,000</em> <i>活動價$</i>53,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231609&amp;ec=foodOnly" id="prod231609" name="prod231609">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231609_M.jpg?t=20230713094843" border="0"></p>
+              <storg>MIELE 洗碗機</storg>
+              <h4>★獨家送好禮多選一★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$79,500</em> <i>活動價$</i>79,500 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=242986&amp;ec=foodOnly" id="prod242986" name="prod242986">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/242986_M.jpg?t=20231006103156" border="0"></p>
+              <storg>惠而浦 獨立式洗碗機</storg>
+              <h4>★新品上市★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$44,000</em> <i>活動價$</i>44,000 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240810&amp;ec=foodOnly" id="prod240810" name="prod240810">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240810_M.jpg?t=20230706183028" border="0"></p>
+              <storg>THOMSON TM-SAH02 洗烘存三合一智能洗碗機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$16,900</em> <i>活動價$</i>16,900 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225573&amp;ec=foodOnly" id="prod225573" name="prod225573">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225573_M.jpg?t=20220309135933" border="0"></p>
+              <storg>MIELE 全嵌式洗碗機</storg>
+              <h4>★獨家送好禮多選一★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$78,500</em> <i>活動價$</i>78,500 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=224930&amp;ec=foodOnly" id="prod224930" name="prod224930">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/224930_M.jpg?t=20220209183111" border="0"></p>
+              <storg>MIELE 洗碗機</storg>
+              <h4>★獨家送好禮多選一★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$135,000</em> <i>活動價$</i>135,000 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro5177" id="pro5177"></a>展示出清</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=160943&amp;ec=foodOnly" id="prod160943" name="prod160943">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201510/160943_M.jpg?t=20230822115208" border="0"></p>
+              <storg>(福利品)美膳雅Cuisinart 冷熱電動奶泡機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>25</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,999</em> <i>活動價$</i>990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=803457&amp;ec=foodOnly" id="prod803457" name="prod803457">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201707/803457_M.jpg?t=20230411111156" border="0"></p>
+              <storg>(展示品)日立 33L日製料理烘焙微波爐</storg>
+              <h4>★領券再折$4000★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>51</span>折</p>
+                <strong class="txt_red fred"> <em>市價$56,900</em> <i>活動價$</i>29,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=805853&amp;ec=foodOnly" id="prod805853" name="prod805853">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201909/805853_M.jpg?t=20230923172522" border="0"></p>
+              <storg>(展示品)Cuisinart美膳雅直立式鬆餅機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>37</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,680</em> <i>活動價$</i>990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=806578&amp;ec=foodOnly" id="prod806578" name="prod806578">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202002/806578_M.jpg?t=20231005152708" border="0"></p>
+              <storg>(展示品)東元超靜音變頻式電磁爐</storg>
+              <h4>★最新降價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>61</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,980</em> <i>活動價$</i>1,190 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=808549&amp;ec=foodOnly" id="prod808549" name="prod808549">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202201/808549_M.jpg?t=20230923170906" border="0"></p>
+              <storg>(展示品)LG 39L智慧變頻蒸烘烤微波爐</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$20,900</em> <i>活動價$</i>13,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=808552&amp;ec=foodOnly" id="prod808552" name="prod808552">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202201/808552_M.jpg?t=20230923170655" border="0"></p>
+              <storg>(展示品)LG 25L智慧變頻微波爐</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>7</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,290</em> <i>活動價$</i>3,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=805553&amp;ec=foodOnly" id="prod805553" name="prod805553">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201908/805553_M.jpg?t=20210427085817" border="0"></p>
+              <storg>(展示品)Panasonic 27L蒸氣烘烤微波爐</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>5</span>折</p>
+                <strong class="txt_red fred"> <em>市價$15,900</em> <i>活動價$</i>7,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=805571&amp;ec=foodOnly" id="prod805571" name="prod805571">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201908/805571_M.jpg?t=20230714113143" border="0"></p>
+              <storg>(展示品)Panasonic 23L變頻微波爐</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>65</span>折</p>
+                <strong class="txt_red fred"> <em>市價$9,990</em> <i>活動價$</i>6,490 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+      <div class="event-box">
+      </div>
+
+
+
+      <div id="TkecFooter">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+
+
+        <style>
+          @charset "utf-8";
+
+          * {
+            margin: 0;
+            padding: 0
+          }
+
+          *:focus {
+            outline: none;
+          }
+
+          /*黃框消除*/
+
+          * {
+            -webkit-text-size-adjust: none;
+          }
+
+          /*字體尺寸限制解除*/
+
+          a {
+            text-decoration: none;
+            cursor: pointer
+          }
+
+          img {
+            border: 0px;
+          }
+
+          /*圖片超連結邊框消除*/
+
+          .acbankbox .fred {
+            color: #F00;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .acbankbox .fgray {
+            color: #666;
+          }
+
+          .acbankbox .bgcolor {
+            background: #999;
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width:751px) {
+            .acbankbox {
+              display: block;
+              width: 1144px;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+              overflow: hidden;
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              padding: 16px;
+              position: relative;
+              display: block;
+              border-radius: 40px 40px 0 0;
+              -moz-border-radius: 40px 40px 0 0;
+              -webkit-border-radius: 40px 40px 0 0;
+              box-sizing: border-box;
+            }
+
+            .acbankbox .list2 u {
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+              display: block;
+              font-size: 40px;
+              text-decoration: none;
+              margin-bottom: 10px;
+              letter-spacing: 1px;
+            }
+
+            .acbankbox .list2 ul li {
+              width: 210px;
+              text-align: center;
+              float: left;
+              margin: 6px;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 82%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 13px;
+              margin-top: 0px;
+              text-align: center;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 38px;
+              font-size: 38px;
+              font-style: normal;
+              display: block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {
+              display: none;
+            }
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            .acbankbox {
+              display: block;
+              width: 100%;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              position: relative;
+              display: block;
+              box-sizing: border-box;
+              padding-bottom: 1%;
+            }
+
+            .acbankbox .list2 u {
+              width: 96%;
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              display: block;
+              font-size: 200%;
+              text-decoration: none;
+              margin-bottom: 10px;
+              margin: 2% auto;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+            }
+
+            .acbankbox .list2 ul li {
+              height: auto;
+              width: 48%;
+              text-align: center;
+              float: left;
+              margin: 1%;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+              box-sizing: border-box;
+              padding-bottom: 4%;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 85%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 100%;
+              margin-top: 0px;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 1em;
+              font-size: 200%;
+              font-style: normal;
+              display: inline-block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            /* .acbankbox .box06 {} */
+          }
+        </style>
+        <div class="acbankbox">
+          <!--銀行區 st-->
+          <div class="list2 bgcolor">
+            <u>10月銀行 刷卡享好康</u>
+            <ul>
+
+              <!--永豐-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-05.jpg"></p>
+                  <p class="item_text05 fred"><em>送$3000</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--星展-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-03.jpg"></p>
+                  <p class="item_text05 fred"><em>送6%</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--燦坤-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送2100</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--台新-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$1500</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--悠遊付-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-16.jpg"></p>
+                  <p class="item_text05 fred">單筆滿額<em>送6%</em></p>
+                </a>
+              </li>
+
+
+            </ul>
+          </div>
+          <!--銀行區 end-->
+        </div>
+      </div>
+
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+
+
+
+
+
+
+
+</body>
+
+</html>
