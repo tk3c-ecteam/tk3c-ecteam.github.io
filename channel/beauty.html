@@ -1,0 +1,2275 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="">
+  <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="盡享風華絕代 | 燦坤線上">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/beauty2024/index.html">
+
+  <title>愛唷!我的送禮秘笈 | 燦坤線上</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.css">
+  <link href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css" rel="stylesheet"
+    type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animate.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/animation/animation.css" rel="stylesheet" type="text/css">
+  <link href="https://events.tk3c.com/events_net/events_net/beauty2024/css/beauty_part2.css" rel="stylesheet"
+    type="text/css">
+
+  <script type="text/javascript"
+    src="https://events.cdn-tkec.tw/events_net/events_net/General/js/JQuery@3.6.0/jquery-3.6.0.js"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "beauty2024";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    ChkEvent(2089)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+
+
+</head>
+
+<body>
+
+
+  <form name="form1" method="post" action="./index.aspx?mainid=2089&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/?ec=beauty2024">
+              <h1 class="logo">燦坤線上購物</h1>
+            </a>
+            <span id="TopNum">28</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0Ccqzcaw3JWsi38f1f/F3kfchM20qMOwyRFaGU7woaDD9X0JQ==&amp;ec=beauty2024">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx?ec=beauty2024">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx?ec=beauty2024">客服中心</a></li>
+              <li><a href="javascript:void(0);?ec=beauty2024"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: none; opacity: 1;">
+      <img src="../events_net/beauty2024/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul>
+          <li><a href="#pro6185" onclick="ProcessGaEvent('beauty2024','click','6185-吹風機');">吹風機</a></li>
+          <li><a href="#pro6186" onclick="ProcessGaEvent('beauty2024','click','6186-造型器');">造型器</a></li>
+          <li><a href="#pro6187" onclick="ProcessGaEvent('beauty2024','click','6187-電動牙刷');">電動牙刷</a></li>
+          <li><a href="#pro6188" onclick="ProcessGaEvent('beauty2024','click','6188-沖牙機');">沖牙機</a></li>
+          <li><a href="#pro6189" onclick="ProcessGaEvent('beauty2024','click','6189-百靈');">百靈</a></li>
+          <li><a href="#pro6190" onclick="ProcessGaEvent('beauty2024','click','6190-飛利浦');">飛利浦</a></li>
+          <li><a href="#pro6191" onclick="ProcessGaEvent('beauty2024','click','6191-國際');">國際</a></li>
+          <li><a href="#pro6192" onclick="ProcessGaEvent('beauty2024','click','6192-按摩椅');">按摩椅</a></li>
+          <li><a href="#pro6193" onclick="ProcessGaEvent('beauty2024','click','6193-律動機');">律動機</a></li>
+          <li><a href="#pro6194" onclick="ProcessGaEvent('beauty2024','click','6194-眼罩');">眼罩</a></li>
+
+        </ul>
+      </div>
+      <!-- End of the dropdown menu -->
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="1"><span class="icon"><i class="fa-solid fa-shop"></i>熱銷分類</span></li>
+            <li data-id="2"><span class="icon"><i class="fa-solid fa-people-arrows"></i>關注社群</span></li>
+          </ul>
+        </div>
+        <div class="box-area type">
+          <ul>
+            <li class="new"><a href="#tab1">水喔! 柔順秀髮這樣來</a></li>
+            <li class="new"><a href="#tab2">乓喔! 清新口腔保健康</a></li>
+            <li class="new"><a href="#tab3">帥喔! 你看有帥哥</a></li>
+            <li class="new"><a href="#tab4">爽喔! 放鬆一整night</a></li>
+            <li class="new"><a href="#tab5">燒喔! 冬天暖洋洋</a></li>
+          </ul>
+        </div>
+
+        <div class="box-area social">
+          <ul>
+            <li><a href="https://reurl.cc/QbZ149?ec=beauty2024" target="_blank"><i class="fa-brands fa-meta"></i></a>
+            </li>
+            <li><a href="https://reurl.cc/7pMZVl?ec=beauty2024" target="_blank"><i class="fa-brands fa-line"></i></a>
+            </li>
+            <li><a href="https://reurl.cc/3Ye8kX?ec=beauty2024" target="_blank"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile"></a>
+
+    </div>
+    <div class="wrapper">
+
+
+      <div id="beauty-container">
+        <div class="background">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/beauty2024/images/2402/title.png" />
+          </h2>
+
+          <p class="product"></p>
+        </div>
+
+        <p class="item"><img src="https://events.tk3c.com/events_net/events_net/beauty2024/images/2402/item.png" /></p>
+
+        <section class="gift-box">
+          <h2 class="title"><img src="https://events.tk3c.com/events_net/events_net/beauty2024/images/2402/e1S.png" />
+          </h2>
+
+          <ul>
+            <li><a href="" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/beauty2024/images/2402/e1-01.png" /></a>
+            </li>
+            <li><a href="" target="_blank"><img
+                  src="https://events.tk3c.com/events_net/events_net/beauty2024/images/2402/e1-01.png" /></a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="event-group"></section>
+
+      </div>
+
+      <!-- 左側選單 -->
+      <aside class="aside-container">
+        <span class="collaspe"><i class="fas fa-chevron-left"></i></span>
+        <div class="aside-wrap">
+          <h3 class="aside-header"></h3>
+          <div class="aside-content">
+            <ul>
+              <li class="new"><a href="#tab1">水喔! 柔順秀髮這樣來</a></li>
+              <li class="new"><a href="#tab2">乓喔! 清新口腔保健康</a></li>
+              <li class="new"><a href="#tab3">帥喔! 你看有帥哥</a></li>
+              <li class="new"><a href="#tab4">爽喔! 放鬆一整night</a></li>
+              <li class="new"><a href="#tab5">燒喔! 冬天暖洋洋</a></li>
+            </ul>
+          </div>
+          <a href="#" class="go-top">GO TOP</a>
+        </div>
+      </aside>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11.0.5/swiper-bundle.min.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+      <!-- 手機版選單 JS -->
+      <script src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/beauty2024/js/beauty_part2.js"></script>
+      <script src="https://events.tk3c.com/events_net/events_net/newyear2024/js/all_event2418.js"></script>
+
+    </div>
+    <div class="itemBox m_version_non">
+      <div id="btnBox03">
+        <div class="upbox">
+          <a href="#pro6185" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('beauty2024','click','6185-吹風機')">吹風機</a>
+          <a href="#pro6186" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('beauty2024','click','6186-造型器')">造型器</a>
+          <a href="#pro6187" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('beauty2024','click','6187-電動牙刷')">電動牙刷</a>
+          <a href="#pro6188" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('beauty2024','click','6188-沖牙機')">沖牙機</a>
+          <a href="#pro6189" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6189-百靈')">百靈</a>
+          <a href="#pro6190" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('beauty2024','click','6190-飛利浦')">飛利浦</a>
+          <a href="#pro6191" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6191-國際')">國際</a>
+          <a href="#pro6192" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('beauty2024','click','6192-按摩椅')">按摩椅</a>
+          <a href="#pro6193" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('beauty2024','click','6193-律動機')">律動機</a>
+          <a href="#pro6194" class="navi_bar btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6194-眼罩')">眼罩</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="rightbtn" style="display: none;"><span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+      <div class="actbtn">
+        <a href="#pro6185" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6185-吹風機')">吹風機</a>
+        <a href="#pro6186" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6186-造型器')">造型器</a>
+        <a href="#pro6187" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6187-電動牙刷')">電動牙刷</a>
+        <a href="#pro6188" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6188-沖牙機')">沖牙機</a>
+        <a href="#pro6189" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6189-百靈')">百靈</a>
+        <a href="#pro6190" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6190-飛利浦')">飛利浦</a>
+        <a href="#pro6191" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6191-國際')">國際</a>
+        <a href="#pro6192" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6192-按摩椅')">按摩椅</a>
+        <a href="#pro6193" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6193-律動機')">律動機</a>
+        <a href="#pro6194" class="btn_01 p01" onclick="ProcessGaEvent('beauty2024','click','6194-眼罩')">眼罩</a>
+
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>吹風機</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=226808&amp;ec=beauty2024" id="prod226808" name="prod226808">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/226808_M.jpg?t=20220717102525" border="0"></p>
+              <storg>TESCOM低噪音負離子吹風機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,090</em> <i>活動價$</i>899 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233446&amp;ec=beauty2024" id="prod233446" name="prod233446">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233446_M.jpg?t=20231213093107" border="0"></p>
+              <storg>國際 Panasonic奈米水離子吹風機</storg>
+              <h4>送 順髮氣墊梳組+送 斜背包</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>74</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,690</em> <i>活動價$</i>4,179 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=242461&amp;ec=beauty2024" id="prod242461" name="prod242461">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/242461_M.jpg?t=20240118180316" border="0"></p>
+              <storg>台灣限定色 | 國際Panasonic nanocare高滲透奈米水離子吹風機...</storg>
+              <h4>★最新降價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>78</span>折</p>
+                <strong class="txt_red fred"> <em>市價$10,900</em> <i>活動價$</i>8,488 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=161235&amp;ec=beauty2024" id="prod161235" name="prod161235">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201511/161235_M.jpg?t=20210518165829" border="0"></p>
+              <storg>國際牌Panasonic nanoe負離子吹風機(粉紅)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,190</em> <i>活動價$</i>1,499 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=226928&amp;ec=beauty2024" id="prod226928" name="prod226928">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/226928_M.jpg?t=20220414164927" border="0"></p>
+              <storg>小米 Xiaomi 水離子吹風機 H500</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,095</em> <i>活動價$</i>1,095 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=174864&amp;ec=beauty2024" id="prod174864" name="prod174864">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201703/174864_M.jpg?t=20180124141828" border="0"></p>
+              <storg>TESCOM 雙電壓吹風機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,490</em> <i>活動價$</i>1,490 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=174865&amp;ec=beauty2024" id="prod174865" name="prod174865">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201703/174865_M.jpg?t=20210604172825" border="0"></p>
+              <storg>TESCOM 吹風機</storg>
+              <h4>大風量遠紅外線負離子吹風機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>65</span>折</p>
+                <strong class="txt_red fred"> <em>市價$999</em> <i>活動價$</i>649 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=117092&amp;ec=beauty2024" id="prod117092" name="prod117092">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201107/117092_M.jpg?t=20210518170653" border="0"></p>
+              <storg>國際牌Panasonic 輕巧吹風機(黑)</storg>
+              <h4>可折疊收納/冷暖熱三段溫度</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>93</span>折</p>
+                <strong class="txt_red fred"> <em>市價$379</em> <i>活動價$</i>349 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>造型器</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=105694&amp;ec=beauty2024" id="prod105694" name="prod105694">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201001/105694_M.jpg?t=20220923133031" border="0"></p>
+              <storg>國際牌Panasonic 整髮器(單件組)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$790</em> <i>活動價$</i>699 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=243176&amp;ec=beauty2024" id="prod243176" name="prod243176">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/243176_M.jpg?t=20230920223008" border="0"></p>
+              <storg>ROOMMI Glossy 電熱直髮梳-蜜桃粉</storg>
+              <h4>領券再折 $100</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,080</em> <i>活動價$</i>1,780 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240109&amp;ec=beauty2024" id="prod240109" name="prod240109">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240109_M.jpg?t=20230606223024" border="0"></p>
+              <storg>沙宣 VSI-3831W 38mm晶漾魔力紅鈦金捲髮棒...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>34</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,980</em> <i>活動價$</i>990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=211880&amp;ec=beauty2024" id="prod211880" name="prod211880">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202009/211880_M.jpg?t=20220321140947" border="0"></p>
+              <storg>國際牌Panasonic 奈米水離子直髮捲燙器</storg>
+              <h4>送 順髮氣墊梳組</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,590</em> <i>活動價$</i>3,790 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=210195&amp;ec=beauty2024" id="prod210195" name="prod210195">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202008/210195_M.jpg?t=20200806183011" border="0"></p>
+              <storg>KINYO 充插兩用專業精修電剪(理髮器)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$899</em> <i>活動價$</i>849 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=218396&amp;ec=beauty2024" id="prod218396" name="prod218396">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202106/218396_M.jpg?t=20210831132539" border="0"></p>
+              <storg>須眉 SMATE 隨身負離子護髮梳</storg>
+              <h4>★領券再折$400★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$790</em> <i>活動價$</i>790 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=103684&amp;ec=beauty2024" id="prod103684" name="prod103684">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200910/103684_M.jpg?t=20180116165019" border="0"></p>
+              <storg>國際牌Panasonic 整髮器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>92</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,090</em> <i>活動價$</i>999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=210113&amp;ec=beauty2024" id="prod210113" name="prod210113">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/210113_M.jpg?t=20220624140718" border="0"></p>
+              <storg>國際牌Panasonic 髮型修剪器</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,990</em> <i>活動價$</i>1,790 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>電動牙刷</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=243089&amp;ec=beauty2024" id="prod243089" name="prod243089">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/243089_M.jpg?t=20240118144800" border="0"></p>
+              <storg>內含9支刷頭 | 歐樂B PRO1 3D電動牙刷潔淨超值組...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>46</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,689</em> <i>活動價$</i>1,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=245081&amp;ec=beauty2024" id="prod245081" name="prod245081">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202312/245081_M.jpg?t=20240118180352" border="0"></p>
+              <storg>飛利浦PHILIPS 音波電動牙刷</storg>
+              <h4>送吹風機+隨貨再送5支刷頭</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,590</em> <i>活動價$</i>3,390 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225664&amp;ec=beauty2024" id="prod225664" name="prod225664">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225664_M.jpg?t=20230329110655" border="0"></p>
+              <storg>歐樂B 微震科技電動牙刷</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>43</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,990</em> <i>活動價$</i>5,499 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=185162&amp;ec=beauty2024" id="prod185162" name="prod185162">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201803/185162_M.jpg?t=20230131145512" border="0"></p>
+              <storg>飛利浦Philips Sonicare智能護齦音波震動牙刷...</storg>
+              <h4>送 護齦刷頭4支</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,490</em> <i>活動價$</i>2,490 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=143603&amp;ec=beauty2024" id="prod143603" name="prod143603">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201402/143603_M.jpg?t=20230131145534" border="0"></p>
+              <storg>飛利浦Philips 鑽石靚白音波震動牙刷-黑鑽版...</storg>
+              <h4>★領券再折$1300★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$6,290</em> <i>活動價$</i>6,290 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=211882&amp;ec=beauty2024" id="prod211882" name="prod211882">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202009/211882_M.jpg?t=20211203150424" border="0"></p>
+              <storg>國際牌Panasonic日本製W音波電動牙刷</storg>
+              <h4>送 4入刷頭(2組)+登錄送沖牙機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,290</em> <i>活動價$</i>5,790 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=193374&amp;ec=beauty2024" id="prod193374" name="prod193374">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201811/193374_M.jpg?t=20210722150225" border="0"></p>
+              <storg>國際牌Panasonic 音波電動牙刷</storg>
+              <h4>牙齒亮白有型</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,290</em> <i>活動價$</i>2,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=211991&amp;ec=beauty2024" id="prod211991" name="prod211991">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202009/211991_M.jpg?t=20231213092840" border="0"></p>
+              <storg>歐樂B 微震科技電動牙刷</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>46</span>折</p>
+                <strong class="txt_red fred"> <em>市價$19,900</em> <i>活動價$</i>8,999 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>沖牙機</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=243089&amp;ec=beauty2024" id="prod243089" name="prod243089">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202309/243089_M.jpg?t=20240118144800" border="0"></p>
+              <storg>內含9支刷頭 | 歐樂B PRO1 3D電動牙刷潔淨超值組...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>46</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,689</em> <i>活動價$</i>1,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=245081&amp;ec=beauty2024" id="prod245081" name="prod245081">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202312/245081_M.jpg?t=20240118180352" border="0"></p>
+              <storg>飛利浦PHILIPS 音波電動牙刷</storg>
+              <h4>送吹風機+隨貨再送5支刷頭</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>95</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,590</em> <i>活動價$</i>3,390 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225664&amp;ec=beauty2024" id="prod225664" name="prod225664">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225664_M.jpg?t=20230329110655" border="0"></p>
+              <storg>歐樂B 微震科技電動牙刷</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>43</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,990</em> <i>活動價$</i>5,499 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=185162&amp;ec=beauty2024" id="prod185162" name="prod185162">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201803/185162_M.jpg?t=20230131145512" border="0"></p>
+              <storg>飛利浦Philips Sonicare智能護齦音波震動牙刷...</storg>
+              <h4>送 護齦刷頭4支</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,490</em> <i>活動價$</i>2,490 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=143603&amp;ec=beauty2024" id="prod143603" name="prod143603">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201402/143603_M.jpg?t=20230131145534" border="0"></p>
+              <storg>飛利浦Philips 鑽石靚白音波震動牙刷-黑鑽版...</storg>
+              <h4>★領券再折$1300★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$6,290</em> <i>活動價$</i>6,290 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=211882&amp;ec=beauty2024" id="prod211882" name="prod211882">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202009/211882_M.jpg?t=20211203150424" border="0"></p>
+              <storg>國際牌Panasonic日本製W音波電動牙刷</storg>
+              <h4>送 4入刷頭(2組)+登錄送沖牙機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,290</em> <i>活動價$</i>5,790 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=193374&amp;ec=beauty2024" id="prod193374" name="prod193374">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201811/193374_M.jpg?t=20210722150225" border="0"></p>
+              <storg>國際牌Panasonic 音波電動牙刷</storg>
+              <h4>牙齒亮白有型</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,290</em> <i>活動價$</i>2,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=211991&amp;ec=beauty2024" id="prod211991" name="prod211991">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202009/211991_M.jpg?t=20231213092840" border="0"></p>
+              <storg>歐樂B 微震科技電動牙刷</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>46</span>折</p>
+                <strong class="txt_red fred"> <em>市價$19,900</em> <i>活動價$</i>8,999 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>百靈</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=156350&amp;ec=beauty2024" id="prod156350" name="prod156350">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201506/156350_M.jpg?t=20180117140858" border="0"></p>
+              <storg>德國百靈BRAUN 電池式輕便電鬍刀</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,588</em> <i>活動價$</i>988 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=173776&amp;ec=beauty2024" id="prod173776" name="prod173776">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201701/173776_M.jpg?t=20210811152128" border="0"></p>
+              <storg>德國百靈 三鋒系列300s-R電鬍刀</storg>
+              <h4>全機身防水設計</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,490</em> <i>活動價$</i>1,988 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232253&amp;ec=beauty2024" id="prod232253" name="prod232253">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232253_M.jpg?t=20220902101534" border="0"></p>
+              <storg>德國百靈 Mini電動刮鬍刀</storg>
+              <h4>★夜間限定優惠★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,488</em> <i>活動價$</i>1,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233936&amp;ec=beauty2024" id="prod233936" name="prod233936">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233936_M.jpg?t=20220928183015" border="0"></p>
+              <storg>德國百靈Mini電動刮鬍刀(黃色)</storg>
+              <h4>★夜間限定優惠★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,488</em> <i>活動價$</i>1,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229412&amp;ec=beauty2024" id="prod229412" name="prod229412">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229412_M.jpg?t=20240118180045" border="0"></p>
+              <storg>德國百靈 新5免拆快洗電鬍刀</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>46</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,888</em> <i>活動價$</i>3,588 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232075&amp;ec=beauty2024" id="prod232075" name="prod232075">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232075_M.jpg?t=20220818183014" border="0"></p>
+              <storg>德國百靈新Series 3三鋒系列電鬍刀(藍)</storg>
+              <h4>送 百靈不鏽鋼保溫瓶</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,288</em> <i>活動價$</i>2,688 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=229411&amp;ec=beauty2024" id="prod229411" name="prod229411">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202206/229411_M.jpg?t=20231213092940" border="0"></p>
+              <storg>德國百靈 新5系列免拆快洗電鬍刀</storg>
+              <h4>送 體脂計+送 TESCOM 吹風機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$9,888</em> <i>活動價$</i>5,688 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232253-195726&amp;ec=beauty2024" id="prod232253-195726"
+              name="prod232253-195726">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232253-195726_M.jpg?t=20230327152620" border="0">
+              </p>
+              <storg>【獨家潔淨組】德國百靈 Mini電動刮鬍刀+歐樂BOral-B 活力亮潔電動牙...</storg>
+              <h4>超值組合</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,468</em> <i>活動價$</i>2,788 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>飛利浦</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238970&amp;ec=beauty2024" id="prod238970" name="prod238970">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202304/238970_M.jpg?t=20230424223020" border="0"></p>
+              <storg>PHILIPS智能系列三刀頭電鬍刀</storg>
+              <h4>送 TESCOM 吹風機</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$4,288</em> <i>活動價$</i>4,288 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239345&amp;ec=beauty2024" id="prod239345" name="prod239345">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239345_M.jpg?t=20230710135434" border="0"></p>
+              <storg>飛利浦PHILIPS S2000系列三刀頭電鬍刀超值組...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,888</em> <i>活動價$</i>2,888 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205982&amp;ec=beauty2024" id="prod205982" name="prod205982">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202002/205982_M.jpg?t=20220127144054" border="0"></p>
+              <storg>飛利浦Philips 4D立體彈性貼面水洗三刀頭電鬍刀...</storg>
+              <h4>荷蘭製刀頭 品質保證</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,290</em> <i>活動價$</i>1,988 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=209087&amp;ec=beauty2024" id="prod209087" name="prod209087">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202006/209087_M.jpg?t=20230809174439" border="0"></p>
+              <storg>飛利浦Philips 8D三刀頭電鬍刀</storg>
+              <h4>送 TESCOM 吹風機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>57</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,888</em> <i>活動價$</i>4,988 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205984&amp;ec=beauty2024" id="prod205984" name="prod205984">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202002/205984_M.jpg?t=20230224165351" border="0"></p>
+              <storg>飛利浦Philips 5D立體彈性貼面水洗三刀頭電鬍刀...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>88</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,290</em> <i>活動價$</i>2,888 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=218745&amp;ec=beauty2024" id="prod218745" name="prod218745">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202106/218745_M.jpg?t=20211230185416" border="0"></p>
+              <storg>飛利浦Philips S208隨型系列兩刀頭電鬍刀</storg>
+              <h4>★小資首選款★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,190</em> <i>活動價$</i>1,190 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239901&amp;ec=beauty2024" id="prod239901" name="prod239901">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239901_M.jpg?t=20230809174838" border="0"></p>
+              <storg>飛利浦PHILIPS S5000智能三刀頭電鬍刀超值組...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$6,988</em> <i>活動價$</i>6,988 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238041&amp;ec=beauty2024" id="prod238041" name="prod238041">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/238041_M.jpg?t=20230319223026" border="0"></p>
+              <storg>飛利浦PHILIPS經典系列三刀頭電鬍刀</storg>
+              <h4>★經典不敗款★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,688</em> <i>活動價$</i>1,688 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>國際</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=100779&amp;ec=beauty2024" id="prod100779" name="prod100779">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200906/100779_M.jpg?t=20210622114832" border="0"></p>
+              <storg>國際牌Panasonic 迴轉式電鬍刀</storg>
+              <h4>★小資首選款★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$820</em> <i>活動價$</i>650 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240023&amp;ec=beauty2024" id="prod240023" name="prod240023">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240023_M.jpg?t=20231213093214" border="0"></p>
+              <storg>國際Panasonic日本製三刀頭電鬍刀</storg>
+              <h4>送 美顏修容器+送 熊大旅行收納組+送 旅行收納組...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>68</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,988</em> <i>活動價$</i>3,388 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=188001-na0j&amp;ec=beauty2024" id="prod188001-na0j"
+              name="prod188001-na0j">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201806/188001-na0j_M.jpg?t=20240109092847" border="0"></p>
+              <storg>【超值組合】國際牌Panasonic 三刀頭電動刮鬍刀+國際nanocare ...</storg>
+              <h4>★限時快閃組合★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>7</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,888</em> <i>活動價$</i>8,912 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=100780&amp;ec=beauty2024" id="prod100780" name="prod100780">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200906/100780_M.jpg?t=20210622114901" border="0"></p>
+              <storg>國際牌Panasonic 電鬍刀-附修鬢刀</storg>
+              <h4>★小資首選款★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>82</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,290</em> <i>活動價$</i>1,050 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240022&amp;ec=beauty2024" id="prod240022" name="prod240022">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240022_M.jpg?t=20230601183026" border="0"></p>
+              <storg>國際Panasonic日本製三刀頭電鬍刀</storg>
+              <h4>送 電動牙刷</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,988</em> <i>活動價$</i>2,880 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=039224&amp;ec=beauty2024" id="prod039224" name="prod039224">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/200704/039224_M.jpg?t=20131209114632" border="0"></p>
+              <storg>國際牌Panasonic 電池式刮鬍刀</storg>
+              <h4>★小資首選款★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$399</em> <i>活動價$</i>299 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=145885&amp;ec=beauty2024" id="prod145885" name="prod145885">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201406/145885_M.jpg?t=20210622114751" border="0"></p>
+              <storg>國際牌Panasonic 刮鬍刀</storg>
+              <h4>★小資首選款★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,188</em> <i>活動價$</i>949 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240021&amp;ec=beauty2024" id="prod240021" name="prod240021">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240021_M.jpg?t=20230601183026" border="0"></p>
+              <storg>國際Panasonic日本製三刀頭電鬍刀</storg>
+              <h4>送 電動牙刷</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,988</em> <i>活動價$</i>2,880 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>按摩椅</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231430&amp;ec=beauty2024" id="prod231430" name="prod231430">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231430_M.jpg?t=20230223160325" border="0"></p>
+              <storg>輝葉WULA超有力小沙發按摩椅</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>48</span>折</p>
+                <strong class="txt_red fred"> <em>市價$52,800</em> <i>活動價$</i>24,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238184&amp;ec=beauty2024" id="prod238184" name="prod238184">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/238184_M.jpg?t=20230321223011" border="0"></p>
+              <storg>JHT i芯極致包覆臀感按摩椅</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$79,900</em> <i>活動價$</i>45,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237232&amp;ec=beauty2024" id="prod237232" name="prod237232">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237232_M.jpg?t=20230215143011" border="0"></p>
+              <storg>JHT i芯深捏臀感按摩椅</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>62</span>折</p>
+                <strong class="txt_red fred"> <em>市價$46,900</em> <i>活動價$</i>29,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=203846&amp;ec=beauty2024" id="prod203846" name="prod203846">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201911/203846_M.jpg?t=20220414154319" border="0"></p>
+              <storg>DOCTOR AIR 3D 按摩椅墊LITE-灰</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>56</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,990</em> <i>活動價$</i>3,299 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236997&amp;ec=beauty2024" id="prod236997" name="prod236997">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/236997_M.jpg?t=20230620173457" border="0"></p>
+              <storg>輝葉V-Motion一健椅</storg>
+              <h4>隨貨送 清淨機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$188,000</em> <i>活動價$</i>108,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233838&amp;ec=beauty2024" id="prod233838" name="prod233838">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233838_M.jpg?t=20221201173355" border="0"></p>
+              <storg>輝葉追夢椅-石墨烯全新升級(神秘紫)</storg>
+              <h4>隨貨送 清淨機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$99,800</em> <i>活動價$</i>62,666 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233837&amp;ec=beauty2024" id="prod233837" name="prod233837">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233837_M.jpg?t=20230424145208" border="0"></p>
+              <storg>輝葉追夢椅-石墨烯全新升級(魔力紅)</storg>
+              <h4>隨貨送 清淨機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$99,800</em> <i>活動價$</i>62,666 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=189134&amp;ec=beauty2024" id="prod189134" name="prod189134">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201807/189134_M.jpg?t=20230907112436" border="0"></p>
+              <storg>美國家醫 HOMEDICS 指壓按摩椅墊</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>56</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,880</em> <i>活動價$</i>2,690 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>律動機</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239156&amp;ec=beauty2024" id="prod239156" name="prod239156">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239156_M.jpg?t=20230515113817" border="0"></p>
+              <storg>輝葉COZY FIT律動奇機2.0</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>38</span>折</p>
+                <strong class="txt_red fred"> <em>市價$39,800</em> <i>活動價$</i>14,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233842&amp;ec=beauty2024" id="prod233842" name="prod233842">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233842_M.jpg?t=20220926183011" border="0"></p>
+              <storg>decopop SPACE+新太空人垂直律動機(櫻花粉)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>23</span>折</p>
+                <strong class="txt_red fred"> <em>市價$34,800</em> <i>活動價$</i>7,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233841&amp;ec=beauty2024" id="prod233841" name="prod233841">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233841_M.jpg?t=20220926183011" border="0"></p>
+              <storg>decopop SPACE+新太空人垂直律動機(礦石灰)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>23</span>折</p>
+                <strong class="txt_red fred"> <em>市價$34,800</em> <i>活動價$</i>7,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233839&amp;ec=beauty2024" id="prod233839" name="prod233839">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233839_M.jpg?t=20231117180251" border="0"></p>
+              <storg>JHT LAZY FIT垂直律動機</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>28</span>折</p>
+                <strong class="txt_red fred"> <em>市價$27,800</em> <i>活動價$</i>7,700 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231428&amp;ec=beauty2024" id="prod231428" name="prod231428">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231428_M.jpg?t=20231215110019" border="0"></p>
+              <storg>輝葉COZY FIT律動奇機</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>38</span>折</p>
+                <strong class="txt_red fred"> <em>市價$36,800</em> <i>活動價$</i>13,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231650&amp;ec=beauty2024" id="prod231650" name="prod231650">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231650_M.jpg?t=20231215142920" border="0"></p>
+              <storg>輝葉COZY FIT律動奇機2.0</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>38</span>折</p>
+                <strong class="txt_red fred"> <em>市價$39,800</em> <i>活動價$</i>14,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233840&amp;ec=beauty2024" id="prod233840" name="prod233840">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233840_M.jpg?t=20220926183009" border="0"></p>
+              <storg>decopop SPACE+新太空人垂直律動機(甜橙橘)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>23</span>折</p>
+                <strong class="txt_red fred"> <em>市價$34,800</em> <i>活動價$</i>7,999 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>眼罩</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239956&amp;ec=beauty2024" id="prod239956" name="prod239956">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239956_M.jpg?t=20230531152333" border="0"></p>
+              <storg>康生 時尚舒壓按摩腳機(橄欖綠) 贈按摩眼罩(白)...</storg>
+              <h4>紓壓按摩 時尚按摩腳機</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$11,780</em> <i>活動價$</i>11,780 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228410&amp;ec=beauty2024" id="prod228410" name="prod228410">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228410_M.jpg?t=20220506183009" border="0"></p>
+              <storg>康生 睛舒福矽膠唇感按摩眼罩</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,980</em> <i>活動價$</i>4,980 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219805&amp;ec=beauty2024" id="prod219805" name="prod219805">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202108/219805_M.jpg?t=20220427171203" border="0"></p>
+              <storg>KINYO 亮眼氣壓按摩眼罩</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,290</em> <i>活動價$</i>1,890 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234032&amp;ec=beauty2024" id="prod234032" name="prod234032">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/234032_M.jpg?t=20230321170558" border="0"></p>
+              <storg>康生 睛舒適舒眠眼罩(插電款) 熊</storg>
+              <h4>234032</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,280</em> <i>活動價$</i>799 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239957&amp;ec=beauty2024" id="prod239957" name="prod239957">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239957_M.jpg?t=20230531152338" border="0"></p>
+              <storg>康生 時尚舒壓按摩腳機(冷酷灰) 贈按摩眼罩(白)...</storg>
+              <h4>紓壓按摩 時尚按摩腳機</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$11,780</em> <i>活動價$</i>11,780 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236702&amp;ec=beauty2024" id="prod236702" name="prod236702">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202301/236702_M.jpg?t=20230111183008" border="0"></p>
+              <storg>康生 媽祖有BOBI氣壓按摩眼罩</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,980</em> <i>活動價$</i>3,980 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239958&amp;ec=beauty2024" id="prod239958" name="prod239958">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239958_M.jpg?t=20230531152341" border="0"></p>
+              <storg>康生 時尚舒壓按摩腳機(陽光澄) 贈按摩眼罩(白)...</storg>
+              <h4>紓壓按摩 通通有!</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$11,780</em> <i>活動價$</i>11,780 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=223774&amp;ec=beauty2024" id="prod223774" name="prod223774">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/223774_M.jpg?t=20211221183141" border="0"></p>
+              <storg>康生 媽祖有BOBI氣壓按摩眼罩</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,980</em> <i>活動價$</i>3,980 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>便座</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231430&amp;ec=beauty2024" id="prod231430" name="prod231430">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231430_M.jpg?t=20230223160325" border="0"></p>
+              <storg>輝葉WULA超有力小沙發按摩椅</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>48</span>折</p>
+                <strong class="txt_red fred"> <em>市價$52,800</em> <i>活動價$</i>24,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238184&amp;ec=beauty2024" id="prod238184" name="prod238184">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/238184_M.jpg?t=20230321223011" border="0"></p>
+              <storg>JHT i芯極致包覆臀感按摩椅</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$79,900</em> <i>活動價$</i>45,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237232&amp;ec=beauty2024" id="prod237232" name="prod237232">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237232_M.jpg?t=20230215143011" border="0"></p>
+              <storg>JHT i芯深捏臀感按摩椅</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>62</span>折</p>
+                <strong class="txt_red fred"> <em>市價$46,900</em> <i>活動價$</i>29,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=203846&amp;ec=beauty2024" id="prod203846" name="prod203846">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201911/203846_M.jpg?t=20220414154319" border="0"></p>
+              <storg>DOCTOR AIR 3D 按摩椅墊LITE-灰</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>56</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,990</em> <i>活動價$</i>3,299 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236997&amp;ec=beauty2024" id="prod236997" name="prod236997">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/236997_M.jpg?t=20230620173457" border="0"></p>
+              <storg>輝葉V-Motion一健椅</storg>
+              <h4>隨貨送 清淨機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$188,000</em> <i>活動價$</i>108,000 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233838&amp;ec=beauty2024" id="prod233838" name="prod233838">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233838_M.jpg?t=20221201173355" border="0"></p>
+              <storg>輝葉追夢椅-石墨烯全新升級(神秘紫)</storg>
+              <h4>隨貨送 清淨機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$99,800</em> <i>活動價$</i>62,666 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233837&amp;ec=beauty2024" id="prod233837" name="prod233837">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233837_M.jpg?t=20230424145208" border="0"></p>
+              <storg>輝葉追夢椅-石墨烯全新升級(魔力紅)</storg>
+              <h4>隨貨送 清淨機</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$99,800</em> <i>活動價$</i>62,666 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=189134&amp;ec=beauty2024" id="prod189134" name="prod189134">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201807/189134_M.jpg?t=20230907112436" border="0"></p>
+              <storg>美國家醫 HOMEDICS 指壓按摩椅墊</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>56</span>折</p>
+                <strong class="txt_red fred"> <em>市價$4,880</em> <i>活動價$</i>2,690 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>泡腳機</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239156&amp;ec=beauty2024" id="prod239156" name="prod239156">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239156_M.jpg?t=20230515113817" border="0"></p>
+              <storg>輝葉COZY FIT律動奇機2.0</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>38</span>折</p>
+                <strong class="txt_red fred"> <em>市價$39,800</em> <i>活動價$</i>14,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233842&amp;ec=beauty2024" id="prod233842" name="prod233842">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233842_M.jpg?t=20220926183011" border="0"></p>
+              <storg>decopop SPACE+新太空人垂直律動機(櫻花粉)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>23</span>折</p>
+                <strong class="txt_red fred"> <em>市價$34,800</em> <i>活動價$</i>7,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233841&amp;ec=beauty2024" id="prod233841" name="prod233841">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233841_M.jpg?t=20220926183011" border="0"></p>
+              <storg>decopop SPACE+新太空人垂直律動機(礦石灰)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>23</span>折</p>
+                <strong class="txt_red fred"> <em>市價$34,800</em> <i>活動價$</i>7,999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233839&amp;ec=beauty2024" id="prod233839" name="prod233839">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233839_M.jpg?t=20231117180251" border="0"></p>
+              <storg>JHT LAZY FIT垂直律動機</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>28</span>折</p>
+                <strong class="txt_red fred"> <em>市價$27,800</em> <i>活動價$</i>7,700 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231428&amp;ec=beauty2024" id="prod231428" name="prod231428">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231428_M.jpg?t=20231215110019" border="0"></p>
+              <storg>輝葉COZY FIT律動奇機</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>38</span>折</p>
+                <strong class="txt_red fred"> <em>市價$36,800</em> <i>活動價$</i>13,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=231650&amp;ec=beauty2024" id="prod231650" name="prod231650">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/231650_M.jpg?t=20231215142920" border="0"></p>
+              <storg>輝葉COZY FIT律動奇機2.0</storg>
+              <h4>★夜間驚喜價★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>38</span>折</p>
+                <strong class="txt_red fred"> <em>市價$39,800</em> <i>活動價$</i>14,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233840&amp;ec=beauty2024" id="prod233840" name="prod233840">
+              <p class="itemF_img"><img id="RTProd_ctl08_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233840_M.jpg?t=20220926183009" border="0"></p>
+              <storg>decopop SPACE+新太空人垂直律動機(甜橙橘)...</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>23</span>折</p>
+                <strong class="txt_red fred"> <em>市價$34,800</em> <i>活動價$</i>7,999 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <h2 class="protitle"><a name="pro6292" id="pro6292"></a>熱敷照護</h2>
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239956&amp;ec=beauty2024" id="prod239956" name="prod239956">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239956_M.jpg?t=20230531152333" border="0"></p>
+              <storg>康生 時尚舒壓按摩腳機(橄欖綠) 贈按摩眼罩(白)...</storg>
+              <h4>紓壓按摩 時尚按摩腳機</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$11,780</em> <i>活動價$</i>11,780 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=228410&amp;ec=beauty2024" id="prod228410" name="prod228410">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202205/228410_M.jpg?t=20220506183009" border="0"></p>
+              <storg>康生 睛舒福矽膠唇感按摩眼罩</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$7,980</em> <i>活動價$</i>4,980 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219805&amp;ec=beauty2024" id="prod219805" name="prod219805">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202108/219805_M.jpg?t=20220427171203" border="0"></p>
+              <storg>KINYO 亮眼氣壓按摩眼罩</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,290</em> <i>活動價$</i>1,890 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234032&amp;ec=beauty2024" id="prod234032" name="prod234032">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/234032_M.jpg?t=20230321170558" border="0"></p>
+              <storg>康生 睛舒適舒眠眼罩(插電款) 熊</storg>
+              <h4>234032</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>63</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,280</em> <i>活動價$</i>799 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239957&amp;ec=beauty2024" id="prod239957" name="prod239957">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239957_M.jpg?t=20230531152338" border="0"></p>
+              <storg>康生 時尚舒壓按摩腳機(冷酷灰) 贈按摩眼罩(白)...</storg>
+              <h4>紓壓按摩 時尚按摩腳機</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$11,780</em> <i>活動價$</i>11,780 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=236702&amp;ec=beauty2024" id="prod236702" name="prod236702">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202301/236702_M.jpg?t=20230111183008" border="0"></p>
+              <storg>康生 媽祖有BOBI氣壓按摩眼罩</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,980</em> <i>活動價$</i>3,980 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=239958&amp;ec=beauty2024" id="prod239958" name="prod239958">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202305/239958_M.jpg?t=20230531152341" border="0"></p>
+              <storg>康生 時尚舒壓按摩腳機(陽光澄) 贈按摩眼罩(白)...</storg>
+              <h4>紓壓按摩 通通有!</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$11,780</em> <i>活動價$</i>11,780 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=223774&amp;ec=beauty2024" id="prod223774" name="prod223774">
+              <p class="itemF_img"><img id="RTProd_ctl09_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202112/223774_M.jpg?t=20211221183141" border="0"></p>
+              <storg>康生 媽祖有BOBI氣壓按摩眼罩</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>67</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,980</em> <i>活動價$</i>3,980 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+      <div id="TkecFooter">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <!--手機版測試語法用<meta name="viewport" content="width=divice-width,initial-scale=1">-->
+
+
+        <style>
+          @charset "utf-8";
+
+          * {
+            margin: 0;
+            padding: 0
+          }
+
+          *:focus {
+            outline: none;
+          }
+
+          /*黃框消除*/
+
+          * {
+            -webkit-text-size-adjust: none;
+          }
+
+          /*字體尺寸限制解除*/
+
+          a {
+            text-decoration: none;
+            cursor: pointer
+          }
+
+          img {
+            border: 0px;
+          }
+
+          /*圖片超連結邊框消除*/
+
+          .acbankbox .fred {
+            color: #F00;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+
+          .acbankbox .fgray {
+            color: #666;
+          }
+
+          .acbankbox .bgcolor {
+            background: #999;
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 電腦版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width:751px) {
+            .acbankbox {
+              display: block;
+              width: 1144px;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+              overflow: hidden;
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              padding: 16px;
+              position: relative;
+              display: block;
+              border-radius: 40px 40px 0 0;
+              -moz-border-radius: 40px 40px 0 0;
+              -webkit-border-radius: 40px 40px 0 0;
+              box-sizing: border-box;
+            }
+
+            .acbankbox .list2 u {
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+              display: block;
+              font-size: 40px;
+              text-decoration: none;
+              margin-bottom: 10px;
+              letter-spacing: 1px;
+            }
+
+            .acbankbox .list2 ul li {
+              width: 210px;
+              text-align: center;
+              float: left;
+              margin: 6px;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 82%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 13px;
+              margin-top: 0px;
+              text-align: center;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 38px;
+              font-size: 38px;
+              font-style: normal;
+              display: block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            .acbankbox .box06 {
+              display: none;
+            }
+          }
+
+          /*▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 手機版 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒*/
+
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            .acbankbox {
+              display: block;
+              width: 100%;
+              margin: 0 auto;
+              font-family: Century Gothic, "微軟正黑體";
+            }
+
+            /*銀行刷卡資料*/
+            .acbankbox .list2 {
+              width: 100%;
+              float: left;
+              text-align: center;
+              position: relative;
+              display: block;
+              box-sizing: border-box;
+              padding-bottom: 1%;
+            }
+
+            .acbankbox .list2 u {
+              width: 96%;
+              line-height: 60px;
+              background: #666;
+              color: #FF0;
+              text-align: center;
+              font-weight: bold;
+              display: block;
+              font-size: 200%;
+              text-decoration: none;
+              margin-bottom: 10px;
+              margin: 2% auto;
+              border-radius: 40px;
+              -moz-border-radius: 40px;
+              -webkit-border-radius: 40px;
+            }
+
+            .acbankbox .list2 ul li {
+              height: auto;
+              width: 48%;
+              text-align: center;
+              float: left;
+              margin: 1%;
+              background: #FFF;
+              border-radius: 10px;
+              -moz-border-radius: 10px;
+              -webkit-border-radius: 10px;
+              list-style: none;
+              box-sizing: border-box;
+              padding-bottom: 4%;
+            }
+
+            .acbankbox .list2 .item_img {
+              width: 100%;
+              float: left;
+              margin: 10px auto 5px auto;
+            }
+
+            .acbankbox .list2 .item_img img {
+              width: 85%;
+            }
+
+            .acbankbox .list2 p {
+              width: 100%;
+              display: block;
+              float: left;
+            }
+
+            .acbankbox .list2 .item_text05 {
+              font-size: 100%;
+              margin-top: 0px;
+            }
+
+            .acbankbox .list2 .item_text05 em {
+              line-height: 1em;
+              font-size: 200%;
+              font-style: normal;
+              display: inline-block;
+            }
+
+            .acbankbox .list2 .item_text05 em:before {
+              content: "最高";
+              width: 16px;
+              display: inline-block;
+              line-height: 17px;
+              margin-right: 2px;
+              color: #666;
+              padding: 1px;
+              font-size: 15px;
+            }
+
+            /* .acbankbox .box06 {} */
+          }
+        </style>
+        <div class="acbankbox">
+          <!--銀行區 st-->
+          <div class="list2 bgcolor">
+            <u>1月銀行 刷卡享好康</u>
+            <ul>
+              <!--燦坤-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-01.jpg"></p>
+                  <p class="item_text05 fred"><em>送2100</em>燦坤K幣</p>
+                </a>
+              </li>
+
+              <!--台新-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-02.jpg"></p>
+                  <p class="item_text05 fred"><em>送$1500</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--永豐-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-05.jpg"></p>
+                  <p class="item_text05 fred"><em>送$2700</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--星展-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-03.jpg"></p>
+                  <p class="item_text05 fred"><em>送$1500</em>刷卡金</p>
+                </a>
+              </li>
+
+              <!--悠遊付-->
+              <li>
+                <a href="https://events.tkec.com.tw/events_net/events_net/banks/bank.html">
+                  <p class="item_img"><img
+                      src="https://events.tk3c.com/events_net/events_net/banks/202308/images/sbank-16.jpg"></p>
+                  <p class="item_text05 fred">單筆滿額<em>送8%</em></p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--銀行區 end-->
+        </div>
+      </div>
+
+
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+
+
+
+
+</body>
+
+</html>
