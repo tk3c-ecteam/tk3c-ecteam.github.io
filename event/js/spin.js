@@ -49,7 +49,7 @@ const app = new Vue({
 
       var randNumber = Math.floor(Math.random() * total);
       var newRand = rewardList[randomList[randNumber]]; //中獎獎勵
-      angle = angle - angle % 360 + 8 * 360 + (360 / rewardList.length * randNumber);
+      this.angle = angle - angle % 360 + 8 * 360 + (360 / rewardList.length * randNumber);
       setTimeout(() => {
         this.roll = false;
         this.rewardImg = `<img src=${this.getMsgImg('images/' + newRand + '.png')}>`;
