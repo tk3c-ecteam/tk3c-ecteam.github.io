@@ -53,15 +53,29 @@ const app = new Vue({
       setTimeout(() => {
         this.roll = false;
         this.rewardImg = `<img src=${this.getMsgImg('images/' + newRand + '.png')}>`;
-        this.alert(this.rewardImg);
+
+        //顯示中獎獎項
+        Swal.fire({
+          imageUrl: this.rewardImg,
+          showCloseButton: true,
+          showDenyButton: true,
+          background: 'transparent',
+          backdrop: 'rgb(0 0 0 / 75%)',
+          allowOutsideClick: false,
+          position: 'center',
+          returnFocus: false,
+          confirmButtonText: '確定',
+          confirmButtonColor: '#0eb3e1',
+        })
+
       }, 4000);
     },
     alert(message) {
-      //彈跳視窗顯示訊息
+      //彈跳視窗訊息(提示訊息用)
 
       Swal.fire({
         width: 900,
-        html: message,
+        text: message,
         showCloseButton: true,
         position: 'center',
         returnFocus: false,
