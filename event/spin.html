@@ -8,9 +8,10 @@
   <title>轉盤抽獎</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css"
     integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
-  <link href="./css/spin.css" rel="stylesheet">
+  <link data-title="本頁樣式" href="./css/spin.css" rel="stylesheet">
   <script src="https://www.tkec.com.tw/js/vue.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script data-title="彈跳視窗" src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -23,47 +24,15 @@
         <p class="wheel" :style="{'transform':'rotate('+angle+'deg)'}">
           <img src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/wheels_spin.png">
         </p>
-        <a id="spin" @click="spin"><img
+        <a id="spin" @click.prevent="spin"><img
             src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/pointer_btn.png"></a>
       </section>
     </div>
 
-    <!-- 領取折價券視窗 -->
-    <div id="alert-group" class="alert-style" v-if="isAlert">
-      <div class="alert-content">
-        <a class="close-alert" @click="closeAlert"><i class="fas fa-times-circle"></i></a>
-        <div class="inner-group">
-          <img class="spinRewardimg" :src="rewardImg">
-        </div>
-        <div class="bottom-footer">
-          <a class="sure-get" @click="closeAlert"><img :src="'images/bt_ok.png' | siteUrl"></a>
-          <a class="check-list" href="http://www.tk3c.com/member/member_coupon.aspx" target="_blank">
-            <img :src="'images/discount_query.png' | siteUrl"></a>
-          <a class="detail" href="#discount-rule" @click="seeRule">
-            <img :src="'images/discount_instruct.png' | siteUrl"></a>
-        </div>
-
-        <div id="discount-rule" class="rule-group" v-if="isRule">
-          <h2><img src="https://events.tk3c.com/events_net/events_net/618exportgo2c/images/discount_rule.png"></h2>
-          <div class="rule-text">
-            <h3>Q: AWESOME轉好禮的折價券使用期限?</h3>
-            <p>A: 使用期限為<br><em class="highlight">2021/06/11 00:00~2021/06/23 23:59</em></p>
-            <h3>Q: 什麼是燦坤線上購物折價券?</h3>
-            <p>A: 燦坤線上購物結帳指定商品時折抵，折抵範圍、方式與使用期限，依各折價券使用方式為準。</p>
-            <h3>Q: 怎麼使用折價券?</h3>
-            <p>A: 結帳時輸入折價券序號，按下確定按鈕立即享受折扣優惠!</p>
-            <h3>Q: 購物金能跟折價券一起使用嗎?</h3>
-            <p>A: 一個商品可使用一種折扣方式。您可選擇用折價券或是購物金折抵，兩者僅可擇一使用</p>
-
-            <div class="copyright">*本公司保有最終修改、變更、活動解釋即取消活動之權利，若有相關異動將會公告於網站，恕不另行通知。</div>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div>
 
-  <script src="./js/spin.js"></script>
+  <script src="./spin.js"></script>
 </body>
 
 </html>
