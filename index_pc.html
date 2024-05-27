@@ -43,8 +43,7 @@
 
   <link href="https://www.tk3c.com/css/index/autocomplete.css" rel="stylesheet">
 
-  <!-- 搶紅包樣式 -->
-  <link href="./css/red.css" rel="stylesheet">
+  <link data-title="戳戳樂樣式" href="./css/event2406.css" rel="stylesheet">
 
 
 
@@ -3038,15 +3037,18 @@
     </div>
 
 
-    <!--  8/17新增紅包雨遊戲 -->
-    <!-- 紅包雨 -->
-    <section id="red-group" v-if="isRed">
-      <span class="close" @click="closeAlert"><img :src="'images/game/close.png' | siteUrl"></span>
-      <canvas id="particle_canvas" v-show="isEffect"></canvas>
-      <div class="envel-content" :class="{active:active}">
+    <!--  2024/05 新增戳戳樂 -->
+    <section id="lottery-group" v-if="isLottery">
+      <span class="close" @click="closeAlert"><img :src="'images/close.png' | siteUrl"></span>
+
+      <div class="envel-content">
+        <h2 class="title"><img :src="'images/title.png' | siteUrl"></h2>
         <ul>
-          <li>
-            <a @click="choice"><img :src="'images/game/card.png' | siteUrl"></a>
+          <li v-for="i in 9">
+            <a @click="choice(i)">
+              <img :src="'images/box01.png' | siteUrl">
+            </a>
+            <img class="gift" v-if="status == i" :src="'images/gift01.png' | siteUrl">
           </li>
         </ul>
       </div>
@@ -3062,13 +3064,7 @@
 
 
   <script type="text/javascript" src="https://www.tk3c.com/js/main_new.js"></script>
-
-
-  <!-- 紅包雨效果 -->
-  <script type="text/javascript" src="./js/red_effect.js"></script>
-
-  <!-- 搶紅包 -->
-  <script type="text/javascript" src="./js/envelope.js"></script>
+  <script data-title="戳戳樂" type="text/javascript" src="./js/event2406.js"></script>
 
 
   <!-- sweetalert彈出視窗 -->
