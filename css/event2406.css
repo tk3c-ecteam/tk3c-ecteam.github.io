@@ -112,16 +112,16 @@
 @media screen and (max-width: 576px) {
   #lottery-group .envel-content {
     width: 90vw;
-    margin: 5% auto;
+    margin: 8% auto 0;
   }
   #lottery-group .envel-content li {
-    width:26vw;
+    width:22vw;
     margin: 0 5px 2%;
   }
   #lottery-group .close {
     width: 20vw;
     right: 0;
-    top: 30vw;
+    top: 35vw;
     cursor: auto;
     opacity: 1;
   }
