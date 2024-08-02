@@ -71,15 +71,10 @@ document.addEventListener("DOMContentLoaded", function () {
   tabAppend(tabs[0][1][0].content, '.tab2-box', 3);
   tabAppend(tabs[0][2][0].content, '.tab3-box', 5);
 
-  tabSlide2();
-
   //清空看更多按鈕
   $all('.tab-area .title .more').forEach(more => {
     more.remove();
   });
-
-  //點擊頁籤滑動到指定頁籤
-  tabMoveTo('.tab-area .tab .swiper-slide a', tabMove);
 
   //移除多的樓層標題、右側、手機選單
   removeTitle(3);

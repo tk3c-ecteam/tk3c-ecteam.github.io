@@ -77,13 +77,13 @@ section .title {
   margin: 0 -7%;
 }
 
-.tab-area .tab .swiper-slide {
+.tab-area .tab li {
+  width: 30%;
+  margin: 0 5px 1%;
   -webkit-filter: saturate(0);
           filter: saturate(0);
 }
-.tab-area .tab .swiper-slide.active {
-  -webkit-filter: hue-rotate(0);
-          filter: hue-rotate(0);
+.tab-area .tab li.active {
   -webkit-filter: saturate(1);
           filter: saturate(1);
 }
