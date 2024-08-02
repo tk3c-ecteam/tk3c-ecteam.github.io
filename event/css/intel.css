@@ -136,7 +136,7 @@ section .title {
     display: none;
   }
   #intel-container .background {
-    padding-bottom: 120vw;
+    padding-bottom: 80vw;
   }
   #intel-container .background .title {
     width: 90vw;
