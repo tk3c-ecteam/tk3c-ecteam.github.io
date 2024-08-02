@@ -58,8 +58,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let lastEl = nodes[nodes.length - 1];
     lastEl.insertAdjacentHTML("afterend", tabHtml);
 
-    let tab2Html = appendBanks(v[0].content, `tab${Number(i) + 1}`);
-    $(`.tab${Number(i) + 1}-box`).find('.tab').append(tab2Html);
+    for (const [index, value] of Object.entries(v[0].content)) {
+      $single(`.tab${Number(i) + 1}-box .tab`).insertAdjacentHTML("afterbegin",
+        `<li><a><img src="${path + value.image}"></a></li>`
+      );
+    }
 
   }
 
