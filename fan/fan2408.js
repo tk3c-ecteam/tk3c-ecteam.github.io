@@ -4,14 +4,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const testPath = "https://tk3c-ecteam.github.io/fan/images/";
 
   let links = [
-    { "url": "https://www.tk3c.com/dic2.aspx?cid=11058&aid=4675&hid=27404", "image": `${testPath + 'S1.png'}` },
-    { "url": "https://www.tk3c.com/dic1.aspx?cid=11058&aid=16920", "image": `${testPath + 'S2.png'}` },
-    { "url": "https://www.tk3c.com/dic2.aspx?cid=11058&aid=4675&hid=115230", "image": `${testPath + 'S3.png'}` },
-    { "url": "https://www.tk3c.com/dic1.aspx?cid=11058&aid=17040", "image": `${testPath + 'S4.png'}` },
-    { "url": "https://www.tk3c.com/dic2.aspx?cid=11058&aid=4675&hid=26943", "image": `${testPath + 'S5.png'}` },
-    { "url": "https://www.tk3c.com/dictitleurl.aspx?cid=115927", "image": `${testPath + 'S6.png'}` },
-    { "url": "https://www.tk3c.com/dic1.aspx?cid=11058&aid=4677", "image": `${testPath + 'S7.png'}` },
-    { "url": "https://www.tk3c.com/dic2.aspx?cid=11058&aid=22588&hid=120412", "image": `${testPath + 'S8.png'}` }
+    { "url": "https://www.tk3c.com/dic2.aspx?cid=11058&aid=4675&hid=27404", "image": 'S1.png' },
+    { "url": "https://www.tk3c.com/dic1.aspx?cid=11058&aid=16920", "image": 'S2.png' },
+    { "url": "https://www.tk3c.com/dic2.aspx?cid=11058&aid=4675&hid=115230", "image": 'S3.png' },
+    { "url": "https://www.tk3c.com/dic1.aspx?cid=11058&aid=17040", "image": 'S4.png' },
+    { "url": "https://www.tk3c.com/dic2.aspx?cid=11058&aid=4675&hid=26943", "image": 'S5.png' },
+    { "url": "https://www.tk3c.com/dictitleurl.aspx?cid=115927", "image": 'S6.png' },
+    { "url": "https://www.tk3c.com/dic1.aspx?cid=11058&aid=4677", "image": 'S7.png' },
+    { "url": "https://www.tk3c.com/dic2.aspx?cid=11058&aid=22588&hid=120412", "image": 'S8.png' }
   ];
 
   let specials = [
@@ -37,13 +37,14 @@ document.addEventListener("DOMContentLoaded", function () {
   $single('.pro-box .products').insertAdjacentHTML("afterbegin", proHtml);
   const today = new Date();
 
-  fetch('https://events.tk3c.com/events_net/ashx/fkabow/GetAdSystemAll.ashx?menuid=6880')
-    .then((response) => {
-      console.log(response)
-    })
-    .catch((error) => {
-      console.log(error);
-    })
+  //更換圖片路徑
+  specials.forEach((sp, s) => {
+    $all('.special-box .swiper-slide')[s].querySelector('img').setAttribute('src', sp.image);
+  });
+
+  products.forEach((pro, p) => {
+    $all('.pro-box .swiper-slide')[p].querySelector('img').setAttribute("src", pro.image);
+  });
 
   //速速GO樓層 輪播
   proSlide('.sale-box .sales', 0);
@@ -110,21 +111,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
     new Swiper('.pro-box .pro-container', {
       loop: false,
-      autoplay: {
-        delay: 1700,
-        disableOnInteraction: false,
-      },
       roundLengths: true,
       spaceBetween: 10,
       breakpoints: {
         0: {
-          slidesPerView: 2.3,
+          slidesPerView: 2.4,
+          grid: {
+            fill: 'row',
+            rows: 2,
+          },
         },
         600: {
-          slidesPerView: 3.4,
+          slidesPerView: 3,
+          grid: {
+            fill: 'row',
+            rows: 2,
+          },
         },
         992: {
-          slidesPerView: 4.3,
+          slidesPerView: 3,
+          grid: {
+            fill: 'row',
+            rows: 2,
+          },
         },
       }
     });
