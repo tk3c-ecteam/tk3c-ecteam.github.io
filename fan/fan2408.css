@@ -1,0 +1,213 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap");
+/*  共用樣式調整 */
+body {
+  background: #f7ebbf;
+  position: relative;
+}
+body:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("https://tk3c-ecteam.github.io/fan/images/kv.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 45px, top;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 0;
+  z-index: -1;
+}
+
+.protitle {
+  height: auto;
+  font-size: 0;
+  margin: 0 auto 2%;
+}
+.protitle a {
+  cursor: pointer;
+}
+
+.bg01 {
+  background: #28c3fc;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* 風扇 */
+#fan-container .background {
+  width: 100%;
+  height: 0;
+  position: relative;
+  margin: 0 auto 0;
+  padding-bottom: 65%;
+}
+#fan-container .background .title {
+  width: 45%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 12%;
+  margin: 0 auto;
+  -webkit-animation: zoomInNormal 1.4s linear;
+          animation: zoomInNormal 1.4s linear;
+}
+
+.background2 {
+  width: 100%;
+  height: 100%;
+  background: url("https://tk3c-ecteam.github.io/fan/images/bg.png") no-repeat center;
+  background-size: 100% auto;
+  background-position: 0 0, top;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: -2;
+}
+.background2.fixed {
+  position: fixed;
+  top: 0;
+  background-position: 0 35px, top;
+}
+
+.special-box {
+  margin: -25% auto 5%;
+}
+.special-box .special {
+  width: 85%;
+  margin: 0 auto;
+}
+.special-box .special .swiper-pagination {
+  bottom: -5% !important;
+}
+
+.pro-box li {
+  width: 30%;
+  margin: 0 5px 1%;
+}
+.pro-box ul {
+  width: 90%;
+}
+
+.sale-box .bg01 {
+  background: #ee4d72;
+  padding: 1% 1% 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0 auto 2%;
+}
+.sale-box .more {
+  background: #ee4d72;
+}
+
+/*  電腦版其他尺寸 */
+@media only screen and (max-width: 992px) {
+  #fan-container .background {
+    padding-bottom: 75vw;
+  }
+  #fan-container .background .title {
+    width: 60vw;
+    top: 12vw;
+  }
+  #fan-container .background .subtitle {
+    width: 35vw;
+    left: 19%;
+    top: 37%;
+  }
+  #fan-container .background .subtitle2 {
+    width: 33vw;
+    right: 25%;
+    top: 45%;
+  }
+  body:before {
+    background-size: 120% auto;
+    background-position: -10vw 4vw, top;
+  }
+  .background2 {
+    background-size: 160% auto;
+    background-position: -29vmax 4vmax, top;
+  }
+  .background2.fixed {
+    background-size: 180% auto;
+    background-position: -29vmax 4vmax, top;
+  }
+  .special-box .title {
+    margin: 0 -5% -3%;
+  }
+  .special-box .special {
+    width: 100%;
+  }
+  .pro-box .title {
+    margin: 0 -5% -3%;
+  }
+  .pro-box ul {
+    width: 100%;
+  }
+  .protitle {
+    margin: 0 auto 4%;
+  }
+}
+/* 手機版 */
+@media only screen and (max-width: 576px) {
+  .fix_btn {
+    display: block;
+  }
+  .fix_btn .dropdown-menu {
+    display: none;
+  }
+  #fan-container .background {
+    padding-bottom: 115vw;
+  }
+  #fan-container .background .title {
+    width: 100%;
+    top: 33vw;
+  }
+  #fan-container .background .subtitle {
+    width: 55vw;
+    left: 4%;
+    top: 52%;
+  }
+  #fan-container .background .subtitle2 {
+    width: 55vw;
+    right: 9%;
+    top: 59%;
+  }
+  body:before {
+    background-size: 200% auto;
+    background-position: -68vw 22vw, top;
+  }
+  .background2 {
+    background-size: 250% auto;
+    background-position: -56vw 33vw, top;
+  }
+  .background2.fixed {
+    background-position: -56vw 130vw, top;
+  }
+  .special-box .title {
+    margin: 0 -6% -3%;
+  }
+  .pro-box .title {
+    margin: 0 -6% -3%;
+  }
+  .pro-box li {
+    width: 44vw;
+    margin: 0 5px 3%;
+  }
+  .sale-box .bg01 {
+    padding: 2% 2% 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+@media only screen and (min-width: 2000px) {
+  .special-box .tab {
+    width: 100%;
+  }
+  .special-box .tab-content {
+    width: 95%;
+  }
+}

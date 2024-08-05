@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="HERAN 禾聯,Kolin 歌林,勳風,SAMPO 聲寶,CHIMEI 奇美等電扇品牌,DC風扇,AC扇,循環扇,水冷扇,手持扇各式規格種類,優惠便宜好價格,值得推薦！">
+  <link href="https://www.tk3c.com/images/headimg.jpg" rel="image_src">
+
+  <!--FB meta-->
+  <meta property="fb:admins" content="">
+  <meta property="fb:app_id" content="606825782724291">
+  <meta property="og:site_name" content="燦坤線上購物">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="風扇主題館 | 燦坤線上">
+  <meta property="og:description"
+    content="HERAN 禾聯,Kolin 歌林,勳風,SAMPO 聲寶,CHIMEI 奇美等電扇品牌,DC風扇,AC扇,循環扇,水冷扇,手持扇各式規格種類,優惠便宜好價格,值得推薦！">
+  <meta property="og:image" content="https://www.tk3c.com/images/headimg.jpg">
+  <meta property="og:url" content="https://events.tk3c.com/events_net/fan_hot/index.html">
+
+  <title>風扇主題館 | 燦坤線上</title>
+
+  <link data-title="swiper樣式" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css">
+  <link data-title="共用樣式" href="https://events.tk3c.com/events_net/events_net/css/template/2022_Style.css"
+    rel="stylesheet" type="text/css" />
+  <link data-title="animate css" href="https://events.tk3c.com/events_net/events_net/animation/animate.css"
+    rel="stylesheet" type="text/css" />
+  <link data-title="共用動畫效果" href="https://events.tk3c.com/events_net/events_net/animation/animation.css"
+    rel="stylesheet" type="text/css" />
+  <link href="../../export/fan2408.css" rel="stylesheet" type="text/css" />
+
+  <script data-title="MASTER CSS" src="https://cdn.master.co/css"></script>
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js?479"></script>
+
+
+
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/gears_init.js"></script>
+  <script src="https://www.tk3c.com/js/jquery.countdown.pack.js" type="text/javascript"></script>
+  <link rel="shortcut icon" type="image/icon" href="https://events.tk3c.com/events_net/favicon.ico">
+  <script src="https://events.tk3c.com/events_net/js/imgjs.js"></script>
+  <script type="text/javascript" src="https://events.tk3c.com/events_net/js/jquery.appear.js"></script>
+
+
+
+
+
+
+
+
+
+  <!--置頂TKEC-->
+  <script>
+    function ChkEvent(MainID) {
+      $.ajax({
+        url: "../ashx/ChkEvent.ashx?MainID=" + MainID,
+        type: "POST",
+        dataType: 'text',
+        data: {
+          "url": encodeURI(document.location.toString())
+        },
+        success: function (msg) {
+          if (msg == "0") {
+            location.href = "http://www.tk3c.com";
+          }
+          if (msg == "1") {
+            TopScript();
+          }
+        }
+      });
+    }
+
+    function TopScript() {
+      $.ajax({
+        url: "../top/top.aspx?url=" + encodeURIComponent(location.href),
+        type: "POST",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecTop").html(msg);
+        }
+      });
+    }
+    var WebSiteName = "pet_product";
+    $(document).ready(function () {
+      //M板下方選單右側動態載入
+      $('.fix_btn p a').each(function () {
+        var strjs = 'ProcessGaEvent(WebSiteName,"click","' + $(this).text() + '");'
+        $(this).attr('onclick', strjs);
+      });
+    });
+    $(document).ready(function () {
+      //延遲讀取
+      var clientHitght = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      $('img[lazy="2"]').each(function () {
+        var self = $(this);
+        self.one("appear", function () {
+          //alert("appeared");
+          self.attr("src", self.attr("org"));
+          self.removeAttr("lazy");
+        });
+        self.appear();
+        if (self.offset().top <= clientHitght) {
+          self.trigger('appear');
+        }
+      });
+    });
+  </script>
+
+  <script>
+    ChkEvent(1740)
+  </script>
+  <!-- go top-->
+  <script type="text/javascript">
+    $(function () {
+      $("#gotop").click(function () {
+        jQuery("html,body").animate({
+          scrollTop: 0
+        }, 1000);
+      });
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+          $('#gotop').fadeIn("fast");
+        } else {
+          $('#gotop').stop().fadeOut("fast");
+        }
+      });
+    });
+  </script>
+  <!--銀行區-->
+  <script>
+    $(document).ready(function () {
+      var Today = new Date();
+      var thisyear = Today.getFullYear();
+      var thismonth = '00';
+      if ((Today.getMonth() + 1) <= 9) {
+        thismonth = "0" + (Today.getMonth() + 1);
+      } else {
+        thismonth = "" + (Today.getMonth() + 1);
+      }
+      var filename = thisyear + thismonth;
+      var url = "../events_net/banks/" + filename + "/acbank.html";
+      $.ajax({
+        url: url,
+        type: "GET",
+        dataType: 'text',
+        success: function (msg) {
+          $("#TkecFooter").html(msg);
+        }
+      });
+    });
+  </script>
+
+  <!--選單固定效果-->
+  <script>
+    $(window).load(function () {
+      $.ajax({
+        url: 'https://cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js',
+        type: "POST",
+        dataType: 'script',
+        success: function () {
+          $("#btnBox03").sticky({
+            topSpacing: 0
+          });
+        }
+      });
+    });
+  </script>
+  <!--選單ping住後更換底圖的效果 記得前面要有function-->
+  <script type="text/javascript">
+    $(function () {
+      var top = $('#btnBox03').offset().top;
+      $(window).scroll(function () {
+        var y = $(this).scrollTop();
+        if (y >= top) {
+          $('body').addClass('fixing');
+        } else {
+          $('body').removeClass('fixing');
+        }
+      });
+    });
+  </script>
+  <script type="text/javascript">
+    function myFunction(btn) {
+      if (btn == 'btn2') {
+        document.getElementById("btn_02").className = "btn_02a";
+      } else {
+        document.getElementById("btn_02").className = "btn_02";
+      }
+    }
+  </script>
+
+
+
+</head>
+
+<body>
+  <form name="form1" method="post" action="./index.aspx?mainid=2029&amp;preview=" id="form1">
+    <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE"
+      value="/wEPDwUKLTczMjE4MTE1OWRkW2rODVNy2ilhKyCCjauhi6SIYCg=">
+
+    <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA7D2EC1">
+    <div id="TkecTop" style="height: 45px;">
+
+
+      <div id="PnTop">
+
+        <script>
+          var url = document.location.toString();
+          var arrUrl = url.split("?");
+          var fbhtml_url = arrUrl[0];
+        </script>
+
+
+
+
+        <!--活動頁上方灰bar st--->
+        <style>
+          #TopNum {
+            display: none;
+          }
+
+          #kuai3header {
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 999;
+            background: #494949;
+            height: 45px;
+            line-height: 45px;
+          }
+
+          #kuai3header .words {
+            margin: 0 auto;
+            max-width: 1144px;
+          }
+
+          #kuai3header .words h1.logo {
+            background: url(https://events.tkec.com.tw/events_net/events_net/top/images/header-home-new.svg?2) no-repeat;
+            width: 219px;
+            height: 35px;
+            display: inline-block;
+            text-indent: -9999px;
+            white-space: nowrap;
+            overflow: hidden;
+            float: left;
+            margin: 5px 10px;
+          }
+
+          #kuai3header .words ul.font {
+            /*float: right;*/
+            line-height: 45px;
+            display: block;
+            z-index: 99999;
+            list-style: none;
+            margin: 0;
+            height: 45px;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          #kuai3header .words ul.font li {
+            width: auto;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            display: inline-block;
+            text-align: right;
+            overflow: hidden;
+            flex-shrink: 0;
+          }
+
+          #kuai3header .words ul.font li>a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 12px;
+            border-right: 1px solid #fff;
+            padding: 0 8px;
+            letter-spacing: 1px;
+            width: auto;
+          }
+
+          li.newsale a {
+            color: #FDFF00 !important;
+            line-height: 40px;
+          }
+
+          li.newsale a>b {
+            background: #FDFF00;
+            color: #494949;
+            border-radius: 5px;
+            padding: 0 2%;
+            font-size: 10px;
+            margin-right: 5px;
+          }
+
+          li.newsale a:after {
+            content: "▶";
+            margin-left: 5px;
+            font-size: 80%;
+          }
+
+          @media (max-width: 750px) {
+            .TkecTop .menu {
+              width: 100%;
+              background: #494949;
+              background: rgba(73, 73, 73, 0.95);
+              float: none;
+              overflow: hidden;
+              z-index: 99999;
+              max-height: 0;
+              position: absolute;
+              top: 44px;
+              right: 0;
+              left: 0;
+              -webkit-transition: max-height 1s;
+              -o-transition: max-height 1s;
+              transition: max-height 1s;
+            }
+
+            .TkecTop .menu li {
+              float: none;
+            }
+
+            .TkecTop .menu li:active {
+              background: rgba(120, 120, 120, 0.4);
+            }
+
+            .TkecTop .menu a {
+              height: 45px;
+              border: 0;
+              width: 100%;
+              display: block;
+            }
+          }
+
+          .menu-show .menu {
+            max-height: 480px;
+          }
+
+          #showmenu {
+            color: #FFF;
+            position: absolute;
+            top: 8px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            width: 30px;
+            height: 30px;
+          }
+
+          #showmenu span {
+            position: absolute;
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            top: 50%;
+            margin-top: -1px;
+            left: 50%;
+            margin-left: -10px;
+            -webkit-transition: background 0.3s;
+            -o-transition: background 0.3s;
+            transition: background 0.3s;
+          }
+
+          #showmenu span:before,
+          #showmenu span:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background: inherit;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            -webkit-transition: -webkit-transform 0.3s, background 0s;
+            -webkit-transition: background 0s, -webkit-transform 0.3s;
+            transition: background 0s, -webkit-transform 0.3s;
+            -o-transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s;
+            transition: transform 0.3s, background 0s, -webkit-transform 0.3s;
+          }
+
+          #showmenu span:before {
+            top: -6px;
+          }
+
+          #showmenu span:after {
+            bottom: -6px;
+          }
+
+
+          /*瀏覽區域的寬度小於750像素*/
+          @media screen and (min-width: 320px) and (max-width: 750px) {
+            #showmenu {
+              display: block;
+            }
+
+            #kuai3header .words ul.font li {
+              width: 100%;
+              display: block;
+              text-align: left;
+            }
+
+            #kuai3header .words ul.font li>a {
+              border-right: 0px solid #fff;
+              font-size: 90%;
+            }
+
+            li.newsale a>b {
+              padding: 0.5% 2%;
+            }
+
+            #kuai3header .words .font {
+              display: block !important;
+            }
+
+            #kuai3header .words ul.font {
+              height: auto;
+            }
+          }
+        </style>
+        <div id="kuai3header" class="TkecTop">
+          <div class="words">
+            <a href="https://www.tk3c.com/?ec=icewash2209">
+              <h1 class="logo">燦坤線上購物購物</h1>
+            </a>
+            <span id="TopNum">28</span>
+            <ul class="font menu">
+
+              <li>
+                <a
+                  href="https://www.tk3c.com/member/member_login.aspx?done=WApIh9eSlBzFKZwcxiTZIQaGmOZZfZ/NrsejS0Ccqzf/I3SYc+WweqdsuJmLloDrQ3UH+QwnwdygMOAWYS7vsg==&amp;ec=icewash2209">會員登入</a>
+              </li>
+              <li><a href="https://www.tk3c.com/member/member_center.aspx?ec=icewash2209">會員中心</a></li>
+              <li><a href="https://www.tk3c.com/service/serviceindex.aspx?ec=icewash2209">客服中心</a></li>
+              <li><a href="javascript:void(0);?ec=icewash2209"
+                  onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+fbhtml_url);return false;">FB分享</a>
+              </li>
+            </ul>
+            <div id="showmenu" class="menu-is-open"><span></span></div>
+          </div>
+        </div>
+        <script>
+          /*
+                $(document).ready(function () {
+                    $('#showmenu').click(function (e) {
+                        e.preventDefault();
+                        $('body').toggleClass('menu-show');
+                        $(this).toggleClass('menu-is-open');
+                    });
+                });
+                */
+
+          function domReady(fn) {
+            // If early
+            document.addEventListener("DOMContentLoaded", fn);
+            // If late
+            if (document.readyState === "interactive" || document.readyState === "complete") {
+              fn();
+            }
+          }
+
+          function regTopBarMenu() {
+            document.getElementById('showmenu').addEventListener('click', function (e) {
+              e.preventDefault();
+              var body = document.querySelector('body');
+              if (body.classList.contains('menu-show')) {
+                body.classList.remove('menu-show');
+              } else {
+                body.classList.add('menu-show');
+              }
+
+              var menuBtn = e.target;
+              if (menuBtn.classList.contains('menu-is-open')) {
+                menuBtn.classList.remove('menu-is-open');
+              } else {
+                menuBtn.classList.add('menu-is-open');
+              }
+            });
+          }
+          domReady(regTopBarMenu);
+        </script>
+
+      </div>
+
+
+    </div>
+    <div id="gotop" onclick="ProcessGaEvent(WebSiteName,'click','Top')" style="display: none; opacity: 1;">
+      <img src="../events_net/double11_2023/images/scroll-top.png">
+    </div>
+    <div class="fix_btn">
+      <!-- The dropdown menu begins -->
+      <div class="sample-menu-style dropdown-menu btn1">
+        <span tabindex="0" onclick="return true">商品列表</span>
+        <div tabindex="0" onclick="return true"></div>
+        <ul></ul>
+      </div>
+      <!-- End of the dropdown menu -->
+
+      <!-- 手機版選單 -->
+      <div class="nav-footer">
+        <div class="footer-bg"></div>
+        <div class="nav-box">
+          <ul>
+            <li data-id="top">回到上層</li>
+            <li data-id="1">關注社群</li>
+          </ul>
+        </div>
+
+        <div class="box-area social">
+          <ul>
+            <li><a href="https://reurl.cc/QbZ149" target="_blank"><i class="fa-brands fa-meta"></i></a></li>
+            <li><a href="https://reurl.cc/7pMZVl" target="_blank"><i class="fa-brands fa-line"></i></a></li>
+            <li><a href="https://reurl.cc/3Ye8kX" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- go top -->
+      <a class="gotop-mobile"></a>
+
+      <!-- 手機版上方選單 -->
+      <div class="mobile-for-product">
+        <div class="top-nav">
+          <h3 class="title">快速選單</h3>
+          <ul></ul>
+        </div>
+        <a class="switch"><i class="fa-solid fa-angle-down"></i></a>
+      </div>
+
+    </div>
+    <div class="wrapper">
+
+      <div id="fan-container">
+        <div class="background">
+          <h2 class="title animate__animated animate__backInUp"><img src="../../dist/images/title.png" alt="" /></h2>
+        </div>
+
+        <div class="background2"></div>
+
+        <!-- 主月主打 -->
+        <section class="special-box">
+          <h2 class="title"><img src="../../dist/images/hot_title.png" alt="主月主打" /></h2>
+          <div class="special"></div>
+        </section>
+
+        <!-- 沁涼指南 -->
+        <section class="pro-box">
+          <h2 class="title"><img src="../../dist/images/eS.png" alt="指南" /></h2>
+
+          <div class="products"></div>
+        </section>
+
+        <section class="sale-box">
+          <h2 class="title">
+            <img src="https://events.tk3c.com/events_net/events_net/wet/images/tk3cgo_bar.png" alt="" />
+          </h2>
+
+          <div class="sales">
+            <a class="more" href="https://fast.tk3c.com/store/219/category/13" target="_blank">MORE</a>
+          </div>
+        </section>
+      </div>
+
+      <!-- 右側選單 -->
+      <aside class="aside-container">
+        <span class="arrow hide"><i class="fas fa-chevron-left"></i></span>
+        <div class="aside-wrap">
+          <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+          <h3 class="aside-header"></h3>
+          <div class="aside-content">
+            <ul></ul>
+          </div>
+          <a href="#" class="go-top">GO TOP</a>
+        </div>
+      </aside>
+
+      <script data-title="swiper輪播套件" src="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js"></script>
+      <script data-title="共用js" src="https://events.tk3c.com/events_net/events_net/js/common.js"></script>
+      <script data-title="手機版選單" src="https://events.tk3c.com/events_net/events_net/js/mobile_nav_go.js"></script>
+      <script src="../js/2024/8/fan2408.js"></script>
+
+
+
+    </div>
+
+
+
+
+    <div class="itemBox m_version_non">
+      <div id="btnBox03">
+        <div class="upbox">
+          <a href="#pro5699" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5699-挑戰低價')">挑戰低價</a>
+          <a href="#pro5700" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5700-LG品牌狂歡日')">LG品牌狂歡日</a>
+          <a href="#pro5701" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5701-ACER 特攻豪禮 11玩瘋')">ACER 特攻豪禮 11玩瘋</a>
+          <a href="#pro5702" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5702-電玩好康報')">電玩好康報</a>
+          <a href="#pro5703" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5703-三星品牌日')">三星品牌日</a>
+          <a href="#pro5704" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5704-奇美風扇品牌日')">奇美風扇品牌日</a>
+          <a href="#pro5706" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5706-石頭品牌日')">石頭品牌日</a>
+          <a href="#pro5705" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5705-irobot&amp;blueair')">irobot&amp;blueair</a>
+          <a href="#pro5707" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5707-yeelight品牌日')">yeelight品牌日</a>
+          <a href="#pro5708" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5708-oral-b品牌日')">oral-b品牌日</a>
+          <a href="#pro5709" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5709-1c')">1c</a>
+          <a href="#pro5710" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5710-綠點品牌日')">綠點品牌日</a>
+          <a href="#pro5711" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5711-翻玩新機電堂')">翻玩新機電堂</a>
+          <a href="#pro5712" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5712-香味美食端上桌')">香味美食端上桌</a>
+          <a href="#pro5713" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5713-效能競速一波')">效能競速一波</a>
+          <a href="#pro5714" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5714-生活美學好幫手')">生活美學好幫手</a>
+          <a href="#pro5715" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5715-狂歡大電買起來')">狂歡大電買起來</a>
+          <a href="#pro5716" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5716-最讚影視高享受')">最讚影視高享受</a>
+          <a href="#pro5717" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5717-電競玩咖狂瘋趣')">電競玩咖狂瘋趣</a>
+          <a href="#pro5718" class="navi_bar btn_01 p01"
+            onclick="ProcessGaEvent('double11_2023','click','5718-毛孩古錐對牠好')">毛孩古錐對牠好</a>
+
+        </div>
+      </div>
+    </div>
+    <div class="rightbtn">
+      <span class="collaspe"><i class="fas fa-chevron-right"></i></span>
+      <div class="actbtn">
+        <a href="#pro5699" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','5699-挑戰低價')">挑戰低價</a>
+        <a href="#pro5700" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5700-LG品牌狂歡日')">LG品牌狂歡日</a>
+        <a href="#pro5701" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5701-ACER 特攻豪禮 11玩瘋')">ACER 特攻豪禮 11玩瘋</a>
+        <a href="#pro5702" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','5702-電玩好康報')">電玩好康報</a>
+        <a href="#pro5703" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','5703-三星品牌日')">三星品牌日</a>
+        <a href="#pro5704" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5704-奇美風扇品牌日')">奇美風扇品牌日</a>
+        <a href="#pro5706" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','5706-石頭品牌日')">石頭品牌日</a>
+        <a href="#pro5705" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5705-irobot&amp;blueair')">irobot&amp;blueair</a>
+        <a href="#pro5707" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5707-yeelight品牌日')">yeelight品牌日</a>
+        <a href="#pro5708" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5708-oral-b品牌日')">oral-b品牌日</a>
+        <a href="#pro5709" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','5709-1c')">1c</a>
+        <a href="#pro5710" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','5710-綠點品牌日')">綠點品牌日</a>
+        <a href="#pro5711" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','5711-翻玩新機電堂')">翻玩新機電堂</a>
+        <a href="#pro5712" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5712-香味美食端上桌')">香味美食端上桌</a>
+        <a href="#pro5713" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','5713-效能競速一波')">效能競速一波</a>
+        <a href="#pro5714" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5714-生活美學好幫手')">生活美學好幫手</a>
+        <a href="#pro5715" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5715-狂歡大電買起來')">狂歡大電買起來</a>
+        <a href="#pro5716" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5716-最讚影視高享受')">最讚影視高享受</a>
+        <a href="#pro5717" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5717-電競玩咖狂瘋趣')">電競玩咖狂瘋趣</a>
+        <a href="#pro5718" class="btn_01 p01"
+          onclick="ProcessGaEvent('double11_2023','click','5718-毛孩古錐對牠好')">毛孩古錐對牠好</a>
+        <a href="#activity3157" class="btn_01 p01" onclick="ProcessGaEvent('double11_2023','click','3157-其他')">其他</a>
+
+      </div>
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ ST-->
+    <div class="wrapper">
+
+      <h2 class="protitle"><a name="pro3495" id="pro3495"></a>速速GO</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241699&amp;ec=fan_hot" id="prod241699" name="prod241699">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/241699_M.jpg?t=20231127132953" border="0"></p>
+              <storg>Panasonic 2 IN 1 蒸氣電熨斗(米白色)</storg>
+              <h4>限量送隔熱手套組！</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,690</em> <i>活動價$</i>3,290 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=246180&amp;ec=fan_hot" id="prod246180" name="prod246180">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202401/246180_M.jpg?t=20240217134543" border="0"></p>
+              <storg>東元 14吋DC遙控擺頭立扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,990</em> <i>活動價$</i>1,690 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205558&amp;ec=fan_hot" id="prod205558" name="prod205558">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202001/205558_M.jpg?t=20240410111416" border="0"></p>
+              <storg>聲寶SAMPO 15W捕蚊燈</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>8</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,488</em> <i>活動價$</i>1,188 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=215882&amp;ec=fan_hot" id="prod215882" name="prod215882">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202102/215882_M.jpg?t=20210615165125" border="0"></p>
+              <storg>Panasonic 10吋循環扇</storg>
+              <h4>送馬克杯3入組！+限時加碼手持風扇 !...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,090</em> <i>活動價$</i>3,680 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=245836&amp;ec=fan_hot" id="prod245836" name="prod245836">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202401/245836_M.jpg?t=20240604180300" border="0"></p>
+              <storg>聲寶14吋智能聲控3D循環DC馬達立扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,988</em> <i>活動價$</i>2,488 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237887&amp;ec=fan_hot" id="prod237887" name="prod237887">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/237887_M.jpg?t=20230419110846" border="0"></p>
+              <storg>聲寶 8吋循環扇</storg>
+              <h4>夏日清涼解暑</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>78</span>折</p>
+                <strong class="txt_red fred"> <em>市價$888</em> <i>活動價$</i>688 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237229&amp;ec=fan_hot" id="prod237229" name="prod237229">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237229_M.jpg?t=20230719092340" border="0"></p>
+              <storg>東元 3D立體擺頭空氣循環扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>83</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,680</em> <i>活動價$</i>1,380 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=194360&amp;ec=fan_hot" id="prod194360" name="prod194360">
+              <p class="itemF_img"><img id="RTProd_ctl00_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201901/194360_M.jpg?t=20240618112202" border="0"></p>
+              <storg>日本IRIS HD15 空氣循環扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$990</em> <i>活動價$</i>890 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <h2 class="protitle"><a name="pro3494" id="pro3494"></a>節能DC扇</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=226927&amp;ec=fan_hot" id="prod226927" name="prod226927">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202203/226927_M.jpg?t=20220328092041" border="0"></p>
+              <storg>小米 Xiaomi 智慧直流變頻電風扇 2</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,695</em> <i>活動價$</i>1,695 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=227149&amp;ec=fan_hot" id="prod227149" name="prod227149">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202204/227149_M.jpg?t=20220427200159" border="0"></p>
+              <storg>小米 Xiaomi 智慧直流變頻電風扇 2 Pro</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,495</em> <i>活動價$</i>2,495 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=241735&amp;ec=fan_hot" id="prod241735" name="prod241735">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202308/241735_M.jpg?t=20230815183040" border="0"></p>
+              <storg>Dyson 三合一涼暖空氣清淨機HP10(白色)</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>77</span>折</p>
+                <strong class="txt_red fred"> <em>市價$20,900</em> <i>活動價$</i>15,888 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=245399&amp;ec=fan_hot" id="prod245399" name="prod245399">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202401/245399_M.jpg?t=20240109183012" border="0"></p>
+              <storg>聲寶16吋微電腦遙控擺頭DC節能立扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>81</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,088</em> <i>活動價$</i>2,488 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=247202&amp;ec=fan_hot" id="prod247202" name="prod247202">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202403/247202_M.jpg?t=20240527094527" border="0"></p>
+              <storg>NWT威技16吋APP智能日本DC變頻馬達電風扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>72</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,490</em> <i>活動價$</i>1,790 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=195998&amp;ec=fan_hot" id="prod195998" name="prod195998">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201903/195998_M.jpg?t=20210618115924" border="0"></p>
+              <storg>國際牌Panasonic 16吋高級型DC直流風扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>3,590 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=184541&amp;ec=fan_hot" id="prod184541" name="prod184541">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201802/184541_M.jpg?t=20230414131636" border="0"></p>
+              <storg>上豪 14吋DC直流馬達伸縮風扇</storg>
+              <h4>高CP值,14吋省電風扇</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>71</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,680</em> <i>活動價$</i>1,188 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=245369&amp;ec=fan_hot" id="prod245369" name="prod245369">
+              <p class="itemF_img"><img id="RTProd_ctl01_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202401/245369_M.jpg?t=20240618090851" border="0"></p>
+              <storg>TELEFUNKEN 14吋智能遙控DC立扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>66</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,980</em> <i>活動價$</i>1,299 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <h2 class="protitle"><a name="pro3496" id="pro3496"></a>對流循環扇 </h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=216032&amp;ec=fan_hot" id="prod216032" name="prod216032">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202102/216032_M.jpg?t=20210312174538" border="0"></p>
+              <storg>米家智慧空氣循環扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,495</em> <i>活動價$</i>1,495 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=245472&amp;ec=fan_hot" id="prod245472" name="prod245472">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202401/245472_M.jpg?t=20240112163014" border="0"></p>
+              <storg>日本IRIS SC15 空氣循環扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,190</em> <i>活動價$</i>1,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240558&amp;ec=fan_hot" id="prod240558" name="prod240558">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240558_M.jpg?t=20230712115021" border="0"></p>
+              <storg>acerpure cozy 立體螺旋DC循環風扇-櫻花粉</storg>
+              <h4>★2023 全新上市 ★</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,790</em> <i>活動價$</i>3,790 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240438&amp;ec=fan_hot" id="prod240438" name="prod240438">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202306/240438_M.jpg?t=20230614223026" border="0"></p>
+              <storg>CLAIRE CLA-CSK-BG09S 360°球型9吋循環扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,988</em> <i>活動價$</i>1,988 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=247616&amp;ec=fan_hot" id="prod247616" name="prod247616">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202404/247616_M.jpg?t=20240408123014" border="0"></p>
+              <storg>ADATA 18吋DC馬達渦流扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$5,990</em> <i>活動價$</i>4,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=238304&amp;ec=fan_hot" id="prod238304" name="prod238304">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202303/238304_M.jpg?t=20240125160524" border="0"></p>
+              <storg>勳風 14吋DC節能循環吸頂扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>89</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,380</em> <i>活動價$</i>2,988 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=246210&amp;ec=fan_hot" id="prod246210" name="prod246210">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202402/246210_M.jpg?t=20240202143015" border="0"></p>
+              <storg>聲寶 9吋 360度4D擺頭空氣循環扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,788</em> <i>活動價$</i>1,488 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=247611&amp;ec=fan_hot" id="prod247611" name="prod247611">
+              <p class="itemF_img"><img id="RTProd_ctl02_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202404/247611_M.jpg?t=20240403183009" border="0"></p>
+              <storg>ADATA 20吋DC馬達渦流扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,980</em> <i>活動價$</i>5,490 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <h2 class="protitle"><a name="pro3496" id="pro3496"></a>勁涼AC扇</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=206106&amp;ec=fan_hot" id="prod206106" name="prod206106">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202002/206106_M.jpg?t=20200227143011" border="0"></p>
+              <storg>華元 10吋360度桌立扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$749</em> <i>活動價$</i>629 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=123640&amp;ec=fan_hot" id="prod123640" name="prod123640">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201203/123640_M.jpg?t=20231011092200" border="0"></p>
+              <storg>上豪SUNHOW 16吋立扇</storg>
+              <h4>★小資族最愛款★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$999</em> <i>活動價$</i>849 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=224674&amp;ec=fan_hot" id="prod224674" name="prod224674">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202201/224674_M.jpg?t=20220412141009" border="0"></p>
+              <storg>聲寶14吋機械式立扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,388</em> <i>活動價$</i>1,088 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=123639&amp;ec=fan_hot" id="prod123639" name="prod123639">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201203/123639_M.jpg?t=20210624142917" border="0"></p>
+              <storg>上豪 14吋立扇</storg>
+              <h4>★俗擱大碗第一選擇★</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$890</em> <i>活動價$</i>749 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=177540&amp;ec=fan_hot" id="prod177540" name="prod177540">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201706/177540_M.jpg?t=20220119135320" border="0"></p>
+              <storg>友情14吋桌立扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>77</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,380</em> <i>活動價$</i>1,050 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=189495&amp;ec=fan_hot" id="prod189495" name="prod189495">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201807/189495_M.jpg?t=20180727190014" border="0"></p>
+              <storg>友情14吋立扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$990</em> <i>活動價$</i>990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=249115&amp;ec=fan_hot" id="prod249115" name="prod249115">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202405/249115_M.jpg?t=20240611153738" border="0"></p>
+              <storg>北方 14吋微電腦定時遙控奈米銀抑菌扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,680</em> <i>活動價$</i>1,680 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=185250&amp;ec=fan_hot" id="prod185250" name="prod185250">
+              <p class="itemF_img"><img id="RTProd_ctl03_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201803/185250_M.jpg?t=20180323151208" border="0"></p>
+              <storg>正負零±0 12吋節能遙控風扇AC</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>58</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,990</em> <i>活動價$</i>2,280 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+      <h2 class="protitle"><a name="pro5993" id="pro5993"></a>瞬冷水冷扇</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=174752&amp;ec=fan_hot" id="prod174752" name="prod174752">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201703/174752_M.jpg?t=20211015133352" border="0"></p>
+              <storg>TELEFUNKEN 20L微電腦冰冷扇 (水冷扇)</storg>
+              <h4>領券再折$200↘↘↘</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>81</span>折</p>
+                <strong class="txt_red fred"> <em>市價$8,090</em> <i>活動價$</i>6,490 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=246814&amp;ec=fan_hot" id="prod246814" name="prod246814">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202403/246814_M.jpg?t=20240311183010" border="0"></p>
+              <storg>北方 10L DC雙效淨化水冷扇</storg>
+              <h4>北方DC雙效淨化水冷扇 AC-102D</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,880</em> <i>活動價$</i>5,980 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=246321&amp;ec=fan_hot" id="prod246321" name="prod246321">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202402/246321_M.jpg?t=20240219163029" border="0"></p>
+              <storg>HERAN 6L水冷扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$3,290</em> <i>活動價$</i>2,990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=217954&amp;ec=fan_hot" id="prod217954" name="prod217954">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202105/217954_M.jpg?t=20230502113215" border="0"></p>
+              <storg>松井 水潤清涼霧化水冷空調扇SG-05KTS(B)</storg>
+              <h4>降溫/水潤/風扇/夜燈 四合一功能</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>5</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,980</em> <i>活動價$</i>990 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237211&amp;ec=fan_hot" id="prod237211" name="prod237211">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237211_M.jpg?t=20240402152621" border="0"></p>
+              <storg>NICONICO 5L移動式智能水冷扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$2,980</em> <i>活動價$</i>2,480 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=187277&amp;ec=fan_hot" id="prod187277" name="prod187277">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201805/187277_M.jpg?t=20210727092049" border="0"></p>
+              <storg>EMMAS 負離子移動式降溫水冷扇</storg>
+              <h4>酷夏降溫水冷扇 業界最強急速降溫5~8℃...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$7,990</em> <i>活動價$</i>7,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=176304&amp;ec=fan_hot" id="prod176304" name="prod176304">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201705/176304_M.jpg?t=20210727091804" border="0"></p>
+              <storg>EMMAS 負離子移動式降溫水冷扇</storg>
+              <h4>酷夏降溫水冷扇 業界最強急速降溫5~8℃...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>77</span>折</p>
+                <strong class="txt_red fred"> <em>市價$12,900</em> <i>活動價$</i>9,900 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=247053&amp;ec=fan_hot" id="prod247053" name="prod247053">
+              <p class="itemF_img"><img id="RTProd_ctl04_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202403/247053_M.jpg?t=20240319123013" border="0"></p>
+              <storg>北方 7.5L移動式冷卻器</storg>
+              <h4>北方移動式冷卻器 AC-6581</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>76</span>折</p>
+                <strong class="txt_red fred"> <em>市價$6,500</em> <i>活動價$</i>4,880 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+      <h2 class="protitle"><a name="pro3496" id="pro3496"></a>便攜小風扇</h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=143735&amp;ec=fan_hot" id="prod143735" name="prod143735">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201403/143735_M.jpg?t=20240220095947" border="0"></p>
+              <storg>Panasonic 12吋 AC立桌扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,390</em> <i>活動價$</i>1,250 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=246264&amp;ec=fan_hot" id="prod246264" name="prod246264">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202402/246264_M.jpg?t=20240215103012" border="0"></p>
+              <storg>東元 12吋機械式桌扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>84</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,199</em> <i>活動價$</i>999 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=208057&amp;ec=fan_hot" id="prod208057" name="prod208057">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202005/208057_M.jpg?t=20200513183023" border="0"></p>
+              <storg>E-books K25 夾式360度彎管充電風扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$399</em> <i>活動價$</i>299 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=195993&amp;ec=fan_hot" id="prod195993" name="prod195993">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/201903/195993_M.jpg?t=20190325141532" border="0"></p>
+              <storg>華元 12吋外旋循環桌扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>66</span>折</p>
+                <strong class="txt_red fred"> <em>市價$999</em> <i>活動價$</i>659 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=248417&amp;ec=fan_hot" id="prod248417" name="prod248417">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202405/248417_M.jpg?t=20240506173007" border="0"></p>
+              <storg>RASTO RK16 手持立式三段風速充電風扇-粉</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$459</em> <i>活動價$</i>399 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=246815&amp;ec=fan_hot" id="prod246815" name="prod246815">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202403/246815_M.jpg?t=20240321151253" border="0"></p>
+              <storg>TELEFUNKEN 9吋遙控摺疊循環扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>86</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,580</em> <i>活動價$</i>1,350 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=240805&amp;ec=fan_hot" id="prod240805" name="prod240805">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202307/240805_M.jpg?t=20230706183029" border="0"></p>
+              <storg>THOMSON TM-SAF29U冰奶油 USB隨身涼扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$1,490</em> <i>活動價$</i>1,490 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=210050&amp;ec=fan_hot" id="prod210050" name="prod210050">
+              <p class="itemF_img"><img id="RTProd_ctl05_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/210050_M.jpg?t=20211015091822" border="0"></p>
+              <storg>ZANWA晶華 走路有風隨行涼風扇</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>91</span>折</p>
+                <strong class="txt_red fred"> <em>市價$760</em> <i>活動價$</i>690 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+      <h2 class="protitle"><a name="pro3496" id="pro3496"></a>熨燙好心情 </h2>
+
+
+
+
+
+
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=232330&amp;ec=fan_hot" id="prod232330" name="prod232330">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202208/232330_M.jpg?t=20220929173401" border="0"></p>
+              <storg>SONGEN松井 蒸熨兩用蒸氣掛燙機/電熨斗</storg>
+              <h4>1年保固</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$2,990</em> <i>活動價$</i>2,990 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205959&amp;ec=fan_hot" id="prod205959" name="prod205959">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202002/205959_M.jpg?t=20211015173732" border="0"></p>
+              <storg>SONGEN松井 摺疊小方塊手持掛燙機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,280</em> <i>活動價$</i>1,080 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=219242&amp;ec=fan_hot" id="prod219242" name="prod219242">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202107/219242_M.jpg?t=20221212172304" border="0"></p>
+              <storg>國際牌 Panasonic電子衣櫥</storg>
+              <h4>免費標準安裝定位+送16件餐具組！...</h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>9</span>折</p>
+                <strong class="txt_red fred"> <em>市價$39,800</em> <i>活動價$</i>35,800 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=209785&amp;ec=fan_hot" id="prod209785" name="prod209785">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202007/209785_M.jpg?t=20210802154757" border="0"></p>
+              <storg>LAURASTAR LIFT XTRA高壓蒸汽熨斗-鈦黑</storg>
+              <h4>登錄送CART + 到府教學 + 專用濾心 + 桌上型燙板！...</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$33,800</em> <i>活動價$</i>33,800 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=205961&amp;ec=fan_hot" id="prod205961" name="prod205961">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202002/205961_M.jpg?t=20211015171258" border="0"></p>
+              <storg>SONGEN松井 全球通用折疊膠囊型手持掛燙機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>79</span>折</p>
+                <strong class="txt_red fred"> <em>市價$1,380</em> <i>活動價$</i>1,080 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234038&amp;ec=fan_hot" id="prod234038" name="prod234038">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/234038_M.jpg?t=20220930183015" border="0"></p>
+              <storg>SONGEN松井 蒸氣掛燙機含旅行掛燙機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,280</em> <i>活動價$</i>3,280 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=234037&amp;ec=fan_hot" id="prod234037" name="prod234037">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/234037_M.jpg?t=20220930183015" border="0"></p>
+              <storg>SONGEN松井 蒸氣掛燙機含摺疊掛燙機</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$3,280</em> <i>活動價$</i>3,280 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=233883&amp;ec=fan_hot" id="prod233883" name="prod233883">
+              <p class="itemF_img"><img id="RTProd_ctl06_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202209/233883_M.jpg?t=20221004142235" border="0"></p>
+              <storg>LAURASTAR IGGI 蒸汽消毒禮盒組</storg>
+              <h4>媽咪最愛款｜殺菌消毒神器</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$13,800</em> <i>活動價$</i>13,800 </strong> </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+
+
+      <h2 class="protitle"><a name="pro3496" id="pro3496"></a>滅蚊一把罩</h2>
+
+      <div class="list_F bg01">
+        <ul>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=215978&amp;ec=fan_hot" id="prod215978" name="prod215978">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl00_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202102/215978_M.jpg?t=20210220223240" border="0"></p>
+              <storg>友情牌 友情22W吸入式捕蚊燈 VF-2711</storg>
+              <h4>飛利浦誘蚊燈管、防火塑膠材質</h4>
+              <div class="boxF_price">
+
+                <strong class="txt_red fred"> <em>市價$880</em> <i>活動價$</i>880 </strong> </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225217&amp;ec=fan_hot" id="prod225217" name="prod225217">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl01_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225217_M.jpg?t=20220217143026" border="0"></p>
+              <storg>東元廣角吸入式捕蚊燈</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>85</span>折</p>
+                <strong class="txt_red fred"> <em>市價$590</em> <i>活動價$</i>499 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=217314&amp;ec=fan_hot" id="prod217314" name="prod217314">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl02_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202104/217314_M.jpg?t=20210421183145" border="0"></p>
+              <storg>KINYO 鋰電池充電蚊拍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>75</span>折</p>
+                <strong class="txt_red fred"> <em>市價$399</em> <i>活動價$</i>299 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237453&amp;ec=fan_hot" id="prod237453" name="prod237453">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl03_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237453_M.jpg?t=20230315131353" border="0"></p>
+              <storg>勳風 充電式二合一捕蚊燈拍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>73</span>折</p>
+                <strong class="txt_red fred"> <em>市價$399</em> <i>活動價$</i>288 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=237454&amp;ec=fan_hot" id="prod237454" name="prod237454">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl04_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202302/237454_M.jpg?t=20230220183012" border="0"></p>
+              <storg>勳風 電池式三層大網面捕蚊拍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>69</span>折</p>
+                <strong class="txt_red fred"> <em>市價$189</em> <i>活動價$</i>129 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=217313&amp;ec=fan_hot" id="prod217313" name="prod217313">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl05_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202104/217313_M.jpg?t=20210421183144" border="0"></p>
+              <storg>KINYO 分離式充電手電筒電蚊拍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>72</span>折</p>
+                <strong class="txt_red fred"> <em>市價$349</em> <i>活動價$</i>249 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=225220&amp;ec=fan_hot" id="prod225220" name="prod225220">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl06_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202202/225220_M.jpg?t=20220217143111" border="0"></p>
+              <storg>RASTO AZ1 電池式極輕量捕蚊拍-藍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$229</em> <i>活動價$</i>199 </strong>
+              </div>
+            </a></li>
+
+          <li><a href="http://www.tk3c.com/pt.aspx?pid=217856&amp;ec=fan_hot" id="prod217856" name="prod217856">
+              <p class="itemF_img"><img id="RTProd_ctl07_ProdUc51_RTProd_ctl07_Img" onerror="ImgError(this);"
+                  src="https://www.cdn-tkec.tw/image/product/202105/217856_M.jpg?t=20211015100245" border="0"></p>
+              <storg>WONDER USB充電式大網面照明電蚊拍</storg>
+              <h4 class="empty"></h4>
+              <div class="boxF_price">
+                <p class="iconF_pro"><span>87</span>折</p>
+                <strong class="txt_red fred"> <em>市價$299</em> <i>活動價$</i>259 </strong>
+              </div>
+            </a></li>
+
+
+        </ul>
+      </div>
+
+      <h2 class="protitle"><a name="pro3496" id="pro3496"></a>限量福利品</h2>
+
+      <div id="RTProd_ctl08_ProdUc31_SuperDiv" class="list_M bg01">
+        <div class="hotpro_wrapper">
+
+          <div id="RTProd_ctl08_ProdUc31_RtProdTop_ctl00_PnCss" class="hotproboxL">
+            <a id="prod225680" name="prod225680"></a>
+            <div class="hotpro_pro">
+              <div class="hotpro_pic">
+                <p class="icon_number">還剩<span>293</span>組</p><img id="RTProd_ctl08_ProdUc31_RtProdTop_ctl00_Img"
+                  onerror="ImgError(this);"
+                  org="https://www.cdn-tkec.tw/image/product/202203/225680_M.jpg?t=20220420140408"
+                  src="https://www.cdn-tkec.tw/image/product/202203/225680_M.jpg?t=20220420140408" border="0">
+              </div>
+              <div class="hotpromain">
+                <div class="hotpro_sale"></div>
+                <div class="hotpro_name">HERAN 禾聯 14吋DC壁扇</div>
+                <div class="hotpro_info"><span>・
+                    DC變頻馬達<br></span>
+                  <span>・
+                    自動擺頭功能<br></span>
+                  <span>・
+                    8檔風量選擇 <br></span>
+                  <span>・
+                    預約8定時設定<br></span>
+                  <span>・
+                    遠端遙控功能<br></span>
+                  <span>・
+                    蜂鳴提示功能<br></span>
+                  <span>・
+                    睡眠風、自然風<br></span>
+                </div>
+                <div class="hotpro_price1 fred">$2,090</div>
+                <div class="hotpro_price2">活動價$<span>1,790</span></div>
+                <a href="http://www.tk3c.com/pt.aspx?pid=225680&amp;ec=fan_hot">
+                  <div class="buybtn">前往購買</div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div id="RTProd_ctl08_ProdUc31_RtProdTop_ctl01_PnCss" class="hotproboxR">
+            <a id="prod808673" name="prod808673"></a>
+            <div class="hotpro_pro">
+              <div class="hotpro_pic">
+                <p class="icon_number">還剩<span>42</span>組</p><img id="RTProd_ctl08_ProdUc31_RtProdTop_ctl01_Img"
+                  onerror="ImgError(this);"
+                  org="https://www.cdn-tkec.tw/image/product/202203/808673_M.jpg?t=20231117180547"
+                  src="https://www.cdn-tkec.tw/image/product/202203/808673_M.jpg?t=20231117180547" border="0">
+              </div>
+              <div class="hotpromain">
+                <div class="hotpro_sale"></div>
+                <div class="hotpro_name">(福利品) WONDER 電擊吸入式雙效捕蚊燈</div>
+                <div class="hotpro_info"><span>・
+                    電擊+吸入，雙效滅蚊<br></span>
+                  <span>・
+                    雙重UV誘蚊，捕蚊效率高<br></span>
+                  <span>・
+                    2000V電力強勁，輕鬆滅蚊<br></span>
+                  <span>・
+                    USB供電設計 便利好用<br></span>
+                  <span>・
+                    拆卸式儲蚊盒，方便清理<br></span>
+                  <span>・
+                    雙模式自由切換使用<br></span>
+                </div>
+                <div class="hotpro_price1 fred">$899</div>
+                <div class="hotpro_price2">活動價$<span>488</span></div>
+                <a href="http://www.tk3c.com/pt.aspx?pid=808673&amp;ec=fan_hot">
+                  <div class="buybtn">前往購買</div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="list_special">
+          <ul>
+
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=807743&amp;ec=fan_hot" id="prod807743" name="prod807743">
+                <p class="item_img"><img id="RTProd_ctl08_ProdUc31_RTProd_ctl00_Img" onerror="ImgError(this);"
+                    org="https://www.cdn-tkec.tw/image/product/202104/807743_M.jpg?t=20240514135257"
+                    src="https://www.cdn-tkec.tw/image/product/202104/807743_M.jpg?t=20240514135257" border="0"></p>
+                <h4 class="empty"></h4>
+                <storg>(展示品)聲寶強效UV吸入式捕蚊燈(白)</storg>
+                <div class="box_price">
+                  <p class="icon_pro"><span>61</span>折</p>
+                  <strong class="txt_red fred"> <em>$1,388</em> <i>活動價</i>839</strong>
+                </div>
+              </a></li>
+
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=216917&amp;ec=fan_hot" id="prod216917" name="prod216917">
+                <p class="item_img"><img id="RTProd_ctl08_ProdUc31_RTProd_ctl01_Img" onerror="ImgError(this);"
+                    org="https://www.cdn-tkec.tw/image/product/202103/216917_M.jpg?t=20210813145926"
+                    src="https://www.cdn-tkec.tw/image/product/202103/216917_M.jpg?t=20210813145926" border="0"></p>
+                <h4 class="empty"></h4>
+                <storg>(福利品) IRIS 空氣循環扇(白)</storg>
+                <div class="box_price">
+                  <p class="icon_pro"><span>65</span>折</p>
+                  <strong class="txt_red fred"> <em>$899</em> <i>活動價</i>579</strong>
+                </div>
+              </a></li>
+
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=225681&amp;ec=fan_hot" id="prod225681" name="prod225681">
+                <p class="item_img"><img id="RTProd_ctl08_ProdUc31_RTProd_ctl02_Img" onerror="ImgError(this);"
+                    org="https://www.cdn-tkec.tw/image/product/202203/225681_M.jpg?t=20220420135109"
+                    src="https://www.cdn-tkec.tw/image/product/202203/225681_M.jpg?t=20220420135109" border="0"></p>
+                <h4 class="empty"></h4>
+                <storg>HERAN 禾聯 16吋電子遙控壁扇</storg>
+                <div class="box_price">
+                  <p class="icon_pro"><span>83</span>折</p>
+                  <strong class="txt_red fred"> <em>$1,690</em> <i>活動價</i>1,390</strong>
+                </div>
+              </a></li>
+
+            <li><a href="http://www.tk3c.com/pt.aspx?pid=804783&amp;ec=fan_hot" id="prod804783" name="prod804783">
+                <p class="item_img"><img id="RTProd_ctl08_ProdUc31_RTProd_ctl03_Img" onerror="ImgError(this);"
+                    org="https://www.cdn-tkec.tw/image/product/201901/804783_M.jpg?t=20220426173144"
+                    src="https://www.cdn-tkec.tw/image/product/201901/804783_M.jpg?t=20220426173144" border="0"></p>
+                <h4 class="empty"></h4>
+                <storg>(福利品)日本IRIS C18T 空氣循環扇</storg>
+                <div class="box_price">
+                  <p class="icon_pro"><span>87</span>折</p>
+                  <strong class="txt_red fred"> <em>$2,290</em> <i>活動價</i>1,990</strong>
+                </div>
+              </a></li>
+
+          </ul>
+        </div>
+      </div>
+
+      <!--- ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ 排品區07((會招限時限量)) end ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓ --->
+
+
+
+
+    </div>
+    <!--/////////////////////////////////////  排品區  \\\\\\\\\\\\\\\\\\\\\\\\\\\\ end-->
+    <div class="copyR">本活動頁商品規格、顏色、價位、贈品均為燦坤線上購物購物獨賣價! 如與銷售網頁不符，則以銷售網頁標示為準!</div>
+  </form>
+
+</body>
+
+</html>
